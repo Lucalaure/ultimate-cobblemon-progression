@@ -1,3 +1,9 @@
+# UCP 1.4.0
+
+Supports (and requires) Cobblemon 1.8!
+
+The rules and spawning effects from this mod still affect pokemon spawned via bait, PokeSnack, or fishing
+
 # UCP 1.3.2
 
 ## Fixes

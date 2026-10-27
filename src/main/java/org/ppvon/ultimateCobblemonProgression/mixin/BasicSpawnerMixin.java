@@ -12,6 +12,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.List;
+import java.util.Map;
 
 @Mixin(value = BasicSpawner.class, remap = false)
 public abstract class BasicSpawnerMixin {
@@ -19,11 +20,17 @@ public abstract class BasicSpawnerMixin {
     @Shadow
     public abstract List<SpawningInfluence> getInfluences();
 
-    @Inject(method = "<init>", at = @At("TAIL"))
+    // Cobblemon 1.8 added the buckets parameter; target the primary constructor explicitly
+    // since Kotlin also generates a synthetic default-args constructor that delegates to it.
+    @Inject(
+            method = "<init>(Ljava/lang/String;Lcom/cobblemon/mod/common/api/spawning/detail/SpawnPool;FLjava/util/Map;)V",
+            at = @At("TAIL")
+    )
     private void ucp$attachTrainerLevelInfluence(
             String name,
             SpawnPool spawnPool,
             float maxPokemonPerChunk,
+            Map<String, Float> buckets,
             CallbackInfo ci
     ) {
         List<SpawningInfluence> influences = this.getInfluences();

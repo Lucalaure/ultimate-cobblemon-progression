@@ -1,0 +1,196 @@
+<#
+.SYNOPSIS
+    Generates docs/species-by-tier.md by cross-referencing UCP's tier files with
+    Cobblemon's natural spawn data (spawn_pool_world) and species list.
+
+.EXAMPLE
+    ./scripts/generate-species-reference.ps1 -CobblemonPath C:\path\to\cobblemon-main
+
+.NOTES
+    -CobblemonPath is a checkout of the Cobblemon source (https://gitlab.com/cable-mc/cobblemon).
+    Re-run this whenever the tier files or the targeted Cobblemon version change.
+#>
+param(
+    [Parameter(Mandatory = $true)][string]$CobblemonPath,
+    [string]$CobblemonVersion = "",
+    [string]$OutFile = (Join-Path $PSScriptRoot "..\docs\species-by-tier.md")
+)
+
+$ErrorActionPreference = "Stop"
+
+$repoRoot   = Resolve-Path (Join-Path $PSScriptRoot "..")
+$tierDir    = Join-Path $repoRoot "src\main\resources\data\ultimate-cobblemon-progression\tiers"
+$dataRoot   = Join-Path $CobblemonPath "common\src\main\resources\data\cobblemon"
+$speciesDir = Join-Path $dataRoot "species"
+$spawnDir   = Join-Path $dataRoot "spawn_pool_world"
+
+if (-not (Test-Path $spawnDir)) { throw "Could not find $spawnDir - is -CobblemonPath a Cobblemon source checkout?" }
+
+if (-not $CobblemonVersion) {
+    $props = Get-Content (Join-Path $CobblemonPath "gradle.properties") -ErrorAction SilentlyContinue
+    $CobblemonVersion = ($props | Where-Object { $_ -match '^\s*mod_version\s*=' }) -replace '^\s*mod_version\s*=\s*', ''
+}
+
+# Kept ASCII-only so Windows PowerShell 5.1 reads this file correctly without a BOM.
+$Pk = "Pok$([char]0x00E9)mon"
+
+$bucketOrder = @("common", "uncommon", "rare", "ultra-rare", "boss")
+$textInfo = (Get-Culture).TextInfo
+function Format-Name([string]$id) { $textInfo.ToTitleCase(($id -replace '_', ' ')) }
+
+# --- Cobblemon species ids (base species; regional forms are not separate species) ---
+$cobblemonSpecies = @{}
+Get-ChildItem $speciesDir -Recurse -Filter *.json | ForEach-Object { $cobblemonSpecies["cobblemon:" + $_.BaseName] = $true }
+
+# --- UCP tiers ---
+$tiers = @{}            # tier index -> @{ cap; seen; caught; species = list }
+$speciesTier = @{}      # species id -> lowest tier listing it
+$unresolved = @{}       # tier index -> entries that don't match a Cobblemon species
+Get-ChildItem $tierDir -Filter "tier_*.json" | ForEach-Object {
+    $index = [int]($_.BaseName -replace '^tier_', '')
+    $json = Get-Content $_.FullName -Raw | ConvertFrom-Json
+    $seen = 0; $caught = 0
+    if ($json.requirements -and $json.requirements.dex) {
+        if ($json.requirements.dex.seen) { $seen = [int]$json.requirements.dex.seen }
+        if ($json.requirements.dex.caught) { $caught = [int]$json.requirements.dex.caught }
+    }
+    $tiers[$index] = @{ cap = [int]$json.levelCap; seen = $seen; caught = $caught; species = @($json.species) }
+    $unresolved[$index] = New-Object System.Collections.Generic.List[string]
+    foreach ($id in $json.species) {
+        if ($cobblemonSpecies.ContainsKey($id)) {
+            if (-not $speciesTier.ContainsKey($id) -or $speciesTier[$id] -gt $index) { $speciesTier[$id] = $index }
+        } else {
+            $unresolved[$index].Add($id)
+        }
+    }
+}
+$tierIndexes = $tiers.Keys | Sort-Object
+
+# --- Cobblemon natural spawns ---
+# key "species|label" -> @{ species; label; buckets = set }
+$spawnEntries = @{}
+$spawningSpecies = @{}
+Get-ChildItem $spawnDir -Filter *.json | ForEach-Object {
+    try { $json = Get-Content $_.FullName -Raw | ConvertFrom-Json } catch { Write-Warning "Skipping unreadable $($_.Name)"; return }
+    if ($json.enabled -eq $false -or -not $json.spawns) { return }
+    if ($json.neededInstalledMods -and @($json.neededInstalledMods).Count -gt 0) { return }  # only spawns in base Cobblemon
+    foreach ($spawn in $json.spawns) {
+        if ($spawn.type -ne "pokemon" -or -not $spawn.pokemon -or -not $spawn.bucket) { continue }
+        $tokens = @(($spawn.pokemon -split '\s+') | Where-Object { $_ })
+        $speciesToken = $tokens[0].ToLower()
+        if ($speciesToken -notmatch ':') { $speciesToken = "cobblemon:$speciesToken" }
+        # Keep bare aspect words (e.g. "alolan", "hisuian") as a form label; drop key=value properties.
+        $label = (($tokens | Select-Object -Skip 1) | Where-Object { $_ -notmatch '=' }) -join ' '
+        $key = "$speciesToken|$label"
+        if (-not $spawnEntries.ContainsKey($key)) {
+            $spawnEntries[$key] = @{ species = $speciesToken; label = $label; buckets = New-Object System.Collections.Generic.HashSet[string] }
+        }
+        [void]$spawnEntries[$key].buckets.Add($spawn.bucket)
+        $spawningSpecies[$speciesToken] = $true
+    }
+}
+
+function Get-DisplayName($entry) {
+    $name = Format-Name ($entry.species -replace '^cobblemon:', '')
+    if ($entry.label) { $name += " ($($entry.label))" }
+    $name
+}
+
+# --- Build markdown ---
+$sb = New-Object System.Text.StringBuilder
+function Line([string]$text = "") { [void]$sb.AppendLine($text) }
+
+Line "# Species by Tier and Rarity"
+Line ""
+Line "> Generated by ``scripts/generate-species-reference.ps1`` from UCP's default tier files and the natural spawn data of Cobblemon $CobblemonVersion. Do not edit by hand - re-run the script instead."
+Line ""
+Line "This page answers two separate questions for every $Pk that spawns naturally in base Cobblemon:"
+Line ""
+Line "- **Tier** (from this mod): the trainer level you need before it can spawn for you at all."
+Line "- **Rarity** (from Cobblemon): which spawn bucket it lives in, which controls how often it appears once it is allowed."
+Line ""
+Line "See [How UCP Works](how-it-works.md) for how the two combine. Rarity odds per spawn attempt (Cobblemon defaults):"
+Line ""
+Line "| Rarity | World spawns | Fishing / PokeSnack |"
+Line "|---|---|---|"
+Line "| Common | 94% | 83.25% |"
+Line "| Uncommon | 5% | 11.25% |"
+Line "| Rare | 0.5% | 4.125% |"
+Line "| Ultra-rare | 0.2% | 1.375% |"
+Line "| Boss | 0.3% | - |"
+Line ""
+Line "A $Pk can appear under more than one rarity (for example, its regional form may be rarer than its regular form). Forms are listed separately when their rarity differs, but **a form always shares its species' tier**."
+Line ""
+
+# Summary matrix: count of species+form entries per tier per bucket
+Line "## Summary"
+Line ""
+Line "Number of naturally spawning $Pk (counting forms with their own spawn entries separately) in each tier and rarity:"
+Line ""
+$header = "| Tier | Level cap | To unlock (seen / caught) | " + (($bucketOrder | ForEach-Object { Format-Name $_ }) -join " | ") + " | Total |"
+Line $header
+Line ("|---|---|---|" + ("---|" * ($bucketOrder.Count + 1)))
+foreach ($t in $tierIndexes) {
+    $counts = @{}
+    foreach ($b in $bucketOrder) { $counts[$b] = 0 }
+    $total = 0
+    foreach ($entry in $spawnEntries.Values) {
+        if ($speciesTier[$entry.species] -ne $t) { continue }
+        $total++
+        foreach ($b in $entry.buckets) { if ($counts.ContainsKey($b)) { $counts[$b]++ } }
+    }
+    $req = if ($tiers[$t].seen -or $tiers[$t].caught) { "$($tiers[$t].seen) / $($tiers[$t].caught)" } else { "start" }
+    Line ("| $t | $($tiers[$t].cap) | $req | " + (($bucketOrder | ForEach-Object { $counts[$_] }) -join " | ") + " | $total |")
+}
+Line ""
+Line "Entries that appear under several rarities are counted once in each, so a row's rarity columns can add up to more than its total."
+Line ""
+
+# Per-tier listing grouped by bucket
+foreach ($t in $tierIndexes) {
+    Line "## Tier $t (level cap $($tiers[$t].cap))"
+    Line ""
+    $inTier = $spawnEntries.Values | Where-Object { $speciesTier[$_.species] -eq $t }
+    foreach ($b in $bucketOrder) {
+        $names = $inTier | Where-Object { $_.buckets.Contains($b) } | ForEach-Object { Get-DisplayName $_ } | Sort-Object
+        if (-not $names) { continue }
+        Line "**$(Format-Name $b) ($(@($names).Count)):** $($names -join ', ')"
+        Line ""
+    }
+    $tierSpecies = $tiers[$t].species | Where-Object { $cobblemonSpecies.ContainsKey($_) -and $speciesTier[$_] -eq $t }
+    $noSpawn = $tierSpecies | Where-Object { -not $spawningSpecies.ContainsKey($_) } | ForEach-Object { Format-Name ($_ -replace '^cobblemon:', '') } | Sort-Object
+    if ($noSpawn) {
+        Line "<details><summary>In this tier but not a natural spawn in base Cobblemon ($(@($noSpawn).Count))</summary>"
+        Line ""
+        Line "These still count as tier $t for the level of anything that spawns them (for example other mods or datapacks), but Cobblemon itself never spawns them in the wild: $($noSpawn -join ', ')"
+        Line ""
+        Line "</details>"
+        Line ""
+    }
+}
+
+# Natural spawns with no tier
+$untiered = $spawnEntries.Values | Where-Object { -not $speciesTier.ContainsKey($_.species) } | ForEach-Object { Get-DisplayName $_ } | Sort-Object -Unique
+Line "## Natural spawns with no tier"
+Line ""
+if ($untiered) {
+    Line "These spawn in base Cobblemon but are not listed in any tier file. With the default config (``blockUnknownSpecies: true``) **they never spawn**. Add them to a tier file to make them available: $($untiered -join ', ')"
+} else {
+    Line "None - every naturally spawning $Pk in base Cobblemon has a tier."
+}
+Line ""
+
+# Unresolved tier entries
+Line "## Tier entries that don't match a Cobblemon species"
+Line ""
+Line "The tier files also list $Pk from add-ons (Myths and Legends, Mega Showdown, MysticMons, and others) and some regional forms written as separate ids (like ``bergmite_hisui``). Cobblemon treats regional forms as forms of the base species, so those form entries have no effect: the form uses its base species' tier. Add-on entries only take effect when that add-on is installed."
+Line ""
+Line "| Tier | Entries without a matching base-Cobblemon species |"
+Line "|---|---|"
+foreach ($t in $tierIndexes) { Line "| $t | $($unresolved[$t].Count) |" }
+Line ""
+
+$outDir = Split-Path $OutFile -Parent
+if (-not (Test-Path $outDir)) { New-Item -ItemType Directory -Path $outDir | Out-Null }
+[System.IO.File]::WriteAllText((Resolve-Path $outDir).Path + "\" + (Split-Path $OutFile -Leaf), $sb.ToString(), (New-Object System.Text.UTF8Encoding($false)))
+Write-Host "Wrote $OutFile"

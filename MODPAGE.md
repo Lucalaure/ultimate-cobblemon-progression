@@ -7,6 +7,7 @@ This mod is designed for **server progression, modpacks, and RPG-style playthrou
 Cobblemon Versions:
 - Cobblemon 1.6.1: ucp-1.2.2
 - Cobblemon 1.7.0: ucp-1.3.0
+- Cobblemon 1.8.0: ucp-1.4.0
 
 ---
 
