@@ -88,7 +88,23 @@ dependencies {
     modCompileOnly("com.terraformersmc:modmenu:11.0.3")
     //modImplementation("com.terraformersmc:modmenu:11.0.3")
 
-    implementation("com.google.code.gson:gson:2.11.0")
+    // Gson comes from Minecraft (2.10.1). Don't add a newer version: it isn't bundled in the jar, so it only
+    // changes the dev environment, and Gson 2.11+ crashes RCT on startup.
+
+    // Radical Cobblemon Trainers, for testing gym progression in the dev client only (not a dependency of UCP).
+    // Modrinth version ids: rctmod 0.19.2-beta, rctapi 0.16.2-beta, Forge Config API Port v21.1.6, Architectury 13.0.11
+    modRuntimeOnly("maven.modrinth:rctmod:rgfBfnW9")
+    modRuntimeOnly("maven.modrinth:rctapi:DoQNDXAU")
+    modRuntimeOnly("maven.modrinth:forge-config-api-port:N5qzq0XV")
+    modRuntimeOnly("maven.modrinth:architectury-api:Pzc2FP5K")
+    // Radical Gyms & Structures 0.7 (gym buildings that summon RCT's Kanto trainers) and what it needs:
+    // CobbleFurnies 1.2 and Athena CTM 4.0.6
+    modRuntimeOnly("maven.modrinth:radical-gyms-cobblemon:TWiuaa3o")
+    modRuntimeOnly("maven.modrinth:cobblefurnies:54k31lEX")
+    modRuntimeOnly("maven.modrinth:athena-ctm:JfyYsWKP")
+    // Bundled inside Forge Config API Port, but nested jars of Modrinth mods aren't loaded in dev, so add them directly.
+    runtimeOnly("com.electronwill.night-config:core:3.8.0")
+    runtimeOnly("com.electronwill.night-config:toml:3.8.0")
 
 
     /*

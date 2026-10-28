@@ -2,6 +2,8 @@ package org.ppvon.ultimateCobblemonProgression.common.component;
 
 import org.ladysnake.cca.api.v3.component.ComponentV3;
 
+import java.util.Optional;
+
 /**
  * Trainer level applies many scalings in org.ppvon.ultimateCobblemonProgression.influence
  *
@@ -16,4 +18,9 @@ import org.ladysnake.cca.api.v3.component.ComponentV3;
 public interface TrainerLevelComponent extends ComponentV3 {
     int getLevel();
     void setLevel(int level);
+
+    /** Region mode: the extra region this player chose to have open from the start, if any. */
+    Optional<String> getStartRegion();
+    /** Pass null to clear the choice. */
+    void setStartRegion(String regionId);
 }

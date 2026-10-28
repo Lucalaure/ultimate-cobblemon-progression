@@ -6,7 +6,10 @@ import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
 import org.ppvon.ultimateCobblemonProgression.common.component.TrainerLevelComponents;
+import org.ppvon.ultimateCobblemonProgression.common.progression.dex.DexProgressionApi;
 import org.ppvon.ultimateCobblemonProgression.common.progression.dex.DexProgressionListener;
+import org.ppvon.ultimateCobblemonProgression.common.regions.RegionProgressTracker;
+import org.ppvon.ultimateCobblemonProgression.common.regions.RegionRegistry;
 import org.ppvon.ultimateCobblemonProgression.common.tiers.TierDef;
 import org.ppvon.ultimateCobblemonProgression.common.tiers.TierRegistry;
 import org.ppvon.ultimateCobblemonProgression.common.tiers.requirements.DexRequirements;
@@ -154,24 +157,30 @@ public final class ProgressionManager {
     }
 
 
+    /** Called whenever one of the player's advancements is awarded or revoked. */
+    public static void onAdvancementsChanged(ServerPlayer player) {
+        if (RegionRegistry.isActive()) {
+            RegionProgressTracker.refresh(player);
+            return;
+        }
+        if (!ConfigLoader.DO_DEX_PROGRESSION.get()) return;
+        DexProgressionApi.DexCounts counts = DexProgressionApi.get(player);
+        attemptLevelUp(player, counts.seen(), counts.caught());
+    }
+
     public static void attemptLevelUp(ServerPlayer player, int seen, int caught) {
         var comp = TrainerLevelComponents.KEY.get(player);
         int current = comp.getLevel();
         int next = current + 1;
 
         var nextReqsOpt = TierRegistry.getRequirements(next);
-        if (nextReqsOpt == null) return;
+        if (nextReqsOpt == null || !nextReqsOpt.hasAny()) return;
 
         DexRequirements req = nextReqsOpt.dex;
-        boolean hasSeenGate = req.seen > 0;
-        boolean hasCaughtGate = req.caught > 0;
+        boolean seenOK = req.seen <= 0 || seen >= req.seen;
+        boolean caughtOK = req.caught <= 0 || caught >= req.caught;
 
-        if (!hasSeenGate && !hasCaughtGate) return;
-
-        boolean seenOK = !hasSeenGate || seen >= req.seen;
-        boolean caughtOK = !hasCaughtGate || caught >= req.caught;
-
-        if (seenOK && caughtOK) {
+        if (seenOK && caughtOK && RequirementCheck.areAdvancementsDone(player, nextReqsOpt)) {
             comp.setLevel(next);
             int newLevel = comp.getLevel();
             Optional<TierDef> newTier = TierRegistry.get(next);

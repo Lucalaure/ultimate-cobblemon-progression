@@ -12,6 +12,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import org.ppvon.ultimateCobblemonProgression.common.component.TrainerLevelComponents;
+import org.ppvon.ultimateCobblemonProgression.common.regions.RegionRegistry;
 import org.ppvon.ultimateCobblemonProgression.common.tiers.TierRegistry;
 import org.ppvon.ultimateCobblemonProgression.config.ConfigLoader;
 
@@ -27,7 +28,7 @@ public final class CandyEntityBlock {
 
     public static void register() {
         UseEntityCallback.EVENT.register((player, level, hand, entity, hit) -> {
-            if(!ConfigLoader.DO_LEVEL_CAP.get()) {
+            if(!ConfigLoader.DO_LEVEL_CAP.get() || RegionRegistry.isActive()) {
                 return InteractionResult.PASS;
             }
 

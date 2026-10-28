@@ -8,6 +8,7 @@ import kotlin.jvm.functions.Function1;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import org.ppvon.ultimateCobblemonProgression.common.component.TrainerLevelComponents;
+import org.ppvon.ultimateCobblemonProgression.common.regions.RegionRegistry;
 import org.ppvon.ultimateCobblemonProgression.common.tiers.TierRegistry;
 import kotlin.Unit;
 import org.ppvon.ultimateCobblemonProgression.config.ConfigLoader;
@@ -25,7 +26,8 @@ public final class ExpCapListener {
     }
 
     private static Unit onPreExp(Pre e) {
-        if(!ConfigLoader.DO_LEVEL_CAP.get()) {
+        // In region mode the level cap comes from the trainer mod (e.g. Radical Cobblemon Trainers).
+        if(!ConfigLoader.DO_LEVEL_CAP.get() || RegionRegistry.isActive()) {
             return Unit.INSTANCE;
         }
         Pokemon mon = e.getPokemon();

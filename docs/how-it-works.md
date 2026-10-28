@@ -10,6 +10,7 @@ This guide explains exactly what UCP changes in Cobblemon, using the mod's defau
 - Wild Pokémon **levels** are rerolled based on the Pokémon's tier and yours.
 - Your own Pokémon **can't gain XP past your tier's level cap**.
 - You **level up automatically** by seeing and catching enough different species in your Pokédex.
+- **Region mode** (optional) replaces the single ladder with one ladder per region, unlocked by gym badges. See [section 9](#9-region-mode).
 
 ---
 
@@ -224,6 +225,7 @@ Tiers are loaded from `data/ultimate-cobblemon-progression/tiers/tier_<number>.j
 | `levelCap` | Yes | The level cap for players at this tier, and the base for wild levels of this tier's species. |
 | `requirements.dex.seen` | No | Species seen needed to **reach** this tier. |
 | `requirements.dex.caught` | No | Species caught needed to **reach** this tier. |
+| `requirements.advancements` | No | Advancement ids that must all be completed to **reach** this tier, e.g. `["rctmod:trainers/defeat_leader_brock"]`. |
 | `species` | No | Species ids in this tier. |
 
 Rules and tips:
@@ -231,6 +233,7 @@ Rules and tips:
 - **Number tiers 1, 2, 3, … with no gaps.** The highest number is the maximum trainer level.
 - **Use species ids, not form ids.** `cobblemon:vulpix` covers every Vulpix form. Entries like `cobblemon:bergmite_hisui` don't match anything and are ignored.
 - **List each species in only one tier.**
+- **Advancement requirements** are re-checked the moment an advancement is earned, so tiers can be tied to anything that grants one: beating a trainer, finishing a quest, or a custom datapack advancement.
 - **A tier with no requirements stops automatic progression** at the tier before it. Players then need `/trainerlevel promote` or `/trainerlevel set` to go further.
 - Species from add-ons only take effect when that add-on is installed; unknown ids are ignored.
 - `/reload` reapplies tier files without a restart.
@@ -246,3 +249,78 @@ If you change the tier files, you can regenerate [Species by Tier and Rarity](sp
 | `/trainerlevel get` | Everyone | Shows your trainer level and your Pokédex progress toward the next one. |
 | `/trainerlevel set <player> <level>` | Operator (level 2) | Sets a player's trainer level. Values are clamped between 1 and the highest tier. |
 | `/trainerlevel promote <player>` | Operator (level 2) | Raises a player one level and shows them the normal level-up message. |
+
+In region mode, `/trainerlevel get` shows each region's tier and what's needed next instead, and `set`/`promote` are disabled (use `/advancement grant` and `/advancement revoke`). Two more commands exist in region mode:
+
+| Command | Permission | What it does |
+|---|---|---|
+| `/trainerlevel region choose <region>` | Everyone | Picks your extra starting region (once). |
+| `/trainerlevel region reset <player>` | Operator (level 2) | Clears a player's starting region choice. |
+
+---
+
+## 9. Region mode
+
+Region mode gives each region (Kanto, Johto, …) its **own ladder of tiers**, unlocked by advancements such as gym-leader wins. It turns on automatically when any region data is loaded; without region data, everything above works as described.
+
+### How it plays
+
+1. You start in the **first region**, where only its weakest species can spawn.
+2. Each **tier** of that region is unlocked by its requirements, typically beating the next gym leader. Earning the advancement unlocks the tier immediately and tells you in chat how many species it added.
+3. When you earn the region's **completion advancement** (e.g. the Champion), the region is complete and the **next region opens** at its first tier. Completed regions stay fully open.
+
+Species from regions you haven't reached, and species in no region at all, can't spawn (the second case follows `blockUnknownSpecies`). This only affects wild spawns: trades, eggs and evolutions aren't restricted.
+
+Progress isn't stored by UCP. It's worked out from your advancements (and Pokédex, if a tier asks for it) each time it changes, so a trainer mod resetting its own series progress never re-locks a region.
+
+### Differences from the tier ladder
+
+- **Wild levels and weights** work exactly as in [sections 3](#weight-scaling-whos-favored-within-a-rarity) and [4](#4-wild-pokémon-levels), but each species is compared with your progress **in its own region**, using that region's tier caps.
+- **UCP's level cap is off.** Region mode is meant to be paired with a trainer mod that has its own cap, such as Radical Cobblemon Trainers.
+- **Trainer levels and Pokédex auto-levelling aren't used.**
+
+### Region files
+
+Each region is a folder in `data/ultimate-cobblemon-progression/regions/<region>/`:
+
+```
+regions/kanto/region.json
+regions/kanto/tier_1.json
+regions/kanto/tier_2.json
+...
+```
+
+`region.json`:
+
+```json
+{
+  "order": 1,
+  "title": "Kanto",
+  "completedBy": "rctmod:trainers/defeat_champion_terry"
+}
+```
+
+| Field | Required | Meaning |
+|---|---|---|
+| `order` | No (default 0) | Unlock order. The lowest order is open from the start; each later region opens when the one before it is complete. |
+| `title` | No | Name shown in chat and `/trainerlevel get`. Defaults to the folder name. |
+| `completedBy` | No | Advancement that completes the region. Without it, the region is complete once its last tier is unlocked. |
+| `startChoice` | No (default false) | Lets players pick this region as their extra starting region (see below). Ignored on the first region, which is always open. |
+
+### Picking a second starting region
+
+If any region has `"startChoice": true`, each player can open **one** of them from the very start, alongside the first region:
+
+```
+/trainerlevel region choose <region>
+```
+
+Players are reminded on joining and in `/trainerlevel get` until they pick. The choice is permanent; an operator can clear it with `/trainerlevel region reset <player>`.
+
+Picking a region only opens it. Its tiers still unlock through their own requirements, so a chosen region grows with whatever its tier files ask for. The example datapack ties Johto, Hoenn and Sinnoh to the same Kanto badges as Kanto's own tiers.
+
+`tier_N.json` files use the same format as [custom tiers](#7-custom-tiers-datapacks): `levelCap`, `species`, and `requirements` (usually `advancements`). Tiers must be numbered 1, 2, 3… with no gaps, and tier 1 normally has no requirements. A species belongs to the first region that lists it; its forms come with it.
+
+`scripts/generate-region-tiers.ps1` builds the tier files from a Cobblemon regional Pokédex, splitting its species into equal-sized tiers by Base Stat Total. See the script for usage.
+
+The [UCP Regions for Radical Cobblemon Trainers](https://github.com/Lucalaure/ucp-rct-regions) datapack is a complete example: a 10-tier Kanto, with each tier after the first unlocked by one of the Kanto gym leaders from Radical Cobblemon Trainers, plus every other region as a starting choice.

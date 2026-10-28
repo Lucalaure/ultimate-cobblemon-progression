@@ -9,6 +9,8 @@ import com.cobblemon.mod.common.api.pokedex.SeenCount;
 import kotlin.Unit;
 import net.minecraft.server.level.ServerPlayer;
 import org.ppvon.ultimateCobblemonProgression.common.progression.ProgressionManager;
+import org.ppvon.ultimateCobblemonProgression.common.regions.RegionProgressTracker;
+import org.ppvon.ultimateCobblemonProgression.common.regions.RegionRegistry;
 import org.ppvon.ultimateCobblemonProgression.config.ConfigLoader;
 
 import java.util.UUID;
@@ -24,6 +26,12 @@ public final class DexProgressionListener {
     }
 
     private static Unit onDexChanged(PokedexDataChangedEvent event) {
+        if (RegionRegistry.isActive()) {
+            // Region tiers can also require Pokédex counts.
+            ServerPlayer player = getPlayer(event.getPlayerUUID());
+            if (player != null) RegionProgressTracker.refresh(player);
+            return Unit.INSTANCE;
+        }
         if(!ConfigLoader.DO_DEX_PROGRESSION.get()) {
             return Unit.INSTANCE;
         }

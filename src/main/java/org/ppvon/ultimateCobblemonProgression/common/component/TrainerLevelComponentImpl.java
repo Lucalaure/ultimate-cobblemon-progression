@@ -6,8 +6,11 @@ import net.minecraft.world.entity.player.Player;
 import org.ladysnake.cca.api.v3.component.sync.AutoSyncedComponent;
 import org.ppvon.ultimateCobblemonProgression.common.tiers.TierRegistry;
 
+import java.util.Optional;
+
 public class TrainerLevelComponentImpl implements TrainerLevelComponent, AutoSyncedComponent {
     private int level = 1;
+    private String startRegion = null;
     private final Player player;
     private boolean loadedFromNbt = false;
 
@@ -29,16 +32,31 @@ public class TrainerLevelComponentImpl implements TrainerLevelComponent, AutoSyn
     }
 
     @Override
+    public Optional<String> getStartRegion() {
+        return Optional.ofNullable(startRegion);
+    }
+
+    @Override
+    public void setStartRegion(String regionId) {
+        this.startRegion = regionId;
+        TrainerLevelComponents.KEY.sync(this.player);
+    }
+
+    @Override
     public void readFromNbt(CompoundTag tag, HolderLookup.Provider registryLookup) {
         if (tag.contains("Level")) {
             this.level = tag.getInt("Level");
             this.loadedFromNbt = true;
         }
+        this.startRegion = tag.contains("StartRegion") ? tag.getString("StartRegion") : null;
     }
 
     @Override
     public void writeToNbt(CompoundTag tag, HolderLookup.Provider registryLookup) {
         tag.putInt("Level", this.level);
+        if (this.startRegion != null) {
+            tag.putString("StartRegion", this.startRegion);
+        }
     }
 
     public boolean loadedFromNbt() {

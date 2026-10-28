@@ -1,30 +1,31 @@
 package org.ppvon.ultimateCobblemonProgression.common.influence;
 
+import com.cobblemon.mod.common.api.Priority;
+import com.cobblemon.mod.common.api.events.CobblemonEvents;
+import com.cobblemon.mod.common.api.events.entity.SpawnEvent;
 import com.cobblemon.mod.common.api.pokemon.PokemonSpecies;
+import com.cobblemon.mod.common.api.spawning.detail.PokemonHerdSpawnDetail;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
 import com.cobblemon.mod.common.pokemon.Species;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import com.cobblemon.mod.common.api.spawning.position.SpawnablePosition;
-import com.cobblemon.mod.common.api.spawning.position.calculators.SpawnablePositionCalculator;
 import com.cobblemon.mod.common.api.spawning.detail.PokemonSpawnDetail;
 import com.cobblemon.mod.common.api.spawning.detail.SpawnAction;
 import com.cobblemon.mod.common.api.spawning.detail.SpawnDetail;
 import com.cobblemon.mod.common.api.spawning.influence.SpawningInfluence;
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
-import net.fabricmc.loader.impl.util.log.Log;
-import net.fabricmc.loader.impl.util.log.LogCategory;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import org.jetbrains.annotations.NotNull;
-import org.ppvon.ultimateCobblemonProgression.api.UCPApi;
-import org.ppvon.ultimateCobblemonProgression.common.component.TrainerLevelComponents;
+import org.ppvon.ultimateCobblemonProgression.common.progression.TierStanding;
 import org.ppvon.ultimateCobblemonProgression.config.ConfigLoader;
-import org.ppvon.ultimateCobblemonProgression.common.tiers.TierRegistry;
 
-import java.io.ObjectInputFilter;
+import java.util.Locale;
 import java.util.function.Supplier;
 
 /**
@@ -35,7 +36,8 @@ import java.util.function.Supplier;
  *  a "tier" defined in data.  This tier defines a list of pokemon that are
  *  allowed to spawn if a trainer is at least that tier.  If a species is not
  *  found in a tier, by default the spawn is still blocked, but can be configured
- *  with BLOCK_UNKNOWN_SPECIES
+ *  with BLOCK_UNKNOWN_SPECIES.  In region mode, each region has its own tier
+ *  ladder instead (see {@link TierStanding}).
  *
  * Weight:
  *  Pokemon in the same tier as the player get a buff to their weight via
@@ -46,10 +48,10 @@ import java.util.function.Supplier;
  *      Tier 1 mon with weight 300
  *      Tier 5 player
  *      Diff in tier is 4
- *      4 * WEIGHT_DECAY_PER_TIER(0.20) = 0.80
- *      Weight multiplier = 0.20 (not lower than min so no clamping)
+ *      2.0 - 4 * WEIGHT_DECAY_PER_TIER(0.20) = 1.2
+ *      Weight multiplier = 1.2 (not lower than min so no clamping)
  *
- *      New tier 1 mon weight = 60
+ *      New tier 1 mon weight = 360
  *
  *  Level:
  *   The level of mons is scaled to a triangle distribution around the level cap
@@ -65,7 +67,7 @@ import java.util.function.Supplier;
  *      New tier 1 cap is player is level 5 = 29
  *
  *      With default min/avg/max, the Tier 1pokemon will spawn between
- *      level 13 and 32, with an average of 22.
+ *      level 13 and 31, with an average of 22.
  *
  *    This means lower tier pokemon will still stay lower level than higher tier
  *    pokemon, but will not be level 5-16 forever.
@@ -98,21 +100,67 @@ public final class TrainerLevelInfluence implements SpawningInfluence {
         return Mth.clamp((int)Math.round(x), min, max);
     }
 
-    private static int playerTier(ServerPlayer player) {
-        return Math.max(0, TrainerLevelComponents.KEY.get(player).getLevel());
-    }
-
-    private static int levelCapForTier(int tier) {
-        return TierRegistry.get(tier).map(t -> t.levelCap).orElse(Integer.MAX_VALUE);
-    }
-
-    private static double weightFactor(int speciesTier, int playerTier) {
-        int diff = Math.abs(speciesTier - playerTier);
+    private static double weightFactor(int tierGap) {
+        int diff = Math.abs(tierGap);
         double f = WEIGHT_CURRENT_TIER_BUFF.get() - (WEIGHT_DECAY_PER_TIER.get() * diff);
         return (f < WEIGHT_MIN_FACTOR.get()) ? WEIGHT_MIN_FACTOR.get() : f;
     }
 
-    private ServerPlayer resolvePlayer(SpawnablePosition ctx) {
+    /** The detail's species, or null for non-Pokémon details, "random" species and unknown ids. */
+    private static Species speciesOf(SpawnDetail detail) {
+        if (!(detail instanceof PokemonSpawnDetail psd)) return null;
+        return speciesOf(psd.getPokemon().getSpecies());
+    }
+
+    /** Resolves a species string from spawn data ("pidgey", "cobblemon:pidgey"), or null for "random" and unknown ids. */
+    private static Species speciesOf(String speciesStr) {
+        if (speciesStr == null || "random".equalsIgnoreCase(speciesStr)) return null;
+
+        String lower = speciesStr.toLowerCase(Locale.ROOT);
+        ResourceLocation id = lower.contains(":")
+                ? ResourceLocation.tryParse(lower)
+                : ResourceLocation.fromNamespaceAndPath("cobblemon", lower);
+        return id != null ? PokemonSpecies.getByIdentifier(id) : null;
+    }
+
+    /** Whether species blocking lets this species spawn for the player. */
+    static boolean isAllowed(Species sp, ServerPlayer player) {
+        if (!TierStanding.isKnown(sp)) return !BLOCK_UNKNOWN_SPECIES.get();
+        return player != null && TierStanding.of(player, sp).allowed();
+    }
+
+    /**
+     * Herds (and alphas, which are herds with a leader) list several species in one spawn entry.
+     * The herd may spawn if any member is allowed; locked members are cancelled one by one in
+     * {@link #onEntitySpawn}.
+     */
+    private static boolean anyHerdMemberAllowed(PokemonHerdSpawnDetail herd, ServerPlayer player) {
+        for (var member : herd.getHerdablePokemon()) {
+            Species sp = speciesOf(member.getPokemon().getSpecies());
+            if (sp == null || isAllowed(sp, player)) return true;
+        }
+        return false;
+    }
+
+    /**
+     * Last check for every Pokémon Cobblemon is about to spawn. Single spawns were already filtered in
+     * {@link #affectSpawnable}; this catches herd members, which share one spawn entry.
+     */
+    public static void registerSpawnGuard() {
+        CobblemonEvents.ENTITY_SPAWN.subscribe(Priority.NORMAL, (Function1<? super SpawnEvent<?>, Unit>) TrainerLevelInfluence::onEntitySpawn);
+    }
+
+    private static Unit onEntitySpawn(SpawnEvent<?> event) {
+        if (!ConfigLoader.DO_SPECIES_BLOCKING.get() || !TierStanding.hasTierData()) return Unit.INSTANCE;
+        if (!(event.getEntity() instanceof PokemonEntity pe)) return Unit.INSTANCE;
+
+        if (!isAllowed(pe.getPokemon().getSpecies(), resolvePlayer(event.getSpawnablePosition()))) {
+            event.cancel();
+        }
+        return Unit.INSTANCE;
+    }
+
+    private static ServerPlayer resolvePlayer(SpawnablePosition ctx) {
         var cause = ctx.getCause();
         if (cause != null) {
             Entity e = cause.getEntity();
@@ -128,76 +176,44 @@ public final class TrainerLevelInfluence implements SpawningInfluence {
         return null;
     }
 
-    private boolean allowDetail(SpawnDetail detail, SpawnablePosition ctx) {
-        if (!(detail instanceof PokemonSpawnDetail psd)) return true;
-
-        String speciesStr = psd.getPokemon().getSpecies();
-        if (speciesStr == null || "random".equalsIgnoreCase(speciesStr)) return true;
-
-        if (TierRegistry.maxTier() == 0) return true;
-
-        Species sp = PokemonSpecies.INSTANCE.getByName(speciesStr);
-        int monTier = UCPApi.getTier(sp);
-
-        if (monTier == Integer.MAX_VALUE) {
-            Log.warn(LogCategory.GENERAL, "No tier for {}", sp.getName());
-            return !BLOCK_UNKNOWN_SPECIES.get();
-        }
-
-        ServerPlayer player = resolvePlayer(ctx);
-        if (player == null) return false;
-
-        int trainerTier = playerTier(player);
-        boolean allow = monTier <= trainerTier;
-
-        return allow;
-    }
-
     @Override
     public boolean affectSpawnable(@NotNull SpawnDetail spawnDetail, @NotNull SpawnablePosition spawningContext) {
-        if(!ConfigLoader.DO_SPECIES_BLOCKING.get()) {
+        if (!ConfigLoader.DO_SPECIES_BLOCKING.get() || !TierStanding.hasTierData()) {
             return true;
         }
-        return allowDetail(spawnDetail, spawningContext);
+        if (spawnDetail instanceof PokemonHerdSpawnDetail herd) {
+            return anyHerdMemberAllowed(herd, resolvePlayer(spawningContext));
+        }
+        Species sp = speciesOf(spawnDetail);
+        if (sp == null) return true;
+
+        return isAllowed(sp, resolvePlayer(spawningContext));
     }
 
     @Override
     public float affectWeight(@NotNull SpawnDetail spawnDetail,
                               @NotNull SpawnablePosition ctx,
                               float currentWeight) {
-        if (!ConfigLoader.DO_WEIGHT_SCALING.get()) {
+        if (!ConfigLoader.DO_WEIGHT_SCALING.get() || !TierStanding.hasTierData()) {
             return currentWeight;
         }
-        if (!(spawnDetail instanceof PokemonSpawnDetail psd)) {
-            return currentWeight;
-        }
+        Species sp = speciesOf(spawnDetail);
+        if (sp == null) return currentWeight;
 
-        String speciesStr = psd.getPokemon().getSpecies();
-        if (speciesStr == null || "random".equalsIgnoreCase(speciesStr)) return currentWeight;
-
-        if (TierRegistry.maxTier() == 0) return currentWeight;
-
-        Species sp = PokemonSpecies.INSTANCE.getByName(speciesStr);
-        int monTier = UCPApi.getTier(sp);
-        //int monTier = speciesMinTier(speciesId);
-        if (monTier == -1) {
+        if (!TierStanding.isKnown(sp)) {
             return BLOCK_UNKNOWN_SPECIES.get() ? 0.0f : currentWeight;
         }
 
         ServerPlayer player = resolvePlayer(ctx);
         if (player == null) return currentWeight;
 
-        int trainerTier = playerTier(player);
-
-        double factor = weightFactor(monTier, trainerTier);
-        float adjusted = (float)(currentWeight * factor);
-
-        return adjusted;
+        double factor = weightFactor(TierStanding.of(player, sp).tierGap());
+        return (float)(currentWeight * factor);
     }
 
     @Override
     public void affectSpawn(@NotNull SpawnAction<?> action, @NotNull Entity entity) {
-        if(!ConfigLoader.DO_LEVEL_SCALING.get()) {
+        if (!ConfigLoader.DO_LEVEL_SCALING.get() || !TierStanding.hasTierData()) {
             return;
         }
         if (!(entity instanceof PokemonEntity pe)){
@@ -212,15 +228,11 @@ public final class TrainerLevelInfluence implements SpawningInfluence {
 
         var poke = pe.getPokemon();
         Species sp = poke.getSpecies();
+        if (!TierStanding.isKnown(sp)) return;
 
-        int speciesTier = UCPApi.getTier(sp);
-        int playerTier = playerTier(player);
-
-        int speciesTierCap = levelCapForTier(speciesTier);
-        if (speciesTierCap == Integer.MAX_VALUE) speciesTierCap = 100;
-
-        int playerCap = levelCapForTier(playerTier);
-        if (playerCap == Integer.MAX_VALUE) playerCap = 100;
+        TierStanding standing = TierStanding.of(player, sp);
+        int speciesTierCap = standing.speciesCap();
+        int playerCap = standing.playerCap();
 
         int capDelta = Math.max(0, playerCap - speciesTierCap);
         double capScaling = TIER_CAP_SCALING.get();
@@ -245,18 +257,4 @@ public final class TrainerLevelInfluence implements SpawningInfluence {
             poke.setLevel(newLevel);
         }
     }
-
-
-    //@Override public void affectAction(@NotNull SpawnAction<?> spawnAction) { /* no-op */ }
-
-    /*
-    @Override
-    public boolean isAllowedPosition(@NotNull ServerLevel level,
-                                     @NotNull BlockPos pos,
-                                     @NotNull SpawnablePositionCalculator<?, ?> calc) {
-        return true;
-    }
-    */
-
-    //@Override public boolean isExpired() { return false; }
 }

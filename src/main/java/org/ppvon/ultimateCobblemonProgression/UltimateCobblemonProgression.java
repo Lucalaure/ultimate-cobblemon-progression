@@ -20,11 +20,17 @@ import org.ppvon.ultimateCobblemonProgression.common.progression.dex.DexProgress
 import org.ppvon.ultimateCobblemonProgression.common.tiers.TierRegistry;
 import org.ppvon.ultimateCobblemonProgression.common.tiers.TierSpeciesApplier;
 import org.ppvon.ultimateCobblemonProgression.config.ConfigLoader;
+import org.ppvon.ultimateCobblemonProgression.common.influence.TrainerLevelInfluence;
 import org.ppvon.ultimateCobblemonProgression.common.influence.TrainerLevelInfluenceRegistrar;
 import org.ppvon.ultimateCobblemonProgression.common.levelcap.CandyEntityBlock;
 import org.ppvon.ultimateCobblemonProgression.common.levelcap.CandyRefund;
 import org.ppvon.ultimateCobblemonProgression.common.levelcap.ExpCapListener;
 import org.ppvon.ultimateCobblemonProgression.common.tiers.TierDataLoader;
+import org.ppvon.ultimateCobblemonProgression.common.regions.RegionCommands;
+import org.ppvon.ultimateCobblemonProgression.common.regions.RegionDataLoader;
+import org.ppvon.ultimateCobblemonProgression.common.regions.RegionProgressTracker;
+import org.ppvon.ultimateCobblemonProgression.common.regions.RegionRegistry;
+import org.ppvon.ultimateCobblemonProgression.common.regions.RegionSpecies;
 
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
@@ -48,7 +54,11 @@ public class UltimateCobblemonProgression implements ModInitializer {
                 impl.setLevel(1);
             }
             TrainerLevelComponents.KEY.sync(player);
+            RegionProgressTracker.refreshSilently(player);
+            if (RegionRegistry.isActive()) RegionCommands.promptStartChoice(player);
         });
+
+        ServerPlayConnectionEvents.DISCONNECT.register((handler, server) -> RegionProgressTracker.forget(handler.player));
 
         ServerPlayerEvents.AFTER_RESPAWN.register((oldPlayer, newPlayer, alive) -> {
             TrainerLevelComponents.KEY.sync(newPlayer);
@@ -56,9 +66,15 @@ public class UltimateCobblemonProgression implements ModInitializer {
 
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, env) -> {
             dispatcher.register(Commands.literal("trainerlevel")
+                    .then(RegionCommands.regionNode())
                     .then(Commands.literal("get")
                             .executes(ctx -> {
                                 ServerPlayer p = ctx.getSource().getPlayerOrException();
+
+                                if (RegionRegistry.isActive()) {
+                                    ctx.getSource().sendSuccess(() -> RegionCommands.describe(p), false);
+                                    return 1;
+                                }
 
                                 int v = TrainerLevelComponents.KEY.get(p).getLevel();
                                 var nextLevel = TierRegistry.get(v + 1);
@@ -102,6 +118,7 @@ public class UltimateCobblemonProgression implements ModInitializer {
                             .then(Commands.argument("player", EntityArgument.player())
                                     .then(Commands.argument("value", IntegerArgumentType.integer(0, 999))
                                             .executes(ctx -> {
+                                                if (RegionRegistry.isActive()) return RegionCommands.unavailable(ctx.getSource());
                                                 ServerPlayer target = EntityArgument.getPlayer(ctx, "player");
                                                 int v = IntegerArgumentType.getInteger(ctx, "value");
 
@@ -127,6 +144,7 @@ public class UltimateCobblemonProgression implements ModInitializer {
                             .then(Commands.argument("player", EntityArgument.player())
                                     .executes(ctx -> {
                                         CommandSourceStack src = ctx.getSource();
+                                        if (RegionRegistry.isActive()) return RegionCommands.unavailable(src);
                                         ServerPlayer target = EntityArgument.getPlayer(ctx, "player");
 
                                         int current = TrainerLevelComponents.KEY.get(target).getLevel();
@@ -163,16 +181,21 @@ public class UltimateCobblemonProgression implements ModInitializer {
         });
         LOG.info("Trainer level commands registered");
         TrainerLevelInfluenceRegistrar.registerOnce();
+        TrainerLevelInfluence.registerSpawnGuard();
         LOG.info("Trainer level influence registered");
         TierDataLoader.register();
+        RegionDataLoader.register();
 
         ServerLifecycleEvents.SERVER_STARTED.register(server -> {
             TierSpeciesApplier.applyFromRegistry();
+            RegionSpecies.applyFromRegistry();
         });
 
         ServerLifecycleEvents.END_DATA_PACK_RELOAD.register((server, rm, success) -> {
             if (!success) return;
             TierSpeciesApplier.applyFromRegistry();
+            RegionSpecies.applyFromRegistry();
+            RegionProgressTracker.refreshAllSilently(server);
         });
 
         CandyEntityBlock.register();
