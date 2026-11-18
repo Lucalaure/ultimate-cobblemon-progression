@@ -26,6 +26,8 @@ public final class ConfigLoader {
     // ucp-common.json
     public static Supplier<Boolean> DO_LEVEL_CAP;
     public static Supplier<Boolean> DO_DEX_PROGRESSION;
+    public static Supplier<Double> GYM_VILLAGE_CHANCE;
+    public static Supplier<Boolean> GIVE_TRAINER_CARD;
 
     private ConfigLoader() {}
 
@@ -63,6 +65,8 @@ public final class ConfigLoader {
 
         DO_LEVEL_CAP = () -> COMMON.doLevelCap;
         DO_DEX_PROGRESSION = () -> COMMON.doDexProgression;
+        GYM_VILLAGE_CHANCE = () -> COMMON.gymVillageChance;
+        GIVE_TRAINER_CARD = () -> COMMON.giveTrainerCard;
     }
 
     public static SpawnConfig spawn() { return SPAWN; }

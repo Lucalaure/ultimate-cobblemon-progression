@@ -43,5 +43,9 @@
   },
   "suggests": {
     "modmenu": "*"
+  },
+  "recommends": {
+    "rctmod": "*",
+    "cobblefurnies": "*"
   }
 }

@@ -14,6 +14,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import org.ppvon.ultimateCobblemonProgression.common.component.TrainerLevelComponents;
 import org.ppvon.ultimateCobblemonProgression.common.progression.RequirementCheck;
+import org.ppvon.ultimateCobblemonProgression.common.gym.RctBridge;
 import org.ppvon.ultimateCobblemonProgression.common.tiers.TierDef;
 import org.ppvon.ultimateCobblemonProgression.common.tiers.requirements.DexRequirements;
 
@@ -85,34 +86,77 @@ public final class RegionCommands {
     }
 
     private static Component startChoicePrompt(ServerPlayer player) {
+        if (RegionProgress.needsHomeRegion(player)) {
+            return Component.literal("Open your Trainer Card to choose the region your journey starts in.")
+                    .withStyle(ChatFormatting.YELLOW);
+        }
         List<RegionDef> choices = RegionRegistry.startChoices();
         if (choices.isEmpty() || RegionProgress.chosenStartRegion(player) != null) return null;
         String ids = String.join(", ", choices.stream().map(r -> r.id).toList());
-        return Component.literal("Pick a second region to explore from the start: /trainerlevel region choose <" + ids + ">")
+        return Component.literal("Pick a second region to explore from the start: open your Trainer Card's Regions tab, or use /trainerlevel region choose <" + ids + ">")
                 .withStyle(ChatFormatting.YELLOW);
     }
 
     private static int choose(ServerPlayer player, String regionId, CommandSourceStack src) {
-        if (!RegionRegistry.isActive()) return unavailableOutsideRegionMode(src);
-
-        String current = RegionProgress.chosenStartRegion(player);
-        if (current != null) {
-            src.sendFailure(Component.literal("You already picked " + RegionRegistry.byId(current).title
-                    + ". An operator can undo it with /trainerlevel region reset <player>."));
+        Choice result = chooseStartRegion(player, regionId);
+        if (!result.ok()) {
+            src.sendFailure(result.message());
             return 0;
         }
+        src.sendSuccess(result::message, false);
+        return 1;
+    }
+
+    /** The outcome of picking a starting region: whether it worked, and what to tell the player. */
+    public record Choice(boolean ok, Component message) {}
+
+    /** Picks the region the player's journey starts in (from the Trainer Card), and joins its trainer series. */
+    public static Choice chooseHomeRegion(ServerPlayer player, String regionId) {
+        if (!RegionRegistry.isActive()) {
+            return new Choice(false, Component.literal("No regions are loaded, so there's nothing to choose."));
+        }
+        String current = RegionProgress.chosenHomeRegion(player);
+        if (current != null) {
+            return new Choice(false, Component.literal("Your journey already started in " + RegionRegistry.byId(current).title + "."));
+        }
         RegionDef region = RegionRegistry.byId(regionId);
+        if (region == null || region.series.isEmpty()) {
+            return new Choice(false, Component.literal("'" + regionId + "' can't be a starting region."));
+        }
+        if (RctBridge.isLoaded() && !RctBridge.joinSeries(player, region.series.get())) {
+            return new Choice(false, Component.literal("Couldn't start the " + region.title
+                    + " trainer series in Radical Cobblemon Trainers. Check the server log."));
+        }
+        TrainerLevelComponents.KEY.get(player).setHomeRegion(region.id);
+        RegionProgressTracker.refresh(player);
+        return new Choice(true, Component.literal("Your journey begins in " + region.title + "! Find a gym in a village to challenge its first leader.")
+                .withStyle(ChatFormatting.GREEN));
+    }
+
+    /** Picks the player's extra starting region, used by the command and the Trainer Card. */
+    public static Choice chooseStartRegion(ServerPlayer player, String regionId) {
+        if (!RegionRegistry.isActive()) {
+            return new Choice(false, Component.literal("No regions are loaded, so there's nothing to choose."));
+        }
+        String current = RegionProgress.chosenStartRegion(player);
+        if (current != null) {
+            return new Choice(false, Component.literal("You already picked " + RegionRegistry.byId(current).title
+                    + ". An operator can undo it with /trainerlevel region reset <player>."));
+        }
+        RegionDef region = RegionRegistry.byId(regionId);
+        if (region != null && region.id.equals(RegionProgress.chosenHomeRegion(player))) {
+            return new Choice(false, Component.literal(region.title + " is already where your journey started."));
+        }
         if (region == null || !RegionRegistry.startChoices().contains(region)) {
             String ids = String.join(", ", RegionRegistry.startChoices().stream().map(r -> r.id).toList());
-            src.sendFailure(Component.literal("'" + regionId + "' isn't a starting choice. Options: " + (ids.isEmpty() ? "none" : ids)));
-            return 0;
+            return new Choice(false, Component.literal("'" + regionId + "' isn't a starting choice. Options: "
+                    + (ids.isEmpty() ? "none" : ids)));
         }
 
         TrainerLevelComponents.KEY.get(player).setStartRegion(region.id);
         RegionProgressTracker.refresh(player);
-        src.sendSuccess(() -> Component.literal(region.title + " is now open alongside "
-                + RegionRegistry.ordered().getFirst().title + "."), false);
-        return 1;
+        return new Choice(true, Component.literal(region.title + " is now open alongside "
+                + RegionRegistry.ordered().getFirst().title + ".").withStyle(ChatFormatting.GREEN));
     }
 
     private static int reset(ServerPlayer target, CommandSourceStack src) {
@@ -135,7 +179,8 @@ public final class RegionCommands {
         return 0;
     }
 
-    private static String describeMissing(ServerPlayer player, TierDef tier) {
+    /** What's still needed to unlock the tier, e.g. "Leader Brock, catch 10 species". */
+    public static String describeMissing(ServerPlayer player, TierDef tier) {
         StringBuilder sb = new StringBuilder();
         for (ResourceLocation id : tier.requirements.advancements) {
             if (RequirementCheck.isAdvancementDone(player, id)) continue;

@@ -70,7 +70,7 @@ public final class RegionDataLoader extends SimpleJsonResourceReloadListener imp
                         .getOrThrow(msg -> new IllegalArgumentException("Invalid tier: " + msg));
                 int index = idx.getAsInt();
                 tiers.computeIfAbsent(regionId, k -> new TreeMap<>())
-                        .put(index, new TierDef(index, parsed.levelCap, parsed.species, parsed.requirements));
+                        .put(index, parsed.withIndex(index));
             } catch (Exception ex) {
                 UltimateCobblemonProgression.LOG.error("Failed to load region file {}: {}", id, ex.getMessage());
             }

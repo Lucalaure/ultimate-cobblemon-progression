@@ -11,6 +11,7 @@ import java.util.Optional;
 public class TrainerLevelComponentImpl implements TrainerLevelComponent, AutoSyncedComponent {
     private int level = 1;
     private String startRegion = null;
+    private String homeRegion = null;
     private final Player player;
     private boolean loadedFromNbt = false;
 
@@ -43,12 +44,24 @@ public class TrainerLevelComponentImpl implements TrainerLevelComponent, AutoSyn
     }
 
     @Override
+    public Optional<String> getHomeRegion() {
+        return Optional.ofNullable(homeRegion);
+    }
+
+    @Override
+    public void setHomeRegion(String regionId) {
+        this.homeRegion = regionId;
+        TrainerLevelComponents.KEY.sync(this.player);
+    }
+
+    @Override
     public void readFromNbt(CompoundTag tag, HolderLookup.Provider registryLookup) {
         if (tag.contains("Level")) {
             this.level = tag.getInt("Level");
             this.loadedFromNbt = true;
         }
         this.startRegion = tag.contains("StartRegion") ? tag.getString("StartRegion") : null;
+        this.homeRegion = tag.contains("HomeRegion") ? tag.getString("HomeRegion") : null;
     }
 
     @Override
@@ -56,6 +69,9 @@ public class TrainerLevelComponentImpl implements TrainerLevelComponent, AutoSyn
         tag.putInt("Level", this.level);
         if (this.startRegion != null) {
             tag.putString("StartRegion", this.startRegion);
+        }
+        if (this.homeRegion != null) {
+            tag.putString("HomeRegion", this.homeRegion);
         }
     }
 

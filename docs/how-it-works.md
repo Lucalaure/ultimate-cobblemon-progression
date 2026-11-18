@@ -11,6 +11,8 @@ This guide explains exactly what UCP changes in Cobblemon, using the mod's defau
 - Your own Pokémon **can't gain XP past your tier's level cap**.
 - You **level up automatically** by seeing and catching enough different species in your Pokédex.
 - **Region mode** (optional) replaces the single ladder with one ladder per region, unlocked by gym badges. See [section 9](#9-region-mode).
+- **Gyms** appear in villages. Using a gym's Gym Challenge block summons your next gym leader. See [Gyms](#gyms).
+- Every player starts with a **Trainer Card** that shows their progress. See [Trainer Card](#trainer-card).
 
 ---
 
@@ -197,6 +199,8 @@ On a dedicated server, edit the **server's** files and restart it; the in-game s
 |---|---|---|
 | `doLevelCap` | `true` | Stop your Pokémon gaining XP past your tier's level cap ([section 5](#5-level-cap-on-your-pokémon)). |
 | `doDexProgression` | `true` | Level players up automatically from Pokédex progress. If off, trainer levels only change through commands. |
+| `giveTrainerCard` | `true` | Give every player a [Trainer Card](#trainer-card) on their first join. |
+| `gymVillageChance` | `0.3` | Share of newly generated villages (0 to 0.95) whose centre is a [gym](#gyms). `0` turns village gyms off. Takes effect the next time a world starts. |
 
 ---
 
@@ -247,6 +251,7 @@ If you change the tier files, you can regenerate [Species by Tier and Rarity](sp
 | Command | Permission | What it does |
 |---|---|---|
 | `/trainerlevel get` | Everyone | Shows your trainer level and your Pokédex progress toward the next one. |
+| `/trainerlevel card` | Everyone | Gives you a new [Trainer Card](#trainer-card) if you don't have one. |
 | `/trainerlevel set <player> <level>` | Operator (level 2) | Sets a player's trainer level. Values are clamped between 1 and the highest tier. |
 | `/trainerlevel promote <player>` | Operator (level 2) | Raises a player one level and shows them the normal level-up message. |
 
@@ -306,10 +311,20 @@ regions/kanto/tier_2.json
 | `title` | No | Name shown in chat and `/trainerlevel get`. Defaults to the folder name. |
 | `completedBy` | No | Advancement that completes the region. Without it, the region is complete once its last tier is unlocked. |
 | `startChoice` | No (default false) | Lets players pick this region as their extra starting region (see below). Ignored on the first region, which is always open. |
+| `series` | No | The Radical Cobblemon Trainers series for this region's trainers, e.g. `"kanto"`. A region with a series can be picked as a player's **starting region**: where their journey begins (see below). |
+
+### Choosing where your journey starts
+
+The first time a player opens their [Trainer Card](#trainer-card), it asks **which region their journey starts in**, before showing anything else. Every region with a `series` is offered, with its number of trainers, species and first leader. Picking one (after confirming, since it's permanent):
+
+- opens that region from the start, in place of the first region;
+- puts the player into its Radical Cobblemon Trainers series, so its leaders will battle them (if they're already in that series, nothing is reset).
+
+Until a player has picked, gyms ask them to open their card first. If no region has a `series`, there's nothing to pick and the first region is open from the start, as before.
 
 ### Picking a second starting region
 
-If any region has `"startChoice": true`, each player can open **one** of them from the very start, alongside the first region:
+If any region has `"startChoice": true`, each player can open **one** of them from the very start, alongside the first region. The easiest way is the [Trainer Card](#trainer-card): its Regions tab shows a **Pick** button on every starting choice (the tab is marked **!** until you've picked), and asks you to confirm before anything changes. The same pick is also a command:
 
 ```
 /trainerlevel region choose <region>
@@ -319,8 +334,54 @@ Players are reminded on joining and in `/trainerlevel get` until they pick. The 
 
 Picking a region only opens it. Its tiers still unlock through their own requirements, so a chosen region grows with whatever its tier files ask for. The example datapack ties Johto, Hoenn and Sinnoh to the same Kanto badges as Kanto's own tiers.
 
-`tier_N.json` files use the same format as [custom tiers](#7-custom-tiers-datapacks): `levelCap`, `species`, and `requirements` (usually `advancements`). Tiers must be numbered 1, 2, 3… with no gaps, and tier 1 normally has no requirements. A species belongs to the first region that lists it; its forms come with it.
+`tier_N.json` files use the same format as [custom tiers](#7-custom-tiers-datapacks): `levelCap`, `species`, and `requirements` (usually `advancements`), plus an optional `trainers` list for [gyms](#gyms). Tiers must be numbered 1, 2, 3… with no gaps, and tier 1 normally has no requirements. A species belongs to the first region that lists it; its forms come with it.
 
 `scripts/generate-region-tiers.ps1` builds the tier files from a Cobblemon regional Pokédex, splitting its species into equal-sized tiers by Base Stat Total. See the script for usage.
 
 The [UCP Regions for Radical Cobblemon Trainers](https://github.com/Lucalaure/ucp-rct-regions) datapack is a complete example: a 10-tier Kanto, with each tier after the first unlocked by one of the Kanto gym leaders from Radical Cobblemon Trainers, plus every other region as a starting choice.
+
+### Gyms
+
+Gyms give each step of a region a place to go. A gym is a building with a **Gym Challenge** block inside. Using the block summons **your next gym leader** in front of it: the trainer your next locked tier asks for. Every gym works for every leader and every region, so after Kanto the same gyms summon the next region's leaders.
+
+**Where they are.** Gyms only generate in villages. A gym can replace the centre of a new village (plains, desert, savanna, snowy and taiga), with the village bell just inside its door. A village has one centre, so it never gets more than one gym, and gyms never generate anywhere else. `gymVillageChance` in `ucp-common.json` sets how many villages get one. Only newly generated villages can have gyms. In creative, the block is in the Functional Blocks tab, so you can also build your own gyms. Outside creative it can't be broken.
+
+**The buildings** are the 8 Kanto gyms from [Radical Gyms & Structures](https://modrinth.com/datapack/radical-gyms-cobblemon) by JayOnline (MIT), picked at random for each gym village. Their themes (Pewter, Cerulean, …) are just looks: any of them summons whichever leader you need. The gyms use [CobbleFurnies](https://modrinth.com/mod/cobblefurnies) furniture, so village gyms only generate when CobbleFurnies is installed. Don't install RGS alongside UCP's gyms, or its own copies will also generate outside villages.
+
+**Who gets summoned.** UCP looks at your regions in order and takes the first open, unfinished one whose next tier lists `trainers`. It summons the first trainer in that list you haven't beaten:
+
+```json
+{
+  "levelCap": 100,
+  "trainers": ["elite_four_lorelei_004e", "elite_four_bruno_0051",
+               ["elite_four_agatha_0053", "elite_four_agatha_0054"],
+               "elite_four_lance_0057", "champion_terry_01b8"],
+  "requirements": { "advancements": ["rctmod:trainers/defeat_champion_terry"] }
+}
+```
+
+Each entry is a Radical Cobblemon Trainers trainer id. A nested list means "any one of these": beating either Agatha counts, and the first one is summoned. `trainers` only picks who appears. The tier still unlocks through its `requirements`, as before. Gyms need Radical Cobblemon Trainers installed.
+
+**One leader at a time.** A gym holds one leader for one challenger. While it's taken, other players are told who is battling and must wait. The leader leaves, and the gym is free again, when:
+
+- the challenger beats it,
+- the challenger logs out, leaves the dimension or goes more than 32 blocks away,
+- or 3 minutes pass without a battle.
+
+`scripts/convert-rgs-gyms.py` builds the gym files from RGS: it removes RGS's command blocks and adds the Gym Challenge block, the bell and the jigsaw blocks that connect a gym to its village.
+
+---
+
+## Trainer Card
+
+Every player gets a **Trainer Card** the first time they join (turn this off with `giveTrainerCard`). Using it opens a Pokédex-style screen, worked out fresh by the server each time. The first time, it asks where your journey starts ([see above](#choosing-where-your-journey-starts)); after that it has four tabs:
+
+- **Profile:** your current region and tier, your level cap (Radical Cobblemon Trainers' cap when it's installed, otherwise the tier's), trainers beaten, Pokédex counts, and your next challenge.
+- **Road:** every trainer the region's tiers list, in order, marked ✔ beaten, ▶ next or • later, with each one's tier and level cap.
+- **Regions:** where you stand in every region: complete, a progress bar for the tier you're on, or locked. Until you've picked your [starting region](#picking-a-second-starting-region), this tab also lets you pick it.
+- **Wild Pokémon:** every species that can currently spawn for you, per open region, with Cobblemon's caught/seen marker from your Pokédex and how many the next tier adds. Hover a species for its number and types.
+
+Without region data, the card shows Profile (trainer level, level cap, what you need for the next level) and Wild Pokémon only. The screen uses Cobblemon's own Pokédex art, loaded from the installed Cobblemon.
+
+Lost your card? `/trainerlevel card` gives you a new one if you don't have one. It's also in the creative Tools & Utilities tab.
+

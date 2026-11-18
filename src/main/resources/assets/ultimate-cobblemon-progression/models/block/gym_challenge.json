@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "ultimate-cobblemon-progression:block/gym_challenge_front",
+    "side": "ultimate-cobblemon-progression:block/gym_challenge_side",
+    "top": "ultimate-cobblemon-progression:block/gym_challenge_top"
+  }
+}

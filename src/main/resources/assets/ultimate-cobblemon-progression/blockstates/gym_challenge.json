@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "ultimate-cobblemon-progression:block/gym_challenge" },
+    "facing=east": { "model": "ultimate-cobblemon-progression:block/gym_challenge", "y": 90 },
+    "facing=south": { "model": "ultimate-cobblemon-progression:block/gym_challenge", "y": 180 },
+    "facing=west": { "model": "ultimate-cobblemon-progression:block/gym_challenge", "y": 270 }
+  }
+}

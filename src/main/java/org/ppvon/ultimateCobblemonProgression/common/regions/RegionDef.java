@@ -23,6 +23,11 @@ public final class RegionDef {
     public final Optional<ResourceLocation> completedBy;
     /** Whether players may pick this region as their extra region that's open from the start. */
     public final boolean startChoice;
+    /**
+     * The Radical Cobblemon Trainers series for this region's trainers (e.g. "kanto"). A region with a series can be
+     * picked as a player's home region: where their journey starts, joining this series.
+     */
+    public final Optional<String> series;
     /** Tier index (1-based, consecutive) to tier definition. */
     public final SortedMap<Integer, TierDef> tiers;
     private final Map<Integer, Integer> realSpeciesByTier = new HashMap<>();
@@ -33,6 +38,7 @@ public final class RegionDef {
         this.title = meta.title.orElse(id);
         this.completedBy = meta.completedBy;
         this.startChoice = meta.startChoice;
+        this.series = meta.series;
         this.tiers = Collections.unmodifiableSortedMap(tiers);
     }
 
@@ -55,12 +61,14 @@ public final class RegionDef {
     }
 
     /** Contents of region.json. */
-    public record Meta(int order, Optional<String> title, Optional<ResourceLocation> completedBy, boolean startChoice) {
+    public record Meta(int order, Optional<String> title, Optional<ResourceLocation> completedBy, boolean startChoice,
+                       Optional<String> series) {
         public static final Codec<Meta> CODEC = RecordCodecBuilder.create(i -> i.group(
                 Codec.INT.optionalFieldOf("order", 0).forGetter(Meta::order),
                 Codec.STRING.optionalFieldOf("title").forGetter(Meta::title),
                 ResourceLocation.CODEC.optionalFieldOf("completedBy").forGetter(Meta::completedBy),
-                Codec.BOOL.optionalFieldOf("startChoice", false).forGetter(Meta::startChoice)
+                Codec.BOOL.optionalFieldOf("startChoice", false).forGetter(Meta::startChoice),
+                Codec.STRING.optionalFieldOf("series").forGetter(Meta::series)
         ).apply(i, Meta::new));
     }
 }

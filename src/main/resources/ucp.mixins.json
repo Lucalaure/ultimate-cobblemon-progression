@@ -6,7 +6,9 @@
   "mixins": [
     "SpeciesTierMixin",
     "BasicSpawnerMixin",
-    "PlayerAdvancementsMixin"
+    "PlayerAdvancementsMixin",
+    "StructureTemplatePoolAccessor",
+    "JigsawPlacementMixin"
   ],
   "injectors": {
     "defaultRequire": 1

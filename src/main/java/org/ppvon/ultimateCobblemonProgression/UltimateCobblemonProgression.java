@@ -31,6 +31,9 @@ import org.ppvon.ultimateCobblemonProgression.common.regions.RegionDataLoader;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionProgressTracker;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionRegistry;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionSpecies;
+import org.ppvon.ultimateCobblemonProgression.common.gym.GymBlocks;
+import org.ppvon.ultimateCobblemonProgression.common.gym.VillageGyms;
+import org.ppvon.ultimateCobblemonProgression.common.card.TrainerCard;
 
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
@@ -45,6 +48,9 @@ public class UltimateCobblemonProgression implements ModInitializer {
     public void onInitialize() {
 
         ConfigLoader.init();
+        GymBlocks.register();
+        VillageGyms.register();
+        TrainerCard.register();
 
         ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> {
             var player = handler.player;
@@ -56,6 +62,7 @@ public class UltimateCobblemonProgression implements ModInitializer {
             TrainerLevelComponents.KEY.sync(player);
             RegionProgressTracker.refreshSilently(player);
             if (RegionRegistry.isActive()) RegionCommands.promptStartChoice(player);
+            TrainerCard.onJoin(player);
         });
 
         ServerPlayConnectionEvents.DISCONNECT.register((handler, server) -> RegionProgressTracker.forget(handler.player));
@@ -67,6 +74,7 @@ public class UltimateCobblemonProgression implements ModInitializer {
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, env) -> {
             dispatcher.register(Commands.literal("trainerlevel")
                     .then(RegionCommands.regionNode())
+                    .then(TrainerCard.commandNode())
                     .then(Commands.literal("get")
                             .executes(ctx -> {
                                 ServerPlayer p = ctx.getSource().getPlayerOrException();

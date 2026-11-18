@@ -23,4 +23,9 @@ public interface TrainerLevelComponent extends ComponentV3 {
     Optional<String> getStartRegion();
     /** Pass null to clear the choice. */
     void setStartRegion(String regionId);
+
+    /** Region mode: the region this player's journey starts in, picked on their Trainer Card. Empty until picked. */
+    Optional<String> getHomeRegion();
+    /** Pass null to clear the choice. */
+    void setHomeRegion(String regionId);
 }

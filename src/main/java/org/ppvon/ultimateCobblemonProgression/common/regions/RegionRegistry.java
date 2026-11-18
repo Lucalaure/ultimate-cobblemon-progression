@@ -34,6 +34,11 @@ public final class RegionRegistry {
         return REGIONS.stream().filter(r -> r.id.equals(id)).findFirst().orElse(null);
     }
 
+    /** Regions a player can start their journey in: the ones with a trainer series. */
+    public static List<RegionDef> homeChoices() {
+        return REGIONS.stream().filter(r -> r.series.isPresent()).toList();
+    }
+
     /** Regions players may pick as their extra starting region. The first region is always open, so it's never offered. */
     public static List<RegionDef> startChoices() {
         return REGIONS.stream().skip(1).filter(r -> r.startChoice).toList();

@@ -28,11 +28,13 @@ public final class RegionProgress {
         RegionProgress p = new RegionProgress(regions.size());
         var dex = new RequirementCheck.DexLookup(player);
         String startRegion = chosenStartRegion(player);
+        String homeRegion = chosenHomeRegion(player);
 
-        boolean previousCompleted = true;
+        // The home region is open from the start; until one is picked, the first region is.
+        boolean previousCompleted = homeRegion == null;
         for (int r = 0; r < regions.size(); r++) {
             RegionDef region = regions.get(r);
-            p.unlocked[r] = previousCompleted || region.id.equals(startRegion);
+            p.unlocked[r] = previousCompleted || region.id.equals(startRegion) || region.id.equals(homeRegion);
             if (!p.unlocked[r]) {
                 previousCompleted = false;
                 continue;
@@ -50,6 +52,18 @@ public final class RegionProgress {
             previousCompleted = p.completed[r];
         }
         return p;
+    }
+
+    /** The player's home region (where their journey starts), if it's still one of the home choices. */
+    public static String chosenHomeRegion(ServerPlayer player) {
+        String id = TrainerLevelComponents.KEY.get(player).getHomeRegion().orElse(null);
+        RegionDef def = id != null ? RegionRegistry.byId(id) : null;
+        return def != null && RegionRegistry.homeChoices().contains(def) ? id : null;
+    }
+
+    /** Whether the player still has to pick their home region: region mode is on, there's a choice, and they haven't. */
+    public static boolean needsHomeRegion(ServerPlayer player) {
+        return RegionRegistry.isActive() && !RegionRegistry.homeChoices().isEmpty() && chosenHomeRegion(player) == null;
     }
 
     /** The player's chosen extra starting region, if it's still offered as a start choice. */

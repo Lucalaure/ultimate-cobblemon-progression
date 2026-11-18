@@ -1,4 +1,4 @@
-import org.gradle.jvm.tasks.Jar;
+﻿import org.gradle.jvm.tasks.Jar;
 
 plugins {
     id("java")
@@ -65,6 +65,11 @@ repositories {
     maven("https://api.modrinth.com/maven")
 }
 
+val devServerLibs = tasks.register<Copy>("devServerLibs") {
+    from(configurations.detachedConfiguration(project.dependencies.create("com.ibm.icu:icu4j:73.2")).apply { isTransitive = false })
+    into(layout.buildDirectory.dir("devServerLibs"))
+}
+
 dependencies {
     minecraft("net.minecraft:minecraft:1.21.1")
     mappings(loom.officialMojangMappings())
@@ -77,6 +82,7 @@ dependencies {
     modImplementation(fabricApi.module("fabric-networking-api-v1", "0.116.7+1.21.1"))
     modImplementation(fabricApi.module("fabric-entity-events-v1", "0.116.7+1.21.1"))
     modImplementation(fabricApi.module("fabric-events-interaction-v0", "0.116.7+1.21.1"))
+    modImplementation(fabricApi.module("fabric-item-group-api-v1", "0.116.7+1.21.1"))
 
     modImplementation("net.fabricmc:fabric-language-kotlin:1.13.6+kotlin.2.2.20")
 
@@ -97,14 +103,17 @@ dependencies {
     modRuntimeOnly("maven.modrinth:rctapi:DoQNDXAU")
     modRuntimeOnly("maven.modrinth:forge-config-api-port:N5qzq0XV")
     modRuntimeOnly("maven.modrinth:architectury-api:Pzc2FP5K")
-    // Radical Gyms & Structures 0.7 (gym buildings that summon RCT's Kanto trainers) and what it needs:
-    // CobbleFurnies 1.2 and Athena CTM 4.0.6
-    modRuntimeOnly("maven.modrinth:radical-gyms-cobblemon:TWiuaa3o")
+    // CobbleFurnies 1.2 (furniture in UCP's village gyms) and Athena CTM 4.0.6, which it needs.
+    // Radical Gyms & Structures isn't loaded: UCP ships its gym buildings as village centres, and RGS itself
+    // would also place them outside villages. scripts/convert-rgs-gyms.py rebuilds them from RGS 0.7.
     modRuntimeOnly("maven.modrinth:cobblefurnies:54k31lEX")
     modRuntimeOnly("maven.modrinth:athena-ctm:JfyYsWKP")
     // Bundled inside Forge Config API Port, but nested jars of Modrinth mods aren't loaded in dev, so add them directly.
     runtimeOnly("com.electronwill.night-config:core:3.8.0")
     runtimeOnly("com.electronwill.night-config:toml:3.8.0")
+    // Cobblemon's battle engine needs ICU, which Minecraft only ships with the client; without it runServer hangs.
+    // Loom strips Minecraft's client libraries from server runs, so add a copy from outside the Gradle cache.
+    runtimeOnly(files(layout.buildDirectory.file("devServerLibs/icu4j-73.2.jar")).builtBy(devServerLibs))
 
 
     /*
