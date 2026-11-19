@@ -1,3 +1,7 @@
+# Unreleased
+
+- **Renamed to Cobblemon Journey Progression (CJP)**, with a new icon. Only the name changed: the mod id (`ultimate-cobblemon-progression`), config files, datapack namespace and API stay the same, so existing worlds, configs and datapacks keep working. The jar is now `cjp-fabric-<version>+mc1.21.1.jar`.
+
 # UCP 2.1.0
 
 ## Features

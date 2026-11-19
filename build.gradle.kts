@@ -12,7 +12,7 @@ val minecraftVersion = "1.21.1"
 version = "2.1.0"
 
 base {
-    archivesName.set("ucp-fabric+mc${minecraftVersion}");
+    archivesName.set("cjp-fabric+mc${minecraftVersion}");
 }
 
 java {
@@ -152,12 +152,12 @@ tasks.javadoc {
 }
 
 tasks.named<Jar>("remapJar") {
-    archiveFileName.set("ucp-fabric-${version}+mc${minecraftVersion}.jar")
+    archiveFileName.set("cjp-fabric-${version}+mc${minecraftVersion}.jar")
 }
 
 tasks.withType<Jar>().configureEach {
     when (name) {
-        "remapSourcesJar" -> archiveFileName.set("ucp-fabric-${version}+mc${minecraftVersion}-sources.jar")
-        "javadocJar" -> archiveFileName.set("ucp-fabric-${version}+mc${minecraftVersion}-javadoc.jar")
+        "remapSourcesJar" -> archiveFileName.set("cjp-fabric-${version}+mc${minecraftVersion}-sources.jar")
+        "javadocJar" -> archiveFileName.set("cjp-fabric-${version}+mc${minecraftVersion}-javadoc.jar")
     }
 }

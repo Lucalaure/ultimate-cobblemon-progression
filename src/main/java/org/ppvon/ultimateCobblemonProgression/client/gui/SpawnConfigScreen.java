@@ -15,7 +15,7 @@ public final class SpawnConfigScreen extends BaseConfigScreen {
     private DoubleField fldTierCap, fldMin, fldAvg, fldMax, fldDecay, fldMinFactor, fldBuff;
 
     SpawnConfigScreen(BaseConfigScreen parent) {
-        super(parent, "UCP - Spawn Config");
+        super(parent, "CJP – Spawn Config");
     }
 
     @Override

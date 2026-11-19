@@ -2,9 +2,10 @@
   "schemaVersion": 1,
   "id": "ultimate-cobblemon-progression",
   "version": "${version}",
-  "name": "Ultimate Cobblemon Progression",
-  "description": "Completely changes the progresion in cobblemon",
+  "name": "Cobblemon Journey Progression",
+  "description": "Turns Cobblemon into a region-by-region journey: find gyms in villages, beat their leaders and unlock each region's Pokémon tier by tier.",
   "authors": [
+    "Lucalaure",
     "ppVon"
   ],
   "license": "MIT License",

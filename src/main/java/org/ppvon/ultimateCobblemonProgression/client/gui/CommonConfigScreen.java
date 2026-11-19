@@ -15,7 +15,7 @@ public final class CommonConfigScreen extends BaseConfigScreen {
     private GymChanceSlider sldGymChance;
 
     public CommonConfigScreen(BaseConfigScreen parent) {
-        super(parent, "UCP – General");
+        super(parent, "CJP – General");
     }
 
     @Override

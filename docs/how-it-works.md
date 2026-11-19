@@ -1,12 +1,12 @@
-# How Ultimate Cobblemon Progression Works
+# How Cobblemon Journey Progression Works
 
-This guide explains exactly what UCP changes in Cobblemon, using the mod's default settings and tier data. Every number here comes from the code and the shipped data files; the full species list is in [Species by Tier and Rarity](species-by-tier.md).
+This guide explains exactly what CJP changes in Cobblemon, using the mod's default settings and tier data. Every number here comes from the code and the shipped data files; the full species list is in [Species by Tier and Rarity](species-by-tier.md).
 
 ## The short version
 
 - Every player has a **trainer level** from 1 to 7. Each level is a **tier**.
 - Each Pokémon species belongs to one tier, based on its strength (Base Stat Total). **Wild Pokémon above your tier can't spawn for you.**
-- **Rarity is Cobblemon's, not UCP's.** Whether a Pokémon is common or ultra-rare is decided by Cobblemon's spawn data. UCP never changes those odds. A Pokémon can be low-tier and ultra-rare (Dratini), or high-tier and common (Slaking).
+- **Rarity is Cobblemon's, not CJP's.** Whether a Pokémon is common or ultra-rare is decided by Cobblemon's spawn data. CJP never changes those odds. A Pokémon can be low-tier and ultra-rare (Dratini), or high-tier and common (Slaking).
 - Wild Pokémon **levels** are rerolled based on the Pokémon's tier and yours.
 - Your own Pokémon **can't gain XP past your tier's level cap**.
 - You **level up automatically** by seeing and catching enough different species in your Pokédex.
@@ -48,7 +48,7 @@ Use `/trainerlevel get` at any time to see your progress toward the next level.
 
 ## 2. Which Pokémon can spawn for you
 
-Each time Cobblemon tries to spawn a wild Pokémon near you, UCP checks the species:
+Each time Cobblemon tries to spawn a wild Pokémon near you, CJP checks the species:
 
 | Species tier compared to yours | Result |
 |---|---|
@@ -58,7 +58,7 @@ Each time Cobblemon tries to spawn a wild Pokémon near you, UCP checks the spec
 
 This applies to every kind of Cobblemon spawn: normal world spawns, fishing, PokeSnacks and bait.
 
-**A Pokémon's forms always share its tier.** UCP assigns tiers to species, so Alolan, Galarian, Hisuian and Paldean forms use the base species' tier.
+**A Pokémon's forms always share its tier.** CJP assigns tiers to species, so Alolan, Galarian, Hisuian and Paldean forms use the base species' tier.
 
 **Which player counts.** Cobblemon runs spawning separately around each player. The check uses the player whose spawner made the attempt. If two players are together, Pokémon spawned by the higher-tier player's spawner can appear near both of them. If a spawn isn't tied to a player, the nearest player within 128 blocks counts; if nobody is that close, tiered species are blocked.
 
@@ -80,11 +80,11 @@ In Cobblemon, every wild spawn entry is in a **rarity bucket**. Each spawn attem
 | Ultra-rare | 0.2% | 1.375% |
 | Boss | 0.3% | – |
 
-These are Cobblemon's defaults (server admins can change them in `config/cobblemon/spawning/best-spawner-config.json`). **UCP doesn't change them.**
+These are Cobblemon's defaults (server admins can change them in `config/cobblemon/spawning/best-spawner-config.json`). **CJP doesn't change them.**
 
 ### Tier is not rarity
 
-UCP's tiers measure strength, not rarity. The two are completely independent, which leads to some patterns worth knowing:
+CJP's tiers measure strength, not rarity. The two are completely independent, which leads to some patterns worth knowing:
 
 - **Pseudo-legendary first stages are tier 1 but hard to find.** Dratini, Larvitar, Bagon, Beldum, Gible, Deino, Goomy, Jangmo-o and Dreepy can spawn from the start, but mostly as rare or ultra-rare (Dratini and Goomy also show up as common in a few spots). Their final forms are tier 7.
 - **Starters are tier 2 and ultra-rare.** Every first-stage starter (Bulbasaur, Charmander, Squirtle and the rest), plus the fossils Cranidos and Shieldon, is in tier 2's ultra-rare bucket. The starters' final evolutions are tier 6, also ultra-rare.
@@ -95,8 +95,8 @@ For every species' tier and rarity, see [Species by Tier and Rarity](species-by-
 
 ### How tiers and rarity interact
 
-1. Cobblemon rolls a rarity using the odds above. UCP doesn't affect this roll.
-2. Cobblemon collects the Pokémon in that rarity that fit the spot (biome, time, weather and so on). UCP removes the ones above your tier.
+1. Cobblemon rolls a rarity using the odds above. CJP doesn't affect this roll.
+2. Cobblemon collects the Pokémon in that rarity that fit the spot (biome, time, weather and so on). CJP removes the ones above your tier.
 3. If nothing is left, **that spawn attempt produces nothing**. It doesn't fall back to a different rarity.
 4. Otherwise one Pokémon is picked using Cobblemon's spawn weights. In region mode, the [spawn pools](#wild-pokémon-in-a-new-region-spawn-pools) adjust them; the optional weight scaling below can too.
 
@@ -107,7 +107,7 @@ Two consequences:
 
 ### Weight scaling: who's favored within a rarity
 
-**Off by default** (`doWeightScaling` in [`ucp-spawn.json`](#ucp-spawnjson)): unlocking a tier only adds Pokémon, and the odds of the ones you already had stay as Cobblemon set them. When it's on, once a rarity is rolled, UCP nudges which Pokémon in it gets picked, favoring Pokémon in your current tier:
+**Off by default** (`doWeightScaling` in [`ucp-spawn.json`](#ucp-spawnjson)): unlocking a tier only adds Pokémon, and the odds of the ones you already had stay as Cobblemon set them. When it's on, once a rarity is rolled, CJP nudges which Pokémon in it gets picked, favoring Pokémon in your current tier:
 
 ```
 weight multiplier = 2.0 − 0.2 × (tiers between the Pokémon and you), never below 0.15
@@ -131,7 +131,7 @@ This only reorders Pokémon *within* the rolled rarity. It never makes a rare Po
 
 ## 4. Wild Pokémon levels
 
-UCP replaces Cobblemon's level for every wild Pokémon it spawns (Cobblemon normally picks levels close to your strongest party member). The new level depends on the Pokémon's tier and the tier of the **nearest player within 128 blocks**:
+CJP replaces Cobblemon's level for every wild Pokémon it spawns (Cobblemon normally picks levels close to your strongest party member). The new level depends on the Pokémon's tier and the tier of the **nearest player within 128 blocks**:
 
 ```
 boosted cap = Pokémon's tier cap + 0.25 × (your tier cap − Pokémon's tier cap)
@@ -173,7 +173,7 @@ Because Pokémon can't level past the cap, **level-up evolutions above your cap 
 
 ## 6. Configuration
 
-UCP creates two files in `config/ultimate-cobblemon-progression/`. If you have [Mod Menu](https://modrinth.com/mod/modmenu), you can also edit most options in-game; the spawn pool options (`doRegionPools` and the three pool weights) are only in the file. UCP writes each file back when it loads it, so options added in a newer version appear with their defaults, and your own values are kept.
+CJP creates two files in `config/ultimate-cobblemon-progression/`. If you have [Mod Menu](https://modrinth.com/mod/modmenu), you can also edit most options in-game; the spawn pool options (`doRegionPools` and the three pool weights) are only in the file. CJP writes each file back when it loads it, so options added in a newer version appear with their defaults, and your own values are kept.
 
 On a dedicated server, edit the **server's** files and restart it; the in-game screen only changes your own client's copy. In single player, changes from the in-game screen apply right away.
 
@@ -183,7 +183,7 @@ On a dedicated server, edit the **server's** files and restart it; the in-game s
 |---|---|---|
 | `doSpeciesBlocking` | `true` | Block wild Pokémon above the player's tier. |
 | `blockUnknownSpecies` | `true` | Block species that aren't listed in any tier. |
-| `doLevelScaling` | `true` | Replace wild levels with UCP's tier-based levels ([section 4](#4-wild-pokémon-levels)). |
+| `doLevelScaling` | `true` | Replace wild levels with CJP's tier-based levels ([section 4](#4-wild-pokémon-levels)). |
 | `tierCapScaling` | `0.25` | How much of the gap between your cap and a lower-tier Pokémon's cap is added to its level. `0` = low-tier Pokémon never get stronger; `1` = they scale fully to your cap. |
 | `minLevelScaling` | `0.45` | Lowest wild level, as a fraction of the boosted cap. |
 | `avgLevelScaling` | `0.75` | Most likely wild level, as a fraction of the boosted cap. |
@@ -243,7 +243,7 @@ Rules and tips:
 - **Number tiers 1, 2, 3, … with no gaps.** The highest number is the maximum trainer level.
 - **Use species ids, not form ids.** `cobblemon:vulpix` covers every Vulpix form. Entries like `cobblemon:bergmite_hisui` don't match anything and are ignored.
 - **List each species in only one tier.**
-- **Advancement requirements** are re-checked the moment an advancement is earned, so tiers can be tied to anything that grants one: beating a trainer (UCP's `defeat_trainer` trigger, see [Advancements](#advancements-the-pokémon-journey-tab)), finishing a quest, or a custom datapack advancement.
+- **Advancement requirements** are re-checked the moment an advancement is earned, so tiers can be tied to anything that grants one: beating a trainer (CJP's `defeat_trainer` trigger, see [Advancements](#advancements-the-pokémon-journey-tab)), finishing a quest, or a custom datapack advancement.
 - **A tier with no requirements stops automatic progression** at the tier before it. Players then need `/trainerlevel promote` or `/trainerlevel set` to go further.
 - Species from add-ons only take effect when that add-on is installed; unknown ids are ignored.
 - `/reload` reapplies tier files without a restart.
@@ -289,12 +289,12 @@ Regions come in two kinds:
 
 Species from regions you haven't reached, and species in no region at all, can't spawn (the second case follows `blockUnknownSpecies`). This only affects wild spawns: trades, eggs and evolutions aren't restricted.
 
-Progress is worked out from your advancements (and Pokédex, if a tier asks for it) each time it changes, so a trainer mod resetting its own series progress never re-locks a region. UCP only stores the regions you picked.
+Progress is worked out from your advancements (and Pokédex, if a tier asks for it) each time it changes, so a trainer mod resetting its own series progress never re-locks a region. CJP only stores the regions you picked.
 
 ### Differences from the tier ladder
 
 - **Wild levels** work as in [section 4](#4-wild-pokémon-levels), but each species is compared with your progress **in its own region**, using that region's tier caps. While you work through a region, species from the regions you've finished also spawn at the current region's levels, and the [spawn pools](#wild-pokémon-in-a-new-region-spawn-pools) decide how often each kind appears.
-- **UCP's level cap is off.** Region mode is meant to be paired with a trainer mod that has its own cap, such as Radical Cobblemon Trainers.
+- **CJP's level cap is off.** Region mode is meant to be paired with a trainer mod that has its own cap, such as Radical Cobblemon Trainers.
 - **Trainer levels and Pokédex auto-levelling aren't used.**
 
 ### Region files
@@ -351,7 +351,7 @@ Picking one (after confirming, since it's permanent):
 
 Only the region you pick opens. Everything you'd already opened stays open, and its Pokémon keep spawning (see [spawn pools](#wild-pokémon-in-a-new-region-spawn-pools)). Until you pick, gyms and `/trainerlevel get` tell you to choose, and you're reminded when you join. When you've completed every league region, your journey is complete and chat congratulates you.
 
-The pick is permanent and there's no command to undo it, since it also switches your Radical Cobblemon Trainers series. On the Trainer Card, the Road and trainer counts for a finished region still show its trainers as beaten after you switch series, because UCP counts every trainer of an unlocked tier as beaten.
+The pick is permanent and there's no command to undo it, since it also switches your Radical Cobblemon Trainers series. On the Trainer Card, the Road and trainer counts for a finished region still show its trainers as beaten after you switch series, because CJP counts every trainer of an unlocked tier as beaten.
 
 ### Catch every Pokémon (optional)
 
@@ -413,7 +413,7 @@ The built-in regions' requirements are set by `scripts/generate-league-advanceme
 
 ### The built-in leagues
 
-When Radical Cobblemon Trainers is installed, UCP turns on a built-in datapack, **UCP Kanto & Sinnoh Leagues**, in every world. It contains:
+When Radical Cobblemon Trainers is installed, CJP turns on a built-in datapack, **CJP Kanto & Sinnoh Leagues**, in every world. It contains:
 
 - a 10-tier **Kanto**, with each tier after the first unlocked by one of its gym leaders, and the Champion completing it;
 - Kanto's RCT trainers: the 8 leaders (Brock, Misty, Lt. Surge, Erika, Koga, Sabrina, Blaine and Giovanni), the Elite Four (either Agatha counts) and the Champion, with FireRed/LeafGreen-style teams, in a `kanto` series, and their natural spawning turned off so they only appear in gyms;
@@ -445,7 +445,7 @@ For good-looking leaders, players can add the [RCT Trainer Textures Plus](https:
 
 ### Advancements: the Pokémon Journey tab
 
-UCP keeps its own advancements for the journey, in one advancement tab, **Pokémon Journey**. Each league is a branch of it: one advancement per badge (named after the badge, with the leader's signature item as its icon), one per Elite Four member, then the Champion. Tiers unlock through these advancements, so they're what `/trainerlevel get` and the Trainer Card name as your next step ("Next: Boulder Badge").
+CJP keeps its own advancements for the journey, in one advancement tab, **Pokémon Journey**. Each league is a branch of it: one advancement per badge (named after the badge, with the leader's signature item as its icon), one per Elite Four member, then the Champion. Tiers unlock through these advancements, so they're what `/trainerlevel get` and the Trainer Card name as your next step ("Next: Boulder Badge").
 
 | Advancement | Earned by |
 |---|---|
@@ -456,7 +456,7 @@ UCP keeps its own advancements for the journey, in one advancement tab, **Pokém
 
 Operators can still adjust a player's progress with `/advancement grant` and `/advancement revoke` on these ids.
 
-**How they're earned.** Every Radical Cobblemon Trainers win fires UCP's own advancement trigger, `ultimate-cobblemon-progression:defeat_trainer`:
+**How they're earned.** Every Radical Cobblemon Trainers win fires CJP's own advancement trigger, `ultimate-cobblemon-progression:defeat_trainer`:
 
 ```json
 "criteria": {
@@ -469,7 +469,7 @@ Operators can still adjust a player's progress with `/advancement grant` and `/a
 
 `trainers` lists RCT trainer ids, any one of which counts (leave it out to match any trainer). Your own datapacks can use the trigger too.
 
-**RCT's advancements don't fire for league trainers.** Beating a trainer that's listed in any region's tiers (a UCP league trainer) awards **only** UCP's advancements: none of RCT's, not its badge for that trainer, not "Defeat any trainer", not its "all Champions" count. RCT's advancements keep working for every other RCT trainer. In RCT's own advancement tab, its entries for the league trainers simply stay unearned.
+**RCT's advancements don't fire for league trainers.** Beating a trainer that's listed in any region's tiers (a CJP league trainer) awards **only** CJP's advancements: none of RCT's, not its badge for that trainer, not "Defeat any trainer", not its "all Champions" count. RCT's advancements keep working for every other RCT trainer. In RCT's own advancement tab, its entries for the league trainers simply stay unearned.
 
 #### Badge milestones
 
@@ -487,9 +487,9 @@ Gyms give each step of a region a place to go. A gym is a building with a **Gym 
 
 **Where they are.** Gyms only generate in villages. A gym can replace the centre of a new village (plains, desert, savanna, snowy and taiga), with the village bell just inside its door. A village has one centre, so it never gets more than one gym, and gyms never generate anywhere else. `gymVillageChance` in `ucp-common.json` sets how many villages get one. Only newly generated villages can have gyms. In creative, the block is in the Functional Blocks tab, so you can also build your own gyms. Outside creative it can't be broken.
 
-**The buildings** are the 8 Kanto gyms from [Radical Gyms & Structures](https://modrinth.com/datapack/radical-gyms-cobblemon) by JayOnline (MIT), picked at random for each gym village. Their themes (Pewter, Cerulean, …) are just looks: any of them summons whichever leader you need. The gyms use [CobbleFurnies](https://modrinth.com/mod/cobblefurnies) furniture, so village gyms only generate when CobbleFurnies is installed. Don't install RGS alongside UCP's gyms, or its own copies will also generate outside villages.
+**The buildings** are the 8 Kanto gyms from [Radical Gyms & Structures](https://modrinth.com/datapack/radical-gyms-cobblemon) by JayOnline (MIT), picked at random for each gym village. Their themes (Pewter, Cerulean, …) are just looks: any of them summons whichever leader you need. The gyms use [CobbleFurnies](https://modrinth.com/mod/cobblefurnies) furniture, so village gyms only generate when CobbleFurnies is installed. Don't install RGS alongside CJP's gyms, or its own copies will also generate outside villages.
 
-**Who gets summoned.** UCP looks at your journey's current region first, then your other regions in order, and takes the first open, unfinished one whose next tier lists `trainers`. It summons the first trainer in that list you haven't beaten:
+**Who gets summoned.** CJP looks at your journey's current region first, then your other regions in order, and takes the first open, unfinished one whose next tier lists `trainers`. It summons the first trainer in that list you haven't beaten:
 
 ```json
 {

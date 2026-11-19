@@ -242,6 +242,6 @@ public class UltimateCobblemonProgression implements ModInitializer {
         }
         FabricLoader.getInstance().getModContainer(MOD_ID).ifPresent(mod -> ResourceManagerHelper.registerBuiltinResourcePack(
                 ResourceLocation.fromNamespaceAndPath(MOD_ID, "kanto_league"), mod,
-                Component.literal("UCP Kanto & Sinnoh Leagues"), ResourcePackActivationType.DEFAULT_ENABLED));
+                Component.literal("CJP Kanto & Sinnoh Leagues"), ResourcePackActivationType.DEFAULT_ENABLED));
     }
 }

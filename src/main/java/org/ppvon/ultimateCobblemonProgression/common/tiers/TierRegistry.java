@@ -10,7 +10,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public final class TierRegistry {
-    private static final Logger LOG = LogManager.getLogger("UCP/Tiers");
+    private static final Logger LOG = LogManager.getLogger("CJP/Tiers");
     private static final Pattern TIER_NAME = Pattern.compile("^tier_(\\d+)$");
 
     private static final Map<Integer, TierDef> BY_TIER = new HashMap<>();

@@ -1,4 +1,6 @@
-# Ultimate Cobblemon Progression
+# Cobblemon Journey Progression
+
+*Formerly Ultimate Cobblemon Progression (UCP).*
 
 A Fabric side-mod for **Cobblemon** that turns the game into a region-by-region Pokémon journey. Start in a region, find its gyms in villages, beat its leaders, and unlock its Pokémon tier by tier: what spawns, how strong it is, and how far your team can level all grow with your progress.
 
@@ -6,7 +8,7 @@ A Fabric side-mod for **Cobblemon** that turns the game into a region-by-region 
 
 ## Documentation
 
-- **[How UCP Works](docs/how-it-works.md)**: the full guide to regions, gyms, the Trainer Card, tiers, rarity, spawning, wild levels, the level cap, configuration, datapacks and commands.
+- **[How CJP Works](docs/how-it-works.md)**: the full guide to regions, gyms, the Trainer Card, tiers, rarity, spawning, wild levels, the level cap, configuration, datapacks and commands.
 - **[Species by Tier and Rarity](docs/species-by-tier.md)**: every naturally spawning Pokémon, its tier, and how rare Cobblemon makes it.
 - **[Changelog](CHANGELOG.md)**
 
@@ -22,9 +24,9 @@ For the region journey (gyms and the built-in Kanto and Sinnoh leagues), also in
 - **[CobbleFurnies](https://modrinth.com/mod/cobblefurnies)**: furniture used inside the gym buildings.
 - Recommended, client-side: the **[RCT Trainer Textures Plus](https://modrinth.com/resourcepack/rct-trainer-textures-plus)** resource pack, for gym leaders that look like themselves.
 
-Don't install Radical Gyms & Structures alongside UCP: UCP already ships its gym buildings, and RGS would add more of them outside villages.
+Don't install Radical Gyms & Structures alongside CJP: CJP already ships its gym buildings, and RGS would add more of them outside villages.
 
-Without RCT, UCP still works, using its original trainer-level ladder (see [Classic mode](#classic-mode-trainer-levels)).
+Without RCT, CJP still works, using its original trainer-level ladder (see [Classic mode](#classic-mode-trainer-levels)).
 
 ---
 
@@ -40,7 +42,7 @@ You can also pick one **extra region** to explore from the start, on the card's 
 
 ### The built-in leagues
 
-With RCT installed, UCP turns on a built-in datapack, **UCP Kanto & Sinnoh Leagues**: a 10-tier Kanto with its 8 gym leaders, the Elite Four and the Champion (FireRed/LeafGreen-style teams), a 10-tier Sinnoh with RCT's Brilliant Diamond/Shining Pearl leaders, Elite Four and Champion Cynthia, plus every other region from Johto to Paldea as an optional extra region that grows with either league's badges. It's an ordinary datapack, so you can turn it off, or override it with your own region data. See [Region mode](docs/how-it-works.md#9-region-mode).
+With RCT installed, CJP turns on a built-in datapack, **CJP Kanto & Sinnoh Leagues**: a 10-tier Kanto with its 8 gym leaders, the Elite Four and the Champion (FireRed/LeafGreen-style teams), a 10-tier Sinnoh with RCT's Brilliant Diamond/Shining Pearl leaders, Elite Four and Champion Cynthia, plus every other region from Johto to Paldea as an optional extra region that grows with either league's badges. It's an ordinary datapack, so you can turn it off, or override it with your own region data. See [Region mode](docs/how-it-works.md#9-region-mode).
 
 ---
 
@@ -52,13 +54,13 @@ Whether you follow regions or the classic ladder, your progress controls:
 - **How strong wild Pokémon are**: levels are rerolled based on the Pokémon's tier and yours.
 - **Which region's Pokémon you meet most**: in region mode, the region you're working through is favored over the ones you've finished (see [spawn pools](docs/how-it-works.md#wild-pokémon-in-a-new-region-spawn-pools)). Otherwise, unlocking a tier only adds Pokémon.
 
-**Rarity is still Cobblemon's.** Whether a Pokémon is common or ultra-rare comes from Cobblemon's spawn data, and UCP doesn't change those odds. Tiers measure strength, not rarity, so a Pokémon can be low-tier and ultra-rare (Dratini) or high-tier and common (Slaking). See [Rarity](docs/how-it-works.md#3-rarity-whats-rare-and-whats-not).
+**Rarity is still Cobblemon's.** Whether a Pokémon is common or ultra-rare comes from Cobblemon's spawn data, and CJP doesn't change those odds. Tiers measure strength, not rarity, so a Pokémon can be low-tier and ultra-rare (Dratini) or high-tier and common (Slaking). See [Rarity](docs/how-it-works.md#3-rarity-whats-rare-and-whats-not).
 
 ---
 
 ## Classic mode: trainer levels
 
-Without region data (for example without RCT, or with the built-in leagues turned off), UCP gives every player a **Trainer Level** from 1 to 7. Each level is a tier, and you level up automatically by seeing and catching enough different species in your Pokédex. Your Pokémon can't gain XP past your tier's level cap.
+Without region data (for example without RCT, or with the built-in leagues turned off), CJP gives every player a **Trainer Level** from 1 to 7. Each level is a tier, and you level up automatically by seeing and catching enough different species in your Pokédex. Your Pokémon can't gain XP past your tier's level cap.
 
 | Tier | Base Stat Total | Level cap | To reach it (seen / caught) |
 |------|-----------------|-----------|------|
@@ -70,7 +72,7 @@ Without region data (for example without RCT, or with the built-in leagues turne
 | 6 | 501 – 570 | 85 | 290 / 80 |
 | 7 | 571 and up | 100 | 380 / 110 |
 
-The default tiers also cover species from Myths and Legends, Complete Cobblemon Collection, Mega Showdown and MysticMons, but UCP doesn't require them. Tiers are datapack-driven, so you can replace them: see [Custom tiers](docs/how-it-works.md#7-custom-tiers-datapacks).
+The default tiers also cover species from Myths and Legends, Complete Cobblemon Collection, Mega Showdown and MysticMons, but CJP doesn't require them. Tiers are datapack-driven, so you can replace them: see [Custom tiers](docs/how-it-works.md#7-custom-tiers-datapacks).
 
 ---
 

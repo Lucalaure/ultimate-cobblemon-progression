@@ -1,6 +1,6 @@
-# Ultimate Cobblemon Progression
+# Cobblemon Journey Progression
 
-**Ultimate Cobblemon Progression (UCP)** completely overhauls how progression works in Cobblemon — adding trainer levels, tiered Pokémon unlocks, and dynamic spawn scaling based on your progress.
+**Cobblemon Journey Progression (CJP)** completely overhauls how progression works in Cobblemon — adding trainer levels, tiered Pokémon unlocks, and dynamic spawn scaling based on your progress.
 
 This mod is designed for **server progression, modpacks, and RPG-style playthroughs**, where players gradually earn access to higher-level and rarer Pokémon as they explore and fill out their Pokédex.
 

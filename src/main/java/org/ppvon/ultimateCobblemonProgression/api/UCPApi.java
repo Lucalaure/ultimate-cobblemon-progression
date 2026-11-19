@@ -13,7 +13,7 @@ import java.util.*;
 import java.util.stream.IntStream;
 
 /**
- * The public API surface for the Ultimate Cobblemon Progression (UCP) mod.
+ * The public API surface for the Cobblemon Journey Progression (CJP) mod, formerly Ultimate Cobblemon Progression.
  * <p>
      * This class exposes stable, safe methods that other mods can use to:
      * <ul>

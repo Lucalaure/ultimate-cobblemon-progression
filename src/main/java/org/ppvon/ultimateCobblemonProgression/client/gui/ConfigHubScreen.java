@@ -6,7 +6,7 @@ import net.minecraft.network.chat.Component;
 
 public final class ConfigHubScreen extends BaseConfigScreen {
     public ConfigHubScreen(Screen parent) {
-        super(parent, "UCP – Config");
+        super(parent, "CJP – Config");
     }
 
     @Override

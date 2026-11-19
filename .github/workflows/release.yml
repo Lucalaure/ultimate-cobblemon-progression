@@ -1,7 +1,7 @@
-# Builds UCP and publishes a GitHub release with the mod jar attached.
+# Builds CJP and publishes a GitHub release with the mod jar attached.
 #
 # Run it from the Actions tab ("Release" > "Run workflow") once the version in build.gradle.kts and its
-# "# UCP <version>" section in CHANGELOG.md are on main. It creates the tag (e.g. 2.1.0) on the commit it builds.
+# "# CJP <version>" section in CHANGELOG.md (or "# UCP <version>" for releases before the rename) are on main. It creates the tag (e.g. 2.1.0) on the commit it builds.
 name: Release
 
 on:
@@ -55,11 +55,11 @@ jobs:
           if [ -n "$NOTES" ]; then
             printf '%s\n' "$NOTES" > notes.md
           else
-            # The "# UCP <version>" section of the changelog, without its heading.
-            awk -v head="# UCP $VERSION" '$0 == head {found=1; next} /^# / && found {exit} found' CHANGELOG.md > notes.md
+            # The "# CJP <version>" (or, before the rename, "# UCP <version>") section of the changelog, without its heading.
+            awk -v head="# CJP $VERSION" -v old="# UCP $VERSION" '($0 == head || $0 == old) && !found {found=1; next} /^# / && found {exit} found' CHANGELOG.md > notes.md
           fi
           if [ ! -s notes.md ]; then
-            echo "::error::No release notes: pass them, or add a '# UCP $VERSION' section to CHANGELOG.md"
+            echo "::error::No release notes: pass them, or add a '# CJP $VERSION' section to CHANGELOG.md"
             exit 1
           fi
 
@@ -68,5 +68,5 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           VERSION: ${{ inputs.version }}
         run: |
-          gh release create "$VERSION" "build/libs/ucp-fabric-$VERSION+mc1.21.1.jar" \
-            --target "$GITHUB_SHA" --title "UCP $VERSION" --notes-file notes.md
+          gh release create "$VERSION" "build/libs/cjp-fabric-$VERSION+mc1.21.1.jar" \
+            --target "$GITHUB_SHA" --title "CJP $VERSION" --notes-file notes.md
