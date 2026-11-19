@@ -9,8 +9,11 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.PlayerFaceRenderer;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.locale.Language;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.FormattedText;
 import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.network.chat.Style;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.FormattedCharSequence;
 import net.minecraft.util.Mth;
@@ -259,21 +262,21 @@ public class TrainerCardScreen extends Screen {
             g.fill(px0, y0, px1, py1, FRAME_DARK);
             g.fill(px0 + 1, y0 + 1, px1 - 1, py1 - 1, LIGHT);
             g.fill(px0 + 1, y0 + 1, px1 - 1, y0 + 19, DARK);
-            text(g, Component.literal(c.title()).withStyle(ChatFormatting.BOLD), (px0 + px1) / 2f, y0 + 4, WHITE, 1.25f, true);
+            fit(g, Component.literal(c.title()).withStyle(ChatFormatting.BOLD), (px0 + px1) / 2f, y0 + 4, panelW - 8, WHITE, 1.25f, Align.CENTRE);
 
-            int ty = y0 + 26;
-            text(g, Component.literal(c.trainers() + " trainers to beat"), px0 + 6, ty, INK, 0.75f, false);
-            text(g, Component.literal(c.species() + " species"), px0 + 6, ty + 10, INK, 0.75f, false);
-            text(g, Component.literal("First leader:"), px0 + 6, ty + 24, MUTED, 0.75f, false);
-            String first = font.plainSubstrByWidth(c.firstTrainer().getString(), (int) ((panelW - 12) / 0.85f));
-            text(g, Component.literal(first).withStyle(ChatFormatting.BOLD), px0 + 6, ty + 33, INK, 0.85f, false);
+            int ty = y0 + 26, textW = panelW - 12;
+            fit(g, Component.literal(c.trainers() + " trainers to beat"), px0 + 6, ty, textW, INK, 0.75f, Align.LEFT);
+            fit(g, Component.literal(c.species() + " species"), px0 + 6, ty + 10, textW, INK, 0.75f, Align.LEFT);
+            fit(g, Component.literal("First leader:"), px0 + 6, ty + 24, textW, MUTED, 0.75f, Align.LEFT);
+            paragraph(g, c.firstTrainer().copy().withStyle(ChatFormatting.BOLD), px0 + 6, ty + 33, textW, py1 - 26 - (ty + 33),
+                    INK, 0.85f, Align.LEFT);
 
             int bx0 = px0 + 8, bx1 = px1 - 8, by0 = py1 - 22, by1 = py1 - 8;
             boolean hover = confirming == null && mx >= bx0 && mx < bx1 && my >= by0 && my < by1;
             g.fill(bx0, by0, bx1, by1, FRAME_DARK);
             g.fill(bx0 + 1, by0 + 1, bx1 - 1, by1 - 1, hover ? 0xFFE8574F : RED);
-            text(g, Component.literal(next ? "Travel here" : "Start here").withStyle(ChatFormatting.BOLD),
-                    (bx0 + bx1) / 2f, by0 + 3, WHITE, 1, true);
+            fit(g, Component.literal(next ? "Travel here" : "Start here").withStyle(ChatFormatting.BOLD),
+                    (bx0 + bx1) / 2f, by0 + 3, bx1 - bx0 - 6, WHITE, 1, Align.CENTRE);
             choiceButtons.add(new PickButton(bx0, by0, bx1, by1,
                     new Pending(c.id(), c.title(), next ? PickRegionPayload.NEXT : PickRegionPayload.HOME)));
         }
@@ -290,18 +293,11 @@ public class TrainerCardScreen extends Screen {
             text(g, Component.literal(label).withStyle(ChatFormatting.BOLD), (bx0 + bx1) / 2f, by0 + 3, hover ? INK : WHITE, 1, true);
             laterButton = new PickButton(bx0, by0, bx1, by1, null);
         }
-        List<FormattedCharSequence> foot = font.split(Component.literal(next
-                ? "You join the region's trainer series, and your level cap starts over with its first leader."
-                : "Later, you can also pick an optional second region to explore, on the card's Regions tab."),
-                next ? W - 130 : W - 80);
-        for (FormattedCharSequence line : foot) {
-            g.pose().pushPose();
-            g.pose().translate(W / 2f - font.width(line) * 0.75f / 2, fy, 0);
-            g.pose().scale(0.75f, 0.75f, 1);
-            g.drawString(font, line, 0, 0, MUTED, false);
-            g.pose().popPose();
-            fy += 8;
-        }
+        // Narrower beside "Not now", so it can't run into the button.
+        paragraph(g, Component.literal(next
+                        ? "You join the region's trainer series, and your level cap starts over with its first leader."
+                        : "Later, you can also pick an optional second region to explore, on the card's Regions tab."),
+                W / 2f, fy, (next ? W - 130 : W - 80) * 0.75f, H - 12 - fy, MUTED, 0.75f, Align.CENTRE);
     }
 
     private int tabWidth() {
@@ -325,7 +321,7 @@ public class TrainerCardScreen extends Screen {
             if (t == Tab.REGIONS && data.canPickStart()) {
                 label.append(Component.literal(" !").withStyle(s -> s.withColor(selected ? GOLD : RED).withBold(true)));
             }
-            text(g, label, x + w / 2f, 23, selected ? WHITE : INK, 1, true);
+            fit(g, label, x + w / 2f, 23, w - 4, selected ? WHITE : INK, 1, Align.CENTRE);
         }
     }
 
@@ -358,8 +354,8 @@ public class TrainerCardScreen extends Screen {
         if (minecraft != null && minecraft.player != null) {
             PlayerFaceRenderer.draw(g, minecraft.player.getSkin(), 35, 51, 44);
         }
-        text(g, Component.literal(data.player()).withStyle(ChatFormatting.BOLD), 57, 110, INK, 1, true);
-        text(g, Component.literal(data.regionMode() ? data.regionTitle() : "Trainer"), 57, 121, MUTED, 1, true);
+        fit(g, Component.literal(data.player()).withStyle(ChatFormatting.BOLD), 57, 110, 70, INK, 1, Align.CENTRE);
+        fit(g, Component.literal(data.regionMode() ? data.regionTitle() : "Trainer"), 57, 121, 70, MUTED, 1, Align.CENTRE);
 
         int x0 = 98, x1 = CX1;
         int y = 40;
@@ -386,23 +382,20 @@ public class TrainerCardScreen extends Screen {
         boolean hasNext = !data.next().getString().isEmpty();
         String label = data.allDone() ? "CHAMPION" : hasNext ? "NEXT CHALLENGE" : "NEXT STEP";
         text(g, Component.literal(label).withStyle(ChatFormatting.BOLD), 31, by0 + 5, LIGHT, 0.75f, false);
+        int textW = CX1 - 34;
         int hintY = by0 + 15;
         if (hasNext) {
-            text(g, Component.literal("▶ ").append(data.next()).withStyle(ChatFormatting.BOLD), 31, by0 + 14, WHITE, 1.25f, false);
-            hintY = by0 + 29;
+            fit(g, Component.literal("▶ ").append(data.next()).withStyle(ChatFormatting.BOLD), 31, by0 + 14, textW, WHITE, 1.25f, Align.LEFT);
+            hintY = by0 + 28;
         }
-        for (FormattedCharSequence line : font.split(data.hint(), CX1 - 34)) {
-            if (hintY > by1 - 9) break;
-            g.drawString(font, line, 31, hintY, LIGHT, false);
-            hintY += 10;
-        }
+        // The hint can be long (e.g. the Pokémon still to catch): it shrinks to fit the box rather than being cut off.
+        paragraph(g, data.hint(), 31, hintY, textW, by1 - 2 - hintY, LIGHT, 1, Align.LEFT);
     }
 
     private void row(GuiGraphics g, int x0, int x1, int y, String label, Component value, int valueColour) {
         panel(g, x0, y, x1, y + 15);
         text(g, Component.literal(label), x0 + 5, y + 4, MUTED, 1, false);
-        int w = font.width(value);
-        g.drawString(font, value, x1 - 5 - w, y + 4, valueColour, false);
+        fit(g, value, x1 - 5, y + 4, x1 - x0 - 18 - font.width(label), valueColour, 1, Align.RIGHT);
     }
 
     private void barRow(GuiGraphics g, int x0, int x1, int y, String label, int value, int max, int colour) {
@@ -433,13 +426,15 @@ public class TrainerCardScreen extends Screen {
     private void drawRoad(GuiGraphics g) {
         int y = CY0 + 2;
         if (data.road().isEmpty()) {
-            text(g, Component.literal("No trainers are listed for " + data.regionTitle() + "."), (CX0 + CX1) / 2f, y + 20, MUTED, 1, true);
+            paragraph(g, Component.literal("No trainers are listed for " + data.regionTitle() + "."), (CX0 + CX1) / 2f, y + 20,
+                    CX1 - CX0 - 12, 30, MUTED, 1, Align.CENTRE);
             contentHeight = 0;
             return;
         }
-        text(g, Component.literal(data.regionTitle() + " Road").withStyle(ChatFormatting.BOLD), CX0 + 4, y, INK, 1, false);
         String summary = data.beaten() + " / " + data.road().size() + " beaten";
         g.drawString(font, summary, CX1 - 8 - font.width(summary), y, MUTED, false);
+        fit(g, Component.literal(data.regionTitle() + " Road").withStyle(ChatFormatting.BOLD), CX0 + 4, y,
+                CX1 - 14 - font.width(summary) - (CX0 + 4), INK, 1, Align.LEFT);
         y += 13;
 
         int i = 0;
@@ -464,12 +459,13 @@ public class TrainerCardScreen extends Screen {
             g.fill(rx0 + 3, y + 2, rx0 + 12, y + 11, chipColour);
             text(g, Component.literal(chip), rx0 + 7.5f, y + 3, WHITE, 1, true);
 
+            String meta = "Tier " + r.tier() + "  ·  cap " + r.levelCap();
+            float metaW = font.width(meta) * 0.75f;
+            text(g, Component.literal(meta), rx1 - 4 - metaW, y + 4.5f, MUTED, 0.75f, false);
+
             MutableComponent name = r.name().copy();
             if (r.status() == TrainerCardData.NEXT) name.withStyle(ChatFormatting.BOLD);
-            g.drawString(font, name, rx0 + 17, y + 3, r.status() == TrainerCardData.LATER ? MUTED : INK, false);
-
-            String meta = "Tier " + r.tier() + "  ·  cap " + r.levelCap();
-            text(g, Component.literal(meta), rx1 - 4 - font.width(meta) * 0.75f, y + 4.5f, MUTED, 0.75f, false);
+            fit(g, name, rx0 + 17, y + 3, rx1 - 10 - metaW - (rx0 + 17), r.status() == TrainerCardData.LATER ? MUTED : INK, 1, Align.LEFT);
             y += 14;
             i++;
         }
@@ -509,7 +505,7 @@ public class TrainerCardScreen extends Screen {
 
             MutableComponent title = Component.literal(r.title()).withStyle(ChatFormatting.BOLD);
             if (r.startPick()) title.append(Component.literal(" ★").withStyle(s -> s.withColor(GOLD)));
-            g.drawString(font, title, rx0 + 6, y + 5, locked && !r.choosable() ? GREY : INK, false);
+            int titleColour = locked && !r.choosable() ? GREY : INK;
 
             int rightEdge;
             if (r.choosable()) {
@@ -525,7 +521,9 @@ public class TrainerCardScreen extends Screen {
                 pickButtons.add(new PickButton(bx0, by0, bx1, by1, new Pending(r.id(), r.title(), PickRegionPayload.EXTRA)));
                 rightEdge = bx0 - 6;
                 String note = "starting choice";
-                text(g, Component.literal(note), rightEdge - font.width(note) * 0.75f, y + 6.5f, MUTED, 0.75f, false);
+                float noteW = font.width(note) * 0.75f;
+                text(g, Component.literal(note), rightEdge - noteW, y + 6.5f, MUTED, 0.75f, false);
+                fit(g, title, rx0 + 6, y + 5, rightEdge - noteW - 6 - (rx0 + 6), titleColour, 1, Align.LEFT);
             } else {
                 String state;
                 int stateColour;
@@ -539,11 +537,13 @@ public class TrainerCardScreen extends Screen {
                     state = "Tier " + r.tier() + " / " + r.maxTier() + (r.toCatch() > 0 ? "  ·  " + r.toCatch() + " to catch" : "");
                     stateColour = INK;
                 }
-                int stateW = font.width(state);
-                g.drawString(font, state, rx1 - 6 - stateW, y + 5, stateColour, false);
+                // The state gets up to half the row; the title the rest, with the progress bar in any space between.
+                float stateW = fit(g, Component.literal(state), rx1 - 6, y + 5, (rx1 - rx0) / 2f, stateColour, 1, Align.RIGHT);
+                int stateX0 = (int) (rx1 - 6 - stateW);
+                float titleW = fit(g, title, rx0 + 6, y + 5, stateX0 - 8 - (rx0 + 6), titleColour, 1, Align.LEFT);
                 if (!locked) {
                     float fraction = r.state() == TrainerCardData.COMPLETE ? 1 : r.maxTier() == 0 ? 0 : r.tier() / (float) r.maxTier();
-                    bar(g, rx0 + 80, y + 7, rx1 - 14 - stateW, y + 12, fraction,
+                    bar(g, Math.max(rx0 + 80, (int) (rx0 + 6 + titleW + 8)), y + 7, stateX0 - 8, y + 12, fraction,
                             r.state() == TrainerCardData.COMPLETE ? GOLD : DARK);
                 }
             }
@@ -579,13 +579,10 @@ public class TrainerCardScreen extends Screen {
             case PickRegionPayload.NEXT -> "Your journey continues in " + confirming.title() + " and you join its trainer series. This choice is permanent.";
             default -> confirming.title() + " opens now, alongside your first region. This choice is permanent.";
         };
-        text(g, Component.literal(title).withStyle(ChatFormatting.BOLD), (BOX_X0 + BOX_X1) / 2f, BOX_Y0 + 4, WHITE, 1, true);
+        fit(g, Component.literal(title).withStyle(ChatFormatting.BOLD), (BOX_X0 + BOX_X1) / 2f, BOX_Y0 + 4,
+                BOX_X1 - BOX_X0 - 10, WHITE, 1, Align.CENTRE);
         int ty = BOX_Y0 + 21;
-        for (FormattedCharSequence line : font.split(Component.literal(body), BOX_X1 - BOX_X0 - 20)) {
-            // Centred by hand: drawCenteredString always adds a drop shadow, which smears dark text on the light box.
-            g.drawString(font, line, (BOX_X0 + BOX_X1) / 2 - font.width(line) / 2, ty, INK, false);
-            ty += 10;
-        }
+        paragraph(g, Component.literal(body), (BOX_X0 + BOX_X1) / 2f, ty, BOX_X1 - BOX_X0 - 20, BTN_Y0 - 4 - ty, INK, 1, Align.CENTRE);
         button(g, YES_X0, yesX1(), verb + confirming.title(), RED, mx, my);
         button(g, noX0(), NO_X1, "Cancel", MID, mx, my);
         g.pose().popPose();
@@ -595,8 +592,8 @@ public class TrainerCardScreen extends Screen {
         boolean hover = mx >= x0 && mx < x1 && my >= BTN_Y0 && my < BTN_Y1;
         g.fill(x0, BTN_Y0, x1, BTN_Y1, FRAME_DARK);
         g.fill(x0 + 1, BTN_Y0 + 1, x1 - 1, BTN_Y1 - 1, hover ? LIGHT : colour);
-        Component text = Component.literal(font.plainSubstrByWidth(label, x1 - x0 - 6)).withStyle(ChatFormatting.BOLD);
-        this.text(g, text, (x0 + x1) / 2f, BTN_Y0 + 3, hover ? INK : WHITE, 1, true);
+        fit(g, Component.literal(label).withStyle(ChatFormatting.BOLD), (x0 + x1) / 2f, BTN_Y0 + 3, x1 - x0 - 6,
+                hover ? INK : WHITE, 1, Align.CENTRE);
     }
 
     // Wild Pokémon ----------------------------------------------------
@@ -611,9 +608,11 @@ public class TrainerCardScreen extends Screen {
         for (WildGroup group : data.wild()) {
             int hx0 = CX0 + 2, hx1 = CX1 - 6;
             g.fill(hx0, y, hx1, y + 13, DARK);
-            g.drawString(font, Component.literal(group.title()).withStyle(ChatFormatting.BOLD), hx0 + 5, y + 3, WHITE, false);
             String count = group.species().size() + " species" + (group.upcoming() > 0 ? "  ·  +" + group.upcoming() + " next tier" : "");
-            text(g, Component.literal(count), hx1 - 5 - font.width(count) * 0.75f, y + 4.5f, LIGHT, 0.75f, false);
+            float countW = font.width(count) * 0.75f;
+            text(g, Component.literal(count), hx1 - 5 - countW, y + 4.5f, LIGHT, 0.75f, false);
+            fit(g, Component.literal(group.title()).withStyle(ChatFormatting.BOLD), hx0 + 5, y + 3,
+                    hx1 - 11 - countW - (hx0 + 5), WHITE, 1, Align.LEFT);
             y += 15;
 
             if (group.species().isEmpty()) {
@@ -633,7 +632,7 @@ public class TrainerCardScreen extends Screen {
                 dexIcon(g, cx + 2, y + 2, s.knowledge());
                 Component name = sp != null ? sp.getTranslatedName() : Component.literal(s.id().getPath());
                 int colour = s.knowledge() == TrainerCardData.UNKNOWN ? MUTED : INK;
-                g.drawString(font, font.plainSubstrByWidth(name.getString(), cellW - 16), cx + 13, y + 2, colour, false);
+                fit(g, name, cx + 13, y + 2, cellW - 16, colour, 1, Align.LEFT);
                 col++;
                 if (col == columns) {
                     col = 0;
@@ -679,13 +678,77 @@ public class TrainerCardScreen extends Screen {
 
     // Text --------------------------------------------------------------
 
+    /** The smallest text is shrunk to before it's cut short with "…". */
+    private static final float MIN_SCALE = 0.65f;
+    private static final int LINE_HEIGHT = 10;
+
+    private enum Align { LEFT, CENTRE, RIGHT }
+
     /** Draws text at a scale, optionally centred on x. */
     private void text(GuiGraphics g, Component text, float x, float y, int colour, float scale, boolean centred) {
-        g.pose().pushPose();
+        draw(g, text.getVisualOrderText(), x, y, colour, scale, centred ? Align.CENTRE : Align.LEFT);
+    }
+
+    /** Draws text at a scale, with x as its left edge, centre or right edge. */
+    private void draw(GuiGraphics g, FormattedCharSequence text, float x, float y, int colour, float scale, Align align) {
         float w = font.width(text) * scale;
-        g.pose().translate(centred ? x - w / 2 : x, y, 0);
+        float dx = switch (align) {
+            case LEFT -> 0;
+            case CENTRE -> -w / 2;
+            case RIGHT -> -w;
+        };
+        g.pose().pushPose();
+        g.pose().translate(x + dx, y, 0);
         g.pose().scale(scale, scale, 1);
         g.drawString(font, text, 0, 0, colour, false);
         g.pose().popPose();
+    }
+
+    /**
+     * Draws one line in at most maxWidth: at maxScale if it fits, otherwise shrunk until it does (down to
+     * MIN_SCALE, staying centred on the full-size line), and only then cut short with "…". Returns the drawn width.
+     */
+    private float fit(GuiGraphics g, Component text, float x, float y, float maxWidth, int colour, float maxScale, Align align) {
+        int w = font.width(text);
+        if (maxWidth <= 0 || w == 0) return 0;
+        float scale = w * maxScale <= maxWidth ? maxScale : Math.max(Math.min(maxScale, MIN_SCALE), maxWidth / w);
+        FormattedCharSequence line = w * scale <= maxWidth ? text.getVisualOrderText() : ellipsize(text, maxWidth / scale);
+        draw(g, line, x, y + (maxScale - scale) * font.lineHeight / 2, colour, scale, align);
+        return font.width(line) * scale;
+    }
+
+    /**
+     * Draws wrapped text in a box maxWidth wide and maxHeight tall: at maxScale if every line fits, otherwise
+     * shrunk until they do (down to MIN_SCALE), and only then with the last line that fits cut short with "…".
+     * Returns the height used.
+     */
+    private float paragraph(GuiGraphics g, Component text, float x, float y, float maxWidth, float maxHeight,
+                            int colour, float maxScale, Align align) {
+        float scale = maxScale;
+        List<FormattedText> lines = wrap(text, maxWidth / scale);
+        while (lines.size() * LINE_HEIGHT * scale > maxHeight && scale > MIN_SCALE) {
+            scale = Math.max(MIN_SCALE, scale - 0.05f);
+            lines = wrap(text, maxWidth / scale);
+        }
+        int fits = Math.max(1, (int) (maxHeight / (LINE_HEIGHT * scale)));
+        float ly = y;
+        for (int i = 0; i < Math.min(fits, lines.size()); i++) {
+            boolean cut = i == fits - 1 && lines.size() > fits;
+            FormattedCharSequence line = cut ? ellipsize(lines.get(i), maxWidth / scale)
+                    : Language.getInstance().getVisualOrder(lines.get(i));
+            draw(g, line, x, ly, colour, scale, align);
+            ly += LINE_HEIGHT * scale;
+        }
+        return ly - y;
+    }
+
+    private List<FormattedText> wrap(Component text, float width) {
+        return font.getSplitter().splitLines(text, Math.max(1, (int) width), Style.EMPTY);
+    }
+
+    /** The text cut to fit width (in unscaled font units), ending in "…". */
+    private FormattedCharSequence ellipsize(FormattedText text, float width) {
+        FormattedText cut = font.substrByWidth(text, Math.max(0, (int) width - font.width("…")));
+        return Language.getInstance().getVisualOrder(FormattedText.composite(cut, FormattedText.of("…")));
     }
 }
