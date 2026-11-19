@@ -1,6 +1,7 @@
 # UCP 2.0.0
 
 ## Features
+- **Region mode**: datapacks can define regions (Kanto, Johto, ...), each with its own ladder of tiers unlocked by advancements such as gym badges. Completing a region opens the next, and players can pick one extra region to explore from the start. Spawns, weights and wild levels follow each species' own region.
 - Gyms: a Gym Challenge block that summons your next gym leader (Radical Cobblemon Trainers) for your current region step. One leader per gym at a time.
 - Gyms can replace the centre of new villages (at most one per village, never outside villages, `gymVillageChance` in `ucp-common.json`). The buildings are the 8 Kanto gyms from Radical Gyms & Structures (MIT), without its command blocks. They need CobbleFurnies installed.
 - Region tier files take an optional `trainers` list naming the leaders for that tier, and `region.json` an optional RCT `series`.
