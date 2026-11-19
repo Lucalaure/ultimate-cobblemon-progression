@@ -280,7 +280,7 @@ Region mode gives each region (Kanto, Johto, …) its **own ladder of tiers**, u
 Regions come in two kinds:
 
 - **League regions** have a trainer `series` (Kanto and Sinnoh in the built-in data). They're the stops on your journey: one opens when you start in it or travel to it.
-- **Other regions** (Johto, Hoenn, … in the built-in data) only add species. They open in unlock order, the first one once your home region is complete and each later one once the one before it is complete. You can also open one from the start as your [extra starting region](#picking-a-second-starting-region).
+- **Other regions** (Johto, Hoenn, … in the built-in data) only add species. They don't open on their own once your journey has started: the only way to open one is to pick it as your [extra starting region](#picking-a-second-starting-region). Completing a region opens nothing but the region you choose next.
 
 Species from regions you haven't reached, and species in no region at all, can't spawn (the second case follows `blockUnknownSpecies`). This only affects wild spawns: trades, eggs and evolutions aren't restricted.
 
@@ -315,7 +315,7 @@ regions/kanto/tier_2.json
 
 | Field | Required | Meaning |
 |---|---|---|
-| `order` | No (default 0) | Unlock order. Before a player has a journey (or when no region has a `series`), the lowest order is open from the start and each later region opens when the one before it is complete. With a journey, it orders the regions without a `series`, and the Trainer Card's lists. |
+| `order` | No (default 0) | Unlock order. Before a player has a journey (or when no region has a `series`), the lowest order is open from the start and each later region opens when the one before it is complete. With a journey, only the regions on it (and the extra starting region) are open, and `order` just sorts the Trainer Card's lists. |
 | `title` | No | Name shown in chat and `/trainerlevel get`. Defaults to the folder name. |
 | `completedBy` | No | Advancement that completes the region. Without it, the region is complete once its last tier is unlocked. |
 | `startChoice` | No (default false) | Lets players pick this region as their extra starting region (see below). Ignored on the first region, which is always open, and on regions with a `series`. |
@@ -343,7 +343,7 @@ Picking one (after confirming, since it's permanent):
 - opens that region at its first tier, and its gyms summon its leaders from then on;
 - puts you into its Radical Cobblemon Trainers series. RCT gives each series its own level cap, so your cap **starts over** with the new region's first leader (15 in the built-in leagues), and RCT's trainers won't battle you while a party Pokémon is above it (unless the server sets RCT's `allowOverLeveling`). Your old team is still yours, but a new region means training a new one, much like a new game.
 
-Everything you've already opened stays open. Until you pick, gyms tell you to open your card. When you've completed every league region, your journey is complete.
+Only the region you pick opens. Everything you'd already opened stays open. Until you pick, gyms tell you to open your card. When you've completed every league region, your journey is complete.
 
 ### Wild Pokémon in a new region
 
@@ -355,7 +355,7 @@ Each species is compared with your progress in **its own region** (sections [3](
 | Sinnoh tier 2 and up | | | can't spawn yet | |
 | Kanto tier 1 (Pidgey, Rattata, …) | 15 | 100 (Kanto complete) | 16–39 (27) | × 0.2 |
 | Kanto tier 10 (Dragonite, Snorlax, …) | 100 | 100 | 45–100 (75) | × 2.0 |
-| Johto to Paldea | | complete with Kanto | as for Kanto | |
+| Johto to Paldea | | | can't spawn (not on your journey) | |
 
 Each Sinnoh badge then opens Sinnoh's next tier and raises your Sinnoh cap, which pushes Sinnoh's lower tiers up with it. Cobblemon still decides where each species spawns (biome, time, rarity), so Sinnoh and Kanto Pokémon mix in the same world. Wild levels use the nearest player within 128 blocks, so they follow whoever is closest.
 

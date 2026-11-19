@@ -16,9 +16,8 @@ import java.util.List;
  * <ul>
  *   <li>Before a player picks their home region (or when no region has a trainer series), the regions open in
  *       order: the first one from the start, each later one once the one before it is complete.</li>
- *   <li>Once they've picked, their <b>journey</b> decides: league regions (those with a series) are open when
- *       they're the home region or a region picked as the next stop. Regions without a series open in order,
- *       the first once the home region is complete and each later one once the one before it is complete.</li>
+ *   <li>Once they've picked, only their <b>journey</b> opens regions: their home region, and each region they
+ *       picked as the next stop after completing the one before. Nothing else opens on its own.</li>
  *   <li>The extra starting region, if picked, is always open.</li>
  * </ul>
  */
@@ -54,17 +53,10 @@ public final class RegionProgress {
             return p;
         }
 
-        // League regions are open when they're on the journey.
+        // With a journey, only its regions and the extra starting region are open.
         for (int r : p.journey) p.fill(player, r, dex);
-
-        // The other regions open in order, starting once the home region is complete.
-        boolean previousCompleted = p.completed[p.journey.get(0)];
-        for (int r = 0; r < regions.size(); r++) {
-            RegionDef region = regions.get(r);
-            if (region.isLeague()) continue;
-            boolean open = previousCompleted || region.id.equals(startRegion);
-            previousCompleted = open && p.fill(player, r, dex);
-        }
+        int start = regions.indexOf(RegionRegistry.byId(startRegion));
+        if (start >= 0) p.fill(player, start, dex);
         return p;
     }
 

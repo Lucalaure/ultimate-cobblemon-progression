@@ -81,11 +81,10 @@ public final class RegionCommands {
                     ? "travel here after completing " + regions.get(current).title
                     : "pick it as your next region on your Trainer Card";
         }
-        // Regions without a series open in order once the home region is complete.
-        for (int p = r - 1; p >= 0; p--) {
-            if (!regions.get(p).isLeague()) return "complete " + regions.get(p).title + " first";
-        }
-        return "complete " + regions.get(journey.get(0)).title + " first";
+        // Regions without a series only open as the extra starting region.
+        return RegionProgress.openableStartChoices(player).contains(region)
+                ? "you can pick it as your extra starting region"
+                : "not on your journey";
     }
 
     /** /trainerlevel region choose|next &lt;region&gt; and /trainerlevel region reset &lt;player&gt;. */
