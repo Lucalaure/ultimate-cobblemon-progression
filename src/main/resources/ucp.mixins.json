@@ -8,7 +8,8 @@
     "BasicSpawnerMixin",
     "PlayerAdvancementsMixin",
     "StructureTemplatePoolAccessor",
-    "JigsawPlacementMixin"
+    "JigsawPlacementMixin",
+    "RctDefeatCountTriggerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

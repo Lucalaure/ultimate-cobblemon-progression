@@ -2,7 +2,7 @@
   "levelCap": 42,
   "trainers": ["gym_leader_byron_0399"],
   "requirements": {
-    "advancements": ["rctmod:trainers/defeat_gym_leader_byron_1"]
+    "advancements": ["ultimate-cobblemon-progression:journey/sinnoh/mine_badge"]
   },
   "species": [
     "cobblemon:dusknoir",

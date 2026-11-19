@@ -2,7 +2,7 @@
   "levelCap": 21,
   "trainers": ["leader_brock_019e"],
   "requirements": {
-    "advancements": ["rctmod:trainers/defeat_leader_brock"]
+    "advancements": ["ultimate-cobblemon-progression:journey/kanto/boulder_badge"]
   },
   "species": [
     "cobblemon:abra",

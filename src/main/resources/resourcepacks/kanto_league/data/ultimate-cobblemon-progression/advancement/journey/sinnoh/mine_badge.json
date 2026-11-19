@@ -1,0 +1,35 @@
+{
+  "parent": "ultimate-cobblemon-progression:journey/sinnoh/relic_badge",
+  "display": {
+    "icon": {
+      "id": "cobblemon:metal_coat"
+    },
+    "title": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.sinnoh.mine_badge.title",
+      "fallback": "Mine Badge"
+    },
+    "description": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.sinnoh.mine_badge.description",
+      "fallback": "Defeat Gym Leader Byron"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat": {
+      "trigger": "ultimate-cobblemon-progression:defeat_trainer",
+      "conditions": {
+        "trainers": [
+          "gym_leader_byron_0399"
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "defeat"
+    ]
+  ]
+}

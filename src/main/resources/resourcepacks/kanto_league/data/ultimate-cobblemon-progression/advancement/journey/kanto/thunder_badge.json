@@ -1,0 +1,35 @@
+{
+  "parent": "ultimate-cobblemon-progression:journey/kanto/cascade_badge",
+  "display": {
+    "icon": {
+      "id": "cobblemon:magnet"
+    },
+    "title": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.kanto.thunder_badge.title",
+      "fallback": "Thunder Badge"
+    },
+    "description": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.kanto.thunder_badge.description",
+      "fallback": "Defeat Leader Lt. Surge"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat": {
+      "trigger": "ultimate-cobblemon-progression:defeat_trainer",
+      "conditions": {
+        "trainers": [
+          "leader_lt_surge_01a0"
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "defeat"
+    ]
+  ]
+}

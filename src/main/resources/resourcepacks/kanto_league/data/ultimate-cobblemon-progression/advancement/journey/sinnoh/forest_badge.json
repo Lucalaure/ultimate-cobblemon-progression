@@ -1,0 +1,35 @@
+{
+  "parent": "ultimate-cobblemon-progression:journey/sinnoh/coal_badge",
+  "display": {
+    "icon": {
+      "id": "minecraft:sunflower"
+    },
+    "title": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.sinnoh.forest_badge.title",
+      "fallback": "Forest Badge"
+    },
+    "description": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.sinnoh.forest_badge.description",
+      "fallback": "Defeat Gym Leader Gardenia"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat": {
+      "trigger": "ultimate-cobblemon-progression:defeat_trainer",
+      "conditions": {
+        "trainers": [
+          "gym_leader_gardenia_03d6"
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "defeat"
+    ]
+  ]
+}

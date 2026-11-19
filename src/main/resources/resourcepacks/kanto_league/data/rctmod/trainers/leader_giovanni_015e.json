@@ -1,0 +1,54 @@
+{
+  "name": "Leader Giovanni",
+  "ai": {
+    "type": "rct"
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:rhyhorn",
+      "gender": "MALE",
+      "level": 45,
+      "nature": "cobblemon:adamant",
+      "ability": "lightningrod",
+      "moveset": ["takedown", "rockblast", "scaryface", "earthquake"]
+    },
+    {
+      "species": "cobblemon:dugtrio",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "cobblemon:jolly",
+      "ability": "sandveil",
+      "moveset": ["slash", "sandtomb", "mudslap", "earthquake"]
+    },
+    {
+      "species": "cobblemon:nidoqueen",
+      "gender": "FEMALE",
+      "level": 44,
+      "nature": "cobblemon:sassy",
+      "ability": "poisonpoint",
+      "moveset": ["bodyslam", "doublekick", "poisonsting", "earthquake"]
+    },
+    {
+      "species": "cobblemon:nidoking",
+      "gender": "MALE",
+      "level": 45,
+      "nature": "cobblemon:adamant",
+      "ability": "poisonpoint",
+      "moveset": ["thrash", "doublekick", "poisonsting", "earthquake"]
+    },
+    {
+      "species": "cobblemon:rhydon",
+      "gender": "MALE",
+      "level": 50,
+      "nature": "cobblemon:adamant",
+      "ability": "lightningrod",
+      "moveset": ["takedown", "rockblast", "scaryface", "earthquake"]
+    }
+  ]
+}

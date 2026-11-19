@@ -1,0 +1,35 @@
+{
+  "parent": "ultimate-cobblemon-progression:journey/sinnoh/beacon_badge",
+  "display": {
+    "icon": {
+      "id": "cobblemon:silver_powder"
+    },
+    "title": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.sinnoh.elite_four_aaron.title",
+      "fallback": "Elite Four Aaron"
+    },
+    "description": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.sinnoh.elite_four_aaron.description",
+      "fallback": "Defeat Elite Four Aaron"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat": {
+      "trigger": "ultimate-cobblemon-progression:defeat_trainer",
+      "conditions": {
+        "trainers": [
+          "elite_four_aaron_039f"
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "defeat"
+    ]
+  ]
+}

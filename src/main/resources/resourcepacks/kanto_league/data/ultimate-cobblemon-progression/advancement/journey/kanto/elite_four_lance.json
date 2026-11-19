@@ -1,0 +1,35 @@
+{
+  "parent": "ultimate-cobblemon-progression:journey/kanto/elite_four_agatha",
+  "display": {
+    "icon": {
+      "id": "cobblemon:dragon_scale"
+    },
+    "title": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.kanto.elite_four_lance.title",
+      "fallback": "Elite Four Lance"
+    },
+    "description": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.kanto.elite_four_lance.description",
+      "fallback": "Defeat Elite Four Lance"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat": {
+      "trigger": "ultimate-cobblemon-progression:defeat_trainer",
+      "conditions": {
+        "trainers": [
+          "elite_four_lance_0057"
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "defeat"
+    ]
+  ]
+}

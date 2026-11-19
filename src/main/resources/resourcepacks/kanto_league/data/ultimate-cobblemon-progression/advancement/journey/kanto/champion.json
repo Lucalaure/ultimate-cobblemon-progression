@@ -1,0 +1,35 @@
+{
+  "parent": "ultimate-cobblemon-progression:journey/kanto/elite_four_lance",
+  "display": {
+    "icon": {
+      "id": "cobblemon:life_orb"
+    },
+    "title": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.kanto.champion.title",
+      "fallback": "Kanto Champion"
+    },
+    "description": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.kanto.champion.description",
+      "fallback": "Defeat Champion Blue and become Champion of Kanto"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat": {
+      "trigger": "ultimate-cobblemon-progression:defeat_trainer",
+      "conditions": {
+        "trainers": [
+          "champion_terry_01b8"
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "defeat"
+    ]
+  ]
+}

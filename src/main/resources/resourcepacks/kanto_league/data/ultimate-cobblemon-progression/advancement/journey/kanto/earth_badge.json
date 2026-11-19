@@ -1,0 +1,35 @@
+{
+  "parent": "ultimate-cobblemon-progression:journey/kanto/volcano_badge",
+  "display": {
+    "icon": {
+      "id": "cobblemon:soft_sand"
+    },
+    "title": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.kanto.earth_badge.title",
+      "fallback": "Earth Badge"
+    },
+    "description": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.kanto.earth_badge.description",
+      "fallback": "Defeat Leader Giovanni"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat": {
+      "trigger": "ultimate-cobblemon-progression:defeat_trainer",
+      "conditions": {
+        "trainers": [
+          "leader_giovanni_015e"
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "defeat"
+    ]
+  ]
+}

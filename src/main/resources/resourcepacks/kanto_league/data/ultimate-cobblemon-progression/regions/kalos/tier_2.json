@@ -1,7 +1,7 @@
 {
   "levelCap": 21,
   "requirements": {
-    "advancements": [["rctmod:trainers/defeat_leader_brock", "rctmod:trainers/defeat_gym_leader_roark_1"]]
+    "advancements": ["ultimate-cobblemon-progression:journey/milestones/badge_1"]
   },
   "species": [
     "cobblemon:bergmite",

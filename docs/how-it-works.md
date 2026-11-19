@@ -234,7 +234,7 @@ Tiers are loaded from `data/ultimate-cobblemon-progression/tiers/tier_<number>.j
 | `levelCap` | Yes | The level cap for players at this tier, and the base for wild levels of this tier's species. |
 | `requirements.dex.seen` | No | Species seen needed to **reach** this tier. |
 | `requirements.dex.caught` | No | Species caught needed to **reach** this tier. |
-| `requirements.advancements` | No | Advancement ids that must all be completed to **reach** this tier, e.g. `["rctmod:trainers/defeat_leader_brock"]`. An entry can also be a list of alternatives, where completing any one counts: `[["rctmod:trainers/defeat_leader_brock", "rctmod:trainers/defeat_gym_leader_roark_1"]]` needs Brock **or** Roark. |
+| `requirements.advancements` | No | Advancement ids that must all be completed to **reach** this tier, e.g. `["ultimate-cobblemon-progression:journey/kanto/boulder_badge"]`. An entry can also be a list of alternatives, where completing any one counts: `[["ultimate-cobblemon-progression:journey/kanto/boulder_badge", "ultimate-cobblemon-progression:journey/sinnoh/coal_badge"]]` needs the Boulder Badge **or** the Coal Badge. |
 | `species` | No | Species ids in this tier. |
 
 Rules and tips:
@@ -242,7 +242,7 @@ Rules and tips:
 - **Number tiers 1, 2, 3, … with no gaps.** The highest number is the maximum trainer level.
 - **Use species ids, not form ids.** `cobblemon:vulpix` covers every Vulpix form. Entries like `cobblemon:bergmite_hisui` don't match anything and are ignored.
 - **List each species in only one tier.**
-- **Advancement requirements** are re-checked the moment an advancement is earned, so tiers can be tied to anything that grants one: beating a trainer, finishing a quest, or a custom datapack advancement.
+- **Advancement requirements** are re-checked the moment an advancement is earned, so tiers can be tied to anything that grants one: beating a trainer (UCP's `defeat_trainer` trigger, see [Advancements](#advancements-the-pokémon-journey-tab)), finishing a quest, or a custom datapack advancement.
 - **A tier with no requirements stops automatic progression** at the tier before it. Players then need `/trainerlevel promote` or `/trainerlevel set` to go further.
 - Species from add-ons only take effect when that add-on is installed; unknown ids are ignored.
 - `/reload` reapplies tier files without a restart.
@@ -313,7 +313,8 @@ regions/kanto/tier_2.json
 {
   "order": 1,
   "title": "Kanto",
-  "completedBy": "rctmod:trainers/defeat_champion_terry"
+  "completedBy": "ultimate-cobblemon-progression:journey/kanto/champion",
+  "series": "kanto"
 }
 ```
 
@@ -384,7 +385,7 @@ If any region has `"startChoice": true` (Johto, Hoenn, Unova, Kalos, Alola, Gala
 
 Players are reminded on joining and in `/trainerlevel get` until they pick. The choice is permanent; an operator can clear it with `/trainerlevel region reset <player>`. Players who picked Sinnoh before it became a league get to pick again, since a league region can't be an extra region.
 
-Picking a region only opens it. Its tiers still unlock through their own requirements, so a chosen region grows with whatever its tier files ask for. The built-in data ties the other regions to the badges of whichever league you're in: each tier needs the matching Kanto badge **or** the matching Sinnoh badge (tier 2 needs Brock or Roark, …, tier 10 Champion Blue or Cynthia). While it's unfinished, the extra region's Pokémon spawn as part of the [new region pool](#wild-pokémon-in-a-new-region-spawn-pools).
+Picking a region only opens it. Its tiers still unlock through their own requirements, so a chosen region grows with whatever its tier files ask for. The built-in data ties the other regions to the badges of whichever league you're in, through hidden [badge milestones](#badge-milestones): tier 2 needs your 1st badge in any league, tier 3 your 2nd, …, tier 10 becoming Champion of any league. While it's unfinished, the extra region's Pokémon spawn as part of the [new region pool](#wild-pokémon-in-a-new-region-spawn-pools).
 
 `tier_N.json` files use the same format as [custom tiers](#7-custom-tiers-datapacks): `levelCap`, `species`, and `requirements` (usually `advancements`), plus an optional `trainers` list for [gyms](#gyms). Tiers must be numbered 1, 2, 3… with no gaps, and tier 1 normally has no requirements. A species belongs to the first region that lists it; its forms come with it.
 
@@ -394,14 +395,14 @@ Picking a region only opens it. Its tiers still unlock through their own require
 python scripts/generate-region-tiers.py --dex cobblemon:johto --out-dir <path to regions/johto>
 ```
 
-For a new region, pass `--level-caps` (one per tier) and `--advancements` (one entry per tier, separated by `;`, empty for no requirement, with `|` between alternatives). The built-in regions came from these dexes: each region's own (e.g. `cobblemon:kanto`), and `cobblemon:sinnoh,cobblemon:hisui` for Sinnoh. See the top of the script for every option.
+The built-in regions' requirements are set by `scripts/generate-league-advancements.py` (see [Advancements](#advancements-the-pokémon-journey-tab)), so after re-sorting one you don't need to pass any. For a new region, pass `--level-caps` (one per tier) and `--advancements` (one entry per tier, separated by `;`, empty for no requirement, with `|` between alternatives). The built-in regions came from these dexes: each region's own (e.g. `cobblemon:kanto`), and `cobblemon:sinnoh,cobblemon:hisui` for Sinnoh. See the top of the script for every option.
 
 ### The built-in leagues
 
 When Radical Cobblemon Trainers is installed, UCP turns on a built-in datapack, **UCP Kanto & Sinnoh Leagues**, in every world. It contains:
 
 - a 10-tier **Kanto**, with each tier after the first unlocked by one of its gym leaders, and the Champion completing it;
-- Kanto's RCT trainers: the 8 leaders, the Elite Four (either Agatha counts) and the Champion, with FireRed/LeafGreen-style teams, in a `kanto` series, and their natural spawning turned off so they only appear in gyms;
+- Kanto's RCT trainers: the 8 leaders (Brock, Misty, Lt. Surge, Erika, Koga, Sabrina, Blaine and Giovanni), the Elite Four (either Agatha counts) and the Champion, with FireRed/LeafGreen-style teams, in a `kanto` series, and their natural spawning turned off so they only appear in gyms;
 - a 10-tier **Sinnoh**, built the same way from RCT's own Brilliant Diamond/Shining Pearl trainers: Roark, Gardenia, Maylene, Wake, Fantina, Byron, Candice and Volkner, then Aaron, Bertha, Flint, Lucian and Champion Cynthia, in a `sinnoh` series. Their teams are RCT's (aces from level 14 to 66), and each one requires the one before it, so RCT's level cap follows the league (15 at the start, then each next trainer's level). Each tier's cap is the level of the next trainer's strongest Pokémon, as in Kanto;
 - every other region (Johto, Hoenn, Unova, Kalos, Alola, Galar, Paldea) as an optional extra region, unlocking with either league's badges.
 
@@ -417,7 +418,7 @@ The two leagues' tiers:
 | 6 | Leader Koga | 43 | Gym Leader Fantina | 39 |
 | 7 | Leader Sabrina | 47 | Gym Leader Byron | 42 |
 | 8 | Leader Blaine | 50 | Gym Leader Candice | 49 |
-| 9 | Leader Clair | 54 | Gym Leader Volkner | 57 |
+| 9 | Leader Giovanni | 54 | Gym Leader Volkner | 57 |
 | 10 | Elite Four Lorelei, Bruno, Agatha, Lance, then Champion Blue | 100 | Elite Four Aaron, Bertha, Flint, Lucian, then Champion Cynthia | 100 |
 
 Each region's species are split into its 10 tiers by Base Stat Total, weakest first; see the tier files for the lists.
@@ -427,6 +428,44 @@ Players can start in either league and travel to the other once they're Champion
 It's an ordinary datapack, so it shows in `/datapack list` as `ultimate-cobblemon-progression:kanto_league` (the id is kept from before Sinnoh was added). Turn it off with `/datapack disable "ultimate-cobblemon-progression:kanto_league"`, or untick it when creating a world, to use your own region data or the trainer-level ladder instead. Your own datapacks load after it, so they can override any of its files. Without RCT installed it isn't offered at all.
 
 For good-looking leaders, players can add the [RCT Trainer Textures Plus](https://modrinth.com/resourcepack/rct-trainer-textures-plus) resource pack, which replaces RCT's skins for every trainer in the league.
+
+### Advancements: the Pokémon Journey tab
+
+UCP keeps its own advancements for the journey, in one advancement tab, **Pokémon Journey**. Each league is a branch of it: one advancement per badge (named after the badge, with the leader's signature item as its icon), one per Elite Four member, then the Champion. Tiers unlock through these advancements, so they're what `/trainerlevel get` and the Trainer Card name as your next step ("Next: Boulder Badge").
+
+| Advancement | Earned by |
+|---|---|
+| `ultimate-cobblemon-progression:journey/kanto/boulder_badge` … `earth_badge` | Beating Kanto's 8 gym leaders |
+| `…/journey/kanto/elite_four_lorelei`, `…_bruno`, `…_agatha`, `…_lance` | Beating each Elite Four member (either Agatha counts) |
+| `…/journey/kanto/champion` | Beating Champion Blue: completes Kanto |
+| `…/journey/sinnoh/coal_badge` … `beacon_badge`, `…/elite_four_aaron` … `…_lucian`, `…/sinnoh/champion` | The same for Sinnoh |
+
+Operators can still adjust a player's progress with `/advancement grant` and `/advancement revoke` on these ids.
+
+**How they're earned.** Every Radical Cobblemon Trainers win fires UCP's own advancement trigger, `ultimate-cobblemon-progression:defeat_trainer`:
+
+```json
+"criteria": {
+  "defeat": {
+    "trigger": "ultimate-cobblemon-progression:defeat_trainer",
+    "conditions": { "trainers": ["leader_brock_019e"] }
+  }
+}
+```
+
+`trainers` lists RCT trainer ids, any one of which counts (leave it out to match any trainer). Your own datapacks can use the trigger too.
+
+**RCT's advancements don't fire for league trainers.** Beating a trainer that's listed in any region's tiers (a UCP league trainer) awards **only** UCP's advancements: none of RCT's, not its badge for that trainer, not "Defeat any trainer", not its "all Champions" count. RCT's advancements keep working for every other RCT trainer. In RCT's own advancement tab, its entries for the league trainers simply stay unearned.
+
+#### Badge milestones
+
+Regions without a `series` unlock with **milestones**: hidden advancements (they don't show in the tab) earned by your *n*-th badge in **any** league, `…/journey/milestones/badge_1` to `badge_8`, and by becoming any league's Champion, `…/journey/milestones/champion`. Johto's tier 2 needs `badge_1`, so it grows the same way whether you're collecting Kanto or Sinnoh badges. A new league only has to be added to the milestones, not to every region's tier files.
+
+**Generating them.** `scripts/generate-league-advancements.py` (Python 3) writes every journey advancement and milestone from the region data, using the badge and Champion names in `scripts/league-advancements.json` and the trainers' names and signature items from the pack and RCT. It also sets the tier files' `requirements` and each league's `completedBy` to match. Run it after changing a league's trainers or adding a league:
+
+```
+python scripts/generate-league-advancements.py
+```
 
 ### Gyms
 
@@ -444,7 +483,7 @@ Gyms give each step of a region a place to go. A gym is a building with a **Gym 
   "trainers": ["elite_four_lorelei_004e", "elite_four_bruno_0051",
                ["elite_four_agatha_0053", "elite_four_agatha_0054"],
                "elite_four_lance_0057", "champion_terry_01b8"],
-  "requirements": { "advancements": ["rctmod:trainers/defeat_champion_terry"] }
+  "requirements": { "advancements": ["ultimate-cobblemon-progression:journey/kanto/champion"] }
 }
 ```
 

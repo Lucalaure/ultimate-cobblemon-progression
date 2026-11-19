@@ -1,0 +1,35 @@
+{
+  "parent": "ultimate-cobblemon-progression:journey/sinnoh/elite_four_flint",
+  "display": {
+    "icon": {
+      "id": "cobblemon:psychic_seed"
+    },
+    "title": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.sinnoh.elite_four_lucian.title",
+      "fallback": "Elite Four Lucian"
+    },
+    "description": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.sinnoh.elite_four_lucian.description",
+      "fallback": "Defeat Elite Four Lucian"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat": {
+      "trigger": "ultimate-cobblemon-progression:defeat_trainer",
+      "conditions": {
+        "trainers": [
+          "elite_four_lucian_03a2"
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "defeat"
+    ]
+  ]
+}

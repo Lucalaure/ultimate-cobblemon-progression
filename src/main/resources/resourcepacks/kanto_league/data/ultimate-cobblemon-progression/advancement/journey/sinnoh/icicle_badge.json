@@ -1,0 +1,35 @@
+{
+  "parent": "ultimate-cobblemon-progression:journey/sinnoh/mine_badge",
+  "display": {
+    "icon": {
+      "id": "cobblemon:ice_stone"
+    },
+    "title": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.sinnoh.icicle_badge.title",
+      "fallback": "Icicle Badge"
+    },
+    "description": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.sinnoh.icicle_badge.description",
+      "fallback": "Defeat Gym Leader Candice"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat": {
+      "trigger": "ultimate-cobblemon-progression:defeat_trainer",
+      "conditions": {
+        "trainers": [
+          "gym_leader_candice_03da"
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "defeat"
+    ]
+  ]
+}

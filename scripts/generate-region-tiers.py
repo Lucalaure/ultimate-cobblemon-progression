@@ -23,7 +23,7 @@ What it keeps from the existing tier files: each tier's "trainers" list (the gym
 and its level cap and requirements unless you pass new ones. Only "species" is always worked out from scratch.
 
 Examples:
-    # Re-sort Johto's species into its tiers, keeping its caps and its Kanto-or-Sinnoh badge requirements:
+    # Re-sort Johto's species into its tiers, keeping its caps and its badge milestone requirements:
     python scripts/generate-region-tiers.py --dex cobblemon:johto --out-dir .../regions/johto
 
     # A new 3-tier region:

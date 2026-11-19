@@ -1,13 +1,17 @@
 package org.ppvon.ultimateCobblemonProgression.common.regions;
 
 import java.util.Comparator;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Loaded regions, in unlock order. Region mode is active whenever at least one region is loaded.
  */
 public final class RegionRegistry {
     private static List<RegionDef> REGIONS = List.of();
+    /** Every RCT trainer id listed in a region's tiers: the trainers of UCP's leagues. */
+    private static Set<String> LEAGUE_TRAINERS = Set.of();
 
     private RegionRegistry() {}
 
@@ -15,6 +19,16 @@ public final class RegionRegistry {
         REGIONS = regions.stream()
                 .sorted(Comparator.comparingInt((RegionDef r) -> r.order).thenComparing(r -> r.id))
                 .toList();
+        Set<String> trainers = new HashSet<>();
+        for (RegionDef region : REGIONS) {
+            region.tiers.values().forEach(tier -> tier.trainers.forEach(trainers::addAll));
+        }
+        LEAGUE_TRAINERS = Set.copyOf(trainers);
+    }
+
+    /** Whether the RCT trainer is one of UCP's league trainers (listed in some region's tiers). */
+    public static boolean isLeagueTrainer(String trainerId) {
+        return LEAGUE_TRAINERS.contains(trainerId);
     }
 
     public static boolean isActive() {

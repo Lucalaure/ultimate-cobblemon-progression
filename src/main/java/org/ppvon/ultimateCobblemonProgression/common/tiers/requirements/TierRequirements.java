@@ -10,7 +10,7 @@ import java.util.List;
 public final class TierRequirements {
     public final DexRequirements dex;
     /**
-     * Advancements that must all be completed, e.g. "rctmod:trainers/defeat_leader_brock". Each entry is a group of
+     * Advancements that must all be completed, e.g. "ultimate-cobblemon-progression:journey/kanto/boulder_badge". Each entry is a group of
      * alternatives: completing any one advancement in a group counts for that group.
      */
     public final List<List<ResourceLocation>> advancements;

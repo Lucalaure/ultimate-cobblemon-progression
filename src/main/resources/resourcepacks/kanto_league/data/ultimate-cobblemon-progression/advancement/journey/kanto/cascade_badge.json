@@ -1,0 +1,35 @@
+{
+  "parent": "ultimate-cobblemon-progression:journey/kanto/boulder_badge",
+  "display": {
+    "icon": {
+      "id": "cobblemon:mystic_water"
+    },
+    "title": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.kanto.cascade_badge.title",
+      "fallback": "Cascade Badge"
+    },
+    "description": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.kanto.cascade_badge.description",
+      "fallback": "Defeat Leader Misty"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat": {
+      "trigger": "ultimate-cobblemon-progression:defeat_trainer",
+      "conditions": {
+        "trainers": [
+          "leader_misty_019f"
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "defeat"
+    ]
+  ]
+}

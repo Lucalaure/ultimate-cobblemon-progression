@@ -34,3 +34,6 @@ Thumbs.db
 /external/
 /run2/
 /run3/
+
+# Python
+__pycache__/

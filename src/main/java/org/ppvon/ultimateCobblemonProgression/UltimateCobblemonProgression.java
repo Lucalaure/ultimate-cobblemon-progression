@@ -34,6 +34,7 @@ import org.ppvon.ultimateCobblemonProgression.common.regions.RegionDataLoader;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionProgressTracker;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionRegistry;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionSpecies;
+import org.ppvon.ultimateCobblemonProgression.common.advancements.DefeatTrainerTrigger;
 import org.ppvon.ultimateCobblemonProgression.common.gym.GymBlocks;
 import org.ppvon.ultimateCobblemonProgression.common.gym.GymTeamLimit;
 import org.ppvon.ultimateCobblemonProgression.common.gym.VillageGyms;
@@ -56,6 +57,7 @@ public class UltimateCobblemonProgression implements ModInitializer {
         VillageGyms.register();
         GymTeamLimit.register();
         TrainerCard.register();
+        DefeatTrainerTrigger.register();
 
         ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> {
             var player = handler.player;

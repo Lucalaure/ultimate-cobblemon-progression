@@ -8,11 +8,14 @@
 - Config files are rewritten on load, so options added in a new version show up in them (your own values are kept).
 - `/trainerlevel get` marks your current region and says why each locked region is locked.
 - Gyms tell you to pick your next region when you've completed your current one.
+- **Pokémon Journey advancements**: UCP has its own advancement tab, with every league's badges, Elite Four and Champion (e.g. Boulder Badge with Brock's Hard Stone as its icon). The leagues' tiers unlock through them, and the extra regions through hidden badge milestones (your n-th badge in any league). They're earned with a new trigger, `ultimate-cobblemon-progression:defeat_trainer`, fired on every Radical Cobblemon Trainers win, and generated from the region data by `scripts/generate-league-advancements.py`.
+- Beating a UCP league trainer no longer awards any of RCT's own advancements (its badge, "Defeat any trainer", its Champion counts); only UCP's.
 - Tier requirements can list alternatives: an `advancements` entry can be a list, where completing any one counts. The built-in extra regions (Johto to Paldea) now grow with the matching Kanto **or** Sinnoh badge.
 - Optional gym team limit (`gymTeamLimit` in `ucp-common.json`, off by default): players can bring no more Pokémon to a gym battle than the leader has. The leader says how many when it accepts the challenge, and a battle with a bigger party doesn't start.
 - The Mod Menu config's General page now also has the gym team limit, the share of villages with a gym, and the first-join Trainer Card.
 
 ## Changes
+- Kanto's 8th gym leader is now Giovanni (Earth Badge), with his FireRed/LeafGreen Viridian Gym team, in place of Clair, who goes back to RCT's Radical Red series.
 - Weight scaling (`doWeightScaling`) is now off by default: unlocking a tier only adds species and no longer makes the ones you already had rarer. Existing `ucp-spawn.json` files keep their setting; set it to `false` to match.
 - Sinnoh is no longer an extra starting region, since it's a league now. Players who had picked it get to pick again.
 - Completing a region asks where your journey goes next, instead of opening the next region in order.

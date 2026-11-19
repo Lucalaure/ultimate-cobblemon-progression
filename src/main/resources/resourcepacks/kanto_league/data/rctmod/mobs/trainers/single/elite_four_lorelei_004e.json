@@ -2,7 +2,7 @@
   "type": "e4",
   "series": ["kanto"],
   "optional": false,
-  "requiredDefeats": [["leader_clair_004a"]],
+  "requiredDefeats": [["leader_giovanni_015e"]],
   "maxTrainerDefeats": 1,
   "maxTrainerWins": -1,
   "battleCooldownTicks": 240,

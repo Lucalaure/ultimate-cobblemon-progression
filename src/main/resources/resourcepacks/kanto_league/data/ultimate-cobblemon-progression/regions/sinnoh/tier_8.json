@@ -2,7 +2,7 @@
   "levelCap": 49,
   "trainers": ["gym_leader_candice_03da"],
   "requirements": {
-    "advancements": ["rctmod:trainers/defeat_gym_leader_candice_1"]
+    "advancements": ["ultimate-cobblemon-progression:journey/sinnoh/icicle_badge"]
   },
   "species": [
     "cobblemon:basculegion",

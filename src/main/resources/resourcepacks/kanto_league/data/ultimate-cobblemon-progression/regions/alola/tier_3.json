@@ -1,7 +1,7 @@
 {
   "levelCap": 24,
   "requirements": {
-    "advancements": [["rctmod:trainers/defeat_leader_misty", "rctmod:trainers/defeat_gym_leader_gardenia_1"]]
+    "advancements": ["ultimate-cobblemon-progression:journey/milestones/badge_2"]
   },
   "species": [
     "cobblemon:charjabug",

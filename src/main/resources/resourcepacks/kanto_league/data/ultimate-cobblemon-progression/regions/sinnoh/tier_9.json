@@ -2,7 +2,7 @@
   "levelCap": 57,
   "trainers": ["gym_leader_volkner_03db"],
   "requirements": {
-    "advancements": ["rctmod:trainers/defeat_gym_leader_volkner_1"]
+    "advancements": ["ultimate-cobblemon-progression:journey/sinnoh/beacon_badge"]
   },
   "species": [
     "cobblemon:azelf",
