@@ -648,11 +648,11 @@ public class TrainerCardScreen extends Screen {
         contentHeight = y - CY0 + 2;
     }
 
-    /** Cobblemon's Pokédex caught/seen ball, drawn at 8x8. */
+    /** Cobblemon's Pokédex caught/seen ball, drawn at 8x8. Its texture has the seen outline on top, the caught ball below. */
     private void dexIcon(GuiGraphics g, int x, int y, int knowledge) {
         RenderSystem.enableBlend();
         if (knowledge == TrainerCardData.UNKNOWN) g.setColor(1, 1, 1, 0.3f);
-        int v = knowledge == TrainerCardData.SEEN ? 14 : 0;
+        int v = knowledge == TrainerCardData.CAUGHT ? 14 : 0;
         g.pose().pushPose();
         g.pose().translate(x, y, 0);
         g.pose().scale(8 / 14f, 8 / 14f, 1);

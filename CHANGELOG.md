@@ -4,6 +4,7 @@
 
 ## Fixes
 - With Legendary Monuments installed, beating a Radical Cobblemon Trainers trainer (gym leaders included) no longer crashes the game. Four of its victory scripts treated every trainer as a Cobblemon NPC; CJP now replaces them with copies that skip other mods' trainers.
+- The Trainer Card's Pokémon lists showed seen Pokémon with the caught ball and caught ones with the seen outline. They're now the right way round.
 
 # UCP 2.1.0
 
