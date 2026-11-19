@@ -202,6 +202,7 @@ public class UltimateCobblemonProgression implements ModInitializer {
         TierDataLoader.register();
         RegionDataLoader.register();
         registerKantoLeague();
+        registerLegendaryMonumentsFix();
 
         ServerLifecycleEvents.SERVER_STARTED.register(server -> {
             TierSpeciesApplier.applyFromRegistry();
@@ -243,5 +244,19 @@ public class UltimateCobblemonProgression implements ModInitializer {
         FabricLoader.getInstance().getModContainer(MOD_ID).ifPresent(mod -> ResourceManagerHelper.registerBuiltinResourcePack(
                 ResourceLocation.fromNamespaceAndPath(MOD_ID, "kanto_league"), mod,
                 Component.literal("CJP Kanto & Sinnoh Leagues"), ResourcePackActivationType.DEFAULT_ENABLED));
+    }
+
+    /**
+     * Legendary Monuments' Archie, Maxie, Mustard and Zinnia victory scripts treat every NPC you beat as a Cobblemon
+     * NPC. Radical Cobblemon Trainers' trainers aren't, so beating one (a gym leader included) crashed the server.
+     * This pack replaces those four scripts with copies that skip other trainers. Only added with both mods installed.
+     */
+    private static void registerLegendaryMonumentsFix() {
+        FabricLoader loader = FabricLoader.getInstance();
+        if (!loader.isModLoaded("rctmod") || !loader.isModLoaded("legendarymonuments")) return;
+        loader.getModContainer(MOD_ID).ifPresent(mod -> ResourceManagerHelper.registerBuiltinResourcePack(
+                ResourceLocation.fromNamespaceAndPath(MOD_ID, "legendary_monuments_fix"), mod,
+                Component.literal("CJP Legendary Monuments Fix"), ResourcePackActivationType.ALWAYS_ENABLED));
+        LOG.info("Legendary Monuments is installed; added the fix for its victory scripts and RCT trainers");
     }
 }

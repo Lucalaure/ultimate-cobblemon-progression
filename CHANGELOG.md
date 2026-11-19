@@ -2,6 +2,9 @@
 
 - **Renamed to Cobblemon Journey Progression (CJP)**, with a new icon. Only the name changed: the mod id (`ultimate-cobblemon-progression`), config files, datapack namespace and API stay the same, so existing worlds, configs and datapacks keep working. The jar is now `cjp-fabric-<version>+mc1.21.1.jar`.
 
+## Fixes
+- With Legendary Monuments installed, beating a Radical Cobblemon Trainers trainer (gym leaders included) no longer crashes the game. Four of its victory scripts treated every trainer as a Cobblemon NPC; CJP now replaces them with copies that skip other mods' trainers.
+
 # UCP 2.1.0
 
 ## Features

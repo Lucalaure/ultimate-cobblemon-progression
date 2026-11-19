@@ -443,6 +443,8 @@ It's an ordinary datapack, so it shows in `/datapack list` as `ultimate-cobblemo
 
 For good-looking leaders, players can add the [RCT Trainer Textures Plus](https://modrinth.com/resourcepack/rct-trainer-textures-plus) resource pack, which replaces RCT's skins for every trainer in the league.
 
+**With Legendary Monuments.** Four of Legendary Monuments' battle-victory scripts (Archie, Maxie, Mustard and Zinnia) treat every NPC you beat as a Cobblemon NPC. RCT's trainers aren't Cobblemon NPCs, so beating any of them, a gym leader included, crashed the game. When both mods are installed, CJP adds an always-on pack, `ultimate-cobblemon-progression:legendary_monuments_fix`, that replaces those four scripts with copies that skip other mods' trainers. Legendary Monuments' own trainers work as before.
+
 ### Advancements: the Pokémon Journey tab
 
 CJP keeps its own advancements for the journey, in one advancement tab, **Pokémon Journey**. Each league is a branch of it: one advancement per badge (named after the badge, with the leader's signature item as its icon), one per Elite Four member, then the Champion. Tiers unlock through these advancements, so they're what `/trainerlevel get` and the Trainer Card name as your next step ("Next: Boulder Badge").
