@@ -33,7 +33,7 @@ Without RCT, UCP still works, using its original trainer-level ladder (see [Clas
 1. **Pick where your journey starts.** Every player gets a **Trainer Card** on joining. The first time you open it, it asks which region to start in: Kanto or Sinnoh. That region opens, and you join its trainer series.
 2. **Find a gym.** New villages can have a **gym** at their centre, one at most per village. Using its **Gym Challenge** block summons your next leader into the arena. One leader stands in a gym at a time.
 3. **Beat the leader to unlock the next tier.** Each badge opens more of the region's Pokémon, stronger wild levels and a higher level cap. After the eight gyms come the Elite Four and the Champion, and beating the Champion completes the region.
-4. **Choose where your journey goes next.** Once you're Champion, your Trainer Card asks which league to travel to next. Your journey continues there from its first gym, with a fresh level cap.
+4. **Choose where your journey goes next.** Once you're Champion, your Trainer Card asks which league to travel to next. Your journey continues there from its first gym, with a fresh level cap. The regions you've finished stay open: their Pokémon keep spawning, mostly at levels that fit your new team.
 5. **Track it all on your Trainer Card**: your region, tier, level cap and next challenge, the region's trainer order, every region's progress, and the wild Pokémon you can meet, with Cobblemon's caught/seen markers.
 
 You can also pick one **extra region** to explore from the start, on the card's Regions tab. Its Pokémon open alongside your main region.
@@ -92,6 +92,11 @@ Settings live in `config/ultimate-cobblemon-progression/`. Highlights from `ucp-
 
 - `gymVillageChance` (default `0.3`): the share of new villages whose centre is a gym. `0` turns village gyms off.
 - `giveTrainerCard` (default `true`): give every player a Trainer Card on their first join.
+
+And from `ucp-spawn.json`:
+
+- `regionPoolWeight`, `pastInCapPoolWeight`, `pastFullPoolWeight` (defaults `1.0`, `0.5`, `0.15`): how often you meet the region you're working through, finished regions' Pokémon at your new team's levels, and finished regions' Pokémon at full strength. See [spawn pools](docs/how-it-works.md#wild-pokémon-in-a-new-region-spawn-pools).
+- `doWeightScaling` (default `false`): favor Pokémon closer to your tier within each rarity. Off, unlocking a tier only adds Pokémon.
 
 The full list is in [Configuration](docs/how-it-works.md#6-configuration).
 

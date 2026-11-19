@@ -16,7 +16,9 @@
 .NOTES
     -LevelCaps and -Advancements have one entry per tier. Use "" for a tier with no requirement (normally tier 1).
     The tier files are rewritten from scratch, so any "trainers" lists in them (the gym leaders for each tier) are
-    lost: add them back afterwards, e.g. by restoring them from git.
+    lost: add them back afterwards, e.g. by restoring them from git. Each tier gets a single advancement; requirements
+    with alternatives (e.g. the built-in extra regions' [["...defeat_leader_brock", "...defeat_gym_leader_roark_1"]])
+    have to be edited back in by hand.
     Without -CobblemonJar, the Cobblemon jar is looked up in the Gradle cache (run ./gradlew build once first).
 #>
 param(
