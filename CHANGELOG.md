@@ -1,10 +1,11 @@
-# Unreleased
+# CJP 2.2.0
 
 - **Renamed to Cobblemon Journey Progression (CJP)**, with a new icon. Only the name changed: the mod id (`ultimate-cobblemon-progression`), config files, datapack namespace and API stay the same, so existing worlds, configs and datapacks keep working. The jar is now `cjp-fabric-<version>+mc1.21.1.jar`.
 
 ## Fixes
 - With Legendary Monuments installed, beating a Radical Cobblemon Trainers trainer (gym leaders included) no longer crashes the game. Four of its victory scripts treated every trainer as a Cobblemon NPC; CJP now replaces them with copies that skip other mods' trainers.
 - The Trainer Card's Pokémon lists showed seen Pokémon with the caught ball and caught ones with the seen outline. They're now the right way round.
+- Long text on the Trainer Card (the next-step hint, region and trainer names, tab labels, confirmations) now shrinks to fit, and wraps inside its box, instead of running off the edge or being cut off.
 
 # UCP 2.1.0
 
