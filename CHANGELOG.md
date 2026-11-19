@@ -1,4 +1,4 @@
-# Unreleased
+# UCP 2.0.0
 
 ## Features
 - Gyms: a Gym Challenge block that summons your next gym leader (Radical Cobblemon Trainers) for your current region step. One leader per gym at a time.
