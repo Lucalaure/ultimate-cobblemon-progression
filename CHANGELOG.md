@@ -1,8 +1,16 @@
 # Unreleased
 
 ## Features
+- **Choose your next region**: once every region on your journey is complete, your Trainer Card asks which league region to travel to next (or use `/trainerlevel region next <region>`). Picking one opens it at its first tier, joins its RCT series, and gyms summon its leaders. League regions (those with a `series`) now only open through your journey; other regions open in order once your home region is complete.
+- **Sinnoh league** in the built-in datapack (now called UCP Kanto & Sinnoh Leagues; its id is still `kanto_league`): Sinnoh's 10 tiers are unlocked by RCT's Brilliant Diamond/Shining Pearl gym leaders, Elite Four and Champion Cynthia, in a new `sinnoh` series that only appears in gyms. You can start your journey in Sinnoh, or travel there after Kanto.
+- Tier requirements can list alternatives: an `advancements` entry can be a list, where completing any one counts. The built-in extra regions (Johto to Paldea) now grow with the matching Kanto **or** Sinnoh badge.
 - Optional gym team limit (`gymTeamLimit` in `ucp-common.json`, off by default): players can bring no more Pokémon to a gym battle than the leader has. The leader says how many when it accepts the challenge, and a battle with a bigger party doesn't start.
 - The Mod Menu config's General page now also has the gym team limit, the share of villages with a gym, and the first-join Trainer Card.
+
+## Changes
+- Sinnoh is no longer an extra starting region, since it's a league now. Players who had picked it get to pick again.
+- Completing a region posts one "Now open" line for the regions it opened, then asks where your journey goes next.
+- The Trainer Card's Road counts the trainers of every unlocked tier as beaten, even if RCT reset its record of them when you switched series.
 
 ## Fixes
 - Village gyms no longer have Radical Gyms & Structures' "use button to respawn leader" sign, which pointed at a button UCP removes.

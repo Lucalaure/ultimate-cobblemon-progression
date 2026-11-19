@@ -65,11 +65,15 @@ public class TrainerCardScreen extends Screen {
     private final List<PickButton> pickButtons = new ArrayList<>();
     /** The pick waiting for the player to confirm it, or null. */
     private Pending confirming;
-    /** "Start here" buttons on the start screen, in card coordinates. */
-    private final List<PickButton> homeButtons = new ArrayList<>();
+    /** "Start here" / "Travel here" buttons on the region choice screen, in card coordinates. */
+    private final List<PickButton> choiceButtons = new ArrayList<>();
+    /** The choice screen's "Not now" button (next region only), in card coordinates, or null. */
+    private PickButton laterButton;
+    /** The player put off picking their next region, so the card shows its tabs for now. */
+    private boolean choiceDismissed;
 
-    /** A region pick to confirm: the journey's home region, or the optional second region. */
-    private record Pending(String id, String title, boolean home) {}
+    /** A region pick to confirm, with its {@link PickRegionPayload} kind (home, next or extra region). */
+    private record Pending(String id, String title, int kind) {}
 
     private record PickButton(int x0, int y0, int x1, int y1, Pending pick) {}
 
@@ -113,7 +117,7 @@ public class TrainerCardScreen extends Screen {
         double x = lx(mouseX), y = ly(mouseY);
         if (confirming != null) {
             if (y >= BTN_Y0 && y < BTN_Y1 && x >= YES_X0 && x < yesX1()) {
-                ClientPlayNetworking.send(new PickRegionPayload(confirming.id(), confirming.home()));
+                ClientPlayNetworking.send(new PickRegionPayload(confirming.id(), confirming.kind()));
                 click();
                 confirming = null;
             } else if (y >= BTN_Y0 && y < BTN_Y1 && x >= noX0() && x < NO_X1) {
@@ -122,14 +126,19 @@ public class TrainerCardScreen extends Screen {
             }
             return true; // the box is modal
         }
-        if (data.needsHome()) {
-            for (PickButton b : homeButtons) {
+        if (showingChoice()) {
+            for (PickButton b : choiceButtons) {
                 if (x >= b.x0 && x < b.x1 && y >= b.y0 && y < b.y1) {
                     confirming = b.pick;
                     click();
                 }
             }
-            return true; // the start screen has nothing else to click
+            PickButton later = laterButton;
+            if (later != null && x >= later.x0 && x < later.x1 && y >= later.y0 && y < later.y1) {
+                choiceDismissed = true;
+                click();
+            }
+            return true; // the choice screen has nothing else to click
         }
         if (tab == Tab.REGIONS && y >= CY0 && y < CY1) {
             double cy = y + scroll;
@@ -192,8 +201,8 @@ public class TrainerCardScreen extends Screen {
         g.pose().scale(scale, scale, 1);
 
         g.fill(12, 10, W - 12, H - 10, SCREEN);
-        if (data.needsHome()) {
-            drawHome(g, mx, my);
+        if (showingChoice()) {
+            drawChoice(g, mx, my);
         } else {
             drawTabs(g, mx, my);
             drawTab(g, mx, my);
@@ -217,21 +226,35 @@ public class TrainerCardScreen extends Screen {
         }
     }
 
-    // Start screen ----------------------------------------------------
+    // Region choice screen -------------------------------------------
 
-    /** Shown instead of the card until the player picks the region their journey starts in. */
-    private void drawHome(GuiGraphics g, int mx, int my) {
-        homeButtons.clear();
-        text(g, Component.literal("CHOOSE YOUR STARTING REGION").withStyle(ChatFormatting.BOLD), W / 2f, 22, INK, 1, true);
-        text(g, Component.literal("Where does your journey begin?"), W / 2f, 34, MUTED, 1, true);
+    /**
+     * Whether the card opens on the region choice screen: always until the player picks where their journey starts,
+     * and when they can pick where it goes next, unless they put that off.
+     */
+    private boolean showingChoice() {
+        return data.needsChoice() && !(data.choosingNext() && choiceDismissed);
+    }
 
-        List<TrainerCardData.HomeChoice> choices = data.homeChoices();
+    /**
+     * Shown instead of the card until the player picks the region their journey starts in, and again each time
+     * they complete their journey so far and can pick the region it continues in.
+     */
+    private void drawChoice(GuiGraphics g, int mx, int my) {
+        choiceButtons.clear();
+        laterButton = null;
+        boolean next = data.choosingNext();
+        text(g, Component.literal(next ? "CHOOSE YOUR NEXT REGION" : "CHOOSE YOUR STARTING REGION").withStyle(ChatFormatting.BOLD),
+                W / 2f, 22, INK, 1, true);
+        text(g, Component.literal(next ? "Where does your journey go next?" : "Where does your journey begin?"), W / 2f, 34, MUTED, 1, true);
+
+        List<TrainerCardData.RegionChoice> choices = data.regionChoices();
         int panelW = 96, gap = 8, panelH = 108;
         int shown = Math.min(choices.size(), 3);
         int rowW = shown * panelW + (shown - 1) * gap;
         int x0 = (W - rowW) / 2, y0 = 48;
         for (int i = 0; i < shown; i++) {
-            TrainerCardData.HomeChoice c = choices.get(i);
+            TrainerCardData.RegionChoice c = choices.get(i);
             int px0 = x0 + i * (panelW + gap), px1 = px0 + panelW, py1 = y0 + panelH;
             g.fill(px0, y0, px1, py1, FRAME_DARK);
             g.fill(px0 + 1, y0 + 1, px1 - 1, py1 - 1, LIGHT);
@@ -249,13 +272,28 @@ public class TrainerCardScreen extends Screen {
             boolean hover = confirming == null && mx >= bx0 && mx < bx1 && my >= by0 && my < by1;
             g.fill(bx0, by0, bx1, by1, FRAME_DARK);
             g.fill(bx0 + 1, by0 + 1, bx1 - 1, by1 - 1, hover ? 0xFFE8574F : RED);
-            text(g, Component.literal("Start here").withStyle(ChatFormatting.BOLD), (bx0 + bx1) / 2f, by0 + 3, WHITE, 1, true);
-            homeButtons.add(new PickButton(bx0, by0, bx1, by1, new Pending(c.id(), c.title(), true)));
+            text(g, Component.literal(next ? "Travel here" : "Start here").withStyle(ChatFormatting.BOLD),
+                    (bx0 + bx1) / 2f, by0 + 3, WHITE, 1, true);
+            choiceButtons.add(new PickButton(bx0, by0, bx1, by1,
+                    new Pending(c.id(), c.title(), next ? PickRegionPayload.NEXT : PickRegionPayload.HOME)));
         }
 
-        List<FormattedCharSequence> foot = font.split(Component.literal(
-                "Later, you can also pick an optional second region to explore, on the card's Regions tab."), W - 80);
         int fy = y0 + panelH + 8;
+        if (next) {
+            // "Not now": look at the card first; it asks again the next time it's opened.
+            String label = "Not now";
+            int bw = font.width(label) + 16;
+            int bx0 = W - 22 - bw, bx1 = W - 22, by0 = fy - 2, by1 = fy + 12;
+            boolean hover = confirming == null && mx >= bx0 && mx < bx1 && my >= by0 && my < by1;
+            g.fill(bx0, by0, bx1, by1, FRAME_DARK);
+            g.fill(bx0 + 1, by0 + 1, bx1 - 1, by1 - 1, hover ? LIGHT : MID);
+            text(g, Component.literal(label).withStyle(ChatFormatting.BOLD), (bx0 + bx1) / 2f, by0 + 3, hover ? INK : WHITE, 1, true);
+            laterButton = new PickButton(bx0, by0, bx1, by1, null);
+        }
+        List<FormattedCharSequence> foot = font.split(Component.literal(next
+                ? "You join the region's trainer series, and your level cap starts over with its first leader."
+                : "Later, you can also pick an optional second region to explore, on the card's Regions tab."),
+                next ? W - 130 : W - 80);
         for (FormattedCharSequence line : foot) {
             g.pose().pushPose();
             g.pose().translate(W / 2f - font.width(line) * 0.75f / 2, fy, 0);
@@ -484,7 +522,7 @@ public class TrainerCardScreen extends Screen {
                 g.fill(bx0, by0, bx1, by1, FRAME_DARK);
                 g.fill(bx0 + 1, by0 + 1, bx1 - 1, by1 - 1, hover ? 0xFFE8574F : RED);
                 text(g, Component.literal(label).withStyle(ChatFormatting.BOLD), (bx0 + bx1) / 2f, by0 + 3, WHITE, 1, true);
-                pickButtons.add(new PickButton(bx0, by0, bx1, by1, new Pending(r.id(), r.title(), false)));
+                pickButtons.add(new PickButton(bx0, by0, bx1, by1, new Pending(r.id(), r.title(), PickRegionPayload.EXTRA)));
                 rightEdge = bx0 - 6;
                 String note = "starting choice";
                 text(g, Component.literal(note), rightEdge - font.width(note) * 0.75f, y + 6.5f, MUTED, 0.75f, false);
@@ -530,17 +568,24 @@ public class TrainerCardScreen extends Screen {
         g.fill(BOX_X0, BOX_Y0, BOX_X1, BOX_Y1, FRAME_DARK);
         g.fill(BOX_X0 + 1, BOX_Y0 + 1, BOX_X1 - 1, BOX_Y1 - 1, SCREEN);
         g.fill(BOX_X0 + 1, BOX_Y0 + 1, BOX_X1 - 1, BOX_Y0 + 15, DARK);
-        String title = confirming.home() ? "Start in " + confirming.title() + "?" : "Explore " + confirming.title() + "?";
-        String body = confirming.home()
-                ? "Your journey begins in " + confirming.title() + " and you join its trainer series. This choice is permanent."
-                : confirming.title() + " opens now, alongside your first region. This choice is permanent.";
+        String verb = switch (confirming.kind()) {
+            case PickRegionPayload.HOME -> "Start in ";
+            case PickRegionPayload.NEXT -> "Travel to ";
+            default -> "Explore ";
+        };
+        String title = verb + confirming.title() + "?";
+        String body = switch (confirming.kind()) {
+            case PickRegionPayload.HOME -> "Your journey begins in " + confirming.title() + " and you join its trainer series. This choice is permanent.";
+            case PickRegionPayload.NEXT -> "Your journey continues in " + confirming.title() + " and you join its trainer series. This choice is permanent.";
+            default -> confirming.title() + " opens now, alongside your first region. This choice is permanent.";
+        };
         text(g, Component.literal(title).withStyle(ChatFormatting.BOLD), (BOX_X0 + BOX_X1) / 2f, BOX_Y0 + 4, WHITE, 1, true);
         int ty = BOX_Y0 + 21;
         for (FormattedCharSequence line : font.split(Component.literal(body), BOX_X1 - BOX_X0 - 20)) {
             g.drawCenteredString(font, line, (BOX_X0 + BOX_X1) / 2, ty, INK);
             ty += 10;
         }
-        button(g, YES_X0, yesX1(), (confirming.home() ? "Start in " : "Explore ") + confirming.title(), RED, mx, my);
+        button(g, YES_X0, yesX1(), verb + confirming.title(), RED, mx, my);
         button(g, noX0(), NO_X1, "Cancel", MID, mx, my);
         g.pose().popPose();
     }

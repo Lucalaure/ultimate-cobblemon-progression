@@ -7,7 +7,7 @@ import com.cobblemon.mod.common.pokemon.Species;
 import com.cobblemon.mod.common.util.PlayerExtensionsKt;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
-import org.ppvon.ultimateCobblemonProgression.common.card.TrainerCardData.HomeChoice;
+import org.ppvon.ultimateCobblemonProgression.common.card.TrainerCardData.RegionChoice;
 import org.ppvon.ultimateCobblemonProgression.common.card.TrainerCardData.RegionEntry;
 import org.ppvon.ultimateCobblemonProgression.common.card.TrainerCardData.RoadEntry;
 import org.ppvon.ultimateCobblemonProgression.common.card.TrainerCardData.WildGroup;
@@ -46,15 +46,23 @@ final class TrainerCardDataBuilder {
         RegionProgress progress = RegionProgressTracker.get(player);
         List<RegionDef> regions = RegionRegistry.ordered();
 
-        int focus = -1;
-        for (int r = 0; r < regions.size(); r++) {
-            if (progress.isUnlocked(r) && !progress.isCompleted(r)) {
-                focus = r;
-                break;
+        // Show the journey's current region; otherwise the first open, unfinished one; otherwise the last region
+        // the journey reached (e.g. while the player picks where to go next).
+        List<RegionDef> nextChoices = RegionProgress.nextChoices(player);
+        int focus = progress.current();
+        if (focus < 0) {
+            for (int r : progress.priorityOrder()) {
+                if (progress.isUnlocked(r) && !progress.isCompleted(r)) {
+                    focus = r;
+                    break;
+                }
             }
         }
-        boolean allDone = focus < 0;
-        if (allDone) focus = regions.size() - 1;
+        boolean allDone = focus < 0 && nextChoices.isEmpty();
+        if (focus < 0) {
+            List<Integer> journey = progress.journey();
+            focus = journey.isEmpty() ? regions.size() - 1 : journey.get(journey.size() - 1);
+        }
 
         RegionDef region = regions.get(focus);
         int step = progress.step(focus);
@@ -64,6 +72,8 @@ final class TrainerCardDataBuilder {
         Component hint;
         if (allDone) {
             hint = Component.literal("Every region is complete. Congratulations, Champion!");
+        } else if (!nextChoices.isEmpty()) {
+            hint = Component.literal(region.title + " is complete! Choose where your journey goes next: reopen your Trainer Card.");
         } else if (!next.getString().isEmpty()) {
             hint = Component.literal("Use a Gym Challenge block in a village gym.");
         } else {
@@ -74,10 +84,7 @@ final class TrainerCardDataBuilder {
         }
 
         String startPick = RegionProgress.chosenStartRegion(player);
-        String home = RegionProgress.chosenHomeRegion(player);
-        List<RegionDef> choices = startPick == null
-                ? RegionRegistry.startChoices().stream().filter(r -> !r.id.equals(home)).toList()
-                : List.of();
+        List<RegionDef> choices = RegionProgress.openableStartChoices(player);
         List<RegionEntry> regionEntries = new ArrayList<>();
         List<WildGroup> wild = new ArrayList<>();
         AbstractPokedexManager dex = PlayerExtensionsKt.pokedex(player);
@@ -96,22 +103,21 @@ final class TrainerCardDataBuilder {
             wild.add(new WildGroup(reg.title, upcoming, species));
         }
 
-        List<HomeChoice> homeChoices = new ArrayList<>();
-        if (RegionProgress.needsHomeRegion(player)) {
-            for (RegionDef reg : RegionRegistry.homeChoices()) {
-                int trainers = reg.tiers.values().stream().mapToInt(t -> t.trainers.size()).sum();
-                int speciesCount = 0;
-                for (int t = 1; t <= reg.maxTier(); t++) speciesCount += reg.realSpecies(t);
-                Component first = reg.tiers.values().stream().filter(t -> !t.trainers.isEmpty()).findFirst()
-                        .map(t -> trainerName(t.trainers.get(0).get(0))).orElse(Component.empty());
-                homeChoices.add(new HomeChoice(reg.id, reg.title, trainers, speciesCount, first));
-            }
+        boolean choosingNext = !RegionProgress.needsHomeRegion(player);
+        List<RegionChoice> regionChoices = new ArrayList<>();
+        for (RegionDef reg : choosingNext ? nextChoices : RegionRegistry.homeChoices()) {
+            int trainers = reg.tiers.values().stream().mapToInt(t -> t.trainers.size()).sum();
+            int speciesCount = 0;
+            for (int t = 1; t <= reg.maxTier(); t++) speciesCount += reg.realSpecies(t);
+            Component first = reg.tiers.values().stream().filter(t -> !t.trainers.isEmpty()).findFirst()
+                    .map(t -> trainerName(t.trainers.get(0).get(0))).orElse(Component.empty());
+            regionChoices.add(new RegionChoice(reg.id, reg.title, trainers, speciesCount, first));
         }
 
         var counts = DexProgressionApi.get(player);
         return new TrainerCardData(player.getGameProfile().getName(), true, region.title, step, region.maxTier(),
                 levelCap(player, region, step), counts.seen(), counts.caught(), next, hint, allDone,
-                road, regionEntries, wild, homeChoices);
+                road, regionEntries, wild, regionChoices, choosingNext);
     }
 
     /** The trainers listed in a region's tiers, with the player's status against each. */
@@ -120,9 +126,10 @@ final class TrainerCardDataBuilder {
         boolean nextFound = completed;
         for (TierDef tier : region.tiers.values()) {
             for (List<String> group : tier.trainers) {
-                // Without RCT there's nothing to ask, so count the trainers of unlocked tiers as beaten.
-                boolean beaten = !RctBridge.isLoaded() && tier.index <= step;
-                if (RctBridge.isLoaded()) {
+                // Trainers of unlocked tiers count as beaten: switching RCT series (travelling to the next region)
+                // can reset RCT's progress in the old one, and without RCT there's nothing to ask.
+                boolean beaten = completed || tier.index <= step;
+                if (!beaten && RctBridge.isLoaded()) {
                     for (String id : group) {
                         if (RctBridge.defeats(player, id) > 0) {
                             beaten = true;
@@ -176,7 +183,7 @@ final class TrainerCardDataBuilder {
         return new TrainerCardData(player.getGameProfile().getName(), false, "Trainer level", level, TierRegistry.maxTier(),
                 TierRegistry.getCapForTier(level), counts.seen(), counts.caught(), Component.empty(), hint,
                 TierRegistry.get(level + 1).isEmpty(), List.of(), List.of(),
-                List.of(new WildGroup("Your level", upcoming, species)), List.of());
+                List.of(new WildGroup("Your level", upcoming, species)), List.of(), false);
     }
 
     // ------------------------------------------------------------------ shared

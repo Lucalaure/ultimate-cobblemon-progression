@@ -6,6 +6,7 @@ import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -54,6 +55,8 @@ public final class RegionProgressTracker {
 
     private static void announce(ServerPlayer player, RegionProgress before, RegionProgress now) {
         List<RegionDef> regions = RegionRegistry.ordered();
+        List<String> opened = new ArrayList<>();
+        boolean journeyRegionCompleted = false;
         for (int r = 0; r < regions.size(); r++) {
             RegionDef region = regions.get(r);
 
@@ -66,13 +69,28 @@ public final class RegionProgressTracker {
             }
 
             if (now.isCompleted(r) && !before.isCompleted(r)) {
-                MutableComponent msg = regionTag(region)
-                        .append(Component.literal("Region complete!").withStyle(ChatFormatting.GOLD, ChatFormatting.BOLD));
-                RegionDef next = RegionRegistry.get(r + 1);
-                if (next != null) {
-                    msg.append(Component.literal(" " + next.title + " is now open.").withStyle(ChatFormatting.GOLD));
-                }
-                player.displayClientMessage(msg, false);
+                player.displayClientMessage(regionTag(region)
+                        .append(Component.literal("Region complete!").withStyle(ChatFormatting.GOLD, ChatFormatting.BOLD)), false);
+                if (now.isOnJourney(r)) journeyRegionCompleted = true;
+            }
+
+            // Journey regions are announced when they're picked; this lists the ones that opened on their own.
+            if (now.isUnlocked(r) && !before.isUnlocked(r) && !now.isOnJourney(r)) opened.add(region.title);
+        }
+
+        if (!opened.isEmpty()) {
+            player.displayClientMessage(Component.literal("Now open: " + String.join(", ", opened) + ".")
+                    .withStyle(ChatFormatting.GOLD), false);
+        }
+        if (journeyRegionCompleted && now.current() < 0) {
+            if (RegionProgress.needsNextRegion(player)) {
+                player.displayClientMessage(Component.literal(
+                        "Where does your journey go next? Open your Trainer Card to choose your next region.")
+                        .withStyle(ChatFormatting.YELLOW), false);
+            } else {
+                player.displayClientMessage(Component.literal(
+                        "You've completed every league. Congratulations, Champion!")
+                        .withStyle(ChatFormatting.GOLD, ChatFormatting.BOLD), false);
             }
         }
     }

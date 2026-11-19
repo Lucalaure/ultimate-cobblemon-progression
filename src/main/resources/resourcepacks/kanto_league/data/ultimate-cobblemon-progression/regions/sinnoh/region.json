@@ -1,5 +1,6 @@
 {
   "order": 4,
   "title": "Sinnoh",
-  "startChoice": true
+  "completedBy": "rctmod:trainers/defeat_champion_cynthia_1",
+  "series": "sinnoh"
 }

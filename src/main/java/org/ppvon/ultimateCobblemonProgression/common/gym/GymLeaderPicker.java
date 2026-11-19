@@ -12,7 +12,8 @@ import java.util.List;
 
 /**
  * Works out which trainer a Gym Challenge block should summon for a player: the first trainer they
- * haven't beaten yet in the next locked tier of the earliest open, unfinished region that lists trainers.
+ * haven't beaten yet in the next locked tier of an open, unfinished region that lists trainers, trying the
+ * journey's current region first.
  */
 public final class GymLeaderPicker {
     private GymLeaderPicker() {}
@@ -40,7 +41,8 @@ public final class GymLeaderPicker {
         List<RegionDef> regions = RegionRegistry.ordered();
         boolean allBeatenSomewhere = false;
 
-        for (int r = 0; r < regions.size(); r++) {
+        // The journey's current region comes first, then any other open region with trainers.
+        for (int r : progress.priorityOrder()) {
             if (!progress.isUnlocked(r) || progress.isCompleted(r)) continue;
             RegionDef region = regions.get(r);
             TierDef next = region.tiers.get(progress.step(r) + 1);
@@ -65,6 +67,9 @@ public final class GymLeaderPicker {
             allBeatenSomewhere = true;
         }
 
+        if (RegionProgress.needsNextRegion(player)) {
+            return Pick.none(Component.literal("You've completed your region! Choose where your journey goes next: open your Trainer Card."));
+        }
         if (allBeatenSomewhere) {
             return Pick.none(Component.literal("You've beaten every trainer for your next step. Meet its other requirements to move on."));
         }

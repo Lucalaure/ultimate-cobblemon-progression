@@ -34,13 +34,19 @@ public final class RegionRegistry {
         return REGIONS.stream().filter(r -> r.id.equals(id)).findFirst().orElse(null);
     }
 
-    /** Regions a player can start their journey in: the ones with a trainer series. */
+    /**
+     * League regions: the ones with a trainer series. A player's journey starts in one of them (their home region)
+     * and moves on to another each time they complete every league region on it.
+     */
     public static List<RegionDef> homeChoices() {
-        return REGIONS.stream().filter(r -> r.series.isPresent()).toList();
+        return REGIONS.stream().filter(RegionDef::isLeague).toList();
     }
 
-    /** Regions players may pick as their extra starting region. The first region is always open, so it's never offered. */
+    /**
+     * Regions players may pick as their extra starting region. The first region is always open, so it's never offered,
+     * and league regions open through the journey instead.
+     */
     public static List<RegionDef> startChoices() {
-        return REGIONS.stream().skip(1).filter(r -> r.startChoice).toList();
+        return REGIONS.stream().skip(1).filter(r -> r.startChoice && !r.isLeague()).toList();
     }
 }

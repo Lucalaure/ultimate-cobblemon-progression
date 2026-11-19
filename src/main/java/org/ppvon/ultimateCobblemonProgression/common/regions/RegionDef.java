@@ -42,6 +42,11 @@ public final class RegionDef {
         this.tiers = Collections.unmodifiableSortedMap(tiers);
     }
 
+    /** Whether this is a league region: one with a trainer series, which players travel to on their journey. */
+    public boolean isLeague() {
+        return series.isPresent();
+    }
+
     public int maxTier() {
         return tiers.isEmpty() ? 0 : tiers.lastKey();
     }

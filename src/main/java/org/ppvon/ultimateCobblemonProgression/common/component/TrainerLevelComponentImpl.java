@@ -2,16 +2,22 @@ package org.ppvon.ultimateCobblemonProgression.common.component;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
+import net.minecraft.nbt.StringTag;
+import net.minecraft.nbt.Tag;
 import net.minecraft.world.entity.player.Player;
 import org.ladysnake.cca.api.v3.component.sync.AutoSyncedComponent;
 import org.ppvon.ultimateCobblemonProgression.common.tiers.TierRegistry;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 public class TrainerLevelComponentImpl implements TrainerLevelComponent, AutoSyncedComponent {
     private int level = 1;
     private String startRegion = null;
     private String homeRegion = null;
+    private final List<String> nextRegions = new ArrayList<>();
     private final Player player;
     private boolean loadedFromNbt = false;
 
@@ -55,6 +61,24 @@ public class TrainerLevelComponentImpl implements TrainerLevelComponent, AutoSyn
     }
 
     @Override
+    public List<String> getNextRegions() {
+        return List.copyOf(nextRegions);
+    }
+
+    @Override
+    public void addNextRegion(String regionId) {
+        if (regionId == null || nextRegions.contains(regionId)) return;
+        nextRegions.add(regionId);
+        TrainerLevelComponents.KEY.sync(this.player);
+    }
+
+    @Override
+    public void clearNextRegions() {
+        nextRegions.clear();
+        TrainerLevelComponents.KEY.sync(this.player);
+    }
+
+    @Override
     public void readFromNbt(CompoundTag tag, HolderLookup.Provider registryLookup) {
         if (tag.contains("Level")) {
             this.level = tag.getInt("Level");
@@ -62,6 +86,10 @@ public class TrainerLevelComponentImpl implements TrainerLevelComponent, AutoSyn
         }
         this.startRegion = tag.contains("StartRegion") ? tag.getString("StartRegion") : null;
         this.homeRegion = tag.contains("HomeRegion") ? tag.getString("HomeRegion") : null;
+        this.nextRegions.clear();
+        for (Tag t : tag.getList("NextRegions", Tag.TAG_STRING)) {
+            this.nextRegions.add(t.getAsString());
+        }
     }
 
     @Override
@@ -72,6 +100,11 @@ public class TrainerLevelComponentImpl implements TrainerLevelComponent, AutoSyn
         }
         if (this.homeRegion != null) {
             tag.putString("HomeRegion", this.homeRegion);
+        }
+        if (!this.nextRegions.isEmpty()) {
+            ListTag list = new ListTag();
+            for (String id : this.nextRegions) list.add(StringTag.valueOf(id));
+            tag.put("NextRegions", list);
         }
     }
 

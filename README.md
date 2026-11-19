@@ -16,7 +16,7 @@ A Fabric side-mod for **Cobblemon** that turns the game into a region-by-region 
 
 Required: **Cobblemon 1.8**, **Fabric API**, **Fabric Language Kotlin** and **Cardinal Components API**.
 
-For the region journey (gyms and the built-in Kanto league), also install:
+For the region journey (gyms and the built-in Kanto and Sinnoh leagues), also install:
 
 - **[Radical Cobblemon Trainers](https://modrinth.com/mod/rctmod)** (RCT): the trainers, their teams and their battles.
 - **[CobbleFurnies](https://modrinth.com/mod/cobblefurnies)**: furniture used inside the gym buildings.
@@ -30,16 +30,17 @@ Without RCT, UCP still works, using its original trainer-level ladder (see [Clas
 
 ## How it plays
 
-1. **Pick where your journey starts.** Every player gets a **Trainer Card** on joining. The first time you open it, it asks which region to start in (Kanto, for now). That region opens, and you join its trainer series.
+1. **Pick where your journey starts.** Every player gets a **Trainer Card** on joining. The first time you open it, it asks which region to start in: Kanto or Sinnoh. That region opens, and you join its trainer series.
 2. **Find a gym.** New villages can have a **gym** at their centre, one at most per village. Using its **Gym Challenge** block summons your next leader into the arena. One leader stands in a gym at a time.
-3. **Beat the leader to unlock the next tier.** Each badge opens more of the region's Pokémon, stronger wild levels and a higher level cap. After the eight gyms come the Elite Four and the Champion, and beating the Champion completes the region and opens the next.
-4. **Track it all on your Trainer Card**: your region, tier, level cap and next challenge, the region's trainer order, every region's progress, and the wild Pokémon you can meet, with Cobblemon's caught/seen markers.
+3. **Beat the leader to unlock the next tier.** Each badge opens more of the region's Pokémon, stronger wild levels and a higher level cap. After the eight gyms come the Elite Four and the Champion, and beating the Champion completes the region.
+4. **Choose where your journey goes next.** Once you're Champion, your Trainer Card asks which league to travel to next. Your journey continues there from its first gym, with a fresh level cap.
+5. **Track it all on your Trainer Card**: your region, tier, level cap and next challenge, the region's trainer order, every region's progress, and the wild Pokémon you can meet, with Cobblemon's caught/seen markers.
 
 You can also pick one **extra region** to explore from the start, on the card's Regions tab. Its Pokémon open alongside your main region.
 
-### The built-in Kanto league
+### The built-in leagues
 
-With RCT installed, UCP turns on a built-in datapack, **UCP Kanto League**: a 10-tier Kanto with its 8 gym leaders, the Elite Four and the Champion (FireRed/LeafGreen-style teams), plus every other region from Johto to Paldea as an optional extra region. It's an ordinary datapack, so you can turn it off, or override it with your own region data. See [Region mode](docs/how-it-works.md#9-region-mode).
+With RCT installed, UCP turns on a built-in datapack, **UCP Kanto & Sinnoh Leagues**: a 10-tier Kanto with its 8 gym leaders, the Elite Four and the Champion (FireRed/LeafGreen-style teams), a 10-tier Sinnoh with RCT's Brilliant Diamond/Shining Pearl leaders, Elite Four and Champion Cynthia, plus every other region from Johto to Paldea as an optional extra region that grows with either league's badges. It's an ordinary datapack, so you can turn it off, or override it with your own region data. See [Region mode](docs/how-it-works.md#9-region-mode).
 
 ---
 
@@ -57,7 +58,7 @@ Whether you follow regions or the classic ladder, your progress controls:
 
 ## Classic mode: trainer levels
 
-Without region data (for example without RCT, or with the Kanto league turned off), UCP gives every player a **Trainer Level** from 1 to 7. Each level is a tier, and you level up automatically by seeing and catching enough different species in your Pokédex. Your Pokémon can't gain XP past your tier's level cap.
+Without region data (for example without RCT, or with the built-in leagues turned off), UCP gives every player a **Trainer Level** from 1 to 7. Each level is a tier, and you level up automatically by seeing and catching enough different species in your Pokédex. Your Pokémon can't gain XP past your tier's level cap.
 
 | Tier | Base Stat Total | Level cap | To reach it (seen / caught) |
 |------|-----------------|-----------|------|
@@ -78,6 +79,7 @@ The default tiers also cover species from Myths and Legends, Complete Cobblemon 
 ```
 /trainerlevel get                          your progress (everyone)
 /trainerlevel card                         a new Trainer Card, if you lost yours (everyone)
+/trainerlevel region next <region>         travel to your next region, once yours is complete (everyone)
 /trainerlevel region choose <region>       pick your extra starting region (everyone)
 /trainerlevel region reset <player>        clear a player's extra region choice (op level 2)
 /trainerlevel set <player> <level>         classic mode: set a trainer level (op level 2)

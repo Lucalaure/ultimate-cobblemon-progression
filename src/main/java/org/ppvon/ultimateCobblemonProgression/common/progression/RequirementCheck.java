@@ -9,6 +9,7 @@ import org.ppvon.ultimateCobblemonProgression.common.tiers.requirements.DexRequi
 import org.ppvon.ultimateCobblemonProgression.common.tiers.requirements.TierRequirements;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -45,10 +46,18 @@ public final class RequirementCheck {
     }
 
     public static boolean areAdvancementsDone(ServerPlayer player, TierRequirements req) {
-        for (ResourceLocation id : req.advancements) {
-            if (!isAdvancementDone(player, id)) return false;
+        for (List<ResourceLocation> group : req.advancements) {
+            if (!isAnyAdvancementDone(player, group)) return false;
         }
         return true;
+    }
+
+    /** Whether at least one advancement of a group of alternatives is completed. */
+    public static boolean isAnyAdvancementDone(ServerPlayer player, List<ResourceLocation> group) {
+        for (ResourceLocation id : group) {
+            if (isAdvancementDone(player, id)) return true;
+        }
+        return false;
     }
 
     public static boolean isAdvancementDone(ServerPlayer player, ResourceLocation id) {

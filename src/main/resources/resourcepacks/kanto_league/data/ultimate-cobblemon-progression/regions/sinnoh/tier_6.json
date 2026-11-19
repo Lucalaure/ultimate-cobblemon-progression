@@ -1,7 +1,8 @@
 {
-  "levelCap": 43,
+  "levelCap": 39,
+  "trainers": ["gym_leader_fantina_03d9"],
   "requirements": {
-    "advancements": ["rctmod:trainers/defeat_leader_koga"]
+    "advancements": ["rctmod:trainers/defeat_gym_leader_fantina_1"]
   },
   "species": [
     "cobblemon:abomasnow",

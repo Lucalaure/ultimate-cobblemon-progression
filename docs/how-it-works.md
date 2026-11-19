@@ -10,7 +10,7 @@ This guide explains exactly what UCP changes in Cobblemon, using the mod's defau
 - Wild Pokémon **levels** are rerolled based on the Pokémon's tier and yours.
 - Your own Pokémon **can't gain XP past your tier's level cap**.
 - You **level up automatically** by seeing and catching enough different species in your Pokédex.
-- **Region mode** (optional) replaces the single ladder with one ladder per region, unlocked by gym badges. See [section 9](#9-region-mode).
+- **Region mode** (optional) replaces the single ladder with one ladder per region, unlocked by gym badges. When you finish a region's league, you **choose which region your journey goes to next**. See [section 9](#9-region-mode).
 - **Gyms** appear in villages. Using a gym's Gym Challenge block summons your next gym leader. See [Gyms](#gyms).
 - Every player starts with a **Trainer Card** that shows their progress. See [Trainer Card](#trainer-card).
 
@@ -230,7 +230,7 @@ Tiers are loaded from `data/ultimate-cobblemon-progression/tiers/tier_<number>.j
 | `levelCap` | Yes | The level cap for players at this tier, and the base for wild levels of this tier's species. |
 | `requirements.dex.seen` | No | Species seen needed to **reach** this tier. |
 | `requirements.dex.caught` | No | Species caught needed to **reach** this tier. |
-| `requirements.advancements` | No | Advancement ids that must all be completed to **reach** this tier, e.g. `["rctmod:trainers/defeat_leader_brock"]`. |
+| `requirements.advancements` | No | Advancement ids that must all be completed to **reach** this tier, e.g. `["rctmod:trainers/defeat_leader_brock"]`. An entry can also be a list of alternatives, where completing any one counts: `[["rctmod:trainers/defeat_leader_brock", "rctmod:trainers/defeat_gym_leader_roark_1"]]` needs Brock **or** Roark. |
 | `species` | No | Species ids in this tier. |
 
 Rules and tips:
@@ -256,10 +256,11 @@ If you change the tier files, you can regenerate [Species by Tier and Rarity](sp
 | `/trainerlevel set <player> <level>` | Operator (level 2) | Sets a player's trainer level. Values are clamped between 1 and the highest tier. |
 | `/trainerlevel promote <player>` | Operator (level 2) | Raises a player one level and shows them the normal level-up message. |
 
-In region mode, `/trainerlevel get` shows each region's tier and what's needed next instead, and `set`/`promote` are disabled (use `/advancement grant` and `/advancement revoke`). Two more commands exist in region mode:
+In region mode, `/trainerlevel get` shows each region's tier and what's needed next instead, and `set`/`promote` are disabled (use `/advancement grant` and `/advancement revoke`). Three more commands exist in region mode:
 
 | Command | Permission | What it does |
 |---|---|---|
+| `/trainerlevel region next <region>` | Everyone | Picks the region your journey continues in, once your current region is complete. Same as picking it on the Trainer Card. |
 | `/trainerlevel region choose <region>` | Everyone | Picks your extra starting region (once). |
 | `/trainerlevel region reset <player>` | Operator (level 2) | Clears a player's starting region choice. |
 
@@ -271,17 +272,23 @@ Region mode gives each region (Kanto, Johto, …) its **own ladder of tiers**, u
 
 ### How it plays
 
-1. You start in the **first region**, where only its weakest species can spawn.
+1. You pick the **region your journey starts in** (your home region), where only its weakest species can spawn.
 2. Each **tier** of that region is unlocked by its requirements, typically beating the next gym leader. Earning the advancement unlocks the tier immediately and tells you in chat how many species it added.
-3. When you earn the region's **completion advancement** (e.g. the Champion), the region is complete and the **next region opens** at its first tier. Completed regions stay fully open.
+3. When you earn the region's **completion advancement** (e.g. the Champion), the region is complete. Completed regions stay fully open.
+4. You then **choose your next region** from the leagues you haven't visited yet, and your journey continues there from its first tier. See [Moving on to your next region](#moving-on-to-your-next-region).
+
+Regions come in two kinds:
+
+- **League regions** have a trainer `series` (Kanto and Sinnoh in the built-in data). They're the stops on your journey: one opens when you start in it or travel to it.
+- **Other regions** (Johto, Hoenn, … in the built-in data) only add species. They open in unlock order, the first one once your home region is complete and each later one once the one before it is complete. You can also open one from the start as your [extra starting region](#picking-a-second-starting-region).
 
 Species from regions you haven't reached, and species in no region at all, can't spawn (the second case follows `blockUnknownSpecies`). This only affects wild spawns: trades, eggs and evolutions aren't restricted.
 
-Progress isn't stored by UCP. It's worked out from your advancements (and Pokédex, if a tier asks for it) each time it changes, so a trainer mod resetting its own series progress never re-locks a region.
+Progress is worked out from your advancements (and Pokédex, if a tier asks for it) each time it changes, so a trainer mod resetting its own series progress never re-locks a region. UCP only stores the regions you picked.
 
 ### Differences from the tier ladder
 
-- **Wild levels and weights** work exactly as in [sections 3](#weight-scaling-whos-favored-within-a-rarity) and [4](#4-wild-pokémon-levels), but each species is compared with your progress **in its own region**, using that region's tier caps.
+- **Wild levels and weights** work exactly as in [sections 3](#weight-scaling-whos-favored-within-a-rarity) and [4](#4-wild-pokémon-levels), but each species is compared with your progress **in its own region**, using that region's tier caps. See [Wild Pokémon in a new region](#wild-pokémon-in-a-new-region).
 - **UCP's level cap is off.** Region mode is meant to be paired with a trainer mod that has its own cap, such as Radical Cobblemon Trainers.
 - **Trainer levels and Pokédex auto-levelling aren't used.**
 
@@ -308,11 +315,11 @@ regions/kanto/tier_2.json
 
 | Field | Required | Meaning |
 |---|---|---|
-| `order` | No (default 0) | Unlock order. The lowest order is open from the start; each later region opens when the one before it is complete. |
+| `order` | No (default 0) | Unlock order. Before a player has a journey (or when no region has a `series`), the lowest order is open from the start and each later region opens when the one before it is complete. With a journey, it orders the regions without a `series`, and the Trainer Card's lists. |
 | `title` | No | Name shown in chat and `/trainerlevel get`. Defaults to the folder name. |
 | `completedBy` | No | Advancement that completes the region. Without it, the region is complete once its last tier is unlocked. |
-| `startChoice` | No (default false) | Lets players pick this region as their extra starting region (see below). Ignored on the first region, which is always open. |
-| `series` | No | The Radical Cobblemon Trainers series for this region's trainers, e.g. `"kanto"`. A region with a series can be picked as a player's **starting region**: where their journey begins (see below). |
+| `startChoice` | No (default false) | Lets players pick this region as their extra starting region (see below). Ignored on the first region, which is always open, and on regions with a `series`. |
+| `series` | No | The Radical Cobblemon Trainers series for this region's trainers, e.g. `"kanto"`. A region with a series is a **league region**: it can be picked as where a player's journey starts, or where it goes next (see below). |
 
 ### Choosing where your journey starts
 
@@ -322,6 +329,35 @@ The first time a player opens their [Trainer Card](#trainer-card), it asks **whi
 - puts the player into its Radical Cobblemon Trainers series, so its leaders will battle them (if they're already in that series, nothing is reset).
 
 Until a player has picked, gyms ask them to open their card first. If no region has a `series`, there's nothing to pick and the first region is open from the start, as before.
+
+### Moving on to your next region
+
+When every region on your journey is complete and there's a league region you haven't been to, your journey moves on: chat tells you to choose, and the next time you open your [Trainer Card](#trainer-card) it asks **where your journey goes next**, with each region's trainers, species and first leader. **Not now** shows the card first; it asks again next time. The same pick is also a command:
+
+```
+/trainerlevel region next <region>
+```
+
+Picking one (after confirming, since it's permanent):
+
+- opens that region at its first tier, and its gyms summon its leaders from then on;
+- puts you into its Radical Cobblemon Trainers series. RCT gives each series its own level cap, so your cap **starts over** with the new region's first leader (15 in the built-in leagues), and RCT's trainers won't battle you while a party Pokémon is above it (unless the server sets RCT's `allowOverLeveling`). Your old team is still yours, but a new region means training a new one, much like a new game.
+
+Everything you've already opened stays open. Until you pick, gyms tell you to open your card. When you've completed every league region, your journey is complete.
+
+### Wild Pokémon in a new region
+
+Each species is compared with your progress in **its own region** (sections [3](#weight-scaling-whos-favored-within-a-rarity) and [4](#4-wild-pokémon-levels)), so a new region starts low while the regions you've finished stay strong. Right after a Kanto Champion travels to Sinnoh, with the built-in data and default settings:
+
+| Wild Pokémon | Its tier cap | Your cap in its region | Level range (typical) | Weight |
+|---|---|---|---|---|
+| Sinnoh tier 1 (Bidoof, Starly, …) | 15 | 15 (Sinnoh tier 1) | 6–16 (11) | × 2.0 |
+| Sinnoh tier 2 and up | | | can't spawn yet | |
+| Kanto tier 1 (Pidgey, Rattata, …) | 15 | 100 (Kanto complete) | 16–39 (27) | × 0.2 |
+| Kanto tier 10 (Dragonite, Snorlax, …) | 100 | 100 | 45–100 (75) | × 2.0 |
+| Johto to Paldea | | complete with Kanto | as for Kanto | |
+
+Each Sinnoh badge then opens Sinnoh's next tier and raises your Sinnoh cap, which pushes Sinnoh's lower tiers up with it. Cobblemon still decides where each species spawns (biome, time, rarity), so Sinnoh and Kanto Pokémon mix in the same world. Wild levels use the nearest player within 128 blocks, so they follow whoever is closest.
 
 ### Picking a second starting region
 
@@ -333,21 +369,24 @@ If any region has `"startChoice": true`, each player can open **one** of them fr
 
 Players are reminded on joining and in `/trainerlevel get` until they pick. The choice is permanent; an operator can clear it with `/trainerlevel region reset <player>`.
 
-Picking a region only opens it. Its tiers still unlock through their own requirements, so a chosen region grows with whatever its tier files ask for. The built-in Kanto league ties the other regions to the same Kanto badges as Kanto's own tiers.
+Picking a region only opens it. Its tiers still unlock through their own requirements, so a chosen region grows with whatever its tier files ask for. The built-in data ties the other regions to the badges of whichever league you're in: each tier needs the matching Kanto badge **or** the matching Sinnoh badge.
 
 `tier_N.json` files use the same format as [custom tiers](#7-custom-tiers-datapacks): `levelCap`, `species`, and `requirements` (usually `advancements`), plus an optional `trainers` list for [gyms](#gyms). Tiers must be numbered 1, 2, 3… with no gaps, and tier 1 normally has no requirements. A species belongs to the first region that lists it; its forms come with it.
 
 `scripts/generate-region-tiers.ps1` builds the tier files from a Cobblemon regional Pokédex, splitting its species into equal-sized tiers by Base Stat Total. See the script for usage.
 
-### The built-in Kanto league
+### The built-in leagues
 
-When Radical Cobblemon Trainers is installed, UCP turns on a built-in datapack, **UCP Kanto League**, in every world. It contains:
+When Radical Cobblemon Trainers is installed, UCP turns on a built-in datapack, **UCP Kanto & Sinnoh Leagues**, in every world. It contains:
 
 - a 10-tier **Kanto**, with each tier after the first unlocked by one of its gym leaders, and the Champion completing it;
 - Kanto's RCT trainers: the 8 leaders, the Elite Four (either Agatha counts) and the Champion, with FireRed/LeafGreen-style teams, in a `kanto` series, and their natural spawning turned off so they only appear in gyms;
-- every other region (Johto to Paldea) as an optional second region, unlocking with the same Kanto badges.
+- a 10-tier **Sinnoh**, built the same way from RCT's own Brilliant Diamond/Shining Pearl trainers: Roark, Gardenia, Maylene, Crasher Wake, Fantina, Byron, Candice and Volkner, then Aaron, Bertha, Flint, Lucian and Champion Cynthia, in a `sinnoh` series. Their teams are RCT's (aces from level 14 to 66), and each one requires the one before it, so RCT's level cap follows the league (15 at the start, then each next trainer's level). Each tier's cap is the level of the next trainer's strongest Pokémon, as in Kanto;
+- every other region (Johto, Hoenn, Unova, Kalos, Alola, Galar, Paldea) as an optional extra region, unlocking with either league's badges.
 
-It's an ordinary datapack, so it shows in `/datapack list` as `ultimate-cobblemon-progression:kanto_league`. Turn it off with `/datapack disable "ultimate-cobblemon-progression:kanto_league"`, or untick it when creating a world, to use your own region data or the trainer-level ladder instead. Your own datapacks load after it, so they can override any of its files. Without RCT installed it isn't offered at all.
+Players can start in either league and travel to the other once they're Champion. Taking Sinnoh's trainers into the `sinnoh` series removes them from RCT's own `bdsp` series in that world, the same way Kanto's trainers leave `radicalred`.
+
+It's an ordinary datapack, so it shows in `/datapack list` as `ultimate-cobblemon-progression:kanto_league` (the id is kept from before Sinnoh was added). Turn it off with `/datapack disable "ultimate-cobblemon-progression:kanto_league"`, or untick it when creating a world, to use your own region data or the trainer-level ladder instead. Your own datapacks load after it, so they can override any of its files. Without RCT installed it isn't offered at all.
 
 For good-looking leaders, players can add the [RCT Trainer Textures Plus](https://modrinth.com/resourcepack/rct-trainer-textures-plus) resource pack, which replaces RCT's skins for every trainer in the league.
 
@@ -359,7 +398,7 @@ Gyms give each step of a region a place to go. A gym is a building with a **Gym 
 
 **The buildings** are the 8 Kanto gyms from [Radical Gyms & Structures](https://modrinth.com/datapack/radical-gyms-cobblemon) by JayOnline (MIT), picked at random for each gym village. Their themes (Pewter, Cerulean, …) are just looks: any of them summons whichever leader you need. The gyms use [CobbleFurnies](https://modrinth.com/mod/cobblefurnies) furniture, so village gyms only generate when CobbleFurnies is installed. Don't install RGS alongside UCP's gyms, or its own copies will also generate outside villages.
 
-**Who gets summoned.** UCP looks at your regions in order and takes the first open, unfinished one whose next tier lists `trainers`. It summons the first trainer in that list you haven't beaten:
+**Who gets summoned.** UCP looks at your journey's current region first, then your other regions in order, and takes the first open, unfinished one whose next tier lists `trainers`. It summons the first trainer in that list you haven't beaten:
 
 ```json
 {
@@ -387,9 +426,9 @@ Each entry is a Radical Cobblemon Trainers trainer id. A nested list means "any 
 
 ## Trainer Card
 
-Every player gets a **Trainer Card** the first time they join (turn this off with `giveTrainerCard`). Using it opens a Pokédex-style screen, worked out fresh by the server each time. The first time, it asks where your journey starts ([see above](#choosing-where-your-journey-starts)); after that it has four tabs:
+Every player gets a **Trainer Card** the first time they join (turn this off with `giveTrainerCard`). Using it opens a Pokédex-style screen, worked out fresh by the server each time. The first time, it asks where your journey starts ([see above](#choosing-where-your-journey-starts)), and each time you complete a region it asks where your journey goes next ([see above](#moving-on-to-your-next-region)); otherwise it has four tabs:
 
-- **Profile:** your current region and tier, your level cap (Radical Cobblemon Trainers' cap when it's installed, otherwise the tier's), trainers beaten, Pokédex counts, and your next challenge.
+- **Profile:** your current region (the one your journey is in) and tier, your level cap (Radical Cobblemon Trainers' cap when it's installed, otherwise the tier's), trainers beaten, Pokédex counts, and your next challenge.
 - **Road:** every trainer the region's tiers list, in order, marked ✔ beaten, ▶ next or • later, with each one's tier and level cap.
 - **Regions:** where you stand in every region: complete, a progress bar for the tier you're on, or locked. Until you've picked your [starting region](#picking-a-second-starting-region), this tab also lets you pick it.
 - **Wild Pokémon:** every species that can currently spawn for you, per open region, with Cobblemon's caught/seen marker from your Pokédex and how many the next tier adds. Hover a species for its number and types.

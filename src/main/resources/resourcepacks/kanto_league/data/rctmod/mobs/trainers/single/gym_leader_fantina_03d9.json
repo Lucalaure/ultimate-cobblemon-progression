@@ -1,0 +1,13 @@
+{
+  "type": "leader",
+  "series": ["sinnoh"],
+  "optional": false,
+  "requiredDefeats": [["gym_leader_wake_03d7"]],
+  "maxTrainerDefeats": 1,
+  "maxTrainerWins": -1,
+  "battleCooldownTicks": 240,
+  "signatureItem": "minecraft:ender_eye",
+  "spawnWeightFactor": 0,
+  "biomeTagWhitelist": ["is_spooky", "is_sparse_vegetation"],
+  "biomeTagBlacklist": ["is_void", "is_nether"]
+}

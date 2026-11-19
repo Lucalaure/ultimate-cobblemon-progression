@@ -1,7 +1,8 @@
 {
   "levelCap": 100,
+  "trainers": ["elite_four_aaron_039f", "elite_four_bertha_03a0", "elite_four_flint_03a1", "elite_four_lucian_03a2", "champion_cynthia_03a5"],
   "requirements": {
-    "advancements": ["rctmod:trainers/defeat_champion_terry"]
+    "advancements": ["rctmod:trainers/defeat_champion_cynthia_1"]
   },
   "species": [
     "cobblemon:arceus",

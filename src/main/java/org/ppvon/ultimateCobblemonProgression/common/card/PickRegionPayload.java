@@ -10,18 +10,21 @@ import static org.ppvon.ultimateCobblemonProgression.UltimateCobblemonProgressio
 /**
  * Client to server: the player picked a region on the Trainer Card.
  *
- * @param home true for the region their journey starts in, false for the optional second region
+ * @param kind {@link #HOME} for the region their journey starts in, {@link #NEXT} for the region it continues in,
+ *             {@link #EXTRA} for the optional second region
  */
-public record PickRegionPayload(String regionId, boolean home) implements CustomPacketPayload {
+public record PickRegionPayload(String regionId, int kind) implements CustomPacketPayload {
+    public static final int EXTRA = 0, HOME = 1, NEXT = 2;
+
     public static final Type<PickRegionPayload> TYPE =
             new Type<>(ResourceLocation.fromNamespaceAndPath(MOD_ID, "pick_region"));
 
     public static final StreamCodec<FriendlyByteBuf, PickRegionPayload> CODEC = StreamCodec.of(
             (buf, p) -> {
                 buf.writeUtf(p.regionId, 64);
-                buf.writeBoolean(p.home);
+                buf.writeVarInt(p.kind);
             },
-            buf -> new PickRegionPayload(buf.readUtf(64), buf.readBoolean()));
+            buf -> new PickRegionPayload(buf.readUtf(64), buf.readVarInt()));
 
     @Override
     public Type<? extends CustomPacketPayload> type() {
