@@ -388,7 +388,13 @@ Picking a region only opens it. Its tiers still unlock through their own require
 
 `tier_N.json` files use the same format as [custom tiers](#7-custom-tiers-datapacks): `levelCap`, `species`, and `requirements` (usually `advancements`), plus an optional `trainers` list for [gyms](#gyms). Tiers must be numbered 1, 2, 3… with no gaps, and tier 1 normally has no requirements. A species belongs to the first region that lists it; its forms come with it.
 
-`scripts/generate-region-tiers.ps1` builds the tier files from a Cobblemon regional Pokédex, splitting its species into equal-sized tiers by Base Stat Total. See the script for usage. It writes one advancement per tier and no `trainers` lists, so "any one of" requirements (like the built-in extra regions' Kanto-or-Sinnoh badges) and gym leaders have to be added to the files afterwards.
+`scripts/generate-region-tiers.py` (Python 3) builds the tier files from Cobblemon's regional Pokédexes, splitting the species into equal-sized tiers by Base Stat Total, weakest first. It keeps each tier's `trainers` list, and its level cap and requirements unless you pass new ones, so re-sorting a region's species is one command:
+
+```
+python scripts/generate-region-tiers.py --dex cobblemon:johto --out-dir <path to regions/johto>
+```
+
+For a new region, pass `--level-caps` (one per tier) and `--advancements` (one entry per tier, separated by `;`, empty for no requirement, with `|` between alternatives). The built-in regions came from these dexes: each region's own (e.g. `cobblemon:kanto`), and `cobblemon:sinnoh,cobblemon:hisui` for Sinnoh. See the top of the script for every option.
 
 ### The built-in leagues
 
