@@ -39,6 +39,11 @@ final class ConfigManager {
                         save(file, defaults);
                         return defaults;
                     }
+                    // Write it back so options added in newer versions show up in the file. Best effort:
+                    // a file that can't be written must not count as broken and be reset.
+                    try {
+                        save(file, val);
+                    } catch (RuntimeException ignored) {}
                     return val;
                 }
             } else {

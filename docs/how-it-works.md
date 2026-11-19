@@ -192,6 +192,10 @@ On a dedicated server, edit the **server's** files and restart it; the in-game s
 | `weightCurrentTierBuff` | `2.0` | Multiplier for Pokémon in your own tier. |
 | `weightDecayPerTier` | `0.20` | How much the multiplier drops per tier of difference. |
 | `weightMinFactor` | `0.15` | The multiplier never goes below this. |
+| `doRegionPools` | `true` | Region mode: while you work through a region, spawn from the three [spawn pools](#wild-pokémon-in-a-new-region-spawn-pools). Off: every species uses its own region's levels and weights. |
+| `regionPoolWeight` | `1.0` | Weight of the region in progress. |
+| `pastInCapPoolWeight` | `0.5` | Weight of finished regions' species within your cap, at the current region's levels. |
+| `pastFullPoolWeight` | `0.15` | Weight of finished regions' species at their full levels. |
 
 ### `ucp-common.json`
 
@@ -288,7 +292,7 @@ Progress is worked out from your advancements (and Pokédex, if a tier asks for 
 
 ### Differences from the tier ladder
 
-- **Wild levels and weights** work exactly as in [sections 3](#weight-scaling-whos-favored-within-a-rarity) and [4](#4-wild-pokémon-levels), but each species is compared with your progress **in its own region**, using that region's tier caps. See [Wild Pokémon in a new region](#wild-pokémon-in-a-new-region).
+- **Wild levels and weights** work exactly as in [sections 3](#weight-scaling-whos-favored-within-a-rarity) and [4](#4-wild-pokémon-levels), but each species is compared with your progress **in its own region**, using that region's tier caps. See [Wild Pokémon in a new region](#wild-pokémon-in-a-new-region-spawn-pools).
 - **UCP's level cap is off.** Region mode is meant to be paired with a trainer mod that has its own cap, such as Radical Cobblemon Trainers.
 - **Trainer levels and Pokédex auto-levelling aren't used.**
 
@@ -345,17 +349,28 @@ Picking one (after confirming, since it's permanent):
 
 Only the region you pick opens. Everything you'd already opened stays open. Until you pick, gyms tell you to open your card. When you've completed every league region, your journey is complete.
 
-### Wild Pokémon in a new region
+### Wild Pokémon in a new region: spawn pools
 
-Each species is compared with your progress in **its own region** (sections [3](#weight-scaling-whos-favored-within-a-rarity) and [4](#4-wild-pokémon-levels)), so a new region starts low while the regions you've finished stay strong. Right after a Kanto Champion travels to Sinnoh, with the built-in data and default settings:
+Unlocking a new region only ever adds Pokémon: the regions you've finished stay fully open. While you work through a region, wild Pokémon come from three **spawn pools**:
 
-| Wild Pokémon | Its tier cap | Your cap in its region | Level range (typical) | Weight |
-|---|---|---|---|---|
-| Sinnoh tier 1 (Bidoof, Starly, …) | 15 | 15 (Sinnoh tier 1) | 6–16 (11) | × 2.0 |
-| Sinnoh tier 2 and up | | | can't spawn yet | |
-| Kanto tier 1 (Pidgey, Rattata, …) | 15 | 100 (Kanto complete) | 16–39 (27) | × 0.2 |
-| Kanto tier 10 (Dragonite, Snorlax, …) | 100 | 100 | 45–100 (75) | × 2.0 |
-| Johto to Paldea | | | can't spawn (not on your journey) | |
+1. **The new region**: its species up to your tier there, at its levels ([sections 3](#weight-scaling-whos-favored-within-a-rarity) and [4](#4-wild-pokémon-levels), measured against your progress in that region). The most common pool. Your [extra starting region](#picking-a-second-starting-region), if it isn't complete, counts as this pool too.
+2. **Finished regions, within your cap**: species of completed regions whose tier is at or below your tier in the new region, at the **new region's** levels. A Kanto tier-2 Pokémon spawns at Sinnoh tier-2 levels, so you can catch Pokémon for your new team from every region you've finished.
+3. **Finished regions, at full strength**: every species of completed regions, at their own fully unlocked levels. The rarest pool.
+
+A species of a finished region within your cap is in pools 2 and 3: its weight is the sum of both, and each one that spawns gets its level from one of them, picked in proportion to their weights. Each pool's weight multiplies the usual tier weighting; set them with `regionPoolWeight`, `pastInCapPoolWeight` and `pastFullPoolWeight` in [`ucp-spawn.json`](#ucp-spawnjson). Between regions (after a Champion, before you pick) and once every league is complete, there are no pools: everything spawns at its own region's levels and weights.
+
+Right after a Kanto Champion travels to Sinnoh, with the built-in data and default settings:
+
+| Wild Pokémon | Pools | Level range (typical) | Weight |
+|---|---|---|---|
+| Sinnoh tier 1 (Starly, Shinx, …) | new region | 6–16 (11) | × 2.0 |
+| Sinnoh tier 2 and up | | can't spawn yet | |
+| Kanto tier 1 (Pidgey, Rattata, …) | within cap (97%) / full (3%) | 6–16 (11) / 16–39 (27) | × 1.03 |
+| Kanto tier 2 (Geodude, …) | full only, until Sinnoh tier 2 | 18–45 (31) | × 0.06 |
+| Kanto tier 10 (Dragonite, Snorlax, …) | full only, until Sinnoh tier 10 | 45–100 (75) | × 0.3 |
+| Johto to Paldea | | can't spawn (not on your journey) | |
+
+After Roark (Sinnoh tier 2, cap 22), Sinnoh's tier 1 rises to 7–18 and its tier 2 opens; Kanto's tier 1 rises with it (7–18) and Kanto's tier 2 joins the within-cap pool at 9–24. Weights only compare species that can spawn at the same spot and rarity, so how often you meet each pool also depends on how many of its species live in that biome. Cobblemon still decides where each species spawns (biome, time, rarity), so Pokémon from every open region mix in the same world. Wild levels use the nearest player within 128 blocks.
 
 Each Sinnoh badge then opens Sinnoh's next tier and raises your Sinnoh cap, which pushes Sinnoh's lower tiers up with it. Cobblemon still decides where each species spawns (biome, time, rarity), so Sinnoh and Kanto Pokémon mix in the same world. Wild levels use the nearest player within 128 blocks, so they follow whoever is closest.
 

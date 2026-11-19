@@ -15,4 +15,13 @@ public class SpawnConfig {
     public double weightMinFactor = 0.15;
     public double weightCurrentTierBuff = 2.0;
 
+    // Region mode: spawn pools while a player works through a region (see TierStanding).
+    public boolean doRegionPools = true;
+    /** Species of the region in progress. */
+    public double regionPoolWeight = 1.0;
+    /** Species of completed regions, at the current region's levels (tier within the player's tier there). */
+    public double pastInCapPoolWeight = 0.5;
+    /** Species of completed regions, at their own fully unlocked levels. */
+    public double pastFullPoolWeight = 0.15;
+
 }

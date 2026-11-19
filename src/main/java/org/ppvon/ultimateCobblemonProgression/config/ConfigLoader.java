@@ -23,6 +23,11 @@ public final class ConfigLoader {
     public static Supplier<Double> WEIGHT_CURRENT_TIER_BUFF;
     public static Supplier<Double> WEIGHT_MIN_FACTOR;
 
+    public static Supplier<Boolean> DO_REGION_POOLS;
+    public static Supplier<Double> REGION_POOL_WEIGHT;
+    public static Supplier<Double> PAST_IN_CAP_POOL_WEIGHT;
+    public static Supplier<Double> PAST_FULL_POOL_WEIGHT;
+
     // ucp-common.json
     public static Supplier<Boolean> DO_LEVEL_CAP;
     public static Supplier<Boolean> DO_DEX_PROGRESSION;
@@ -63,6 +68,11 @@ public final class ConfigLoader {
         WEIGHT_DECAY_PER_TIER = () -> SPAWN.weightDecayPerTier;
         WEIGHT_MIN_FACTOR = () -> SPAWN.weightMinFactor;
         WEIGHT_CURRENT_TIER_BUFF = () -> SPAWN.weightCurrentTierBuff;
+
+        DO_REGION_POOLS = () -> SPAWN.doRegionPools;
+        REGION_POOL_WEIGHT = () -> Math.max(0, SPAWN.regionPoolWeight);
+        PAST_IN_CAP_POOL_WEIGHT = () -> Math.max(0, SPAWN.pastInCapPoolWeight);
+        PAST_FULL_POOL_WEIGHT = () -> Math.max(0, SPAWN.pastFullPoolWeight);
 
         DO_LEVEL_CAP = () -> COMMON.doLevelCap;
         DO_DEX_PROGRESSION = () -> COMMON.doDexProgression;

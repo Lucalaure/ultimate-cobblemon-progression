@@ -71,6 +71,13 @@ import java.util.function.Supplier;
  *
  *    This means lower tier pokemon will still stay lower level than higher tier
  *    pokemon, but will not be level 5-16 forever.
+ *
+ *  Spawn pools (region mode):
+ *   While a player works through a region, species of completed regions spawn from two
+ *   pools: at the current region's levels (when their tier is within the player's tier
+ *   there) and at their own full levels. Each pool has its own weight multiplier; a
+ *   species' weight is the sum over its pools, and each spawn's level comes from one
+ *   pool, picked in proportion to its share of that weight (see {@link TierStanding}).
  */
 public final class TrainerLevelInfluence implements SpawningInfluence {
     private static final Supplier<Boolean> BLOCK_UNKNOWN_SPECIES = ConfigLoader.BLOCK_UNKNOWN_SPECIES;
@@ -194,21 +201,58 @@ public final class TrainerLevelInfluence implements SpawningInfluence {
     public float affectWeight(@NotNull SpawnDetail spawnDetail,
                               @NotNull SpawnablePosition ctx,
                               float currentWeight) {
-        if (!ConfigLoader.DO_WEIGHT_SCALING.get() || !TierStanding.hasTierData()) {
+        // Spawn pools weigh species even when tier weight scaling is off.
+        boolean weightScaling = ConfigLoader.DO_WEIGHT_SCALING.get();
+        if (!(weightScaling || ConfigLoader.DO_REGION_POOLS.get()) || !TierStanding.hasTierData()) {
             return currentWeight;
         }
         Species sp = speciesOf(spawnDetail);
         if (sp == null) return currentWeight;
 
         if (!TierStanding.isKnown(sp)) {
-            return BLOCK_UNKNOWN_SPECIES.get() ? 0.0f : currentWeight;
+            return weightScaling && BLOCK_UNKNOWN_SPECIES.get() ? 0.0f : currentWeight;
         }
 
         ServerPlayer player = resolvePlayer(ctx);
         if (player == null) return currentWeight;
 
-        double factor = weightFactor(TierStanding.of(player, sp).tierGap());
-        return (float)(currentWeight * factor);
+        return (float)(currentWeight * weightMultiplier(TierStanding.of(player, sp)));
+    }
+
+    /** How much one pool adds to a species' spawn weight: its pool weight times the tier weight scaling. */
+    public static double poolWeight(TierStanding.Pool pool) {
+        double tierFactor = ConfigLoader.DO_WEIGHT_SCALING.get() ? weightFactor(pool.tierGap()) : 1.0;
+        return pool.weight() * tierFactor;
+    }
+
+    /** A species' spawn weight multiplier: the sum over every pool it spawns from. */
+    public static double weightMultiplier(TierStanding standing) {
+        double total = 0;
+        for (TierStanding.Pool pool : standing.pools()) total += poolWeight(pool);
+        return total;
+    }
+
+    /** Picks the pool a spawn's level comes from, in proportion to each pool's share of the species' weight. */
+    public static TierStanding.Pool pickPool(TierStanding standing, RandomSource rand) {
+        var pools = standing.pools();
+        if (pools.size() == 1) return pools.get(0);
+        double roll = rand.nextDouble() * weightMultiplier(standing);
+        for (TierStanding.Pool pool : pools) {
+            roll -= poolWeight(pool);
+            if (roll < 0) return pool;
+        }
+        return pools.get(pools.size() - 1);
+    }
+
+    /** The lowest, most likely and highest wild level for a pool: {min, mode, max}. */
+    public static int[] levelRange(TierStanding.Pool pool) {
+        int capDelta = Math.max(0, pool.playerCap() - pool.speciesCap());
+        int buffedCap = (int)Math.round(pool.speciesCap() + (capDelta * TIER_CAP_SCALING.get()));
+
+        int min = Math.max(1, (int)Math.floor(MIN_LEVEL_SCALING.get() * buffedCap));
+        int mode = Math.max(1, (int)Math.round(AVG_LEVEL_SCALING.get() * buffedCap));
+        int max = Math.min(100, Math.max(1, (int)Math.floor(MAX_LEVEL_SCALING.get() * buffedCap)));
+        return new int[]{min, mode, max};
     }
 
     @Override
@@ -231,26 +275,8 @@ public final class TrainerLevelInfluence implements SpawningInfluence {
         if (!TierStanding.isKnown(sp)) return;
 
         TierStanding standing = TierStanding.of(player, sp);
-        int speciesTierCap = standing.speciesCap();
-        int playerCap = standing.playerCap();
-
-        int capDelta = Math.max(0, playerCap - speciesTierCap);
-        double capScaling = TIER_CAP_SCALING.get();
-        int buffedCap = (int)Math.round(speciesTierCap + (capDelta*capScaling));
-
-        double minScaling = MIN_LEVEL_SCALING.get();
-        double avgScaling = AVG_LEVEL_SCALING.get();
-        double maxScaling = MAX_LEVEL_SCALING.get();
-
-        int min = Math.max(1, (int)Math.floor(minScaling * buffedCap));
-        int mode = Math.max(1, (int)Math.round(avgScaling * buffedCap));
-        int max = Math.max(1, (int)Math.floor(maxScaling * buffedCap));
-
-        if (max > 100) {
-            max = 100;
-        }
-
-        int newLevel = sampleTriangularInt(min, mode, max, pe.getRandom());
+        int[] range = levelRange(pickPool(standing, pe.getRandom()));
+        int newLevel = sampleTriangularInt(range[0], range[1], range[2], pe.getRandom());
 
         int before = poke.getLevel();
         if (before != newLevel) {
