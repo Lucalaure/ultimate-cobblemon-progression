@@ -24,8 +24,9 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * The {@code catchWholeTier} difficulty option: in a league region, reaching tier N+1 also needs every obtainable
- * Pokémon of tier N caught. "Obtainable" means it can spawn in the wild (Cobblemon's world spawn pool, so datapacks
+ * The {@code catchWholeTier} difficulty option: in every region, reaching tier N+1 also needs every obtainable
+ * Pokémon of tier N caught. In a league this holds the next gym leader back (see GymLeaderPicker); the extra starting
+ * region, which has no leaders, simply waits at its tier until it's caught, without ever holding the league back. "Obtainable" means it can spawn in the wild (Cobblemon's world spawn pool, so datapacks
  * that add spawns count) or evolves from something that can; anything else, like most legendaries, is skipped so
  * no one gets stuck. Catching, evolving and trading all register a Pokémon as caught in the Pokédex.
  */
@@ -35,9 +36,9 @@ public final class TierCatches {
 
     private TierCatches() {}
 
-    /** Whether the option applies to this region: it's on, and the region is a league (has a trainer series). */
+    /** Whether the option applies to this region: it's on (it covers every region). */
     public static boolean applies(RegionDef region) {
-        return ConfigLoader.CATCH_WHOLE_TIER.get() && region.isLeague();
+        return ConfigLoader.CATCH_WHOLE_TIER.get();
     }
 
     /** Forgets the obtainable species, e.g. after a datapack reload changed the spawn pools. */

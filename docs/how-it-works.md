@@ -206,7 +206,7 @@ On a dedicated server, edit the **server's** files and restart it; the in-game s
 | `giveTrainerCard` | `true` | Give every player a [Trainer Card](#trainer-card) on their first join. |
 | `gymVillageChance` | `0.3` | Share of newly generated villages (0 to 0.95) whose centre is a [gym](#gyms). `0` turns village gyms off. Takes effect the next time a world starts. |
 | `gymTeamLimit` | `false` | Difficulty option: you can bring no more Pokémon to a [gym](#gyms) battle than the leader has. |
-| `catchWholeTier` | `false` | Difficulty option (region mode): to reach a league's next tier, you also have to catch every obtainable Pokémon of your current tier, and gyms won't summon the next leader until you have. See [Catch every Pokémon](#catch-every-pokémon-optional). |
+| `catchWholeTier` | `false` | Difficulty option (region mode): to reach a region's next tier, you also have to catch every obtainable Pokémon of your current tier there. Gyms won't summon a league's next leader until you have, and your extra starting region waits at its tier until it's caught. See [Catch every Pokémon](#catch-every-pokémon-optional). |
 
 ---
 
@@ -361,8 +361,8 @@ With `catchWholeTier` on in `ucp-common.json` (or **Catch Every Pokémon to Adva
 - **What counts as caught:** the Pokédex's caught mark. Catching, evolving and trading all count, and so do Pokémon you caught before turning the option on.
 - **Only obtainable Pokémon count**: ones that spawn in the wild (including spawns added by datapacks) or evolve from one that does. Pokémon you can't get, like most legendaries, are skipped, so no tier can get stuck. In the built-in data that skips Rotom (Sinnoh tier 4), Phione (tier 5), Azelf, Mesprit, Cresselia and Enamorus (tier 9), and the legendaries of both leagues' tier 10.
 - **The last tier isn't needed.** Becoming Champion only takes beating the Champion, since there's no tier after it.
-- It applies to league regions only. Extra regions keep following your badges.
-- Your progress shows on the Trainer Card ("First catch every tier 1 Pokémon. 3 to go (16 in all): …"), in `/trainerlevel get` ("Next: catch Pidgey, Rattata and Zubat"), and on the card's Wild Pokémon tab, which marks what you've caught. Chat tells you when a tier is fully caught.
+- **Your extra starting region follows the same rule, without holding the league back.** Its next tier opens once you have the matching badge *and* have caught all of its current tier. Gyms never wait on it: you can keep beating leaders, and the extra region simply stays behind until you catch its Pokémon (then catches up at once if you already have the badges). The Trainer Card's Regions tab shows how many it still needs ("Tier 1 / 10 · 10 to catch").
+- Your progress shows on the Trainer Card ("First catch every tier 1 Pokémon. 3 to go (16 in all): …"), in `/trainerlevel get` ("Next: catch Pidgey, Rattata and Zubat"), and on the card's Wild Pokémon tab, which marks what you've caught. Chat tells you when a tier is fully caught, in your league or your extra region.
 
 Turning it on in a world that's already underway can lock tiers you'd reached until you catch what's missing, since progress is always worked out from your Pokédex and badges.
 

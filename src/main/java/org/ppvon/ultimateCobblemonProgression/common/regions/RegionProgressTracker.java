@@ -70,8 +70,11 @@ public final class RegionProgressTracker {
 
             if (now.isTierCaught(r) && !before.isTierCaught(r) && now.step(r) == before.step(r)
                     && now.step(r) < region.maxTier()) {
+                String next = region.isLeague()
+                        ? "Your next gym leader is ready for you."
+                        : "Its next tier opens with your next badge.";
                 player.displayClientMessage(regionTag(region).append(Component.literal(
-                        "You've caught every tier " + now.step(r) + " Pokémon! Your next gym leader is ready for you.")
+                        "You've caught every tier " + now.step(r) + " Pokémon! " + next)
                         .withStyle(ChatFormatting.GREEN)), false);
             }
 

@@ -536,7 +536,7 @@ public class TrainerCardScreen extends Screen {
                     state = "Complete";
                     stateColour = GOLD;
                 } else {
-                    state = "Tier " + r.tier() + " / " + r.maxTier();
+                    state = "Tier " + r.tier() + " / " + r.maxTier() + (r.toCatch() > 0 ? "  ·  " + r.toCatch() + " to catch" : "");
                     stateColour = INK;
                 }
                 int stateW = font.width(state);

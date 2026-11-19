@@ -48,8 +48,10 @@ public record TrainerCardData(
      *
      * @param startPick  the region the player picked to explore from the start
      * @param choosable  the player can still pick this region as their starting region
+     * @param toCatch    with catchWholeTier: Pokémon of the current tier still to catch before the next tier opens
      */
-    public record RegionEntry(String id, String title, int state, int tier, int maxTier, boolean startPick, boolean choosable) {}
+    public record RegionEntry(String id, String title, int state, int tier, int maxTier, boolean startPick, boolean choosable,
+                              int toCatch) {}
 
     /** The species allowed to spawn from one region, and how many the next tier adds. */
     public record WildGroup(String title, int upcoming, List<WildSpecies> species) {}
@@ -105,6 +107,7 @@ public record TrainerCardData(
             buf.writeVarInt(r.maxTier);
             buf.writeBoolean(r.startPick);
             buf.writeBoolean(r.choosable);
+            buf.writeVarInt(r.toCatch);
         }
         buf.writeVarInt(d.wild.size());
         for (WildGroup g : d.wild) {
@@ -147,7 +150,7 @@ public record TrainerCardData(
         List<RegionEntry> regions = new ArrayList<>();
         for (int i = buf.readVarInt(); i > 0; i--) {
             regions.add(new RegionEntry(buf.readUtf(), buf.readUtf(), buf.readVarInt(), buf.readVarInt(), buf.readVarInt(),
-                    buf.readBoolean(), buf.readBoolean()));
+                    buf.readBoolean(), buf.readBoolean(), buf.readVarInt()));
         }
         List<WildGroup> wild = new ArrayList<>();
         for (int i = buf.readVarInt(); i > 0; i--) {

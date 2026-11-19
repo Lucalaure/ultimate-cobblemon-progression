@@ -99,8 +99,10 @@ final class TrainerCardDataBuilder {
         for (int r = 0; r < regions.size(); r++) {
             RegionDef reg = regions.get(r);
             int state = !progress.isUnlocked(r) ? LOCKED : progress.isCompleted(r) ? COMPLETE : OPEN;
+            int toCatchHere = state == OPEN && progress.step(r) < reg.maxTier()
+                    ? TierCatches.missing(player, reg, progress.step(r)).size() : 0;
             regionEntries.add(new RegionEntry(reg.id, reg.title, state, progress.step(r), reg.maxTier(),
-                    reg.id.equals(startPick), choices.contains(reg)));
+                    reg.id.equals(startPick), choices.contains(reg), toCatchHere));
 
             if (state == LOCKED) continue;
             int regionIndex = r;
