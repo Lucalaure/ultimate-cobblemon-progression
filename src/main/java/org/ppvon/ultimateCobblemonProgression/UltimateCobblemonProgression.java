@@ -34,6 +34,7 @@ import org.ppvon.ultimateCobblemonProgression.common.regions.RegionDataLoader;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionProgressTracker;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionRegistry;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionSpecies;
+import org.ppvon.ultimateCobblemonProgression.common.regions.TierCatches;
 import org.ppvon.ultimateCobblemonProgression.common.advancements.DefeatTrainerTrigger;
 import org.ppvon.ultimateCobblemonProgression.common.gym.GymBlocks;
 import org.ppvon.ultimateCobblemonProgression.common.gym.GymTeamLimit;
@@ -205,12 +206,14 @@ public class UltimateCobblemonProgression implements ModInitializer {
         ServerLifecycleEvents.SERVER_STARTED.register(server -> {
             TierSpeciesApplier.applyFromRegistry();
             RegionSpecies.applyFromRegistry();
+            TierCatches.invalidate();
         });
 
         ServerLifecycleEvents.END_DATA_PACK_RELOAD.register((server, rm, success) -> {
             if (!success) return;
             TierSpeciesApplier.applyFromRegistry();
             RegionSpecies.applyFromRegistry();
+            TierCatches.invalidate();
             RegionProgressTracker.refreshAllSilently(server);
         });
 

@@ -68,6 +68,13 @@ public final class RegionProgressTracker {
                                 .withStyle(ChatFormatting.GREEN)), false);
             }
 
+            if (now.isTierCaught(r) && !before.isTierCaught(r) && now.step(r) == before.step(r)
+                    && now.step(r) < region.maxTier()) {
+                player.displayClientMessage(regionTag(region).append(Component.literal(
+                        "You've caught every tier " + now.step(r) + " Pokémon! Your next gym leader is ready for you.")
+                        .withStyle(ChatFormatting.GREEN)), false);
+            }
+
             if (now.isCompleted(r) && !before.isCompleted(r)) {
                 player.displayClientMessage(regionTag(region)
                         .append(Component.literal("Region complete!").withStyle(ChatFormatting.GOLD, ChatFormatting.BOLD)), false);

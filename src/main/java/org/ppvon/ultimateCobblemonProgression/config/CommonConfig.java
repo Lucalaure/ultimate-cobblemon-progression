@@ -7,6 +7,11 @@ public class CommonConfig {
     public double gymVillageChance = 0.3;
     /** Difficulty option: players may bring no more Pokémon to a gym battle than the gym leader has. */
     public boolean gymTeamLimit = false;
+    /**
+     * Difficulty option (region mode): to reach a league region's next tier, players must also have caught every
+     * obtainable Pokémon of their current tier. Gyms won't summon the next leader until they have.
+     */
+    public boolean catchWholeTier = false;
     /** Give every player a Trainer Card on their first join. */
     public boolean giveTrainerCard = true;
 }

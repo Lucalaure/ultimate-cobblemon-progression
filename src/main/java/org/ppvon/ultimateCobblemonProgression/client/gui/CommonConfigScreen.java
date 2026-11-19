@@ -11,7 +11,7 @@ public final class CommonConfigScreen extends BaseConfigScreen {
     private static final int MAX_GYM_PERCENT = 95;
     private static final int GYM_PERCENT_STEP = 5;
 
-    private Checkbox chkLevelCap, chkDex, chkTrainerCard, chkGymTeamLimit;
+    private Checkbox chkLevelCap, chkDex, chkTrainerCard, chkGymTeamLimit, chkCatchWholeTier;
     private GymChanceSlider sldGymChance;
 
     public CommonConfigScreen(BaseConfigScreen parent) {
@@ -42,6 +42,11 @@ public final class CommonConfigScreen extends BaseConfigScreen {
         addNote("Bring no more Pokémon to a gym battle than the leader has", x, y + rowH);
         y += rowH * 2;
 
+        chkCatchWholeTier = addRenderableWidget(Checkbox.builder(Component.literal("Catch Every Pokémon to Advance"), this.font)
+                .selected(c.catchWholeTier).pos(x, y).build());
+        addNote("Catch all of a tier's Pokémon before its next gym leader", x, y + rowH);
+        y += rowH * 2;
+
         sldGymChance = addRenderableWidget(new GymChanceSlider(x, y, 300, 20, c.gymVillageChance));
         addNote("Applies to newly generated villages after the world restarts", x, y + rowH);
     }
@@ -57,6 +62,7 @@ public final class CommonConfigScreen extends BaseConfigScreen {
         c.doDexProgression = chkDex.selected();
         c.giveTrainerCard = chkTrainerCard.selected();
         c.gymTeamLimit = chkGymTeamLimit.selected();
+        c.catchWholeTier = chkCatchWholeTier.selected();
         c.gymVillageChance = sldGymChance.percent() / 100.0;
         ConfigLoader.saveAll();
     }

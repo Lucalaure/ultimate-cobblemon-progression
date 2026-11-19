@@ -1,11 +1,13 @@
 package org.ppvon.ultimateCobblemonProgression.common.gym;
 
+import com.cobblemon.mod.common.pokemon.Species;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionDef;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionProgress;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionProgressTracker;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionRegistry;
+import org.ppvon.ultimateCobblemonProgression.common.regions.TierCatches;
 import org.ppvon.ultimateCobblemonProgression.common.tiers.TierDef;
 
 import java.util.List;
@@ -47,6 +49,13 @@ public final class GymLeaderPicker {
             RegionDef region = regions.get(r);
             TierDef next = region.tiers.get(progress.step(r) + 1);
             if (next == null || next.trainers.isEmpty()) continue;
+
+            // catchWholeTier: the next leader waits until the current tier is fully caught.
+            List<Species> missing = TierCatches.missing(player, region, progress.step(r));
+            if (!missing.isEmpty()) {
+                return Pick.none(Component.literal("Catch every tier " + progress.step(r) + " Pokémon of " + region.title
+                        + " first. Still to catch (" + missing.size() + "): " + TierCatches.names(missing, 5) + "."));
+            }
 
             for (List<String> group : next.trainers) {
                 boolean beaten = false;

@@ -26,6 +26,8 @@ public final class RegionProgress {
     private final int[] steps;
     private final boolean[] unlocked;
     private final boolean[] completed;
+    /** With catchWholeTier: whether every obtainable Pokémon of the region's current tier is caught. */
+    private final boolean[] tierCaught;
     /** Region indexes of the player's journey: home first, then each next region in the order picked. */
     private final List<Integer> journey = new ArrayList<>();
 
@@ -33,6 +35,7 @@ public final class RegionProgress {
         steps = new int[size];
         unlocked = new boolean[size];
         completed = new boolean[size];
+        tierCaught = new boolean[size];
     }
 
     public static RegionProgress compute(ServerPlayer player) {
@@ -67,9 +70,12 @@ public final class RegionProgress {
         int step = 0;
         for (TierDef tier : region.tiers.values()) {
             if (!RequirementCheck.isMet(player, tier.requirements, dex)) break;
+            // catchWholeTier: the tier before this one must be fully caught too.
+            if (tier.index > 1 && !TierCatches.missing(player, region, tier.index - 1).isEmpty()) break;
             step = tier.index;
         }
         steps[r] = step;
+        tierCaught[r] = step > 0 && TierCatches.applies(region) && TierCatches.missing(player, region, step).isEmpty();
         completed[r] = region.completedBy
                 .map(id -> RequirementCheck.isAdvancementDone(player, id))
                 .orElse(step == region.maxTier());
@@ -153,6 +159,11 @@ public final class RegionProgress {
 
     public boolean isCompleted(int region) {
         return region >= 0 && region < completed.length && completed[region];
+    }
+
+    /** With catchWholeTier on: whether the player has caught every obtainable Pokémon of the region's current tier. */
+    public boolean isTierCaught(int region) {
+        return region >= 0 && region < tierCaught.length && tierCaught[region];
     }
 
     /** Region indexes of the journey, home first. Empty until the player picks a home region. */

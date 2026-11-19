@@ -92,6 +92,7 @@ Settings live in `config/ultimate-cobblemon-progression/`. Highlights from `ucp-
 
 - `gymVillageChance` (default `0.3`): the share of new villages whose centre is a gym. `0` turns village gyms off.
 - `giveTrainerCard` (default `true`): give every player a Trainer Card on their first join.
+- `catchWholeTier` (default `false`): difficulty option, catch every Pokémon of your tier before you can face the next gym leader.
 
 And from `ucp-spawn.json`:
 

@@ -21,6 +21,7 @@ import org.ppvon.ultimateCobblemonProgression.common.regions.RegionProgress;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionProgressTracker;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionRegistry;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionSpecies;
+import org.ppvon.ultimateCobblemonProgression.common.regions.TierCatches;
 import org.ppvon.ultimateCobblemonProgression.common.tiers.TierDef;
 import org.ppvon.ultimateCobblemonProgression.common.tiers.TierRegistry;
 import org.ppvon.ultimateCobblemonProgression.common.tiers.UltimateCobblemonProgressionTierExt;
@@ -69,17 +70,24 @@ final class TrainerCardDataBuilder {
         List<RoadEntry> road = road(player, region, step, allDone || progress.isCompleted(focus));
 
         Component next = road.stream().filter(r -> r.status() == NEXT).map(RoadEntry::name).findFirst().orElse(Component.empty());
+        // catchWholeTier: what's left to catch in the current tier before the next leader.
+        List<Species> toCatch = progress.isCompleted(focus) || step >= region.maxTier()
+                ? List.of() : TierCatches.missing(player, region, step);
         Component hint;
         if (allDone) {
             hint = Component.literal("Every region is complete. Congratulations, Champion!");
         } else if (!nextChoices.isEmpty()) {
             hint = Component.literal(region.title + " is complete! Choose where your journey goes next: reopen your Trainer Card.");
+        } else if (!toCatch.isEmpty()) {
+            hint = Component.literal("First catch every tier " + step + " Pokémon. " + toCatch.size() + " to go ("
+                    + TierCatches.targets(region, step) + " in all): " + TierCatches.names(toCatch, 6)
+                    + ". The Wild Pokémon tab shows which you have.");
         } else if (!next.getString().isEmpty()) {
             hint = Component.literal("Use a Gym Challenge block in a village gym.");
         } else {
             TierDef nextTier = region.tiers.get(step + 1);
             hint = nextTier != null
-                    ? Component.literal("Tier " + (step + 1) + ": " + RegionCommands.describeMissing(player, nextTier))
+                    ? Component.literal("Tier " + (step + 1) + ": " + RegionCommands.describeMissing(player, region, nextTier))
                     : Component.empty();
         }
 

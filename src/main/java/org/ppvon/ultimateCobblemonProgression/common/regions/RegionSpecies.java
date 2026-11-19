@@ -21,6 +21,7 @@ public final class RegionSpecies {
         }
 
         List<RegionDef> regions = RegionRegistry.ordered();
+        regions.forEach(RegionDef::clearSpecies);
         for (int r = 0; r < regions.size(); r++) {
             RegionDef region = regions.get(r);
             for (var tier : region.tiers.entrySet()) {
@@ -31,6 +32,7 @@ public final class RegionSpecies {
                     var ext = ext(sp);
                     if (ext.ucp$getRegion() == -1) {
                         ext.ucp$setRegion(r, tier.getKey());
+                        region.addSpecies(tier.getKey(), sp);
                         real++;
                     } else if (ext.ucp$getRegion() != r) {
                         UltimateCobblemonProgression.LOG.warn("{} is listed in regions '{}' and '{}'; keeping '{}'",

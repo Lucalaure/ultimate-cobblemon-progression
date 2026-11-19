@@ -206,6 +206,7 @@ On a dedicated server, edit the **server's** files and restart it; the in-game s
 | `giveTrainerCard` | `true` | Give every player a [Trainer Card](#trainer-card) on their first join. |
 | `gymVillageChance` | `0.3` | Share of newly generated villages (0 to 0.95) whose centre is a [gym](#gyms). `0` turns village gyms off. Takes effect the next time a world starts. |
 | `gymTeamLimit` | `false` | Difficulty option: you can bring no more Pokémon to a [gym](#gyms) battle than the leader has. |
+| `catchWholeTier` | `false` | Difficulty option (region mode): to reach a league's next tier, you also have to catch every obtainable Pokémon of your current tier, and gyms won't summon the next leader until you have. See [Catch every Pokémon](#catch-every-pokémon-optional). |
 
 ---
 
@@ -351,6 +352,19 @@ Picking one (after confirming, since it's permanent):
 Only the region you pick opens. Everything you'd already opened stays open, and its Pokémon keep spawning (see [spawn pools](#wild-pokémon-in-a-new-region-spawn-pools)). Until you pick, gyms and `/trainerlevel get` tell you to choose, and you're reminded when you join. When you've completed every league region, your journey is complete and chat congratulates you.
 
 The pick is permanent and there's no command to undo it, since it also switches your Radical Cobblemon Trainers series. On the Trainer Card, the Road and trainer counts for a finished region still show its trainers as beaten after you switch series, because UCP counts every trainer of an unlocked tier as beaten.
+
+### Catch every Pokémon (optional)
+
+With `catchWholeTier` on in `ucp-common.json` (or **Catch Every Pokémon to Advance** in the Mod Menu screen), moving on in a league takes two things: beating the tier's gym leader **and** having caught every Pokémon of the tier you're on. In Kanto, tier 2 needs Brock beaten and all 16 tier-1 Pokémon caught; tier 3 needs Misty and every tier-2 Pokémon; and so on.
+
+- **Gyms wait for you.** Until the current tier is fully caught, a Gym Challenge block doesn't summon the next leader and tells you what's left ("Still to catch (3): Pidgey, Rattata and Zubat"), so your RCT level cap can't race ahead of your tier.
+- **What counts as caught:** the Pokédex's caught mark. Catching, evolving and trading all count, and so do Pokémon you caught before turning the option on.
+- **Only obtainable Pokémon count**: ones that spawn in the wild (including spawns added by datapacks) or evolve from one that does. Pokémon you can't get, like most legendaries, are skipped, so no tier can get stuck. In the built-in data that skips Rotom (Sinnoh tier 4), Phione (tier 5), Azelf, Mesprit, Cresselia and Enamorus (tier 9), and the legendaries of both leagues' tier 10.
+- **The last tier isn't needed.** Becoming Champion only takes beating the Champion, since there's no tier after it.
+- It applies to league regions only. Extra regions keep following your badges.
+- Your progress shows on the Trainer Card ("First catch every tier 1 Pokémon. 3 to go (16 in all): …"), in `/trainerlevel get` ("Next: catch Pidgey, Rattata and Zubat"), and on the card's Wild Pokémon tab, which marks what you've caught. Chat tells you when a tier is fully caught.
+
+Turning it on in a world that's already underway can lock tiers you'd reached until you catch what's missing, since progress is always worked out from your Pokédex and badges.
 
 ### Wild Pokémon in a new region: spawn pools
 

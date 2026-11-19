@@ -120,7 +120,7 @@ public final class TrainerLevelInfluence implements SpawningInfluence {
     }
 
     /** Resolves a species string from spawn data ("pidgey", "cobblemon:pidgey"), or null for "random" and unknown ids. */
-    private static Species speciesOf(String speciesStr) {
+    public static Species speciesOf(String speciesStr) {
         if (speciesStr == null || "random".equalsIgnoreCase(speciesStr)) return null;
 
         String lower = speciesStr.toLowerCase(Locale.ROOT);

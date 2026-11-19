@@ -33,6 +33,7 @@ public final class ConfigLoader {
     public static Supplier<Boolean> DO_DEX_PROGRESSION;
     public static Supplier<Double> GYM_VILLAGE_CHANCE;
     public static Supplier<Boolean> GYM_TEAM_LIMIT;
+    public static Supplier<Boolean> CATCH_WHOLE_TIER;
     public static Supplier<Boolean> GIVE_TRAINER_CARD;
 
     private ConfigLoader() {}
@@ -78,6 +79,7 @@ public final class ConfigLoader {
         DO_DEX_PROGRESSION = () -> COMMON.doDexProgression;
         GYM_VILLAGE_CHANCE = () -> COMMON.gymVillageChance;
         GYM_TEAM_LIMIT = () -> COMMON.gymTeamLimit;
+        CATCH_WHOLE_TIER = () -> COMMON.catchWholeTier;
         GIVE_TRAINER_CARD = () -> COMMON.giveTrainerCard;
     }
 

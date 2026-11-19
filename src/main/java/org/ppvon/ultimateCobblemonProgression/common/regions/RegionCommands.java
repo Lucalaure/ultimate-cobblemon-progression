@@ -2,6 +2,7 @@ package org.ppvon.ultimateCobblemonProgression.common.regions;
 
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
+import com.cobblemon.mod.common.pokemon.Species;
 import net.minecraft.ChatFormatting;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
@@ -58,7 +59,7 @@ public final class RegionCommands {
             TierDef next = region.tiers.get(step + 1);
             if (next != null) {
                 out.append(CommonComponents.NEW_LINE)
-                        .append(Component.literal("    Next: " + describeMissing(player, next)).withStyle(ChatFormatting.GRAY));
+                        .append(Component.literal("    Next: " + describeMissing(player, region, next)).withStyle(ChatFormatting.GRAY));
             }
         }
 
@@ -266,6 +267,18 @@ public final class RegionCommands {
         src.sendFailure(Component.literal(
                 "Trainer levels aren't used in region mode. Progress comes from advancements, e.g. /advancement grant."));
         return 0;
+    }
+
+    /**
+     * What's still needed to unlock the region's tier, including (with catchWholeTier) the Pokémon of the tier before
+     * it still to catch, e.g. "catch Pidgey and Rattata, Boulder Badge".
+     */
+    public static String describeMissing(ServerPlayer player, RegionDef region, TierDef tier) {
+        List<Species> toCatch = TierCatches.missing(player, region, tier.index - 1);
+        String rest = describeMissing(player, tier);
+        if (toCatch.isEmpty()) return rest;
+        String catches = "catch " + TierCatches.names(toCatch, 5);
+        return rest.equals("no requirements") ? catches : catches + ", " + rest;
     }
 
     /** What's still needed to unlock the tier, e.g. "Leader Brock, catch 10 species". */
