@@ -1,7 +1,8 @@
 {
-  "levelCap": 21,
+  "levelCap": 22,
+  "trainers": ["gym_leader_roark_0395"],
   "requirements": {
-    "advancements": ["rctmod:trainers/defeat_leader_brock"]
+    "advancements": ["ultimate-cobblemon-progression:journey/sinnoh/coal_badge"]
   },
   "species": [
     "cobblemon:bronzor",

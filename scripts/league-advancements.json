@@ -1,0 +1,11 @@
+{
+  "_comment": "Names for the Pokemon Journey advancements made by generate-league-advancements.py: each league region's badges, in gym order, and its Champion title.",
+  "kanto": {
+    "badges": ["Boulder Badge", "Cascade Badge", "Thunder Badge", "Rainbow Badge", "Soul Badge", "Marsh Badge", "Volcano Badge", "Earth Badge"],
+    "champion": "Kanto Champion"
+  },
+  "sinnoh": {
+    "badges": ["Coal Badge", "Forest Badge", "Cobble Badge", "Fen Badge", "Relic Badge", "Mine Badge", "Icicle Badge", "Beacon Badge"],
+    "champion": "Sinnoh Champion"
+  }
+}

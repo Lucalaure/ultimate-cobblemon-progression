@@ -7,14 +7,14 @@ This mod is designed for **server progression, modpacks, and RPG-style playthrou
 Cobblemon Versions:
 - Cobblemon 1.6.1: ucp-1.2.2
 - Cobblemon 1.7.0: ucp-1.3.0
-- Cobblemon 1.8.0: ucp-1.4.0, ucp-2.0.0 (regions, village gyms, Trainer Card)
+- Cobblemon 1.8.0: ucp-1.4.0, ucp-2.0.0 (regions, village gyms, Trainer Card), ucp-2.1.0 (Sinnoh league, journey, Pokémon Journey advancements)
 
 ---
 
 ## Features
 
 * **Trainer Tier System** — Unlock new Pokémon species and raise your level cap as you progress.
-* **Level & Weight Scaling** — Wild Pokémon levels and spawn chances scale with your tier.
+* **Level Scaling** — Wild Pokémon levels scale with your tier.
 * **Dex-Based Progression** — Advancement is tied to your Pokédex: see and catch Pokémon to rank up.
 * **Full Config Support** — Fine-tune features and spawn levels in the configs
 * **Datapack Integration** — Define your own tiers, unlock conditions, and available species per tier.

@@ -1,0 +1,13 @@
+{
+  "type": "champ",
+  "series": ["sinnoh"],
+  "optional": false,
+  "requiredDefeats": [["elite_four_lucian_03a2"]],
+  "maxTrainerDefeats": 1,
+  "maxTrainerWins": -1,
+  "battleCooldownTicks": 240,
+  "signatureItem": "cobblemon:prism_scale",
+  "spawnWeightFactor": 0,
+  "biomeTagWhitelist": ["has_structure/end_city", "is_rare"],
+  "biomeTagBlacklist": ["is_void"]
+}

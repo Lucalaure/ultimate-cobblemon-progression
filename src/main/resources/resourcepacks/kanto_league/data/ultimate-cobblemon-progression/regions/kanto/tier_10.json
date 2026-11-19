@@ -2,7 +2,7 @@
   "levelCap": 100,
   "trainers": ["elite_four_lorelei_004e", "elite_four_bruno_0051", ["elite_four_agatha_0053", "elite_four_agatha_0054"], "elite_four_lance_0057", "champion_terry_01b8"],
   "requirements": {
-    "advancements": ["rctmod:trainers/defeat_champion_terry"]
+    "advancements": ["ultimate-cobblemon-progression:journey/kanto/champion"]
   },
   "species": [
     "cobblemon:arcanine",

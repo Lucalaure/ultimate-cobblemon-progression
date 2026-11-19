@@ -5,8 +5,12 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.resources.ResourceLocation;
 import org.ppvon.ultimateCobblemonProgression.common.tiers.TierDef;
 
+import com.cobblemon.mod.common.pokemon.Species;
+
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.SortedMap;
@@ -31,6 +35,8 @@ public final class RegionDef {
     /** Tier index (1-based, consecutive) to tier definition. */
     public final SortedMap<Integer, TierDef> tiers;
     private final Map<Integer, Integer> realSpeciesByTier = new HashMap<>();
+    /** The Cobblemon species belonging to each tier of this region (a species listed in several regions counts in the first). */
+    private final Map<Integer, List<Species>> speciesByTier = new HashMap<>();
 
     public RegionDef(String id, Meta meta, SortedMap<Integer, TierDef> tiers) {
         this.id = id;
@@ -40,6 +46,11 @@ public final class RegionDef {
         this.startChoice = meta.startChoice;
         this.series = meta.series;
         this.tiers = Collections.unmodifiableSortedMap(tiers);
+    }
+
+    /** Whether this is a league region: one with a trainer series, which players travel to on their journey. */
+    public boolean isLeague() {
+        return series.isPresent();
     }
 
     public int maxTier() {
@@ -58,6 +69,19 @@ public final class RegionDef {
 
     void putRealSpecies(int tier, int count) {
         realSpeciesByTier.put(tier, count);
+    }
+
+    /** The loaded Cobblemon species that belong to this tier of the region. */
+    public List<Species> species(int tier) {
+        return speciesByTier.getOrDefault(tier, List.of());
+    }
+
+    void clearSpecies() {
+        speciesByTier.clear();
+    }
+
+    void addSpecies(int tier, Species species) {
+        speciesByTier.computeIfAbsent(tier, t -> new ArrayList<>()).add(species);
     }
 
     /** Contents of region.json. */

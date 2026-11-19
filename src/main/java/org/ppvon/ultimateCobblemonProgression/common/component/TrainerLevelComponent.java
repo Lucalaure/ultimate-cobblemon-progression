@@ -2,6 +2,7 @@ package org.ppvon.ultimateCobblemonProgression.common.component;
 
 import org.ladysnake.cca.api.v3.component.ComponentV3;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -28,4 +29,12 @@ public interface TrainerLevelComponent extends ComponentV3 {
     Optional<String> getHomeRegion();
     /** Pass null to clear the choice. */
     void setHomeRegion(String regionId);
+
+    /**
+     * Region mode: the regions this player travelled to after their home region, in the order they picked them.
+     * Each was picked on their Trainer Card after completing every region of their journey so far.
+     */
+    List<String> getNextRegions();
+    void addNextRegion(String regionId);
+    void clearNextRegions();
 }

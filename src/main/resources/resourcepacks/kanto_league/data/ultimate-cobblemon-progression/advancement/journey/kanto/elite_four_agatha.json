@@ -1,0 +1,36 @@
+{
+  "parent": "ultimate-cobblemon-progression:journey/kanto/elite_four_bruno",
+  "display": {
+    "icon": {
+      "id": "cobblemon:spell_tag"
+    },
+    "title": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.kanto.elite_four_agatha.title",
+      "fallback": "Elite Four Agatha"
+    },
+    "description": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.kanto.elite_four_agatha.description",
+      "fallback": "Defeat Elite Four Agatha"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat": {
+      "trigger": "ultimate-cobblemon-progression:defeat_trainer",
+      "conditions": {
+        "trainers": [
+          "elite_four_agatha_0053",
+          "elite_four_agatha_0054"
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "defeat"
+    ]
+  ]
+}

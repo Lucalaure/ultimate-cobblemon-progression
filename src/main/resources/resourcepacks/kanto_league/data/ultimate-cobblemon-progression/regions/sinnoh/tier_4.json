@@ -1,7 +1,8 @@
 {
-  "levelCap": 29,
+  "levelCap": 30,
+  "trainers": ["gym_leader_maylene_03d8"],
   "requirements": {
-    "advancements": ["rctmod:trainers/defeat_leader_lt_surge"]
+    "advancements": ["ultimate-cobblemon-progression:journey/sinnoh/cobble_badge"]
   },
   "species": [
     "cobblemon:bibarel",

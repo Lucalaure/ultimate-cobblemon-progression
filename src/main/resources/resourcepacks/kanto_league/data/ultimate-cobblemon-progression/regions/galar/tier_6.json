@@ -1,7 +1,7 @@
 {
   "levelCap": 43,
   "requirements": {
-    "advancements": ["rctmod:trainers/defeat_leader_koga"]
+    "advancements": ["ultimate-cobblemon-progression:journey/milestones/badge_5"]
   },
   "species": [
     "cobblemon:appletun",

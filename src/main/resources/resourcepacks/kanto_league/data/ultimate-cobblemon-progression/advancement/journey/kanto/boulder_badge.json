@@ -1,0 +1,35 @@
+{
+  "parent": "ultimate-cobblemon-progression:journey/root",
+  "display": {
+    "icon": {
+      "id": "cobblemon:hard_stone"
+    },
+    "title": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.kanto.boulder_badge.title",
+      "fallback": "Boulder Badge"
+    },
+    "description": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.kanto.boulder_badge.description",
+      "fallback": "Defeat Leader Brock"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat": {
+      "trigger": "ultimate-cobblemon-progression:defeat_trainer",
+      "conditions": {
+        "trainers": [
+          "leader_brock_019e"
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "defeat"
+    ]
+  ]
+}

@@ -2,7 +2,7 @@
   "levelCap": 43,
   "trainers": ["leader_erika_01a1"],
   "requirements": {
-    "advancements": ["rctmod:trainers/defeat_leader_erika"]
+    "advancements": ["ultimate-cobblemon-progression:journey/kanto/rainbow_badge"]
   },
   "species": [
     "cobblemon:beedrill",

@@ -52,9 +52,11 @@ public final class TrainerCard {
         PayloadTypeRegistry.playC2S().register(PickRegionPayload.TYPE, PickRegionPayload.CODEC);
         ServerPlayNetworking.registerGlobalReceiver(PickRegionPayload.TYPE, (payload, context) -> {
             ServerPlayer player = context.player();
-            RegionCommands.Choice result = payload.home()
-                    ? RegionCommands.chooseHomeRegion(player, payload.regionId())
-                    : RegionCommands.chooseStartRegion(player, payload.regionId());
+            RegionCommands.Choice result = switch (payload.kind()) {
+                case PickRegionPayload.HOME -> RegionCommands.chooseHomeRegion(player, payload.regionId());
+                case PickRegionPayload.NEXT -> RegionCommands.chooseNextRegion(player, payload.regionId());
+                default -> RegionCommands.chooseStartRegion(player, payload.regionId());
+            };
             player.displayClientMessage(result.ok() ? result.message()
                     : result.message().copy().withStyle(ChatFormatting.RED), false);
             open(player); // show the card again with the new region open

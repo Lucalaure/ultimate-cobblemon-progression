@@ -1,8 +1,8 @@
 {
   "levelCap": 54,
-  "trainers": ["leader_clair_004a"],
+  "trainers": ["leader_giovanni_015e"],
   "requirements": {
-    "advancements": ["rctmod:trainers/defeat_leader_clair"]
+    "advancements": ["ultimate-cobblemon-progression:journey/kanto/earth_badge"]
   },
   "species": [
     "cobblemon:aerodactyl",

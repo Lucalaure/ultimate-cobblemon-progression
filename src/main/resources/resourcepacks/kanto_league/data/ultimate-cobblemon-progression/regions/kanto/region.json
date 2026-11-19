@@ -1,6 +1,6 @@
 {
   "order": 1,
   "title": "Kanto",
-  "completedBy": "rctmod:trainers/defeat_champion_terry",
+  "completedBy": "ultimate-cobblemon-progression:journey/kanto/champion",
   "series": "kanto"
 }

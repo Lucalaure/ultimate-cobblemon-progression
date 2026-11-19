@@ -1,13 +1,13 @@
 {
   "type": "leader",
-  "series": ["kanto"],
+  "series": ["sinnoh"],
   "optional": false,
-  "requiredDefeats": [["leader_blaine_01a3"]],
+  "requiredDefeats": [["gym_leader_byron_0399"]],
   "maxTrainerDefeats": 1,
   "maxTrainerWins": -1,
   "battleCooldownTicks": 240,
-  "signatureItem": "cobblemon:dragon_fang",
+  "signatureItem": "cobblemon:ice_stone",
   "spawnWeightFactor": 0,
-  "biomeTagWhitelist": ["is_mountain", "is_peak"],
+  "biomeTagWhitelist": ["is_cold"],
   "biomeTagBlacklist": ["is_void", "is_nether", "is_end"]
 }

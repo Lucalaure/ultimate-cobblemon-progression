@@ -2,7 +2,7 @@
   "levelCap": 24,
   "trainers": ["leader_misty_019f"],
   "requirements": {
-    "advancements": ["rctmod:trainers/defeat_leader_misty"]
+    "advancements": ["ultimate-cobblemon-progression:journey/kanto/cascade_badge"]
   },
   "species": [
     "cobblemon:bulbasaur",

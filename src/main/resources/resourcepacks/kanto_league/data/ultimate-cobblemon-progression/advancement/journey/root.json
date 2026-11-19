@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "id": "ultimate-cobblemon-progression:trainer_card"
+    },
+    "title": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.root.title",
+      "fallback": "Pokémon Journey"
+    },
+    "description": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.root.description",
+      "fallback": "Earn every league's badges and become Champion"
+    },
+    "frame": "task",
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "start": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "requirements": [
+    [
+      "start"
+    ]
+  ]
+}

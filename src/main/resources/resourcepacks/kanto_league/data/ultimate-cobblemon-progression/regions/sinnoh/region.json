@@ -1,5 +1,6 @@
 {
   "order": 4,
   "title": "Sinnoh",
-  "startChoice": true
+  "completedBy": "ultimate-cobblemon-progression:journey/sinnoh/champion",
+  "series": "sinnoh"
 }

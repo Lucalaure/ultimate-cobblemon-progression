@@ -34,6 +34,8 @@ import org.ppvon.ultimateCobblemonProgression.common.regions.RegionDataLoader;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionProgressTracker;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionRegistry;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionSpecies;
+import org.ppvon.ultimateCobblemonProgression.common.regions.TierCatches;
+import org.ppvon.ultimateCobblemonProgression.common.advancements.DefeatTrainerTrigger;
 import org.ppvon.ultimateCobblemonProgression.common.gym.GymBlocks;
 import org.ppvon.ultimateCobblemonProgression.common.gym.GymTeamLimit;
 import org.ppvon.ultimateCobblemonProgression.common.gym.VillageGyms;
@@ -56,6 +58,7 @@ public class UltimateCobblemonProgression implements ModInitializer {
         VillageGyms.register();
         GymTeamLimit.register();
         TrainerCard.register();
+        DefeatTrainerTrigger.register();
 
         ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> {
             var player = handler.player;
@@ -203,12 +206,14 @@ public class UltimateCobblemonProgression implements ModInitializer {
         ServerLifecycleEvents.SERVER_STARTED.register(server -> {
             TierSpeciesApplier.applyFromRegistry();
             RegionSpecies.applyFromRegistry();
+            TierCatches.invalidate();
         });
 
         ServerLifecycleEvents.END_DATA_PACK_RELOAD.register((server, rm, success) -> {
             if (!success) return;
             TierSpeciesApplier.applyFromRegistry();
             RegionSpecies.applyFromRegistry();
+            TierCatches.invalidate();
             RegionProgressTracker.refreshAllSilently(server);
         });
 
@@ -225,17 +230,18 @@ public class UltimateCobblemonProgression implements ModInitializer {
     }
 
     /**
-     * The built-in Kanto league: every region's species tiers, plus Kanto's gym leaders, Elite Four and Champion
-     * for Radical Cobblemon Trainers. Only offered when RCT is installed, since Kanto's tiers unlock by beating its
-     * trainers; it's on by default and can be turned off like any datapack.
+     * The built-in leagues: every region's species tiers, plus the gym leaders, Elite Four and Champion of Kanto and
+     * Sinnoh for Radical Cobblemon Trainers. Only offered when RCT is installed, since the league tiers unlock by
+     * beating its trainers; it's on by default and can be turned off like any datapack. Its id stays "kanto_league"
+     * so existing worlds and /datapack commands keep working.
      */
     private static void registerKantoLeague() {
         if (!FabricLoader.getInstance().isModLoaded("rctmod")) {
-            LOG.info("Radical Cobblemon Trainers isn't installed, so the built-in Kanto league is off");
+            LOG.info("Radical Cobblemon Trainers isn't installed, so the built-in Kanto and Sinnoh leagues are off");
             return;
         }
         FabricLoader.getInstance().getModContainer(MOD_ID).ifPresent(mod -> ResourceManagerHelper.registerBuiltinResourcePack(
                 ResourceLocation.fromNamespaceAndPath(MOD_ID, "kanto_league"), mod,
-                Component.literal("UCP Kanto League"), ResourcePackActivationType.DEFAULT_ENABLED));
+                Component.literal("UCP Kanto & Sinnoh Leagues"), ResourcePackActivationType.DEFAULT_ENABLED));
     }
 }

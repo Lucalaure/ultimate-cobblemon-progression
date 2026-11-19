@@ -1,0 +1,35 @@
+{
+  "parent": "ultimate-cobblemon-progression:journey/root",
+  "display": {
+    "icon": {
+      "id": "cobblemon:smooth_rock"
+    },
+    "title": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.sinnoh.coal_badge.title",
+      "fallback": "Coal Badge"
+    },
+    "description": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.sinnoh.coal_badge.description",
+      "fallback": "Defeat Gym Leader Roark"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat": {
+      "trigger": "ultimate-cobblemon-progression:defeat_trainer",
+      "conditions": {
+        "trainers": [
+          "gym_leader_roark_0395"
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "defeat"
+    ]
+  ]
+}

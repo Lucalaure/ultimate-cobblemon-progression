@@ -15,6 +15,8 @@ import java.util.List;
  * @param regionMode false when UCP runs its single trainer-level ladder; then "region" is the ladder
  * @param next       the next trainer to beat, or empty
  * @param hint       a line under the next challenge (how to unlock the next tier, or a reminder)
+ * @param regionChoices regions the card asks the player to pick from before showing anything else: where their
+ *                   journey starts, or (with {@code choosingNext}) where it goes next. Empty when there's nothing to pick
  */
 public record TrainerCardData(
         String player,
@@ -31,7 +33,8 @@ public record TrainerCardData(
         List<RoadEntry> road,
         List<RegionEntry> regions,
         List<WildGroup> wild,
-        List<HomeChoice> homeChoices
+        List<RegionChoice> regionChoices,
+        boolean choosingNext
 ) {
     public static final int BEATEN = 0, NEXT = 1, LATER = 2;
     public static final int LOCKED = 0, OPEN = 1, COMPLETE = 2;
@@ -45,20 +48,22 @@ public record TrainerCardData(
      *
      * @param startPick  the region the player picked to explore from the start
      * @param choosable  the player can still pick this region as their starting region
+     * @param toCatch    with catchWholeTier: Pokémon of the current tier still to catch before the next tier opens
      */
-    public record RegionEntry(String id, String title, int state, int tier, int maxTier, boolean startPick, boolean choosable) {}
+    public record RegionEntry(String id, String title, int state, int tier, int maxTier, boolean startPick, boolean choosable,
+                              int toCatch) {}
 
     /** The species allowed to spawn from one region, and how many the next tier adds. */
     public record WildGroup(String title, int upcoming, List<WildSpecies> species) {}
 
     public record WildSpecies(ResourceLocation id, int knowledge) {}
 
-    /** A region the player can start their journey in, shown before the card until they pick one. */
-    public record HomeChoice(String id, String title, int trainers, int species, Component firstTrainer) {}
+    /** A league region the player can start their journey in, or travel to next, shown on the card's choice screen. */
+    public record RegionChoice(String id, String title, int trainers, int species, Component firstTrainer) {}
 
-    /** Whether the card should first ask the player where their journey starts. */
-    public boolean needsHome() {
-        return !homeChoices.isEmpty();
+    /** Whether the card should first ask the player where their journey starts, or where it goes next. */
+    public boolean needsChoice() {
+        return !regionChoices.isEmpty();
     }
 
     /** Whether the player still has a starting region to pick. */
@@ -102,6 +107,7 @@ public record TrainerCardData(
             buf.writeVarInt(r.maxTier);
             buf.writeBoolean(r.startPick);
             buf.writeBoolean(r.choosable);
+            buf.writeVarInt(r.toCatch);
         }
         buf.writeVarInt(d.wild.size());
         for (WildGroup g : d.wild) {
@@ -113,8 +119,9 @@ public record TrainerCardData(
                 buf.writeVarInt(s.knowledge);
             }
         }
-        buf.writeVarInt(d.homeChoices.size());
-        for (HomeChoice h : d.homeChoices) {
+        buf.writeBoolean(d.choosingNext);
+        buf.writeVarInt(d.regionChoices.size());
+        for (RegionChoice h : d.regionChoices) {
             buf.writeUtf(h.id);
             buf.writeUtf(h.title);
             buf.writeVarInt(h.trainers);
@@ -143,7 +150,7 @@ public record TrainerCardData(
         List<RegionEntry> regions = new ArrayList<>();
         for (int i = buf.readVarInt(); i > 0; i--) {
             regions.add(new RegionEntry(buf.readUtf(), buf.readUtf(), buf.readVarInt(), buf.readVarInt(), buf.readVarInt(),
-                    buf.readBoolean(), buf.readBoolean()));
+                    buf.readBoolean(), buf.readBoolean(), buf.readVarInt()));
         }
         List<WildGroup> wild = new ArrayList<>();
         for (int i = buf.readVarInt(); i > 0; i--) {
@@ -153,12 +160,13 @@ public record TrainerCardData(
             for (int j = buf.readVarInt(); j > 0; j--) species.add(new WildSpecies(buf.readResourceLocation(), buf.readVarInt()));
             wild.add(new WildGroup(title, upcoming, species));
         }
-        List<HomeChoice> homeChoices = new ArrayList<>();
+        boolean choosingNext = buf.readBoolean();
+        List<RegionChoice> regionChoices = new ArrayList<>();
         for (int i = buf.readVarInt(); i > 0; i--) {
-            homeChoices.add(new HomeChoice(buf.readUtf(), buf.readUtf(), buf.readVarInt(), buf.readVarInt(),
+            regionChoices.add(new RegionChoice(buf.readUtf(), buf.readUtf(), buf.readVarInt(), buf.readVarInt(),
                     ComponentSerialization.STREAM_CODEC.decode(buf)));
         }
         return new TrainerCardData(player, regionMode, regionTitle, tier, maxTier, levelCap, seen, caught,
-                next, hint, allDone, road, regions, wild, homeChoices);
+                next, hint, allDone, road, regions, wild, regionChoices, choosingNext);
     }
 }
