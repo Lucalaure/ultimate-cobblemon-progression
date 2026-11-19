@@ -10,6 +10,7 @@
 - The Mod Menu config's General page now also has the gym team limit, the share of villages with a gym, and the first-join Trainer Card.
 
 ## Changes
+- Weight scaling (`doWeightScaling`) is now off by default: unlocking a tier only adds species and no longer makes the ones you already had rarer. Existing `ucp-spawn.json` files keep their setting; set it to `false` to match.
 - Sinnoh is no longer an extra starting region, since it's a league now. Players who had picked it get to pick again.
 - Completing a region asks where your journey goes next, instead of opening the next region in order.
 - The Trainer Card's Road counts the trainers of every unlocked tier as beaten, even if RCT reset its record of them when you switched series.

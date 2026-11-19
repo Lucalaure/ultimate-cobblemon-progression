@@ -98,7 +98,7 @@ For every species' tier and rarity, see [Species by Tier and Rarity](species-by-
 1. Cobblemon rolls a rarity using the odds above. UCP doesn't affect this roll.
 2. Cobblemon collects the Pokémon in that rarity that fit the spot (biome, time, weather and so on). UCP removes the ones above your tier.
 3. If nothing is left, **that spawn attempt produces nothing**. It doesn't fall back to a different rarity.
-4. Otherwise one Pokémon is picked, using Cobblemon's spawn weights adjusted by UCP's weight scaling (below).
+4. Otherwise one Pokémon is picked using Cobblemon's spawn weights. In region mode, the [spawn pools](#wild-pokémon-in-a-new-region-spawn-pools) adjust them; the optional weight scaling below can too.
 
 Two consequences:
 
@@ -107,7 +107,7 @@ Two consequences:
 
 ### Weight scaling: who's favored within a rarity
 
-Once a rarity is rolled, UCP nudges which Pokémon in it gets picked, favoring Pokémon in your current tier:
+**Off by default** (`doWeightScaling` in [`ucp-spawn.json`](#ucp-spawnjson)): unlocking a tier only adds Pokémon, and the odds of the ones you already had stay as Cobblemon set them. When it's on, once a rarity is rolled, UCP nudges which Pokémon in it gets picked, favoring Pokémon in your current tier:
 
 ```
 weight multiplier = 2.0 − 0.2 × (tiers between the Pokémon and you), never below 0.15
@@ -188,7 +188,7 @@ On a dedicated server, edit the **server's** files and restart it; the in-game s
 | `minLevelScaling` | `0.45` | Lowest wild level, as a fraction of the boosted cap. |
 | `avgLevelScaling` | `0.75` | Most likely wild level, as a fraction of the boosted cap. |
 | `maxLevelScaling` | `1.1` | Highest wild level, as a fraction of the boosted cap (still never above 100). |
-| `doWeightScaling` | `true` | Apply weight scaling within each rarity ([section 3](#weight-scaling-whos-favored-within-a-rarity)). |
+| `doWeightScaling` | `false` | Apply weight scaling within each rarity ([section 3](#weight-scaling-whos-favored-within-a-rarity)). Off, unlocking a tier only adds species. |
 | `weightCurrentTierBuff` | `2.0` | Multiplier for Pokémon in your own tier. |
 | `weightDecayPerTier` | `0.20` | How much the multiplier drops per tier of difference. |
 | `weightMinFactor` | `0.15` | The multiplier never goes below this. |
@@ -353,21 +353,21 @@ Only the region you pick opens. Everything you'd already opened stays open. Unti
 
 Unlocking a new region only ever adds Pokémon: the regions you've finished stay fully open. While you work through a region, wild Pokémon come from three **spawn pools**:
 
-1. **The new region**: its species up to your tier there, at its levels ([sections 3](#weight-scaling-whos-favored-within-a-rarity) and [4](#4-wild-pokémon-levels), measured against your progress in that region). The most common pool. Your [extra starting region](#picking-a-second-starting-region), if it isn't complete, counts as this pool too.
+1. **The new region**: its species up to your tier there, at its levels ([section 4](#4-wild-pokémon-levels), measured against your progress in that region). The most common pool. Your [extra starting region](#picking-a-second-starting-region), if it isn't complete, counts as this pool too.
 2. **Finished regions, within your cap**: species of completed regions whose tier is at or below your tier in the new region, at the **new region's** levels. A Kanto tier-2 Pokémon spawns at Sinnoh tier-2 levels, so you can catch Pokémon for your new team from every region you've finished.
 3. **Finished regions, at full strength**: every species of completed regions, at their own fully unlocked levels. The rarest pool.
 
-A species of a finished region within your cap is in pools 2 and 3: its weight is the sum of both, and each one that spawns gets its level from one of them, picked in proportion to their weights. Each pool's weight multiplies the usual tier weighting; set them with `regionPoolWeight`, `pastInCapPoolWeight` and `pastFullPoolWeight` in [`ucp-spawn.json`](#ucp-spawnjson). Between regions (after a Champion, before you pick) and once every league is complete, there are no pools: everything spawns at its own region's levels and weights.
+A species of a finished region within your cap is in pools 2 and 3: its weight is the sum of both, and each one that spawns gets its level from one of them, picked in proportion to their weights. Each pool's weight multiplies Cobblemon's spawn weight (and the tier weighting, if you turn [weight scaling](#weight-scaling-whos-favored-within-a-rarity) on); set them with `regionPoolWeight`, `pastInCapPoolWeight` and `pastFullPoolWeight` in [`ucp-spawn.json`](#ucp-spawnjson). Between regions (after a Champion, before you pick) and once every league is complete, there are no pools: everything spawns at its own region's levels and weights.
 
 Right after a Kanto Champion travels to Sinnoh, with the built-in data and default settings:
 
 | Wild Pokémon | Pools | Level range (typical) | Weight |
 |---|---|---|---|
-| Sinnoh tier 1 (Starly, Shinx, …) | new region | 6–16 (11) | × 2.0 |
+| Sinnoh tier 1 (Starly, Shinx, …) | new region | 6–16 (11) | × 1.0 |
 | Sinnoh tier 2 and up | | can't spawn yet | |
-| Kanto tier 1 (Pidgey, Rattata, …) | within cap (97%) / full (3%) | 6–16 (11) / 16–39 (27) | × 1.03 |
-| Kanto tier 2 (Geodude, …) | full only, until Sinnoh tier 2 | 18–45 (31) | × 0.06 |
-| Kanto tier 10 (Dragonite, Snorlax, …) | full only, until Sinnoh tier 10 | 45–100 (75) | × 0.3 |
+| Kanto tier 1 (Pidgey, Rattata, …) | within cap (77%) / full (23%) | 6–16 (11) / 16–39 (27) | × 0.65 |
+| Kanto tier 2 (Geodude, …) | full only, until Sinnoh tier 2 | 18–45 (31) | × 0.15 |
+| Kanto tier 10 (Dragonite, Snorlax, …) | full only, until Sinnoh tier 10 | 45–100 (75) | × 0.15 |
 | Johto to Paldea | | can't spawn (not on your journey) | |
 
 After Roark (Sinnoh tier 2, cap 22), Sinnoh's tier 1 rises to 7–18 and its tier 2 opens; Kanto's tier 1 rises with it (7–18) and Kanto's tier 2 joins the within-cap pool at 9–24. Weights only compare species that can spawn at the same spot and rarity, so how often you meet each pool also depends on how many of its species live in that biome. Cobblemon still decides where each species spawns (biome, time, rarity), so Pokémon from every open region mix in the same world. Wild levels use the nearest player within 128 blocks.

@@ -10,7 +10,8 @@ public class SpawnConfig {
     public double avgLevelScaling = 0.75;
     public double maxLevelScaling = 1.1;
 
-    public boolean doWeightScaling = true;
+    // Off by default: unlocking a tier only adds species, it doesn't change the odds of the ones already unlocked.
+    public boolean doWeightScaling = false;
     public double weightDecayPerTier = 0.20;
     public double weightMinFactor = 0.15;
     public double weightCurrentTierBuff = 2.0;

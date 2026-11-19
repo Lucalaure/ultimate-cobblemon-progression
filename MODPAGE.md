@@ -14,7 +14,7 @@ Cobblemon Versions:
 ## Features
 
 * **Trainer Tier System** — Unlock new Pokémon species and raise your level cap as you progress.
-* **Level & Weight Scaling** — Wild Pokémon levels and spawn chances scale with your tier.
+* **Level Scaling** — Wild Pokémon levels scale with your tier.
 * **Dex-Based Progression** — Advancement is tied to your Pokédex: see and catch Pokémon to rank up.
 * **Full Config Support** — Fine-tune features and spawn levels in the configs
 * **Datapack Integration** — Define your own tiers, unlock conditions, and available species per tier.

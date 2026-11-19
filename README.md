@@ -50,7 +50,7 @@ Whether you follow regions or the classic ladder, your progress controls:
 
 - **Which species can spawn** for you: Pokémon above your tier (or from regions you haven't reached) are blocked.
 - **How strong wild Pokémon are**: levels are rerolled based on the Pokémon's tier and yours.
-- **Which Pokémon are favored**: within each rarity, Pokémon closer to your progress are more likely to be picked.
+- **Which region's Pokémon you meet most**: in region mode, the region you're working through is favored over the ones you've finished (see [spawn pools](docs/how-it-works.md#wild-pokémon-in-a-new-region-spawn-pools)). Otherwise, unlocking a tier only adds Pokémon.
 
 **Rarity is still Cobblemon's.** Whether a Pokémon is common or ultra-rare comes from Cobblemon's spawn data, and UCP doesn't change those odds. Tiers measure strength, not rarity, so a Pokémon can be low-tier and ultra-rare (Dratini) or high-tier and common (Slaking). See [Rarity](docs/how-it-works.md#3-rarity-whats-rare-and-whats-not).
 
