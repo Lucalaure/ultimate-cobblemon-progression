@@ -582,7 +582,8 @@ public class TrainerCardScreen extends Screen {
         text(g, Component.literal(title).withStyle(ChatFormatting.BOLD), (BOX_X0 + BOX_X1) / 2f, BOX_Y0 + 4, WHITE, 1, true);
         int ty = BOX_Y0 + 21;
         for (FormattedCharSequence line : font.split(Component.literal(body), BOX_X1 - BOX_X0 - 20)) {
-            g.drawCenteredString(font, line, (BOX_X0 + BOX_X1) / 2, ty, INK);
+            // Centred by hand: drawCenteredString always adds a drop shadow, which smears dark text on the light box.
+            g.drawString(font, line, (BOX_X0 + BOX_X1) / 2 - font.width(line) / 2, ty, INK, false);
             ty += 10;
         }
         button(g, YES_X0, yesX1(), verb + confirming.title(), RED, mx, my);
