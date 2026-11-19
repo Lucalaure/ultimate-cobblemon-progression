@@ -1,3 +1,12 @@
+# Unreleased
+
+## Features
+- Optional gym team limit (`gymTeamLimit` in `ucp-common.json`, off by default): players can bring no more Pokémon to a gym battle than the leader has. The leader says how many when it accepts the challenge, and a battle with a bigger party doesn't start.
+- The Mod Menu config's General page now also has the gym team limit, the share of villages with a gym, and the first-join Trainer Card.
+
+## Fixes
+- Village gyms no longer have Radical Gyms & Structures' "use button to respawn leader" sign, which pointed at a button UCP removes.
+
 # UCP 2.0.0
 
 ## Features

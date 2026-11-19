@@ -1,19 +1,27 @@
 package org.ppvon.ultimateCobblemonProgression.common.gym;
 
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import org.ppvon.ultimateCobblemonProgression.UltimateCobblemonProgression;
 
+import java.io.IOException;
+import java.io.Reader;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 /**
@@ -69,6 +77,21 @@ public final class RctBridge {
     /** The player's RCT level cap, or -1 if it couldn't be read. */
     public static int levelCap(ServerPlayer player) {
         return run(source(player.serverLevel(), player.position()).withEntity(player), "rctmod player get level_cap");
+    }
+
+    /** How many Pokémon the trainer's team has, read from its RCT trainer file, or -1 if that can't be read. */
+    public static int teamSize(MinecraftServer server, String trainerId) {
+        ResourceLocation file = ResourceLocation.tryBuild(MOD_ID, "trainers/" + trainerId + ".json");
+        if (file == null) return -1;
+        Optional<Resource> resource = server.getResourceManager().getResource(file);
+        if (resource.isEmpty()) return -1;
+        try (Reader reader = resource.get().openAsReader()) {
+            JsonElement team = JsonParser.parseReader(reader).getAsJsonObject().get("team");
+            return team != null && team.isJsonArray() ? team.getAsJsonArray().size() : -1;
+        } catch (IOException | RuntimeException e) {
+            UltimateCobblemonProgression.LOG.warn("Couldn't read RCT trainer {}: {}", trainerId, e.getMessage());
+            return -1;
+        }
     }
 
     /**

@@ -201,6 +201,7 @@ On a dedicated server, edit the **server's** files and restart it; the in-game s
 | `doDexProgression` | `true` | Level players up automatically from Pokédex progress. If off, trainer levels only change through commands. |
 | `giveTrainerCard` | `true` | Give every player a [Trainer Card](#trainer-card) on their first join. |
 | `gymVillageChance` | `0.3` | Share of newly generated villages (0 to 0.95) whose centre is a [gym](#gyms). `0` turns village gyms off. Takes effect the next time a world starts. |
+| `gymTeamLimit` | `false` | Difficulty option: you can bring no more Pokémon to a [gym](#gyms) battle than the leader has. |
 
 ---
 
@@ -377,6 +378,8 @@ Each entry is a Radical Cobblemon Trainers trainer id. A nested list means "any 
 - the challenger beats it,
 - the challenger logs out, leaves the dimension or goes more than 32 blocks away,
 - or 3 minutes pass without a battle.
+
+**Team limit (optional).** With `gymTeamLimit` on in `ucp-common.json`, you can bring no more Pokémon to a gym battle than the leader has: Brock has 2, so you can bring at most 2. The leader says so when it accepts your challenge. If your party is bigger, the battle doesn't start, and you're told how many to put in the PC. Every Pokémon in your party counts, fainted ones included. It applies to every trainer a Gym Challenge block summons, the Elite Four and Champion included.
 
 `scripts/convert-rgs-gyms.py` builds the gym files from RGS: it removes RGS's command blocks and adds the Gym Challenge block, the bell and the jigsaw blocks that connect a gym to its village.
 

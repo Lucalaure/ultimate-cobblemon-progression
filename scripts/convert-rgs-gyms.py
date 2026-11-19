@@ -6,7 +6,7 @@ Usage:
 For each gym and each village style (plains, desert, savanna, snowy, taiga) it writes
 village/<style>/<gym>.nbt, which VillageGyms adds to that style's town-centre pool. Changes from RGS:
 
-- The command blocks that summoned the leader, the start pressure plate, the rematch button and their redstone are removed.
+- The command blocks that summoned the leader, the start pressure plate, the rematch button, its sign and their redstone are removed.
 - A Gym Challenge block goes 2 blocks behind the leader's old spot, facing the entrance, so the leader it
   summons stands where RGS put them.
 - CobbleFurnies furniture is kept, so the gyms need CobbleFurnies (UCP skips village gyms without it).
@@ -90,8 +90,8 @@ GYMS = ['pewter', 'cerulean', 'vermilion', 'celadon', 'fuchsia', 'saffron', 'cin
 
 GYM_BLOCK = 'ultimate-cobblemon-progression:gym_challenge'
 GYM_POS = (12, 3, 15)            # 2 blocks behind the leader's RGS spot (12, 3, 13), facing the north entrance
-# start pressure plate, rematch button, and the redstone wire under each
-REMOVE_TO_AIR = [(12, 3, 3), (21, 3, 13), (12, 1, 3), (22, 2, 13)]
+# start pressure plate, rematch button, the redstone wire under each, and the rematch button's sign
+REMOVE_TO_AIR = [(12, 3, 3), (21, 3, 13), (12, 1, 3), (22, 2, 13), (21, 4, 13)]
 BELL_POS = (5, 3, 6)
 MOSAIC = 'cobblefurnies:vanilla_mosaic'
 

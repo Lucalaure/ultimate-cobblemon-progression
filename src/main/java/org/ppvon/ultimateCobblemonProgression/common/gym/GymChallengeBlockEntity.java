@@ -93,6 +93,10 @@ public class GymChallengeBlockEntity extends BlockEntity {
 
         tell(player, Component.literal("[" + pick.region().title + "] ").withStyle(ChatFormatting.AQUA)
                 .append(Component.literal(leaderName + " accepts your challenge!").withStyle(ChatFormatting.GOLD)));
+        if (GymTeamLimit.isOn()) {
+            Component hint = GymTeamLimit.hint(leaderName, RctBridge.teamSize(level.getServer(), trainerId));
+            if (hint != null) tell(player, hint);
+        }
     }
 
     public static void serverTick(Level level, BlockPos pos, BlockState state, GymChallengeBlockEntity gym) {
