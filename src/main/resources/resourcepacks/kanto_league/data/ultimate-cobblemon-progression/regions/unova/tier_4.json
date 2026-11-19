@@ -1,0 +1,24 @@
+{
+  "levelCap": 29,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_lt_surge"]
+  },
+  "species": [
+    "cobblemon:boldore",
+    "cobblemon:duosion",
+    "cobblemon:herdier",
+    "cobblemon:krokorok",
+    "cobblemon:lampent",
+    "cobblemon:larvesta",
+    "cobblemon:mienfoo",
+    "cobblemon:palpitoad",
+    "cobblemon:pawniard",
+    "cobblemon:rufflet",
+    "cobblemon:scraggy",
+    "cobblemon:swadloon",
+    "cobblemon:tirtouga",
+    "cobblemon:tranquill",
+    "cobblemon:vullaby",
+    "cobblemon:whirlipede"
+  ]
+}

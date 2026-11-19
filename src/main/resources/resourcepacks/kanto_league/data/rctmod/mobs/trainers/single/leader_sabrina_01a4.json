@@ -1,0 +1,13 @@
+{
+  "type": "leader",
+  "series": ["kanto"],
+  "optional": false,
+  "requiredDefeats": [["leader_koga_01a2"]],
+  "maxTrainerDefeats": 1,
+  "maxTrainerWins": -1,
+  "battleCooldownTicks": 240,
+  "signatureItem": "cobblemon:twisted_spoon",
+  "spawnWeightFactor": 0,
+  "biomeTagWhitelist": ["is_plains", "is_magical"],
+  "biomeTagBlacklist": ["is_void", "is_nether", "is_end"]
+}

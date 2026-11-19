@@ -1,0 +1,17 @@
+{
+  "levelCap": 54,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_clair"]
+  },
+  "species": [
+    "cobblemon:kartana",
+    "cobblemon:nihilego",
+    "cobblemon:pheromosa",
+    "cobblemon:silvally",
+    "cobblemon:stakataka",
+    "cobblemon:tapubulu",
+    "cobblemon:tapufini",
+    "cobblemon:tapukoko",
+    "cobblemon:tapulele"
+  ]
+}

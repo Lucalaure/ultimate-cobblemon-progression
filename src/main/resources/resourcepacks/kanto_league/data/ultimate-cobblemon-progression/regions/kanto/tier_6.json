@@ -1,0 +1,24 @@
+{
+  "levelCap": 43,
+  "trainers": ["leader_koga_01a2"],
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_koga"]
+  },
+  "species": [
+    "cobblemon:arbok",
+    "cobblemon:chansey",
+    "cobblemon:dragonair",
+    "cobblemon:dugtrio",
+    "cobblemon:fearow",
+    "cobblemon:marowak",
+    "cobblemon:persian",
+    "cobblemon:ponyta",
+    "cobblemon:raticate",
+    "cobblemon:sandslash",
+    "cobblemon:seadra",
+    "cobblemon:seaking",
+    "cobblemon:tangela",
+    "cobblemon:venomoth",
+    "cobblemon:wigglytuff"
+  ]
+}

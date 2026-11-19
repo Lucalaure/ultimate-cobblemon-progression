@@ -1,0 +1,13 @@
+{
+  "type": "e4",
+  "series": ["kanto"],
+  "optional": false,
+  "requiredDefeats": [["elite_four_bruno_0051"]],
+  "maxTrainerDefeats": 1,
+  "maxTrainerWins": -1,
+  "battleCooldownTicks": 240,
+  "signatureItem": "cobblemon:spell_tag",
+  "spawnWeightFactor": 0,
+  "biomeTagWhitelist": ["is_spooky", "is_swamp"],
+  "biomeTagBlacklist": ["is_void", "is_nether", "is_end"]
+}

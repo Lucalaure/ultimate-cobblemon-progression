@@ -1,0 +1,20 @@
+{
+  "levelCap": 43,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_erika"]
+  },
+  "species": [
+    "cobblemon:bombirdier",
+    "cobblemon:brambleghast",
+    "cobblemon:dachsbun",
+    "cobblemon:dipplin",
+    "cobblemon:espathra",
+    "cobblemon:grafaiai",
+    "cobblemon:houndstone",
+    "cobblemon:orthworm",
+    "cobblemon:rabsca",
+    "cobblemon:scovillain",
+    "cobblemon:tatsugiri",
+    "cobblemon:veluza"
+  ]
+}

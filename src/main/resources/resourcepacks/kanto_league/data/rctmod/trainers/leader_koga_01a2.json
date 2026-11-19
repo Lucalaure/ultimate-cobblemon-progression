@@ -1,0 +1,46 @@
+{
+  "name": "Leader Koga",
+  "ai": {
+    "type": "rct"
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:koffing",
+      "gender": "MALE",
+      "level": 37,
+      "nature": "cobblemon:bold",
+      "ability": "levitate",
+      "moveset": ["sludge", "smokescreen", "clearsmog", "selfdestruct"]
+    },
+    {
+      "species": "cobblemon:muk",
+      "gender": "MALE",
+      "level": 39,
+      "nature": "cobblemon:adamant",
+      "ability": "stickyhold",
+      "moveset": ["sludgebomb", "minimize", "acidarmor", "disable"]
+    },
+    {
+      "species": "cobblemon:koffing",
+      "gender": "MALE",
+      "level": 37,
+      "nature": "cobblemon:bold",
+      "ability": "levitate",
+      "moveset": ["sludge", "willowisp", "smokescreen", "selfdestruct"]
+    },
+    {
+      "species": "cobblemon:weezing",
+      "gender": "MALE",
+      "level": 43,
+      "nature": "cobblemon:bold",
+      "ability": "levitate",
+      "moveset": ["sludgebomb", "willowisp", "toxicspikes", "explosion"]
+    }
+  ]
+}

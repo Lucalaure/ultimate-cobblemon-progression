@@ -1,0 +1,19 @@
+{
+  "levelCap": 43,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_erika"]
+  },
+  "species": [
+    "cobblemon:ambipom",
+    "cobblemon:carnivine",
+    "cobblemon:cherrim",
+    "cobblemon:froslass",
+    "cobblemon:gastrodon",
+    "cobblemon:lopunny",
+    "cobblemon:lumineon",
+    "cobblemon:phione",
+    "cobblemon:purugly",
+    "cobblemon:skuntank",
+    "cobblemon:vespiquen"
+  ]
+}

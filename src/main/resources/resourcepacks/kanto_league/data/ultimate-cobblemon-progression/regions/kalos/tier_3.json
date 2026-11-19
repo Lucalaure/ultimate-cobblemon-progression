@@ -1,0 +1,15 @@
+{
+  "levelCap": 24,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_misty"]
+  },
+  "species": [
+    "cobblemon:clauncher",
+    "cobblemon:honedge",
+    "cobblemon:pancham",
+    "cobblemon:pumpkaboo",
+    "cobblemon:skrelp",
+    "cobblemon:spritzee",
+    "cobblemon:swirlix"
+  ]
+}

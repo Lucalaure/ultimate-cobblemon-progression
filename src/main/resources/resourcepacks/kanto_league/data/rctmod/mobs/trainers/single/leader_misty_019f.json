@@ -1,0 +1,13 @@
+{
+  "type": "leader",
+  "series": ["kanto"],
+  "optional": false,
+  "requiredDefeats": [["leader_brock_019e"]],
+  "maxTrainerDefeats": 1,
+  "maxTrainerWins": -1,
+  "battleCooldownTicks": 240,
+  "signatureItem": "cobblemon:mystic_water",
+  "spawnWeightFactor": 0,
+  "biomeTagWhitelist": ["is_beach", "is_river", "is_coast"],
+  "biomeTagBlacklist": ["is_void", "is_nether", "is_end"]
+}

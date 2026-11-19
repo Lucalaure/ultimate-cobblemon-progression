@@ -1,0 +1,15 @@
+{
+  "levelCap": 100,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_champion_terry"]
+  },
+  "species": [
+    "cobblemon:diancie",
+    "cobblemon:goodra",
+    "cobblemon:hoopa",
+    "cobblemon:volcanion",
+    "cobblemon:xerneas",
+    "cobblemon:yveltal",
+    "cobblemon:zygarde"
+  ]
+}

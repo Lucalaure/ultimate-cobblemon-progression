@@ -1,0 +1,13 @@
+{
+  "type": "leader",
+  "series": ["kanto"],
+  "optional": false,
+  "requiredDefeats": [["leader_erika_01a1"]],
+  "maxTrainerDefeats": 1,
+  "maxTrainerWins": -1,
+  "battleCooldownTicks": 240,
+  "signatureItem": "cobblemon:poison_barb",
+  "spawnWeightFactor": 0,
+  "biomeTagWhitelist": ["is_swamp", "is_forest"],
+  "biomeTagBlacklist": ["is_void", "is_nether", "is_end"]
+}

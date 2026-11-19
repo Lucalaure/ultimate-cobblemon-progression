@@ -1,0 +1,16 @@
+{
+  "levelCap": 100,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_champion_terry"]
+  },
+  "species": [
+    "cobblemon:dragapult",
+    "cobblemon:eternatus",
+    "cobblemon:regidrago",
+    "cobblemon:regieleki",
+    "cobblemon:spectrier",
+    "cobblemon:zacian",
+    "cobblemon:zamazenta",
+    "cobblemon:zarude"
+  ]
+}

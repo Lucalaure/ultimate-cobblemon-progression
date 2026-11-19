@@ -4,7 +4,10 @@ import com.mojang.brigadier.arguments.IntegerArgumentType;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
@@ -193,6 +196,7 @@ public class UltimateCobblemonProgression implements ModInitializer {
         LOG.info("Trainer level influence registered");
         TierDataLoader.register();
         RegionDataLoader.register();
+        registerKantoLeague();
 
         ServerLifecycleEvents.SERVER_STARTED.register(server -> {
             TierSpeciesApplier.applyFromRegistry();
@@ -216,5 +220,20 @@ public class UltimateCobblemonProgression implements ModInitializer {
             RadGymsCompat.register();
         }
          */
+    }
+
+    /**
+     * The built-in Kanto league: every region's species tiers, plus Kanto's gym leaders, Elite Four and Champion
+     * for Radical Cobblemon Trainers. Only offered when RCT is installed, since Kanto's tiers unlock by beating its
+     * trainers; it's on by default and can be turned off like any datapack.
+     */
+    private static void registerKantoLeague() {
+        if (!FabricLoader.getInstance().isModLoaded("rctmod")) {
+            LOG.info("Radical Cobblemon Trainers isn't installed, so the built-in Kanto league is off");
+            return;
+        }
+        FabricLoader.getInstance().getModContainer(MOD_ID).ifPresent(mod -> ResourceManagerHelper.registerBuiltinResourcePack(
+                ResourceLocation.fromNamespaceAndPath(MOD_ID, "kanto_league"), mod,
+                Component.literal("UCP Kanto League"), ResourcePackActivationType.DEFAULT_ENABLED));
     }
 }

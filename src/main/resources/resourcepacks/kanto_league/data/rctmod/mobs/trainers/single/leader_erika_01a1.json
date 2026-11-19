@@ -1,0 +1,13 @@
+{
+  "type": "leader",
+  "series": ["kanto"],
+  "optional": false,
+  "requiredDefeats": [["leader_lt_surge_01a0"]],
+  "maxTrainerDefeats": 1,
+  "maxTrainerWins": -1,
+  "battleCooldownTicks": 240,
+  "signatureItem": "cobblemon:miracle_seed",
+  "spawnWeightFactor": 0,
+  "biomeTagWhitelist": ["is_forest", "is_jungle", "is_floral"],
+  "biomeTagBlacklist": ["is_void", "is_nether", "is_end"]
+}

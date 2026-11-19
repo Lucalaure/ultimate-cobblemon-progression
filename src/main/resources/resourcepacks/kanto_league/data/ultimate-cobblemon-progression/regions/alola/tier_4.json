@@ -1,0 +1,17 @@
+{
+  "levelCap": 29,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_lt_surge"]
+  },
+  "species": [
+    "cobblemon:brionne",
+    "cobblemon:dartrix",
+    "cobblemon:gumshoos",
+    "cobblemon:hakamoo",
+    "cobblemon:poipole",
+    "cobblemon:pyukumuku",
+    "cobblemon:shiinotic",
+    "cobblemon:togedemaru",
+    "cobblemon:torracat"
+  ]
+}

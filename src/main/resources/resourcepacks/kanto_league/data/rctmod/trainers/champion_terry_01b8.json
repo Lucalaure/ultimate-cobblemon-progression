@@ -1,0 +1,62 @@
+{
+  "name": "Champion Blue",
+  "ai": {
+    "type": "rct"
+  },
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:pidgeot",
+      "gender": "MALE",
+      "level": 59,
+      "nature": "cobblemon:timid",
+      "ability": "keeneye",
+      "moveset": ["hurricane", "heatwave", "roost", "quickattack"]
+    },
+    {
+      "species": "cobblemon:alakazam",
+      "gender": "MALE",
+      "level": 57,
+      "nature": "cobblemon:timid",
+      "ability": "magicguard",
+      "moveset": ["psychic", "shadowball", "focusblast", "calmmind"]
+    },
+    {
+      "species": "cobblemon:rhydon",
+      "gender": "MALE",
+      "level": 59,
+      "nature": "cobblemon:adamant",
+      "ability": "lightningrod",
+      "moveset": ["earthquake", "stoneedge", "megahorn", "hammerarm"]
+    },
+    {
+      "species": "cobblemon:exeggutor",
+      "gender": "MALE",
+      "level": 59,
+      "nature": "cobblemon:modest",
+      "ability": "chlorophyll",
+      "moveset": ["gigadrain", "psychic", "sleeppowder", "leechseed"]
+    },
+    {
+      "species": "cobblemon:arcanine",
+      "gender": "MALE",
+      "level": 59,
+      "nature": "cobblemon:adamant",
+      "ability": "intimidate",
+      "moveset": ["flareblitz", "extremespeed", "crunch", "wildcharge"]
+    },
+    {
+      "species": "cobblemon:blastoise",
+      "gender": "MALE",
+      "level": 63,
+      "nature": "cobblemon:modest",
+      "ability": "torrent",
+      "moveset": ["hydropump", "icebeam", "flashcannon", "aurasphere"]
+    }
+  ]
+}

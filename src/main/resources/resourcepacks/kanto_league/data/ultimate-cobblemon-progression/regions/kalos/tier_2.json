@@ -1,0 +1,15 @@
+{
+  "levelCap": 21,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_brock"]
+  },
+  "species": [
+    "cobblemon:bergmite",
+    "cobblemon:binacle",
+    "cobblemon:chespin",
+    "cobblemon:fennekin",
+    "cobblemon:flabebe",
+    "cobblemon:froakie",
+    "cobblemon:phantump"
+  ]
+}

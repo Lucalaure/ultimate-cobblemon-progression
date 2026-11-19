@@ -1,0 +1,15 @@
+{
+  "levelCap": 29,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_lt_surge"]
+  },
+  "species": [
+    "cobblemon:amaura",
+    "cobblemon:espurr",
+    "cobblemon:fletchinder",
+    "cobblemon:floette",
+    "cobblemon:litleo",
+    "cobblemon:skiddo",
+    "cobblemon:tyrunt"
+  ]
+}

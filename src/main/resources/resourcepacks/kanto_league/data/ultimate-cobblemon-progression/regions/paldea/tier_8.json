@@ -1,0 +1,20 @@
+{
+  "levelCap": 50,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_blaine"]
+  },
+  "species": [
+    "cobblemon:brutebonnet",
+    "cobblemon:chienpao",
+    "cobblemon:chiyu",
+    "cobblemon:fezandipiti",
+    "cobblemon:fluttermane",
+    "cobblemon:gholdengo",
+    "cobblemon:greattusk",
+    "cobblemon:hydrapple",
+    "cobblemon:kingambit",
+    "cobblemon:munkidori",
+    "cobblemon:ogerpon",
+    "cobblemon:okidogi"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Leader Brock",
+  "ai": {
+    "type": "rct"
+  },
+  "bag": [
+    {
+      "item": "cobblemon:potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:geodude",
+      "gender": "MALE",
+      "level": 12,
+      "nature": "cobblemon:impish",
+      "ability": "sturdy",
+      "moveset": ["tackle", "defensecurl", "rockthrow"]
+    },
+    {
+      "species": "cobblemon:onix",
+      "gender": "MALE",
+      "level": 14,
+      "nature": "cobblemon:adamant",
+      "ability": "sturdy",
+      "moveset": ["tackle", "bind", "harden", "rocktomb"]
+    }
+  ]
+}

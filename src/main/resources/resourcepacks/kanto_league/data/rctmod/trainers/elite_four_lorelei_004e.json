@@ -1,0 +1,54 @@
+{
+  "name": "Elite Four Lorelei",
+  "ai": {
+    "type": "rct"
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:dewgong",
+      "gender": "FEMALE",
+      "level": 52,
+      "nature": "cobblemon:calm",
+      "ability": "thickfat",
+      "moveset": ["icebeam", "surf", "rest", "safeguard"]
+    },
+    {
+      "species": "cobblemon:cloyster",
+      "gender": "FEMALE",
+      "level": 51,
+      "nature": "cobblemon:adamant",
+      "ability": "skilllink",
+      "moveset": ["iciclespear", "rockblast", "shellsmash", "spikes"]
+    },
+    {
+      "species": "cobblemon:slowbro",
+      "gender": "FEMALE",
+      "level": 52,
+      "nature": "cobblemon:modest",
+      "ability": "oblivious",
+      "moveset": ["psychic", "surf", "icebeam", "amnesia"]
+    },
+    {
+      "species": "cobblemon:jynx",
+      "gender": "FEMALE",
+      "level": 54,
+      "nature": "cobblemon:modest",
+      "ability": "dryskin",
+      "moveset": ["icebeam", "psychic", "lovelykiss", "nastyplot"]
+    },
+    {
+      "species": "cobblemon:lapras",
+      "gender": "FEMALE",
+      "level": 54,
+      "nature": "cobblemon:modest",
+      "ability": "waterabsorb",
+      "moveset": ["surf", "icebeam", "bodyslam", "confuseray"]
+    }
+  ]
+}

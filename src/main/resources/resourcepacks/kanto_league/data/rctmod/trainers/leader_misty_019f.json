@@ -1,0 +1,30 @@
+{
+  "name": "Leader Misty",
+  "ai": {
+    "type": "rct"
+  },
+  "bag": [
+    {
+      "item": "cobblemon:potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:staryu",
+      "gender": "GENDERLESS",
+      "level": 18,
+      "nature": "cobblemon:timid",
+      "ability": "naturalcure",
+      "moveset": ["tackle", "harden", "waterpulse"]
+    },
+    {
+      "species": "cobblemon:starmie",
+      "gender": "GENDERLESS",
+      "level": 21,
+      "nature": "cobblemon:timid",
+      "ability": "naturalcure",
+      "moveset": ["waterpulse", "swift", "rapidspin", "recover"]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "levelCap": 43,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_erika"]
+  },
+  "species": [
+    "cobblemon:archen",
+    "cobblemon:audino",
+    "cobblemon:dewott",
+    "cobblemon:eelektrik",
+    "cobblemon:emolga",
+    "cobblemon:fraxure",
+    "cobblemon:gothorita",
+    "cobblemon:gurdurr",
+    "cobblemon:klang",
+    "cobblemon:pignite",
+    "cobblemon:servine",
+    "cobblemon:swoobat",
+    "cobblemon:vanillish",
+    "cobblemon:watchog",
+    "cobblemon:zweilous"
+  ]
+}

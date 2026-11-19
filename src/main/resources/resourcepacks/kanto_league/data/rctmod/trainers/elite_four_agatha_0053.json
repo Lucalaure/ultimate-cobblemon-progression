@@ -1,0 +1,54 @@
+{
+  "name": "Elite Four Agatha",
+  "ai": {
+    "type": "rct"
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:gengar",
+      "gender": "FEMALE",
+      "level": 54,
+      "nature": "cobblemon:timid",
+      "ability": "cursedbody",
+      "moveset": ["shadowball", "darkpulse", "confuseray", "toxic"]
+    },
+    {
+      "species": "cobblemon:golbat",
+      "gender": "FEMALE",
+      "level": 54,
+      "nature": "cobblemon:jolly",
+      "ability": "innerfocus",
+      "moveset": ["airslash", "poisonfang", "confuseray", "bite"]
+    },
+    {
+      "species": "cobblemon:haunter",
+      "gender": "FEMALE",
+      "level": 53,
+      "nature": "cobblemon:modest",
+      "ability": "levitate",
+      "moveset": ["shadowball", "hypnosis", "dreameater", "curse"]
+    },
+    {
+      "species": "cobblemon:arbok",
+      "gender": "FEMALE",
+      "level": 56,
+      "nature": "cobblemon:adamant",
+      "ability": "intimidate",
+      "moveset": ["gunkshot", "crunch", "glare", "earthquake"]
+    },
+    {
+      "species": "cobblemon:gengar",
+      "gender": "FEMALE",
+      "level": 58,
+      "nature": "cobblemon:timid",
+      "ability": "cursedbody",
+      "moveset": ["shadowball", "sludgebomb", "thunderbolt", "hypnosis"]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "levelCap": 100,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_champion_terry"]
+  },
+  "species": [
+    "cobblemon:archaludon",
+    "cobblemon:baxcalibur",
+    "cobblemon:ironboulder",
+    "cobblemon:ironcrown",
+    "cobblemon:ironleaves",
+    "cobblemon:ironvaliant",
+    "cobblemon:koraidon",
+    "cobblemon:miraidon",
+    "cobblemon:pecharunt",
+    "cobblemon:ragingbolt",
+    "cobblemon:roaringmoon",
+    "cobblemon:walkingwake"
+  ]
+}

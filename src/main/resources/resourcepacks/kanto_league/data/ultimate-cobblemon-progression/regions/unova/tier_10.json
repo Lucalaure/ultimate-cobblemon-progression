@@ -1,0 +1,23 @@
+{
+  "levelCap": 100,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_champion_terry"]
+  },
+  "species": [
+    "cobblemon:archeops",
+    "cobblemon:cobalion",
+    "cobblemon:genesect",
+    "cobblemon:hydreigon",
+    "cobblemon:keldeo",
+    "cobblemon:kyurem",
+    "cobblemon:landorus",
+    "cobblemon:meloetta",
+    "cobblemon:reshiram",
+    "cobblemon:terrakion",
+    "cobblemon:thundurus",
+    "cobblemon:tornadus",
+    "cobblemon:victini",
+    "cobblemon:virizion",
+    "cobblemon:zekrom"
+  ]
+}

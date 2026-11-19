@@ -1,0 +1,21 @@
+{
+  "levelCap": 100,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_champion_terry"]
+  },
+  "species": [
+    "cobblemon:deoxys",
+    "cobblemon:groudon",
+    "cobblemon:jirachi",
+    "cobblemon:kyogre",
+    "cobblemon:latias",
+    "cobblemon:latios",
+    "cobblemon:metagross",
+    "cobblemon:rayquaza",
+    "cobblemon:regice",
+    "cobblemon:regirock",
+    "cobblemon:registeel",
+    "cobblemon:salamence",
+    "cobblemon:slaking"
+  ]
+}

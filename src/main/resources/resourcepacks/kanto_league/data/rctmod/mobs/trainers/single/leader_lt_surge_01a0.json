@@ -1,0 +1,13 @@
+{
+  "type": "leader",
+  "series": ["kanto"],
+  "optional": false,
+  "requiredDefeats": [["leader_misty_019f"]],
+  "maxTrainerDefeats": 1,
+  "maxTrainerWins": -1,
+  "battleCooldownTicks": 240,
+  "signatureItem": "cobblemon:magnet",
+  "spawnWeightFactor": 0,
+  "biomeTagWhitelist": ["is_plains", "is_grassland"],
+  "biomeTagBlacklist": ["is_void", "is_nether", "is_end"]
+}

@@ -1,0 +1,20 @@
+{
+  "levelCap": 21,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_brock"]
+  },
+  "species": [
+    "cobblemon:capsakid",
+    "cobblemon:fuecoco",
+    "cobblemon:gimmighoul",
+    "cobblemon:greavard",
+    "cobblemon:poltchageist",
+    "cobblemon:quaxly",
+    "cobblemon:shroodle",
+    "cobblemon:sprigatito",
+    "cobblemon:tandemaus",
+    "cobblemon:tinkatink",
+    "cobblemon:varoom",
+    "cobblemon:wattrel"
+  ]
+}

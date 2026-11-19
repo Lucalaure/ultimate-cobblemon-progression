@@ -1,0 +1,13 @@
+{
+  "type": "leader",
+  "series": ["kanto"],
+  "optional": false,
+  "requiredDefeats": [["leader_sabrina_01a4"]],
+  "maxTrainerDefeats": 1,
+  "maxTrainerWins": -1,
+  "battleCooldownTicks": 240,
+  "signatureItem": "cobblemon:charcoal_stick",
+  "spawnWeightFactor": 0,
+  "biomeTagWhitelist": ["is_badlands", "is_volcanic"],
+  "biomeTagBlacklist": ["is_void", "is_end"]
+}

@@ -1,0 +1,24 @@
+{
+  "levelCap": 47,
+  "trainers": ["leader_sabrina_01a4"],
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_sabrina"]
+  },
+  "species": [
+    "cobblemon:clefable",
+    "cobblemon:dewgong",
+    "cobblemon:dodrio",
+    "cobblemon:golbat",
+    "cobblemon:hitmonchan",
+    "cobblemon:hitmonlee",
+    "cobblemon:hypno",
+    "cobblemon:jynx",
+    "cobblemon:kingler",
+    "cobblemon:magneton",
+    "cobblemon:mrmime",
+    "cobblemon:pidgeot",
+    "cobblemon:primeape",
+    "cobblemon:raichu",
+    "cobblemon:rhydon"
+  ]
+}

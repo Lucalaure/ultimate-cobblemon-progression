@@ -1,0 +1,21 @@
+{
+  "levelCap": 15,
+  "species": [
+    "cobblemon:caterpie",
+    "cobblemon:diglett",
+    "cobblemon:ditto",
+    "cobblemon:ekans",
+    "cobblemon:jigglypuff",
+    "cobblemon:kakuna",
+    "cobblemon:magikarp",
+    "cobblemon:metapod",
+    "cobblemon:nidoranf",
+    "cobblemon:nidoranm",
+    "cobblemon:paras",
+    "cobblemon:pidgey",
+    "cobblemon:rattata",
+    "cobblemon:spearow",
+    "cobblemon:weedle",
+    "cobblemon:zubat"
+  ]
+}

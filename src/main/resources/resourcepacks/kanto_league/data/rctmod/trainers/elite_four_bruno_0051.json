@@ -1,0 +1,54 @@
+{
+  "name": "Elite Four Bruno",
+  "ai": {
+    "type": "rct"
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:onix",
+      "gender": "MALE",
+      "level": 51,
+      "nature": "cobblemon:impish",
+      "ability": "sturdy",
+      "moveset": ["rockslide", "earthquake", "harden", "screech"]
+    },
+    {
+      "species": "cobblemon:hitmonchan",
+      "gender": "MALE",
+      "level": 53,
+      "nature": "cobblemon:adamant",
+      "ability": "ironfist",
+      "moveset": ["drainpunch", "firepunch", "icepunch", "thunderpunch"]
+    },
+    {
+      "species": "cobblemon:hitmonlee",
+      "gender": "MALE",
+      "level": 53,
+      "nature": "cobblemon:adamant",
+      "ability": "reckless",
+      "moveset": ["highjumpkick", "blazekick", "knockoff", "bulkup"]
+    },
+    {
+      "species": "cobblemon:onix",
+      "gender": "MALE",
+      "level": 54,
+      "nature": "cobblemon:adamant",
+      "ability": "rockhead",
+      "moveset": ["stoneedge", "earthquake", "irontail", "sandstorm"]
+    },
+    {
+      "species": "cobblemon:machamp",
+      "gender": "MALE",
+      "level": 56,
+      "nature": "cobblemon:adamant",
+      "ability": "noguard",
+      "moveset": ["dynamicpunch", "stoneedge", "knockoff", "bulkup"]
+    }
+  ]
+}

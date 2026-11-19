@@ -1,0 +1,23 @@
+{
+  "levelCap": 24,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_misty"]
+  },
+  "species": [
+    "cobblemon:axew",
+    "cobblemon:darumaka",
+    "cobblemon:deerling",
+    "cobblemon:drilbur",
+    "cobblemon:dwebble",
+    "cobblemon:elgyem",
+    "cobblemon:frillish",
+    "cobblemon:joltik",
+    "cobblemon:karrablast",
+    "cobblemon:panpour",
+    "cobblemon:pansage",
+    "cobblemon:pansear",
+    "cobblemon:trubbish",
+    "cobblemon:woobat",
+    "cobblemon:zorua"
+  ]
+}

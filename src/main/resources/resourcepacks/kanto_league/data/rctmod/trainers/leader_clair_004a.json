@@ -1,0 +1,46 @@
+{
+  "name": "Leader Clair",
+  "ai": {
+    "type": "rct"
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:dragonair",
+      "gender": "FEMALE",
+      "level": 46,
+      "nature": "cobblemon:modest",
+      "ability": "shedskin",
+      "moveset": ["dragonpulse", "thunderbolt", "icebeam", "thunderwave"]
+    },
+    {
+      "species": "cobblemon:dragonair",
+      "gender": "FEMALE",
+      "level": 46,
+      "nature": "cobblemon:adamant",
+      "ability": "marvelscale",
+      "moveset": ["dragontail", "aquatail", "slam", "dragondance"]
+    },
+    {
+      "species": "cobblemon:gyarados",
+      "gender": "FEMALE",
+      "level": 47,
+      "nature": "cobblemon:adamant",
+      "ability": "intimidate",
+      "moveset": ["waterfall", "crunch", "icefang", "dragondance"]
+    },
+    {
+      "species": "cobblemon:kingdra",
+      "gender": "FEMALE",
+      "level": 50,
+      "nature": "cobblemon:modest",
+      "ability": "swiftswim",
+      "moveset": ["dragonpulse", "surf", "icebeam", "raindance"]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "name": "Leader Blaine",
+  "ai": {
+    "type": "rct"
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:growlithe",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "cobblemon:adamant",
+      "ability": "intimidate",
+      "moveset": ["flamewheel", "bite", "roar", "takedown"]
+    },
+    {
+      "species": "cobblemon:ponyta",
+      "gender": "FEMALE",
+      "level": 40,
+      "nature": "cobblemon:jolly",
+      "ability": "flashfire",
+      "moveset": ["flamecharge", "stomp", "firespin", "agility"]
+    },
+    {
+      "species": "cobblemon:rapidash",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "cobblemon:jolly",
+      "ability": "flashfire",
+      "moveset": ["firespin", "stomp", "takedown", "bounce"]
+    },
+    {
+      "species": "cobblemon:arcanine",
+      "gender": "MALE",
+      "level": 47,
+      "nature": "cobblemon:adamant",
+      "ability": "intimidate",
+      "moveset": ["flareblitz", "extremespeed", "crunch", "roar"]
+    }
+  ]
+}

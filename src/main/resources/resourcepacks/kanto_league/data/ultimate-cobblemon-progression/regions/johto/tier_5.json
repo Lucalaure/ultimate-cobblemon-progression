@@ -1,0 +1,18 @@
+{
+  "levelCap": 43,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_erika"]
+  },
+  "species": [
+    "cobblemon:bayleef",
+    "cobblemon:corsola",
+    "cobblemon:croconaw",
+    "cobblemon:dunsparce",
+    "cobblemon:murkrow",
+    "cobblemon:pupitar",
+    "cobblemon:quilava",
+    "cobblemon:sudowoodo",
+    "cobblemon:togetic",
+    "cobblemon:wobbuffet"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "levelCap": 54,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_clair"]
+  },
+  "species": [
+    "cobblemon:braviary",
+    "cobblemon:chandelure",
+    "cobblemon:cryogonal",
+    "cobblemon:eelektross",
+    "cobblemon:emboar",
+    "cobblemon:gigalith",
+    "cobblemon:haxorus",
+    "cobblemon:klinklang",
+    "cobblemon:krookodile",
+    "cobblemon:mandibuzz",
+    "cobblemon:mienshao",
+    "cobblemon:samurott",
+    "cobblemon:serperior",
+    "cobblemon:vanilluxe",
+    "cobblemon:volcarona",
+    "cobblemon:zoroark"
+  ]
+}

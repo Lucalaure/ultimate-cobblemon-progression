@@ -1,0 +1,17 @@
+{
+  "levelCap": 43,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_koga"]
+  },
+  "species": [
+    "cobblemon:appletun",
+    "cobblemon:barraskewda",
+    "cobblemon:boltund",
+    "cobblemon:drednaw",
+    "cobblemon:flapple",
+    "cobblemon:frosmoth",
+    "cobblemon:grapploct",
+    "cobblemon:indeedee",
+    "cobblemon:runerigus"
+  ]
+}

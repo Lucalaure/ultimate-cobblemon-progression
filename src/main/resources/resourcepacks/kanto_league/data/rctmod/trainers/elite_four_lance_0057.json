@@ -1,0 +1,58 @@
+{
+  "name": "Elite Four Lance",
+  "ai": {
+    "type": "rct"
+  },
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 1
+    },
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:gyarados",
+      "gender": "MALE",
+      "level": 56,
+      "nature": "cobblemon:adamant",
+      "ability": "intimidate",
+      "moveset": ["waterfall", "dragondance", "earthquake", "crunch"]
+    },
+    {
+      "species": "cobblemon:dragonair",
+      "gender": "MALE",
+      "level": 54,
+      "nature": "cobblemon:modest",
+      "ability": "shedskin",
+      "moveset": ["dragonpulse", "thunderbolt", "flamethrower", "thunderwave"]
+    },
+    {
+      "species": "cobblemon:dragonair",
+      "gender": "MALE",
+      "level": 54,
+      "nature": "cobblemon:adamant",
+      "ability": "marvelscale",
+      "moveset": ["outrage", "aquatail", "extremespeed", "dragondance"]
+    },
+    {
+      "species": "cobblemon:aerodactyl",
+      "gender": "MALE",
+      "level": 58,
+      "nature": "cobblemon:jolly",
+      "ability": "rockhead",
+      "moveset": ["stoneedge", "crunch", "earthquake", "aerialace"]
+    },
+    {
+      "species": "cobblemon:dragonite",
+      "gender": "MALE",
+      "level": 60,
+      "nature": "cobblemon:adamant",
+      "ability": "innerfocus",
+      "moveset": ["outrage", "extremespeed", "earthquake", "firepunch"]
+    }
+  ]
+}

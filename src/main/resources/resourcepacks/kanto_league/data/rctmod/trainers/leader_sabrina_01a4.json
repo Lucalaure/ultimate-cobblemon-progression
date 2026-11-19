@@ -1,0 +1,46 @@
+{
+  "name": "Leader Sabrina",
+  "ai": {
+    "type": "rct"
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:kadabra",
+      "gender": "MALE",
+      "level": 38,
+      "nature": "cobblemon:timid",
+      "ability": "synchronize",
+      "moveset": ["psybeam", "recover", "reflect", "futuresight"]
+    },
+    {
+      "species": "cobblemon:mrmime",
+      "gender": "MALE",
+      "level": 37,
+      "nature": "cobblemon:timid",
+      "ability": "filter",
+      "moveset": ["psychic", "lightscreen", "reflect", "dazzlinggleam"]
+    },
+    {
+      "species": "cobblemon:venomoth",
+      "gender": "FEMALE",
+      "level": 38,
+      "nature": "cobblemon:modest",
+      "ability": "tintedlens",
+      "moveset": ["psybeam", "bugbuzz", "sleeppowder", "venoshock"]
+    },
+    {
+      "species": "cobblemon:alakazam",
+      "gender": "MALE",
+      "level": 43,
+      "nature": "cobblemon:timid",
+      "ability": "synchronize",
+      "moveset": ["psychic", "shadowball", "recover", "calmmind"]
+    }
+  ]
+}

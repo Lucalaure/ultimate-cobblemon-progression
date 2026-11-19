@@ -1,0 +1,22 @@
+{
+  "levelCap": 43,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_erika"]
+  },
+  "species": [
+    "cobblemon:beautifly",
+    "cobblemon:combusken",
+    "cobblemon:delcatty",
+    "cobblemon:dustox",
+    "cobblemon:grovyle",
+    "cobblemon:marshtomp",
+    "cobblemon:mawile",
+    "cobblemon:medicham",
+    "cobblemon:minun",
+    "cobblemon:plusle",
+    "cobblemon:roselia",
+    "cobblemon:sableye",
+    "cobblemon:sealeo",
+    "cobblemon:wailmer"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "levelCap": 50,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_blaine"]
+  },
+  "species": [
+    "cobblemon:aurorus",
+    "cobblemon:avalugg",
+    "cobblemon:carbink",
+    "cobblemon:clawitzer",
+    "cobblemon:hawlucha",
+    "cobblemon:pyroar",
+    "cobblemon:tyrantrum"
+  ]
+}

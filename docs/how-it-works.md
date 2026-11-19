@@ -332,13 +332,23 @@ If any region has `"startChoice": true`, each player can open **one** of them fr
 
 Players are reminded on joining and in `/trainerlevel get` until they pick. The choice is permanent; an operator can clear it with `/trainerlevel region reset <player>`.
 
-Picking a region only opens it. Its tiers still unlock through their own requirements, so a chosen region grows with whatever its tier files ask for. The example datapack ties Johto, Hoenn and Sinnoh to the same Kanto badges as Kanto's own tiers.
+Picking a region only opens it. Its tiers still unlock through their own requirements, so a chosen region grows with whatever its tier files ask for. The built-in Kanto league ties the other regions to the same Kanto badges as Kanto's own tiers.
 
 `tier_N.json` files use the same format as [custom tiers](#7-custom-tiers-datapacks): `levelCap`, `species`, and `requirements` (usually `advancements`), plus an optional `trainers` list for [gyms](#gyms). Tiers must be numbered 1, 2, 3… with no gaps, and tier 1 normally has no requirements. A species belongs to the first region that lists it; its forms come with it.
 
 `scripts/generate-region-tiers.ps1` builds the tier files from a Cobblemon regional Pokédex, splitting its species into equal-sized tiers by Base Stat Total. See the script for usage.
 
-The [UCP Regions for Radical Cobblemon Trainers](https://github.com/Lucalaure/ucp-rct-regions) datapack is a complete example: a 10-tier Kanto, with each tier after the first unlocked by one of the Kanto gym leaders from Radical Cobblemon Trainers, plus every other region as a starting choice.
+### The built-in Kanto league
+
+When Radical Cobblemon Trainers is installed, UCP turns on a built-in datapack, **UCP Kanto League**, in every world. It contains:
+
+- a 10-tier **Kanto**, with each tier after the first unlocked by one of its gym leaders, and the Champion completing it;
+- Kanto's RCT trainers: the 8 leaders, the Elite Four (either Agatha counts) and the Champion, with FireRed/LeafGreen-style teams, in a `kanto` series, and their natural spawning turned off so they only appear in gyms;
+- every other region (Johto to Paldea) as an optional second region, unlocking with the same Kanto badges.
+
+It's an ordinary datapack, so it shows in `/datapack list` as `ultimate-cobblemon-progression:kanto_league`. Turn it off with `/datapack disable "ultimate-cobblemon-progression:kanto_league"`, or untick it when creating a world, to use your own region data or the trainer-level ladder instead. Your own datapacks load after it, so they can override any of its files. Without RCT installed it isn't offered at all.
+
+For good-looking leaders, players can add the [RCT Trainer Textures Plus](https://modrinth.com/resourcepack/rct-trainer-textures-plus) resource pack, which replaces RCT's skins for every trainer in the league.
 
 ### Gyms
 

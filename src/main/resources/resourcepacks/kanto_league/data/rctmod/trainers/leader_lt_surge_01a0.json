@@ -1,0 +1,38 @@
+{
+  "name": "Leader Lt. Surge",
+  "ai": {
+    "type": "rct"
+  },
+  "bag": [
+    {
+      "item": "cobblemon:super_potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:voltorb",
+      "gender": "GENDERLESS",
+      "level": 21,
+      "nature": "cobblemon:hasty",
+      "ability": "static",
+      "moveset": ["spark", "screech", "rollout", "chargebeam"]
+    },
+    {
+      "species": "cobblemon:pikachu",
+      "gender": "MALE",
+      "level": 18,
+      "nature": "cobblemon:timid",
+      "ability": "static",
+      "moveset": ["thundershock", "quickattack", "thunderwave", "electroball"]
+    },
+    {
+      "species": "cobblemon:raichu",
+      "gender": "MALE",
+      "level": 24,
+      "nature": "cobblemon:hasty",
+      "ability": "static",
+      "moveset": ["thunderbolt", "quickattack", "thunderwave", "doubleteam"]
+    }
+  ]
+}

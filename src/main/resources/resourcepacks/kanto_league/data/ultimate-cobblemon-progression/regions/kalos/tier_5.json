@@ -1,0 +1,15 @@
+{
+  "levelCap": 43,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_erika"]
+  },
+  "species": [
+    "cobblemon:braixen",
+    "cobblemon:dedenne",
+    "cobblemon:diggersby",
+    "cobblemon:doublade",
+    "cobblemon:frogadier",
+    "cobblemon:quilladin",
+    "cobblemon:vivillon"
+  ]
+}

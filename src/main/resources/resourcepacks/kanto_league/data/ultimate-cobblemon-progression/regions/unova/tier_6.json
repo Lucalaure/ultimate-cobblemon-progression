@@ -1,0 +1,24 @@
+{
+  "levelCap": 43,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_koga"]
+  },
+  "species": [
+    "cobblemon:alomomola",
+    "cobblemon:amoonguss",
+    "cobblemon:basculin",
+    "cobblemon:cinccino",
+    "cobblemon:darmanitan",
+    "cobblemon:galvantula",
+    "cobblemon:garbodor",
+    "cobblemon:jellicent",
+    "cobblemon:liepard",
+    "cobblemon:lilligant",
+    "cobblemon:maractus",
+    "cobblemon:sawk",
+    "cobblemon:sawsbuck",
+    "cobblemon:stunfisk",
+    "cobblemon:swanna",
+    "cobblemon:throh"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "type": "leader",
+  "series": ["kanto"],
+  "optional": false,
+  "requiredDefeats": [["leader_blaine_01a3"]],
+  "maxTrainerDefeats": 1,
+  "maxTrainerWins": -1,
+  "battleCooldownTicks": 240,
+  "signatureItem": "cobblemon:dragon_fang",
+  "spawnWeightFactor": 0,
+  "biomeTagWhitelist": ["is_mountain", "is_peak"],
+  "biomeTagBlacklist": ["is_void", "is_nether", "is_end"]
+}

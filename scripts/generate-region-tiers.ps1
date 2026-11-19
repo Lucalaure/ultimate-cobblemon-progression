@@ -9,12 +9,14 @@
 
 .EXAMPLE
     ./scripts/generate-region-tiers.ps1 -Dex cobblemon:kanto `
-        -OutDir ../ucp-rct-regions/data/ultimate-cobblemon-progression/regions/kanto `
+        -OutDir src/main/resources/resourcepacks/kanto_league/data/ultimate-cobblemon-progression/regions/kanto `
         -LevelCaps 15,21,24,29,43,43,47,50,54,100 `
         -Advancements "", "rctmod:trainers/defeat_leader_brock", ..., "rctmod:trainers/defeat_champion_terry"
 
 .NOTES
     -LevelCaps and -Advancements have one entry per tier. Use "" for a tier with no requirement (normally tier 1).
+    The tier files are rewritten from scratch, so any "trainers" lists in them (the gym leaders for each tier) are
+    lost: add them back afterwards, e.g. by restoring them from git.
     Without -CobblemonJar, the Cobblemon jar is looked up in the Gradle cache (run ./gradlew build once first).
 #>
 param(

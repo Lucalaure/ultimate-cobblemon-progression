@@ -1,0 +1,20 @@
+{
+  "levelCap": 47,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_sabrina"]
+  },
+  "species": [
+    "cobblemon:annihilape",
+    "cobblemon:armarouge",
+    "cobblemon:ceruledge",
+    "cobblemon:cetitan",
+    "cobblemon:dondozo",
+    "cobblemon:dudunsparce",
+    "cobblemon:farigiraf",
+    "cobblemon:glimmora",
+    "cobblemon:meowscarada",
+    "cobblemon:quaquaval",
+    "cobblemon:skeledirge",
+    "cobblemon:toedscruel"
+  ]
+}

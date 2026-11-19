@@ -1,0 +1,18 @@
+{
+  "levelCap": 50,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_blaine"]
+  },
+  "species": [
+    "cobblemon:bellossom",
+    "cobblemon:donphan",
+    "cobblemon:heracross",
+    "cobblemon:houndoom",
+    "cobblemon:mantine",
+    "cobblemon:miltank",
+    "cobblemon:octillery",
+    "cobblemon:politoed",
+    "cobblemon:scizor",
+    "cobblemon:slowking"
+  ]
+}

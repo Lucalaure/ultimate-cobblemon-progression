@@ -1,0 +1,22 @@
+{
+  "levelCap": 54,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_clair"]
+  },
+  "species": [
+    "cobblemon:aggron",
+    "cobblemon:altaria",
+    "cobblemon:armaldo",
+    "cobblemon:blaziken",
+    "cobblemon:claydol",
+    "cobblemon:cradily",
+    "cobblemon:exploud",
+    "cobblemon:flygon",
+    "cobblemon:gardevoir",
+    "cobblemon:milotic",
+    "cobblemon:sceptile",
+    "cobblemon:swampert",
+    "cobblemon:wailord",
+    "cobblemon:walrein"
+  ]
+}

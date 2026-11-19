@@ -1,0 +1,18 @@
+{
+  "levelCap": 100,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_champion_terry"]
+  },
+  "species": [
+    "cobblemon:blissey",
+    "cobblemon:celebi",
+    "cobblemon:crobat",
+    "cobblemon:entei",
+    "cobblemon:hooh",
+    "cobblemon:kingdra",
+    "cobblemon:lugia",
+    "cobblemon:raikou",
+    "cobblemon:suicune",
+    "cobblemon:tyranitar"
+  ]
+}

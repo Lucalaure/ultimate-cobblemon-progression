@@ -1,0 +1,13 @@
+{
+  "type": "champ",
+  "series": ["kanto"],
+  "optional": false,
+  "requiredDefeats": [["elite_four_lance_0057"]],
+  "maxTrainerDefeats": 1,
+  "maxTrainerWins": -1,
+  "battleCooldownTicks": 240,
+  "signatureItem": "cobblemon:life_orb",
+  "spawnWeightFactor": 0,
+  "biomeTagWhitelist": ["is_plains", "is_grassland"],
+  "biomeTagBlacklist": ["is_void", "is_nether", "is_end"]
+}

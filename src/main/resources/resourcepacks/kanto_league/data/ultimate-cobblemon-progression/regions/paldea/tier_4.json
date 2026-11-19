@@ -1,0 +1,20 @@
+{
+  "levelCap": 29,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_lt_surge"]
+  },
+  "species": [
+    "cobblemon:arctibax",
+    "cobblemon:clodsire",
+    "cobblemon:crocalor",
+    "cobblemon:floragato",
+    "cobblemon:klawf",
+    "cobblemon:lokix",
+    "cobblemon:maushold",
+    "cobblemon:palafin",
+    "cobblemon:quaxwell",
+    "cobblemon:squawkabilly",
+    "cobblemon:terapagos",
+    "cobblemon:wugtrio"
+  ]
+}

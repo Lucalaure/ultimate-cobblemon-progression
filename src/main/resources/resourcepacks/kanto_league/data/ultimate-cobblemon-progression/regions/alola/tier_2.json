@@ -1,0 +1,17 @@
+{
+  "levelCap": 21,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_brock"]
+  },
+  "species": [
+    "cobblemon:cutiefly",
+    "cobblemon:grubbin",
+    "cobblemon:jangmoo",
+    "cobblemon:litten",
+    "cobblemon:mareanie",
+    "cobblemon:morelull",
+    "cobblemon:popplio",
+    "cobblemon:rowlet",
+    "cobblemon:steenee"
+  ]
+}

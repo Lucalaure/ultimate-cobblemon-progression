@@ -1,0 +1,20 @@
+{
+  "levelCap": 24,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_misty"]
+  },
+  "species": [
+    "cobblemon:buneary",
+    "cobblemon:cranidos",
+    "cobblemon:drifloon",
+    "cobblemon:finneon",
+    "cobblemon:hippopotas",
+    "cobblemon:kricketune",
+    "cobblemon:luxio",
+    "cobblemon:mantyke",
+    "cobblemon:shieldon",
+    "cobblemon:skorupi",
+    "cobblemon:snover",
+    "cobblemon:staravia"
+  ]
+}

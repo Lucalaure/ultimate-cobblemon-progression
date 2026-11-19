@@ -1,0 +1,17 @@
+{
+  "levelCap": 29,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_lt_surge"]
+  },
+  "species": [
+    "cobblemon:carkol",
+    "cobblemon:drakloak",
+    "cobblemon:drizzile",
+    "cobblemon:hattrem",
+    "cobblemon:kubfu",
+    "cobblemon:morgrem",
+    "cobblemon:pincurchin",
+    "cobblemon:raboot",
+    "cobblemon:thwackey"
+  ]
+}

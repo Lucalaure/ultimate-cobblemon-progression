@@ -1,0 +1,17 @@
+{
+  "levelCap": 50,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_blaine"]
+  },
+  "species": [
+    "cobblemon:coalossal",
+    "cobblemon:cursola",
+    "cobblemon:dracozolt",
+    "cobblemon:grimmsnarl",
+    "cobblemon:hatterene",
+    "cobblemon:orbeetle",
+    "cobblemon:polteageist",
+    "cobblemon:sandaconda",
+    "cobblemon:sirfetchd"
+  ]
+}

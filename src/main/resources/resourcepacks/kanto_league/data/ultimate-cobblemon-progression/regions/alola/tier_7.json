@@ -1,0 +1,17 @@
+{
+  "levelCap": 47,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_sabrina"]
+  },
+  "species": [
+    "cobblemon:bewear",
+    "cobblemon:decidueye",
+    "cobblemon:dhelmise",
+    "cobblemon:golisopod",
+    "cobblemon:minior",
+    "cobblemon:mudsdale",
+    "cobblemon:toxapex",
+    "cobblemon:tsareena",
+    "cobblemon:vikavolt"
+  ]
+}

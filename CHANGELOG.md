@@ -4,6 +4,7 @@
 - Gyms: a Gym Challenge block that summons your next gym leader (Radical Cobblemon Trainers) for your current region step. One leader per gym at a time.
 - Gyms can replace the centre of new villages (at most one per village, never outside villages, `gymVillageChance` in `ucp-common.json`). The buildings are the 8 Kanto gyms from Radical Gyms & Structures (MIT), without its command blocks. They need CobbleFurnies installed.
 - Region tier files take an optional `trainers` list naming the leaders for that tier, and `region.json` an optional RCT `series`.
+- Built-in **UCP Kanto League** datapack, on by default when Radical Cobblemon Trainers is installed: Kanto's tiers, gym leaders, Elite Four and Champion, plus every other region as a second-region choice. No separate datapack needed.
 - The first time the Trainer Card opens, it asks which region your journey starts in (any region with a `series`) and joins its trainer series.
 - Trainer Card: given on first join (`giveTrainerCard`). Opens a Pokédex-style screen with your region, tier, level cap and next challenge, the region's trainer order, every region's progress, and the wild Pokémon you can meet. Its Regions tab is also where you pick your second starting region. `/trainerlevel card` replaces a lost one.
 

@@ -1,0 +1,21 @@
+{
+  "levelCap": 21,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_brock"]
+  },
+  "species": [
+    "cobblemon:barboach",
+    "cobblemon:duskull",
+    "cobblemon:electrike",
+    "cobblemon:kirlia",
+    "cobblemon:meditite",
+    "cobblemon:nincada",
+    "cobblemon:slakoth",
+    "cobblemon:spheal",
+    "cobblemon:surskit",
+    "cobblemon:taillow",
+    "cobblemon:trapinch",
+    "cobblemon:wingull",
+    "cobblemon:wynaut"
+  ]
+}

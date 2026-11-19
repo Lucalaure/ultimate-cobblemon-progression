@@ -1,0 +1,38 @@
+{
+  "name": "Leader Erika",
+  "ai": {
+    "type": "rct"
+  },
+  "bag": [
+    {
+      "item": "cobblemon:super_potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:victreebel",
+      "gender": "FEMALE",
+      "level": 29,
+      "nature": "cobblemon:modest",
+      "ability": "chlorophyll",
+      "moveset": ["razorleaf", "acid", "sleeppowder", "wrap"]
+    },
+    {
+      "species": "cobblemon:tangela",
+      "gender": "FEMALE",
+      "level": 24,
+      "nature": "cobblemon:calm",
+      "ability": "chlorophyll",
+      "moveset": ["megadrain", "vinewhip", "bind", "poisonpowder"]
+    },
+    {
+      "species": "cobblemon:vileplume",
+      "gender": "FEMALE",
+      "level": 29,
+      "nature": "cobblemon:modest",
+      "ability": "chlorophyll",
+      "moveset": ["gigadrain", "acid", "stunspore", "sleeppowder"]
+    }
+  ]
+}

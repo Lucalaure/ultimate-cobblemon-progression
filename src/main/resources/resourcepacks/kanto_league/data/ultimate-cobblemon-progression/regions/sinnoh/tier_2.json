@@ -1,0 +1,19 @@
+{
+  "levelCap": 21,
+  "requirements": {
+    "advancements": ["rctmod:trainers/defeat_leader_brock"]
+  },
+  "species": [
+    "cobblemon:bronzor",
+    "cobblemon:buizel",
+    "cobblemon:chimchar",
+    "cobblemon:croagunk",
+    "cobblemon:gible",
+    "cobblemon:glameow",
+    "cobblemon:mimejr",
+    "cobblemon:piplup",
+    "cobblemon:shellos",
+    "cobblemon:stunky",
+    "cobblemon:turtwig"
+  ]
+}
