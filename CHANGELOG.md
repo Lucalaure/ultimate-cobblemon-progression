@@ -1,4 +1,4 @@
-# Unreleased
+# CJP 2.3.0
 
 ## Features
 - **Gym difficulty: Normal or Hard.** Every leader, Elite Four member and Champion in the Kanto and Sinnoh leagues now has a Hard version at the same levels: an extra Pokémon or two for most leaders (6 for the Elite Four), perfect IVs, trained EVs, held items, movesets built as sets, a sharper AI and a 2-use bag. After picking where your journey starts, your Trainer Card asks you to choose; switch any time on its Road tab or with `/trainerlevel difficulty <normal|hard>`. It applies from the next leader a gym summons, either version earns the badge, and the Road tab marks leaders beaten on Hard. Servers can set it for everyone with `gymDifficulty` in `ucp-common.json` (also on the Mod Menu General page).
