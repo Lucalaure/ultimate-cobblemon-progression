@@ -91,8 +91,10 @@ public class GymChallengeBlockEntity extends BlockEntity {
         lastActive = level.getGameTime();
         setChanged();
 
-        tell(player, Component.literal("[" + pick.region().title + "] ").withStyle(ChatFormatting.AQUA)
-                .append(Component.literal(leaderName + " accepts your challenge!").withStyle(ChatFormatting.GOLD)));
+        var accepted = Component.literal("[" + pick.region().title + "] ").withStyle(ChatFormatting.AQUA)
+                .append(Component.literal(leaderName + " accepts your challenge!").withStyle(ChatFormatting.GOLD));
+        if (GymDifficulty.isHard(trainerId)) accepted.append(Component.literal(" (Hard)").withStyle(ChatFormatting.RED));
+        tell(player, accepted);
         if (GymTeamLimit.isOn()) {
             Component hint = GymTeamLimit.hint(leaderName, RctBridge.teamSize(level.getServer(), trainerId));
             if (hint != null) tell(player, hint);

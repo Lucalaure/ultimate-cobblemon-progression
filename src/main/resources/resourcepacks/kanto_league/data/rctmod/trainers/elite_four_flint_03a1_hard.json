@@ -1,0 +1,169 @@
+{
+  "name": "Elite Four Flint",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.05
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:rapidash",
+      "gender": "MALE",
+      "level": 58,
+      "nature": "cobblemon:jolly",
+      "ability": "flashfire",
+      "moveset": ["flareblitz", "wildcharge", "poisonjab", "morningsun"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["wide_lens"]
+    },
+    {
+      "species": "cobblemon:steelix",
+      "gender": "MALE",
+      "level": 57,
+      "nature": "cobblemon:adamant",
+      "ability": "sheerforce",
+      "moveset": ["ironhead", "earthquake", "firefang", "crunch"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["life_orb"]
+    },
+    {
+      "species": "cobblemon:drifblim",
+      "gender": "FEMALE",
+      "level": 58,
+      "nature": "cobblemon:timid",
+      "ability": "unburden",
+      "moveset": ["calmmind", "shadowball", "strengthsap", "thunderbolt"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["sitrus_berry"]
+    },
+    {
+      "species": "cobblemon:lopunny",
+      "gender": "MALE",
+      "level": 57,
+      "nature": "cobblemon:jolly",
+      "ability": "limber",
+      "moveset": ["highjumpkick", "return", "icepunch", "fakeout"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["leftovers"]
+    },
+    {
+      "species": "cobblemon:magmortar",
+      "gender": "MALE",
+      "level": 58,
+      "nature": "cobblemon:modest",
+      "ability": "flamebody",
+      "moveset": ["flamethrower", "thunderbolt", "focusblast", "willowisp"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      }
+    },
+    {
+      "species": "cobblemon:infernape",
+      "gender": "MALE",
+      "level": 61,
+      "nature": "cobblemon:jolly",
+      "ability": "ironfist",
+      "moveset": ["flareblitz", "closecombat", "machpunch", "thunderpunch"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["focus_sash"]
+    }
+  ]
+}

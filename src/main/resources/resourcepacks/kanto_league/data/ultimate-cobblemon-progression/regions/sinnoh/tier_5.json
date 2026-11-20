@@ -1,6 +1,6 @@
 {
   "levelCap": 36,
-  "trainers": ["gym_leader_wake_03d7"],
+  "trainers": [["gym_leader_wake_03d7", "gym_leader_wake_03d7_hard"]],
   "requirements": {
     "advancements": ["ultimate-cobblemon-progression:journey/sinnoh/fen_badge"]
   },

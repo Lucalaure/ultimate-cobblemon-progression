@@ -22,7 +22,8 @@
       "trigger": "ultimate-cobblemon-progression:defeat_trainer",
       "conditions": {
         "trainers": [
-          "leader_misty_019f"
+          "leader_misty_019f",
+          "leader_misty_019f_hard"
         ]
       }
     }

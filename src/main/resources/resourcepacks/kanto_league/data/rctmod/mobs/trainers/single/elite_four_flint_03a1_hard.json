@@ -1,0 +1,15 @@
+{
+  "type": "e4",
+  "series": ["sinnoh"],
+  "optional": true,
+  "requiredDefeats": [
+    ["elite_four_bertha_03a0"]
+  ],
+  "maxTrainerDefeats": 1,
+  "maxTrainerWins": -1,
+  "battleCooldownTicks": 240,
+  "signatureItem": "cobblemon:fire_stone",
+  "spawnWeightFactor": 0,
+  "biomeTagWhitelist": ["is_hot"],
+  "biomeTagBlacklist": ["is_void", "is_end", "is_wet"]
+}

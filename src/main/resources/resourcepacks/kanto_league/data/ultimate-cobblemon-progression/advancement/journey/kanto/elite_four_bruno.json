@@ -22,7 +22,8 @@
       "trigger": "ultimate-cobblemon-progression:defeat_trainer",
       "conditions": {
         "trainers": [
-          "elite_four_bruno_0051"
+          "elite_four_bruno_0051",
+          "elite_four_bruno_0051_hard"
         ]
       }
     }

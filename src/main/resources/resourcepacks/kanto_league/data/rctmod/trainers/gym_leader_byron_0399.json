@@ -1,0 +1,86 @@
+{
+  "name": "Gym Leader Byron",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "bronzor",
+      "gender": "GENDERLESS",
+      "level": 36,
+      "nature": "relaxed",
+      "ability": "levitate",
+      "moveset": ["confuseray", "sandstorm", "trickroom", "flashcannon"],
+      "ivs": {
+        "hp": 20,
+        "atk": 20,
+        "def": 20,
+        "spa": 20,
+        "spd": 20,
+        "spe": 20
+      },
+      "evs": {
+        "hp": 68,
+        "def": 68,
+        "spa": 44,
+        "spd": 68
+      }
+    },
+    {
+      "species": "steelix",
+      "gender": "FEMALE",
+      "level": 36,
+      "nature": "brave",
+      "ability": "sturdy",
+      "moveset": ["thunderfang", "earthquake", "sandstorm", "gyroball"],
+      "ivs": {
+        "hp": 20,
+        "atk": 20,
+        "def": 20,
+        "spa": 20,
+        "spd": 20,
+        "spe": 20
+      },
+      "evs": {
+        "atk": 100,
+        "def": 68,
+        "spd": 68
+      },
+      "heldItem": ["soft_sand"]
+    },
+    {
+      "species": "bastiodon",
+      "gender": "FEMALE",
+      "level": 39,
+      "nature": "relaxed",
+      "ability": "sturdy",
+      "moveset": ["irondefense", "thunderbolt", "stoneedge", "flashcannon"],
+      "ivs": {
+        "hp": 20,
+        "atk": 20,
+        "def": 20,
+        "spa": 20,
+        "spd": 20,
+        "spe": 20
+      },
+      "evs": {
+        "def": 68,
+        "spa": 100,
+        "spd": 68
+      },
+      "heldItem": ["sitrus_berry"]
+    }
+  ]
+}

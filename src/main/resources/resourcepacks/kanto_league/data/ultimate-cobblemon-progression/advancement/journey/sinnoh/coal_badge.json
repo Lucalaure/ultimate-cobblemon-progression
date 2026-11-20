@@ -22,7 +22,8 @@
       "trigger": "ultimate-cobblemon-progression:defeat_trainer",
       "conditions": {
         "trainers": [
-          "gym_leader_roark_0395"
+          "gym_leader_roark_0395",
+          "gym_leader_roark_0395_hard"
         ]
       }
     }

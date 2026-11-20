@@ -1,6 +1,6 @@
 {
   "levelCap": 24,
-  "trainers": ["leader_misty_019f"],
+  "trainers": [["leader_misty_019f", "leader_misty_019f_hard"]],
   "requirements": {
     "advancements": ["ultimate-cobblemon-progression:journey/kanto/cascade_badge"]
   },

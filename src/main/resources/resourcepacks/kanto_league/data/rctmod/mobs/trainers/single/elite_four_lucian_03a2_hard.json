@@ -1,0 +1,15 @@
+{
+  "type": "e4",
+  "series": ["sinnoh"],
+  "optional": true,
+  "requiredDefeats": [
+    ["elite_four_flint_03a1"]
+  ],
+  "maxTrainerDefeats": 1,
+  "maxTrainerWins": -1,
+  "battleCooldownTicks": 240,
+  "signatureItem": "cobblemon:psychic_seed",
+  "spawnWeightFactor": 0,
+  "biomeTagWhitelist": ["is_spooky", "is_sparse_vegetation", "has_structure/end_city"],
+  "biomeTagBlacklist": ["is_void", "is_nether"]
+}

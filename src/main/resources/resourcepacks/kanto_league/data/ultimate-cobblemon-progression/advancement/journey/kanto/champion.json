@@ -22,7 +22,8 @@
       "trigger": "ultimate-cobblemon-progression:defeat_trainer",
       "conditions": {
         "trainers": [
-          "champion_terry_01b8"
+          "champion_terry_01b8",
+          "champion_terry_01b8_hard"
         ]
       }
     }

@@ -1,0 +1,145 @@
+{
+  "name": "Leader Sabrina",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.05
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:mrmime",
+      "gender": "MALE",
+      "level": 37,
+      "nature": "cobblemon:timid",
+      "ability": "filter",
+      "moveset": ["reflect", "lightscreen", "psychic", "dazzlinggleam"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["light_clay"]
+    },
+    {
+      "species": "cobblemon:hypno",
+      "gender": "MALE",
+      "level": 38,
+      "nature": "cobblemon:calm",
+      "ability": "insomnia",
+      "moveset": ["psychic", "hypnosis", "nastyplot", "dazzlinggleam"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 4,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      },
+      "heldItem": ["leftovers"]
+    },
+    {
+      "species": "cobblemon:slowbro",
+      "gender": "MALE",
+      "level": 38,
+      "nature": "cobblemon:bold",
+      "ability": "regenerator",
+      "moveset": ["scald", "psychic", "slackoff", "thunderwave"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": ["leftovers"]
+    },
+    {
+      "species": "cobblemon:kadabra",
+      "gender": "MALE",
+      "level": 38,
+      "nature": "cobblemon:timid",
+      "ability": "magicguard",
+      "moveset": ["psychic", "shadowball", "recover", "calmmind"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["eviolite"]
+    },
+    {
+      "species": "cobblemon:alakazam",
+      "gender": "MALE",
+      "level": 43,
+      "nature": "cobblemon:timid",
+      "ability": "magicguard",
+      "moveset": ["psychic", "shadowball", "focusblast", "calmmind"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["life_orb"]
+    }
+  ]
+}

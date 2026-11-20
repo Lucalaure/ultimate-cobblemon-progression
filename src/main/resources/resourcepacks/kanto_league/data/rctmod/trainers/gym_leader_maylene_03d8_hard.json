@@ -1,0 +1,120 @@
+{
+  "name": "Gym Leader Maylene",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.05
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:meditite",
+      "gender": "MALE",
+      "level": 27,
+      "nature": "cobblemon:jolly",
+      "ability": "purepower",
+      "moveset": ["drainpunch", "zenheadbutt", "bulletpunch", "fakeout"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["eviolite"]
+    },
+    {
+      "species": "cobblemon:croagunk",
+      "gender": "FEMALE",
+      "level": 27,
+      "nature": "cobblemon:adamant",
+      "ability": "dryskin",
+      "moveset": ["poisonjab", "suckerpunch", "revenge", "fakeout"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["black_sludge"]
+    },
+    {
+      "species": "cobblemon:machoke",
+      "gender": "FEMALE",
+      "level": 27,
+      "nature": "cobblemon:adamant",
+      "ability": "guts",
+      "moveset": ["lowsweep", "knockoff", "rocktomb", "bulletpunch"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 252,
+        "def": 4,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "heldItem": ["eviolite"]
+    },
+    {
+      "species": "cobblemon:lucario",
+      "gender": "FEMALE",
+      "level": 30,
+      "nature": "cobblemon:adamant",
+      "ability": "justified",
+      "moveset": ["drainpunch", "bulletpunch", "crunch", "swordsdance"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["life_orb"]
+    }
+  ]
+}

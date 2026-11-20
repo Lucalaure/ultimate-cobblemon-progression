@@ -5,7 +5,9 @@
       "conditions": {
         "trainers": [
           "leader_blaine_01a3",
-          "gym_leader_candice_03da"
+          "leader_blaine_01a3_hard",
+          "gym_leader_candice_03da",
+          "gym_leader_candice_03da_hard"
         ]
       }
     }

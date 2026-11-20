@@ -1,7 +1,13 @@
 {
   "name": "Leader Erika",
   "ai": {
-    "type": "rct"
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
   },
   "bag": [
     {
@@ -16,7 +22,15 @@
       "level": 29,
       "nature": "cobblemon:modest",
       "ability": "chlorophyll",
-      "moveset": ["razorleaf", "acid", "sleeppowder", "wrap"]
+      "moveset": ["razorleaf", "acid", "sleeppowder", "wrap"],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      }
     },
     {
       "species": "cobblemon:tangela",
@@ -24,7 +38,15 @@
       "level": 24,
       "nature": "cobblemon:calm",
       "ability": "chlorophyll",
-      "moveset": ["megadrain", "vinewhip", "bind", "poisonpowder"]
+      "moveset": ["megadrain", "vinewhip", "bind", "poisonpowder"],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      }
     },
     {
       "species": "cobblemon:vileplume",
@@ -32,7 +54,15 @@
       "level": 29,
       "nature": "cobblemon:modest",
       "ability": "chlorophyll",
-      "moveset": ["gigadrain", "acid", "stunspore", "sleeppowder"]
+      "moveset": ["gigadrain", "acid", "stunspore", "sleeppowder"],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      }
     }
   ]
 }

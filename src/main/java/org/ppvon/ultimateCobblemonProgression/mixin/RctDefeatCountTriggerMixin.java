@@ -4,6 +4,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import org.ppvon.ultimateCobblemonProgression.UltimateCobblemonProgression;
 import org.ppvon.ultimateCobblemonProgression.common.advancements.DefeatTrainerTrigger;
+import org.ppvon.ultimateCobblemonProgression.common.gym.GymDifficulty;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionRegistry;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Pseudo;
@@ -34,6 +35,7 @@ public abstract class RctDefeatCountTriggerMixin {
     private void ucp$onTrainerDefeated(ServerPlayer player, @Coerce Entity trainer, CallbackInfo ci) {
         String trainerId = ucp$trainerId(trainer);
         if (trainerId == null) return;
+        GymDifficulty.onTrainerDefeated(player, trainerId);
         DefeatTrainerTrigger.INSTANCE.trigger(player, trainerId);
         if (RegionRegistry.isLeagueTrainer(trainerId)) ci.cancel();
     }

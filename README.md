@@ -84,6 +84,7 @@ The default tiers also cover species from Myths and Legends, Complete Cobblemon 
 /trainerlevel region next <region>         travel to your next region, once yours is complete (everyone)
 /trainerlevel region choose <region>       pick your extra starting region (everyone)
 /trainerlevel region reset <player>        clear a player's extra region choice (op level 2)
+/trainerlevel difficulty [normal|hard]     show or change your gym difficulty (everyone)
 /trainerlevel set <player> <level>         classic mode: set a trainer level (op level 2)
 /trainerlevel promote <player>             classic mode: raise a player one level (op level 2)
 ```
@@ -94,6 +95,7 @@ Settings live in `config/ultimate-cobblemon-progression/`. Highlights from `ucp-
 
 - `gymVillageChance` (default `0.3`): the share of new villages whose centre is a gym. `0` turns village gyms off.
 - `giveTrainerCard` (default `true`): give every player a Trainer Card on their first join.
+- `gymDifficulty` (default `"player_choice"`): each player picks Normal or Hard gym leaders on their Trainer Card and can switch any time; `"normal"` or `"hard"` sets it for everyone. See [Gym difficulty](docs/how-it-works.md#gym-difficulty).
 - `catchWholeTier` (default `false`): difficulty option, catch every Pokémon of your tier before you can face the next gym leader (your extra region also waits until its tier is caught).
 
 And from `ucp-spawn.json`:

@@ -22,7 +22,8 @@
       "trigger": "ultimate-cobblemon-progression:defeat_trainer",
       "conditions": {
         "trainers": [
-          "elite_four_flint_03a1"
+          "elite_four_flint_03a1",
+          "elite_four_flint_03a1_hard"
         ]
       }
     }

@@ -5,7 +5,9 @@
       "conditions": {
         "trainers": [
           "leader_koga_01a2",
-          "gym_leader_fantina_03d9"
+          "leader_koga_01a2_hard",
+          "gym_leader_fantina_03d9",
+          "gym_leader_fantina_03d9_hard"
         ]
       }
     }

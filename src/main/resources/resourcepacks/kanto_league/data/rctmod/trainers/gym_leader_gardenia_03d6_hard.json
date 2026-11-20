@@ -1,0 +1,120 @@
+{
+  "name": "Gym Leader Gardenia",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.05
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:super_potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:cherubi",
+      "gender": "FEMALE",
+      "level": 19,
+      "nature": "cobblemon:modest",
+      "ability": "chlorophyll",
+      "moveset": ["grassknot", "growth", "dazzlinggleam", "morningsun"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["eviolite"]
+    },
+    {
+      "species": "cobblemon:tangela",
+      "gender": "FEMALE",
+      "level": 20,
+      "nature": "cobblemon:calm",
+      "ability": "regenerator",
+      "moveset": ["megadrain", "poisonpowder", "ancientpower", "knockoff"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 4,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      },
+      "heldItem": ["eviolite"]
+    },
+    {
+      "species": "cobblemon:turtwig",
+      "gender": "MALE",
+      "level": 21,
+      "nature": "cobblemon:impish",
+      "ability": "shellarmor",
+      "moveset": ["razorleaf", "bite", "curse", "synthesis"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": ["eviolite"]
+    },
+    {
+      "species": "cobblemon:roserade",
+      "gender": "MALE",
+      "level": 22,
+      "nature": "cobblemon:timid",
+      "ability": "technician",
+      "moveset": ["magicalleaf", "sludgebomb", "stunspore", "leechseed"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["sitrus_berry"]
+    }
+  ]
+}

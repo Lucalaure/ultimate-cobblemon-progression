@@ -1,6 +1,6 @@
 {
   "levelCap": 21,
-  "trainers": ["leader_brock_019e"],
+  "trainers": [["leader_brock_019e", "leader_brock_019e_hard"]],
   "requirements": {
     "advancements": ["ultimate-cobblemon-progression:journey/kanto/boulder_badge"]
   },

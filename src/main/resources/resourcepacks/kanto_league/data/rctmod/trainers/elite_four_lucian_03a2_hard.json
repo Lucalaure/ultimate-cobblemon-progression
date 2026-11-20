@@ -1,0 +1,169 @@
+{
+  "name": "Elite Four Lucian",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.05
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:mrmime",
+      "gender": "FEMALE",
+      "level": 59,
+      "nature": "cobblemon:timid",
+      "ability": "filter",
+      "moveset": ["lightscreen", "reflect", "psychic", "dazzlinggleam"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["light_clay"]
+    },
+    {
+      "species": "cobblemon:girafarig",
+      "gender": "MALE",
+      "level": 59,
+      "nature": "cobblemon:calm",
+      "ability": "sapsipper",
+      "moveset": ["nastyplot", "psychic", "thunderbolt", "shadowball"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 4,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      },
+      "heldItem": ["leftovers"]
+    },
+    {
+      "species": "cobblemon:medicham",
+      "gender": "MALE",
+      "level": 60,
+      "nature": "cobblemon:jolly",
+      "ability": "purepower",
+      "moveset": ["zenheadbutt", "highjumpkick", "icepunch", "bulletpunch"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["expert_belt"]
+    },
+    {
+      "species": "cobblemon:gallade",
+      "gender": "MALE",
+      "level": 59,
+      "nature": "cobblemon:adamant",
+      "ability": "justified",
+      "moveset": ["closecombat", "psychocut", "leafblade", "swordsdance"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      }
+    },
+    {
+      "species": "cobblemon:alakazam",
+      "gender": "FEMALE",
+      "level": 60,
+      "nature": "cobblemon:timid",
+      "ability": "magicguard",
+      "moveset": ["nastyplot", "psychic", "focusblast", "shadowball"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["life_orb"]
+    },
+    {
+      "species": "cobblemon:bronzong",
+      "gender": "GENDERLESS",
+      "level": 63,
+      "nature": "cobblemon:relaxed",
+      "ability": "levitate",
+      "moveset": ["gyroball", "earthquake", "stealthrock", "trickroom"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": ["leftovers"]
+    }
+  ]
+}

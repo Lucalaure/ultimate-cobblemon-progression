@@ -1,6 +1,6 @@
 {
   "levelCap": 29,
-  "trainers": ["leader_lt_surge_01a0"],
+  "trainers": [["leader_lt_surge_01a0", "leader_lt_surge_01a0_hard"]],
   "requirements": {
     "advancements": ["ultimate-cobblemon-progression:journey/kanto/thunder_badge"]
   },

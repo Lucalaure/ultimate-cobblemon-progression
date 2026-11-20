@@ -1,0 +1,15 @@
+{
+  "type": "leader",
+  "series": ["sinnoh"],
+  "optional": true,
+  "requiredDefeats": [
+    ["gym_leader_fantina_03d9"]
+  ],
+  "maxTrainerDefeats": 1,
+  "maxTrainerWins": -1,
+  "battleCooldownTicks": 240,
+  "signatureItem": "cobblemon:metal_coat",
+  "spawnWeightFactor": 0,
+  "biomeTagWhitelist": ["is_cave", "is_plateau", "is_mountain", "is_hill"],
+  "biomeTagBlacklist": ["is_void", "is_nether", "is_end"]
+}

@@ -13,6 +13,7 @@ import org.ppvon.ultimateCobblemonProgression.common.card.TrainerCardData.RoadEn
 import org.ppvon.ultimateCobblemonProgression.common.card.TrainerCardData.WildGroup;
 import org.ppvon.ultimateCobblemonProgression.common.card.TrainerCardData.WildSpecies;
 import org.ppvon.ultimateCobblemonProgression.common.component.TrainerLevelComponents;
+import org.ppvon.ultimateCobblemonProgression.common.gym.GymDifficulty;
 import org.ppvon.ultimateCobblemonProgression.common.gym.RctBridge;
 import org.ppvon.ultimateCobblemonProgression.common.progression.dex.DexProgressionApi;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionCommands;
@@ -125,9 +126,12 @@ final class TrainerCardDataBuilder {
         }
 
         var counts = DexProgressionApi.get(player);
+        boolean difficulties = GymDifficulty.available();
         return new TrainerCardData(player.getGameProfile().getName(), true, region.title, step, region.maxTier(),
                 levelCap(player, region, step), counts.seen(), counts.caught(), next, hint, allDone,
-                road, regionEntries, wild, regionChoices, choosingNext);
+                road, regionEntries, wild, regionChoices, choosingNext,
+                difficulties ? GymDifficulty.of(player).title : "", difficulties && GymDifficulty.playerChooses(),
+                GymDifficulty.needsChoice(player));
     }
 
     /** The trainers listed in a region's tiers, with the player's status against each. */
@@ -153,7 +157,10 @@ final class TrainerCardDataBuilder {
                     status = NEXT;
                     nextFound = true;
                 } else status = LATER;
-                road.add(new RoadEntry(tier.index, region.levelCap(tier.index), trainerName(group.get(0)), status));
+                // Beaten on Hard: the slot's Hard version is the one the player beat.
+                String hardId = GymDifficulty.hardVersion(group);
+                boolean hard = beaten && hardId != null && RctBridge.isLoaded() && RctBridge.defeats(player, hardId) > 0;
+                road.add(new RoadEntry(tier.index, region.levelCap(tier.index), trainerName(group.get(0)), status, hard));
             }
         }
         return road;
@@ -193,7 +200,7 @@ final class TrainerCardDataBuilder {
         return new TrainerCardData(player.getGameProfile().getName(), false, "Trainer level", level, TierRegistry.maxTier(),
                 TierRegistry.getCapForTier(level), counts.seen(), counts.caught(), Component.empty(), hint,
                 TierRegistry.get(level + 1).isEmpty(), List.of(), List.of(),
-                List.of(new WildGroup("Your level", upcoming, species)), List.of(), false);
+                List.of(new WildGroup("Your level", upcoming, species)), List.of(), false, "", false, false);
     }
 
     // ------------------------------------------------------------------ shared

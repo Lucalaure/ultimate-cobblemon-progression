@@ -1,0 +1,119 @@
+{
+  "name": "Leader Erika",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.05
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:tangela",
+      "gender": "FEMALE",
+      "level": 27,
+      "nature": "cobblemon:calm",
+      "ability": "regenerator",
+      "moveset": ["gigadrain", "poisonpowder", "knockoff", "ancientpower"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 4,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      },
+      "heldItem": ["eviolite"]
+    },
+    {
+      "species": "cobblemon:bellossom",
+      "gender": "FEMALE",
+      "level": 28,
+      "nature": "cobblemon:modest",
+      "ability": "chlorophyll",
+      "moveset": ["quiverdance", "gigadrain", "moonblast", "sunnyday"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      }
+    },
+    {
+      "species": "cobblemon:victreebel",
+      "gender": "FEMALE",
+      "level": 29,
+      "nature": "cobblemon:modest",
+      "ability": "chlorophyll",
+      "moveset": ["leafblade", "sludgebomb", "sleeppowder", "sunnyday"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["miracle_seed"]
+    },
+    {
+      "species": "cobblemon:vileplume",
+      "gender": "FEMALE",
+      "level": 29,
+      "nature": "cobblemon:modest",
+      "ability": "chlorophyll",
+      "moveset": ["gigadrain", "sludgebomb", "stunspore", "moonlight"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": ["sitrus_berry"]
+    }
+  ]
+}

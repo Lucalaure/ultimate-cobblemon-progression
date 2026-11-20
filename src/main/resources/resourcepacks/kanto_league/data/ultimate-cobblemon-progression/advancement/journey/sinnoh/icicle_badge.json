@@ -22,7 +22,8 @@
       "trigger": "ultimate-cobblemon-progression:defeat_trainer",
       "conditions": {
         "trainers": [
-          "gym_leader_candice_03da"
+          "gym_leader_candice_03da",
+          "gym_leader_candice_03da_hard"
         ]
       }
     }

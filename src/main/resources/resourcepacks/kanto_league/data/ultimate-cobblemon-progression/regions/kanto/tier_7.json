@@ -1,6 +1,6 @@
 {
   "levelCap": 47,
-  "trainers": ["leader_sabrina_01a4"],
+  "trainers": [["leader_sabrina_01a4", "leader_sabrina_01a4_hard"]],
   "requirements": {
     "advancements": ["ultimate-cobblemon-progression:journey/kanto/marsh_badge"]
   },

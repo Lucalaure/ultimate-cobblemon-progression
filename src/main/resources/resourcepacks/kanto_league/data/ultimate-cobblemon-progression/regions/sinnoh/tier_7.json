@@ -1,6 +1,6 @@
 {
   "levelCap": 42,
-  "trainers": ["gym_leader_byron_0399"],
+  "trainers": [["gym_leader_byron_0399", "gym_leader_byron_0399_hard"]],
   "requirements": {
     "advancements": ["ultimate-cobblemon-progression:journey/sinnoh/mine_badge"]
   },

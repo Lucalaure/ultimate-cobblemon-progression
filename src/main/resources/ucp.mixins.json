@@ -9,7 +9,8 @@
     "PlayerAdvancementsMixin",
     "StructureTemplatePoolAccessor",
     "JigsawPlacementMixin",
-    "RctDefeatCountTriggerMixin"
+    "RctDefeatCountTriggerMixin",
+    "RctHardTrainerResourcesMixin"
   ],
   "injectors": {
     "defaultRequire": 1

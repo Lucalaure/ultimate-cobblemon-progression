@@ -1,6 +1,6 @@
 {
   "levelCap": 50,
-  "trainers": ["leader_blaine_01a3"],
+  "trainers": [["leader_blaine_01a3", "leader_blaine_01a3_hard"]],
   "requirements": {
     "advancements": ["ultimate-cobblemon-progression:journey/kanto/volcano_badge"]
   },

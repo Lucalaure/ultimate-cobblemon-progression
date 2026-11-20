@@ -1,0 +1,119 @@
+{
+  "name": "Gym Leader Roark",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.05
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:super_potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:geodude",
+      "gender": "MALE",
+      "level": 12,
+      "nature": "cobblemon:impish",
+      "ability": "sturdy",
+      "moveset": ["stealthrock", "defensecurl", "rollout", "rocktomb"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": ["oran_berry"]
+    },
+    {
+      "species": "cobblemon:onix",
+      "gender": "FEMALE",
+      "level": 12,
+      "nature": "cobblemon:adamant",
+      "ability": "sturdy",
+      "moveset": ["rockthrow", "bind", "dragonbreath", "smackdown"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      }
+    },
+    {
+      "species": "cobblemon:nosepass",
+      "gender": "MALE",
+      "level": 13,
+      "nature": "cobblemon:impish",
+      "ability": "sturdy",
+      "moveset": ["thunderwave", "rockthrow", "block", "tackle"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": ["sitrus_berry"]
+    },
+    {
+      "species": "cobblemon:cranidos",
+      "gender": "MALE",
+      "level": 14,
+      "nature": "cobblemon:jolly",
+      "ability": "moldbreaker",
+      "moveset": ["headbutt", "bulldoze", "rocktomb", "scaryface"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["hard_stone"]
+    }
+  ]
+}

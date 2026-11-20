@@ -5,7 +5,9 @@
       "conditions": {
         "trainers": [
           "leader_sabrina_01a4",
-          "gym_leader_byron_0399"
+          "leader_sabrina_01a4_hard",
+          "gym_leader_byron_0399",
+          "gym_leader_byron_0399_hard"
         ]
       }
     }

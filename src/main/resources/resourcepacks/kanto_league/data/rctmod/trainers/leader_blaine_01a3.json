@@ -1,7 +1,13 @@
 {
   "name": "Leader Blaine",
   "ai": {
-    "type": "rct"
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
   },
   "bag": [
     {
@@ -16,7 +22,15 @@
       "level": 42,
       "nature": "cobblemon:adamant",
       "ability": "intimidate",
-      "moveset": ["flamewheel", "bite", "roar", "takedown"]
+      "moveset": ["flamewheel", "bite", "roar", "takedown"],
+      "ivs": {
+        "hp": 22,
+        "atk": 22,
+        "def": 22,
+        "spa": 22,
+        "spd": 22,
+        "spe": 22
+      }
     },
     {
       "species": "cobblemon:ponyta",
@@ -24,7 +38,15 @@
       "level": 40,
       "nature": "cobblemon:jolly",
       "ability": "flashfire",
-      "moveset": ["flamecharge", "stomp", "firespin", "agility"]
+      "moveset": ["flamecharge", "stomp", "firespin", "agility"],
+      "ivs": {
+        "hp": 22,
+        "atk": 22,
+        "def": 22,
+        "spa": 22,
+        "spd": 22,
+        "spe": 22
+      }
     },
     {
       "species": "cobblemon:rapidash",
@@ -32,7 +54,15 @@
       "level": 42,
       "nature": "cobblemon:jolly",
       "ability": "flashfire",
-      "moveset": ["firespin", "stomp", "takedown", "bounce"]
+      "moveset": ["firespin", "stomp", "takedown", "bounce"],
+      "ivs": {
+        "hp": 22,
+        "atk": 22,
+        "def": 22,
+        "spa": 22,
+        "spd": 22,
+        "spe": 22
+      }
     },
     {
       "species": "cobblemon:arcanine",
@@ -40,7 +70,15 @@
       "level": 47,
       "nature": "cobblemon:adamant",
       "ability": "intimidate",
-      "moveset": ["flareblitz", "extremespeed", "crunch", "roar"]
+      "moveset": ["flareblitz", "extremespeed", "crunch", "roar"],
+      "ivs": {
+        "hp": 22,
+        "atk": 22,
+        "def": 22,
+        "spa": 22,
+        "spd": 22,
+        "spe": 22
+      }
     }
   ]
 }

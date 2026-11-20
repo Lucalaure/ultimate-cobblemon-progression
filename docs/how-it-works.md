@@ -207,6 +207,7 @@ On a dedicated server, edit the **server's** files and restart it; the in-game s
 | `giveTrainerCard` | `true` | Give every player a [Trainer Card](#trainer-card) on their first join. |
 | `gymVillageChance` | `0.3` | Share of newly generated villages (0 to 0.95) whose centre is a [gym](#gyms). `0` turns village gyms off. Takes effect the next time a world starts. |
 | `gymTeamLimit` | `false` | Difficulty option: you can bring no more Pokémon to a [gym](#gyms) battle than the leader has. |
+| `gymDifficulty` | `"player_choice"` | [Gym difficulty](#gym-difficulty): `"player_choice"` lets each player pick Normal or Hard leaders on their Trainer Card and change it any time; `"normal"` or `"hard"` sets it for everyone. |
 | `catchWholeTier` | `false` | Difficulty option (region mode): to reach a region's next tier, you also have to catch every obtainable Pokémon of your current tier there. Gyms won't summon a league's next leader until you have, and your extra starting region waits at its tier until it's caught. See [Catch every Pokémon](#catch-every-pokémon-optional). |
 
 ---
@@ -269,6 +270,7 @@ In region mode, `/trainerlevel get` instead lists every region: its tier and wha
 | `/trainerlevel region next <region>` | Everyone | Picks the region your journey continues in, once your current region is complete. Same as picking it on the Trainer Card. |
 | `/trainerlevel region choose <region>` | Everyone | Picks your extra starting region (once). Only regions that aren't open yet can be picked. |
 | `/trainerlevel region reset <player>` | Operator (level 2) | Clears a player's extra starting region choice. It doesn't touch their home region or the regions they travelled to: those picks can't be undone by command. |
+| `/trainerlevel difficulty [normal\|hard]` | Everyone | Shows your [gym difficulty](#gym-difficulty), or changes it (when the server lets players choose). Same as the Trainer Card's Road tab. |
 
 ---
 
@@ -530,16 +532,37 @@ Each entry is a Radical Cobblemon Trainers trainer id. A nested list means "any 
 
 **Team limit (optional).** With `gymTeamLimit` on in `ucp-common.json`, you can bring no more Pokémon to a gym battle than the leader has: Brock has 2, so you can bring at most 2. The leader says so when it accepts your challenge. If your party is bigger, the battle doesn't start, and you're told how many to put in the PC. Every Pokémon in your party counts, fainted ones included. It applies to every trainer a Gym Challenge block summons, the Elite Four and Champion included.
 
+### Gym difficulty
+
+Every leader, Elite Four member and Champion in the built-in leagues comes in two versions:
+
+| | Normal | Hard |
+|---|---|---|
+| Team | As in the original games | The same, plus 1 to 2 Pokémon for most leaders. The Elite Four have 6. |
+| Levels | As in the original games | The same |
+| IVs | All six equal, rising through the journey: 6 for the first gym, 24 for the eighth, 28 for the Elite Four, 31 for the Champion | 31 |
+| EVs | None | Trained for each Pokémon's role |
+| Held items | As in the original games (none in Kanto) | Fitting the point in the journey: berries and type boosters early, Leftovers, Life Orb and Focus Sash later |
+| Moves | As in the original games | Built as a set: setup moves, coverage, hazards |
+| AI | Sharper than RCT's default | Sharper still |
+| Bag | As in the original games, 2 uses per battle | 2 Super Potions, Hyper Potions or Full Restores, 2 uses per battle |
+
+**Choosing.** After you pick where your journey starts, your Trainer Card asks **Choose your challenge**: Normal or Hard. You can switch at any time on the card's Road tab, or with `/trainerlevel difficulty <normal|hard>`. The change applies from the next leader a gym summons (a leader already waiting keeps its team), and badges you already have stay as they are. The Road tab marks the leaders you beat on Hard. A server can set `gymDifficulty` in `ucp-common.json` to `"normal"` or `"hard"` for everyone; then the card doesn't ask.
+
+**Either version counts.** Beating the Hard leader earns the same badge and opens the same tier. Radical Cobblemon Trainers' level cap and trainer order follow the Normal leaders, so CJP also marks the Normal leader as beaten in RCT when you beat the Hard one. Your level cap rises the same way whichever you fought. The Hard leader looks and talks like the Normal one, so trainer texture packs cover both.
+
+**For datapacks.** A Hard leader is an RCT trainer whose id is the Normal one's plus `_hard` (`leader_brock_019e_hard`), listed after it in the tier file's slot: `["leader_brock_019e", "leader_brock_019e_hard"]`. Its RCT trainer data (`mobs/trainers/single/`) should be a copy of the Normal one's with `"optional": true`, so RCT's series ignores it. Slots without a `_hard` entry summon the same trainer on both difficulties.
+
 `scripts/convert-rgs-gyms.py` builds the gym files from RGS: it removes RGS's command blocks and adds the Gym Challenge block, the bell and the jigsaw blocks that connect a gym to its village.
 
 ---
 
 ## Trainer Card
 
-Every player gets a **Trainer Card** the first time they join (turn this off with `giveTrainerCard`). Using it opens a Pokédex-style screen, worked out fresh by the server each time. The first time, it asks where your journey starts ([see above](#choosing-where-your-journey-starts)), and each time you complete a region it asks where your journey goes next ([see above](#moving-on-to-your-next-region)); **Not now** skips that question until the card is opened again. Every pick asks you to confirm first. Otherwise the card has four tabs:
+Every player gets a **Trainer Card** the first time they join (turn this off with `giveTrainerCard`). Using it opens a Pokédex-style screen, worked out fresh by the server each time. The first time, it asks where your journey starts ([see above](#choosing-where-your-journey-starts)), and each time you complete a region it asks where your journey goes next ([see above](#moving-on-to-your-next-region)); **Not now** skips that question until the card is opened again. Every pick asks you to confirm first. Once your journey has started, it also asks you to [choose your challenge](#gym-difficulty) once: Normal or Hard gym leaders. Otherwise the card has four tabs:
 
 - **Profile:** your current region (the one your journey is in) and tier, your level cap (Radical Cobblemon Trainers' cap when it's installed, otherwise the tier's), trainers beaten, Pokédex counts, and your next challenge. Between regions, it reminds you to choose where your journey goes next.
-- **Road:** every trainer the region's tiers list, in order, marked ✔ beaten, ▶ next or • later, with each one's tier and level cap. Trainers of tiers you've unlocked always count as beaten.
+- **Road:** your gym difficulty, with a button to switch it, then every trainer the region's tiers list, in order, marked ✔ beaten, ▶ next or • later, with each one's tier and level cap. Trainers of tiers you've unlocked always count as beaten, and the ones you beat on Hard are tagged **HARD**.
 - **Regions:** where you stand in every region: complete, a progress bar for the tier you're on, or locked. Until you've picked your [extra starting region](#picking-a-second-starting-region), this tab also has a **Pick** button on each one that isn't open yet (and the tab is marked **!**).
 - **Wild Pokémon:** every species that can currently spawn for you, per open region, with Cobblemon's caught/seen marker from your Pokédex and how many the next tier adds. Hover a species for its number and types.
 

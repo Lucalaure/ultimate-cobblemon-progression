@@ -22,7 +22,8 @@
       "trigger": "ultimate-cobblemon-progression:defeat_trainer",
       "conditions": {
         "trainers": [
-          "gym_leader_maylene_03d8"
+          "gym_leader_maylene_03d8",
+          "gym_leader_maylene_03d8_hard"
         ]
       }
     }

@@ -1,6 +1,6 @@
 {
   "levelCap": 57,
-  "trainers": ["gym_leader_volkner_03db"],
+  "trainers": [["gym_leader_volkner_03db", "gym_leader_volkner_03db_hard"]],
   "requirements": {
     "advancements": ["ultimate-cobblemon-progression:journey/sinnoh/beacon_badge"]
   },

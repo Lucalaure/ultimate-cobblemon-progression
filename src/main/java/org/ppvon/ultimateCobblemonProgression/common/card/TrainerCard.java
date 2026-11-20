@@ -21,6 +21,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.Level;
 import org.ppvon.ultimateCobblemonProgression.UltimateCobblemonProgression;
+import org.ppvon.ultimateCobblemonProgression.common.gym.GymDifficulty;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionCommands;
 import org.ppvon.ultimateCobblemonProgression.config.ConfigLoader;
 
@@ -55,11 +56,12 @@ public final class TrainerCard {
             RegionCommands.Choice result = switch (payload.kind()) {
                 case PickRegionPayload.HOME -> RegionCommands.chooseHomeRegion(player, payload.regionId());
                 case PickRegionPayload.NEXT -> RegionCommands.chooseNextRegion(player, payload.regionId());
+                case PickRegionPayload.DIFFICULTY -> GymDifficulty.choose(player, payload.regionId());
                 default -> RegionCommands.chooseStartRegion(player, payload.regionId());
             };
             player.displayClientMessage(result.ok() ? result.message()
                     : result.message().copy().withStyle(ChatFormatting.RED), false);
-            open(player); // show the card again with the new region open
+            open(player); // show the card again with the new choice in place
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(entries -> entries.accept(ITEM));
     }

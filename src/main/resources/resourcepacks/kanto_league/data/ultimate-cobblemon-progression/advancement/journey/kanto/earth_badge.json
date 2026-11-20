@@ -22,7 +22,8 @@
       "trigger": "ultimate-cobblemon-progression:defeat_trainer",
       "conditions": {
         "trainers": [
-          "leader_giovanni_015e"
+          "leader_giovanni_015e",
+          "leader_giovanni_015e_hard"
         ]
       }
     }

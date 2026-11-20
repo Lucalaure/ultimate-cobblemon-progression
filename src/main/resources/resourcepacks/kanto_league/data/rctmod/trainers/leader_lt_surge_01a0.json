@@ -1,7 +1,13 @@
 {
   "name": "Leader Lt. Surge",
   "ai": {
-    "type": "rct"
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
   },
   "bag": [
     {
@@ -16,7 +22,15 @@
       "level": 21,
       "nature": "cobblemon:hasty",
       "ability": "static",
-      "moveset": ["spark", "screech", "rollout", "chargebeam"]
+      "moveset": ["spark", "screech", "rollout", "chargebeam"],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
     },
     {
       "species": "cobblemon:pikachu",
@@ -24,7 +38,15 @@
       "level": 18,
       "nature": "cobblemon:timid",
       "ability": "static",
-      "moveset": ["thundershock", "quickattack", "thunderwave", "electroball"]
+      "moveset": ["thundershock", "quickattack", "thunderwave", "electroball"],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
     },
     {
       "species": "cobblemon:raichu",
@@ -32,7 +54,15 @@
       "level": 24,
       "nature": "cobblemon:hasty",
       "ability": "static",
-      "moveset": ["thunderbolt", "quickattack", "thunderwave", "doubleteam"]
+      "moveset": ["thunderbolt", "quickattack", "thunderwave", "doubleteam"],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
     }
   ]
 }

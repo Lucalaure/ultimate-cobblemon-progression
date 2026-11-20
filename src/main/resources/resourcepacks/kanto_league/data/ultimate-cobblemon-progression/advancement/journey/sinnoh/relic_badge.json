@@ -22,7 +22,8 @@
       "trigger": "ultimate-cobblemon-progression:defeat_trainer",
       "conditions": {
         "trainers": [
-          "gym_leader_fantina_03d9"
+          "gym_leader_fantina_03d9",
+          "gym_leader_fantina_03d9_hard"
         ]
       }
     }

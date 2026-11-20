@@ -1,7 +1,13 @@
 {
   "name": "Leader Brock",
   "ai": {
-    "type": "rct"
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
   },
   "bag": [
     {
@@ -16,7 +22,15 @@
       "level": 12,
       "nature": "cobblemon:impish",
       "ability": "sturdy",
-      "moveset": ["tackle", "defensecurl", "rockthrow"]
+      "moveset": ["tackle", "defensecurl", "rockthrow"],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      }
     },
     {
       "species": "cobblemon:onix",
@@ -24,7 +38,15 @@
       "level": 14,
       "nature": "cobblemon:adamant",
       "ability": "sturdy",
-      "moveset": ["tackle", "bind", "harden", "rocktomb"]
+      "moveset": ["tackle", "bind", "harden", "rocktomb"],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      }
     }
   ]
 }

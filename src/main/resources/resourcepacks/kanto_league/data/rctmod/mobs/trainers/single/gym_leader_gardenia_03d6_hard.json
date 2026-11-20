@@ -1,0 +1,15 @@
+{
+  "type": "leader",
+  "series": ["sinnoh"],
+  "optional": true,
+  "requiredDefeats": [
+    ["gym_leader_roark_0395"]
+  ],
+  "maxTrainerDefeats": 1,
+  "maxTrainerWins": -1,
+  "battleCooldownTicks": 240,
+  "signatureItem": "minecraft:sunflower",
+  "spawnWeightFactor": 0,
+  "biomeTagWhitelist": ["is_dense_vegetation", "is_lush"],
+  "biomeTagBlacklist": ["is_void", "is_nether", "is_end"]
+}

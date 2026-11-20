@@ -22,7 +22,8 @@
       "trigger": "ultimate-cobblemon-progression:defeat_trainer",
       "conditions": {
         "trainers": [
-          "elite_four_lorelei_004e"
+          "elite_four_lorelei_004e",
+          "elite_four_lorelei_004e_hard"
         ]
       }
     }

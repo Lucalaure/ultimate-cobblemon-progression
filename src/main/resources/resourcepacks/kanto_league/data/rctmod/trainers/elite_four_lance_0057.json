@@ -1,7 +1,13 @@
 {
   "name": "Elite Four Lance",
   "ai": {
-    "type": "rct"
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
   },
   "bag": [
     {
@@ -20,7 +26,15 @@
       "level": 56,
       "nature": "cobblemon:adamant",
       "ability": "intimidate",
-      "moveset": ["waterfall", "dragondance", "earthquake", "crunch"]
+      "moveset": ["waterfall", "dragondance", "earthquake", "crunch"],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      }
     },
     {
       "species": "cobblemon:dragonair",
@@ -28,7 +42,15 @@
       "level": 54,
       "nature": "cobblemon:modest",
       "ability": "shedskin",
-      "moveset": ["dragonpulse", "thunderbolt", "flamethrower", "thunderwave"]
+      "moveset": ["dragonpulse", "thunderbolt", "flamethrower", "thunderwave"],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      }
     },
     {
       "species": "cobblemon:dragonair",
@@ -36,7 +58,15 @@
       "level": 54,
       "nature": "cobblemon:adamant",
       "ability": "marvelscale",
-      "moveset": ["outrage", "aquatail", "extremespeed", "dragondance"]
+      "moveset": ["outrage", "aquatail", "extremespeed", "dragondance"],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      }
     },
     {
       "species": "cobblemon:aerodactyl",
@@ -44,7 +74,15 @@
       "level": 58,
       "nature": "cobblemon:jolly",
       "ability": "rockhead",
-      "moveset": ["stoneedge", "crunch", "earthquake", "aerialace"]
+      "moveset": ["stoneedge", "crunch", "earthquake", "aerialace"],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      }
     },
     {
       "species": "cobblemon:dragonite",
@@ -52,7 +90,15 @@
       "level": 60,
       "nature": "cobblemon:adamant",
       "ability": "innerfocus",
-      "moveset": ["outrage", "extremespeed", "earthquake", "firepunch"]
+      "moveset": ["outrage", "extremespeed", "earthquake", "firepunch"],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      }
     }
   ]
 }

@@ -5,7 +5,9 @@
       "conditions": {
         "trainers": [
           "leader_giovanni_015e",
-          "gym_leader_volkner_03db"
+          "leader_giovanni_015e_hard",
+          "gym_leader_volkner_03db",
+          "gym_leader_volkner_03db_hard"
         ]
       }
     }

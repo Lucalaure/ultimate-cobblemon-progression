@@ -1,0 +1,15 @@
+{
+  "type": "leader",
+  "series": ["sinnoh"],
+  "optional": true,
+  "requiredDefeats": [
+    ["gym_leader_gardenia_03d6"]
+  ],
+  "maxTrainerDefeats": 1,
+  "maxTrainerWins": -1,
+  "battleCooldownTicks": 240,
+  "signatureItem": "cobblemon:black_belt",
+  "spawnWeightFactor": 0,
+  "biomeTagWhitelist": ["is_peak", "is_hill", "is_mountain"],
+  "biomeTagBlacklist": ["is_void", "is_nether", "is_end", "is_water", "is_underground"]
+}

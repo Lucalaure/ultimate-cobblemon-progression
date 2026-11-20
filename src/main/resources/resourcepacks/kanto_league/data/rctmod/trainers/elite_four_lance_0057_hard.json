@@ -1,0 +1,170 @@
+{
+  "name": "Elite Four Lance",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.05
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:gyarados",
+      "gender": "MALE",
+      "level": 56,
+      "nature": "cobblemon:adamant",
+      "ability": "intimidate",
+      "moveset": ["dragondance", "waterfall", "earthquake", "icefang"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["leftovers"]
+    },
+    {
+      "species": "cobblemon:dragonair",
+      "gender": "MALE",
+      "level": 54,
+      "nature": "cobblemon:adamant",
+      "ability": "marvelscale",
+      "moveset": ["dragondance", "outrage", "extremespeed", "aquatail"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["eviolite"]
+    },
+    {
+      "species": "cobblemon:dragonair",
+      "gender": "MALE",
+      "level": 54,
+      "nature": "cobblemon:modest",
+      "ability": "shedskin",
+      "moveset": ["dragonpulse", "thunderbolt", "flamethrower", "thunderwave"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["eviolite"]
+    },
+    {
+      "species": "cobblemon:kingdra",
+      "gender": "MALE",
+      "level": 56,
+      "nature": "cobblemon:modest",
+      "ability": "sniper",
+      "moveset": ["dracometeor", "surf", "icebeam", "focusenergy"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["scope_lens"]
+    },
+    {
+      "species": "cobblemon:aerodactyl",
+      "gender": "MALE",
+      "level": 58,
+      "nature": "cobblemon:jolly",
+      "ability": "rockhead",
+      "moveset": ["stealthrock", "stoneedge", "earthquake", "taunt"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["focus_sash"]
+    },
+    {
+      "species": "cobblemon:dragonite",
+      "gender": "MALE",
+      "level": 60,
+      "nature": "cobblemon:adamant",
+      "ability": "multiscale",
+      "moveset": ["dragondance", "outrage", "extremespeed", "earthquake"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["lum_berry"]
+    }
+  ]
+}

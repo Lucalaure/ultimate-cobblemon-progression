@@ -22,7 +22,8 @@
       "trigger": "ultimate-cobblemon-progression:defeat_trainer",
       "conditions": {
         "trainers": [
-          "gym_leader_volkner_03db"
+          "gym_leader_volkner_03db",
+          "gym_leader_volkner_03db_hard"
         ]
       }
     }

@@ -1,0 +1,120 @@
+{
+  "name": "Gym Leader Fantina",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.05
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:drifblim",
+      "gender": "FEMALE",
+      "level": 32,
+      "nature": "cobblemon:calm",
+      "ability": "unburden",
+      "moveset": ["strengthsap", "hex", "willowisp", "minimize"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 4,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      },
+      "heldItem": ["sitrus_berry"]
+    },
+    {
+      "species": "cobblemon:dusclops",
+      "gender": "FEMALE",
+      "level": 33,
+      "nature": "cobblemon:impish",
+      "ability": "frisk",
+      "moveset": ["willowisp", "nightshade", "painsplit", "shadowsneak"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": ["eviolite"]
+    },
+    {
+      "species": "cobblemon:gengar",
+      "gender": "MALE",
+      "level": 34,
+      "nature": "cobblemon:timid",
+      "ability": "cursedbody",
+      "moveset": ["shadowball", "sludgebomb", "dazzlinggleam", "hypnosis"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["focus_sash"]
+    },
+    {
+      "species": "cobblemon:mismagius",
+      "gender": "FEMALE",
+      "level": 36,
+      "nature": "cobblemon:timid",
+      "ability": "levitate",
+      "moveset": ["shadowball", "dazzlinggleam", "thunderbolt", "nastyplot"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["life_orb"]
+    }
+  ]
+}

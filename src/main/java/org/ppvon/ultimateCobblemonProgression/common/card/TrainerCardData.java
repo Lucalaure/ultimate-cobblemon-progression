@@ -17,6 +17,10 @@ import java.util.List;
  * @param hint       a line under the next challenge (how to unlock the next tier, or a reminder)
  * @param regionChoices regions the card asks the player to pick from before showing anything else: where their
  *                   journey starts, or (with {@code choosingNext}) where it goes next. Empty when there's nothing to pick
+ * @param difficulty  the gym difficulty the player's next leader is summoned at ("Normal" or "Hard"), or "" when there are
+ *                   no Hard leaders
+ * @param difficultyChangeable whether the player can change it (players choose, rather than the server config)
+ * @param choosingDifficulty   whether the card first asks the player to pick a difficulty
  */
 public record TrainerCardData(
         String player,
@@ -34,14 +38,17 @@ public record TrainerCardData(
         List<RegionEntry> regions,
         List<WildGroup> wild,
         List<RegionChoice> regionChoices,
-        boolean choosingNext
+        boolean choosingNext,
+        String difficulty,
+        boolean difficultyChangeable,
+        boolean choosingDifficulty
 ) {
     public static final int BEATEN = 0, NEXT = 1, LATER = 2;
     public static final int LOCKED = 0, OPEN = 1, COMPLETE = 2;
     public static final int UNKNOWN = 0, SEEN = 1, CAUGHT = 2;
 
     /** A trainer in the region's order. */
-    public record RoadEntry(int tier, int levelCap, Component name, int status) {}
+    public record RoadEntry(int tier, int levelCap, Component name, int status, boolean hard) {}
 
     /**
      * A region and the player's standing in it.
@@ -97,6 +104,7 @@ public record TrainerCardData(
             buf.writeVarInt(r.levelCap);
             ComponentSerialization.STREAM_CODEC.encode(buf, r.name);
             buf.writeVarInt(r.status);
+            buf.writeBoolean(r.hard);
         }
         buf.writeVarInt(d.regions.size());
         for (RegionEntry r : d.regions) {
@@ -128,6 +136,9 @@ public record TrainerCardData(
             buf.writeVarInt(h.species);
             ComponentSerialization.STREAM_CODEC.encode(buf, h.firstTrainer);
         }
+        buf.writeUtf(d.difficulty);
+        buf.writeBoolean(d.difficultyChangeable);
+        buf.writeBoolean(d.choosingDifficulty);
     }
 
     private static TrainerCardData read(RegistryFriendlyByteBuf buf) {
@@ -145,7 +156,8 @@ public record TrainerCardData(
 
         List<RoadEntry> road = new ArrayList<>();
         for (int i = buf.readVarInt(); i > 0; i--) {
-            road.add(new RoadEntry(buf.readVarInt(), buf.readVarInt(), ComponentSerialization.STREAM_CODEC.decode(buf), buf.readVarInt()));
+            road.add(new RoadEntry(buf.readVarInt(), buf.readVarInt(), ComponentSerialization.STREAM_CODEC.decode(buf), buf.readVarInt(),
+                    buf.readBoolean()));
         }
         List<RegionEntry> regions = new ArrayList<>();
         for (int i = buf.readVarInt(); i > 0; i--) {
@@ -166,7 +178,11 @@ public record TrainerCardData(
             regionChoices.add(new RegionChoice(buf.readUtf(), buf.readUtf(), buf.readVarInt(), buf.readVarInt(),
                     ComponentSerialization.STREAM_CODEC.decode(buf)));
         }
+        String difficulty = buf.readUtf();
+        boolean difficultyChangeable = buf.readBoolean();
+        boolean choosingDifficulty = buf.readBoolean();
         return new TrainerCardData(player, regionMode, regionTitle, tier, maxTier, levelCap, seen, caught,
-                next, hint, allDone, road, regions, wild, regionChoices, choosingNext);
+                next, hint, allDone, road, regions, wild, regionChoices, choosingNext, difficulty, difficultyChangeable,
+                choosingDifficulty);
     }
 }

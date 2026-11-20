@@ -22,7 +22,8 @@
       "trigger": "ultimate-cobblemon-progression:defeat_trainer",
       "conditions": {
         "trainers": [
-          "leader_brock_019e"
+          "leader_brock_019e",
+          "leader_brock_019e_hard"
         ]
       }
     }

@@ -17,6 +17,7 @@ public class TrainerLevelComponentImpl implements TrainerLevelComponent, AutoSyn
     private int level = 1;
     private String startRegion = null;
     private String homeRegion = null;
+    private String gymDifficulty = null;
     private final List<String> nextRegions = new ArrayList<>();
     private final Player player;
     private boolean loadedFromNbt = false;
@@ -79,6 +80,17 @@ public class TrainerLevelComponentImpl implements TrainerLevelComponent, AutoSyn
     }
 
     @Override
+    public Optional<String> getGymDifficulty() {
+        return Optional.ofNullable(gymDifficulty);
+    }
+
+    @Override
+    public void setGymDifficulty(String difficultyId) {
+        this.gymDifficulty = difficultyId;
+        TrainerLevelComponents.KEY.sync(this.player);
+    }
+
+    @Override
     public void readFromNbt(CompoundTag tag, HolderLookup.Provider registryLookup) {
         if (tag.contains("Level")) {
             this.level = tag.getInt("Level");
@@ -86,6 +98,7 @@ public class TrainerLevelComponentImpl implements TrainerLevelComponent, AutoSyn
         }
         this.startRegion = tag.contains("StartRegion") ? tag.getString("StartRegion") : null;
         this.homeRegion = tag.contains("HomeRegion") ? tag.getString("HomeRegion") : null;
+        this.gymDifficulty = tag.contains("GymDifficulty") ? tag.getString("GymDifficulty") : null;
         this.nextRegions.clear();
         for (Tag t : tag.getList("NextRegions", Tag.TAG_STRING)) {
             this.nextRegions.add(t.getAsString());
@@ -100,6 +113,9 @@ public class TrainerLevelComponentImpl implements TrainerLevelComponent, AutoSyn
         }
         if (this.homeRegion != null) {
             tag.putString("HomeRegion", this.homeRegion);
+        }
+        if (this.gymDifficulty != null) {
+            tag.putString("GymDifficulty", this.gymDifficulty);
         }
         if (!this.nextRegions.isEmpty()) {
             ListTag list = new ListTag();

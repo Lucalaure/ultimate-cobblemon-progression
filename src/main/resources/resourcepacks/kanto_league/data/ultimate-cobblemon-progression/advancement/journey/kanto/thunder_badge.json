@@ -22,7 +22,8 @@
       "trigger": "ultimate-cobblemon-progression:defeat_trainer",
       "conditions": {
         "trainers": [
-          "leader_lt_surge_01a0"
+          "leader_lt_surge_01a0",
+          "leader_lt_surge_01a0_hard"
         ]
       }
     }

@@ -5,7 +5,9 @@
       "conditions": {
         "trainers": [
           "champion_terry_01b8",
-          "champion_cynthia_03a5"
+          "champion_terry_01b8_hard",
+          "champion_cynthia_03a5",
+          "champion_cynthia_03a5_hard"
         ]
       }
     }

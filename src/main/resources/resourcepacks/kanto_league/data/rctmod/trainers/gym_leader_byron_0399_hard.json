@@ -1,0 +1,119 @@
+{
+  "name": "Gym Leader Byron",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.05
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:bronzor",
+      "gender": "GENDERLESS",
+      "level": 36,
+      "nature": "cobblemon:relaxed",
+      "ability": "levitate",
+      "moveset": ["stealthrock", "confuseray", "gyroball", "psychic"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": ["eviolite"]
+    },
+    {
+      "species": "cobblemon:magneton",
+      "gender": "GENDERLESS",
+      "level": 37,
+      "nature": "cobblemon:modest",
+      "ability": "sturdy",
+      "moveset": ["thunderbolt", "flashcannon", "thunderwave", "voltswitch"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      }
+    },
+    {
+      "species": "cobblemon:steelix",
+      "gender": "FEMALE",
+      "level": 36,
+      "nature": "cobblemon:brave",
+      "ability": "sturdy",
+      "moveset": ["earthquake", "gyroball", "stealthrock", "thunderfang"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 252,
+        "def": 4,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "heldItem": ["soft_sand"]
+    },
+    {
+      "species": "cobblemon:bastiodon",
+      "gender": "FEMALE",
+      "level": 39,
+      "nature": "cobblemon:relaxed",
+      "ability": "sturdy",
+      "moveset": ["irondefense", "bodypress", "stoneedge", "roar"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": ["leftovers"]
+    }
+  ]
+}

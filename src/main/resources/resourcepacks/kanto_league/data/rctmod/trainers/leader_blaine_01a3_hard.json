@@ -1,0 +1,143 @@
+{
+  "name": "Leader Blaine",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.05
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:growlithe",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "cobblemon:adamant",
+      "ability": "intimidate",
+      "moveset": ["firefang", "crunch", "willowisp", "roar"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 252,
+        "def": 4,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "heldItem": ["eviolite"]
+    },
+    {
+      "species": "cobblemon:ninetales",
+      "gender": "FEMALE",
+      "level": 43,
+      "nature": "cobblemon:timid",
+      "ability": "drought",
+      "moveset": ["flamethrower", "solarbeam", "willowisp", "nastyplot"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      }
+    },
+    {
+      "species": "cobblemon:magmar",
+      "gender": "MALE",
+      "level": 43,
+      "nature": "cobblemon:modest",
+      "ability": "flamebody",
+      "moveset": ["flamethrower", "thunderpunch", "confuseray", "lowkick"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      }
+    },
+    {
+      "species": "cobblemon:rapidash",
+      "gender": "MALE",
+      "level": 43,
+      "nature": "cobblemon:jolly",
+      "ability": "flashfire",
+      "moveset": ["flareblitz", "wildcharge", "highhorsepower", "morningsun"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["sitrus_berry"]
+    },
+    {
+      "species": "cobblemon:arcanine",
+      "gender": "MALE",
+      "level": 47,
+      "nature": "cobblemon:adamant",
+      "ability": "intimidate",
+      "moveset": ["flareblitz", "extremespeed", "closecombat", "morningsun"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["life_orb"]
+    }
+  ]
+}

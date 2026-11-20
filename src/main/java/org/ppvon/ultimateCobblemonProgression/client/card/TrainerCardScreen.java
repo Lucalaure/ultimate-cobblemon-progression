@@ -74,8 +74,12 @@ public class TrainerCardScreen extends Screen {
     private PickButton laterButton;
     /** The player put off picking their next region, so the card shows its tabs for now. */
     private boolean choiceDismissed;
+    /** "Choose Normal" / "Choose Hard" buttons on the difficulty choice screen, in card coordinates. */
+    private final List<PickButton> difficultyButtons = new ArrayList<>();
+    /** The Road tab's "Switch to ..." button, in content coordinates (before scrolling), or null. */
+    private PickButton difficultyToggle;
 
-    /** A region pick to confirm, with its {@link PickRegionPayload} kind (home, next or extra region). */
+    /** A pick to confirm, with its {@link PickRegionPayload} kind (home, next or extra region, or difficulty). */
     private record Pending(String id, String title, int kind) {}
 
     private record PickButton(int x0, int y0, int x1, int y1, Pending pick) {}
@@ -143,6 +147,25 @@ public class TrainerCardScreen extends Screen {
             }
             return true; // the choice screen has nothing else to click
         }
+        if (showingDifficultyChoice()) {
+            for (PickButton b : difficultyButtons) {
+                if (x >= b.x0 && x < b.x1 && y >= b.y0 && y < b.y1) {
+                    // No confirmation: the difficulty can be changed again at any time.
+                    ClientPlayNetworking.send(new PickRegionPayload(b.pick.id(), PickRegionPayload.DIFFICULTY));
+                    click();
+                }
+            }
+            return true;
+        }
+        if (tab == Tab.ROAD && y >= CY0 && y < CY1 && difficultyToggle != null) {
+            double cy = y + scroll;
+            PickButton b = difficultyToggle;
+            if (x >= b.x0 && x < b.x1 && cy >= b.y0 && cy < b.y1) {
+                confirming = b.pick;
+                click();
+                return true;
+            }
+        }
         if (tab == Tab.REGIONS && y >= CY0 && y < CY1) {
             double cy = y + scroll;
             for (PickButton b : pickButtons) {
@@ -206,6 +229,8 @@ public class TrainerCardScreen extends Screen {
         g.fill(12, 10, W - 12, H - 10, SCREEN);
         if (showingChoice()) {
             drawChoice(g, mx, my);
+        } else if (showingDifficultyChoice()) {
+            drawDifficultyChoice(g, mx, my);
         } else {
             drawTabs(g, mx, my);
             drawTab(g, mx, my);
@@ -223,7 +248,7 @@ public class TrainerCardScreen extends Screen {
     private void drawTab(GuiGraphics g, int mx, int my) {
         switch (tab) {
             case PROFILE -> drawProfile(g);
-            case ROAD -> scrolled(g, () -> drawRoad(g));
+            case ROAD -> scrolled(g, () -> drawRoad(g, mx, my));
             case REGIONS -> scrolled(g, () -> drawRegions(g, mx, my));
             case WILD -> scrolled(g, () -> drawWild(g, mx, my));
         }
@@ -298,6 +323,46 @@ public class TrainerCardScreen extends Screen {
                         ? "You join the region's trainer series, and your level cap starts over with its first leader."
                         : "Later, you can also pick an optional second region to explore, on the card's Regions tab."),
                 W / 2f, fy, (next ? W - 130 : W - 80) * 0.75f, H - 12 - fy, MUTED, 0.75f, Align.CENTRE);
+    }
+
+    // Difficulty choice screen ---------------------------------------
+
+    /** Whether the card opens on the difficulty choice screen: once the journey has started, until a difficulty is picked. */
+    private boolean showingDifficultyChoice() {
+        return !showingChoice() && data.choosingDifficulty();
+    }
+
+    private void drawDifficultyChoice(GuiGraphics g, int mx, int my) {
+        difficultyButtons.clear();
+        text(g, Component.literal("CHOOSE YOUR CHALLENGE").withStyle(ChatFormatting.BOLD), W / 2f, 22, INK, 1, true);
+        text(g, Component.literal("How strong should gym leaders be?"), W / 2f, 34, MUTED, 1, true);
+
+        record Option(String id, String title, String body, int colour) {}
+        List<Option> options = List.of(
+                new Option("normal", "Normal", "Leaders as in the original games: their usual teams, with IVs that rise through your journey and no EVs.", DARK),
+                new Option("hard", "Hard", "Full-strength teams at the same levels: extra Pokémon, perfect IVs, trained EVs, held items and a sharper AI.", RED));
+        int panelW = 132, gap = 10, panelH = 108;
+        int x0 = (W - (2 * panelW + gap)) / 2, y0 = 48;
+        for (int i = 0; i < options.size(); i++) {
+            Option o = options.get(i);
+            int px0 = x0 + i * (panelW + gap), px1 = px0 + panelW, py1 = y0 + panelH;
+            g.fill(px0, y0, px1, py1, FRAME_DARK);
+            g.fill(px0 + 1, y0 + 1, px1 - 1, py1 - 1, LIGHT);
+            g.fill(px0 + 1, y0 + 1, px1 - 1, y0 + 19, o.colour());
+            fit(g, Component.literal(o.title()).withStyle(ChatFormatting.BOLD), (px0 + px1) / 2f, y0 + 4, panelW - 8, WHITE, 1.25f, Align.CENTRE);
+            paragraph(g, Component.literal(o.body()), px0 + 6, y0 + 25, panelW - 12, py1 - 26 - (y0 + 25), INK, 0.85f, Align.LEFT);
+
+            int bx0 = px0 + 8, bx1 = px1 - 8, by0 = py1 - 22, by1 = py1 - 8;
+            boolean hover = mx >= bx0 && mx < bx1 && my >= by0 && my < by1;
+            g.fill(bx0, by0, bx1, by1, FRAME_DARK);
+            g.fill(bx0 + 1, by0 + 1, bx1 - 1, by1 - 1, hover ? 0xFFE8574F : RED);
+            fit(g, Component.literal("Choose " + o.title()).withStyle(ChatFormatting.BOLD),
+                    (bx0 + bx1) / 2f, by0 + 3, bx1 - bx0 - 6, WHITE, 1, Align.CENTRE);
+            difficultyButtons.add(new PickButton(bx0, by0, bx1, by1, new Pending(o.id(), o.title(), PickRegionPayload.DIFFICULTY)));
+        }
+        int fy = y0 + panelH + 8;
+        paragraph(g, Component.literal("You can switch at any time on the Road tab. It applies from the next leader a gym summons."),
+                W / 2f, fy, (W - 80) * 0.75f, H - 12 - fy, MUTED, 0.75f, Align.CENTRE);
     }
 
     private int tabWidth() {
@@ -423,7 +488,8 @@ public class TrainerCardScreen extends Screen {
 
     // Road ------------------------------------------------------------
 
-    private void drawRoad(GuiGraphics g) {
+    private void drawRoad(GuiGraphics g, int mx, int my) {
+        difficultyToggle = null;
         int y = CY0 + 2;
         if (data.road().isEmpty()) {
             paragraph(g, Component.literal("No trainers are listed for " + data.regionTitle() + "."), (CX0 + CX1) / 2f, y + 20,
@@ -436,6 +502,33 @@ public class TrainerCardScreen extends Screen {
         fit(g, Component.literal(data.regionTitle() + " Road").withStyle(ChatFormatting.BOLD), CX0 + 4, y,
                 CX1 - 14 - font.width(summary) - (CX0 + 4), INK, 1, Align.LEFT);
         y += 13;
+
+        if (!data.difficulty().isEmpty()) {
+            // Gym difficulty, with a button to switch it when players choose their own.
+            int rx0 = CX0 + 2, rx1 = CX1 - 6, ry1 = y + 15;
+            panel(g, rx0, y, rx1, ry1);
+            boolean hard = data.difficulty().equals("Hard");
+            int labelEnd = rx1 - 6;
+            if (data.difficultyChangeable()) {
+                String other = hard ? "Normal" : "Hard";
+                String label = "Switch to " + other;
+                int bw = font.width(label) + 12;
+                int bx1 = rx1 - 2, bx0 = bx1 - bw, by0 = y + 2, by1 = ry1 - 2;
+                int contentMouseY = my + (int) scroll;
+                boolean hover = confirming == null && my >= CY0 && my < CY1 && mx >= bx0 && mx < bx1
+                        && contentMouseY >= by0 && contentMouseY < by1;
+                g.fill(bx0, by0, bx1, by1, FRAME_DARK);
+                g.fill(bx0 + 1, by0 + 1, bx1 - 1, by1 - 1, hover ? 0xFFE8574F : RED);
+                text(g, Component.literal(label).withStyle(ChatFormatting.BOLD), (bx0 + bx1) / 2f, by0 + 2, WHITE, 1, true);
+                difficultyToggle = new PickButton(bx0, by0, bx1, by1,
+                        new Pending(other.toLowerCase(java.util.Locale.ROOT), other, PickRegionPayload.DIFFICULTY));
+                labelEnd = bx0 - 6;
+            }
+            MutableComponent line = Component.literal("Gym leaders: ").append(Component.literal(data.difficulty())
+                    .withStyle(s -> s.withBold(true).withColor(hard ? RED : INK)));
+            fit(g, line, rx0 + 6, y + 4, labelEnd - (rx0 + 6), MUTED, 1, Align.LEFT);
+            y += 18;
+        }
 
         int i = 0;
         for (RoadEntry r : data.road()) {
@@ -462,6 +555,14 @@ public class TrainerCardScreen extends Screen {
             String meta = "Tier " + r.tier() + "  ·  cap " + r.levelCap();
             float metaW = font.width(meta) * 0.75f;
             text(g, Component.literal(meta), rx1 - 4 - metaW, y + 4.5f, MUTED, 0.75f, false);
+            if (r.hard()) {
+                // Beaten on Hard
+                float tagW = font.width("HARD") * 0.75f + 6;
+                float tx1 = rx1 - 8 - metaW, tx0 = tx1 - tagW;
+                g.fill((int) tx0, y + 2, (int) tx1, y + 11, RED);
+                text(g, Component.literal("HARD").withStyle(ChatFormatting.BOLD), (tx0 + tx1) / 2f, y + 4, WHITE, 0.75f, true);
+                metaW += tagW + 4;
+            }
 
             MutableComponent name = r.name().copy();
             if (r.status() == TrainerCardData.NEXT) name.withStyle(ChatFormatting.BOLD);
@@ -571,12 +672,15 @@ public class TrainerCardScreen extends Screen {
         String verb = switch (confirming.kind()) {
             case PickRegionPayload.HOME -> "Start in ";
             case PickRegionPayload.NEXT -> "Travel to ";
+            case PickRegionPayload.DIFFICULTY -> "Switch to ";
             default -> "Explore ";
         };
         String title = verb + confirming.title() + "?";
         String body = switch (confirming.kind()) {
             case PickRegionPayload.HOME -> "Your journey begins in " + confirming.title() + " and you join its trainer series. This choice is permanent.";
             case PickRegionPayload.NEXT -> "Your journey continues in " + confirming.title() + " and you join its trainer series. This choice is permanent.";
+            case PickRegionPayload.DIFFICULTY -> "From the next leader a gym summons, leaders use their " + confirming.title()
+                    + " teams. Badges you already have stay as they are. You can switch back any time.";
             default -> confirming.title() + " opens now, alongside your first region. This choice is permanent.";
         };
         fit(g, Component.literal(title).withStyle(ChatFormatting.BOLD), (BOX_X0 + BOX_X1) / 2f, BOX_Y0 + 4,

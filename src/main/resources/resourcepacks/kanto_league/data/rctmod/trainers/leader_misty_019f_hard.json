@@ -1,0 +1,119 @@
+{
+  "name": "Leader Misty",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.05
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:super_potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:staryu",
+      "gender": "GENDERLESS",
+      "level": 18,
+      "nature": "cobblemon:timid",
+      "ability": "naturalcure",
+      "moveset": ["waterpulse", "rapidspin", "swift", "thunderwave"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["oran_berry"]
+    },
+    {
+      "species": "cobblemon:psyduck",
+      "gender": "FEMALE",
+      "level": 18,
+      "nature": "cobblemon:modest",
+      "ability": "damp",
+      "moveset": ["confusion", "disable", "waterpulse", "scratch"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      }
+    },
+    {
+      "species": "cobblemon:horsea",
+      "gender": "FEMALE",
+      "level": 20,
+      "nature": "cobblemon:modest",
+      "ability": "sniper",
+      "moveset": ["waterpulse", "smokescreen", "focusenergy", "dragonbreath"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["sitrus_berry"]
+    },
+    {
+      "species": "cobblemon:starmie",
+      "gender": "GENDERLESS",
+      "level": 21,
+      "nature": "cobblemon:timid",
+      "ability": "naturalcure",
+      "moveset": ["waterpulse", "icywind", "psybeam", "recover"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["mystic_water"]
+    }
+  ]
+}

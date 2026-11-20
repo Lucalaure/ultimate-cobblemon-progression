@@ -1,6 +1,6 @@
 {
   "levelCap": 100,
-  "trainers": ["elite_four_aaron_039f", "elite_four_bertha_03a0", "elite_four_flint_03a1", "elite_four_lucian_03a2", "champion_cynthia_03a5"],
+  "trainers": [["elite_four_aaron_039f", "elite_four_aaron_039f_hard"], ["elite_four_bertha_03a0", "elite_four_bertha_03a0_hard"], ["elite_four_flint_03a1", "elite_four_flint_03a1_hard"], ["elite_four_lucian_03a2", "elite_four_lucian_03a2_hard"], ["champion_cynthia_03a5", "champion_cynthia_03a5_hard"]],
   "requirements": {
     "advancements": ["ultimate-cobblemon-progression:journey/sinnoh/champion"]
   },

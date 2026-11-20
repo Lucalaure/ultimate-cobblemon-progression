@@ -1,0 +1,15 @@
+{
+  "type": "leader",
+  "series": ["sinnoh"],
+  "optional": true,
+  "requiredDefeats": [
+    ["gym_leader_candice_03da"]
+  ],
+  "maxTrainerDefeats": 1,
+  "maxTrainerWins": -1,
+  "battleCooldownTicks": 240,
+  "signatureItem": "cobblemon:thunder_stone",
+  "spawnWeightFactor": 0,
+  "biomeTagWhitelist": ["is_plains", "is_sparse_vegetation"],
+  "biomeTagBlacklist": ["is_void", "is_underground", "is_nether", "is_end"]
+}

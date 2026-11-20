@@ -1,0 +1,169 @@
+{
+  "name": "Elite Four Agatha",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.05
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:dusclops",
+      "gender": "FEMALE",
+      "level": 54,
+      "nature": "cobblemon:impish",
+      "ability": "frisk",
+      "moveset": ["willowisp", "nightshade", "painsplit", "shadowsneak"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": ["eviolite"]
+    },
+    {
+      "species": "cobblemon:haunter",
+      "gender": "FEMALE",
+      "level": 54,
+      "nature": "cobblemon:timid",
+      "ability": "levitate",
+      "moveset": ["shadowball", "sludgebomb", "willowisp", "destinybond"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["eviolite"]
+    },
+    {
+      "species": "cobblemon:crobat",
+      "gender": "FEMALE",
+      "level": 54,
+      "nature": "cobblemon:jolly",
+      "ability": "innerfocus",
+      "moveset": ["crosspoison", "bravebird", "uturn", "roost"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["sitrus_berry"]
+    },
+    {
+      "species": "cobblemon:mismagius",
+      "gender": "FEMALE",
+      "level": 54,
+      "nature": "cobblemon:timid",
+      "ability": "levitate",
+      "moveset": ["shadowball", "dazzlinggleam", "thunderbolt", "nastyplot"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      }
+    },
+    {
+      "species": "cobblemon:arbok",
+      "gender": "FEMALE",
+      "level": 56,
+      "nature": "cobblemon:adamant",
+      "ability": "intimidate",
+      "moveset": ["gunkshot", "crunch", "glare", "earthquake"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["black_sludge"]
+    },
+    {
+      "species": "cobblemon:gengar",
+      "gender": "FEMALE",
+      "level": 58,
+      "nature": "cobblemon:timid",
+      "ability": "cursedbody",
+      "moveset": ["shadowball", "sludgebomb", "thunderbolt", "nastyplot"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["life_orb"]
+    }
+  ]
+}

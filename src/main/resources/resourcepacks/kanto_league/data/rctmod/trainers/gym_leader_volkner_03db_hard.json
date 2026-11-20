@@ -1,0 +1,144 @@
+{
+  "name": "Gym Leader Volkner",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.05
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:raichu",
+      "gender": "FEMALE",
+      "level": 46,
+      "nature": "cobblemon:timid",
+      "ability": "lightningrod",
+      "moveset": ["nuzzle", "voltswitch", "surf", "thunderbolt"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["shuca_berry"]
+    },
+    {
+      "species": "cobblemon:ambipom",
+      "gender": "MALE",
+      "level": 47,
+      "nature": "cobblemon:jolly",
+      "ability": "technician",
+      "moveset": ["fakeout", "doublehit", "uturn", "lowkick"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      }
+    },
+    {
+      "species": "cobblemon:octillery",
+      "gender": "FEMALE",
+      "level": 47,
+      "nature": "cobblemon:modest",
+      "ability": "sniper",
+      "moveset": ["octazooka", "focusenergy", "icebeam", "fireblast"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["scope_lens"]
+    },
+    {
+      "species": "cobblemon:electivire",
+      "gender": "MALE",
+      "level": 47,
+      "nature": "cobblemon:adamant",
+      "ability": "motordrive",
+      "moveset": ["thunderpunch", "icepunch", "crosschop", "earthquake"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["expert_belt"]
+    },
+    {
+      "species": "cobblemon:luxray",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "cobblemon:jolly",
+      "ability": "intimidate",
+      "moveset": ["wildcharge", "icefang", "crunch", "voltswitch"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["sitrus_berry"]
+    }
+  ]
+}

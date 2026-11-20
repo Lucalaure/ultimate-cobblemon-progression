@@ -22,7 +22,8 @@
       "trigger": "ultimate-cobblemon-progression:defeat_trainer",
       "conditions": {
         "trainers": [
-          "champion_cynthia_03a5"
+          "champion_cynthia_03a5",
+          "champion_cynthia_03a5_hard"
         ]
       }
     }

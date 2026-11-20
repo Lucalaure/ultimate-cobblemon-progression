@@ -70,7 +70,7 @@ public final class GymLeaderPicker {
                         break;
                     }
                 }
-                if (!beaten) return Pick.of(group.get(0), region);
+                if (!beaten) return Pick.of(GymDifficulty.trainerFor(player, group), region);
             }
             // Every listed trainer is beaten but the tier is still locked, so its other requirements aren't met.
             allBeatenSomewhere = true;

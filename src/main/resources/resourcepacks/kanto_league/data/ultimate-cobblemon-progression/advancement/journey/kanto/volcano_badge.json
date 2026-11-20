@@ -22,7 +22,8 @@
       "trigger": "ultimate-cobblemon-progression:defeat_trainer",
       "conditions": {
         "trainers": [
-          "leader_blaine_01a3"
+          "leader_blaine_01a3",
+          "leader_blaine_01a3_hard"
         ]
       }
     }

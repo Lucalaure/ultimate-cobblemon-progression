@@ -1,0 +1,170 @@
+{
+  "name": "Champion Cynthia",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.05
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:spiritomb",
+      "gender": "MALE",
+      "level": 61,
+      "nature": "cobblemon:careful",
+      "ability": "pressure",
+      "moveset": ["willowisp", "painsplit", "suckerpunch", "foulplay"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 4,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      },
+      "heldItem": ["leftovers"]
+    },
+    {
+      "species": "cobblemon:roserade",
+      "gender": "MALE",
+      "level": 60,
+      "nature": "cobblemon:timid",
+      "ability": "naturalcure",
+      "moveset": ["sludgebomb", "gigadrain", "shadowball", "spikes"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["focus_sash"]
+    },
+    {
+      "species": "cobblemon:gastrodon",
+      "gender": "FEMALE",
+      "level": 60,
+      "nature": "cobblemon:calm",
+      "ability": "stormdrain",
+      "moveset": ["surf", "earthpower", "recover", "icebeam"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 4,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      },
+      "heldItem": ["leftovers"]
+    },
+    {
+      "species": "cobblemon:lucario",
+      "gender": "MALE",
+      "level": 63,
+      "nature": "cobblemon:timid",
+      "ability": "innerfocus",
+      "moveset": ["aurasphere", "flashcannon", "nastyplot", "vacuumwave"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["life_orb"]
+    },
+    {
+      "species": "cobblemon:milotic",
+      "gender": "FEMALE",
+      "level": 63,
+      "nature": "cobblemon:bold",
+      "ability": "marvelscale",
+      "moveset": ["scald", "icebeam", "recover", "haze"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": ["flame_orb"]
+    },
+    {
+      "species": "cobblemon:garchomp",
+      "gender": "MALE",
+      "level": 66,
+      "nature": "cobblemon:jolly",
+      "ability": "roughskin",
+      "moveset": ["swordsdance", "earthquake", "outrage", "stoneedge"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["yache_berry"]
+    }
+  ]
+}

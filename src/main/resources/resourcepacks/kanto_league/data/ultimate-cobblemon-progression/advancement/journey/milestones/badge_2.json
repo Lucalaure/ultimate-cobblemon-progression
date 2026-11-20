@@ -5,7 +5,9 @@
       "conditions": {
         "trainers": [
           "leader_misty_019f",
-          "gym_leader_gardenia_03d6"
+          "leader_misty_019f_hard",
+          "gym_leader_gardenia_03d6",
+          "gym_leader_gardenia_03d6_hard"
         ]
       }
     }

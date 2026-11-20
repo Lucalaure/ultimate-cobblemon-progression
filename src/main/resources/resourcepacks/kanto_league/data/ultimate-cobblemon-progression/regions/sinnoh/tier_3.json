@@ -1,6 +1,6 @@
 {
   "levelCap": 30,
-  "trainers": ["gym_leader_gardenia_03d6"],
+  "trainers": [["gym_leader_gardenia_03d6", "gym_leader_gardenia_03d6_hard"]],
   "requirements": {
     "advancements": ["ultimate-cobblemon-progression:journey/sinnoh/forest_badge"]
   },

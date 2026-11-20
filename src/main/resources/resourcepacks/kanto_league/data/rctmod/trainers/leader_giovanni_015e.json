@@ -1,7 +1,13 @@
 {
   "name": "Leader Giovanni",
   "ai": {
-    "type": "rct"
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
   },
   "bag": [
     {
@@ -16,7 +22,15 @@
       "level": 45,
       "nature": "cobblemon:adamant",
       "ability": "lightningrod",
-      "moveset": ["takedown", "rockblast", "scaryface", "earthquake"]
+      "moveset": ["takedown", "rockblast", "scaryface", "earthquake"],
+      "ivs": {
+        "hp": 24,
+        "atk": 24,
+        "def": 24,
+        "spa": 24,
+        "spd": 24,
+        "spe": 24
+      }
     },
     {
       "species": "cobblemon:dugtrio",
@@ -24,7 +38,15 @@
       "level": 42,
       "nature": "cobblemon:jolly",
       "ability": "sandveil",
-      "moveset": ["slash", "sandtomb", "mudslap", "earthquake"]
+      "moveset": ["slash", "sandtomb", "mudslap", "earthquake"],
+      "ivs": {
+        "hp": 24,
+        "atk": 24,
+        "def": 24,
+        "spa": 24,
+        "spd": 24,
+        "spe": 24
+      }
     },
     {
       "species": "cobblemon:nidoqueen",
@@ -32,7 +54,15 @@
       "level": 44,
       "nature": "cobblemon:sassy",
       "ability": "poisonpoint",
-      "moveset": ["bodyslam", "doublekick", "poisonsting", "earthquake"]
+      "moveset": ["bodyslam", "doublekick", "poisonsting", "earthquake"],
+      "ivs": {
+        "hp": 24,
+        "atk": 24,
+        "def": 24,
+        "spa": 24,
+        "spd": 24,
+        "spe": 24
+      }
     },
     {
       "species": "cobblemon:nidoking",
@@ -40,7 +70,15 @@
       "level": 45,
       "nature": "cobblemon:adamant",
       "ability": "poisonpoint",
-      "moveset": ["thrash", "doublekick", "poisonsting", "earthquake"]
+      "moveset": ["thrash", "doublekick", "poisonsting", "earthquake"],
+      "ivs": {
+        "hp": 24,
+        "atk": 24,
+        "def": 24,
+        "spa": 24,
+        "spd": 24,
+        "spe": 24
+      }
     },
     {
       "species": "cobblemon:rhydon",
@@ -48,7 +86,15 @@
       "level": 50,
       "nature": "cobblemon:adamant",
       "ability": "lightningrod",
-      "moveset": ["takedown", "rockblast", "scaryface", "earthquake"]
+      "moveset": ["takedown", "rockblast", "scaryface", "earthquake"],
+      "ivs": {
+        "hp": 24,
+        "atk": 24,
+        "def": 24,
+        "spa": 24,
+        "spd": 24,
+        "spe": 24
+      }
     }
   ]
 }

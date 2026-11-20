@@ -1,0 +1,86 @@
+{
+  "name": "Gym Leader Maylene",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:super_potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "meditite",
+      "gender": "MALE",
+      "level": 27,
+      "nature": "naive",
+      "ability": "purepower",
+      "moveset": ["drainpunch", "lightscreen", "flash", "bulkup"],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {
+        "hp": 36,
+        "atk": 52,
+        "spe": 36
+      },
+      "heldItem": ["light_clay"]
+    },
+    {
+      "species": "machoke",
+      "gender": "FEMALE",
+      "level": 27,
+      "nature": "adamant",
+      "ability": "guts",
+      "moveset": ["lowsweep", "knockoff", "rocktomb", "bulldoze"],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {
+        "hp": 36,
+        "atk": 52,
+        "spe": 36
+      },
+      "heldItem": ["expert_belt"]
+    },
+    {
+      "species": "lucario",
+      "gender": "FEMALE",
+      "level": 30,
+      "nature": "adamant",
+      "ability": "steadfast",
+      "moveset": ["drainpunch", "screech", "metalclaw", "bulkup"],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {
+        "atk": 68,
+        "def": 68,
+        "spe": 68
+      },
+      "heldItem": ["big_root"]
+    }
+  ]
+}

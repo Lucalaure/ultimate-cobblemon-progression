@@ -1,0 +1,144 @@
+{
+  "name": "Gym Leader Candice",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.05
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:snover",
+      "gender": "MALE",
+      "level": 38,
+      "nature": "cobblemon:quiet",
+      "ability": "snowwarning",
+      "moveset": ["leechseed", "blizzard", "gigadrain", "iceshard"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": ["icy_rock"]
+    },
+    {
+      "species": "cobblemon:sneasel",
+      "gender": "FEMALE",
+      "level": 38,
+      "nature": "cobblemon:jolly",
+      "ability": "pickpocket",
+      "moveset": ["iceshard", "knockoff", "swordsdance", "lowkick"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      }
+    },
+    {
+      "species": "cobblemon:froslass",
+      "gender": "FEMALE",
+      "level": 39,
+      "nature": "cobblemon:timid",
+      "ability": "cursedbody",
+      "moveset": ["icebeam", "shadowball", "spikes", "destinybond"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["focus_sash"]
+    },
+    {
+      "species": "cobblemon:medicham",
+      "gender": "MALE",
+      "level": 40,
+      "nature": "cobblemon:jolly",
+      "ability": "purepower",
+      "moveset": ["icepunch", "highjumpkick", "zenheadbutt", "bulletpunch"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["expert_belt"]
+    },
+    {
+      "species": "cobblemon:abomasnow",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "cobblemon:quiet",
+      "ability": "snowwarning",
+      "moveset": ["blizzard", "gigadrain", "earthquake", "iceshard"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": ["sitrus_berry"]
+    }
+  ]
+}

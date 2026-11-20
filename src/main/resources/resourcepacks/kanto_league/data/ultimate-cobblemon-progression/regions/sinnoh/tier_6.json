@@ -1,6 +1,6 @@
 {
   "levelCap": 39,
-  "trainers": ["gym_leader_fantina_03d9"],
+  "trainers": [["gym_leader_fantina_03d9", "gym_leader_fantina_03d9_hard"]],
   "requirements": {
     "advancements": ["ultimate-cobblemon-progression:journey/sinnoh/relic_badge"]
   },

@@ -1,7 +1,13 @@
 {
   "name": "Leader Misty",
   "ai": {
-    "type": "rct"
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
   },
   "bag": [
     {
@@ -16,7 +22,15 @@
       "level": 18,
       "nature": "cobblemon:timid",
       "ability": "naturalcure",
-      "moveset": ["tackle", "harden", "waterpulse"]
+      "moveset": ["tackle", "harden", "waterpulse"],
+      "ivs": {
+        "hp": 9,
+        "atk": 9,
+        "def": 9,
+        "spa": 9,
+        "spd": 9,
+        "spe": 9
+      }
     },
     {
       "species": "cobblemon:starmie",
@@ -24,7 +38,15 @@
       "level": 21,
       "nature": "cobblemon:timid",
       "ability": "naturalcure",
-      "moveset": ["waterpulse", "swift", "rapidspin", "recover"]
+      "moveset": ["waterpulse", "swift", "rapidspin", "recover"],
+      "ivs": {
+        "hp": 9,
+        "atk": 9,
+        "def": 9,
+        "spa": 9,
+        "spd": 9,
+        "spe": 9
+      }
     }
   ]
 }

@@ -22,7 +22,8 @@
       "trigger": "ultimate-cobblemon-progression:defeat_trainer",
       "conditions": {
         "trainers": [
-          "elite_four_lance_0057"
+          "elite_four_lance_0057",
+          "elite_four_lance_0057_hard"
         ]
       }
     }

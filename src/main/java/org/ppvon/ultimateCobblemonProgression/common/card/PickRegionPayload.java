@@ -11,10 +11,11 @@ import static org.ppvon.ultimateCobblemonProgression.UltimateCobblemonProgressio
  * Client to server: the player picked a region on the Trainer Card.
  *
  * @param kind {@link #HOME} for the region their journey starts in, {@link #NEXT} for the region it continues in,
- *             {@link #EXTRA} for the optional second region
+ *             {@link #EXTRA} for the optional second region, {@link #DIFFICULTY} for the gym difficulty (then
+ *             {@code regionId} is the difficulty's id, "normal" or "hard")
  */
 public record PickRegionPayload(String regionId, int kind) implements CustomPacketPayload {
-    public static final int EXTRA = 0, HOME = 1, NEXT = 2;
+    public static final int EXTRA = 0, HOME = 1, NEXT = 2, DIFFICULTY = 3;
 
     public static final Type<PickRegionPayload> TYPE =
             new Type<>(ResourceLocation.fromNamespaceAndPath(MOD_ID, "pick_region"));

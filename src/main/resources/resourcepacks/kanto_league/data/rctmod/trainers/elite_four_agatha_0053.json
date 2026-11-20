@@ -1,7 +1,13 @@
 {
   "name": "Elite Four Agatha",
   "ai": {
-    "type": "rct"
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
   },
   "bag": [
     {
@@ -16,7 +22,15 @@
       "level": 54,
       "nature": "cobblemon:timid",
       "ability": "cursedbody",
-      "moveset": ["shadowball", "darkpulse", "confuseray", "toxic"]
+      "moveset": ["shadowball", "darkpulse", "confuseray", "toxic"],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      }
     },
     {
       "species": "cobblemon:golbat",
@@ -24,7 +38,15 @@
       "level": 54,
       "nature": "cobblemon:jolly",
       "ability": "innerfocus",
-      "moveset": ["airslash", "poisonfang", "confuseray", "bite"]
+      "moveset": ["airslash", "poisonfang", "confuseray", "bite"],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      }
     },
     {
       "species": "cobblemon:haunter",
@@ -32,7 +54,15 @@
       "level": 53,
       "nature": "cobblemon:modest",
       "ability": "levitate",
-      "moveset": ["shadowball", "hypnosis", "dreameater", "curse"]
+      "moveset": ["shadowball", "hypnosis", "dreameater", "curse"],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      }
     },
     {
       "species": "cobblemon:arbok",
@@ -40,7 +70,15 @@
       "level": 56,
       "nature": "cobblemon:adamant",
       "ability": "intimidate",
-      "moveset": ["gunkshot", "crunch", "glare", "earthquake"]
+      "moveset": ["gunkshot", "crunch", "glare", "earthquake"],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      }
     },
     {
       "species": "cobblemon:gengar",
@@ -48,7 +86,15 @@
       "level": 58,
       "nature": "cobblemon:timid",
       "ability": "cursedbody",
-      "moveset": ["shadowball", "sludgebomb", "thunderbolt", "hypnosis"]
+      "moveset": ["shadowball", "sludgebomb", "thunderbolt", "hypnosis"],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      }
     }
   ]
 }

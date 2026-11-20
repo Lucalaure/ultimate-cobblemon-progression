@@ -5,7 +5,9 @@
       "conditions": {
         "trainers": [
           "leader_brock_019e",
-          "gym_leader_roark_0395"
+          "leader_brock_019e_hard",
+          "gym_leader_roark_0395",
+          "gym_leader_roark_0395_hard"
         ]
       }
     }

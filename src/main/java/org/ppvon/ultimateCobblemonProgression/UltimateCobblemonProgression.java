@@ -83,6 +83,7 @@ public class UltimateCobblemonProgression implements ModInitializer {
             dispatcher.register(Commands.literal("trainerlevel")
                     .then(RegionCommands.regionNode())
                     .then(TrainerCard.commandNode())
+                    .then(org.ppvon.ultimateCobblemonProgression.common.gym.GymDifficulty.commandNode())
                     .then(Commands.literal("get")
                             .executes(ctx -> {
                                 ServerPlayer p = ctx.getSource().getPlayerOrException();

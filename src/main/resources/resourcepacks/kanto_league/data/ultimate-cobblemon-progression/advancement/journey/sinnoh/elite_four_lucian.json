@@ -22,7 +22,8 @@
       "trigger": "ultimate-cobblemon-progression:defeat_trainer",
       "conditions": {
         "trainers": [
-          "elite_four_lucian_03a2"
+          "elite_four_lucian_03a2",
+          "elite_four_lucian_03a2_hard"
         ]
       }
     }

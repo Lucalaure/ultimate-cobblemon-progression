@@ -2,7 +2,11 @@ package org.ppvon.ultimateCobblemonProgression.client.gui;
 
 import net.minecraft.client.gui.components.AbstractSliderButton;
 import net.minecraft.client.gui.components.Checkbox;
+import net.minecraft.client.gui.components.CycleButton;
+import net.minecraft.client.gui.components.Tooltip;
 import net.minecraft.network.chat.Component;
+
+import java.util.List;
 import org.ppvon.ultimateCobblemonProgression.config.CommonConfig;
 import org.ppvon.ultimateCobblemonProgression.config.ConfigLoader;
 
@@ -13,6 +17,10 @@ public final class CommonConfigScreen extends BaseConfigScreen {
 
     private Checkbox chkLevelCap, chkDex, chkTrainerCard, chkGymTeamLimit, chkCatchWholeTier;
     private GymChanceSlider sldGymChance;
+    private CycleButton<String> btnGymDifficulty;
+
+    /** gymDifficulty values, in the order the button cycles through them. */
+    private static final List<String> DIFFICULTIES = List.of("player_choice", "normal", "hard");
 
     public CommonConfigScreen(BaseConfigScreen parent) {
         super(parent, "CJP – General");
@@ -39,6 +47,14 @@ public final class CommonConfigScreen extends BaseConfigScreen {
 
         chkGymTeamLimit = addRenderableWidget(Checkbox.builder(Component.literal("Gym Team Limit"), this.font)
                 .selected(c.gymTeamLimit).pos(x, y).build());
+        // Same row, so the screen doesn't grow taller.
+        String current = DIFFICULTIES.contains(c.gymDifficulty) ? c.gymDifficulty : "player_choice";
+        btnGymDifficulty = addRenderableWidget(CycleButton.<String>builder(CommonConfigScreen::difficultyName)
+                .withValues(DIFFICULTIES)
+                .withInitialValue(current)
+                .withTooltip(v -> Tooltip.create(Component.literal(
+                        "Gym leaders' teams. Player's choice: each player picks Normal or Hard on their Trainer Card and can change it any time.")))
+                .create(cx + 10, y, 140, 20, Component.literal("Leaders")));
         addNote("Bring no more Pokémon to a gym battle than the leader has", x, y + rowH);
         y += rowH * 2;
 
@@ -49,6 +65,14 @@ public final class CommonConfigScreen extends BaseConfigScreen {
 
         sldGymChance = addRenderableWidget(new GymChanceSlider(x, y, 300, 20, c.gymVillageChance));
         addNote("Applies to newly generated villages after the world restarts", x, y + rowH);
+    }
+
+    private static Component difficultyName(String value) {
+        return Component.literal(switch (value) {
+            case "normal" -> "Normal";
+            case "hard" -> "Hard";
+            default -> "Player's choice";
+        });
     }
 
     private void addNote(String text, int x, int y) {
@@ -62,6 +86,7 @@ public final class CommonConfigScreen extends BaseConfigScreen {
         c.doDexProgression = chkDex.selected();
         c.giveTrainerCard = chkTrainerCard.selected();
         c.gymTeamLimit = chkGymTeamLimit.selected();
+        c.gymDifficulty = btnGymDifficulty.getValue();
         c.catchWholeTier = chkCatchWholeTier.selected();
         c.gymVillageChance = sldGymChance.percent() / 100.0;
         ConfigLoader.saveAll();

@@ -1,7 +1,13 @@
 {
   "name": "Elite Four Bruno",
   "ai": {
-    "type": "rct"
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
   },
   "bag": [
     {
@@ -16,7 +22,15 @@
       "level": 51,
       "nature": "cobblemon:impish",
       "ability": "sturdy",
-      "moveset": ["rockslide", "earthquake", "harden", "screech"]
+      "moveset": ["rockslide", "earthquake", "harden", "screech"],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      }
     },
     {
       "species": "cobblemon:hitmonchan",
@@ -24,7 +38,15 @@
       "level": 53,
       "nature": "cobblemon:adamant",
       "ability": "ironfist",
-      "moveset": ["drainpunch", "firepunch", "icepunch", "thunderpunch"]
+      "moveset": ["drainpunch", "firepunch", "icepunch", "thunderpunch"],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      }
     },
     {
       "species": "cobblemon:hitmonlee",
@@ -32,7 +54,15 @@
       "level": 53,
       "nature": "cobblemon:adamant",
       "ability": "reckless",
-      "moveset": ["highjumpkick", "blazekick", "knockoff", "bulkup"]
+      "moveset": ["highjumpkick", "blazekick", "knockoff", "bulkup"],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      }
     },
     {
       "species": "cobblemon:onix",
@@ -40,7 +70,15 @@
       "level": 54,
       "nature": "cobblemon:adamant",
       "ability": "rockhead",
-      "moveset": ["stoneedge", "earthquake", "irontail", "sandstorm"]
+      "moveset": ["stoneedge", "earthquake", "irontail", "sandstorm"],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      }
     },
     {
       "species": "cobblemon:machamp",
@@ -48,7 +86,15 @@
       "level": 56,
       "nature": "cobblemon:adamant",
       "ability": "noguard",
-      "moveset": ["dynamicpunch", "stoneedge", "knockoff", "bulkup"]
+      "moveset": ["dynamicpunch", "stoneedge", "knockoff", "bulkup"],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      }
     }
   ]
 }

@@ -74,6 +74,15 @@ public final class RctBridge {
                 "rctmod player set series " + seriesId) >= 0;
     }
 
+    /**
+     * Records the trainer (and any trainers it requires that the player hasn't beaten) as beaten in the player's RCT
+     * series progress, which RCT's level cap and trainer requirements follow. Returns false if RCT refused.
+     */
+    public static boolean addProgress(ServerPlayer player, String trainerId) {
+        return run(source(player.serverLevel(), player.position()).withEntity(player),
+                "rctmod player add progress after " + trainerId) >= 0;
+    }
+
     /** The player's RCT level cap, or -1 if it couldn't be read. */
     public static int levelCap(ServerPlayer player) {
         return run(source(player.serverLevel(), player.position()).withEntity(player), "rctmod player get level_cap");

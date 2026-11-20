@@ -1,0 +1,144 @@
+{
+  "name": "Leader Koga",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.05
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:koffing",
+      "gender": "MALE",
+      "level": 37,
+      "nature": "cobblemon:bold",
+      "ability": "levitate",
+      "moveset": ["willowisp", "toxicspikes", "sludgebomb", "explosion"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": ["rocky_helmet"]
+    },
+    {
+      "species": "cobblemon:golbat",
+      "gender": "MALE",
+      "level": 38,
+      "nature": "cobblemon:jolly",
+      "ability": "innerfocus",
+      "moveset": ["acrobatics", "poisonfang", "confuseray", "meanlook"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["sitrus_berry"]
+    },
+    {
+      "species": "cobblemon:venomoth",
+      "gender": "FEMALE",
+      "level": 38,
+      "nature": "cobblemon:timid",
+      "ability": "tintedlens",
+      "moveset": ["quiverdance", "bugbuzz", "sludgebomb", "sleeppowder"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      }
+    },
+    {
+      "species": "cobblemon:muk",
+      "gender": "MALE",
+      "level": 39,
+      "nature": "cobblemon:adamant",
+      "ability": "stickyhold",
+      "moveset": ["poisonjab", "knockoff", "shadowsneak", "curse"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 252,
+        "def": 4,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "heldItem": ["black_sludge"]
+    },
+    {
+      "species": "cobblemon:weezing",
+      "gender": "MALE",
+      "level": 43,
+      "nature": "cobblemon:bold",
+      "ability": "levitate",
+      "moveset": ["sludgebomb", "willowisp", "toxicspikes", "flamethrower"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": ["black_sludge"]
+    }
+  ]
+}

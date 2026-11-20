@@ -1,0 +1,169 @@
+{
+  "name": "Elite Four Bruno",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.05
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:hitmontop",
+      "gender": "MALE",
+      "level": 53,
+      "nature": "cobblemon:impish",
+      "ability": "intimidate",
+      "moveset": ["rapidspin", "fakeout", "closecombat", "suckerpunch"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": ["sitrus_berry"]
+    },
+    {
+      "species": "cobblemon:steelix",
+      "gender": "MALE",
+      "level": 54,
+      "nature": "cobblemon:impish",
+      "ability": "sturdy",
+      "moveset": ["stealthrock", "earthquake", "ironhead", "roar"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": ["leftovers"]
+    },
+    {
+      "species": "cobblemon:hitmonchan",
+      "gender": "MALE",
+      "level": 53,
+      "nature": "cobblemon:adamant",
+      "ability": "ironfist",
+      "moveset": ["drainpunch", "icepunch", "thunderpunch", "machpunch"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["punching_glove"]
+    },
+    {
+      "species": "cobblemon:hitmonlee",
+      "gender": "MALE",
+      "level": 53,
+      "nature": "cobblemon:jolly",
+      "ability": "reckless",
+      "moveset": ["highjumpkick", "knockoff", "machpunch", "stoneedge"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["life_orb"]
+    },
+    {
+      "species": "cobblemon:golem",
+      "gender": "MALE",
+      "level": 54,
+      "nature": "cobblemon:adamant",
+      "ability": "sturdy",
+      "moveset": ["earthquake", "stoneedge", "explosion", "suckerpunch"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 252,
+        "def": 4,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "species": "cobblemon:machamp",
+      "gender": "MALE",
+      "level": 56,
+      "nature": "cobblemon:adamant",
+      "ability": "noguard",
+      "moveset": ["dynamicpunch", "stoneedge", "knockoff", "bulletpunch"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 252,
+        "def": 4,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "heldItem": ["life_orb"]
+    }
+  ]
+}

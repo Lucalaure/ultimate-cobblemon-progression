@@ -15,6 +15,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import org.ppvon.ultimateCobblemonProgression.common.component.TrainerLevelComponents;
 import org.ppvon.ultimateCobblemonProgression.common.progression.RequirementCheck;
+import org.ppvon.ultimateCobblemonProgression.common.gym.GymDifficulty;
 import org.ppvon.ultimateCobblemonProgression.common.gym.RctBridge;
 import org.ppvon.ultimateCobblemonProgression.common.tiers.TierDef;
 import org.ppvon.ultimateCobblemonProgression.common.tiers.requirements.DexRequirements;
@@ -63,6 +64,10 @@ public final class RegionCommands {
             }
         }
 
+        if (GymDifficulty.available()) {
+            out.append(CommonComponents.NEW_LINE)
+                    .append(Component.literal("Gym leaders: " + GymDifficulty.of(player).title).withStyle(ChatFormatting.AQUA));
+        }
         Component prompt = startChoicePrompt(player);
         if (prompt != null) out.append(CommonComponents.NEW_LINE).append(prompt);
         return out;

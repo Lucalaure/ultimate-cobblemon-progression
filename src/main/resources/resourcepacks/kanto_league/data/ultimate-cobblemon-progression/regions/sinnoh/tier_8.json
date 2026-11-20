@@ -1,6 +1,6 @@
 {
   "levelCap": 49,
-  "trainers": ["gym_leader_candice_03da"],
+  "trainers": [["gym_leader_candice_03da", "gym_leader_candice_03da_hard"]],
   "requirements": {
     "advancements": ["ultimate-cobblemon-progression:journey/sinnoh/icicle_badge"]
   },

@@ -1,6 +1,6 @@
 {
   "levelCap": 54,
-  "trainers": ["leader_giovanni_015e"],
+  "trainers": [["leader_giovanni_015e", "leader_giovanni_015e_hard"]],
   "requirements": {
     "advancements": ["ultimate-cobblemon-progression:journey/kanto/earth_badge"]
   },

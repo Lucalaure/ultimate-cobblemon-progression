@@ -22,7 +22,8 @@
       "trigger": "ultimate-cobblemon-progression:defeat_trainer",
       "conditions": {
         "trainers": [
-          "leader_sabrina_01a4"
+          "leader_sabrina_01a4",
+          "leader_sabrina_01a4_hard"
         ]
       }
     }

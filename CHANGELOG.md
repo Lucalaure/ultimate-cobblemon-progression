@@ -1,6 +1,11 @@
 # Unreleased
 
+## Features
+- **Gym difficulty: Normal or Hard.** Every leader, Elite Four member and Champion in the Kanto and Sinnoh leagues now has a Hard version at the same levels: an extra Pokémon or two for most leaders (6 for the Elite Four), perfect IVs, trained EVs, held items, movesets built as sets, a sharper AI and a 2-use bag. After picking where your journey starts, your Trainer Card asks you to choose; switch any time on its Road tab or with `/trainerlevel difficulty <normal|hard>`. It applies from the next leader a gym summons, either version earns the badge, and the Road tab marks leaders beaten on Hard. Servers can set it for everyone with `gymDifficulty` in `ucp-common.json` (also on the Mod Menu General page).
+- Datapacks: a tier slot can list a Hard version of its trainer as `<id>_hard`. Beating it also marks the Normal trainer as beaten in Radical Cobblemon Trainers, so RCT's level cap and trainer order carry on, and it uses the Normal trainer's look and dialog.
+
 ## Changes
+- **Normal leaders are a little stronger, as in the original games.** Their Pokémon used to have 0 IVs. They now have equal IVs that rise through the journey (6 at the first gym up to 24 at the eighth, 28 for the Elite Four and 31 for the Champion), still with no EVs. Kanto's leaders also use the sharper AI setting and 2-use bag limit Sinnoh's already had. Existing worlds get them from the next leader a gym summons.
 - **Regional forms need their own region open.** In region mode, Alolan, Galarian, Hisuian and Paldean forms no longer spawn just because their species can: Alolan Rattata also needs Alola open, Galarian forms need Galar, Hisuian forms Sinnoh, and Paldean forms Paldea. The same goes for Pokémon that Cobblemon spawns ready to evolve into a regional form (like Pikachu that become Alolan Raichu). This also stops a Galarian Farfetch'd caught early from evolving into Sirfetch'd before Galar opens. Forms keep their species' tier and levels, and still count as their species for the Pokédex and for catching every Pokémon. Turn it off with `lockRegionalForms` in `ucp-spawn.json` or on the Mod Menu spawn page.
 - Datapacks: a region's `region.json` can claim forms with `formAspects` (e.g. `["alolan", "region-bias-alola"]`).
 

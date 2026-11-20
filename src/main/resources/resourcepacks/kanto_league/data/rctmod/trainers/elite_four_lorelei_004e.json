@@ -1,7 +1,13 @@
 {
   "name": "Elite Four Lorelei",
   "ai": {
-    "type": "rct"
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
   },
   "bag": [
     {
@@ -16,7 +22,15 @@
       "level": 52,
       "nature": "cobblemon:calm",
       "ability": "thickfat",
-      "moveset": ["icebeam", "surf", "rest", "safeguard"]
+      "moveset": ["icebeam", "surf", "rest", "safeguard"],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      }
     },
     {
       "species": "cobblemon:cloyster",
@@ -24,7 +38,15 @@
       "level": 51,
       "nature": "cobblemon:adamant",
       "ability": "skilllink",
-      "moveset": ["iciclespear", "rockblast", "shellsmash", "spikes"]
+      "moveset": ["iciclespear", "rockblast", "shellsmash", "spikes"],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      }
     },
     {
       "species": "cobblemon:slowbro",
@@ -32,7 +54,15 @@
       "level": 52,
       "nature": "cobblemon:modest",
       "ability": "oblivious",
-      "moveset": ["psychic", "surf", "icebeam", "amnesia"]
+      "moveset": ["psychic", "surf", "icebeam", "amnesia"],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      }
     },
     {
       "species": "cobblemon:jynx",
@@ -40,7 +70,15 @@
       "level": 54,
       "nature": "cobblemon:modest",
       "ability": "dryskin",
-      "moveset": ["icebeam", "psychic", "lovelykiss", "nastyplot"]
+      "moveset": ["icebeam", "psychic", "lovelykiss", "nastyplot"],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      }
     },
     {
       "species": "cobblemon:lapras",
@@ -48,7 +86,15 @@
       "level": 54,
       "nature": "cobblemon:modest",
       "ability": "waterabsorb",
-      "moveset": ["surf", "icebeam", "bodyslam", "confuseray"]
+      "moveset": ["surf", "icebeam", "bodyslam", "confuseray"],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      }
     }
   ]
 }

@@ -1,7 +1,13 @@
 {
   "name": "Champion Blue",
   "ai": {
-    "type": "rct"
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
   },
   "bag": [
     {
@@ -16,7 +22,15 @@
       "level": 59,
       "nature": "cobblemon:timid",
       "ability": "keeneye",
-      "moveset": ["hurricane", "heatwave", "roost", "quickattack"]
+      "moveset": ["hurricane", "heatwave", "roost", "quickattack"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
     },
     {
       "species": "cobblemon:alakazam",
@@ -24,7 +38,15 @@
       "level": 57,
       "nature": "cobblemon:timid",
       "ability": "magicguard",
-      "moveset": ["psychic", "shadowball", "focusblast", "calmmind"]
+      "moveset": ["psychic", "shadowball", "focusblast", "calmmind"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
     },
     {
       "species": "cobblemon:rhydon",
@@ -32,7 +54,15 @@
       "level": 59,
       "nature": "cobblemon:adamant",
       "ability": "lightningrod",
-      "moveset": ["earthquake", "stoneedge", "megahorn", "hammerarm"]
+      "moveset": ["earthquake", "stoneedge", "megahorn", "hammerarm"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
     },
     {
       "species": "cobblemon:exeggutor",
@@ -40,7 +70,15 @@
       "level": 59,
       "nature": "cobblemon:modest",
       "ability": "chlorophyll",
-      "moveset": ["gigadrain", "psychic", "sleeppowder", "leechseed"]
+      "moveset": ["gigadrain", "psychic", "sleeppowder", "leechseed"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
     },
     {
       "species": "cobblemon:arcanine",
@@ -48,7 +86,15 @@
       "level": 59,
       "nature": "cobblemon:adamant",
       "ability": "intimidate",
-      "moveset": ["flareblitz", "extremespeed", "crunch", "wildcharge"]
+      "moveset": ["flareblitz", "extremespeed", "crunch", "wildcharge"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
     },
     {
       "species": "cobblemon:blastoise",
@@ -56,7 +102,15 @@
       "level": 63,
       "nature": "cobblemon:modest",
       "ability": "torrent",
-      "moveset": ["hydropump", "icebeam", "flashcannon", "aurasphere"]
+      "moveset": ["hydropump", "icebeam", "flashcannon", "aurasphere"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
     }
   ]
 }

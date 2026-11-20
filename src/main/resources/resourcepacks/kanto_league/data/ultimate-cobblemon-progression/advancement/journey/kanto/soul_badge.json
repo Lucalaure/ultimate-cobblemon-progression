@@ -22,7 +22,8 @@
       "trigger": "ultimate-cobblemon-progression:defeat_trainer",
       "conditions": {
         "trainers": [
-          "leader_koga_01a2"
+          "leader_koga_01a2",
+          "leader_koga_01a2_hard"
         ]
       }
     }

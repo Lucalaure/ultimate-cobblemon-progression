@@ -1,7 +1,13 @@
 {
   "name": "Leader Koga",
   "ai": {
-    "type": "rct"
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
   },
   "bag": [
     {
@@ -16,7 +22,15 @@
       "level": 37,
       "nature": "cobblemon:bold",
       "ability": "levitate",
-      "moveset": ["sludge", "smokescreen", "clearsmog", "selfdestruct"]
+      "moveset": ["sludge", "smokescreen", "clearsmog", "selfdestruct"],
+      "ivs": {
+        "hp": 18,
+        "atk": 18,
+        "def": 18,
+        "spa": 18,
+        "spd": 18,
+        "spe": 18
+      }
     },
     {
       "species": "cobblemon:muk",
@@ -24,7 +38,15 @@
       "level": 39,
       "nature": "cobblemon:adamant",
       "ability": "stickyhold",
-      "moveset": ["sludgebomb", "minimize", "acidarmor", "disable"]
+      "moveset": ["sludgebomb", "minimize", "acidarmor", "disable"],
+      "ivs": {
+        "hp": 18,
+        "atk": 18,
+        "def": 18,
+        "spa": 18,
+        "spd": 18,
+        "spe": 18
+      }
     },
     {
       "species": "cobblemon:koffing",
@@ -32,7 +54,15 @@
       "level": 37,
       "nature": "cobblemon:bold",
       "ability": "levitate",
-      "moveset": ["sludge", "willowisp", "smokescreen", "selfdestruct"]
+      "moveset": ["sludge", "willowisp", "smokescreen", "selfdestruct"],
+      "ivs": {
+        "hp": 18,
+        "atk": 18,
+        "def": 18,
+        "spa": 18,
+        "spd": 18,
+        "spe": 18
+      }
     },
     {
       "species": "cobblemon:weezing",
@@ -40,7 +70,15 @@
       "level": 43,
       "nature": "cobblemon:bold",
       "ability": "levitate",
-      "moveset": ["sludgebomb", "willowisp", "toxicspikes", "explosion"]
+      "moveset": ["sludgebomb", "willowisp", "toxicspikes", "explosion"],
+      "ivs": {
+        "hp": 18,
+        "atk": 18,
+        "def": 18,
+        "spa": 18,
+        "spd": 18,
+        "spe": 18
+      }
     }
   ]
 }

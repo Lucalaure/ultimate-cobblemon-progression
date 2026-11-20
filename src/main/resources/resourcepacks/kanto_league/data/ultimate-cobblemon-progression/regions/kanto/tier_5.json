@@ -1,6 +1,6 @@
 {
   "levelCap": 43,
-  "trainers": ["leader_erika_01a1"],
+  "trainers": [["leader_erika_01a1", "leader_erika_01a1_hard"]],
   "requirements": {
     "advancements": ["ultimate-cobblemon-progression:journey/kanto/rainbow_badge"]
   },

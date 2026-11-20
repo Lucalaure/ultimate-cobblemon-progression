@@ -22,7 +22,8 @@
       "trigger": "ultimate-cobblemon-progression:defeat_trainer",
       "conditions": {
         "trainers": [
-          "gym_leader_byron_0399"
+          "gym_leader_byron_0399",
+          "gym_leader_byron_0399_hard"
         ]
       }
     }

@@ -37,4 +37,9 @@ public interface TrainerLevelComponent extends ComponentV3 {
     List<String> getNextRegions();
     void addNextRegion(String regionId);
     void clearNextRegions();
+
+    /** Region mode: the gym difficulty this player picked ("normal" or "hard"). Empty until picked. */
+    Optional<String> getGymDifficulty();
+    /** Pass null to clear the choice. */
+    void setGymDifficulty(String difficultyId);
 }

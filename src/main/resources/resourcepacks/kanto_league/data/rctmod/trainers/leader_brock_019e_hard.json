@@ -1,0 +1,95 @@
+{
+  "name": "Leader Brock",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.05
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:super_potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:geodude",
+      "gender": "MALE",
+      "level": 12,
+      "nature": "cobblemon:impish",
+      "ability": "sturdy",
+      "moveset": ["defensecurl", "rollout", "rocktomb", "magnitude"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": ["oran_berry"]
+    },
+    {
+      "species": "cobblemon:rhyhorn",
+      "gender": "MALE",
+      "level": 12,
+      "nature": "cobblemon:adamant",
+      "ability": "rockhead",
+      "moveset": ["smackdown", "bulldoze", "tackle", "tailwhip"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 252,
+        "def": 4,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "heldItem": ["soft_sand"]
+    },
+    {
+      "species": "cobblemon:onix",
+      "gender": "MALE",
+      "level": 14,
+      "nature": "cobblemon:adamant",
+      "ability": "sturdy",
+      "moveset": ["rocktomb", "bind", "stealthrock", "dragonbreath"],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": ["hard_stone"]
+    }
+  ]
+}
