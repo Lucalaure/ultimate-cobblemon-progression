@@ -2,5 +2,9 @@
   "order": 4,
   "title": "Sinnoh",
   "completedBy": "ultimate-cobblemon-progression:journey/sinnoh/champion",
-  "series": "sinnoh"
+  "series": "sinnoh",
+  "formAspects": [
+    "hisuian",
+    "region-bias-hisui"
+  ]
 }

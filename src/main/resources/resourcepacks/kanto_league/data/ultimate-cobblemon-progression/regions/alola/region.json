@@ -1,5 +1,9 @@
 {
   "order": 7,
   "title": "Alola",
-  "startChoice": true
+  "startChoice": true,
+  "formAspects": [
+    "alolan",
+    "region-bias-alola"
+  ]
 }

@@ -11,9 +11,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
 import java.util.SortedMap;
+import java.util.stream.Collectors;
 
 /**
  * A region (e.g. Kanto) with its own ladder of tiers. Loaded from
@@ -32,6 +35,12 @@ public final class RegionDef {
      * picked as a player's home region: where their journey starts, joining this series.
      */
     public final Optional<String> series;
+    /**
+     * Cobblemon aspects that mark a Pokémon as one of this region's forms (e.g. "alolan", or "region-bias-alola" for a
+     * Pikachu that will evolve into Alolan Raichu). With lockRegionalForms on, such a Pokémon only spawns for players
+     * who have this region open, on top of its species' own tier and region.
+     */
+    public final Set<String> formAspects;
     /** Tier index (1-based, consecutive) to tier definition. */
     public final SortedMap<Integer, TierDef> tiers;
     private final Map<Integer, Integer> realSpeciesByTier = new HashMap<>();
@@ -45,6 +54,9 @@ public final class RegionDef {
         this.completedBy = meta.completedBy;
         this.startChoice = meta.startChoice;
         this.series = meta.series;
+        this.formAspects = meta.formAspects.stream()
+                .map(a -> a.toLowerCase(Locale.ROOT))
+                .collect(Collectors.toUnmodifiableSet());
         this.tiers = Collections.unmodifiableSortedMap(tiers);
     }
 
@@ -86,13 +98,14 @@ public final class RegionDef {
 
     /** Contents of region.json. */
     public record Meta(int order, Optional<String> title, Optional<ResourceLocation> completedBy, boolean startChoice,
-                       Optional<String> series) {
+                       Optional<String> series, List<String> formAspects) {
         public static final Codec<Meta> CODEC = RecordCodecBuilder.create(i -> i.group(
                 Codec.INT.optionalFieldOf("order", 0).forGetter(Meta::order),
                 Codec.STRING.optionalFieldOf("title").forGetter(Meta::title),
                 ResourceLocation.CODEC.optionalFieldOf("completedBy").forGetter(Meta::completedBy),
                 Codec.BOOL.optionalFieldOf("startChoice", false).forGetter(Meta::startChoice),
-                Codec.STRING.optionalFieldOf("series").forGetter(Meta::series)
+                Codec.STRING.optionalFieldOf("series").forGetter(Meta::series),
+                Codec.STRING.listOf().optionalFieldOf("formAspects", List.of()).forGetter(Meta::formAspects)
         ).apply(i, Meta::new));
     }
 }

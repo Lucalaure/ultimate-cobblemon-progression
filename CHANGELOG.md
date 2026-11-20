@@ -1,3 +1,9 @@
+# Unreleased
+
+## Changes
+- **Regional forms need their own region open.** In region mode, Alolan, Galarian, Hisuian and Paldean forms no longer spawn just because their species can: Alolan Rattata also needs Alola open, Galarian forms need Galar, Hisuian forms Sinnoh, and Paldean forms Paldea. The same goes for Pokémon that Cobblemon spawns ready to evolve into a regional form (like Pikachu that become Alolan Raichu). This also stops a Galarian Farfetch'd caught early from evolving into Sirfetch'd before Galar opens. Forms keep their species' tier and levels, and still count as their species for the Pokédex and for catching every Pokémon. Turn it off with `lockRegionalForms` in `ucp-spawn.json` or on the Mod Menu spawn page.
+- Datapacks: a region's `region.json` can claim forms with `formAspects` (e.g. `["alolan", "region-bias-alola"]`).
+
 # CJP 2.2.0
 
 - **Renamed to Cobblemon Journey Progression (CJP)**, with a new icon. Only the name changed: the mod id (`ultimate-cobblemon-progression`), config files, datapack namespace and API stay the same, so existing worlds, configs and datapacks keep working. The jar is now `cjp-fabric-<version>+mc1.21.1.jar`.

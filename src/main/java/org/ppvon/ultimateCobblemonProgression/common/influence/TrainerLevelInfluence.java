@@ -23,6 +23,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import org.jetbrains.annotations.NotNull;
 import org.ppvon.ultimateCobblemonProgression.common.progression.TierStanding;
+import org.ppvon.ultimateCobblemonProgression.common.regions.RegionalForms;
 import org.ppvon.ultimateCobblemonProgression.config.ConfigLoader;
 
 import java.util.Locale;
@@ -37,7 +38,8 @@ import java.util.function.Supplier;
  *  allowed to spawn if a trainer is at least that tier.  If a species is not
  *  found in a tier, by default the spawn is still blocked, but can be configured
  *  with BLOCK_UNKNOWN_SPECIES.  In region mode, each region has its own tier
- *  ladder instead (see {@link TierStanding}).
+ *  ladder instead (see {@link TierStanding}), and regional forms also need
+ *  their own region open (see {@link RegionalForms}).
  *
  * Weight:
  *  Pokemon in the same tier as the player get a buff to their weight via
@@ -144,7 +146,7 @@ public final class TrainerLevelInfluence implements SpawningInfluence {
     private static boolean anyHerdMemberAllowed(PokemonHerdSpawnDetail herd, ServerPlayer player) {
         for (var member : herd.getHerdablePokemon()) {
             Species sp = speciesOf(member.getPokemon().getSpecies());
-            if (sp == null || isAllowed(sp, player)) return true;
+            if ((sp == null || isAllowed(sp, player)) && RegionalForms.isAllowed(member.getPokemon().getAspects(), player)) return true;
         }
         return false;
     }
@@ -161,7 +163,9 @@ public final class TrainerLevelInfluence implements SpawningInfluence {
         if (!ConfigLoader.DO_SPECIES_BLOCKING.get() || !TierStanding.hasTierData()) return Unit.INSTANCE;
         if (!(event.getEntity() instanceof PokemonEntity pe)) return Unit.INSTANCE;
 
-        if (!isAllowed(pe.getPokemon().getSpecies(), resolvePlayer(event.getSpawnablePosition()))) {
+        var pokemon = pe.getPokemon();
+        ServerPlayer player = resolvePlayer(event.getSpawnablePosition());
+        if (!isAllowed(pokemon.getSpecies(), player) || !RegionalForms.isAllowed(pokemon.getAspects(), player)) {
             event.cancel();
         }
         return Unit.INSTANCE;
@@ -194,7 +198,9 @@ public final class TrainerLevelInfluence implements SpawningInfluence {
         Species sp = speciesOf(spawnDetail);
         if (sp == null) return true;
 
-        return isAllowed(sp, resolvePlayer(spawningContext));
+        ServerPlayer player = resolvePlayer(spawningContext);
+        return isAllowed(sp, player)
+                && RegionalForms.isAllowed(((PokemonSpawnDetail) spawnDetail).getPokemon().getAspects(), player);
     }
 
     @Override

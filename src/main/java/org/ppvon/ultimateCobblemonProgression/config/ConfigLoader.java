@@ -11,6 +11,7 @@ public final class ConfigLoader {
     // ucp-spawn.json
     public static Supplier<Boolean> DO_SPECIES_BLOCKING;
     public static Supplier<Boolean> BLOCK_UNKNOWN_SPECIES;
+    public static Supplier<Boolean> LOCK_REGIONAL_FORMS;
 
     public static Supplier<Boolean> DO_LEVEL_SCALING;
     public static Supplier<Double> TIER_CAP_SCALING;
@@ -58,6 +59,7 @@ public final class ConfigLoader {
     private static void wireSuppliers() {
         DO_SPECIES_BLOCKING = () -> SPAWN.doSpeciesBlocking;
         BLOCK_UNKNOWN_SPECIES = () -> SPAWN.blockUnknownSpecies;
+        LOCK_REGIONAL_FORMS = () -> SPAWN.lockRegionalForms;
 
         DO_LEVEL_SCALING = () -> SPAWN.doLevelScaling;
         TIER_CAP_SCALING = () -> SPAWN.tierCapScaling;

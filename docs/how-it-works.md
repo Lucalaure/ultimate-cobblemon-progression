@@ -58,7 +58,7 @@ Each time Cobblemon tries to spawn a wild Pokémon near you, CJP checks the spec
 
 This applies to every kind of Cobblemon spawn: normal world spawns, fishing, PokeSnacks and bait.
 
-**A Pokémon's forms always share its tier.** CJP assigns tiers to species, so Alolan, Galarian, Hisuian and Paldean forms use the base species' tier.
+**A Pokémon's forms always share its tier.** CJP assigns tiers to species, so Alolan, Galarian, Hisuian and Paldean forms use the base species' tier. In region mode, a regional form also needs **its own region** open before it spawns (see [Regional forms](#regional-forms)).
 
 **Which player counts.** Cobblemon runs spawning separately around each player. The check uses the player whose spawner made the attempt. If two players are together, Pokémon spawned by the higher-tier player's spawner can appear near both of them. If a spawn isn't tied to a player, the nearest player within 128 blocks counts; if nobody is that close, tiered species are blocked.
 
@@ -183,6 +183,7 @@ On a dedicated server, edit the **server's** files and restart it; the in-game s
 |---|---|---|
 | `doSpeciesBlocking` | `true` | Block wild Pokémon above the player's tier. |
 | `blockUnknownSpecies` | `true` | Block species that aren't listed in any tier. |
+| `lockRegionalForms` | `true` | Region mode: regional forms (Alolan, Galarian, Hisuian, Paldean) only spawn once their own region is open ([Regional forms](#regional-forms)). Off: a form spawns whenever its species can. |
 | `doLevelScaling` | `true` | Replace wild levels with CJP's tier-based levels ([section 4](#4-wild-pokémon-levels)). |
 | `tierCapScaling` | `0.25` | How much of the gap between your cap and a lower-tier Pokémon's cap is added to its level. `0` = low-tier Pokémon never get stronger; `1` = they scale fully to your cap. |
 | `minLevelScaling` | `0.45` | Lowest wild level, as a fraction of the boosted cap. |
@@ -289,6 +290,21 @@ Regions come in two kinds:
 
 Species from regions you haven't reached, and species in no region at all, can't spawn (the second case follows `blockUnknownSpecies`). This only affects wild spawns: trades, eggs and evolutions aren't restricted.
 
+### Regional forms
+
+A regional form belongs to its species' region **and** to the region it comes from. Alolan Rattata needs both: Rattata's tier unlocked in Kanto, and Alola open. Until then, only regular Rattata spawns. In the built-in data:
+
+| Forms | Region they need |
+|---|---|
+| Alolan, and Pikachu, Pichu, Exeggcute and Cubone that will evolve into Alolan forms | Alola |
+| Galarian, and Koffing and Mime Jr. that will evolve into Galarian forms | Galar |
+| Hisuian, and Cyndaquil, Rowlet, Goomy and the others that will evolve into Hisuian forms | Sinnoh (its tiers include the Hisui dex) |
+| Paldean (Wooper, Tauros) | Paldea |
+
+This closes a shortcut: without it, a Galarian Farfetch'd caught early could evolve into Sirfetch'd, a Galar species, long before Galar opens. The form still uses its species' tier and levels, and it counts as that species for your Pokédex and for [catching every Pokémon](#catch-every-pokémon-optional). Forms no region claims, like Cobblemon's Valencian forms, spawn whenever their species can. Turn this off with `lockRegionalForms` in `ucp-spawn.json`.
+
+A region claims forms with `formAspects` in its `region.json` (see [Region files](#region-files)).
+
 Progress is worked out from your advancements (and Pokédex, if a tier asks for it) each time it changes, so a trainer mod resetting its own series progress never re-locks a region. CJP only stores the regions you picked.
 
 ### Differences from the tier ladder
@@ -326,6 +342,7 @@ regions/kanto/tier_2.json
 | `completedBy` | No | Advancement that completes the region. Without it, the region is complete once its last tier is unlocked. |
 | `startChoice` | No (default false) | Lets players pick this region as their extra starting region (see below). Ignored on the first region, which is always open, and on regions with a `series`. |
 | `series` | No | The Radical Cobblemon Trainers series for this region's trainers, e.g. `"kanto"`. A region with a series is a **league region**: it can be picked as where a player's journey starts, or where it goes next (see below). |
+| `formAspects` | No | Cobblemon aspects that mark a Pokémon as this region's [regional form](#regional-forms), e.g. `["alolan", "region-bias-alola"]`. A Pokémon with one of them only spawns for players who have this region open. If two regions list the same aspect, the earlier one keeps it. |
 
 ### Choosing where your journey starts
 

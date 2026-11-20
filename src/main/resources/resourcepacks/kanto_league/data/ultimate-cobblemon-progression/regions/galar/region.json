@@ -1,5 +1,9 @@
 {
   "order": 8,
   "title": "Galar",
-  "startChoice": true
+  "startChoice": true,
+  "formAspects": [
+    "galarian",
+    "region-bias-galar"
+  ]
 }

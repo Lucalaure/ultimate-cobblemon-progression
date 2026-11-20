@@ -1,5 +1,8 @@
 {
   "order": 10,
   "title": "Paldea",
-  "startChoice": true
+  "startChoice": true,
+  "formAspects": [
+    "paldean"
+  ]
 }

@@ -3,6 +3,8 @@ package org.ppvon.ultimateCobblemonProgression.config;
 public class SpawnConfig {
     public boolean doSpeciesBlocking = true;
     public boolean blockUnknownSpecies = true;
+    /** Region mode: regional forms (Alolan, Galarian, ...) only spawn once their own region is open. */
+    public boolean lockRegionalForms = true;
 
     public boolean doLevelScaling = true;
     public double tierCapScaling = 0.25;
