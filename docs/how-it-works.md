@@ -530,6 +530,8 @@ Each entry is a Radical Cobblemon Trainers trainer id. A nested list means "any 
 - the challenger logs out, leaves the dimension or goes more than 32 blocks away,
 - or 3 minutes pass without a battle.
 
+**Rematches.** Sneak and use a Gym Challenge block with an empty hand to open the rematch menu: every leader, Elite Four member and Champion you've beaten, from every region on your journey, each with a **Normal** button and (when it has one) a **Hard** button, whatever your [gym difficulty](#gym-difficulty). The leader is summoned like any other and leaves the same way. A rematch changes nothing: no badges, tiers or level cap. Radical Cobblemon Trainers' progression rules are skipped for it, so you can rematch an earlier region's leaders after travelling on, and your level cap doesn't stop the battle. The leader drops its loot again, as RCT trainers always do.
+
 **Team limit (optional).** With `gymTeamLimit` on in `ucp-common.json`, you can bring no more Pokémon to a gym battle than the leader has: Brock has 2, so you can bring at most 2. The leader says so when it accepts your challenge. If your party is bigger, the battle doesn't start, and you're told how many to put in the PC. Every Pokémon in your party counts, fainted ones included. It applies to every trainer a Gym Challenge block summons, the Elite Four and Champion included.
 
 ### Gym difficulty

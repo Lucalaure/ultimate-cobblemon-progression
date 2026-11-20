@@ -1,6 +1,7 @@
 package org.ppvon.ultimateCobblemonProgression.common.gym;
 
 import com.cobblemon.mod.common.battles.BattleRegistry;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -52,30 +53,72 @@ public class GymChallengeBlockEntity extends BlockEntity {
         super(GymBlocks.GYM_CHALLENGE_ENTITY, pos, state);
     }
 
-    /** Handles a player using the block. */
+    /** Handles a player using the block: summons their next gym leader. */
     public void use(ServerPlayer player) {
         ServerLevel level = (ServerLevel) this.level;
         if (level == null) return;
-        checkLeader(level);
-
-        if (leader != null) {
-            if (player.getUUID().equals(challenger)) {
-                tell(player, Component.literal(leaderName + " is waiting for you.").withStyle(ChatFormatting.YELLOW));
-            } else {
-                tell(player, Component.literal(challengerName + " is challenging " + leaderName
-                        + ". Wait for them to finish.").withStyle(ChatFormatting.RED));
-            }
-            return;
-        }
+        if (isTaken(level, player)) return;
 
         GymLeaderPicker.Pick pick = GymLeaderPicker.pick(player);
         if (!pick.found()) {
             tell(player, pick.problem().copy().withStyle(ChatFormatting.GRAY));
+            if (!GymRematch.rematchable(player).isEmpty()) {
+                tell(player, Component.literal("Sneak and use the block with an empty hand to rematch a leader you've beaten.")
+                        .withStyle(ChatFormatting.GRAY));
+            }
             return;
         }
+        summon(level, player, pick.trainerId(), pick.region().title, false);
+    }
 
+    /** Handles a player sneaking and using the block: opens the menu of leaders they can rematch. */
+    public void openRematch(ServerPlayer player) {
+        ServerLevel level = (ServerLevel) this.level;
+        if (level == null) return;
+        if (isTaken(level, player)) return;
+        if (!RctBridge.isLoaded()) {
+            tell(player, Component.literal("Gyms need Radical Cobblemon Trainers to be installed.").withStyle(ChatFormatting.GRAY));
+            return;
+        }
+        var entries = GymRematch.rematchable(player);
+        if (entries.isEmpty()) {
+            tell(player, GymRematch.nothingToRematch());
+            return;
+        }
+        ServerPlayNetworking.send(player, new RematchPayloads.Open(worldPosition, entries));
+    }
+
+    /** Summons a leader the player already beat, picked from the rematch menu. */
+    public void rematch(ServerPlayer player, String pickedId) {
+        ServerLevel level = (ServerLevel) this.level;
+        if (level == null) return;
+        if (isTaken(level, player)) return;
+        if (!GymRematch.canRematch(player, pickedId)) {
+            tell(player, Component.literal("You can only rematch leaders you've already beaten.").withStyle(ChatFormatting.RED));
+            return;
+        }
+        var region = GymRematch.regionOf(pickedId);
+        summon(level, player, pickedId, region != null ? region.title : "Rematch", true);
+    }
+
+    /** Whether a leader is already standing in this gym; tells the player so. */
+    private boolean isTaken(ServerLevel level, ServerPlayer player) {
+        checkLeader(level);
+        if (leader == null) return false;
+        if (player.getUUID().equals(challenger)) {
+            tell(player, Component.literal(leaderName + " is waiting for you.").withStyle(ChatFormatting.YELLOW));
+        } else {
+            tell(player, Component.literal(challengerName + " is challenging " + leaderName
+                    + ". Wait for them to finish.").withStyle(ChatFormatting.RED));
+        }
+        return true;
+    }
+
+    private void summon(ServerLevel level, ServerPlayer player, String id, String regionTitle, boolean rematch) {
         clearLeftovers(level);
-        Entity trainer = RctBridge.summon(level, leaderSpot(level), pick.trainerId());
+        Entity trainer = rematch
+                ? RctBridge.summon(level, leaderSpot(level), id, GymRematch.REMATCH_TAG)
+                : RctBridge.summon(level, leaderSpot(level), id);
         if (trainer == null) {
             tell(player, Component.literal("The gym leader couldn't be summoned. Check the server log.").withStyle(ChatFormatting.RED));
             return;
@@ -85,16 +128,21 @@ public class GymChallengeBlockEntity extends BlockEntity {
         leader = trainer.getUUID();
         challenger = player.getUUID();
         challengerName = player.getGameProfile().getName();
-        trainerId = pick.trainerId();
+        trainerId = id;
         leaderName = trainer.getDisplayName().getString();
         defeatsAtSummon = Math.max(0, RctBridge.defeats(player, trainerId));
         lastActive = level.getGameTime();
         setChanged();
 
-        var accepted = Component.literal("[" + pick.region().title + "] ").withStyle(ChatFormatting.AQUA)
-                .append(Component.literal(leaderName + " accepts your challenge!").withStyle(ChatFormatting.GOLD));
+        var accepted = Component.literal("[" + regionTitle + "] ").withStyle(ChatFormatting.AQUA)
+                .append(Component.literal(leaderName + (rematch ? " accepts your rematch!" : " accepts your challenge!"))
+                        .withStyle(ChatFormatting.GOLD));
         if (GymDifficulty.isHard(trainerId)) accepted.append(Component.literal(" (Hard)").withStyle(ChatFormatting.RED));
         tell(player, accepted);
+        if (rematch) {
+            tell(player, Component.literal("A rematch doesn't change your progress, and your level cap doesn't apply.")
+                    .withStyle(ChatFormatting.GRAY));
+        }
         if (GymTeamLimit.isOn()) {
             Component hint = GymTeamLimit.hint(leaderName, RctBridge.teamSize(level.getServer(), trainerId));
             if (hint != null) tell(player, hint);

@@ -23,7 +23,8 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
 
 /**
- * The heart of a gym: using it summons the player's next gym leader in front of it.
+ * The heart of a gym: using it summons the player's next gym leader in front of it; sneaking and using it opens a
+ * menu of leaders to rematch.
  * Unbreakable outside creative, so village gyms can't be carried off.
  */
 public class GymChallengeBlock extends BaseEntityBlock {
@@ -69,7 +70,9 @@ public class GymChallengeBlock extends BaseEntityBlock {
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
         if (level.isClientSide) return InteractionResult.SUCCESS;
         if (player instanceof ServerPlayer sp && level.getBlockEntity(pos) instanceof GymChallengeBlockEntity gym) {
-            gym.use(sp);
+            // Sneaking (with an empty hand, or the block isn't used at all): rematch a leader already beaten.
+            if (sp.isShiftKeyDown()) gym.openRematch(sp);
+            else gym.use(sp);
         }
         return InteractionResult.CONSUME;
     }

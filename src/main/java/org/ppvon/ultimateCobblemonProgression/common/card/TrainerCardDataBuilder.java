@@ -220,20 +220,7 @@ final class TrainerCardDataBuilder {
         return p == PokedexEntryProgress.OWNED ? CAUGHT : p == PokedexEntryProgress.SEEN ? SEEN : UNKNOWN;
     }
 
-    /** RCT's translated trainer name, falling back to one made from the id. */
     private static Component trainerName(String trainerId) {
-        return Component.translatableWithFallback("trainer.rctmod." + trainerId + ".name", plainName(trainerId));
-    }
-
-    /** "leader_lt_surge_01a0" becomes "Leader Lt Surge". */
-    static String plainName(String trainerId) {
-        String base = trainerId.replaceFirst("_[0-9a-f]{4}$", "");
-        StringBuilder sb = new StringBuilder();
-        for (String word : base.split("_")) {
-            if (word.isEmpty()) continue;
-            if (!sb.isEmpty()) sb.append(' ');
-            sb.append(Character.toUpperCase(word.charAt(0))).append(word.substring(1));
-        }
-        return sb.toString();
+        return RctBridge.trainerName(trainerId);
     }
 }

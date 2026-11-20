@@ -103,15 +103,34 @@ public final class RctBridge {
         }
     }
 
+    /** RCT's translated trainer name, falling back to one made from the id. */
+    public static Component trainerName(String trainerId) {
+        return Component.translatableWithFallback("trainer.rctmod." + trainerId + ".name", plainName(trainerId));
+    }
+
+    /** "leader_lt_surge_01a0" becomes "Leader Lt Surge". */
+    static String plainName(String trainerId) {
+        String base = trainerId.replaceFirst("_[0-9a-f]{4}$", "");
+        StringBuilder sb = new StringBuilder();
+        for (String word : base.split("_")) {
+            if (word.isEmpty()) continue;
+            if (!sb.isEmpty()) sb.append(' ');
+            sb.append(Character.toUpperCase(word.charAt(0))).append(word.substring(1));
+        }
+        return sb.toString();
+    }
+
     /**
      * Summons a trainer standing on {@code pos} and returns it, or null if RCT refused.
-     * The trainer is tagged so it can be found again after the command.
+     * The trainer is tagged so it can be found again after the command, plus any extra tags given.
      */
-    public static Entity summon(ServerLevel level, BlockPos pos, String trainerId) {
+    public static Entity summon(ServerLevel level, BlockPos pos, String trainerId, String... extraTags) {
         String tag = "ucp_gym_" + UUID.randomUUID().toString().substring(0, 8);
+        StringBuilder tags = new StringBuilder("\"" + tag + "\",\"" + GymChallengeBlockEntity.LEADER_TAG + "\"");
+        for (String extra : extraTags) tags.append(",\"").append(extra).append('"');
         int result = run(source(level, Vec3.atCenterOf(pos)),
                 "rctmod trainer summon " + trainerId + " " + pos.getX() + " " + pos.getY() + " " + pos.getZ()
-                        + " {Tags:[\"" + tag + "\",\"" + GymChallengeBlockEntity.LEADER_TAG + "\"]}");
+                        + " {Tags:[" + tags + "]}");
         if (result < 0) return null;
 
         List<Entity> found = level.getEntities((Entity) null, new AABB(pos).inflate(2), e -> e.getTags().contains(tag));

@@ -57,6 +57,7 @@ public class UltimateCobblemonProgression implements ModInitializer {
         GymBlocks.register();
         VillageGyms.register();
         GymTeamLimit.register();
+        org.ppvon.ultimateCobblemonProgression.common.gym.GymRematch.register();
         TrainerCard.register();
         DefeatTrainerTrigger.register();
 
