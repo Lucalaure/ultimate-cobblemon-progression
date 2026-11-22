@@ -1,0 +1,35 @@
+{
+  "name": "Gym Trainer Annette",
+  "team": [
+    {
+      "species": "spritzee",
+      "gender": "MALE",
+      "level": 34,
+      "nature": "jolly",
+      "ability": "healer",
+      "moveset": [
+        "drainingkiss",
+        "psychic",
+        "echoedvoice",
+        "sweetkiss"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "slurpuff",
+      "gender": "MALE",
+      "level": 34,
+      "nature": "careful",
+      "ability": "sweetveil",
+      "moveset": [
+        "drainingkiss",
+        "energyball",
+        "cottonspore",
+        "faketears"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

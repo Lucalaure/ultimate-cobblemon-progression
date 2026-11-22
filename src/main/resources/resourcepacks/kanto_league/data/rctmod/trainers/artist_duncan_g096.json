@@ -1,0 +1,33 @@
+{
+  "name": "Artist Duncan",
+  "team": [
+    {
+      "species": "koffing",
+      "gender": "FEMALE",
+      "level": 29,
+      "nature": "quiet",
+      "ability": "levitate",
+      "moveset": [
+        "haze",
+        "smokescreen",
+        "clearsmog"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "sudowoodo",
+      "gender": "MALE",
+      "level": 31,
+      "nature": "impish",
+      "ability": "sturdy",
+      "moveset": [
+        "slam",
+        "rockslide",
+        "suckerpunch"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

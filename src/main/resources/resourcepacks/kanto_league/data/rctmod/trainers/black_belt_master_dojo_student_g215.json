@@ -1,0 +1,18 @@
+{
+  "name": "Master Dojo Student",
+  "team": [
+    {
+      "species": "krabby",
+      "gender": "MALE",
+      "level": 24,
+      "nature": "timid",
+      "ability": "hypercutter",
+      "moveset": [
+        "bubblebeam",
+        "metalclaw"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

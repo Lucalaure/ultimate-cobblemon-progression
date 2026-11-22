@@ -1,0 +1,30 @@
+{
+  "name": "Pok\u00e9mon Trainer Hop",
+  "team": [
+    {
+      "species": "wooloo",
+      "gender": "FEMALE",
+      "level": 3,
+      "nature": "brave",
+      "ability": "fluffy",
+      "moveset": [
+        "tackle"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "grookey",
+      "gender": "MALE",
+      "level": 5,
+      "nature": "naive",
+      "ability": "overgrow",
+      "moveset": [
+        "scratch",
+        "growl"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

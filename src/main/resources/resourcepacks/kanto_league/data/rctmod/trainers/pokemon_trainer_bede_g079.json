@@ -1,0 +1,68 @@
+{
+  "name": "Pok\u00e9mon Trainer Bede",
+  "team": [
+    {
+      "species": "solosis",
+      "gender": "MALE",
+      "level": 21,
+      "nature": "relaxed",
+      "ability": "overcoat",
+      "moveset": [
+        "psyshock",
+        "psybeam",
+        "endeavor"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "gothita",
+      "gender": "MALE",
+      "level": 22,
+      "nature": "gentle",
+      "ability": "frisk",
+      "moveset": [
+        "psyshock",
+        "rocktomb",
+        "psybeam"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "ponyta",
+      "gender": "MALE",
+      "level": 22,
+      "nature": "hasty",
+      "ability": "runaway",
+      "moveset": [
+        "confusion",
+        "fairywind"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "galarian"
+      ]
+    },
+    {
+      "species": "hatenna",
+      "gender": "FEMALE",
+      "level": 23,
+      "nature": "lonely",
+      "ability": "healer",
+      "moveset": [
+        "psybeam",
+        "disarmingvoice"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ],
+  "bag": [
+    {
+      "item": "cobblemon:super_potion",
+      "quantity": 1
+    }
+  ]
+}

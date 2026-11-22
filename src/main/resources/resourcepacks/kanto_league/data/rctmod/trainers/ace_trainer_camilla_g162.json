@@ -1,0 +1,34 @@
+{
+  "name": "Gym Trainer Camilla",
+  "team": [
+    {
+      "species": "ninetales",
+      "gender": "FEMALE",
+      "level": 45,
+      "nature": "modest",
+      "ability": "flashfire",
+      "moveset": [
+        "flamethrower",
+        "disable",
+        "extrasensory"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "turtonator",
+      "gender": "FEMALE",
+      "level": 45,
+      "nature": "hasty",
+      "ability": "shellarmor",
+      "moveset": [
+        "flamethrower",
+        "dragonpulse",
+        "shelltrap",
+        "rocktomb"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

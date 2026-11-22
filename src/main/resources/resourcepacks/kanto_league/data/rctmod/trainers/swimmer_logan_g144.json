@@ -1,0 +1,33 @@
+{
+  "name": "Swimmer Logan",
+  "team": [
+    {
+      "species": "wishiwashi",
+      "gender": "FEMALE",
+      "level": 40,
+      "nature": "calm",
+      "ability": "schooling",
+      "moveset": [
+        "uproar",
+        "dive",
+        "aquatail"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "wailord",
+      "gender": "FEMALE",
+      "level": 40,
+      "nature": "bold",
+      "ability": "waterveil",
+      "moveset": [
+        "bodyslam",
+        "heavyslam",
+        "whirlpool"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

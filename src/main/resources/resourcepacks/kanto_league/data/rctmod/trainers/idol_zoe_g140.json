@@ -1,0 +1,35 @@
+{
+  "name": "Dancer Zoe",
+  "team": [
+    {
+      "species": "darumaka",
+      "gender": "MALE",
+      "level": 39,
+      "nature": "naive",
+      "moveset": [
+        "icefang",
+        "bite",
+        "headbutt"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "galarian"
+      ]
+    },
+    {
+      "species": "bellossom",
+      "gender": "MALE",
+      "level": 39,
+      "nature": "brave",
+      "ability": "chlorophyll",
+      "moveset": [
+        "petalblizzard",
+        "quiverdance",
+        "moonblast"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

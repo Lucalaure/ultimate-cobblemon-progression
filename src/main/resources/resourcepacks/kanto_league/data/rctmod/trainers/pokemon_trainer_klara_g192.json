@@ -1,0 +1,47 @@
+{
+  "name": "Pok\u00e9mon Trainer Klara",
+  "team": [
+    {
+      "species": "slowpoke",
+      "gender": "FEMALE",
+      "level": 62,
+      "nature": "quiet",
+      "ability": "gluttony",
+      "moveset": [
+        "acid",
+        "confusion"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "galarian"
+      ]
+    },
+    {
+      "species": "koffing",
+      "gender": "FEMALE",
+      "level": 62,
+      "nature": "bold",
+      "ability": "levitate",
+      "moveset": [
+        "clearsmog",
+        "assurance"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "whirlipede",
+      "gender": "FEMALE",
+      "level": 63,
+      "nature": "serious",
+      "ability": "poisonpoint",
+      "moveset": [
+        "poisontail",
+        "bugbite"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

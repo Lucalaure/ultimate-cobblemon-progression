@@ -1,0 +1,33 @@
+{
+  "name": "Cabbie Geoffrey",
+  "team": [
+    {
+      "species": "corviknight",
+      "gender": "MALE",
+      "level": 45,
+      "nature": "bashful",
+      "ability": "pressure",
+      "moveset": [
+        "swagger",
+        "drillpeck",
+        "steelwing"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "flygon",
+      "gender": "FEMALE",
+      "level": 46,
+      "nature": "adamant",
+      "ability": "levitate",
+      "moveset": [
+        "earthquake",
+        "dragontail",
+        "earthpower"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

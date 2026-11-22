@@ -1,0 +1,19 @@
+{
+  "name": "Musician Charles",
+  "team": [
+    {
+      "species": "togedemaru",
+      "gender": "FEMALE",
+      "level": 37,
+      "nature": "brave",
+      "ability": "ironbarbs",
+      "moveset": [
+        "zingzap",
+        "fellstinger",
+        "nuzzle"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

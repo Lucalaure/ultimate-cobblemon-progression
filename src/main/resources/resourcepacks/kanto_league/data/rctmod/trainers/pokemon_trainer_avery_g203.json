@@ -1,0 +1,33 @@
+{
+  "name": "Pok\u00e9mon Trainer Avery",
+  "team": [
+    {
+      "species": "abra",
+      "gender": "MALE",
+      "level": 10,
+      "nature": "mild",
+      "ability": "synchronize",
+      "moveset": [
+        "confusion"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "slowpoke",
+      "gender": "FEMALE",
+      "level": 12,
+      "nature": "relaxed",
+      "ability": "gluttony",
+      "moveset": [
+        "confusion",
+        "acid"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "galarian"
+      ]
+    }
+  ]
+}

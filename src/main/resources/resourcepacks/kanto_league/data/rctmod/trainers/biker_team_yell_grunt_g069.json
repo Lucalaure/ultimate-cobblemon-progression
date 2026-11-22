@@ -1,0 +1,36 @@
+{
+  "name": "Team Yell Grunt",
+  "team": [
+    {
+      "species": "zigzagoon",
+      "gender": "MALE",
+      "level": 17,
+      "nature": "modest",
+      "moveset": [
+        "tackle",
+        "lick",
+        "snarl"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "galarian"
+      ]
+    },
+    {
+      "species": "thievul",
+      "gender": "MALE",
+      "level": 18,
+      "nature": "impish",
+      "ability": "runaway",
+      "moveset": [
+        "quickattack",
+        "snarl",
+        "tailwhip",
+        "beatup"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

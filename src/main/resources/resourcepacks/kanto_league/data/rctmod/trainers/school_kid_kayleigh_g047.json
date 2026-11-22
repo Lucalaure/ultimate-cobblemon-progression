@@ -1,0 +1,31 @@
+{
+  "name": "Schoolgirl Kayleigh",
+  "team": [
+    {
+      "species": "purrloin",
+      "gender": "FEMALE",
+      "level": 12,
+      "nature": "naive",
+      "ability": "limber",
+      "moveset": [
+        "scratch",
+        "growl"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "skwovet",
+      "gender": "MALE",
+      "level": 13,
+      "nature": "careful",
+      "ability": "cheekpouch",
+      "moveset": [
+        "tackle",
+        "tailwhip"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Macro Cosmos's Carla",
+  "team": [
+    {
+      "species": "mawile",
+      "gender": "FEMALE",
+      "level": 48,
+      "nature": "docile",
+      "ability": "hypercutter",
+      "moveset": [
+        "ironhead",
+        "faketears",
+        "crunch",
+        "astonish"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

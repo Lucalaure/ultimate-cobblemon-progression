@@ -1,0 +1,35 @@
+{
+  "name": "Caf\u00e9 Master Bernard",
+  "team": [
+    {
+      "species": "slurpuff",
+      "gender": "FEMALE",
+      "level": 37,
+      "nature": "brave",
+      "ability": "sweetveil",
+      "moveset": [
+        "playrough",
+        "round",
+        "helpinghand",
+        "energyball"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "alcremie",
+      "gender": "FEMALE",
+      "level": 37,
+      "nature": "docile",
+      "ability": "sweetveil",
+      "moveset": [
+        "dazzlinggleam",
+        "round",
+        "attract",
+        "magicalleaf"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

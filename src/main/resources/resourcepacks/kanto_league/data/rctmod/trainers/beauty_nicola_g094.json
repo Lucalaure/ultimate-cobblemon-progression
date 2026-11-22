@@ -1,0 +1,33 @@
+{
+  "name": "Model Nicola",
+  "team": [
+    {
+      "species": "skorupi",
+      "gender": "MALE",
+      "level": 30,
+      "nature": "lax",
+      "ability": "battlearmor",
+      "moveset": [
+        "venoshock",
+        "bugbite",
+        "honeclaws"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "pawniard",
+      "gender": "MALE",
+      "level": 30,
+      "nature": "hardy",
+      "ability": "defiant",
+      "moveset": [
+        "assurance",
+        "metalclaw",
+        "metalsound"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

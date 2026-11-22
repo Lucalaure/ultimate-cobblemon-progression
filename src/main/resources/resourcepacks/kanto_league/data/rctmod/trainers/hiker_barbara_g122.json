@@ -1,0 +1,33 @@
+{
+  "name": "Backpacker Barbara",
+  "team": [
+    {
+      "species": "dreepy",
+      "gender": "MALE",
+      "level": 36,
+      "nature": "bold",
+      "ability": "clearbody",
+      "moveset": [
+        "bite",
+        "quickattack",
+        "astonish"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "vullaby",
+      "gender": "FEMALE",
+      "level": 37,
+      "nature": "gentle",
+      "ability": "bigpecks",
+      "moveset": [
+        "irondefense",
+        "whirlwind",
+        "pluck"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

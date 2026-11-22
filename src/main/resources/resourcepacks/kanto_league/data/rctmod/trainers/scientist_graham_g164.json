@@ -1,0 +1,19 @@
+{
+  "name": "Doctor Graham",
+  "team": [
+    {
+      "species": "gardevoir",
+      "gender": "MALE",
+      "level": 45,
+      "nature": "lax",
+      "ability": "synchronize",
+      "moveset": [
+        "dazzlinggleam",
+        "drainingkiss",
+        "calmmind"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

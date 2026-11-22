@@ -1,0 +1,30 @@
+{
+  "name": "Youngster Benjamin",
+  "team": [
+    {
+      "species": "blipbug",
+      "gender": "MALE",
+      "level": 5,
+      "nature": "modest",
+      "ability": "swarm",
+      "moveset": [
+        "strugglebug"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "nickit",
+      "gender": "FEMALE",
+      "level": 7,
+      "nature": "adamant",
+      "ability": "runaway",
+      "moveset": [
+        "tailwhip",
+        "quickattack"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

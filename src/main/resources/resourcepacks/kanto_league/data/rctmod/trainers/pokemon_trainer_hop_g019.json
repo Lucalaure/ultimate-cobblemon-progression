@@ -1,0 +1,99 @@
+{
+  "name": "Pok\u00e9mon Trainer Hop",
+  "team": [
+    {
+      "species": "dubwool",
+      "gender": "MALE",
+      "level": 69,
+      "nature": "sassy",
+      "ability": "fluffy",
+      "moveset": [
+        "cottonguard",
+        "doublekick",
+        "headbutt"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "snorlax",
+      "gender": "MALE",
+      "level": 68,
+      "nature": "bashful",
+      "ability": "immunity",
+      "moveset": [
+        "hammerarm",
+        "earthquake",
+        "heavyslam",
+        "crunch"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "pincurchin",
+      "gender": "MALE",
+      "level": 68,
+      "nature": "jolly",
+      "ability": "lightningrod",
+      "moveset": [
+        "zingzap",
+        "poisonjab",
+        "liquidation",
+        "recover"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "corviknight",
+      "gender": "MALE",
+      "level": 69,
+      "nature": "brave",
+      "ability": "pressure",
+      "moveset": [
+        "steelwing",
+        "drillpeck",
+        "swagger",
+        "lightscreen"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "cinderace",
+      "gender": "MALE",
+      "level": 70,
+      "nature": "rash",
+      "ability": "blaze",
+      "moveset": [
+        "gunkshot",
+        "ironhead",
+        "pyroball",
+        "zenheadbutt"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "zacian",
+      "gender": "GENDERLESS",
+      "level": 70,
+      "nature": "naughty",
+      "ability": "intrepidsword",
+      "moveset": [
+        "crunch",
+        "wildcharge",
+        "closecombat"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ],
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 1
+    }
+  ]
+}

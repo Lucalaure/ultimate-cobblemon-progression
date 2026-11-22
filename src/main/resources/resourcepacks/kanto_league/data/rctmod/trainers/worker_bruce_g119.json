@@ -1,0 +1,34 @@
+{
+  "name": "Cabbie Bruce",
+  "team": [
+    {
+      "species": "corvisquire",
+      "gender": "MALE",
+      "level": 35,
+      "nature": "gentle",
+      "ability": "keeneye",
+      "moveset": [
+        "drillpeck",
+        "taunt",
+        "swagger",
+        "honeclaws"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "rufflet",
+      "gender": "MALE",
+      "level": 36,
+      "nature": "mild",
+      "ability": "keeneye",
+      "moveset": [
+        "aerialace",
+        "honeclaws",
+        "slash"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Macro Cosmos's Jane",
+  "team": [
+    {
+      "species": "cufant",
+      "gender": "FEMALE",
+      "level": 48,
+      "nature": "bashful",
+      "ability": "sheerforce",
+      "moveset": [
+        "ironhead",
+        "playrough",
+        "strength",
+        "dig"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

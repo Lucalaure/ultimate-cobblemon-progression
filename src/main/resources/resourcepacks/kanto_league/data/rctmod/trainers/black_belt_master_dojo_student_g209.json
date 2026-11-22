@@ -1,0 +1,18 @@
+{
+  "name": "Master Dojo Student",
+  "team": [
+    {
+      "species": "inkay",
+      "gender": "MALE",
+      "level": 25,
+      "nature": "sassy",
+      "ability": "contrary",
+      "moveset": [
+        "slash",
+        "nightslash"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

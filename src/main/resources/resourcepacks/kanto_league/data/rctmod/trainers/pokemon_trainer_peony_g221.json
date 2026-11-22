@@ -1,0 +1,38 @@
+{
+  "name": "Pok\u00e9mon Trainer Peony",
+  "team": [
+    {
+      "species": "copperajah",
+      "gender": "FEMALE",
+      "level": 70,
+      "nature": "modest",
+      "ability": "sheerforce",
+      "moveset": [
+        "heavyslam",
+        "playrough",
+        "highhorsepower",
+        "superpower"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "aggron",
+      "gender": "FEMALE",
+      "level": 70,
+      "nature": "brave",
+      "ability": "sturdy",
+      "moveset": [
+        "crunch",
+        "ironhead",
+        "stoneedge",
+        "bodypress"
+      ],
+      "ivs": {},
+      "evs": {},
+      "heldItem": [
+        "sitrus_berry"
+      ]
+    }
+  ]
+}

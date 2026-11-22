@@ -1,0 +1,34 @@
+{
+  "name": "Office Worker Alison",
+  "team": [
+    {
+      "species": "hippowdon",
+      "gender": "FEMALE",
+      "level": 36,
+      "nature": "impish",
+      "ability": "sandstream",
+      "moveset": [
+        "yawn",
+        "sandtomb",
+        "crunch"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "perrserker",
+      "gender": "MALE",
+      "level": 37,
+      "nature": "lonely",
+      "ability": "battlearmor",
+      "moveset": [
+        "taunt",
+        "swagger",
+        "fakeout",
+        "furyswipes"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

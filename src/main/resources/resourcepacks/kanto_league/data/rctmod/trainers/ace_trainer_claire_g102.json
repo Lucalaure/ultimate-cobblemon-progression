@@ -1,0 +1,23 @@
+{
+  "name": "Gym Trainer Claire",
+  "team": [
+    {
+      "species": "farfetchd",
+      "gender": "FEMALE",
+      "level": 32,
+      "nature": "naughty",
+      "ability": "steadfast",
+      "moveset": [
+        "detect",
+        "brutalswing",
+        "rocksmash",
+        "sandattack"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "galarian"
+      ]
+    }
+  ]
+}

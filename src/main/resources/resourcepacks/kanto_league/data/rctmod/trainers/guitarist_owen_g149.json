@@ -1,0 +1,19 @@
+{
+  "name": "Musician Owen",
+  "team": [
+    {
+      "species": "toxtricity",
+      "gender": "FEMALE",
+      "level": 41,
+      "nature": "rash",
+      "ability": "punkrock",
+      "moveset": [
+        "venoshock",
+        "toxic",
+        "shockwave"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

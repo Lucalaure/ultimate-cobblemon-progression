@@ -1,0 +1,31 @@
+{
+  "name": "Madame Caroline",
+  "team": [
+    {
+      "species": "yamper",
+      "gender": "FEMALE",
+      "level": 22,
+      "nature": "serious",
+      "ability": "ballfetch",
+      "moveset": [
+        "roar",
+        "spark"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "swoobat",
+      "gender": "MALE",
+      "level": 24,
+      "nature": "naughty",
+      "ability": "unaware",
+      "moveset": [
+        "aircutter",
+        "confusion"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "name": "Pok\u00e9mon Trainer Hop",
+  "team": [
+    {
+      "species": "cramorant",
+      "gender": "MALE",
+      "level": 28,
+      "nature": "lax",
+      "ability": "gulpmissile",
+      "moveset": [
+        "dive",
+        "furyattack",
+        "pluck"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "toxel",
+      "gender": "MALE",
+      "level": 29,
+      "nature": "hardy",
+      "ability": "rattled",
+      "moveset": [
+        "tearfullook",
+        "nuzzle",
+        "flail",
+        "acid"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "silicobra",
+      "gender": "FEMALE",
+      "level": 30,
+      "nature": "quiet",
+      "ability": "sandspit",
+      "moveset": [
+        "glare",
+        "dig",
+        "brutalswing"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "drizzile",
+      "gender": "MALE",
+      "level": 33,
+      "nature": "gentle",
+      "ability": "torrent",
+      "moveset": [
+        "waterpulse",
+        "suckerpunch",
+        "round",
+        "tearfullook"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ],
+  "bag": [
+    {
+      "item": "cobblemon:super_potion",
+      "quantity": 1
+    }
+  ]
+}

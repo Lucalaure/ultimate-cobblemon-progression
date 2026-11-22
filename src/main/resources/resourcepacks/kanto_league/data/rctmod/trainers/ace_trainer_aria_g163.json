@@ -1,0 +1,35 @@
+{
+  "name": "Gym Trainer Aria",
+  "team": [
+    {
+      "species": "abomasnow",
+      "gender": "MALE",
+      "level": 45,
+      "nature": "lonely",
+      "ability": "snowwarning",
+      "moveset": [
+        "icywind",
+        "razorleaf",
+        "ingrain",
+        "auroraveil"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "hakamoo",
+      "gender": "MALE",
+      "level": 45,
+      "nature": "adamant",
+      "ability": "bulletproof",
+      "moveset": [
+        "dragonclaw",
+        "shadowclaw",
+        "brickbreak",
+        "nobleroar"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

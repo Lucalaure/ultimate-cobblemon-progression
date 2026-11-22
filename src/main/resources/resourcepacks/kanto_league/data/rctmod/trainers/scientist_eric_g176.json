@@ -1,0 +1,32 @@
+{
+  "name": "Macro Cosmos's Eric",
+  "team": [
+    {
+      "species": "mawile",
+      "gender": "FEMALE",
+      "level": 47,
+      "nature": "brave",
+      "ability": "hypercutter",
+      "moveset": [
+        "ironhead",
+        "crunch"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "excadrill",
+      "gender": "FEMALE",
+      "level": 47,
+      "nature": "quirky",
+      "ability": "sandrush",
+      "moveset": [
+        "metalclaw",
+        "crushclaw",
+        "rockslide"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

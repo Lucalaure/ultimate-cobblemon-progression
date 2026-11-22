@@ -1,0 +1,20 @@
+{
+  "name": "Gym Trainer Joshua",
+  "team": [
+    {
+      "species": "drapion",
+      "gender": "FEMALE",
+      "level": 43,
+      "nature": "sassy",
+      "ability": "battlearmor",
+      "moveset": [
+        "poisonfang",
+        "venoshock",
+        "toxicspikes",
+        "bugbite"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

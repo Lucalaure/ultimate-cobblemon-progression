@@ -1,0 +1,71 @@
+{
+  "name": "Pok\u00e9mon Trainer Avery",
+  "team": [
+    {
+      "species": "rapidash",
+      "gender": "MALE",
+      "level": 65,
+      "nature": "bold",
+      "ability": "runaway",
+      "moveset": [
+        "psychic",
+        "mysticalfire",
+        "quickattack",
+        "dazzlinggleam"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "galarian"
+      ]
+    },
+    {
+      "species": "swoobat",
+      "gender": "MALE",
+      "level": 66,
+      "nature": "careful",
+      "ability": "unaware",
+      "moveset": [
+        "psychic",
+        "airslash",
+        "energyball",
+        "futuresight"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "alakazam",
+      "gender": "MALE",
+      "level": 66,
+      "nature": "relaxed",
+      "ability": "synchronize",
+      "moveset": [
+        "psychic",
+        "shadowball",
+        "triattack",
+        "reflect"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "slowbro",
+      "gender": "FEMALE",
+      "level": 67,
+      "nature": "lonely",
+      "ability": "quickdraw",
+      "moveset": [
+        "scald",
+        "shellsidearm",
+        "focusblast",
+        "psychic"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "galarian"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Lass Rei",
+  "team": [
+    {
+      "species": "vulpix",
+      "gender": "FEMALE",
+      "level": 12,
+      "nature": "lonely",
+      "ability": "flashfire",
+      "moveset": [
+        "quickattack",
+        "ember",
+        "tailwhip"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

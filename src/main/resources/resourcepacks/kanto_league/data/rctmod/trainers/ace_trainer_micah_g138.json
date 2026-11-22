@@ -1,0 +1,20 @@
+{
+  "name": "Gym Trainer Micah",
+  "team": [
+    {
+      "species": "avalugg",
+      "gender": "FEMALE",
+      "level": 39,
+      "nature": "lonely",
+      "ability": "owntempo",
+      "moveset": [
+        "icefang",
+        "rapidspin",
+        "bodyslam",
+        "crunch"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Gym Trainer Mark",
+  "team": [
+    {
+      "species": "budew",
+      "gender": "MALE",
+      "level": 16,
+      "nature": "quiet",
+      "ability": "naturalcure",
+      "moveset": [
+        "absorb",
+        "growth"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "oddish",
+      "gender": "FEMALE",
+      "level": 17,
+      "nature": "modest",
+      "ability": "chlorophyll",
+      "moveset": [
+        "stunspore",
+        "absorb",
+        "growth"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

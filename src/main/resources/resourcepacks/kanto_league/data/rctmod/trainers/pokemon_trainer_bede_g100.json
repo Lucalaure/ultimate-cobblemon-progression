@@ -1,0 +1,70 @@
+{
+  "name": "Pok\u00e9mon Trainer Bede",
+  "team": [
+    {
+      "species": "duosion",
+      "gender": "FEMALE",
+      "level": 32,
+      "nature": "quirky",
+      "ability": "overcoat",
+      "moveset": [
+        "lightscreen",
+        "reflect",
+        "psyshock",
+        "psybeam"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "gothorita",
+      "gender": "MALE",
+      "level": 32,
+      "nature": "quirky",
+      "ability": "frisk",
+      "moveset": [
+        "faketears",
+        "psybeam",
+        "rocktomb"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "ponyta",
+      "gender": "FEMALE",
+      "level": 33,
+      "nature": "hardy",
+      "ability": "runaway",
+      "moveset": [
+        "fairywind",
+        "psybeam",
+        "agility"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "galarian"
+      ]
+    },
+    {
+      "species": "hattrem",
+      "gender": "FEMALE",
+      "level": 35,
+      "nature": "naive",
+      "ability": "healer",
+      "moveset": [
+        "dazzlinggleam",
+        "psybeam"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ],
+  "bag": [
+    {
+      "item": "cobblemon:super_potion",
+      "quantity": 1
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Team Yell Grunt",
+  "team": [
+    {
+      "species": "linoone",
+      "gender": "MALE",
+      "level": 39,
+      "nature": "hasty",
+      "moveset": [
+        "honeclaws",
+        "nightslash",
+        "counter"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "galarian"
+      ]
+    },
+    {
+      "species": "pangoro",
+      "gender": "MALE",
+      "level": 40,
+      "nature": "gentle",
+      "ability": "ironfist",
+      "moveset": [
+        "crunch",
+        "bulletpunch",
+        "taunt"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

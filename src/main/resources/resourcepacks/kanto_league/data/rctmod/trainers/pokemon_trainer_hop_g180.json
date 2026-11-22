@@ -1,0 +1,49 @@
+{
+  "name": "Pok\u00e9mon Trainer Hop",
+  "team": [
+    {
+      "species": "dubwool",
+      "gender": "MALE",
+      "level": 49,
+      "nature": "docile",
+      "ability": "fluffy",
+      "moveset": [
+        "zenheadbutt",
+        "reversal",
+        "bodyslam"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "corviknight",
+      "gender": "MALE",
+      "level": 49,
+      "nature": "brave",
+      "ability": "pressure",
+      "moveset": [
+        "steelwing",
+        "drillpeck",
+        "scaryface",
+        "swagger"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "rillaboom",
+      "gender": "MALE",
+      "level": 50,
+      "nature": "lonely",
+      "ability": "overgrow",
+      "moveset": [
+        "drumbeating",
+        "highhorsepower",
+        "snarl",
+        "uproar"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

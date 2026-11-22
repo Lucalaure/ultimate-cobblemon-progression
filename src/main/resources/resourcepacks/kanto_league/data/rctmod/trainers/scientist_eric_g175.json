@@ -1,0 +1,35 @@
+{
+  "name": "Macro Cosmos's Eric",
+  "team": [
+    {
+      "species": "meowth",
+      "gender": "MALE",
+      "level": 47,
+      "nature": "jolly",
+      "ability": "pickup",
+      "moveset": [
+        "slash",
+        "assurance",
+        "playrough"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "galarian"
+      ]
+    },
+    {
+      "species": "durant",
+      "gender": "FEMALE",
+      "level": 47,
+      "nature": "sassy",
+      "ability": "swarm",
+      "moveset": [
+        "ironhead",
+        "crunch"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

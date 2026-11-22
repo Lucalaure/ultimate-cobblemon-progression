@@ -1,0 +1,18 @@
+{
+  "name": "Pok\u00e9 Kid Sunny",
+  "team": [
+    {
+      "species": "milcery",
+      "gender": "FEMALE",
+      "level": 15,
+      "nature": "relaxed",
+      "ability": "sweetveil",
+      "moveset": [
+        "drainingkiss",
+        "sweetscent"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

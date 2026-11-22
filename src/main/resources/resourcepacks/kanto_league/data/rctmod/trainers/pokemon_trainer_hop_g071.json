@@ -1,0 +1,56 @@
+{
+  "name": "Pok\u00e9mon Trainer Hop",
+  "team": [
+    {
+      "species": "wooloo",
+      "gender": "FEMALE",
+      "level": 18,
+      "nature": "naive",
+      "ability": "fluffy",
+      "moveset": [
+        "tackle",
+        "growl",
+        "defensecurl",
+        "doublekick"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "corvisquire",
+      "gender": "MALE",
+      "level": 19,
+      "nature": "naughty",
+      "ability": "keeneye",
+      "moveset": [
+        "leer",
+        "peck",
+        "furyattack",
+        "pluck"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "drizzile",
+      "gender": "MALE",
+      "level": 21,
+      "nature": "bold",
+      "ability": "torrent",
+      "moveset": [
+        "round",
+        "growl",
+        "waterpulse",
+        "bind"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ],
+  "bag": [
+    {
+      "item": "cobblemon:super_potion",
+      "quantity": 1
+    }
+  ]
+}

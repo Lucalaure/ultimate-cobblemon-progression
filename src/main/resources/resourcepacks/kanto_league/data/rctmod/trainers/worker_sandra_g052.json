@@ -1,0 +1,32 @@
+{
+  "name": "Worker Sandra",
+  "team": [
+    {
+      "species": "diglett",
+      "gender": "MALE",
+      "level": 14,
+      "nature": "quirky",
+      "ability": "sandveil",
+      "moveset": [
+        "scratch",
+        "growl",
+        "astonish"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "drilbur",
+      "gender": "MALE",
+      "level": 15,
+      "nature": "adamant",
+      "ability": "sandrush",
+      "moveset": [
+        "scratch",
+        "rapidspin"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

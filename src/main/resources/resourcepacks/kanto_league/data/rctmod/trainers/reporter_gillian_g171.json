@@ -1,0 +1,34 @@
+{
+  "name": "Reporter Gillian",
+  "team": [
+    {
+      "species": "heliolisk",
+      "gender": "FEMALE",
+      "level": 46,
+      "nature": "naughty",
+      "ability": "dryskin",
+      "moveset": [
+        "paraboliccharge",
+        "thunder",
+        "eerieimpulse"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "noivern",
+      "gender": "MALE",
+      "level": 47,
+      "nature": "gentle",
+      "ability": "frisk",
+      "moveset": [
+        "hurricane",
+        "tailwind",
+        "dragonpulse",
+        "superfang"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

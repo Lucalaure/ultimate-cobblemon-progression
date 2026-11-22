@@ -1,0 +1,20 @@
+{
+  "name": "Macro Cosmos's Adalyn",
+  "team": [
+    {
+      "species": "steelix",
+      "gender": "MALE",
+      "level": 49,
+      "nature": "docile",
+      "ability": "rockhead",
+      "moveset": [
+        "slam",
+        "screech",
+        "rockslide",
+        "curse"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

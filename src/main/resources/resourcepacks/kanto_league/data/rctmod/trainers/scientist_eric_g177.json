@@ -1,0 +1,34 @@
+{
+  "name": "Macro Cosmos's Eric",
+  "team": [
+    {
+      "species": "ferroseed",
+      "gender": "FEMALE",
+      "level": 47,
+      "nature": "jolly",
+      "ability": "ironbarbs",
+      "moveset": [
+        "ironhead",
+        "flashcannon",
+        "pinmissile"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "steelix",
+      "gender": "MALE",
+      "level": 47,
+      "nature": "calm",
+      "ability": "rockhead",
+      "moveset": [
+        "slam",
+        "dragonbreath",
+        "rockslide",
+        "crunch"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

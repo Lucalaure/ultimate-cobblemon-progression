@@ -1,0 +1,20 @@
+{
+  "name": "Doctor Evelyn",
+  "team": [
+    {
+      "species": "togetic",
+      "gender": "MALE",
+      "level": 31,
+      "nature": "jolly",
+      "ability": "hustle",
+      "moveset": [
+        "fairywind",
+        "yawn",
+        "ancientpower",
+        "lifedew"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

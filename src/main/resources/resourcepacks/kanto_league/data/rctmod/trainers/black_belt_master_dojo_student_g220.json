@@ -1,0 +1,19 @@
+{
+  "name": "Master Dojo Student",
+  "team": [
+    {
+      "species": "poliwhirl",
+      "gender": "FEMALE",
+      "level": 68,
+      "nature": "quiet",
+      "ability": "waterabsorb",
+      "moveset": [
+        "whirlpool",
+        "mudshot",
+        "protect"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

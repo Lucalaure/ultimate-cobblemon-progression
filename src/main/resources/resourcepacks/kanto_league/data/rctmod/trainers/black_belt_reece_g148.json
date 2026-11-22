@@ -1,0 +1,35 @@
+{
+  "name": "Black Belt Reece",
+  "team": [
+    {
+      "species": "sawk",
+      "gender": "MALE",
+      "level": 41,
+      "nature": "naive",
+      "ability": "sturdy",
+      "moveset": [
+        "counter",
+        "brickbreak",
+        "bulkup",
+        "lowsweep"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "throh",
+      "gender": "MALE",
+      "level": 41,
+      "nature": "rash",
+      "ability": "guts",
+      "moveset": [
+        "vitalthrow",
+        "stormthrow",
+        "bulkup",
+        "revenge"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

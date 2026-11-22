@@ -1,0 +1,54 @@
+{
+  "name": "Pok\u00e9mon Trainer Marnie",
+  "team": [
+    {
+      "species": "croagunk",
+      "gender": "FEMALE",
+      "level": 24,
+      "nature": "brave",
+      "ability": "anticipation",
+      "moveset": [
+        "poisonsting",
+        "venoshock",
+        "revenge",
+        "suckerpunch"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "scraggy",
+      "gender": "FEMALE",
+      "level": 24,
+      "nature": "gentle",
+      "ability": "shedskin",
+      "moveset": [
+        "beatup",
+        "headbutt",
+        "lowkick"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "morpeko",
+      "gender": "MALE",
+      "level": 26,
+      "nature": "bold",
+      "ability": "hungerswitch",
+      "moveset": [
+        "bite",
+        "quickattack",
+        "thundershock"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ],
+  "bag": [
+    {
+      "item": "cobblemon:super_potion",
+      "quantity": 1
+    }
+  ]
+}

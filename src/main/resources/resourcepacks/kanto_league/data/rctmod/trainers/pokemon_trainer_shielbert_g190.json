@@ -1,0 +1,65 @@
+{
+  "name": "Pok\u00e9mon Trainer Shielbert",
+  "team": [
+    {
+      "species": "sirfetchd",
+      "gender": "FEMALE",
+      "level": 64,
+      "nature": "sassy",
+      "ability": "steadfast",
+      "moveset": [
+        "leafblade",
+        "slam",
+        "meteorassault",
+        "irondefense"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "bronzong",
+      "gender": "GENDERLESS",
+      "level": 64,
+      "nature": "hardy",
+      "ability": "levitate",
+      "moveset": [
+        "lightscreen",
+        "extrasensory",
+        "gyroball",
+        "hypnosis"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "falinks",
+      "gender": "GENDERLESS",
+      "level": 64,
+      "nature": "rash",
+      "ability": "battlearmor",
+      "moveset": [
+        "noretreat",
+        "firstimpression",
+        "closecombat",
+        "megahorn"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "klinklang",
+      "gender": "GENDERLESS",
+      "level": 64,
+      "nature": "rash",
+      "ability": "plus",
+      "moveset": [
+        "geargrind",
+        "shiftgear",
+        "protect",
+        "wildcharge"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

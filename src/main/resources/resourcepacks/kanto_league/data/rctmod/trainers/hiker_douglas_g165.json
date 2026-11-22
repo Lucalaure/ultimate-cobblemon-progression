@@ -1,0 +1,34 @@
+{
+  "name": "Hiker Douglas",
+  "team": [
+    {
+      "species": "steelix",
+      "gender": "FEMALE",
+      "level": 45,
+      "nature": "careful",
+      "ability": "rockhead",
+      "moveset": [
+        "curse",
+        "dig",
+        "crunch",
+        "irontail"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "mudsdale",
+      "gender": "MALE",
+      "level": 45,
+      "nature": "serious",
+      "ability": "owntempo",
+      "moveset": [
+        "highhorsepower",
+        "stomp",
+        "counter"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

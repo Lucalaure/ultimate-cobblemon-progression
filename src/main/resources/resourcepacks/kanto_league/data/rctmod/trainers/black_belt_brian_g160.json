@@ -1,0 +1,20 @@
+{
+  "name": "Black Belt Brian",
+  "team": [
+    {
+      "species": "cottonee",
+      "gender": "FEMALE",
+      "level": 2,
+      "nature": "impish",
+      "ability": "prankster",
+      "moveset": [
+        "endeavor"
+      ],
+      "ivs": {},
+      "evs": {},
+      "heldItem": [
+        "focus_sash"
+      ]
+    }
+  ]
+}

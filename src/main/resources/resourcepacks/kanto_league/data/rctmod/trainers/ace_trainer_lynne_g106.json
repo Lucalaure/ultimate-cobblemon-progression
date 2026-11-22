@@ -1,0 +1,22 @@
+{
+  "name": "Gym Trainer Lynne",
+  "team": [
+    {
+      "species": "corsola",
+      "gender": "FEMALE",
+      "level": 32,
+      "nature": "jolly",
+      "ability": "weakarmor",
+      "moveset": [
+        "hex",
+        "ancientpower",
+        "disable"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "galarian"
+      ]
+    }
+  ]
+}

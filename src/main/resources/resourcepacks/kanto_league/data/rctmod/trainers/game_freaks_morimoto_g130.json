@@ -1,0 +1,101 @@
+{
+  "name": "GAME FREAK's Morimoto",
+  "team": [
+    {
+      "species": "cursola",
+      "gender": "FEMALE",
+      "level": 65,
+      "nature": "quirky",
+      "ability": "weakarmor",
+      "moveset": [
+        "disable",
+        "strengthsap",
+        "shadowball",
+        "mirrorcoat"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "grapploct",
+      "gender": "MALE",
+      "level": 65,
+      "nature": "bold",
+      "ability": "limber",
+      "moveset": [
+        "octolock",
+        "detect",
+        "dig",
+        "bodyslam"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "stonjourner",
+      "gender": "MALE",
+      "level": 65,
+      "nature": "quiet",
+      "ability": "powerspot",
+      "moveset": [
+        "stealthrock",
+        "stoneedge",
+        "heavyslam",
+        "rest"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "dragapult",
+      "gender": "MALE",
+      "level": 65,
+      "nature": "timid",
+      "ability": "clearbody",
+      "moveset": [
+        "dragondarts",
+        "thunderwave",
+        "shadowball",
+        "protect"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "coalossal",
+      "gender": "MALE",
+      "level": 65,
+      "nature": "modest",
+      "ability": "steamengine",
+      "moveset": [
+        "tarshot",
+        "bodypress",
+        "flareblitz",
+        "stoneedge"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "snorlax",
+      "gender": "MALE",
+      "level": 65,
+      "nature": "quiet",
+      "ability": "immunity",
+      "moveset": [
+        "highhorsepower",
+        "superpower",
+        "gigaimpact",
+        "gunkshot"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ],
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 1
+    }
+  ]
+}

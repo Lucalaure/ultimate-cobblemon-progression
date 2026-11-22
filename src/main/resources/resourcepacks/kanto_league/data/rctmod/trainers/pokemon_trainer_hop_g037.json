@@ -1,0 +1,52 @@
+{
+  "name": "Pok\u00e9mon Trainer Hop",
+  "team": [
+    {
+      "species": "wooloo",
+      "gender": "FEMALE",
+      "level": 11,
+      "nature": "hasty",
+      "ability": "fluffy",
+      "moveset": [
+        "tackle",
+        "growl"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "rookidee",
+      "gender": "FEMALE",
+      "level": 12,
+      "nature": "adamant",
+      "ability": "keeneye",
+      "moveset": [
+        "peck",
+        "leer"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "scorbunny",
+      "gender": "MALE",
+      "level": 14,
+      "nature": "docile",
+      "ability": "blaze",
+      "moveset": [
+        "tackle",
+        "growl",
+        "ember",
+        "quickattack"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ],
+  "bag": [
+    {
+      "item": "cobblemon:potion",
+      "quantity": 1
+    }
+  ]
+}

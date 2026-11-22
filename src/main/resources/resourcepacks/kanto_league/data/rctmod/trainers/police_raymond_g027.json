@@ -1,0 +1,19 @@
+{
+  "name": "Police Officer Raymond",
+  "team": [
+    {
+      "species": "growlithe",
+      "gender": "MALE",
+      "level": 23,
+      "nature": "naughty",
+      "ability": "intimidate",
+      "moveset": [
+        "leer",
+        "bite",
+        "flamewheel"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

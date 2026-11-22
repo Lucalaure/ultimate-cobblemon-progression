@@ -1,0 +1,22 @@
+{
+  "name": "Team Yell Grunt",
+  "team": [
+    {
+      "species": "linoone",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "sassy",
+      "moveset": [
+        "counter",
+        "takedown",
+        "nightslash",
+        "furyswipes"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "galarian"
+      ]
+    }
+  ]
+}

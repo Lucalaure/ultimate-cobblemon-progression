@@ -1,0 +1,39 @@
+{
+  "name": "Pok\u00e9mon Breeder Bradley",
+  "team": [
+    {
+      "species": "electrike",
+      "gender": "FEMALE",
+      "level": 15,
+      "nature": "mild",
+      "ability": "static",
+      "moveset": [
+        "tackle",
+        "leer",
+        "quickattack"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "lotad",
+      "gender": "MALE",
+      "level": 15,
+      "nature": "naughty",
+      "ability": "swiftswim",
+      "moveset": [
+        "watergun",
+        "absorb",
+        "growl"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ],
+  "bag": [
+    {
+      "item": "cobblemon:potion",
+      "quantity": 1
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "name": "Pok\u00e9mon Trainer Sordward",
+  "team": [
+    {
+      "species": "sirfetchd",
+      "gender": "FEMALE",
+      "level": 60,
+      "nature": "mild",
+      "ability": "steadfast",
+      "moveset": [
+        "leafblade",
+        "slam",
+        "meteorassault",
+        "swordsdance"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "golisopod",
+      "gender": "MALE",
+      "level": 60,
+      "nature": "mild",
+      "ability": "emergencyexit",
+      "moveset": [
+        "firstimpression",
+        "liquidation",
+        "suckerpunch"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "doublade",
+      "gender": "FEMALE",
+      "level": 60,
+      "nature": "quirky",
+      "ability": "noguard",
+      "moveset": [
+        "sacredsword",
+        "ironhead",
+        "nightslash",
+        "swordsdance"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "bisharp",
+      "gender": "FEMALE",
+      "level": 60,
+      "nature": "relaxed",
+      "ability": "defiant",
+      "moveset": [
+        "ironhead",
+        "nightslash",
+        "swordsdance",
+        "stoneedge"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

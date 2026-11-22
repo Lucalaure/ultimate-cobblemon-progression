@@ -1,0 +1,34 @@
+{
+  "name": "Doctor Joanna",
+  "team": [
+    {
+      "species": "roselia",
+      "gender": "FEMALE",
+      "level": 36,
+      "nature": "careful",
+      "ability": "naturalcure",
+      "moveset": [
+        "leechseed",
+        "magicalleaf",
+        "poisonsting"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "hattrem",
+      "gender": "FEMALE",
+      "level": 36,
+      "nature": "lax",
+      "ability": "healer",
+      "moveset": [
+        "dazzlinggleam",
+        "psybeam",
+        "brutalswing",
+        "calmmind"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

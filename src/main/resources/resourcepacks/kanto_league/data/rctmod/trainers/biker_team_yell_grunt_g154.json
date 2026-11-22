@@ -1,0 +1,20 @@
+{
+  "name": "Team Yell Grunt",
+  "team": [
+    {
+      "species": "scrafty",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "lax",
+      "ability": "shedskin",
+      "moveset": [
+        "swagger",
+        "brickbreak",
+        "scaryface",
+        "payback"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

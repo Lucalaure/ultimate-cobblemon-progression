@@ -40,7 +40,7 @@ public final class RegionDataLoader extends SimpleJsonResourceReloadListener imp
     protected void apply(Map<ResourceLocation, JsonElement> files, ResourceManager rm, ProfilerFiller profiler) {
         Map<String, RegionDef.Meta> metas = new HashMap<>();
         Map<String, SortedMap<Integer, TierDef>> tiers = new HashMap<>();
-        Map<String, List<String>> wildTrainers = new HashMap<>();
+        Map<String, List<List<String>>> wildTrainers = new HashMap<>();
 
         for (var entry : files.entrySet()) {
             ResourceLocation id = entry.getKey();

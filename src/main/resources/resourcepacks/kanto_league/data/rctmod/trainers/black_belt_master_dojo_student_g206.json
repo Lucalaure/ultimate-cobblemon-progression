@@ -1,0 +1,18 @@
+{
+  "name": "Master Dojo Student",
+  "team": [
+    {
+      "species": "zorua",
+      "gender": "MALE",
+      "level": 65,
+      "nature": "hasty",
+      "ability": "illusion",
+      "moveset": [
+        "furyswipes",
+        "suckerpunch"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

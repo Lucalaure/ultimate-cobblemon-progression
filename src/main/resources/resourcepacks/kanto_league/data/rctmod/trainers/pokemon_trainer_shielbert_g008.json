@@ -1,0 +1,50 @@
+{
+  "name": "Pok\u00e9mon Trainer Shielbert",
+  "team": [
+    {
+      "species": "bronzong",
+      "gender": "GENDERLESS",
+      "level": 62,
+      "nature": "quiet",
+      "ability": "levitate",
+      "moveset": [
+        "lightscreen",
+        "extrasensory",
+        "gyroball",
+        "hypnosis"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "falinks",
+      "gender": "GENDERLESS",
+      "level": 62,
+      "nature": "relaxed",
+      "ability": "battlearmor",
+      "moveset": [
+        "noretreat",
+        "firstimpression",
+        "closecombat",
+        "megahorn"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "klinklang",
+      "gender": "GENDERLESS",
+      "level": 62,
+      "nature": "mild",
+      "ability": "plus",
+      "moveset": [
+        "geargrind",
+        "shiftgear",
+        "protect",
+        "wildcharge"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

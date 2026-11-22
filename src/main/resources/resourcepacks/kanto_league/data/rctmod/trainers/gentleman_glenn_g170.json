@@ -1,0 +1,53 @@
+{
+  "name": "Gentleman Glenn",
+  "team": [
+    {
+      "species": "darmanitan",
+      "gender": "FEMALE",
+      "level": 46,
+      "nature": "naive",
+      "ability": "gorillatactics",
+      "moveset": [
+        "iciclecrash",
+        "headbutt",
+        "taunt",
+        "uproar"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "galarian"
+      ]
+    },
+    {
+      "species": "falinks",
+      "gender": "GENDERLESS",
+      "level": 46,
+      "nature": "lonely",
+      "ability": "battlearmor",
+      "moveset": [
+        "noretreat",
+        "firstimpression",
+        "closecombat",
+        "headbutt"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "grapploct",
+      "gender": "FEMALE",
+      "level": 46,
+      "nature": "bold",
+      "ability": "limber",
+      "moveset": [
+        "superpower",
+        "octolock",
+        "reversal",
+        "bulkup"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

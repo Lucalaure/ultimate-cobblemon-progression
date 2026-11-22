@@ -1,0 +1,19 @@
+{
+  "name": "Backpacker Diane",
+  "team": [
+    {
+      "species": "sawk",
+      "gender": "MALE",
+      "level": 31,
+      "nature": "docile",
+      "ability": "sturdy",
+      "moveset": [
+        "doublekick",
+        "lowsweep",
+        "bulkup"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

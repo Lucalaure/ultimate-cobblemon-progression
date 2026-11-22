@@ -136,7 +136,10 @@ final class TrainerCardDataBuilder {
                 GymDifficulty.needsChoice(player), wildTrainers(player, progress));
     }
 
-    /** Each open region's wild trainers, weakest first, and whether the player has beaten each one. */
+    /**
+     * Each open region's wild trainers, weakest first, each counted once for all its versions: beaten when the player
+     * has beaten any of them.
+     */
     private static List<TrainerGroup> wildTrainers(ServerPlayer player, RegionProgress progress) {
         if (!RctBridge.isLoaded()) return List.of();
         Set<String> beaten = TrainerLevelComponents.KEY.get(player).getBeatenWildTrainers();
@@ -146,11 +149,22 @@ final class TrainerCardDataBuilder {
             RegionDef region = regions.get(r);
             if (!progress.isUnlocked(r) || region.wildTrainers.isEmpty()) continue;
             List<WildTrainer> trainers = new ArrayList<>();
-            for (String id : region.wildTrainers) {
-                WildTrainers.info(player.server, id).ifPresent(info ->
-                        trainers.add(new WildTrainer(info.name(), info.level(), beaten.contains(id))));
+            for (List<String> versions : region.wildTrainers) {
+                String name = null;
+                int min = Integer.MAX_VALUE, max = 0;
+                boolean anyBeaten = false;
+                for (String id : versions) {
+                    var info = WildTrainers.info(player.server, id);
+                    if (info.isEmpty()) continue;
+                    if (name == null) name = info.get().name();
+                    min = Math.min(min, info.get().level());
+                    max = Math.max(max, info.get().level());
+                    anyBeaten |= beaten.contains(id);
+                }
+                // Versions RCT doesn't have (e.g. after an RCT update) are left out; a trainer with none isn't shown.
+                if (name != null) trainers.add(new WildTrainer(name, min, max, anyBeaten));
             }
-            trainers.sort(Comparator.comparingInt(WildTrainer::level).thenComparing(WildTrainer::name));
+            trainers.sort(Comparator.comparingInt(WildTrainer::minLevel).thenComparing(WildTrainer::name));
             groups.add(new TrainerGroup(region.title, trainers));
         }
         return groups;

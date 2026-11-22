@@ -1,0 +1,33 @@
+{
+  "name": "Pok\u00e9mon Trainer Klara",
+  "team": [
+    {
+      "species": "venipede",
+      "gender": "MALE",
+      "level": 58,
+      "nature": "gentle",
+      "ability": "poisonpoint",
+      "moveset": [
+        "poisontail"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "slowpoke",
+      "gender": "MALE",
+      "level": 60,
+      "nature": "lonely",
+      "ability": "gluttony",
+      "moveset": [
+        "confusion",
+        "acid"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "galarian"
+      ]
+    }
+  ]
+}

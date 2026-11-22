@@ -1,0 +1,37 @@
+{
+  "name": "Pok\u00e9mon Breeder Denise",
+  "team": [
+    {
+      "species": "cherubi",
+      "gender": "MALE",
+      "level": 18,
+      "nature": "naughty",
+      "ability": "chlorophyll",
+      "moveset": [
+        "tackle",
+        "leafage"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "woobat",
+      "gender": "FEMALE",
+      "level": 19,
+      "nature": "jolly",
+      "ability": "unaware",
+      "moveset": [
+        "aircutter",
+        "confusion"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ],
+  "bag": [
+    {
+      "item": "cobblemon:potion",
+      "quantity": 1
+    }
+  ]
+}

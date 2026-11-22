@@ -1,0 +1,23 @@
+{
+  "name": "Pok\u00e9mon Breeder Elena",
+  "team": [
+    {
+      "species": "dottler",
+      "gender": "FEMALE",
+      "level": 30,
+      "nature": "impish",
+      "ability": "swarm",
+      "moveset": [
+        "reflect",
+        "lightscreen",
+        "psyshock",
+        "bugbuzz"
+      ],
+      "ivs": {},
+      "evs": {},
+      "heldItem": [
+        "eviolite"
+      ]
+    }
+  ]
+}

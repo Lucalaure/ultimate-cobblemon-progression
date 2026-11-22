@@ -1,0 +1,33 @@
+{
+  "name": "Pok\u00e9 Kid Rhys",
+  "team": [
+    {
+      "species": "joltik",
+      "gender": "MALE",
+      "level": 14,
+      "nature": "impish",
+      "ability": "compoundeyes",
+      "moveset": [
+        "electroweb",
+        "bugbite",
+        "stringshot"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "grubbin",
+      "gender": "MALE",
+      "level": 14,
+      "nature": "lax",
+      "ability": "swarm",
+      "moveset": [
+        "visegrip",
+        "bugbite",
+        "bite"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

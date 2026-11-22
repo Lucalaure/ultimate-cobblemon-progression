@@ -1,0 +1,51 @@
+{
+  "name": "Gentleman Caden",
+  "team": [
+    {
+      "species": "doublade",
+      "gender": "FEMALE",
+      "level": 44,
+      "nature": "bashful",
+      "ability": "noguard",
+      "moveset": [
+        "ironhead",
+        "nightslash",
+        "slash",
+        "aerialace"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "passimian",
+      "gender": "FEMALE",
+      "level": 44,
+      "nature": "gentle",
+      "ability": "receiver",
+      "moveset": [
+        "bulkup",
+        "fling",
+        "acrobatics"
+      ],
+      "ivs": {},
+      "evs": {},
+      "heldItem": [
+        "hard_stone"
+      ]
+    },
+    {
+      "species": "polteageist",
+      "gender": "GENDERLESS",
+      "level": 44,
+      "nature": "lonely",
+      "ability": "weakarmor",
+      "moveset": [
+        "suckerpunch",
+        "gigadrain",
+        "nastyplot"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

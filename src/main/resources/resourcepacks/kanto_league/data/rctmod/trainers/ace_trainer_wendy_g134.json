@@ -1,0 +1,20 @@
+{
+  "name": "Gym Trainer Wendy",
+  "team": [
+    {
+      "species": "sudowoodo",
+      "gender": "FEMALE",
+      "level": 39,
+      "nature": "modest",
+      "ability": "sturdy",
+      "moveset": [
+        "block",
+        "rockslide",
+        "woodhammer",
+        "suckerpunch"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

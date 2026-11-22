@@ -1,0 +1,20 @@
+{
+  "name": "Macro Cosmos's Elijah",
+  "team": [
+    {
+      "species": "durant",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "mild",
+      "ability": "swarm",
+      "moveset": [
+        "ironhead",
+        "metalsound",
+        "agility",
+        "crunch"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

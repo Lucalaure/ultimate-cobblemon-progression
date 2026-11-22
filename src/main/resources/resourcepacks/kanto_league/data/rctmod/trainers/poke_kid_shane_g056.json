@@ -1,0 +1,19 @@
+{
+  "name": "Pok\u00e9 Kid Shane",
+  "team": [
+    {
+      "species": "pikachu",
+      "gender": "MALE",
+      "level": 15,
+      "nature": "serious",
+      "ability": "static",
+      "moveset": [
+        "thunderwave",
+        "electroball",
+        "quickattack"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

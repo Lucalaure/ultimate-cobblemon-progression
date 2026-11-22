@@ -1,0 +1,84 @@
+{
+  "name": "Pok\u00e9mon Trainer Hop",
+  "team": [
+    {
+      "species": "dubwool",
+      "gender": "FEMALE",
+      "level": 40,
+      "nature": "modest",
+      "ability": "fluffy",
+      "moveset": [
+        "doublekick",
+        "takedown",
+        "growl",
+        "defensecurl"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "corviknight",
+      "gender": "MALE",
+      "level": 40,
+      "nature": "jolly",
+      "ability": "pressure",
+      "moveset": [
+        "drillpeck",
+        "scaryface",
+        "pluck",
+        "furyattack"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "pincurchin",
+      "gender": "MALE",
+      "level": 39,
+      "nature": "impish",
+      "ability": "lightningrod",
+      "moveset": [
+        "spark",
+        "bubblebeam",
+        "curse"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "snorlax",
+      "gender": "MALE",
+      "level": 39,
+      "nature": "hardy",
+      "ability": "immunity",
+      "moveset": [
+        "heavyslam",
+        "bodyslam",
+        "crunch"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "inteleon",
+      "gender": "MALE",
+      "level": 41,
+      "nature": "timid",
+      "ability": "torrent",
+      "moveset": [
+        "snipeshot",
+        "tearfullook",
+        "suckerpunch",
+        "liquidation"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ],
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 1
+    }
+  ]
+}

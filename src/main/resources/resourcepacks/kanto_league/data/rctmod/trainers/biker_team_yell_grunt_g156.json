@@ -1,0 +1,20 @@
+{
+  "name": "Team Yell Grunt",
+  "team": [
+    {
+      "species": "liepard",
+      "gender": "FEMALE",
+      "level": 43,
+      "nature": "bashful",
+      "ability": "limber",
+      "moveset": [
+        "honeclaws",
+        "slash",
+        "taunt",
+        "assurance"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

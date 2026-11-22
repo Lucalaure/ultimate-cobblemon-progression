@@ -1,0 +1,35 @@
+{
+  "name": "Gym Trainer Theodora",
+  "team": [
+    {
+      "species": "morgrem",
+      "gender": "MALE",
+      "level": 35,
+      "nature": "hasty",
+      "ability": "prankster",
+      "moveset": [
+        "fakeout",
+        "falsesurrender",
+        "flatter",
+        "drainingkiss"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "gardevoir",
+      "gender": "MALE",
+      "level": 35,
+      "nature": "impish",
+      "ability": "synchronize",
+      "moveset": [
+        "dazzlinggleam",
+        "mysticalfire",
+        "charm",
+        "reflect"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

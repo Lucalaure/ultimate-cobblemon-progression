@@ -1,0 +1,18 @@
+{
+  "name": "Worker Russel",
+  "team": [
+    {
+      "species": "rolycoly",
+      "gender": "FEMALE",
+      "level": 15,
+      "nature": "impish",
+      "ability": "steamengine",
+      "moveset": [
+        "tackle",
+        "rapidspin"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

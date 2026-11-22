@@ -1,0 +1,19 @@
+{
+  "name": "Rail Staff Robert",
+  "team": [
+    {
+      "species": "ninetales",
+      "gender": "FEMALE",
+      "level": 34,
+      "nature": "rash",
+      "ability": "flashfire",
+      "moveset": [
+        "quickattack",
+        "incinerate",
+        "nastyplot"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

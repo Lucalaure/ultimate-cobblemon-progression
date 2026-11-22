@@ -1,0 +1,45 @@
+{
+  "name": "Pok\u00e9mon Trainer Hop",
+  "team": [
+    {
+      "species": "wooloo",
+      "gender": "FEMALE",
+      "level": 6,
+      "nature": "lonely",
+      "ability": "fluffy",
+      "moveset": [
+        "tackle",
+        "growl"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "rookidee",
+      "gender": "FEMALE",
+      "level": 5,
+      "nature": "bashful",
+      "ability": "keeneye",
+      "moveset": [
+        "leer",
+        "peck"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "grookey",
+      "gender": "MALE",
+      "level": 8,
+      "nature": "naughty",
+      "ability": "overgrow",
+      "moveset": [
+        "scratch",
+        "growl",
+        "branchpoke"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

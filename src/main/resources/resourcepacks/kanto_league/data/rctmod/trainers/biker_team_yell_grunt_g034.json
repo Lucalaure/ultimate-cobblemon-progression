@@ -1,0 +1,21 @@
+{
+  "name": "Team Yell Grunt",
+  "team": [
+    {
+      "species": "zigzagoon",
+      "gender": "FEMALE",
+      "level": 9,
+      "nature": "brave",
+      "moveset": [
+        "leer",
+        "lick",
+        "snarl"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "galarian"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Gym Trainer Chaka",
+  "team": [
+    {
+      "species": "sizzlipede",
+      "gender": "MALE",
+      "level": 24,
+      "nature": "impish",
+      "ability": "flashfire",
+      "moveset": [
+        "smokescreen",
+        "wrap",
+        "bite",
+        "firespin"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "salandit",
+      "gender": "FEMALE",
+      "level": 24,
+      "nature": "hardy",
+      "ability": "corrosion",
+      "moveset": [
+        "poisonfang",
+        "ember",
+        "scratch"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Gym Trainer Sebastian",
+  "team": [
+    {
+      "species": "pelipper",
+      "gender": "MALE",
+      "level": 45,
+      "nature": "careful",
+      "ability": "keeneye",
+      "moveset": [
+        "tailwind",
+        "waterpulse",
+        "supersonic",
+        "airslash"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "sliggoo",
+      "gender": "MALE",
+      "level": 45,
+      "nature": "calm",
+      "ability": "sapsipper",
+      "moveset": [
+        "waterpulse",
+        "dragonpulse",
+        "acidspray",
+        "dragonbreath"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Team Yell Grunt",
+  "team": [
+    {
+      "species": "nickit",
+      "gender": "MALE",
+      "level": 9,
+      "nature": "timid",
+      "ability": "runaway",
+      "moveset": [
+        "quickattack",
+        "tailwhip"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

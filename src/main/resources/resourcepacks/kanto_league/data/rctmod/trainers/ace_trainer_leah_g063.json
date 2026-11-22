@@ -1,0 +1,32 @@
+{
+  "name": "Gym Trainer Leah",
+  "team": [
+    {
+      "species": "bounsweet",
+      "gender": "FEMALE",
+      "level": 17,
+      "nature": "gentle",
+      "ability": "leafguard",
+      "moveset": [
+        "razorleaf",
+        "rapidspin"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "oddish",
+      "gender": "MALE",
+      "level": 17,
+      "nature": "bold",
+      "ability": "chlorophyll",
+      "moveset": [
+        "acid",
+        "growth",
+        "poisonpowder"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

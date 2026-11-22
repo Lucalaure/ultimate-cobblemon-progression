@@ -1,0 +1,20 @@
+{
+  "name": "Cameraman Cam",
+  "team": [
+    {
+      "species": "klink",
+      "gender": "GENDERLESS",
+      "level": 18,
+      "nature": "modest",
+      "ability": "plus",
+      "moveset": [
+        "chargebeam",
+        "metalsound",
+        "bind",
+        "charge"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

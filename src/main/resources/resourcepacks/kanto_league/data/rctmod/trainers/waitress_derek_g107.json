@@ -1,0 +1,46 @@
+{
+  "name": "Cook Derek",
+  "team": [
+    {
+      "species": "milcery",
+      "gender": "FEMALE",
+      "level": 33,
+      "nature": "naughty",
+      "ability": "sweetveil",
+      "moveset": [
+        "dazzlinggleam",
+        "attract",
+        "acidarmor"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "sinistea",
+      "gender": "GENDERLESS",
+      "level": 33,
+      "nature": "bashful",
+      "ability": "weakarmor",
+      "moveset": [
+        "suckerpunch",
+        "astonish",
+        "aromaticmist"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "shiinotic",
+      "gender": "MALE",
+      "level": 34,
+      "nature": "relaxed",
+      "ability": "illuminate",
+      "moveset": [
+        "gigadrain",
+        "astonish"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Backpacker Ruth",
+  "team": [
+    {
+      "species": "throh",
+      "gender": "MALE",
+      "level": 31,
+      "nature": "gentle",
+      "ability": "guts",
+      "moveset": [
+        "stormthrow",
+        "revenge",
+        "circlethrow"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

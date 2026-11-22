@@ -1,0 +1,19 @@
+{
+  "name": "Master Dojo Student",
+  "team": [
+    {
+      "species": "krokorok",
+      "gender": "FEMALE",
+      "level": 26,
+      "nature": "lax",
+      "ability": "intimidate",
+      "moveset": [
+        "assurance",
+        "sandtomb",
+        "protect"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

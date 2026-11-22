@@ -1,0 +1,20 @@
+{
+  "name": "Swimmer Jacob",
+  "team": [
+    {
+      "species": "cloyster",
+      "gender": "MALE",
+      "level": 39,
+      "nature": "calm",
+      "ability": "shellarmor",
+      "moveset": [
+        "iciclespear",
+        "protect",
+        "supersonic",
+        "whirlpool"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

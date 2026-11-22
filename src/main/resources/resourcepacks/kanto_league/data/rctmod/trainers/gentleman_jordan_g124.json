@@ -1,0 +1,33 @@
+{
+  "name": "Office Worker Jordan",
+  "team": [
+    {
+      "species": "excadrill",
+      "gender": "MALE",
+      "level": 36,
+      "nature": "serious",
+      "ability": "sandrush",
+      "moveset": [
+        "metalclaw",
+        "rockslide",
+        "dig"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "lucario",
+      "gender": "MALE",
+      "level": 37,
+      "nature": "lonely",
+      "ability": "steadfast",
+      "moveset": [
+        "metalclaw",
+        "detect",
+        "counter"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

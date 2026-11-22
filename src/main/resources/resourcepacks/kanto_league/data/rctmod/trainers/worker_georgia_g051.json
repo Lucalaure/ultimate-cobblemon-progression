@@ -1,0 +1,47 @@
+{
+  "name": "Worker Georgia",
+  "team": [
+    {
+      "species": "timburr",
+      "gender": "MALE",
+      "level": 14,
+      "nature": "brave",
+      "ability": "guts",
+      "moveset": [
+        "pound",
+        "rockthrow",
+        "lowkick"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "timburr",
+      "gender": "MALE",
+      "level": 14,
+      "nature": "lax",
+      "ability": "guts",
+      "moveset": [
+        "pound",
+        "lowkick",
+        "focusenergy"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "timburr",
+      "gender": "FEMALE",
+      "level": 14,
+      "nature": "rash",
+      "ability": "guts",
+      "moveset": [
+        "pound",
+        "leer",
+        "rockthrow"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

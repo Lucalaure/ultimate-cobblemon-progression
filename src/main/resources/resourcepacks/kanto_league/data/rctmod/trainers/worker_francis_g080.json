@@ -1,0 +1,20 @@
+{
+  "name": "Worker Francis",
+  "team": [
+    {
+      "species": "carkol",
+      "gender": "FEMALE",
+      "level": 21,
+      "nature": "jolly",
+      "ability": "steamengine",
+      "moveset": [
+        "rapidspin",
+        "smackdown",
+        "ancientpower",
+        "flamecharge"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

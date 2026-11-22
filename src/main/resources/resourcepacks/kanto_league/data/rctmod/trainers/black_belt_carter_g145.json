@@ -1,0 +1,20 @@
+{
+  "name": "Black Belt Carter",
+  "team": [
+    {
+      "species": "grapploct",
+      "gender": "FEMALE",
+      "level": 41,
+      "nature": "bashful",
+      "ability": "limber",
+      "moveset": [
+        "bind",
+        "reversal",
+        "taunt",
+        "brickbreak"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

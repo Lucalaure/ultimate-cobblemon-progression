@@ -1,0 +1,20 @@
+{
+  "name": "Doctor Iwan",
+  "team": [
+    {
+      "species": "pawniard",
+      "gender": "MALE",
+      "level": 31,
+      "nature": "serious",
+      "ability": "defiant",
+      "moveset": [
+        "metalclaw",
+        "torment",
+        "furycutter",
+        "metalsound"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

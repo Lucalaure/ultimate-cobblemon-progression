@@ -1,0 +1,64 @@
+{
+  "name": "Pok\u00e9mon Trainer Avery",
+  "team": [
+    {
+      "species": "ponyta",
+      "gender": "FEMALE",
+      "level": 23,
+      "nature": "impish",
+      "ability": "runaway",
+      "moveset": [
+        "psybeam",
+        "fairywind"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "galarian"
+      ]
+    },
+    {
+      "species": "swoobat",
+      "gender": "FEMALE",
+      "level": 24,
+      "nature": "sassy",
+      "ability": "unaware",
+      "moveset": [
+        "confusion",
+        "aircutter"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "kadabra",
+      "gender": "FEMALE",
+      "level": 24,
+      "nature": "hardy",
+      "ability": "synchronize",
+      "moveset": [
+        "psybeam",
+        "swift"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "slowbro",
+      "gender": "MALE",
+      "level": 25,
+      "nature": "hardy",
+      "ability": "quickdraw",
+      "moveset": [
+        "waterpulse",
+        "shellsidearm",
+        "confusion"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "galarian"
+      ]
+    }
+  ]
+}

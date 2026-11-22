@@ -1,0 +1,20 @@
+{
+  "name": "Caf\u00e9 Master Dwight",
+  "team": [
+    {
+      "species": "combee",
+      "gender": "MALE",
+      "level": 10,
+      "nature": "jolly",
+      "ability": "honeygather",
+      "moveset": [
+        "sweetscent",
+        "gust",
+        "strugglebug",
+        "bugbite"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

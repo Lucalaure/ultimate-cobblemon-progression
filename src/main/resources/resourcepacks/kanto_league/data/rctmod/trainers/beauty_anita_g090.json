@@ -1,0 +1,29 @@
+{
+  "name": "Beauty Anita",
+  "team": [
+    {
+      "species": "clefairy",
+      "gender": "MALE",
+      "level": 29,
+      "nature": "serious",
+      "ability": "cutecharm",
+      "moveset": [
+        "metronome"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "clefable",
+      "gender": "MALE",
+      "level": 30,
+      "nature": "hasty",
+      "ability": "cutecharm",
+      "moveset": [
+        "metronome"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

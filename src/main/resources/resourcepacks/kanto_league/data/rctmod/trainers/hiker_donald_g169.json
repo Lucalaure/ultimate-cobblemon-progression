@@ -1,0 +1,35 @@
+{
+  "name": "Hiker Donald",
+  "team": [
+    {
+      "species": "gigalith",
+      "gender": "MALE",
+      "level": 46,
+      "nature": "brave",
+      "ability": "sturdy",
+      "moveset": [
+        "irondefense",
+        "rockslide",
+        "rockblast",
+        "stealthrock"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "rhydon",
+      "gender": "FEMALE",
+      "level": 46,
+      "nature": "lonely",
+      "ability": "lightningrod",
+      "moveset": [
+        "takedown",
+        "bulldoze",
+        "horndrill",
+        "stoneedge"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

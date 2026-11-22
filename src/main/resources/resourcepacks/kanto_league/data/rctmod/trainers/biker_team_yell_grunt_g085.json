@@ -1,0 +1,35 @@
+{
+  "name": "Team Yell Grunt",
+  "team": [
+    {
+      "species": "thievul",
+      "gender": "MALE",
+      "level": 21,
+      "nature": "jolly",
+      "ability": "runaway",
+      "moveset": [
+        "snarl",
+        "nastyplot",
+        "tailwhip",
+        "quickattack"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "liepard",
+      "gender": "FEMALE",
+      "level": 22,
+      "nature": "quirky",
+      "ability": "limber",
+      "moveset": [
+        "torment",
+        "furyswipes",
+        "sandattack",
+        "growl"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

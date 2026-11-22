@@ -1,0 +1,23 @@
+{
+  "name": "Macro Cosmos's Justin",
+  "team": [
+    {
+      "species": "stunfisk",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "bashful",
+      "ability": "mimicry",
+      "moveset": [
+        "snaptrap",
+        "muddywater",
+        "metalsound",
+        "bounce"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "galarian"
+      ]
+    }
+  ]
+}

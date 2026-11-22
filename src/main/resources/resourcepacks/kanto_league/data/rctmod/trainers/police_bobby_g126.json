@@ -1,0 +1,34 @@
+{
+  "name": "Police Officer Bobby",
+  "team": [
+    {
+      "species": "arcanine",
+      "gender": "MALE",
+      "level": 37,
+      "nature": "rash",
+      "ability": "intimidate",
+      "moveset": [
+        "extremespeed",
+        "thunderfang",
+        "roar",
+        "firefang"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "boltund",
+      "gender": "FEMALE",
+      "level": 37,
+      "nature": "calm",
+      "ability": "strongjaw",
+      "moveset": [
+        "crunch",
+        "nuzzle",
+        "roar"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Schoolboy Marvin",
+  "team": [
+    {
+      "species": "budew",
+      "gender": "MALE",
+      "level": 12,
+      "nature": "bold",
+      "ability": "naturalcure",
+      "moveset": [
+        "absorb"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "gossifleur",
+      "gender": "MALE",
+      "level": 12,
+      "nature": "quiet",
+      "ability": "cottondown",
+      "moveset": [
+        "leafage",
+        "rapidspin",
+        "sweetscent"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

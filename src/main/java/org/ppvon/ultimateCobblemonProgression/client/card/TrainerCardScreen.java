@@ -665,15 +665,16 @@ public class TrainerCardScreen extends Screen {
                 g.fill(cx, cy, cx1, cy + TRAINER_ROW - 1, row % 2 == 0 ? LIGHT : SCREEN);
                 g.fill(cx + 2, cy + 1, cx + 11, cy + 10, t.beaten() ? GREEN : GREY);
                 text(g, Component.literal(t.beaten() ? "✔" : "•"), cx + 6.5f, cy + 2, WHITE, 1, true);
-                String lv = "Lv " + t.level();
+                String lv = t.minLevel() == t.maxLevel() ? "Lv " + t.minLevel() : "Lv " + t.minLevel() + "–" + t.maxLevel();
                 float lvW = font.width(lv) * 0.75f;
                 text(g, Component.literal(lv), cx1 - 3 - lvW, cy + 3.5f, MUTED, 0.75f, false);
                 fit(g, Component.literal(t.name()), cx + 14, cy + 2, cx1 - 6 - lvW - (cx + 14), t.beaten() ? INK : MUTED, 1, Align.LEFT);
             }
             y += rows * TRAINER_ROW + 4;
         }
-        y += paragraph(g, Component.literal("Wild trainers you beat count here, sorted by their strongest Pokémon. "
-                        + "Wins from before this list was added don't count: beat those trainers again when you meet them."),
+        y += paragraph(g, Component.literal("Wild trainers you beat count here, weakest first. A trainer you can meet again "
+                        + "at higher levels counts once, whichever time you beat them. Wins from before this list was added "
+                        + "don't count: beat those trainers again when you meet them."),
                 CX0 + 4, y + 1, CX1 - CX0 - 14, 40, MUTED, 0.75f, Align.LEFT) + 3;
         contentHeight = y - CY0 + 2;
     }

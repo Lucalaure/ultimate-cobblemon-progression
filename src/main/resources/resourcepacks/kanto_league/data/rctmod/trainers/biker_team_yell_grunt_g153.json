@@ -1,0 +1,20 @@
+{
+  "name": "Team Yell Grunt",
+  "team": [
+    {
+      "species": "thievul",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "naive",
+      "ability": "runaway",
+      "moveset": [
+        "foulplay",
+        "suckerpunch",
+        "tailslap",
+        "nightslash"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

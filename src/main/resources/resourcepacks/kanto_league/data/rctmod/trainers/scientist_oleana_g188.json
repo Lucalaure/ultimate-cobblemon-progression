@@ -1,0 +1,79 @@
+{
+  "name": "Macro Cosmos's Oleana",
+  "team": [
+    {
+      "species": "froslass",
+      "gender": "FEMALE",
+      "level": 50,
+      "nature": "quirky",
+      "ability": "snowcloak",
+      "moveset": [
+        "hex",
+        "icywind",
+        "doubleteam"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "tsareena",
+      "gender": "FEMALE",
+      "level": 50,
+      "nature": "brave",
+      "ability": "leafguard",
+      "moveset": [
+        "tropkick",
+        "stomp",
+        "attract",
+        "acrobatics"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "salazzle",
+      "gender": "FEMALE",
+      "level": 50,
+      "nature": "bashful",
+      "ability": "corrosion",
+      "moveset": [
+        "venoshock",
+        "incinerate",
+        "poisongas",
+        "dragonpulse"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "milotic",
+      "gender": "MALE",
+      "level": 51,
+      "nature": "hasty",
+      "ability": "marvelscale",
+      "moveset": [
+        "surf",
+        "safeguard",
+        "aquaring",
+        "recover"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "garbodor",
+      "gender": "FEMALE",
+      "level": 52,
+      "nature": "adamant",
+      "ability": "stench",
+      "moveset": [
+        "gunkshot",
+        "stompingtantrum",
+        "rockblast",
+        "toxicspikes"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

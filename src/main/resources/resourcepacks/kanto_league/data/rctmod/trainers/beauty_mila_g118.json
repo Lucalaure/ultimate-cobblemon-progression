@@ -1,0 +1,32 @@
+{
+  "name": "Model Mila",
+  "team": [
+    {
+      "species": "ribombee",
+      "gender": "MALE",
+      "level": 35,
+      "nature": "docile",
+      "ability": "honeygather",
+      "moveset": [
+        "pollenpuff",
+        "dazzlinggleam",
+        "stunspore"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "vespiquen",
+      "gender": "FEMALE",
+      "level": 36,
+      "nature": "lax",
+      "ability": "pressure",
+      "moveset": [
+        "attackorder",
+        "defendorder"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

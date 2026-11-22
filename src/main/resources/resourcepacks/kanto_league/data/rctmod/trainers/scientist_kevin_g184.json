@@ -1,0 +1,19 @@
+{
+  "name": "Macro Cosmos's Kevin",
+  "team": [
+    {
+      "species": "klang",
+      "gender": "GENDERLESS",
+      "level": 48,
+      "nature": "adamant",
+      "ability": "plus",
+      "moveset": [
+        "shiftgear",
+        "geargrind",
+        "screech"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

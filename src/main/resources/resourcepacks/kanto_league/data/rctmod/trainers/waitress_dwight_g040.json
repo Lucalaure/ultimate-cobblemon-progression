@@ -1,0 +1,35 @@
+{
+  "name": "Caf\u00e9 Master Dwight",
+  "team": [
+    {
+      "species": "swirlix",
+      "gender": "MALE",
+      "level": 24,
+      "nature": "hasty",
+      "ability": "sweetveil",
+      "moveset": [
+        "cottonspore",
+        "fairywind",
+        "round",
+        "playnice"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "milcery",
+      "gender": "FEMALE",
+      "level": 24,
+      "nature": "jolly",
+      "ability": "sweetveil",
+      "moveset": [
+        "attract",
+        "sweetkiss",
+        "sweetscent",
+        "drainingkiss"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

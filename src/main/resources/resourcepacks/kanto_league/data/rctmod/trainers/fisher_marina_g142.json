@@ -1,0 +1,32 @@
+{
+  "name": "Fisher Marina",
+  "team": [
+    {
+      "species": "qwilfish",
+      "gender": "FEMALE",
+      "level": 39,
+      "nature": "jolly",
+      "ability": "poisonpoint",
+      "moveset": [
+        "poisonjab",
+        "pinmissile"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "pyukumuku",
+      "gender": "MALE",
+      "level": 40,
+      "nature": "quiet",
+      "ability": "innardsout",
+      "moveset": [
+        "taunt",
+        "counter",
+        "harden"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

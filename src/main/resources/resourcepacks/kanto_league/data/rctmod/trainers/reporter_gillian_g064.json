@@ -1,0 +1,19 @@
+{
+  "name": "Reporter Gillian",
+  "team": [
+    {
+      "species": "helioptile",
+      "gender": "FEMALE",
+      "level": 18,
+      "nature": "docile",
+      "ability": "dryskin",
+      "moveset": [
+        "charge",
+        "quickattack",
+        "thundershock"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Macro Cosmos's Mateo",
+  "team": [
+    {
+      "species": "bronzong",
+      "gender": "GENDERLESS",
+      "level": 48,
+      "nature": "lonely",
+      "ability": "levitate",
+      "moveset": [
+        "extrasensory",
+        "safeguard",
+        "irondefense",
+        "metalsound"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

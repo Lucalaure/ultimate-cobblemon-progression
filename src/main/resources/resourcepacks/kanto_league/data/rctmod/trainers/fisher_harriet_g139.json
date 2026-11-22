@@ -1,0 +1,33 @@
+{
+  "name": "Fisher Harriet",
+  "team": [
+    {
+      "species": "barraskewda",
+      "gender": "FEMALE",
+      "level": 39,
+      "nature": "quiet",
+      "ability": "swiftswim",
+      "moveset": [
+        "crunch",
+        "dive",
+        "aquajet"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "lanturn",
+      "gender": "MALE",
+      "level": 39,
+      "nature": "careful",
+      "ability": "voltabsorb",
+      "moveset": [
+        "discharge",
+        "bubblebeam",
+        "confuseray"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

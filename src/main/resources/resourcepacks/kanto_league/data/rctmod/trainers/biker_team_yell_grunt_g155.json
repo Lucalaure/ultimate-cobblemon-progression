@@ -1,0 +1,20 @@
+{
+  "name": "Team Yell Grunt",
+  "team": [
+    {
+      "species": "weavile",
+      "gender": "MALE",
+      "level": 43,
+      "nature": "relaxed",
+      "ability": "pressure",
+      "moveset": [
+        "honeclaws",
+        "slash",
+        "iceshard",
+        "metalclaw"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

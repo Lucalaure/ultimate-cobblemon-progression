@@ -1,0 +1,18 @@
+{
+  "name": "Master Dojo Student",
+  "team": [
+    {
+      "species": "psyduck",
+      "gender": "MALE",
+      "level": 23,
+      "nature": "hasty",
+      "ability": "damp",
+      "moveset": [
+        "confusion",
+        "waterpulse"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

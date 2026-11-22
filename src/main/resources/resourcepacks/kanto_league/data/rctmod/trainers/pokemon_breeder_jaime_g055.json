@@ -1,0 +1,56 @@
+{
+  "name": "Pok\u00e9mon Breeder Jaime",
+  "team": [
+    {
+      "species": "meowth",
+      "gender": "FEMALE",
+      "level": 14,
+      "nature": "quiet",
+      "ability": "pickup",
+      "moveset": [
+        "fakeout",
+        "scratch",
+        "growl"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "galarian"
+      ]
+    },
+    {
+      "species": "seedot",
+      "gender": "FEMALE",
+      "level": 14,
+      "nature": "hasty",
+      "ability": "chlorophyll",
+      "moveset": [
+        "rollout",
+        "absorb",
+        "tackle"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "butterfree",
+      "gender": "MALE",
+      "level": 15,
+      "nature": "naive",
+      "ability": "compoundeyes",
+      "moveset": [
+        "stringshot",
+        "confusion",
+        "supersonic"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ],
+  "bag": [
+    {
+      "item": "cobblemon:potion",
+      "quantity": 1
+    }
+  ]
+}

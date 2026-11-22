@@ -1,0 +1,33 @@
+{
+  "name": "Rail Staff Vincent",
+  "team": [
+    {
+      "species": "drilbur",
+      "gender": "MALE",
+      "level": 22,
+      "nature": "mild",
+      "ability": "sandrush",
+      "moveset": [
+        "honeclaws",
+        "rapidspin",
+        "dig"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "onix",
+      "gender": "MALE",
+      "level": 23,
+      "nature": "rash",
+      "ability": "rockhead",
+      "moveset": [
+        "rockslide",
+        "curse",
+        "smackdown"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Team Yell Grunt",
+  "team": [
+    {
+      "species": "stunky",
+      "gender": "FEMALE",
+      "level": 29,
+      "nature": "naughty",
+      "ability": "stench",
+      "moveset": [
+        "bite",
+        "feint",
+        "poisongas"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "linoone",
+      "gender": "FEMALE",
+      "level": 30,
+      "nature": "naughty",
+      "moveset": [
+        "honeclaws",
+        "takedown",
+        "nightslash"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "galarian"
+      ]
+    }
+  ]
+}

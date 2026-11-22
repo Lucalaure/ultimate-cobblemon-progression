@@ -1,0 +1,19 @@
+{
+  "name": "Pok\u00e9 Kid Mia",
+  "team": [
+    {
+      "species": "eevee",
+      "gender": "MALE",
+      "level": 15,
+      "nature": "calm",
+      "ability": "runaway",
+      "moveset": [
+        "quickattack",
+        "tailwhip",
+        "tackle"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

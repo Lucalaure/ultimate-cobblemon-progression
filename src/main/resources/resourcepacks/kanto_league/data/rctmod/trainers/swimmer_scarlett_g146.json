@@ -1,0 +1,47 @@
+{
+  "name": "Swimmer Scarlett",
+  "team": [
+    {
+      "species": "remoraid",
+      "gender": "MALE",
+      "level": 39,
+      "nature": "hasty",
+      "ability": "hustle",
+      "moveset": [
+        "bubblebeam",
+        "aurorabeam"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "octillery",
+      "gender": "MALE",
+      "level": 40,
+      "nature": "naive",
+      "ability": "suctioncups",
+      "moveset": [
+        "aurorabeam",
+        "psybeam",
+        "focusenergy",
+        "bubblebeam"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "mantine",
+      "gender": "MALE",
+      "level": 40,
+      "nature": "gentle",
+      "ability": "swiftswim",
+      "moveset": [
+        "aquaring",
+        "airslash",
+        "bounce"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

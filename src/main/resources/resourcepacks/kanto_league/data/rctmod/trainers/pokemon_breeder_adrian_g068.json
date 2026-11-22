@@ -1,0 +1,53 @@
+{
+  "name": "Pok\u00e9mon Breeder Adrian",
+  "team": [
+    {
+      "species": "stufful",
+      "gender": "MALE",
+      "level": 17,
+      "nature": "impish",
+      "ability": "fluffy",
+      "moveset": [
+        "brutalswing",
+        "leer",
+        "tackle"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "cutiefly",
+      "gender": "FEMALE",
+      "level": 18,
+      "nature": "adamant",
+      "ability": "honeygather",
+      "moveset": [
+        "sweetscent",
+        "fairywind",
+        "absorb"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "ralts",
+      "gender": "MALE",
+      "level": 19,
+      "nature": "relaxed",
+      "ability": "synchronize",
+      "moveset": [
+        "psybeam",
+        "drainingkiss",
+        "growl"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ],
+  "bag": [
+    {
+      "item": "cobblemon:potion",
+      "quantity": 1
+    }
+  ]
+}

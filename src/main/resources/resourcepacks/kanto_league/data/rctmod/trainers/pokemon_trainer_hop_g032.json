@@ -1,0 +1,47 @@
+{
+  "name": "Pok\u00e9mon Trainer Hop",
+  "team": [
+    {
+      "species": "wooloo",
+      "gender": "FEMALE",
+      "level": 10,
+      "nature": "bold",
+      "ability": "fluffy",
+      "moveset": [
+        "tackle",
+        "growl",
+        "defensecurl"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "rookidee",
+      "gender": "MALE",
+      "level": 11,
+      "nature": "sassy",
+      "ability": "keeneye",
+      "moveset": [
+        "peck",
+        "leer"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "scorbunny",
+      "gender": "FEMALE",
+      "level": 12,
+      "nature": "lonely",
+      "ability": "blaze",
+      "moveset": [
+        "tackle",
+        "growl",
+        "ember",
+        "quickattack"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

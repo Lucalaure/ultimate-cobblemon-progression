@@ -1,0 +1,36 @@
+{
+  "name": "Team Yell Grunt",
+  "team": [
+    {
+      "species": "linoone",
+      "gender": "MALE",
+      "level": 22,
+      "nature": "gentle",
+      "moveset": [
+        "nightslash",
+        "sandattack",
+        "lick"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "galarian"
+      ]
+    },
+    {
+      "species": "pancham",
+      "gender": "MALE",
+      "level": 21,
+      "nature": "impish",
+      "ability": "ironfist",
+      "moveset": [
+        "lowsweep",
+        "circlethrow",
+        "workup",
+        "armthrust"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

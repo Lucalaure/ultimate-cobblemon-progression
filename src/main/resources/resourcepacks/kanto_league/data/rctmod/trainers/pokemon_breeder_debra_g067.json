@@ -1,0 +1,39 @@
+{
+  "name": "Pok\u00e9mon Breeder Debra",
+  "team": [
+    {
+      "species": "minccino",
+      "gender": "FEMALE",
+      "level": 17,
+      "nature": "docile",
+      "ability": "cutecharm",
+      "moveset": [
+        "pound",
+        "tickle",
+        "encore"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "steenee",
+      "gender": "FEMALE",
+      "level": 19,
+      "nature": "naughty",
+      "ability": "leafguard",
+      "moveset": [
+        "razorleaf",
+        "rapidspin",
+        "playnice"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ],
+  "bag": [
+    {
+      "item": "cobblemon:potion",
+      "quantity": 1
+    }
+  ]
+}

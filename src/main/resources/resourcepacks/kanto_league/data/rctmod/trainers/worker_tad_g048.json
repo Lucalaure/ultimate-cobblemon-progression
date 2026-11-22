@@ -1,0 +1,17 @@
+{
+  "name": "Postman Tad",
+  "team": [
+    {
+      "species": "delibird",
+      "gender": "MALE",
+      "level": 14,
+      "nature": "timid",
+      "ability": "vitalspirit",
+      "moveset": [
+        "present"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

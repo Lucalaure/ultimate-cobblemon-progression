@@ -1,0 +1,33 @@
+{
+  "name": "Gym Trainer Darren",
+  "team": [
+    {
+      "species": "rolycoly",
+      "gender": "MALE",
+      "level": 24,
+      "nature": "careful",
+      "ability": "steamengine",
+      "moveset": [
+        "tackle",
+        "rapidspin",
+        "smackdown"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "growlithe",
+      "gender": "MALE",
+      "level": 24,
+      "nature": "hasty",
+      "ability": "intimidate",
+      "moveset": [
+        "bite",
+        "flamewheel",
+        "ember"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Gym Trainer Oliver",
+  "team": [
+    {
+      "species": "carkol",
+      "gender": "FEMALE",
+      "level": 39,
+      "nature": "gentle",
+      "ability": "steamengine",
+      "moveset": [
+        "stealthrock",
+        "flamecharge",
+        "ancientpower"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

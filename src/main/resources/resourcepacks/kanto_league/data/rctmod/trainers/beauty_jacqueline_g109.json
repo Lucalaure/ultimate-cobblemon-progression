@@ -1,0 +1,20 @@
+{
+  "name": "Beauty Jacqueline",
+  "team": [
+    {
+      "species": "kirlia",
+      "gender": "MALE",
+      "level": 34,
+      "nature": "lonely",
+      "ability": "synchronize",
+      "moveset": [
+        "calmmind",
+        "lifedew",
+        "psybeam",
+        "disarmingvoice"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

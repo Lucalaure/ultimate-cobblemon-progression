@@ -1,0 +1,18 @@
+{
+  "name": "Gym Trainer Samuel",
+  "team": [
+    {
+      "species": "gossifleur",
+      "gender": "MALE",
+      "level": 16,
+      "nature": "adamant",
+      "ability": "cottondown",
+      "moveset": [
+        "leafage",
+        "rapidspin"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

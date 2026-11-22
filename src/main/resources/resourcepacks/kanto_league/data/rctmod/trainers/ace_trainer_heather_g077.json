@@ -1,0 +1,32 @@
+{
+  "name": "Gym Trainer Heather",
+  "team": [
+    {
+      "species": "krabby",
+      "gender": "FEMALE",
+      "level": 20,
+      "nature": "naive",
+      "ability": "hypercutter",
+      "moveset": [
+        "whirlpool",
+        "harden"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "corphish",
+      "gender": "FEMALE",
+      "level": 20,
+      "nature": "adamant",
+      "ability": "hypercutter",
+      "moveset": [
+        "whirlpool",
+        "leer",
+        "bubblebeam"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

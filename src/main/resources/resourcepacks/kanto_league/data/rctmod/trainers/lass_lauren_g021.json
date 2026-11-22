@@ -1,0 +1,17 @@
+{
+  "name": "Lass Lauren",
+  "team": [
+    {
+      "species": "chewtle",
+      "gender": "FEMALE",
+      "level": 6,
+      "nature": "quiet",
+      "ability": "strongjaw",
+      "moveset": [
+        "tackle"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Gym Trainer Julia",
+  "team": [
+    {
+      "species": "tympole",
+      "gender": "MALE",
+      "level": 21,
+      "nature": "serious",
+      "ability": "swiftswim",
+      "moveset": [
+        "echoedvoice",
+        "growl",
+        "mudshot",
+        "round"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

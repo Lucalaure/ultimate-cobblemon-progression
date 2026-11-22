@@ -1,0 +1,100 @@
+{
+  "name": "Pok\u00e9mon Trainer Hop",
+  "team": [
+    {
+      "species": "dubwool",
+      "gender": "MALE",
+      "level": 59,
+      "nature": "serious",
+      "ability": "fluffy",
+      "moveset": [
+        "cottonguard",
+        "doublekick",
+        "headbutt"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "corviknight",
+      "gender": "FEMALE",
+      "level": 59,
+      "nature": "sassy",
+      "ability": "pressure",
+      "moveset": [
+        "steelwing",
+        "drillpeck",
+        "scaryface",
+        "bravebird"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "pincurchin",
+      "gender": "FEMALE",
+      "level": 58,
+      "nature": "lax",
+      "ability": "lightningrod",
+      "moveset": [
+        "zingzap",
+        "poisonjab",
+        "bubblebeam",
+        "furyattack"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "snorlax",
+      "gender": "MALE",
+      "level": 58,
+      "nature": "sassy",
+      "ability": "immunity",
+      "moveset": [
+        "hammerarm",
+        "highhorsepower",
+        "heavyslam",
+        "crunch"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "cramorant",
+      "gender": "FEMALE",
+      "level": 58,
+      "nature": "bold",
+      "ability": "gulpmissile",
+      "moveset": [
+        "dive",
+        "drillpeck",
+        "throatchop",
+        "steelwing"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "rillaboom",
+      "gender": "MALE",
+      "level": 60,
+      "nature": "jolly",
+      "ability": "overgrow",
+      "moveset": [
+        "drumbeating",
+        "slam",
+        "knockoff",
+        "uproar"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ],
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 1
+    }
+  ]
+}

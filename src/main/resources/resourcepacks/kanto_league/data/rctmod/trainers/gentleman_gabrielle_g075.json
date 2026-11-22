@@ -1,0 +1,19 @@
+{
+  "name": "Office Worker Gabrielle",
+  "team": [
+    {
+      "species": "croagunk",
+      "gender": "FEMALE",
+      "level": 19,
+      "nature": "hasty",
+      "ability": "anticipation",
+      "moveset": [
+        "astonish",
+        "taunt",
+        "poisonsting"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

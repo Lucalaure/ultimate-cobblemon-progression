@@ -50,11 +50,13 @@ public final class RegionRegistry {
         Map<String, Integer> wildTrainers = new HashMap<>();
         for (int r = 0; r < REGIONS.size(); r++) {
             RegionDef region = REGIONS.get(r);
-            for (String trainerId : region.wildTrainers) {
-                Integer previous = wildTrainers.putIfAbsent(trainerId, r);
-                if (previous != null && previous != r) {
-                    UltimateCobblemonProgression.LOG.warn("Wild trainer '{}' is listed in regions '{}' and '{}'; keeping '{}'",
-                            trainerId, REGIONS.get(previous).id, region.id, REGIONS.get(previous).id);
+            for (List<String> versions : region.wildTrainers) {
+                for (String trainerId : versions) {
+                    Integer previous = wildTrainers.putIfAbsent(trainerId, r);
+                    if (previous != null && previous != r) {
+                        UltimateCobblemonProgression.LOG.warn("Wild trainer '{}' is listed in regions '{}' and '{}'; keeping '{}'",
+                                trainerId, REGIONS.get(previous).id, region.id, REGIONS.get(previous).id);
+                    }
                 }
             }
         }

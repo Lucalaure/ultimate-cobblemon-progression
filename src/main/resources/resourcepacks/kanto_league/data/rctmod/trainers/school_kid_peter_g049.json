@@ -1,0 +1,33 @@
+{
+  "name": "Schoolboy Peter",
+  "team": [
+    {
+      "species": "sizzlipede",
+      "gender": "FEMALE",
+      "level": 13,
+      "nature": "lonely",
+      "ability": "flashfire",
+      "moveset": [
+        "bite",
+        "ember",
+        "wrap"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "dottler",
+      "gender": "FEMALE",
+      "level": 14,
+      "nature": "adamant",
+      "ability": "swarm",
+      "moveset": [
+        "confusion",
+        "strugglebug",
+        "lightscreen"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

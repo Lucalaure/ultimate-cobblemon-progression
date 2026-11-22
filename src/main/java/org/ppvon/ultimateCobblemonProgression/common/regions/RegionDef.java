@@ -44,16 +44,17 @@ public final class RegionDef {
     /** Tier index (1-based, consecutive) to tier definition. */
     public final SortedMap<Integer, TierDef> tiers;
     /**
-     * Radical Cobblemon Trainers' wild trainers from this region (wild_trainers.json): in region mode they only spawn
-     * for players who have the region open, and the Trainer Card counts the ones they've beaten.
+     * Radical Cobblemon Trainers' wild trainers from this region (wild_trainers.json), one entry per trainer holding
+     * the RCT ids of all its versions (rematches, a rival's copies for each starter). In region mode they only spawn
+     * for players who have the region open, and the Trainer Card counts each trainer once.
      */
-    public final List<String> wildTrainers;
+    public final List<List<String>> wildTrainers;
     private final Map<Integer, Integer> realSpeciesByTier = new HashMap<>();
     /** The Cobblemon species belonging to each tier of this region (a species listed in several regions counts in the first). */
     private final Map<Integer, List<Species>> speciesByTier = new HashMap<>();
 
-    public RegionDef(String id, Meta meta, SortedMap<Integer, TierDef> tiers, List<String> wildTrainers) {
-        this.wildTrainers = List.copyOf(wildTrainers);
+    public RegionDef(String id, Meta meta, SortedMap<Integer, TierDef> tiers, List<List<String>> wildTrainers) {
+        this.wildTrainers = wildTrainers.stream().filter(t -> !t.isEmpty()).map(List::copyOf).toList();
         this.id = id;
         this.order = meta.order;
         this.title = meta.title.orElse(id);
@@ -102,10 +103,10 @@ public final class RegionDef {
         speciesByTier.computeIfAbsent(tier, t -> new ArrayList<>()).add(species);
     }
 
-    /** Contents of wild_trainers.json. */
-    public record WildTrainerList(List<String> trainers) {
+    /** Contents of wild_trainers.json: each entry a trainer id, or a list of ids for the versions of one trainer. */
+    public record WildTrainerList(List<List<String>> trainers) {
         public static final Codec<WildTrainerList> CODEC = RecordCodecBuilder.create(i -> i.group(
-                Codec.STRING.listOf().fieldOf("trainers").forGetter(WildTrainerList::trainers)
+                TierDef.TRAINER_GROUP_CODEC.listOf().fieldOf("trainers").forGetter(WildTrainerList::trainers)
         ).apply(i, WildTrainerList::new));
     }
 

@@ -1,0 +1,19 @@
+{
+  "name": "Team Yell Grunt",
+  "team": [
+    {
+      "species": "sableye",
+      "gender": "MALE",
+      "level": 18,
+      "nature": "impish",
+      "ability": "keeneye",
+      "moveset": [
+        "disable",
+        "astonish",
+        "scratch"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Caf\u00e9 Master Richard",
+  "team": [
+    {
+      "species": "slurpuff",
+      "gender": "MALE",
+      "level": 47,
+      "nature": "jolly",
+      "ability": "sweetveil",
+      "moveset": [
+        "dazzlinggleam",
+        "flamethrower",
+        "helpinghand",
+        "thunderbolt"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "alcremie",
+      "gender": "FEMALE",
+      "level": 47,
+      "nature": "naive",
+      "ability": "sweetveil",
+      "moveset": [
+        "dazzlinggleam",
+        "recover",
+        "psychic",
+        "magicalleaf"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

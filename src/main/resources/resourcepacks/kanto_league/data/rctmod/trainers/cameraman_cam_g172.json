@@ -1,0 +1,35 @@
+{
+  "name": "Cameraman Cam",
+  "team": [
+    {
+      "species": "klinklang",
+      "gender": "GENDERLESS",
+      "level": 46,
+      "nature": "timid",
+      "ability": "plus",
+      "moveset": [
+        "shiftgear",
+        "geargrind",
+        "zapcannon",
+        "screech"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "togedemaru",
+      "gender": "FEMALE",
+      "level": 47,
+      "nature": "quiet",
+      "ability": "ironbarbs",
+      "moveset": [
+        "nuzzle",
+        "fellstinger",
+        "pinmissile",
+        "zingzap"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

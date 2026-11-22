@@ -43,8 +43,8 @@ public final class TierDef {
                     set  -> new ArrayList<>(set)
             );
 
-    /** A trainer id, or a list of alternative trainer ids. */
-    private static final Codec<List<String>> TRAINER_GROUP_CODEC =
+    /** A trainer id, or a list of trainer ids (alternatives in a tier slot, versions of one trainer in a wild trainer list). */
+    public static final Codec<List<String>> TRAINER_GROUP_CODEC =
             Codec.either(Codec.STRING, Codec.STRING.listOf()).xmap(
                     e -> e.map(List::of, l -> l),
                     l -> l.size() == 1 ? Either.left(l.get(0)) : Either.right(l)

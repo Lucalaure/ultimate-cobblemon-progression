@@ -1,0 +1,50 @@
+{
+  "name": "Pok\u00e9mon Trainer Hop",
+  "team": [
+    {
+      "species": "wooloo",
+      "gender": "MALE",
+      "level": 22,
+      "nature": "gentle",
+      "ability": "fluffy",
+      "moveset": [
+        "tackle",
+        "growl",
+        "defensecurl",
+        "doublekick"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "corvisquire",
+      "gender": "MALE",
+      "level": 21,
+      "nature": "hasty",
+      "ability": "keeneye",
+      "moveset": [
+        "pluck",
+        "furyattack",
+        "leer",
+        "peck"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "thwackey",
+      "gender": "MALE",
+      "level": 24,
+      "nature": "careful",
+      "ability": "overgrow",
+      "moveset": [
+        "doublehit",
+        "razorleaf",
+        "screech",
+        "taunt"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

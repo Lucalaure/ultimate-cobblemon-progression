@@ -1,3 +1,17 @@
+# Unreleased
+
+## Features
+- **Galar's wild trainers.** 147 trainers (221 battles) from Pokémon Sword & Shield and both DLCs, with their real teams: species, Galarian forms, levels, moves and held items. They spawn once Galar is open for you (your extra starting region) and fill a Galar list on the Trainer Card's Trainers tab. Rivals and story trainers are in (Hop, Bede, Marnie, Klara, Avery, Sordward, Shielbert, Peony, Oleana, Team Yell); gym leaders, the Champion and the Stadium battles aren't. Each class uses the closest RCT class for where it spawns, its loot and its skin, so RCT skin packs cover them. Nobody Dynamaxes, as on Sword & Shield's routes.
+- Datapacks: `scripts/generate-galar-trainers.ps1` builds them from `scripts/data/galar-trainers.json`.
+
+## Changes
+- **The Trainers tab counts each trainer once.** Trainers you can rematch at higher levels, and rivals with a copy of each battle for every starter, used to be listed once per version: Youngster Ben four times, Rival Terry twelve. They're now one row each, with their level range (Lv 12–48), beaten when you beat any version. Every version still spawns in the wild, so trainers keep turning up as your team gets stronger. Grunts are still one row per battle.
+- **Kanto's wild trainers are FireRed's own.** Radical Red's additions no longer spawn in region mode: the Friendly Coaches and other tutorial trainers, its joke trainers, and post-game cameos like Brendan, May, Red, Professor Oak and the Gatekeepers. Kanto now lists 474 trainers and Sinnoh 483.
+- Datapacks: an entry in `wild_trainers.json` can be a list of ids, the versions of one trainer.
+
+## Fixes
+- Sinnoh's first-route trainers (with teams like Starly, Shinx and Pachirisu) were listed under Kanto, so they spawned for Kanto players and not for Sinnoh players. They're Sinnoh's now.
+
 # CJP 2.4.0
 
 ## Features

@@ -1,0 +1,32 @@
+{
+  "name": "Worker Yvonne",
+  "team": [
+    {
+      "species": "roggenrola",
+      "gender": "MALE",
+      "level": 20,
+      "nature": "lax",
+      "ability": "sturdy",
+      "moveset": [
+        "smackdown",
+        "tackle"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "timburr",
+      "gender": "MALE",
+      "level": 21,
+      "nature": "naive",
+      "ability": "guts",
+      "moveset": [
+        "lowkick",
+        "rockthrow",
+        "focusenergy"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

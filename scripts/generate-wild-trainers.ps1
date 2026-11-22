@@ -10,9 +10,17 @@ Writes regions/<region>/wild_trainers.json into the built-in leagues datapack
 (src/main/resources/resourcepacks/kanto_league/data/ultimate-cobblemon-progression). In region mode a wild trainer only
 spawns for players who have its region open, and the Trainer Card's Trainers tab counts the ones they've beaten.
 
-RCT's trainers come from three games, and their ids end in a 4-digit hex number grouped by game (REGIONS below):
-Radical Red (Kanto), Brilliant Diamond / Shining Pearl (Sinnoh) and Pokemon Unbound (Borrius, which isn't a CJP region,
-so its trainers are listed nowhere). Double battles end in m000-m00f instead and are placed by hand (DOUBLES).
+RCT's trainers come from three games, and their ids end in a 4-digit hex number: each game's trainer table, one after
+the other (REGIONS below). Kanto is FireRed's own table, as Radical Red numbers it (0059 Youngster Ben to 02e6, the
+Champion's last rematch); Radical Red's additions sit in the unused slots below it and are left out, like the Friendly
+Coaches, the joke trainers and its post-game cameos. Sinnoh is Brilliant Diamond / Shining Pearl's (02e7 to 05a8).
+Pokemon Unbound's come after (Borrius isn't a CJP region, so they're listed nowhere). Double battles end in m000-m00f
+instead and are placed by hand (DOUBLES). NOT_IN_GAME drops the few additions Radical Red put in FireRed's own range.
+
+Each trainer is one entry: its versions (rematches at higher levels, and the copies of rival battles for each
+starter) are grouped, so the Trainer Card counts the trainer once, beaten when any version is. Every version still
+spawns, so trainers keep turning up as players get stronger. Trainers with no name of their own (grunts, the nameless
+channelers and bug catchers) are separate battles and stay separate entries.
 
 Left out, so every listed trainer can actually be met and beaten:
 - league trainers (listed in a region's tiers; they only appear in gyms),
@@ -31,12 +39,16 @@ $pack = Join-Path $repo 'src/main/resources/resourcepacks/kanto_league/data'
 
 # Hex id ranges per region (inclusive).
 $REGIONS = [ordered]@{
-    kanto  = @{ from = 0x0000; to = 0x02ff }
-    sinnoh = @{ from = 0x0300; to = 0x05a9 }
+    kanto  = @{ from = 0x0059; to = 0x02e6 }
+    sinnoh = @{ from = 0x02e7; to = 0x05a8 }
 }
-# Double battles (ids ending in m0xx). Anything not listed here belongs to no region.
+# Per region: trainers in its range that aren't from its game (Radical Red's own, in reused FireRed slots).
+$NOT_IN_GAME = @{ kanto = '^(gatekeeper|dragon_tamer|professor_oak)_' }
+# Trainers whose id has no name of their own besides these (each one is a different battle), on top of RCT's classes.
+$NAMELESS = '_grunt$|^biker_goon$'
+# Double battles (ids ending in m0xx). Anything not listed here belongs to no region (Archer & Ariana are Radical
+# Red's, the Shadow admins Unbound's).
 $DOUBLES = @{
-    'rocket_admin_archer_ariana_m000' = 'kanto'
     'twins_liv_liz_m001'              = 'sinnoh'
     'young_couple_sue_ty_m002'        = 'sinnoh'
     'twins_teri_tia_m003'             = 'sinnoh'
@@ -154,11 +166,12 @@ function Get-Region([string]$id) {
 
 $lists = [ordered]@{}
 foreach ($r in $REGIONS.Keys) { $lists[$r] = New-Object System.Collections.Generic.List[string] }
-$skipped = [ordered]@{ 'no region' = 0; 'league trainer' = 0; 'never spawns' = 0; 'unmeetable requirement' = 0 }
+$skipped = [ordered]@{ 'no region' = 0; 'not in the original game' = 0; 'league trainer' = 0; 'never spawns' = 0; 'unmeetable requirement' = 0 }
 
 foreach ($id in ($trainerIds | Sort-Object)) {
     $region = Get-Region $id
     if (-not $region) { $skipped['no region']++; continue }
+    if ($NOT_IN_GAME.ContainsKey($region) -and $id -match $NOT_IN_GAME[$region]) { $skipped['not in the original game']++; continue }
     if ($league.Contains($id)) { $skipped['league trainer']++; continue }
     $mob = Get-MobData $id
     $weight = if ($null -ne $mob.spawnWeightFactor) { [double]$mob.spawnWeightFactor } else { 1.0 }
@@ -172,12 +185,31 @@ foreach ($id in ($trainerIds | Sort-Object)) {
     $lists[$region].Add($id)
 }
 
+# Game order: the hex number, with double battles after.
+function Get-Order([string]$id) {
+    if ($id -match '_([0-9a-f]{4})$') { return [Convert]::ToInt32($Matches[1], 16) }
+    if ($id -match '_m([0-9a-f]{3})$') { return 0x10000 + [Convert]::ToInt32($Matches[1], 16) }
+    return 0x20000
+}
+
 foreach ($r in $lists.Keys) {
     $dir = Join-Path $pack "ultimate-cobblemon-progression/regions/$r"
     if (-not (Test-Path (Join-Path $dir 'region.json'))) { throw "No region.json for '$r' in $dir" }
-    $body = ($lists[$r] | ForEach-Object { "    `"$_`"" }) -join ",`n"
-    $json = "{`n  `"trainers`": [`n$body`n  ]`n}`n"
+
+    # One entry per trainer, holding all its versions; nameless trainers are one entry per battle.
+    $entries = [ordered]@{}
+    foreach ($id in @($lists[$r] | Sort-Object { Get-Order $_ })) {
+        $base = $id -replace '_(m[0-9a-f]{3}|[0-9a-f]{4})$', ''
+        $key = if ($groupNames -contains $base -or $base -match $NAMELESS) { $id } else { $base }
+        if (-not $entries.Contains($key)) { $entries[$key] = New-Object System.Collections.Generic.List[string] }
+        $entries[$key].Add($id)
+    }
+    $lines = foreach ($versions in $entries.Values) {
+        if ($versions.Count -eq 1) { "    `"$($versions[0])`"" }
+        else { '    [' + (($versions | ForEach-Object { "`"$_`"" }) -join ', ') + ']' }
+    }
+    $json = "{`n  `"trainers`": [`n" + ($lines -join ",`n") + "`n  ]`n}`n"
     [System.IO.File]::WriteAllText((Join-Path $dir 'wild_trainers.json'), $json, (New-Object System.Text.UTF8Encoding $false))
-    Write-Host "$r`: $($lists[$r].Count) wild trainers"
+    Write-Host "$r`: $($entries.Count) trainers ($($lists[$r].Count) versions in all)"
 }
 Write-Host ("Left out: " + (($skipped.Keys | ForEach-Object { "$($skipped[$_]) $_" }) -join ', '))

@@ -1,0 +1,70 @@
+{
+  "name": "Pok\u00e9mon Trainer Klara",
+  "team": [
+    {
+      "species": "drapion",
+      "gender": "FEMALE",
+      "level": 65,
+      "nature": "gentle",
+      "ability": "battlearmor",
+      "moveset": [
+        "poisonfang",
+        "crunch",
+        "icefang"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "weezing",
+      "gender": "FEMALE",
+      "level": 66,
+      "nature": "lax",
+      "ability": "levitate",
+      "moveset": [
+        "toxic",
+        "heatwave",
+        "protect",
+        "strangesteam"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "galarian"
+      ]
+    },
+    {
+      "species": "scolipede",
+      "gender": "FEMALE",
+      "level": 66,
+      "nature": "bashful",
+      "ability": "poisonpoint",
+      "moveset": [
+        "smartstrike",
+        "poisonjab",
+        "megahorn",
+        "protect"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "slowbro",
+      "gender": "MALE",
+      "level": 67,
+      "nature": "calm",
+      "ability": "quickdraw",
+      "moveset": [
+        "scald",
+        "shellsidearm",
+        "focusblast",
+        "psychic"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "galarian"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Gym Trainer Simon",
+  "team": [
+    {
+      "species": "hitmonlee",
+      "gender": "MALE",
+      "level": 33,
+      "nature": "lonely",
+      "ability": "limber",
+      "moveset": [
+        "doublekick",
+        "revenge"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "hitmonchan",
+      "gender": "MALE",
+      "level": 33,
+      "nature": "docile",
+      "ability": "keeneye",
+      "moveset": [
+        "machpunch",
+        "bulletpunch"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

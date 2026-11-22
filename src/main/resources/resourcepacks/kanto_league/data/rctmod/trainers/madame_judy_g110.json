@@ -1,0 +1,33 @@
+{
+  "name": "Madame Judy",
+  "team": [
+    {
+      "species": "indeedee",
+      "gender": "MALE",
+      "level": 33,
+      "nature": "timid",
+      "ability": "innerfocus",
+      "moveset": [
+        "disarmingvoice",
+        "psybeam",
+        "playnice"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "indeedee",
+      "gender": "MALE",
+      "level": 33,
+      "nature": "quiet",
+      "ability": "innerfocus",
+      "moveset": [
+        "disarmingvoice",
+        "psybeam",
+        "playnice"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

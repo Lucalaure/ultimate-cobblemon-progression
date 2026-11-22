@@ -1,0 +1,32 @@
+{
+  "name": "Office Worker Ronald",
+  "team": [
+    {
+      "species": "weavile",
+      "gender": "FEMALE",
+      "level": 45,
+      "nature": "quirky",
+      "ability": "pressure",
+      "moveset": [
+        "honeclaws",
+        "furyswipes",
+        "metalclaw"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "claydol",
+      "gender": "GENDERLESS",
+      "level": 45,
+      "nature": "serious",
+      "ability": "levitate",
+      "moveset": [
+        "earthpower",
+        "extrasensory"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

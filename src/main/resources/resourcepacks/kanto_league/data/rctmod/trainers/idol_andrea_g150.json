@@ -1,0 +1,19 @@
+{
+  "name": "Dancer Andrea",
+  "team": [
+    {
+      "species": "maractus",
+      "gender": "FEMALE",
+      "level": 41,
+      "nature": "quiet",
+      "ability": "waterabsorb",
+      "moveset": [
+        "gigadrain",
+        "ingrain",
+        "sweetscent"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

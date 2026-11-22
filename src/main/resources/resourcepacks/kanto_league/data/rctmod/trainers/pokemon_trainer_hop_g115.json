@@ -1,0 +1,84 @@
+{
+  "name": "Pok\u00e9mon Trainer Hop",
+  "team": [
+    {
+      "species": "trevenant",
+      "gender": "FEMALE",
+      "level": 34,
+      "nature": "impish",
+      "ability": "naturalcure",
+      "moveset": [
+        "hornleech",
+        "shadowclaw",
+        "confuseray"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "heatmor",
+      "gender": "MALE",
+      "level": 34,
+      "nature": "naive",
+      "ability": "gluttony",
+      "moveset": [
+        "firelash",
+        "bugbite",
+        "slash",
+        "lick"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "snorlax",
+      "gender": "FEMALE",
+      "level": 35,
+      "nature": "lax",
+      "ability": "immunity",
+      "moveset": [
+        "bodyslam",
+        "stockpile",
+        "heavyslam"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "boltund",
+      "gender": "FEMALE",
+      "level": 35,
+      "nature": "calm",
+      "ability": "strongjaw",
+      "moveset": [
+        "spark",
+        "crunch",
+        "roar",
+        "nuzzle"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "inteleon",
+      "gender": "MALE",
+      "level": 37,
+      "nature": "relaxed",
+      "ability": "torrent",
+      "moveset": [
+        "snipeshot",
+        "suckerpunch",
+        "tearfullook",
+        "whirlpool"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ],
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 1
+    }
+  ]
+}

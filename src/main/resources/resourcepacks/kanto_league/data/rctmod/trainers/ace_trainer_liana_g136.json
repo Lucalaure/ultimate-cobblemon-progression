@@ -1,0 +1,19 @@
+{
+  "name": "Gym Trainer Liana",
+  "team": [
+    {
+      "species": "cloyster",
+      "gender": "MALE",
+      "level": 38,
+      "nature": "gentle",
+      "ability": "shellarmor",
+      "moveset": [
+        "iciclespear",
+        "shellsmash",
+        "razorshell"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

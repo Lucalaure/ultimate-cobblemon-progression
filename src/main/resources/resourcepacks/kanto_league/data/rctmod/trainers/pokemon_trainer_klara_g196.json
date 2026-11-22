@@ -1,0 +1,64 @@
+{
+  "name": "Pok\u00e9mon Trainer Klara",
+  "team": [
+    {
+      "species": "skorupi",
+      "gender": "FEMALE",
+      "level": 65,
+      "nature": "hasty",
+      "ability": "battlearmor",
+      "moveset": [
+        "bite",
+        "poisonfang"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "weezing",
+      "gender": "MALE",
+      "level": 66,
+      "nature": "naive",
+      "ability": "levitate",
+      "moveset": [
+        "clearsmog",
+        "assurance"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "galarian"
+      ]
+    },
+    {
+      "species": "whirlipede",
+      "gender": "MALE",
+      "level": 66,
+      "nature": "careful",
+      "ability": "poisonpoint",
+      "moveset": [
+        "poisontail",
+        "bugbite"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "slowbro",
+      "gender": "FEMALE",
+      "level": 67,
+      "nature": "hardy",
+      "ability": "quickdraw",
+      "moveset": [
+        "waterpulse",
+        "shellsidearm",
+        "confusion"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "galarian"
+      ]
+    }
+  ]
+}

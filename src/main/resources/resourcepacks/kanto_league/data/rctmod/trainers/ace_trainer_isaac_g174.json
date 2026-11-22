@@ -1,0 +1,53 @@
+{
+  "name": "League Staff Isaac",
+  "team": [
+    {
+      "species": "rotom",
+      "gender": "GENDERLESS",
+      "level": 34,
+      "nature": "naughty",
+      "moveset": [
+        "leafstorm",
+        "voltswitch",
+        "lightscreen"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "mow-appliance"
+      ]
+    },
+    {
+      "species": "rotom",
+      "gender": "GENDERLESS",
+      "level": 34,
+      "nature": "jolly",
+      "moveset": [
+        "hydropump",
+        "voltswitch",
+        "hex"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "wash-appliance"
+      ]
+    },
+    {
+      "species": "rotom",
+      "gender": "GENDERLESS",
+      "level": 34,
+      "nature": "rash",
+      "moveset": [
+        "overheat",
+        "voltswitch",
+        "hex"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "heat-appliance"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "name": "Pok\u00e9mon Trainer Marnie",
+  "team": [
+    {
+      "species": "liepard",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "bashful",
+      "ability": "limber",
+      "moveset": [
+        "fakeout",
+        "torment",
+        "nastyplot",
+        "suckerpunch"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "toxicroak",
+      "gender": "MALE",
+      "level": 43,
+      "nature": "timid",
+      "ability": "anticipation",
+      "moveset": [
+        "venoshock",
+        "suckerpunch",
+        "swagger",
+        "poisonjab"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "scrafty",
+      "gender": "FEMALE",
+      "level": 43,
+      "nature": "careful",
+      "ability": "shedskin",
+      "moveset": [
+        "brickbreak",
+        "scaryface",
+        "crunch",
+        "swagger"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "morpeko",
+      "gender": "MALE",
+      "level": 44,
+      "nature": "modest",
+      "ability": "hungerswitch",
+      "moveset": [
+        "quickattack",
+        "torment",
+        "spark",
+        "bite"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ],
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 1
+    }
+  ]
+}

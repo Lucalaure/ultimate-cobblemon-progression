@@ -78,8 +78,11 @@ public record TrainerCardData(
         }
     }
 
-    /** A wild trainer: its name, the level of its strongest Pokémon, and whether the player has beaten it. */
-    public record WildTrainer(String name, int level, boolean beaten) {}
+    /**
+     * A wild trainer, counted once for all its versions: its name, the level of its strongest Pokémon in its weakest and
+     * strongest version (equal with a single version), and whether the player has beaten any version.
+     */
+    public record WildTrainer(String name, int minLevel, int maxLevel, boolean beaten) {}
 
     /** Whether the card should first ask the player where their journey starts, or where it goes next. */
     public boolean needsChoice() {
@@ -158,7 +161,8 @@ public record TrainerCardData(
             buf.writeVarInt(g.trainers.size());
             for (WildTrainer t : g.trainers) {
                 buf.writeUtf(t.name);
-                buf.writeVarInt(t.level);
+                buf.writeVarInt(t.minLevel);
+                buf.writeVarInt(t.maxLevel);
                 buf.writeBoolean(t.beaten);
             }
         }
@@ -208,7 +212,9 @@ public record TrainerCardData(
         for (int i = buf.readVarInt(); i > 0; i--) {
             String title = buf.readUtf();
             List<WildTrainer> trainers = new ArrayList<>();
-            for (int j = buf.readVarInt(); j > 0; j--) trainers.add(new WildTrainer(buf.readUtf(), buf.readVarInt(), buf.readBoolean()));
+            for (int j = buf.readVarInt(); j > 0; j--) {
+                trainers.add(new WildTrainer(buf.readUtf(), buf.readVarInt(), buf.readVarInt(), buf.readBoolean()));
+            }
             wildTrainers.add(new TrainerGroup(title, trainers));
         }
         return new TrainerCardData(player, regionMode, regionTitle, tier, maxTier, levelCap, seen, caught,

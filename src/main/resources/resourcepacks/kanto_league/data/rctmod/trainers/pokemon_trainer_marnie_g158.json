@@ -1,0 +1,86 @@
+{
+  "name": "Pok\u00e9mon Trainer Marnie",
+  "team": [
+    {
+      "species": "liepard",
+      "gender": "FEMALE",
+      "level": 59,
+      "nature": "hasty",
+      "ability": "limber",
+      "moveset": [
+        "fakeout",
+        "torment",
+        "nastyplot",
+        "snarl"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "toxicroak",
+      "gender": "FEMALE",
+      "level": 59,
+      "nature": "lax",
+      "ability": "anticipation",
+      "moveset": [
+        "drainpunch",
+        "gunkshot",
+        "earthquake",
+        "poisonjab"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "scrafty",
+      "gender": "MALE",
+      "level": 59,
+      "nature": "rash",
+      "ability": "shedskin",
+      "moveset": [
+        "icepunch",
+        "thunderpunch",
+        "drainpunch",
+        "crunch"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "morpeko",
+      "gender": "MALE",
+      "level": 60,
+      "nature": "impish",
+      "ability": "hungerswitch",
+      "moveset": [
+        "aurawheel",
+        "seedbomb",
+        "torment",
+        "quickattack"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "grimmsnarl",
+      "gender": "MALE",
+      "level": 60,
+      "nature": "sassy",
+      "ability": "prankster",
+      "moveset": [
+        "spiritbreak",
+        "darkestlariat",
+        "bulkup",
+        "playrough"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ],
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 1
+    }
+  ]
+}

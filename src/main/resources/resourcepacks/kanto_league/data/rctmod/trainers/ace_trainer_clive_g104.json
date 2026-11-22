@@ -1,0 +1,48 @@
+{
+  "name": "Gym Trainer Clive",
+  "team": [
+    {
+      "species": "pumpkaboo",
+      "gender": "FEMALE",
+      "level": 31,
+      "nature": "serious",
+      "ability": "pickup",
+      "moveset": [
+        "bulletseed",
+        "shadowsneak"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "phantump",
+      "gender": "MALE",
+      "level": 31,
+      "nature": "bashful",
+      "ability": "naturalcure",
+      "moveset": [
+        "hornleech",
+        "growth",
+        "hex"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "pumpkaboo",
+      "gender": "MALE",
+      "level": 31,
+      "nature": "docile",
+      "moveset": [
+        "confuseray",
+        "bulletseed",
+        "scaryface"
+      ],
+      "ivs": {},
+      "evs": {},
+      "aspects": [
+        "pumpkin-size-large"
+      ]
+    }
+  ]
+}

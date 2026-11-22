@@ -1,0 +1,33 @@
+{
+  "name": "Gym Trainer Roy",
+  "team": [
+    {
+      "species": "haunter",
+      "gender": "MALE",
+      "level": 33,
+      "nature": "modest",
+      "ability": "levitate",
+      "moveset": [
+        "nightshade",
+        "payback",
+        "meanlook"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "drifblim",
+      "gender": "MALE",
+      "level": 33,
+      "nature": "hasty",
+      "ability": "aftermath",
+      "moveset": [
+        "phantomforce",
+        "shadowball",
+        "stockpile"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

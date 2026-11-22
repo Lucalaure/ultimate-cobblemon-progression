@@ -1,0 +1,6843 @@
+{
+  "source": "https://serebii.net/pokearth/galar/ (Pokemon Sword & Shield, base game and DLC)",
+  "trainers": [
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "postwick",
+      "section": "Trainers",
+      "note": "Grookey Chosen",
+      "team": [
+        {
+          "species": "wooloo",
+          "dex": 831,
+          "level": 3,
+          "moves": [
+            "tackle"
+          ]
+        },
+        {
+          "species": "sobble",
+          "dex": 816,
+          "level": 5,
+          "moves": [
+            "pound",
+            "growl"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "postwick",
+      "section": "Trainers",
+      "note": "Scorbunny Chosen",
+      "team": [
+        {
+          "species": "wooloo",
+          "dex": 831,
+          "level": 3,
+          "moves": [
+            "tackle"
+          ]
+        },
+        {
+          "species": "grookey",
+          "dex": 810,
+          "level": 5,
+          "moves": [
+            "scratch",
+            "growl"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "postwick",
+      "section": "Trainers",
+      "note": "Sobble Chosen",
+      "team": [
+        {
+          "species": "wooloo",
+          "dex": 831,
+          "level": 3,
+          "moves": [
+            "tackle"
+          ]
+        },
+        {
+          "species": "scorbunny",
+          "dex": 813,
+          "level": 5,
+          "moves": [
+            "tackle",
+            "growl"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "wedgehurst",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "dubwool",
+          "dex": 832,
+          "level": 61,
+          "moves": [
+            "takedown",
+            "doublekick",
+            "headbutt"
+          ]
+        },
+        {
+          "species": "corviknight",
+          "dex": 823,
+          "level": 61,
+          "moves": [
+            "steelwing",
+            "drillpeck",
+            "scaryface",
+            "bravebird"
+          ]
+        },
+        {
+          "species": "inteleon",
+          "dex": 818,
+          "level": 62,
+          "moves": [
+            "snipeshot",
+            "suckerpunch",
+            "liquidation"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "wedgehurst",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "dubwool",
+          "dex": 832,
+          "level": 61,
+          "moves": [
+            "takedown",
+            "doublekick",
+            "headbutt"
+          ]
+        },
+        {
+          "species": "corviknight",
+          "dex": 823,
+          "level": 61,
+          "moves": [
+            "steelwing",
+            "drillpeck",
+            "scaryface",
+            "bravebird"
+          ]
+        },
+        {
+          "species": "rillaboom",
+          "dex": 812,
+          "level": 62,
+          "moves": [
+            "drumbeating",
+            "slam",
+            "knockoff",
+            "uproar"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "wedgehurst",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "dubwool",
+          "dex": 832,
+          "level": 61,
+          "moves": [
+            "takedown",
+            "doublekick",
+            "headbutt"
+          ]
+        },
+        {
+          "species": "corviknight",
+          "dex": 823,
+          "level": 61,
+          "moves": [
+            "steelwing",
+            "drillpeck",
+            "scaryface",
+            "bravebird"
+          ]
+        },
+        {
+          "species": "cinderace",
+          "dex": 815,
+          "level": 62,
+          "moves": [
+            "headbutt",
+            "pyroball",
+            "agility"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Sordward",
+      "location": "wedgehurst",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "golisopod",
+          "dex": 768,
+          "level": 62,
+          "moves": [
+            "firstimpression",
+            "liquidation",
+            "suckerpunch"
+          ]
+        },
+        {
+          "species": "doublade",
+          "dex": 680,
+          "level": 62,
+          "moves": [
+            "sacredsword",
+            "ironhead",
+            "nightslash",
+            "shadowclaw"
+          ]
+        },
+        {
+          "species": "bisharp",
+          "dex": 625,
+          "level": 62,
+          "moves": [
+            "ironhead",
+            "nightslash",
+            "stoneedge",
+            "swordsdance"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Shielbert",
+      "location": "wedgehurst",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "bronzong",
+          "dex": 437,
+          "level": 62,
+          "moves": [
+            "lightscreen",
+            "extrasensory",
+            "gyroball",
+            "hypnosis"
+          ]
+        },
+        {
+          "species": "falinks",
+          "dex": 870,
+          "level": 62,
+          "moves": [
+            "noretreat",
+            "firstimpression",
+            "closecombat",
+            "megahorn"
+          ]
+        },
+        {
+          "species": "klinklang",
+          "dex": 601,
+          "level": 62,
+          "moves": [
+            "geargrind",
+            "shiftgear",
+            "protect",
+            "wildcharge"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "slumberingweald",
+      "section": "Gravesite",
+      "note": "Grookey Chosen",
+      "team": [
+        {
+          "species": "dubwool",
+          "dex": 832,
+          "level": 59,
+          "moves": [
+            "cottonguard",
+            "doublekick",
+            "headbutt"
+          ]
+        },
+        {
+          "species": "corviknight",
+          "dex": 823,
+          "level": 59,
+          "moves": [
+            "steelwing",
+            "drillpeck",
+            "scaryface",
+            "bravebird"
+          ]
+        },
+        {
+          "species": "pincurchin",
+          "dex": 871,
+          "level": 58,
+          "moves": [
+            "zingzap",
+            "poisonjab",
+            "bubblebeam",
+            "furyattack"
+          ]
+        },
+        {
+          "species": "snorlax",
+          "dex": 143,
+          "level": 58,
+          "moves": [
+            "hammerarm",
+            "highhorsepower",
+            "heavyslam",
+            "crunch"
+          ]
+        },
+        {
+          "species": "cramorant",
+          "dex": 845,
+          "level": 58,
+          "moves": [
+            "dive",
+            "drillpeck",
+            "throatchop",
+            "steelwing"
+          ]
+        },
+        {
+          "species": "inteleon",
+          "dex": 818,
+          "level": 60,
+          "moves": [
+            "snipeshot",
+            "suckerpunch",
+            "liquidation"
+          ]
+        }
+      ],
+      "bag": [
+        "fullrestore"
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "slumberingweald",
+      "section": "Gravesite",
+      "note": "Scorbunny Chosen",
+      "team": [
+        {
+          "species": "dubwool",
+          "dex": 832,
+          "level": 59,
+          "moves": [
+            "cottonguard",
+            "doublekick",
+            "headbutt"
+          ]
+        },
+        {
+          "species": "corviknight",
+          "dex": 823,
+          "level": 59,
+          "moves": [
+            "steelwing",
+            "drillpeck",
+            "scaryface",
+            "bravebird"
+          ]
+        },
+        {
+          "species": "pincurchin",
+          "dex": 871,
+          "level": 58,
+          "moves": [
+            "zingzap",
+            "poisonjab",
+            "bubblebeam",
+            "furyattack"
+          ]
+        },
+        {
+          "species": "snorlax",
+          "dex": 143,
+          "level": 58,
+          "moves": [
+            "hammerarm",
+            "highhorsepower",
+            "heavyslam",
+            "crunch"
+          ]
+        },
+        {
+          "species": "cramorant",
+          "dex": 845,
+          "level": 58,
+          "moves": [
+            "dive",
+            "drillpeck",
+            "throatchop",
+            "steelwing"
+          ]
+        },
+        {
+          "species": "rillaboom",
+          "dex": 812,
+          "level": 60,
+          "moves": [
+            "drumbeating",
+            "slam",
+            "knockoff",
+            "uproar"
+          ]
+        }
+      ],
+      "bag": [
+        "fullrestore"
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "slumberingweald",
+      "section": "Gravesite",
+      "note": "Sobble Chosen",
+      "team": [
+        {
+          "species": "dubwool",
+          "dex": 832,
+          "level": 59,
+          "moves": [
+            "cottonguard",
+            "doublekick",
+            "headbutt"
+          ]
+        },
+        {
+          "species": "corviknight",
+          "dex": 823,
+          "level": 59,
+          "moves": [
+            "steelwing",
+            "drillpeck",
+            "scaryface",
+            "bravebird"
+          ]
+        },
+        {
+          "species": "pincurchin",
+          "dex": 871,
+          "level": 58,
+          "moves": [
+            "zingzap",
+            "poisonjab",
+            "bubblebeam",
+            "furyattack"
+          ]
+        },
+        {
+          "species": "snorlax",
+          "dex": 143,
+          "level": 58,
+          "moves": [
+            "hammerarm",
+            "highhorsepower",
+            "heavyslam",
+            "crunch"
+          ]
+        },
+        {
+          "species": "cramorant",
+          "dex": 845,
+          "level": 58,
+          "moves": [
+            "dive",
+            "drillpeck",
+            "throatchop",
+            "steelwing"
+          ]
+        },
+        {
+          "species": "cinderace",
+          "dex": 815,
+          "level": 60,
+          "moves": [
+            "headbutt",
+            "pyroball",
+            "agility"
+          ]
+        }
+      ],
+      "bag": [
+        "fullrestore"
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Sordward",
+      "location": "slumberingweald",
+      "section": "Gravesite",
+      "note": "Sword Only",
+      "team": [
+        {
+          "species": "sirfetch'd",
+          "dex": 865,
+          "level": 60,
+          "moves": [
+            "leafblade",
+            "slam",
+            "meteorassault",
+            "swordsdance"
+          ]
+        },
+        {
+          "species": "golisopod",
+          "dex": 768,
+          "level": 60,
+          "moves": [
+            "firstimpression",
+            "liquidation",
+            "suckerpunch"
+          ]
+        },
+        {
+          "species": "doublade",
+          "dex": 680,
+          "level": 60,
+          "moves": [
+            "sacredsword",
+            "ironhead",
+            "nightslash",
+            "swordsdance"
+          ]
+        },
+        {
+          "species": "bisharp",
+          "dex": 625,
+          "level": 60,
+          "moves": [
+            "ironhead",
+            "nightslash",
+            "swordsdance",
+            "stoneedge"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Shielbert",
+      "location": "slumberingweald",
+      "section": "Gravesite",
+      "note": "Shield Only",
+      "team": [
+        {
+          "species": "sirfetch'd",
+          "dex": 865,
+          "level": 60,
+          "moves": [
+            "leafblade",
+            "slam",
+            "meteorassault",
+            "irondefense"
+          ]
+        },
+        {
+          "species": "bronzong",
+          "dex": 437,
+          "level": 60,
+          "moves": [
+            "lightscreen",
+            "extrasensory",
+            "gyroball",
+            "hypnosis"
+          ]
+        },
+        {
+          "species": "falinks",
+          "dex": 870,
+          "level": 60,
+          "moves": [
+            "noretreat",
+            "firstimpression",
+            "closecombat",
+            "megahorn"
+          ]
+        },
+        {
+          "species": "klinklang",
+          "dex": 601,
+          "level": 60,
+          "moves": [
+            "geargrind",
+            "shiftgear",
+            "protect",
+            "wildcharge"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "slumberingweald",
+      "section": "Gravesite",
+      "team": [
+        {
+          "species": "dubwool",
+          "dex": 832,
+          "level": 69,
+          "moves": [
+            "cottonguard",
+            "doublekick",
+            "headbutt"
+          ]
+        },
+        {
+          "species": "snorlax",
+          "dex": 143,
+          "level": 68,
+          "moves": [
+            "hammerarm",
+            "earthquake",
+            "heavyslam",
+            "crunch"
+          ]
+        },
+        {
+          "species": "pincurchin",
+          "dex": 871,
+          "level": 68,
+          "moves": [
+            "zingzap",
+            "poisonjab",
+            "liquidation",
+            "recover"
+          ]
+        },
+        {
+          "species": "corviknight",
+          "dex": 823,
+          "level": 69,
+          "moves": [
+            "steelwing",
+            "drillpeck",
+            "swagger",
+            "lightscreen"
+          ]
+        },
+        {
+          "species": "inteleon",
+          "dex": 818,
+          "level": 70,
+          "moves": [
+            "snipeshot",
+            "suckerpunch",
+            "icebeam",
+            "darkpulse"
+          ]
+        },
+        {
+          "species": "zamazenta",
+          "dex": 889,
+          "form": "-c",
+          "level": 70,
+          "moves": [
+            "crunch",
+            "behemothbash",
+            "psychicfangs",
+            "playrough"
+          ],
+          "item": "rustedshield"
+        }
+      ],
+      "bag": [
+        "fullrestore"
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "slumberingweald",
+      "section": "Gravesite",
+      "team": [
+        {
+          "species": "dubwool",
+          "dex": 832,
+          "level": 69,
+          "moves": [
+            "cottonguard",
+            "doublekick",
+            "headbutt"
+          ]
+        },
+        {
+          "species": "snorlax",
+          "dex": 143,
+          "level": 68,
+          "moves": [
+            "hammerarm",
+            "earthquake",
+            "heavyslam",
+            "crunch"
+          ]
+        },
+        {
+          "species": "pincurchin",
+          "dex": 871,
+          "level": 68,
+          "moves": [
+            "zingzap",
+            "poisonjab",
+            "liquidation",
+            "recover"
+          ]
+        },
+        {
+          "species": "corviknight",
+          "dex": 823,
+          "level": 69,
+          "moves": [
+            "steelwing",
+            "drillpeck",
+            "swagger",
+            "lightscreen"
+          ]
+        },
+        {
+          "species": "rillaboom",
+          "dex": 812,
+          "level": 70,
+          "moves": [
+            "drumbeating",
+            "slam",
+            "knockoff",
+            "highhorsepower"
+          ]
+        },
+        {
+          "species": "zamazenta",
+          "dex": 889,
+          "form": "-c",
+          "level": 70,
+          "moves": [
+            "crunch",
+            "behemothbash",
+            "psychicfangs",
+            "playrough"
+          ],
+          "item": "rustedshield"
+        }
+      ],
+      "bag": [
+        "fullrestore"
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "slumberingweald",
+      "section": "Gravesite",
+      "team": [
+        {
+          "species": "dubwool",
+          "dex": 832,
+          "level": 69,
+          "moves": [
+            "cottonguard",
+            "doublekick",
+            "headbutt"
+          ]
+        },
+        {
+          "species": "snorlax",
+          "dex": 143,
+          "level": 68,
+          "moves": [
+            "hammerarm",
+            "earthquake",
+            "heavyslam",
+            "crunch"
+          ]
+        },
+        {
+          "species": "pincurchin",
+          "dex": 871,
+          "level": 68,
+          "moves": [
+            "zingzap",
+            "poisonjab",
+            "liquidation",
+            "recover"
+          ]
+        },
+        {
+          "species": "corviknight",
+          "dex": 823,
+          "level": 69,
+          "moves": [
+            "steelwing",
+            "drillpeck",
+            "swagger",
+            "lightscreen"
+          ]
+        },
+        {
+          "species": "cinderace",
+          "dex": 815,
+          "level": 70,
+          "moves": [
+            "gunkshot",
+            "ironhead",
+            "pyroball",
+            "zenheadbutt"
+          ]
+        },
+        {
+          "species": "zamazenta",
+          "dex": 889,
+          "form": "-c",
+          "level": 70,
+          "moves": [
+            "crunch",
+            "behemothbash",
+            "psychicfangs",
+            "playrough"
+          ],
+          "item": "rustedshield"
+        }
+      ],
+      "bag": [
+        "fullrestore"
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "slumberingweald",
+      "section": "Gravesite",
+      "team": [
+        {
+          "species": "dubwool",
+          "dex": 832,
+          "level": 69,
+          "moves": [
+            "cottonguard",
+            "doublekick",
+            "headbutt"
+          ]
+        },
+        {
+          "species": "snorlax",
+          "dex": 143,
+          "level": 68,
+          "moves": [
+            "hammerarm",
+            "earthquake",
+            "heavyslam",
+            "crunch"
+          ]
+        },
+        {
+          "species": "pincurchin",
+          "dex": 871,
+          "level": 68,
+          "moves": [
+            "zingzap",
+            "poisonjab",
+            "liquidation",
+            "recover"
+          ]
+        },
+        {
+          "species": "corviknight",
+          "dex": 823,
+          "level": 69,
+          "moves": [
+            "steelwing",
+            "drillpeck",
+            "swagger",
+            "lightscreen"
+          ]
+        },
+        {
+          "species": "inteleon",
+          "dex": 818,
+          "level": 70,
+          "moves": [
+            "snipeshot",
+            "suckerpunch",
+            "icebeam",
+            "darkpulse"
+          ]
+        },
+        {
+          "species": "zacian",
+          "dex": 888,
+          "form": "-c",
+          "level": 70,
+          "moves": [
+            "crunch",
+            "behemothblade",
+            "wildcharge",
+            "closecombat"
+          ],
+          "item": "rustedsword"
+        }
+      ],
+      "bag": [
+        "fullrestore"
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "slumberingweald",
+      "section": "Gravesite",
+      "team": [
+        {
+          "species": "dubwool",
+          "dex": 832,
+          "level": 69,
+          "moves": [
+            "cottonguard",
+            "doublekick",
+            "headbutt"
+          ]
+        },
+        {
+          "species": "snorlax",
+          "dex": 143,
+          "level": 68,
+          "moves": [
+            "hammerarm",
+            "earthquake",
+            "heavyslam",
+            "crunch"
+          ]
+        },
+        {
+          "species": "pincurchin",
+          "dex": 871,
+          "level": 68,
+          "moves": [
+            "zingzap",
+            "poisonjab",
+            "liquidation",
+            "recover"
+          ]
+        },
+        {
+          "species": "corviknight",
+          "dex": 823,
+          "level": 69,
+          "moves": [
+            "steelwing",
+            "drillpeck",
+            "swagger",
+            "lightscreen"
+          ]
+        },
+        {
+          "species": "rillaboom",
+          "dex": 812,
+          "level": 70,
+          "moves": [
+            "drumbeating",
+            "slam",
+            "knockoff",
+            "highhorsepower"
+          ]
+        },
+        {
+          "species": "zacian",
+          "dex": 888,
+          "form": "-c",
+          "level": 70,
+          "moves": [
+            "crunch",
+            "behemothblade",
+            "wildcharge",
+            "closecombat"
+          ],
+          "item": "rustedsword"
+        }
+      ],
+      "bag": [
+        "fullrestore"
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "slumberingweald",
+      "section": "Gravesite",
+      "team": [
+        {
+          "species": "dubwool",
+          "dex": 832,
+          "level": 69,
+          "moves": [
+            "cottonguard",
+            "doublekick",
+            "headbutt"
+          ]
+        },
+        {
+          "species": "snorlax",
+          "dex": 143,
+          "level": 68,
+          "moves": [
+            "hammerarm",
+            "earthquake",
+            "heavyslam",
+            "crunch"
+          ]
+        },
+        {
+          "species": "pincurchin",
+          "dex": 871,
+          "level": 68,
+          "moves": [
+            "zingzap",
+            "poisonjab",
+            "liquidation",
+            "recover"
+          ]
+        },
+        {
+          "species": "corviknight",
+          "dex": 823,
+          "level": 69,
+          "moves": [
+            "steelwing",
+            "drillpeck",
+            "swagger",
+            "lightscreen"
+          ]
+        },
+        {
+          "species": "cinderace",
+          "dex": 815,
+          "level": 70,
+          "moves": [
+            "gunkshot",
+            "ironhead",
+            "pyroball",
+            "zenheadbutt"
+          ]
+        },
+        {
+          "species": "zacian",
+          "dex": 888,
+          "form": "-c",
+          "level": 70,
+          "moves": [
+            "crunch",
+            "behemothblade",
+            "wildcharge",
+            "closecombat"
+          ],
+          "item": "rustedsword"
+        }
+      ],
+      "bag": [
+        "fullrestore"
+      ]
+    },
+    {
+      "name": "Youngster Jake",
+      "location": "route2",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "skwovet",
+          "dex": 819,
+          "level": 6,
+          "moves": [
+            "tackle",
+            "tailwhip"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lass Lauren",
+      "location": "route2",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "chewtle",
+          "dex": 833,
+          "level": 6,
+          "moves": [
+            "tackle"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Youngster Benjamin",
+      "location": "route2",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "blipbug",
+          "dex": 824,
+          "level": 5,
+          "moves": [
+            "strugglebug"
+          ]
+        },
+        {
+          "species": "nickit",
+          "dex": 827,
+          "level": 7,
+          "moves": [
+            "tailwhip",
+            "quickattack"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "route2",
+      "section": "Main Area",
+      "note": "Grookey Chosen",
+      "team": [
+        {
+          "species": "wooloo",
+          "dex": 831,
+          "level": 6,
+          "moves": [
+            "tackle",
+            "growl"
+          ]
+        },
+        {
+          "species": "rookidee",
+          "dex": 821,
+          "level": 5,
+          "moves": [
+            "leer",
+            "peck"
+          ]
+        },
+        {
+          "species": "sobble",
+          "dex": 816,
+          "level": 8,
+          "moves": [
+            "pound",
+            "growl",
+            "watergun"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "route2",
+      "section": "Main Area",
+      "note": "Scorbunny Chosen",
+      "team": [
+        {
+          "species": "wooloo",
+          "dex": 831,
+          "level": 6,
+          "moves": [
+            "tackle",
+            "growl"
+          ]
+        },
+        {
+          "species": "rookidee",
+          "dex": 821,
+          "level": 5,
+          "moves": [
+            "leer",
+            "peck"
+          ]
+        },
+        {
+          "species": "grookey",
+          "dex": 810,
+          "level": 8,
+          "moves": [
+            "scratch",
+            "growl",
+            "branchpoke"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "route2",
+      "section": "Main Area",
+      "note": "Sobble Chosen",
+      "team": [
+        {
+          "species": "wooloo",
+          "dex": 831,
+          "level": 6,
+          "moves": [
+            "tackle",
+            "growl"
+          ]
+        },
+        {
+          "species": "rookidee",
+          "dex": 821,
+          "level": 5,
+          "moves": [
+            "leer",
+            "peck"
+          ]
+        },
+        {
+          "species": "scorbunny",
+          "dex": 813,
+          "level": 8,
+          "moves": [
+            "tackle",
+            "growl",
+            "ember"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Madame Caroline",
+      "location": "motostokeoutskirts",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "yamper",
+          "dex": 835,
+          "level": 22,
+          "moves": [
+            "roar",
+            "spark"
+          ]
+        },
+        {
+          "species": "swoobat",
+          "dex": 528,
+          "level": 24,
+          "moves": [
+            "aircutter",
+            "confusion"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Police Officer Raymond",
+      "location": "motostokeoutskirts",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "growlithe",
+          "dex": 58,
+          "level": 23,
+          "moves": [
+            "leer",
+            "bite",
+            "flamewheel"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Team Yell Grunt",
+      "location": "motostoke",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "zigzagoon",
+          "dex": 263,
+          "form": "-g",
+          "level": 9,
+          "moves": [
+            "tackle",
+            "lick"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Team Yell Grunt",
+      "location": "motostoke",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "nickit",
+          "dex": 827,
+          "level": 9,
+          "moves": [
+            "quickattack",
+            "tailwhip"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "motostoke",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "wooloo",
+          "dex": 831,
+          "level": 10,
+          "moves": [
+            "tackle",
+            "growl",
+            "defensecurl"
+          ]
+        },
+        {
+          "species": "rookidee",
+          "dex": 821,
+          "level": 11,
+          "moves": [
+            "peck",
+            "leer"
+          ]
+        },
+        {
+          "species": "sobble",
+          "dex": 816,
+          "level": 12,
+          "moves": [
+            "pound",
+            "growl",
+            "watergun",
+            "bind"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "motostoke",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "wooloo",
+          "dex": 831,
+          "level": 10,
+          "moves": [
+            "tackle",
+            "growl",
+            "defensecurl"
+          ]
+        },
+        {
+          "species": "rookidee",
+          "dex": 821,
+          "level": 11,
+          "moves": [
+            "peck",
+            "leer"
+          ]
+        },
+        {
+          "species": "grookey",
+          "dex": 810,
+          "level": 12,
+          "moves": [
+            "scratch",
+            "growl",
+            "branchpoke",
+            "taunt"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "motostoke",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "wooloo",
+          "dex": 831,
+          "level": 10,
+          "moves": [
+            "tackle",
+            "growl",
+            "defensecurl"
+          ]
+        },
+        {
+          "species": "rookidee",
+          "dex": 821,
+          "level": 11,
+          "moves": [
+            "peck",
+            "leer"
+          ]
+        },
+        {
+          "species": "scorbunny",
+          "dex": 813,
+          "level": 12,
+          "moves": [
+            "tackle",
+            "growl",
+            "ember",
+            "quickattack"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Team Yell Grunt",
+      "location": "motostoke",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "nickit",
+          "dex": 827,
+          "level": 9,
+          "moves": [
+            "tailwhip",
+            "quickattack"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Team Yell Grunt",
+      "location": "motostoke",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "zigzagoon",
+          "dex": 263,
+          "form": "-g",
+          "level": 9,
+          "moves": [
+            "leer",
+            "lick",
+            "snarl"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "motostoke",
+      "section": "Main Area",
+      "note": "Grookey Chosen",
+      "team": [
+        {
+          "species": "wooloo",
+          "dex": 831,
+          "level": 11,
+          "moves": [
+            "tackle",
+            "growl"
+          ]
+        },
+        {
+          "species": "rookidee",
+          "dex": 821,
+          "level": 12,
+          "moves": [
+            "peck",
+            "leer"
+          ]
+        },
+        {
+          "species": "sobble",
+          "dex": 816,
+          "level": 14,
+          "moves": [
+            "pound",
+            "growl",
+            "watergun",
+            "bind"
+          ]
+        }
+      ],
+      "bag": [
+        "potion"
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "motostoke",
+      "section": "Main Area",
+      "note": "Scorbunny Chosen",
+      "team": [
+        {
+          "species": "wooloo",
+          "dex": 831,
+          "level": 11,
+          "moves": [
+            "tackle",
+            "growl"
+          ]
+        },
+        {
+          "species": "rookidee",
+          "dex": 821,
+          "level": 12,
+          "moves": [
+            "peck",
+            "leer"
+          ]
+        },
+        {
+          "species": "grookey",
+          "dex": 810,
+          "level": 14,
+          "moves": [
+            "scratch",
+            "growl",
+            "branchpoke",
+            "taunt"
+          ]
+        }
+      ],
+      "bag": [
+        "potion"
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "motostoke",
+      "section": "Main Area",
+      "note": "Sobble Chosen",
+      "team": [
+        {
+          "species": "wooloo",
+          "dex": 831,
+          "level": 11,
+          "moves": [
+            "tackle",
+            "growl"
+          ]
+        },
+        {
+          "species": "rookidee",
+          "dex": 821,
+          "level": 12,
+          "moves": [
+            "peck",
+            "leer"
+          ]
+        },
+        {
+          "species": "scorbunny",
+          "dex": 813,
+          "level": 14,
+          "moves": [
+            "tackle",
+            "growl",
+            "ember",
+            "quickattack"
+          ]
+        }
+      ],
+      "bag": [
+        "potion"
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Marnie",
+      "location": "motostoke",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "croagunk",
+          "dex": 453,
+          "level": 24,
+          "moves": [
+            "poisonsting",
+            "venoshock",
+            "revenge",
+            "suckerpunch"
+          ]
+        },
+        {
+          "species": "scraggy",
+          "dex": 559,
+          "level": 24,
+          "moves": [
+            "beatup",
+            "headbutt",
+            "lowkick"
+          ]
+        },
+        {
+          "species": "morpeko",
+          "dex": 877,
+          "level": 26,
+          "moves": [
+            "bite",
+            "quickattack",
+            "thundershock"
+          ]
+        }
+      ],
+      "bag": [
+        "superpotion"
+      ]
+    },
+    {
+      "name": "Caf\u00e9 Master Dwight",
+      "location": "motostoke",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "combee",
+          "dex": 415,
+          "level": 10,
+          "moves": [
+            "sweetscent",
+            "gust",
+            "strugglebug",
+            "bugbite"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Caf\u00e9 Master Dwight",
+      "location": "motostoke",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "swirlix",
+          "dex": 684,
+          "level": 24,
+          "moves": [
+            "cottonspore",
+            "fairywind",
+            "round",
+            "playnice"
+          ]
+        },
+        {
+          "species": "milcery",
+          "dex": 868,
+          "level": 24,
+          "moves": [
+            "attract",
+            "sweetkiss",
+            "sweetscent",
+            "drainingkiss"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gym Trainer Darren",
+      "location": "motostoke",
+      "section": "Gym",
+      "team": [
+        {
+          "species": "rolycoly",
+          "dex": 837,
+          "level": 24,
+          "moves": [
+            "tackle",
+            "rapidspin",
+            "smackdown"
+          ]
+        },
+        {
+          "species": "growlithe",
+          "dex": 58,
+          "level": 24,
+          "moves": [
+            "bite",
+            "flamewheel",
+            "ember"
+          ]
+        }
+      ],
+      "bag": [
+        "pokeball",
+        "pokeball",
+        "pokeball",
+        "pokeball"
+      ]
+    },
+    {
+      "name": "Gym Trainer Chaka",
+      "location": "motostoke",
+      "section": "Gym",
+      "team": [
+        {
+          "species": "sizzlipede",
+          "dex": 850,
+          "level": 24,
+          "moves": [
+            "smokescreen",
+            "wrap",
+            "bite",
+            "firespin"
+          ]
+        },
+        {
+          "species": "salandit",
+          "dex": 757,
+          "level": 24,
+          "moves": [
+            "poisonfang",
+            "ember",
+            "scratch"
+          ]
+        }
+      ],
+      "bag": [
+        "pokeball",
+        "pokeball",
+        "pokeball",
+        "pokeball"
+      ]
+    },
+    {
+      "name": "Gym Trainer Elle",
+      "location": "motostoke",
+      "section": "Gym",
+      "team": [
+        {
+          "species": "salandit",
+          "dex": 757,
+          "level": 24,
+          "moves": [
+            "fakeout",
+            "sandattack"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lass Rei",
+      "location": "route3",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "vulpix",
+          "dex": 37,
+          "level": 12,
+          "moves": [
+            "quickattack",
+            "ember",
+            "tailwhip"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Schoolgirl Hannah",
+      "location": "route3",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "pancham",
+          "dex": 674,
+          "level": 13,
+          "moves": [
+            "tackle",
+            "circlethrow"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Schoolboy Marvin",
+      "location": "route3",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "budew",
+          "dex": 406,
+          "level": 12,
+          "moves": [
+            "absorb"
+          ]
+        },
+        {
+          "species": "gossifleur",
+          "dex": 829,
+          "level": 12,
+          "moves": [
+            "leafage",
+            "rapidspin",
+            "sweetscent"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Schoolgirl Kayleigh",
+      "location": "route3",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "purrloin",
+          "dex": 509,
+          "level": 12,
+          "moves": [
+            "scratch",
+            "growl"
+          ]
+        },
+        {
+          "species": "skwovet",
+          "dex": 819,
+          "level": 13,
+          "moves": [
+            "tackle",
+            "tailwhip"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Postman Tad",
+      "location": "route3",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "delibird",
+          "dex": 225,
+          "level": 14,
+          "moves": [
+            "present"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Schoolboy Peter",
+      "location": "route3",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "sizzlipede",
+          "dex": 850,
+          "level": 13,
+          "moves": [
+            "bite",
+            "ember",
+            "wrap"
+          ]
+        },
+        {
+          "species": "dottler",
+          "dex": 825,
+          "level": 14,
+          "moves": [
+            "confusion",
+            "strugglebug",
+            "lightscreen"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Worker Keith",
+      "location": "galarmine",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "roggenrola",
+          "dex": 524,
+          "level": 14,
+          "moves": [
+            "tackle",
+            "harden"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Worker Georgia",
+      "location": "galarmine",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "timburr",
+          "dex": 532,
+          "level": 14,
+          "moves": [
+            "pound",
+            "rockthrow",
+            "lowkick"
+          ]
+        },
+        {
+          "species": "timburr",
+          "dex": 532,
+          "level": 14,
+          "moves": [
+            "pound",
+            "lowkick",
+            "focusenergy"
+          ]
+        },
+        {
+          "species": "timburr",
+          "dex": 532,
+          "level": 14,
+          "moves": [
+            "pound",
+            "leer",
+            "rockthrow"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Worker Sandra",
+      "location": "galarmine",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "diglett",
+          "dex": 50,
+          "level": 14,
+          "moves": [
+            "scratch",
+            "growl",
+            "astonish"
+          ]
+        },
+        {
+          "species": "drilbur",
+          "dex": 529,
+          "level": 15,
+          "moves": [
+            "scratch",
+            "rapidspin"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Worker Russel",
+      "location": "galarmine",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "rolycoly",
+          "dex": 837,
+          "level": 15,
+          "moves": [
+            "tackle",
+            "rapidspin"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Bede",
+      "location": "galarmine",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "solosis",
+          "dex": 577,
+          "level": 13,
+          "moves": [
+            "endeavor",
+            "confusion"
+          ]
+        },
+        {
+          "species": "gothita",
+          "dex": 574,
+          "level": 15,
+          "moves": [
+            "psybeam",
+            "tickle",
+            "pound"
+          ]
+        },
+        {
+          "species": "hatenna",
+          "dex": 856,
+          "level": 16,
+          "moves": [
+            "confusion",
+            "round",
+            "disarmingvoice"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Breeder Jaime",
+      "location": "route4",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "meowth",
+          "dex": 52,
+          "form": "-g",
+          "level": 14,
+          "moves": [
+            "fakeout",
+            "scratch",
+            "growl"
+          ]
+        },
+        {
+          "species": "seedot",
+          "dex": 273,
+          "level": 14,
+          "moves": [
+            "rollout",
+            "absorb",
+            "tackle"
+          ]
+        },
+        {
+          "species": "butterfree",
+          "dex": 12,
+          "level": 15,
+          "moves": [
+            "stringshot",
+            "confusion",
+            "supersonic"
+          ]
+        }
+      ],
+      "bag": [
+        "potion"
+      ]
+    },
+    {
+      "name": "Pok\u00e9 Kid Shane",
+      "location": "route4",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "pikachu",
+          "dex": 25,
+          "level": 15,
+          "moves": [
+            "thunderwave",
+            "electroball",
+            "quickattack"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Breeder Bradley",
+      "location": "route4",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "electrike",
+          "dex": 309,
+          "level": 15,
+          "moves": [
+            "tackle",
+            "leer",
+            "quickattack"
+          ]
+        },
+        {
+          "species": "lotad",
+          "dex": 270,
+          "level": 15,
+          "moves": [
+            "watergun",
+            "absorb",
+            "growl"
+          ]
+        }
+      ],
+      "bag": [
+        "potion"
+      ]
+    },
+    {
+      "name": "Pok\u00e9 Kid Mia",
+      "location": "route4",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "eevee",
+          "dex": 133,
+          "level": 15,
+          "moves": [
+            "quickattack",
+            "tailwhip",
+            "tackle"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9 Kid Rhys",
+      "location": "route4",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "joltik",
+          "dex": 595,
+          "level": 14,
+          "moves": [
+            "electroweb",
+            "bugbite",
+            "stringshot"
+          ]
+        },
+        {
+          "species": "grubbin",
+          "dex": 736,
+          "level": 14,
+          "moves": [
+            "visegrip",
+            "bugbite",
+            "bite"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9 Kid Sunny",
+      "location": "route4",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "milcery",
+          "dex": 868,
+          "level": 15,
+          "moves": [
+            "drainingkiss",
+            "sweetscent"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gym Trainer Samuel",
+      "location": "turffield",
+      "section": "Gym",
+      "team": [
+        {
+          "species": "gossifleur",
+          "dex": 829,
+          "level": 16,
+          "moves": [
+            "leafage",
+            "rapidspin"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gym Trainer Mark",
+      "location": "turffield",
+      "section": "Gym",
+      "team": [
+        {
+          "species": "budew",
+          "dex": 406,
+          "level": 16,
+          "moves": [
+            "absorb",
+            "growth"
+          ]
+        },
+        {
+          "species": "oddish",
+          "dex": 43,
+          "level": 17,
+          "moves": [
+            "stunspore",
+            "absorb",
+            "growth"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gym Trainer Leah",
+      "location": "turffield",
+      "section": "Gym",
+      "team": [
+        {
+          "species": "bounsweet",
+          "dex": 761,
+          "level": 17,
+          "moves": [
+            "razorleaf",
+            "rapidspin"
+          ]
+        },
+        {
+          "species": "oddish",
+          "dex": 43,
+          "level": 17,
+          "moves": [
+            "acid",
+            "growth",
+            "poisonpowder"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reporter Gillian",
+      "location": "route5",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "helioptile",
+          "dex": 694,
+          "level": 18,
+          "moves": [
+            "charge",
+            "quickattack",
+            "thundershock"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cameraman Cam",
+      "location": "route5",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "klink",
+          "dex": 599,
+          "level": 18,
+          "moves": [
+            "chargebeam",
+            "metalsound",
+            "bind",
+            "charge"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cook Stuart",
+      "location": "route5",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "applin",
+          "dex": 840,
+          "level": 20,
+          "moves": [
+            "withdraw",
+            "astonish"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Breeder Debra",
+      "location": "route5",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "minccino",
+          "dex": 572,
+          "level": 17,
+          "moves": [
+            "pound",
+            "tickle",
+            "encore"
+          ]
+        },
+        {
+          "species": "steenee",
+          "dex": 762,
+          "level": 19,
+          "moves": [
+            "razorleaf",
+            "rapidspin",
+            "playnice"
+          ]
+        }
+      ],
+      "bag": [
+        "potion"
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Breeder Adrian",
+      "location": "route5",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "stufful",
+          "dex": 759,
+          "level": 17,
+          "moves": [
+            "brutalswing",
+            "leer",
+            "tackle"
+          ]
+        },
+        {
+          "species": "cutiefly",
+          "dex": 742,
+          "level": 18,
+          "moves": [
+            "sweetscent",
+            "fairywind",
+            "absorb"
+          ]
+        },
+        {
+          "species": "ralts",
+          "dex": 280,
+          "level": 19,
+          "moves": [
+            "psybeam",
+            "drainingkiss",
+            "growl"
+          ]
+        }
+      ],
+      "bag": [
+        "potion"
+      ]
+    },
+    {
+      "name": "Team Yell Grunt",
+      "location": "route5",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "zigzagoon",
+          "dex": 263,
+          "form": "-g",
+          "level": 17,
+          "moves": [
+            "tackle",
+            "lick",
+            "snarl"
+          ]
+        },
+        {
+          "species": "thievul",
+          "dex": 828,
+          "level": 18,
+          "moves": [
+            "quickattack",
+            "snarl",
+            "tailwhip",
+            "beatup"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Team Yell Grunt",
+      "location": "route5",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "sableye",
+          "dex": 302,
+          "level": 18,
+          "moves": [
+            "disable",
+            "astonish",
+            "scratch"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "route5",
+      "section": "Trainers",
+      "note": "Grookey Chosen",
+      "team": [
+        {
+          "species": "wooloo",
+          "dex": 831,
+          "level": 18,
+          "moves": [
+            "tackle",
+            "growl",
+            "defensecurl",
+            "doublekick"
+          ]
+        },
+        {
+          "species": "corvisquire",
+          "dex": 822,
+          "level": 19,
+          "moves": [
+            "leer",
+            "peck",
+            "furyattack",
+            "pluck"
+          ]
+        },
+        {
+          "species": "drizzile",
+          "dex": 817,
+          "level": 21,
+          "moves": [
+            "round",
+            "growl",
+            "waterpulse",
+            "bind"
+          ]
+        }
+      ],
+      "bag": [
+        "superpotion"
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "route5",
+      "section": "Trainers",
+      "note": "Scorbunny Chosen",
+      "team": [
+        {
+          "species": "wooloo",
+          "dex": 831,
+          "level": 18,
+          "moves": [
+            "tackle",
+            "growl",
+            "defensecurl",
+            "doublekick"
+          ]
+        },
+        {
+          "species": "corvisquire",
+          "dex": 822,
+          "level": 19,
+          "moves": [
+            "leer",
+            "peck",
+            "furyattack",
+            "pluck"
+          ]
+        },
+        {
+          "species": "thwackey",
+          "dex": 811,
+          "level": 21,
+          "moves": [
+            "round",
+            "razorleaf",
+            "doublehit",
+            "screech"
+          ]
+        }
+      ],
+      "bag": [
+        "superpotion"
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "route5",
+      "section": "Trainers",
+      "note": "Sobble Chosen",
+      "team": [
+        {
+          "species": "wooloo",
+          "dex": 831,
+          "level": 18,
+          "moves": [
+            "tackle",
+            "growl",
+            "defensecurl",
+            "doublekick"
+          ]
+        },
+        {
+          "species": "corvisquire",
+          "dex": 822,
+          "level": 19,
+          "moves": [
+            "leer",
+            "peck",
+            "furyattack",
+            "pluck"
+          ]
+        },
+        {
+          "species": "raboot",
+          "dex": 814,
+          "level": 21,
+          "moves": [
+            "round",
+            "growl",
+            "doublekick",
+            "flamecharge"
+          ]
+        }
+      ],
+      "bag": [
+        "superpotion"
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Breeder Denise",
+      "location": "route5",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "cherubi",
+          "dex": 420,
+          "level": 18,
+          "moves": [
+            "tackle",
+            "leafage"
+          ]
+        },
+        {
+          "species": "woobat",
+          "dex": 527,
+          "level": 19,
+          "moves": [
+            "aircutter",
+            "confusion"
+          ]
+        }
+      ],
+      "bag": [
+        "potion"
+      ]
+    },
+    {
+      "name": "Office Worker Gabrielle",
+      "location": "route5",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "croagunk",
+          "dex": 453,
+          "level": 19,
+          "moves": [
+            "astonish",
+            "taunt",
+            "poisonsting"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gym Trainer Julia",
+      "location": "hulbury",
+      "section": "Gym",
+      "team": [
+        {
+          "species": "tympole",
+          "dex": 535,
+          "level": 21,
+          "moves": [
+            "echoedvoice",
+            "growl",
+            "mudshot",
+            "round"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gym Trainer Heather",
+      "location": "hulbury",
+      "section": "Gym",
+      "team": [
+        {
+          "species": "krabby",
+          "dex": 98,
+          "level": 20,
+          "moves": [
+            "whirlpool",
+            "harden"
+          ]
+        },
+        {
+          "species": "corphish",
+          "dex": 341,
+          "level": 20,
+          "moves": [
+            "whirlpool",
+            "leer",
+            "bubblebeam"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gym Trainer Lynn",
+      "location": "hulbury",
+      "section": "Gym",
+      "team": [
+        {
+          "species": "remoraid",
+          "dex": 223,
+          "level": 20,
+          "moves": [
+            "whirlpool",
+            "psybeam",
+            "focusenergy",
+            "bubblebeam"
+          ]
+        },
+        {
+          "species": "chewtle",
+          "dex": 833,
+          "level": 21,
+          "moves": [
+            "tackle",
+            "watergun",
+            "bite"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Bede",
+      "location": "galarmineno.2",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "solosis",
+          "dex": 577,
+          "level": 21,
+          "moves": [
+            "psyshock",
+            "psybeam",
+            "endeavor"
+          ]
+        },
+        {
+          "species": "gothita",
+          "dex": 574,
+          "level": 22,
+          "moves": [
+            "psyshock",
+            "rocktomb",
+            "psybeam"
+          ]
+        },
+        {
+          "species": "ponyta",
+          "dex": 77,
+          "form": "-g",
+          "level": 22,
+          "moves": [
+            "confusion",
+            "fairywind"
+          ]
+        },
+        {
+          "species": "hatenna",
+          "dex": 856,
+          "level": 23,
+          "moves": [
+            "psybeam",
+            "disarmingvoice"
+          ]
+        }
+      ],
+      "bag": [
+        "superpotion"
+      ]
+    },
+    {
+      "name": "Worker Francis",
+      "location": "galarmineno.2",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "carkol",
+          "dex": 838,
+          "level": 21,
+          "moves": [
+            "rapidspin",
+            "smackdown",
+            "ancientpower",
+            "flamecharge"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Worker Yvonne",
+      "location": "galarmineno.2",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "roggenrola",
+          "dex": 524,
+          "level": 20,
+          "moves": [
+            "smackdown",
+            "tackle"
+          ]
+        },
+        {
+          "species": "timburr",
+          "dex": 532,
+          "level": 21,
+          "moves": [
+            "lowkick",
+            "rockthrow",
+            "focusenergy"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "galarmineno.2",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "wooloo",
+          "dex": 831,
+          "level": 22,
+          "moves": [
+            "tackle",
+            "growl",
+            "defensecurl",
+            "doublekick"
+          ]
+        },
+        {
+          "species": "corvisquire",
+          "dex": 822,
+          "level": 21,
+          "moves": [
+            "pluck",
+            "furyattack",
+            "leer",
+            "peck"
+          ]
+        },
+        {
+          "species": "drizzile",
+          "dex": 817,
+          "level": 24,
+          "moves": [
+            "suckerpunch",
+            "tearfullook",
+            "bind",
+            "waterpulse"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "galarmineno.2",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "wooloo",
+          "dex": 831,
+          "level": 22,
+          "moves": [
+            "tackle",
+            "growl",
+            "defensecurl",
+            "doublekick"
+          ]
+        },
+        {
+          "species": "corvisquire",
+          "dex": 822,
+          "level": 21,
+          "moves": [
+            "pluck",
+            "furyattack",
+            "leer",
+            "peck"
+          ]
+        },
+        {
+          "species": "thwackey",
+          "dex": 811,
+          "level": 24,
+          "moves": [
+            "doublehit",
+            "razorleaf",
+            "screech",
+            "taunt"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "galarmineno.2",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "wooloo",
+          "dex": 831,
+          "level": 22,
+          "moves": [
+            "tackle",
+            "growl",
+            "defensecurl",
+            "doublekick"
+          ]
+        },
+        {
+          "species": "corvisquire",
+          "dex": 822,
+          "level": 21,
+          "moves": [
+            "pluck",
+            "furyattack",
+            "leer",
+            "peck"
+          ]
+        },
+        {
+          "species": "raboot",
+          "dex": 814,
+          "level": 24,
+          "moves": [
+            "flamecharge",
+            "doublekick",
+            "quickattack",
+            "ember"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Team Yell Grunt",
+      "location": "galarmineno.2",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "thievul",
+          "dex": 828,
+          "level": 21,
+          "moves": [
+            "snarl",
+            "nastyplot",
+            "tailwhip",
+            "quickattack"
+          ]
+        },
+        {
+          "species": "liepard",
+          "dex": 510,
+          "level": 22,
+          "moves": [
+            "torment",
+            "furyswipes",
+            "sandattack",
+            "growl"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Team Yell Grunt",
+      "location": "galarmineno.2",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "linoone",
+          "dex": 264,
+          "form": "-g",
+          "level": 22,
+          "moves": [
+            "nightslash",
+            "sandattack",
+            "lick"
+          ]
+        },
+        {
+          "species": "pancham",
+          "dex": 674,
+          "level": 21,
+          "moves": [
+            "lowsweep",
+            "circlethrow",
+            "workup",
+            "armthrust"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Rail Staff Vincent",
+      "location": "galarmineno.2",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "drilbur",
+          "dex": 529,
+          "level": 22,
+          "moves": [
+            "honeclaws",
+            "rapidspin",
+            "dig"
+          ]
+        },
+        {
+          "species": "onix",
+          "dex": 95,
+          "level": 23,
+          "moves": [
+            "rockslide",
+            "curse",
+            "smackdown"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Team Yell Grunt",
+      "location": "route6",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "stunky",
+          "dex": 434,
+          "level": 29,
+          "moves": [
+            "bite",
+            "feint",
+            "poisongas"
+          ]
+        },
+        {
+          "species": "linoone",
+          "dex": 264,
+          "form": "-g",
+          "level": 30,
+          "moves": [
+            "honeclaws",
+            "takedown",
+            "nightslash"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Team Yell Grunt",
+      "location": "route6",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "liepard",
+          "dex": 510,
+          "level": 30,
+          "moves": [
+            "fakeout",
+            "furyswipes",
+            "assurance",
+            "sandattack"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Beauty Anita",
+      "location": "route6",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "clefairy",
+          "dex": 35,
+          "level": 29,
+          "moves": [
+            "metronome"
+          ]
+        },
+        {
+          "species": "clefable",
+          "dex": 36,
+          "level": 30,
+          "moves": [
+            "metronome"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Doctor Iwan",
+      "location": "route6",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "pawniard",
+          "dex": 624,
+          "level": 31,
+          "moves": [
+            "metalclaw",
+            "torment",
+            "furycutter",
+            "metalsound"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Doctor Evelyn",
+      "location": "route6",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "togetic",
+          "dex": 176,
+          "level": 31,
+          "moves": [
+            "fairywind",
+            "yawn",
+            "ancientpower",
+            "lifedew"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Backpacker Diane",
+      "location": "route6",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "sawk",
+          "dex": 539,
+          "level": 31,
+          "moves": [
+            "doublekick",
+            "lowsweep",
+            "bulkup"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Model Nicola",
+      "location": "route6",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "skorupi",
+          "dex": 451,
+          "level": 30,
+          "moves": [
+            "venoshock",
+            "bugbite",
+            "honeclaws"
+          ]
+        },
+        {
+          "species": "pawniard",
+          "dex": 624,
+          "level": 30,
+          "moves": [
+            "assurance",
+            "metalclaw",
+            "metalsound"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Backpacker Ruth",
+      "location": "route6",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "throh",
+          "dex": 538,
+          "level": 31,
+          "moves": [
+            "stormthrow",
+            "revenge",
+            "circlethrow"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Artist Duncan",
+      "location": "route6",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "koffing",
+          "dex": 109,
+          "level": 29,
+          "moves": [
+            "haze",
+            "smokescreen",
+            "clearsmog"
+          ]
+        },
+        {
+          "species": "sudowoodo",
+          "dex": 185,
+          "level": 31,
+          "moves": [
+            "slam",
+            "rockslide",
+            "suckerpunch"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "stow-on-side",
+      "section": "Main Area",
+      "note": "Grookey Chosen",
+      "team": [
+        {
+          "species": "cramorant",
+          "dex": 845,
+          "level": 28,
+          "moves": [
+            "dive",
+            "furyattack",
+            "pluck"
+          ]
+        },
+        {
+          "species": "toxel",
+          "dex": 848,
+          "level": 29,
+          "moves": [
+            "tearfullook",
+            "nuzzle",
+            "flail",
+            "acid"
+          ]
+        },
+        {
+          "species": "silicobra",
+          "dex": 843,
+          "level": 30,
+          "moves": [
+            "glare",
+            "dig",
+            "brutalswing"
+          ]
+        },
+        {
+          "species": "drizzile",
+          "dex": 817,
+          "level": 33,
+          "moves": [
+            "waterpulse",
+            "suckerpunch",
+            "round",
+            "tearfullook"
+          ]
+        }
+      ],
+      "bag": [
+        "superpotion"
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "stow-on-side",
+      "section": "Main Area",
+      "note": "Scorbunny Chosen",
+      "team": [
+        {
+          "species": "cramorant",
+          "dex": 845,
+          "level": 29,
+          "moves": [
+            "dive",
+            "furyattack",
+            "pluck"
+          ]
+        },
+        {
+          "species": "toxel",
+          "dex": 848,
+          "level": 29,
+          "moves": [
+            "tearfullook",
+            "nuzzle",
+            "flail",
+            "acid"
+          ]
+        },
+        {
+          "species": "silicobra",
+          "dex": 843,
+          "level": 30,
+          "moves": [
+            "glare",
+            "dig",
+            "brutalswing"
+          ]
+        },
+        {
+          "species": "thwackey",
+          "dex": 811,
+          "level": 33,
+          "moves": [
+            "knockoff",
+            "razorleaf",
+            "screech",
+            "round"
+          ]
+        }
+      ],
+      "bag": [
+        "superpotion"
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "stow-on-side",
+      "section": "Main Area",
+      "note": "Sobble Chosen",
+      "team": [
+        {
+          "species": "cramorant",
+          "dex": 845,
+          "level": 29,
+          "moves": [
+            "dive",
+            "furyattack",
+            "pluck"
+          ]
+        },
+        {
+          "species": "toxel",
+          "dex": 848,
+          "level": 29,
+          "moves": [
+            "tearfullook",
+            "nuzzle",
+            "flail",
+            "acid"
+          ]
+        },
+        {
+          "species": "silicobra",
+          "dex": 843,
+          "level": 30,
+          "moves": [
+            "glare",
+            "dig",
+            "brutalswing"
+          ]
+        },
+        {
+          "species": "raboot",
+          "dex": 814,
+          "level": 33,
+          "moves": [
+            "flamecharge",
+            "agility",
+            "round",
+            "doublekick"
+          ]
+        }
+      ],
+      "bag": [
+        "superpotion"
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Bede",
+      "location": "stow-on-side",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "duosion",
+          "dex": 578,
+          "level": 32,
+          "moves": [
+            "lightscreen",
+            "reflect",
+            "psyshock",
+            "psybeam"
+          ]
+        },
+        {
+          "species": "gothorita",
+          "dex": 575,
+          "level": 32,
+          "moves": [
+            "faketears",
+            "psybeam",
+            "rocktomb"
+          ]
+        },
+        {
+          "species": "ponyta",
+          "dex": 77,
+          "form": "-g",
+          "level": 33,
+          "moves": [
+            "fairywind",
+            "psybeam",
+            "agility"
+          ]
+        },
+        {
+          "species": "hattrem",
+          "dex": 857,
+          "level": 35,
+          "moves": [
+            "dazzlinggleam",
+            "psybeam"
+          ]
+        }
+      ],
+      "bag": [
+        "superpotion"
+      ]
+    },
+    {
+      "name": "Gym Trainer Ian",
+      "location": "stow-on-side",
+      "section": "Gym",
+      "note": "Sword Only",
+      "team": [
+        {
+          "species": "stufful",
+          "dex": 759,
+          "level": 31,
+          "moves": [
+            "takedown",
+            "strength",
+            "leer"
+          ]
+        },
+        {
+          "species": "bewear",
+          "dex": 760,
+          "level": 32,
+          "moves": [
+            "brutalswing",
+            "strength",
+            "takedown",
+            "bind"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gym Trainer Claire",
+      "location": "stow-on-side",
+      "section": "Gym",
+      "note": "Sword Only",
+      "team": [
+        {
+          "species": "farfetch'd",
+          "dex": 83,
+          "form": "-g",
+          "level": 32,
+          "moves": [
+            "detect",
+            "brutalswing",
+            "rocksmash",
+            "sandattack"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gym Trainer Simon",
+      "location": "stow-on-side",
+      "section": "Gym",
+      "note": "Sword Only",
+      "team": [
+        {
+          "species": "hitmonlee",
+          "dex": 106,
+          "level": 33,
+          "moves": [
+            "doublekick",
+            "revenge"
+          ]
+        },
+        {
+          "species": "hitmonchan",
+          "dex": 107,
+          "level": 33,
+          "moves": [
+            "machpunch",
+            "bulletpunch"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gym Trainer Clive",
+      "location": "stow-on-side",
+      "section": "Gym",
+      "note": "Shield Only",
+      "team": [
+        {
+          "species": "pumpkaboo",
+          "dex": 710,
+          "level": 31,
+          "moves": [
+            "bulletseed",
+            "shadowsneak"
+          ]
+        },
+        {
+          "species": "phantump",
+          "dex": 708,
+          "level": 31,
+          "moves": [
+            "hornleech",
+            "growth",
+            "hex"
+          ]
+        },
+        {
+          "species": "pumpkaboo",
+          "dex": 710,
+          "form": "-l",
+          "level": 31,
+          "moves": [
+            "confuseray",
+            "bulletseed",
+            "scaryface"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gym Trainer Roy",
+      "location": "stow-on-side",
+      "section": "Gym",
+      "note": "Shield Only",
+      "team": [
+        {
+          "species": "haunter",
+          "dex": 93,
+          "level": 33,
+          "moves": [
+            "nightshade",
+            "payback",
+            "meanlook"
+          ]
+        },
+        {
+          "species": "drifblim",
+          "dex": 426,
+          "level": 33,
+          "moves": [
+            "phantomforce",
+            "shadowball",
+            "stockpile"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gym Trainer Lynne",
+      "location": "stow-on-side",
+      "section": "Gym",
+      "note": "Shield Only",
+      "team": [
+        {
+          "species": "corsola",
+          "dex": 222,
+          "form": "-g",
+          "level": 32,
+          "moves": [
+            "hex",
+            "ancientpower",
+            "disable"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cook Derek",
+      "location": "glimwoodtangle",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "milcery",
+          "dex": 868,
+          "level": 33,
+          "moves": [
+            "dazzlinggleam",
+            "attract",
+            "acidarmor"
+          ]
+        },
+        {
+          "species": "sinistea",
+          "dex": 854,
+          "level": 33,
+          "moves": [
+            "suckerpunch",
+            "astonish",
+            "aromaticmist"
+          ]
+        },
+        {
+          "species": "shiinotic",
+          "dex": 756,
+          "level": 34,
+          "moves": [
+            "gigadrain",
+            "astonish"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Rail Staff Robert",
+      "location": "glimwoodtangle",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "ninetales",
+          "dex": 38,
+          "level": 34,
+          "moves": [
+            "quickattack",
+            "incinerate",
+            "nastyplot"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Beauty Jacqueline",
+      "location": "glimwoodtangle",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "kirlia",
+          "dex": 281,
+          "level": 34,
+          "moves": [
+            "calmmind",
+            "lifedew",
+            "psybeam",
+            "disarmingvoice"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Madame Judy",
+      "location": "glimwoodtangle",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "indeedee",
+          "dex": 876,
+          "level": 33,
+          "moves": [
+            "disarmingvoice",
+            "psybeam",
+            "playnice"
+          ]
+        },
+        {
+          "species": "indeedee",
+          "dex": 876,
+          "level": 33,
+          "moves": [
+            "disarmingvoice",
+            "psybeam",
+            "playnice"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Breeder Elena",
+      "location": "ballonlea",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "dottler",
+          "dex": 825,
+          "level": 30,
+          "moves": [
+            "reflect",
+            "lightscreen",
+            "psyshock",
+            "bugbuzz"
+          ],
+          "item": "eviolite"
+        }
+      ]
+    },
+    {
+      "name": "Gym Trainer Annette",
+      "location": "ballonlea",
+      "section": "Gym",
+      "team": [
+        {
+          "species": "spritzee",
+          "dex": 682,
+          "level": 34,
+          "moves": [
+            "drainingkiss",
+            "psychic",
+            "echoedvoice",
+            "sweetkiss"
+          ]
+        },
+        {
+          "species": "slurpuff",
+          "dex": 685,
+          "level": 34,
+          "moves": [
+            "drainingkiss",
+            "energyball",
+            "cottonspore",
+            "faketears"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gym Trainer Teresa",
+      "location": "ballonlea",
+      "section": "Gym",
+      "team": [
+        {
+          "species": "swirlix",
+          "dex": 684,
+          "level": 34,
+          "moves": [
+            "drainingkiss",
+            "energyball",
+            "cottonspore",
+            "faketears"
+          ]
+        },
+        {
+          "species": "aromatisse",
+          "dex": 683,
+          "level": 34,
+          "moves": [
+            "drainingkiss",
+            "psychic",
+            "echoedvoice",
+            "sweetkiss"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gym Trainer Theodora",
+      "location": "ballonlea",
+      "section": "Gym",
+      "team": [
+        {
+          "species": "morgrem",
+          "dex": 860,
+          "level": 35,
+          "moves": [
+            "fakeout",
+            "falsesurrender",
+            "flatter",
+            "drainingkiss"
+          ]
+        },
+        {
+          "species": "gardevoir",
+          "dex": 282,
+          "level": 35,
+          "moves": [
+            "dazzlinggleam",
+            "mysticalfire",
+            "charm",
+            "reflect"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "route7",
+      "section": "Trainers",
+      "note": "Grookey Chosen",
+      "team": [
+        {
+          "species": "trevenant",
+          "dex": 709,
+          "level": 34,
+          "moves": [
+            "hornleech",
+            "shadowclaw",
+            "confuseray"
+          ]
+        },
+        {
+          "species": "heatmor",
+          "dex": 631,
+          "level": 34,
+          "moves": [
+            "firelash",
+            "bugbite",
+            "slash",
+            "lick"
+          ]
+        },
+        {
+          "species": "snorlax",
+          "dex": 143,
+          "level": 35,
+          "moves": [
+            "bodyslam",
+            "stockpile",
+            "heavyslam"
+          ]
+        },
+        {
+          "species": "boltund",
+          "dex": 836,
+          "level": 35,
+          "moves": [
+            "spark",
+            "crunch",
+            "roar",
+            "nuzzle"
+          ]
+        },
+        {
+          "species": "inteleon",
+          "dex": 818,
+          "level": 37,
+          "moves": [
+            "snipeshot",
+            "suckerpunch",
+            "tearfullook",
+            "whirlpool"
+          ]
+        }
+      ],
+      "bag": [
+        "hyperpotion"
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "route7",
+      "section": "Trainers",
+      "note": "Scorbunny Chosen",
+      "team": [
+        {
+          "species": "trevenant",
+          "dex": 709,
+          "level": 34,
+          "moves": [
+            "hornleech",
+            "shadowclaw",
+            "confuseray"
+          ]
+        },
+        {
+          "species": "heatmor",
+          "dex": 631,
+          "level": 34,
+          "moves": [
+            "firelash",
+            "bugbite",
+            "slash",
+            "lick"
+          ]
+        },
+        {
+          "species": "snorlax",
+          "dex": 143,
+          "level": 35,
+          "moves": [
+            "bodyslam",
+            "stockpile",
+            "heavyslam"
+          ]
+        },
+        {
+          "species": "boltund",
+          "dex": 836,
+          "level": 35,
+          "moves": [
+            "spark",
+            "crunch",
+            "roar",
+            "nuzzle"
+          ]
+        },
+        {
+          "species": "rillaboom",
+          "dex": 812,
+          "level": 37,
+          "moves": [
+            "drumbeating",
+            "knockoff",
+            "slam",
+            "brutalswing"
+          ]
+        }
+      ],
+      "bag": [
+        "hyperpotion"
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "route7",
+      "section": "Trainers",
+      "note": "Sobble Chosen",
+      "team": [
+        {
+          "species": "trevenant",
+          "dex": 709,
+          "level": 34,
+          "moves": [
+            "hornleech",
+            "shadowclaw",
+            "confuseray"
+          ]
+        },
+        {
+          "species": "heatmor",
+          "dex": 631,
+          "level": 34,
+          "moves": [
+            "firelash",
+            "bugbite",
+            "slash",
+            "lick"
+          ]
+        },
+        {
+          "species": "snorlax",
+          "dex": 143,
+          "level": 35,
+          "moves": [
+            "bodyslam",
+            "stockpile",
+            "heavyslam"
+          ]
+        },
+        {
+          "species": "boltund",
+          "dex": 836,
+          "level": 35,
+          "moves": [
+            "spark",
+            "crunch",
+            "roar",
+            "nuzzle"
+          ]
+        },
+        {
+          "species": "cinderace",
+          "dex": 815,
+          "level": 37,
+          "moves": [
+            "pyroball",
+            "headbutt",
+            "acrobatics",
+            "agility"
+          ]
+        }
+      ],
+      "bag": [
+        "hyperpotion"
+      ]
+    },
+    {
+      "name": "Model Mila",
+      "location": "route7",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "ribombee",
+          "dex": 743,
+          "level": 35,
+          "moves": [
+            "pollenpuff",
+            "dazzlinggleam",
+            "stunspore"
+          ]
+        },
+        {
+          "species": "vespiquen",
+          "dex": 416,
+          "level": 36,
+          "moves": [
+            "attackorder",
+            "defendorder"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cabbie Bruce",
+      "location": "route7",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "corvisquire",
+          "dex": 822,
+          "level": 35,
+          "moves": [
+            "drillpeck",
+            "taunt",
+            "swagger",
+            "honeclaws"
+          ]
+        },
+        {
+          "species": "rufflet",
+          "dex": 627,
+          "level": 36,
+          "moves": [
+            "aerialace",
+            "honeclaws",
+            "slash"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gentleman Caden",
+      "location": "route7",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "doublade",
+          "dex": 680,
+          "level": 44,
+          "moves": [
+            "ironhead",
+            "nightslash",
+            "slash",
+            "aerialace"
+          ]
+        },
+        {
+          "species": "passimian",
+          "dex": 766,
+          "level": 44,
+          "moves": [
+            "bulkup",
+            "fling",
+            "acrobatics"
+          ],
+          "item": "hardstone"
+        },
+        {
+          "species": "polteageist",
+          "dex": 855,
+          "level": 44,
+          "moves": [
+            "suckerpunch",
+            "gigadrain",
+            "nastyplot"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Doctor Joanna",
+      "location": "route8",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "roselia",
+          "dex": 315,
+          "level": 36,
+          "moves": [
+            "leechseed",
+            "magicalleaf",
+            "poisonsting"
+          ]
+        },
+        {
+          "species": "hattrem",
+          "dex": 857,
+          "level": 36,
+          "moves": [
+            "dazzlinggleam",
+            "psybeam",
+            "brutalswing",
+            "calmmind"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Backpacker Barbara",
+      "location": "route8",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "dreepy",
+          "dex": 885,
+          "level": 36,
+          "moves": [
+            "bite",
+            "quickattack",
+            "astonish"
+          ]
+        },
+        {
+          "species": "vullaby",
+          "dex": 629,
+          "level": 37,
+          "moves": [
+            "irondefense",
+            "whirlwind",
+            "pluck"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Musician Charles",
+      "location": "route8",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "togedemaru",
+          "dex": 777,
+          "level": 37,
+          "moves": [
+            "zingzap",
+            "fellstinger",
+            "nuzzle"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Office Worker Jordan",
+      "location": "route8",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "excadrill",
+          "dex": 530,
+          "level": 36,
+          "moves": [
+            "metalclaw",
+            "rockslide",
+            "dig"
+          ]
+        },
+        {
+          "species": "lucario",
+          "dex": 448,
+          "level": 37,
+          "moves": [
+            "metalclaw",
+            "detect",
+            "counter"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Office Worker Alison",
+      "location": "route8",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "hippowdon",
+          "dex": 450,
+          "level": 36,
+          "moves": [
+            "yawn",
+            "sandtomb",
+            "crunch"
+          ]
+        },
+        {
+          "species": "perrserker",
+          "dex": 863,
+          "level": 37,
+          "moves": [
+            "taunt",
+            "swagger",
+            "fakeout",
+            "furyswipes"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Police Officer Bobby",
+      "location": "route8",
+      "section": "Steamdrift Way",
+      "team": [
+        {
+          "species": "arcanine",
+          "dex": 59,
+          "level": 37,
+          "moves": [
+            "extremespeed",
+            "thunderfang",
+            "roar",
+            "firefang"
+          ]
+        },
+        {
+          "species": "boltund",
+          "dex": 836,
+          "level": 37,
+          "moves": [
+            "crunch",
+            "nuzzle",
+            "roar"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "circhester",
+      "section": "Main Area",
+      "note": "Grookey Chosen",
+      "team": [
+        {
+          "species": "dubwool",
+          "dex": 832,
+          "level": 40,
+          "moves": [
+            "doublekick",
+            "takedown",
+            "growl",
+            "defensecurl"
+          ]
+        },
+        {
+          "species": "corviknight",
+          "dex": 823,
+          "level": 40,
+          "moves": [
+            "drillpeck",
+            "scaryface",
+            "pluck",
+            "furyattack"
+          ]
+        },
+        {
+          "species": "pincurchin",
+          "dex": 871,
+          "level": 39,
+          "moves": [
+            "spark",
+            "bubblebeam",
+            "curse"
+          ]
+        },
+        {
+          "species": "snorlax",
+          "dex": 143,
+          "level": 39,
+          "moves": [
+            "heavyslam",
+            "bodyslam",
+            "crunch"
+          ]
+        },
+        {
+          "species": "inteleon",
+          "dex": 818,
+          "level": 41,
+          "moves": [
+            "snipeshot",
+            "tearfullook",
+            "suckerpunch",
+            "liquidation"
+          ]
+        }
+      ],
+      "bag": [
+        "hyperpotion"
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "circhester",
+      "section": "Main Area",
+      "note": "Scorbunny Chosen",
+      "team": [
+        {
+          "species": "dubwool",
+          "dex": 832,
+          "level": 40,
+          "moves": [
+            "doublekick",
+            "takedown",
+            "growl",
+            "defensecurl"
+          ]
+        },
+        {
+          "species": "corviknight",
+          "dex": 823,
+          "level": 40,
+          "moves": [
+            "drillpeck",
+            "scaryface",
+            "pluck",
+            "furyattack"
+          ]
+        },
+        {
+          "species": "pincurchin",
+          "dex": 871,
+          "level": 39,
+          "moves": [
+            "spark",
+            "bubblebeam",
+            "curse"
+          ]
+        },
+        {
+          "species": "snorlax",
+          "dex": 143,
+          "level": 39,
+          "moves": [
+            "heavyslam",
+            "bodyslam",
+            "crunch"
+          ]
+        },
+        {
+          "species": "rillaboom",
+          "dex": 812,
+          "level": 41,
+          "moves": [
+            "drumbeating",
+            "doublehit",
+            "brickbreak",
+            "knockoff"
+          ]
+        }
+      ],
+      "bag": [
+        "hyperpotion"
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "circhester",
+      "section": "Main Area",
+      "note": "Sobble Chosen",
+      "team": [
+        {
+          "species": "dubwool",
+          "dex": 832,
+          "level": 40,
+          "moves": [
+            "doublekick",
+            "takedown",
+            "growl",
+            "defensecurl"
+          ]
+        },
+        {
+          "species": "corviknight",
+          "dex": 823,
+          "level": 40,
+          "moves": [
+            "drillpeck",
+            "scaryface",
+            "pluck",
+            "furyattack"
+          ]
+        },
+        {
+          "species": "pincurchin",
+          "dex": 871,
+          "level": 39,
+          "moves": [
+            "spark",
+            "bubblebeam",
+            "curse"
+          ]
+        },
+        {
+          "species": "snorlax",
+          "dex": 143,
+          "level": 39,
+          "moves": [
+            "heavyslam",
+            "bodyslam",
+            "crunch"
+          ]
+        },
+        {
+          "species": "cinderace",
+          "dex": 815,
+          "level": 41,
+          "moves": [
+            "pyroball",
+            "counter",
+            "megakick",
+            "doublekick"
+          ]
+        }
+      ],
+      "bag": [
+        "hyperpotion"
+      ]
+    },
+    {
+      "name": "GAME FREAK's Morimoto",
+      "location": "circhester",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "cursola",
+          "dex": 864,
+          "level": 65,
+          "moves": [
+            "disable",
+            "strengthsap",
+            "shadowball",
+            "mirrorcoat"
+          ]
+        },
+        {
+          "species": "grapploct",
+          "dex": 853,
+          "level": 65,
+          "moves": [
+            "octolock",
+            "detect",
+            "dig",
+            "bodyslam"
+          ]
+        },
+        {
+          "species": "stonjourner",
+          "dex": 874,
+          "level": 65,
+          "moves": [
+            "stealthrock",
+            "stoneedge",
+            "heavyslam",
+            "rest"
+          ]
+        },
+        {
+          "species": "dragapult",
+          "dex": 887,
+          "level": 65,
+          "moves": [
+            "dragondarts",
+            "thunderwave",
+            "shadowball",
+            "protect"
+          ]
+        },
+        {
+          "species": "coalossal",
+          "dex": 839,
+          "level": 65,
+          "moves": [
+            "tarshot",
+            "bodypress",
+            "flareblitz",
+            "stoneedge"
+          ]
+        },
+        {
+          "species": "snorlax",
+          "dex": 143,
+          "level": 65,
+          "moves": [
+            "highhorsepower",
+            "superpower",
+            "gigaimpact",
+            "gunkshot"
+          ]
+        }
+      ],
+      "bag": [
+        "fullrestore"
+      ]
+    },
+    {
+      "name": "Gym Trainer Abigail",
+      "location": "circhester",
+      "section": "Gym",
+      "note": "Sword Only",
+      "team": [
+        {
+          "species": "boldore",
+          "dex": 525,
+          "level": 38,
+          "moves": [
+            "smackdown",
+            "rockblast"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gym Trainer Kiera",
+      "location": "circhester",
+      "section": "Gym",
+      "note": "Sword Only",
+      "team": [
+        {
+          "species": "crustle",
+          "dex": 558,
+          "level": 38,
+          "moves": [
+            "stealthrock",
+            "rockslide"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gym Trainer Oliver",
+      "location": "circhester",
+      "section": "Gym",
+      "note": "Sword Only",
+      "team": [
+        {
+          "species": "carkol",
+          "dex": 838,
+          "level": 39,
+          "moves": [
+            "stealthrock",
+            "flamecharge",
+            "ancientpower"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gym Trainer Wendy",
+      "location": "circhester",
+      "section": "Gym",
+      "note": "Sword Only",
+      "team": [
+        {
+          "species": "sudowoodo",
+          "dex": 185,
+          "level": 39,
+          "moves": [
+            "block",
+            "rockslide",
+            "woodhammer",
+            "suckerpunch"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gym Trainer Lewis",
+      "location": "circhester",
+      "section": "Gym",
+      "note": "Shield Only",
+      "team": [
+        {
+          "species": "snom",
+          "dex": 872,
+          "level": 38,
+          "moves": [
+            "powdersnow",
+            "strugglebug"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gym Trainer Liana",
+      "location": "circhester",
+      "section": "Gym",
+      "note": "Shield Only",
+      "team": [
+        {
+          "species": "cloyster",
+          "dex": 91,
+          "level": 38,
+          "moves": [
+            "iciclespear",
+            "shellsmash",
+            "razorshell"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gym Trainer Alexander",
+      "location": "circhester",
+      "section": "Gym",
+      "note": "Shield Only",
+      "team": [
+        {
+          "species": "beartic",
+          "dex": 614,
+          "level": 39,
+          "moves": [
+            "swagger",
+            "blizzard",
+            "iciclecrash",
+            "thrash"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gym Trainer Micah",
+      "location": "circhester",
+      "section": "Gym",
+      "note": "Shield Only",
+      "team": [
+        {
+          "species": "avalugg",
+          "dex": 713,
+          "level": 39,
+          "moves": [
+            "icefang",
+            "rapidspin",
+            "bodyslam",
+            "crunch"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fisher Harriet",
+      "location": "route9",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "barraskewda",
+          "dex": 847,
+          "level": 39,
+          "moves": [
+            "crunch",
+            "dive",
+            "aquajet"
+          ]
+        },
+        {
+          "species": "lanturn",
+          "dex": 171,
+          "level": 39,
+          "moves": [
+            "discharge",
+            "bubblebeam",
+            "confuseray"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dancer Zoe",
+      "location": "route9",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "darumaka",
+          "dex": 554,
+          "form": "-g",
+          "level": 39,
+          "moves": [
+            "icefang",
+            "bite",
+            "headbutt"
+          ]
+        },
+        {
+          "species": "bellossom",
+          "dex": 182,
+          "level": 39,
+          "moves": [
+            "petalblizzard",
+            "quiverdance",
+            "moonblast"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Team Yell Grunt",
+      "location": "route9",
+      "section": "Circhester Bay",
+      "team": [
+        {
+          "species": "linoone",
+          "dex": 264,
+          "form": "-g",
+          "level": 39,
+          "moves": [
+            "honeclaws",
+            "nightslash",
+            "counter"
+          ]
+        },
+        {
+          "species": "pangoro",
+          "dex": 675,
+          "level": 40,
+          "moves": [
+            "crunch",
+            "bulletpunch",
+            "taunt"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fisher Marina",
+      "location": "route9",
+      "section": "Circhester Bay",
+      "team": [
+        {
+          "species": "qwilfish",
+          "dex": 211,
+          "level": 39,
+          "moves": [
+            "poisonjab",
+            "pinmissile"
+          ]
+        },
+        {
+          "species": "pyukumuku",
+          "dex": 771,
+          "level": 40,
+          "moves": [
+            "taunt",
+            "counter",
+            "harden"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Swimmer Jacob",
+      "location": "route9",
+      "section": "Circhester Bay",
+      "team": [
+        {
+          "species": "cloyster",
+          "dex": 91,
+          "level": 39,
+          "moves": [
+            "iciclespear",
+            "protect",
+            "supersonic",
+            "whirlpool"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Swimmer Logan",
+      "location": "route9",
+      "section": "Circhester Bay",
+      "team": [
+        {
+          "species": "wishiwashi",
+          "dex": 746,
+          "level": 40,
+          "moves": [
+            "uproar",
+            "dive",
+            "aquatail"
+          ]
+        },
+        {
+          "species": "wailord",
+          "dex": 321,
+          "level": 40,
+          "moves": [
+            "bodyslam",
+            "heavyslam",
+            "whirlpool"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Black Belt Carter",
+      "location": "route9",
+      "section": "Circhester Bay",
+      "team": [
+        {
+          "species": "grapploct",
+          "dex": 853,
+          "level": 41,
+          "moves": [
+            "bind",
+            "reversal",
+            "taunt",
+            "brickbreak"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Swimmer Scarlett",
+      "location": "route9",
+      "section": "Circhester Bay",
+      "team": [
+        {
+          "species": "remoraid",
+          "dex": 223,
+          "level": 39,
+          "moves": [
+            "bubblebeam",
+            "aurorabeam"
+          ]
+        },
+        {
+          "species": "octillery",
+          "dex": 224,
+          "level": 40,
+          "moves": [
+            "aurorabeam",
+            "psybeam",
+            "focusenergy",
+            "bubblebeam"
+          ]
+        },
+        {
+          "species": "mantine",
+          "dex": 226,
+          "level": 40,
+          "moves": [
+            "aquaring",
+            "airslash",
+            "bounce"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Swimmer Layla",
+      "location": "route9",
+      "section": "Circhester Bay",
+      "team": [
+        {
+          "species": "toxapex",
+          "dex": 748,
+          "level": 39,
+          "moves": [
+            "banefulbunker",
+            "liquidation",
+            "venoshock"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Black Belt Reece",
+      "location": "route9",
+      "section": "Circhester Bay",
+      "team": [
+        {
+          "species": "sawk",
+          "dex": 539,
+          "level": 41,
+          "moves": [
+            "counter",
+            "brickbreak",
+            "bulkup",
+            "lowsweep"
+          ]
+        },
+        {
+          "species": "throh",
+          "dex": 538,
+          "level": 41,
+          "moves": [
+            "vitalthrow",
+            "stormthrow",
+            "bulkup",
+            "revenge"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Musician Owen",
+      "location": "route9",
+      "section": "Outer Spikemuth",
+      "team": [
+        {
+          "species": "toxtricity",
+          "dex": 849,
+          "level": 41,
+          "moves": [
+            "venoshock",
+            "toxic",
+            "shockwave"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dancer Andrea",
+      "location": "route9",
+      "section": "Outer Spikemuth",
+      "team": [
+        {
+          "species": "maractus",
+          "dex": 556,
+          "level": 41,
+          "moves": [
+            "gigadrain",
+            "ingrain",
+            "sweetscent"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Marnie",
+      "location": "route9",
+      "section": "Outer Spikemuth",
+      "team": [
+        {
+          "species": "liepard",
+          "dex": 510,
+          "level": 42,
+          "moves": [
+            "fakeout",
+            "torment",
+            "nastyplot",
+            "suckerpunch"
+          ]
+        },
+        {
+          "species": "toxicroak",
+          "dex": 454,
+          "level": 43,
+          "moves": [
+            "venoshock",
+            "suckerpunch",
+            "swagger",
+            "poisonjab"
+          ]
+        },
+        {
+          "species": "scrafty",
+          "dex": 560,
+          "level": 43,
+          "moves": [
+            "brickbreak",
+            "scaryface",
+            "crunch",
+            "swagger"
+          ]
+        },
+        {
+          "species": "morpeko",
+          "dex": 877,
+          "level": 44,
+          "moves": [
+            "quickattack",
+            "torment",
+            "spark",
+            "bite"
+          ]
+        }
+      ],
+      "bag": [
+        "hyperpotion"
+      ]
+    },
+    {
+      "name": "Team Yell Grunt",
+      "location": "spikemuth",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "linoone",
+          "dex": 264,
+          "form": "-g",
+          "level": 42,
+          "moves": [
+            "counter",
+            "takedown",
+            "nightslash",
+            "furyswipes"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Team Yell Grunt",
+      "location": "spikemuth",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "thievul",
+          "dex": 828,
+          "level": 42,
+          "moves": [
+            "foulplay",
+            "suckerpunch",
+            "tailslap",
+            "nightslash"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Team Yell Grunt",
+      "location": "spikemuth",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "scrafty",
+          "dex": 560,
+          "level": 42,
+          "moves": [
+            "swagger",
+            "brickbreak",
+            "scaryface",
+            "payback"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Team Yell Grunt",
+      "location": "spikemuth",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "weavile",
+          "dex": 461,
+          "level": 43,
+          "moves": [
+            "honeclaws",
+            "slash",
+            "iceshard",
+            "metalclaw"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Team Yell Grunt",
+      "location": "spikemuth",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "liepard",
+          "dex": 510,
+          "level": 43,
+          "moves": [
+            "honeclaws",
+            "slash",
+            "taunt",
+            "assurance"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gym Trainer Joshua",
+      "location": "spikemuth",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "drapion",
+          "dex": 452,
+          "level": 43,
+          "moves": [
+            "poisonfang",
+            "venoshock",
+            "toxicspikes",
+            "bugbite"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Marnie",
+      "location": "spikemuth",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "liepard",
+          "dex": 510,
+          "level": 59,
+          "moves": [
+            "fakeout",
+            "torment",
+            "nastyplot",
+            "snarl"
+          ]
+        },
+        {
+          "species": "toxicroak",
+          "dex": 454,
+          "level": 59,
+          "moves": [
+            "drainpunch",
+            "gunkshot",
+            "earthquake",
+            "poisonjab"
+          ]
+        },
+        {
+          "species": "scrafty",
+          "dex": 560,
+          "level": 59,
+          "moves": [
+            "icepunch",
+            "thunderpunch",
+            "drainpunch",
+            "crunch"
+          ]
+        },
+        {
+          "species": "morpeko",
+          "dex": 877,
+          "level": 60,
+          "moves": [
+            "aurawheel",
+            "seedbomb",
+            "torment",
+            "quickattack"
+          ]
+        },
+        {
+          "species": "grimmsnarl",
+          "dex": 861,
+          "level": 60,
+          "moves": [
+            "spiritbreak",
+            "darkestlariat",
+            "bulkup",
+            "playrough"
+          ]
+        }
+      ],
+      "bag": [
+        "fullrestore"
+      ]
+    },
+    {
+      "name": "Caf\u00e9 Master Bernard",
+      "location": "hammerlocke",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "slurpuff",
+          "dex": 685,
+          "level": 37,
+          "moves": [
+            "playrough",
+            "round",
+            "helpinghand",
+            "energyball"
+          ]
+        },
+        {
+          "species": "alcremie",
+          "dex": 869,
+          "form": "-rc",
+          "level": 37,
+          "moves": [
+            "dazzlinggleam",
+            "round",
+            "attract",
+            "magicalleaf"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Black Belt Brian",
+      "location": "hammerlocke",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "cottonee",
+          "dex": 546,
+          "level": 2,
+          "moves": [
+            "endeavor"
+          ],
+          "item": "focussash"
+        }
+      ]
+    },
+    {
+      "name": "Gym Trainer Sebastian",
+      "location": "hammerlocke",
+      "section": "Gym",
+      "team": [
+        {
+          "species": "pelipper",
+          "dex": 279,
+          "level": 45,
+          "moves": [
+            "tailwind",
+            "waterpulse",
+            "supersonic",
+            "airslash"
+          ]
+        },
+        {
+          "species": "sliggoo",
+          "dex": 705,
+          "level": 45,
+          "moves": [
+            "waterpulse",
+            "dragonpulse",
+            "acidspray",
+            "dragonbreath"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gym Trainer Camilla",
+      "location": "hammerlocke",
+      "section": "Gym",
+      "team": [
+        {
+          "species": "ninetales",
+          "dex": 38,
+          "level": 45,
+          "moves": [
+            "flamethrower",
+            "disable",
+            "extrasensory"
+          ]
+        },
+        {
+          "species": "turtonator",
+          "dex": 776,
+          "level": 45,
+          "moves": [
+            "flamethrower",
+            "dragonpulse",
+            "shelltrap",
+            "rocktomb"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gym Trainer Aria",
+      "location": "hammerlocke",
+      "section": "Gym",
+      "team": [
+        {
+          "species": "abomasnow",
+          "dex": 460,
+          "level": 45,
+          "moves": [
+            "icywind",
+            "razorleaf",
+            "ingrain",
+            "auroraveil"
+          ]
+        },
+        {
+          "species": "hakamo-o",
+          "dex": 783,
+          "level": 45,
+          "moves": [
+            "dragonclaw",
+            "shadowclaw",
+            "brickbreak",
+            "nobleroar"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Doctor Graham",
+      "location": "route10",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "gardevoir",
+          "dex": 282,
+          "level": 45,
+          "moves": [
+            "dazzlinggleam",
+            "drainingkiss",
+            "calmmind"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hiker Douglas",
+      "location": "route10",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "steelix",
+          "dex": 208,
+          "level": 45,
+          "moves": [
+            "curse",
+            "dig",
+            "crunch",
+            "irontail"
+          ]
+        },
+        {
+          "species": "mudsdale",
+          "dex": 750,
+          "level": 45,
+          "moves": [
+            "highhorsepower",
+            "stomp",
+            "counter"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Office Worker Ronald",
+      "location": "route10",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "weavile",
+          "dex": 461,
+          "level": 45,
+          "moves": [
+            "honeclaws",
+            "furyswipes",
+            "metalclaw"
+          ]
+        },
+        {
+          "species": "claydol",
+          "dex": 344,
+          "level": 45,
+          "moves": [
+            "earthpower",
+            "extrasensory"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cabbie Geoffrey",
+      "location": "route10",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "corviknight",
+          "dex": 823,
+          "level": 45,
+          "moves": [
+            "swagger",
+            "drillpeck",
+            "steelwing"
+          ]
+        },
+        {
+          "species": "flygon",
+          "dex": 330,
+          "level": 46,
+          "moves": [
+            "earthquake",
+            "dragontail",
+            "earthpower"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Postman Harper",
+      "location": "route10",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "pelipper",
+          "dex": 279,
+          "level": 46,
+          "moves": [
+            "tailwind",
+            "roost",
+            "waterpulse",
+            "airslash"
+          ]
+        },
+        {
+          "species": "noctowl",
+          "dex": 164,
+          "level": 46,
+          "moves": [
+            "hypnosis",
+            "moonblast",
+            "roost",
+            "airslash"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hiker Donald",
+      "location": "route10",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "gigalith",
+          "dex": 526,
+          "level": 46,
+          "moves": [
+            "irondefense",
+            "rockslide",
+            "rockblast",
+            "stealthrock"
+          ]
+        },
+        {
+          "species": "rhydon",
+          "dex": 112,
+          "level": 46,
+          "moves": [
+            "takedown",
+            "bulldoze",
+            "horndrill",
+            "stoneedge"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gentleman Glenn",
+      "location": "route10",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "darmanitan",
+          "dex": 555,
+          "form": "-g",
+          "level": 46,
+          "moves": [
+            "iciclecrash",
+            "headbutt",
+            "taunt",
+            "uproar"
+          ]
+        },
+        {
+          "species": "falinks",
+          "dex": 870,
+          "level": 46,
+          "moves": [
+            "noretreat",
+            "firstimpression",
+            "closecombat",
+            "headbutt"
+          ]
+        },
+        {
+          "species": "grapploct",
+          "dex": 853,
+          "level": 46,
+          "moves": [
+            "superpower",
+            "octolock",
+            "reversal",
+            "bulkup"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reporter Gillian",
+      "location": "route10",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "heliolisk",
+          "dex": 695,
+          "level": 46,
+          "moves": [
+            "paraboliccharge",
+            "thunder",
+            "eerieimpulse"
+          ]
+        },
+        {
+          "species": "noivern",
+          "dex": 715,
+          "level": 47,
+          "moves": [
+            "hurricane",
+            "tailwind",
+            "dragonpulse",
+            "superfang"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cameraman Cam",
+      "location": "route10",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "klinklang",
+          "dex": 601,
+          "level": 46,
+          "moves": [
+            "shiftgear",
+            "geargrind",
+            "zapcannon",
+            "screech"
+          ]
+        },
+        {
+          "species": "togedemaru",
+          "dex": 777,
+          "level": 47,
+          "moves": [
+            "nuzzle",
+            "fellstinger",
+            "pinmissile",
+            "zingzap"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Caf\u00e9 Master Richard",
+      "location": "wyndon",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "slurpuff",
+          "dex": 685,
+          "level": 47,
+          "moves": [
+            "dazzlinggleam",
+            "flamethrower",
+            "helpinghand",
+            "thunderbolt"
+          ]
+        },
+        {
+          "species": "alcremie",
+          "dex": 869,
+          "form": "-cs",
+          "level": 47,
+          "moves": [
+            "dazzlinggleam",
+            "recover",
+            "psychic",
+            "magicalleaf"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "League Staff Isaac",
+      "location": "wyndon",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "rotom",
+          "dex": 479,
+          "form": "-m",
+          "level": 34,
+          "moves": [
+            "leafstorm",
+            "voltswitch",
+            "lightscreen"
+          ]
+        },
+        {
+          "species": "rotom",
+          "dex": 479,
+          "form": "-w",
+          "level": 34,
+          "moves": [
+            "hydropump",
+            "voltswitch",
+            "hex"
+          ]
+        },
+        {
+          "species": "rotom",
+          "dex": 479,
+          "form": "-h",
+          "level": 34,
+          "moves": [
+            "overheat",
+            "voltswitch",
+            "hex"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Macro Cosmos's Eric",
+      "location": "wyndon",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "meowth",
+          "dex": 52,
+          "form": "-g",
+          "level": 47,
+          "moves": [
+            "slash",
+            "assurance",
+            "playrough"
+          ]
+        },
+        {
+          "species": "durant",
+          "dex": 632,
+          "level": 47,
+          "moves": [
+            "ironhead",
+            "crunch"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Macro Cosmos's Eric",
+      "location": "wyndon",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "mawile",
+          "dex": 303,
+          "level": 47,
+          "moves": [
+            "ironhead",
+            "crunch"
+          ]
+        },
+        {
+          "species": "excadrill",
+          "dex": 530,
+          "level": 47,
+          "moves": [
+            "metalclaw",
+            "crushclaw",
+            "rockslide"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Macro Cosmos's Eric",
+      "location": "wyndon",
+      "section": "Main Area",
+      "team": [
+        {
+          "species": "ferroseed",
+          "dex": 597,
+          "level": 47,
+          "moves": [
+            "ironhead",
+            "flashcannon",
+            "pinmissile"
+          ]
+        },
+        {
+          "species": "steelix",
+          "dex": 208,
+          "level": 47,
+          "moves": [
+            "slam",
+            "dragonbreath",
+            "rockslide",
+            "crunch"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Macro Cosmos's Elijah",
+      "location": "rosetower",
+      "section": "1F",
+      "team": [
+        {
+          "species": "durant",
+          "dex": 632,
+          "level": 48,
+          "moves": [
+            "ironhead",
+            "metalsound",
+            "agility",
+            "crunch"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "rosetower",
+      "section": "Lift",
+      "team": [
+        {
+          "species": "dubwool",
+          "dex": 832,
+          "level": 49,
+          "moves": [
+            "zenheadbutt",
+            "reversal",
+            "bodyslam"
+          ]
+        },
+        {
+          "species": "corviknight",
+          "dex": 823,
+          "level": 49,
+          "moves": [
+            "steelwing",
+            "drillpeck",
+            "scaryface",
+            "swagger"
+          ]
+        },
+        {
+          "species": "inteleon",
+          "dex": 818,
+          "level": 50,
+          "moves": [
+            "snipeshot",
+            "mudshot",
+            "icywind",
+            "darkpulse"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "rosetower",
+      "section": "Lift",
+      "team": [
+        {
+          "species": "dubwool",
+          "dex": 832,
+          "level": 49,
+          "moves": [
+            "zenheadbutt",
+            "reversal",
+            "bodyslam"
+          ]
+        },
+        {
+          "species": "corviknight",
+          "dex": 823,
+          "level": 49,
+          "moves": [
+            "steelwing",
+            "drillpeck",
+            "scaryface",
+            "swagger"
+          ]
+        },
+        {
+          "species": "rillaboom",
+          "dex": 812,
+          "level": 50,
+          "moves": [
+            "drumbeating",
+            "highhorsepower",
+            "snarl",
+            "uproar"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Hop",
+      "location": "rosetower",
+      "section": "Lift",
+      "team": [
+        {
+          "species": "dubwool",
+          "dex": 832,
+          "level": 49,
+          "moves": [
+            "zenheadbutt",
+            "reversal",
+            "bodyslam"
+          ]
+        },
+        {
+          "species": "corviknight",
+          "dex": 823,
+          "level": 49,
+          "moves": [
+            "steelwing",
+            "drillpeck",
+            "scaryface",
+            "swagger"
+          ]
+        },
+        {
+          "species": "cinderace",
+          "dex": 815,
+          "level": 50,
+          "moves": [
+            "pyroball",
+            "counter",
+            "gunkshot",
+            "bounce"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Macro Cosmos's Jane",
+      "location": "rosetower",
+      "section": "Lift",
+      "team": [
+        {
+          "species": "cufant",
+          "dex": 878,
+          "level": 48,
+          "moves": [
+            "ironhead",
+            "playrough",
+            "strength",
+            "dig"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Macro Cosmos's Mateo",
+      "location": "rosetower",
+      "section": "Lift",
+      "team": [
+        {
+          "species": "bronzong",
+          "dex": 437,
+          "level": 48,
+          "moves": [
+            "extrasensory",
+            "safeguard",
+            "irondefense",
+            "metalsound"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Macro Cosmos's Kevin",
+      "location": "rosetower",
+      "section": "Lift",
+      "team": [
+        {
+          "species": "klang",
+          "dex": 600,
+          "level": 48,
+          "moves": [
+            "shiftgear",
+            "geargrind",
+            "screech"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Macro Cosmos's Carla",
+      "location": "rosetower",
+      "section": "Lift",
+      "team": [
+        {
+          "species": "mawile",
+          "dex": 303,
+          "level": 48,
+          "moves": [
+            "ironhead",
+            "faketears",
+            "crunch",
+            "astonish"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Macro Cosmos's Adalyn",
+      "location": "rosetower",
+      "section": "Lift",
+      "team": [
+        {
+          "species": "steelix",
+          "dex": 208,
+          "level": 49,
+          "moves": [
+            "slam",
+            "screech",
+            "rockslide",
+            "curse"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Macro Cosmos's Justin",
+      "location": "rosetower",
+      "section": "Lift",
+      "team": [
+        {
+          "species": "stunfisk",
+          "dex": 618,
+          "form": "-g",
+          "level": 49,
+          "moves": [
+            "snaptrap",
+            "muddywater",
+            "metalsound",
+            "bounce"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Macro Cosmos's Oleana",
+      "location": "rosetower",
+      "section": "Roof",
+      "team": [
+        {
+          "species": "froslass",
+          "dex": 478,
+          "level": 50,
+          "moves": [
+            "hex",
+            "icywind",
+            "doubleteam"
+          ]
+        },
+        {
+          "species": "tsareena",
+          "dex": 763,
+          "level": 50,
+          "moves": [
+            "tropkick",
+            "stomp",
+            "attract",
+            "acrobatics"
+          ]
+        },
+        {
+          "species": "salazzle",
+          "dex": 758,
+          "level": 50,
+          "moves": [
+            "venoshock",
+            "incinerate",
+            "poisongas",
+            "dragonpulse"
+          ]
+        },
+        {
+          "species": "milotic",
+          "dex": 350,
+          "level": 51,
+          "moves": [
+            "surf",
+            "safeguard",
+            "aquaring",
+            "recover"
+          ]
+        },
+        {
+          "species": "garbodor",
+          "dex": 569,
+          "form": "-gi",
+          "level": 52,
+          "moves": [
+            "gunkshot",
+            "stompingtantrum",
+            "rockblast",
+            "toxicspikes"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Sordward",
+      "location": "energyplant",
+      "section": "Plant",
+      "note": "Sword Only",
+      "team": [
+        {
+          "species": "sirfetch'd",
+          "dex": 865,
+          "level": 64,
+          "moves": [
+            "leafblade",
+            "slam",
+            "meteorassault",
+            "swordsdance"
+          ]
+        },
+        {
+          "species": "golisopod",
+          "dex": 768,
+          "level": 64,
+          "moves": [
+            "firstimpression",
+            "liquidation",
+            "suckerpunch"
+          ]
+        },
+        {
+          "species": "doublade",
+          "dex": 680,
+          "level": 64,
+          "moves": [
+            "sacredsword",
+            "ironhead",
+            "nightslash",
+            "swordsdance"
+          ]
+        },
+        {
+          "species": "bisharp",
+          "dex": 625,
+          "level": 64,
+          "moves": [
+            "ironhead",
+            "nightslash",
+            "swordsdance",
+            "stoneedge"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Shielbert",
+      "location": "energyplant",
+      "section": "Plant",
+      "note": "Shield Only",
+      "team": [
+        {
+          "species": "sirfetch'd",
+          "dex": 865,
+          "level": 64,
+          "moves": [
+            "leafblade",
+            "slam",
+            "meteorassault",
+            "irondefense"
+          ]
+        },
+        {
+          "species": "bronzong",
+          "dex": 437,
+          "level": 64,
+          "moves": [
+            "lightscreen",
+            "extrasensory",
+            "gyroball",
+            "hypnosis"
+          ]
+        },
+        {
+          "species": "falinks",
+          "dex": 870,
+          "level": 64,
+          "moves": [
+            "noretreat",
+            "firstimpression",
+            "closecombat",
+            "megahorn"
+          ]
+        },
+        {
+          "species": "klinklang",
+          "dex": 601,
+          "level": 64,
+          "moves": [
+            "geargrind",
+            "shiftgear",
+            "protect",
+            "wildcharge"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Klara",
+      "location": "warm-uptunnel",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "slowpoke",
+          "dex": 79,
+          "form": "-g",
+          "level": 18,
+          "moves": [
+            "acid",
+            "confusion"
+          ]
+        },
+        {
+          "species": "koffing",
+          "dex": 109,
+          "level": 18,
+          "moves": [
+            "clearsmog",
+            "assurance"
+          ]
+        },
+        {
+          "species": "whirlipede",
+          "dex": 544,
+          "level": 19,
+          "moves": [
+            "poisontail",
+            "bugbite"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Klara",
+      "location": "warm-uptunnel",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "slowpoke",
+          "dex": 79,
+          "form": "-g",
+          "level": 62,
+          "moves": [
+            "acid",
+            "confusion"
+          ]
+        },
+        {
+          "species": "koffing",
+          "dex": 109,
+          "level": 62,
+          "moves": [
+            "clearsmog",
+            "assurance"
+          ]
+        },
+        {
+          "species": "whirlipede",
+          "dex": 544,
+          "level": 63,
+          "moves": [
+            "poisontail",
+            "bugbite"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Avery",
+      "location": "warm-uptunnel",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "slowpoke",
+          "dex": 79,
+          "form": "-g",
+          "level": 18,
+          "moves": [
+            "acid",
+            "confusion"
+          ]
+        },
+        {
+          "species": "woobat",
+          "dex": 527,
+          "level": 18,
+          "moves": [
+            "confusion",
+            "aircutter"
+          ]
+        },
+        {
+          "species": "kadabra",
+          "dex": 64,
+          "level": 19,
+          "moves": [
+            "psybeam",
+            "swift"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Avery",
+      "location": "warm-uptunnel",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "slowpoke",
+          "dex": 79,
+          "form": "-g",
+          "level": 62,
+          "moves": [
+            "acid",
+            "confusion"
+          ]
+        },
+        {
+          "species": "woobat",
+          "dex": 527,
+          "level": 62,
+          "moves": [
+            "confusion",
+            "aircutter"
+          ]
+        },
+        {
+          "species": "kadabra",
+          "dex": 64,
+          "level": 63,
+          "moves": [
+            "psybeam",
+            "swift"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Klara",
+      "location": "masterdojo",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "skorupi",
+          "dex": 451,
+          "level": 23,
+          "moves": [
+            "bite",
+            "poisonfang"
+          ]
+        },
+        {
+          "species": "weezing",
+          "dex": 110,
+          "form": "-g",
+          "level": 24,
+          "moves": [
+            "clearsmog",
+            "assurance"
+          ]
+        },
+        {
+          "species": "whirlipede",
+          "dex": 544,
+          "level": 24,
+          "moves": [
+            "poisontail",
+            "bugbite"
+          ]
+        },
+        {
+          "species": "slowbro",
+          "dex": 80,
+          "form": "-g",
+          "level": 25,
+          "moves": [
+            "waterpulse",
+            "shellsidearm",
+            "confusion"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Klara",
+      "location": "masterdojo",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "skorupi",
+          "dex": 451,
+          "level": 65,
+          "moves": [
+            "bite",
+            "poisonfang"
+          ]
+        },
+        {
+          "species": "weezing",
+          "dex": 110,
+          "form": "-g",
+          "level": 66,
+          "moves": [
+            "clearsmog",
+            "assurance"
+          ]
+        },
+        {
+          "species": "whirlipede",
+          "dex": 544,
+          "level": 66,
+          "moves": [
+            "poisontail",
+            "bugbite"
+          ]
+        },
+        {
+          "species": "slowbro",
+          "dex": 80,
+          "form": "-g",
+          "level": 67,
+          "moves": [
+            "waterpulse",
+            "shellsidearm",
+            "confusion"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Avery",
+      "location": "masterdojo",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "ponyta",
+          "dex": 77,
+          "form": "-g",
+          "level": 23,
+          "moves": [
+            "psybeam",
+            "fairywind"
+          ]
+        },
+        {
+          "species": "swoobat",
+          "dex": 528,
+          "level": 24,
+          "moves": [
+            "confusion",
+            "aircutter"
+          ]
+        },
+        {
+          "species": "kadabra",
+          "dex": 64,
+          "level": 24,
+          "moves": [
+            "psybeam",
+            "swift"
+          ]
+        },
+        {
+          "species": "slowbro",
+          "dex": 80,
+          "form": "-g",
+          "level": 25,
+          "moves": [
+            "waterpulse",
+            "shellsidearm",
+            "confusion"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Avery",
+      "location": "masterdojo",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "ponyta",
+          "dex": 77,
+          "form": "-g",
+          "level": 65,
+          "moves": [
+            "psybeam",
+            "fairywind"
+          ]
+        },
+        {
+          "species": "swoobat",
+          "dex": 528,
+          "level": 66,
+          "moves": [
+            "confusion",
+            "aircutter"
+          ]
+        },
+        {
+          "species": "kadabra",
+          "dex": 64,
+          "level": 66,
+          "moves": [
+            "psybeam",
+            "swift"
+          ]
+        },
+        {
+          "species": "slowbro",
+          "dex": 80,
+          "form": "-g",
+          "level": 67,
+          "moves": [
+            "waterpulse",
+            "shellsidearm",
+            "confusion"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Avery",
+      "location": "masterdojo",
+      "section": "Trainers",
+      "note": "Shield Only",
+      "team": [
+        {
+          "species": "rapidash",
+          "dex": 78,
+          "form": "-g",
+          "level": 65,
+          "moves": [
+            "psychic",
+            "mysticalfire",
+            "quickattack",
+            "dazzlinggleam"
+          ]
+        },
+        {
+          "species": "swoobat",
+          "dex": 528,
+          "level": 66,
+          "moves": [
+            "psychic",
+            "airslash",
+            "energyball",
+            "futuresight"
+          ]
+        },
+        {
+          "species": "alakazam",
+          "dex": 65,
+          "level": 66,
+          "moves": [
+            "psychic",
+            "shadowball",
+            "triattack",
+            "reflect"
+          ]
+        },
+        {
+          "species": "slowbro",
+          "dex": 80,
+          "form": "-g",
+          "level": 67,
+          "moves": [
+            "scald",
+            "shellsidearm",
+            "focusblast",
+            "psychic"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Klara",
+      "location": "masterdojo",
+      "section": "Trainers",
+      "note": "Sword Only",
+      "team": [
+        {
+          "species": "drapion",
+          "dex": 452,
+          "level": 65,
+          "moves": [
+            "poisonfang",
+            "crunch",
+            "icefang"
+          ]
+        },
+        {
+          "species": "weezing",
+          "dex": 110,
+          "form": "-g",
+          "level": 66,
+          "moves": [
+            "toxic",
+            "heatwave",
+            "protect",
+            "strangesteam"
+          ]
+        },
+        {
+          "species": "scolipede",
+          "dex": 545,
+          "level": 66,
+          "moves": [
+            "smartstrike",
+            "poisonjab",
+            "megahorn",
+            "protect"
+          ]
+        },
+        {
+          "species": "slowbro",
+          "dex": 80,
+          "form": "-g",
+          "level": 67,
+          "moves": [
+            "scald",
+            "shellsidearm",
+            "focusblast",
+            "psychic"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Klara",
+      "location": "fieldsofhonor",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "venipede",
+          "dex": 543,
+          "level": 10,
+          "moves": [
+            "poisontail"
+          ]
+        },
+        {
+          "species": "slowpoke",
+          "dex": 79,
+          "form": "-g",
+          "level": 12,
+          "moves": [
+            "confusion",
+            "acid"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Klara",
+      "location": "fieldsofhonor",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "venipede",
+          "dex": 543,
+          "level": 58,
+          "moves": [
+            "poisontail"
+          ]
+        },
+        {
+          "species": "slowpoke",
+          "dex": 79,
+          "form": "-g",
+          "level": 60,
+          "moves": [
+            "confusion",
+            "acid"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Avery",
+      "location": "fieldsofhonor",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "abra",
+          "dex": 63,
+          "level": 10,
+          "moves": [
+            "confusion"
+          ]
+        },
+        {
+          "species": "slowpoke",
+          "dex": 79,
+          "form": "-g",
+          "level": 12,
+          "moves": [
+            "confusion",
+            "acid"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Avery",
+      "location": "fieldsofhonor",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "abra",
+          "dex": 63,
+          "level": 58,
+          "moves": [
+            "confusion"
+          ]
+        },
+        {
+          "species": "slowpoke",
+          "dex": 79,
+          "form": "-g",
+          "level": 60,
+          "moves": [
+            "confusion",
+            "acid"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Master Dojo Student",
+      "location": "towerofdarkness",
+      "section": "1F",
+      "note": "Pre-Champion Cup",
+      "team": [
+        {
+          "species": "zorua",
+          "dex": 570,
+          "level": 23,
+          "moves": [
+            "furyswipes",
+            "suckerpunch"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Master Dojo Student",
+      "location": "towerofdarkness",
+      "section": "1F",
+      "note": "Post-Game",
+      "team": [
+        {
+          "species": "zorua",
+          "dex": 570,
+          "level": 65,
+          "moves": [
+            "furyswipes",
+            "suckerpunch"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Master Dojo Student",
+      "location": "towerofdarkness",
+      "section": "2F",
+      "note": "Pre-Champion Cup",
+      "team": [
+        {
+          "species": "scraggy",
+          "dex": 559,
+          "level": 24,
+          "moves": [
+            "lowkick",
+            "payback"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Master Dojo Student",
+      "location": "towerofdarkness",
+      "section": "2F",
+      "note": "Post-Game",
+      "team": [
+        {
+          "species": "scraggy",
+          "dex": 559,
+          "level": 66,
+          "moves": [
+            "lowkick",
+            "payback"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Master Dojo Student",
+      "location": "towerofdarkness",
+      "section": "3F",
+      "note": "Pre-Champion Cup",
+      "team": [
+        {
+          "species": "inkay",
+          "dex": 686,
+          "level": 25,
+          "moves": [
+            "slash",
+            "nightslash"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Master Dojo Student",
+      "location": "towerofdarkness",
+      "section": "3F",
+      "note": "Post-Game",
+      "team": [
+        {
+          "species": "inkay",
+          "dex": 686,
+          "level": 67,
+          "moves": [
+            "slash",
+            "nightslash"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Master Dojo Student",
+      "location": "towerofdarkness",
+      "section": "4F",
+      "note": "Pre-Champion Cup",
+      "team": [
+        {
+          "species": "krokorok",
+          "dex": 552,
+          "level": 26,
+          "moves": [
+            "assurance",
+            "sandtomb",
+            "protect"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Master Dojo Student",
+      "location": "towerofdarkness",
+      "section": "4F",
+      "note": "Post-Game",
+      "team": [
+        {
+          "species": "krokorok",
+          "dex": 552,
+          "level": 68,
+          "moves": [
+            "assurance",
+            "sandtomb",
+            "protect"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Master Dojo Student",
+      "location": "towerofwaters",
+      "section": "1F",
+      "note": "Pre-Champion Cup",
+      "team": [
+        {
+          "species": "psyduck",
+          "dex": 54,
+          "level": 23,
+          "moves": [
+            "confusion",
+            "waterpulse"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Master Dojo Student",
+      "location": "towerofwaters",
+      "section": "1F",
+      "note": "Post-Game",
+      "team": [
+        {
+          "species": "psyduck",
+          "dex": 54,
+          "level": 65,
+          "moves": [
+            "confusion",
+            "waterpulse"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Master Dojo Student",
+      "location": "towerofwaters",
+      "section": "2F",
+      "note": "Pre-Champion Cup",
+      "team": [
+        {
+          "species": "krabby",
+          "dex": 98,
+          "level": 24,
+          "moves": [
+            "bubblebeam",
+            "metalclaw"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Master Dojo Student",
+      "location": "towerofwaters",
+      "section": "2F",
+      "note": "Post-Game",
+      "team": [
+        {
+          "species": "krabby",
+          "dex": 98,
+          "level": 66,
+          "moves": [
+            "bubblebeam",
+            "metalclaw"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Master Dojo Student",
+      "location": "towerofwaters",
+      "section": "3F",
+      "note": "Pre-Champion Cup",
+      "team": [
+        {
+          "species": "marill",
+          "dex": 183,
+          "level": 25,
+          "moves": [
+            "slam",
+            "aquajet"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Master Dojo Student",
+      "location": "towerofwaters",
+      "section": "3F",
+      "note": "Post-Game",
+      "team": [
+        {
+          "species": "marill",
+          "dex": 183,
+          "level": 67,
+          "moves": [
+            "slam",
+            "aquajet"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Master Dojo Student",
+      "location": "towerofwaters",
+      "section": "4F",
+      "note": "Pre-Champion Cup",
+      "team": [
+        {
+          "species": "poliwhirl",
+          "dex": 61,
+          "level": 26,
+          "moves": [
+            "whirlpool",
+            "mudshot",
+            "protect"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Master Dojo Student",
+      "location": "towerofwaters",
+      "section": "4F",
+      "note": "Post-Game",
+      "team": [
+        {
+          "species": "poliwhirl",
+          "dex": 61,
+          "level": 68,
+          "moves": [
+            "whirlpool",
+            "mudshot",
+            "protect"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pok\u00e9mon Trainer Peony",
+      "location": "slipperyslope",
+      "section": "Trainers",
+      "team": [
+        {
+          "species": "copperajah",
+          "dex": 879,
+          "level": 70,
+          "moves": [
+            "heavyslam",
+            "playrough",
+            "highhorsepower",
+            "superpower"
+          ]
+        },
+        {
+          "species": "aggron",
+          "dex": 306,
+          "level": 70,
+          "moves": [
+            "crunch",
+            "ironhead",
+            "stoneedge",
+            "bodypress"
+          ],
+          "item": "sitrusberry"
+        }
+      ]
+    }
+  ]
+}

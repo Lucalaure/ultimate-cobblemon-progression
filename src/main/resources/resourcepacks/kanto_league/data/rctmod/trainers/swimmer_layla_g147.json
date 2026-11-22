@@ -1,0 +1,19 @@
+{
+  "name": "Swimmer Layla",
+  "team": [
+    {
+      "species": "toxapex",
+      "gender": "FEMALE",
+      "level": 39,
+      "nature": "relaxed",
+      "ability": "merciless",
+      "moveset": [
+        "banefulbunker",
+        "liquidation",
+        "venoshock"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}

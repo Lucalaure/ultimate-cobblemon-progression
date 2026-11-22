@@ -1,0 +1,46 @@
+{
+  "name": "Pok\u00e9mon Trainer Bede",
+  "team": [
+    {
+      "species": "solosis",
+      "gender": "FEMALE",
+      "level": 13,
+      "nature": "brave",
+      "ability": "overcoat",
+      "moveset": [
+        "endeavor",
+        "confusion"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "gothita",
+      "gender": "FEMALE",
+      "level": 15,
+      "nature": "mild",
+      "ability": "frisk",
+      "moveset": [
+        "psybeam",
+        "tickle",
+        "pound"
+      ],
+      "ivs": {},
+      "evs": {}
+    },
+    {
+      "species": "hatenna",
+      "gender": "FEMALE",
+      "level": 16,
+      "nature": "naive",
+      "ability": "healer",
+      "moveset": [
+        "confusion",
+        "round",
+        "disarmingvoice"
+      ],
+      "ivs": {},
+      "evs": {}
+    }
+  ]
+}
