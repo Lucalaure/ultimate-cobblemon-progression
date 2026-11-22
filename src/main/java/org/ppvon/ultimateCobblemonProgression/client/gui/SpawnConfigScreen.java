@@ -8,11 +8,12 @@ import org.ppvon.ultimateCobblemonProgression.config.ConfigLoader;
 import org.ppvon.ultimateCobblemonProgression.config.SpawnConfig;
 
 public final class SpawnConfigScreen extends BaseConfigScreen {
-    private boolean doSpeciesBlocking, blockUnknownSpecies, lockRegionalForms, doLevelScaling, doWeightScaling;
+    private boolean doSpeciesBlocking, blockUnknownSpecies, lockRegionalForms, blockUnlistedTrainers, doLevelScaling, doWeightScaling;
     private double tierCapScaling, minLevelScaling, avgLevelScaling, maxLevelScaling;
     private double weightDecayPerTier, weightMinFactor, weightCurrentTierBuff;
 
-    private Checkbox chkDoSpeciesBlocking, chkBlockUnknownSpecies, chkLockRegionalForms, chkDoLevelScaling, chkDoWeightScaling;
+    private Checkbox chkDoSpeciesBlocking, chkBlockUnknownSpecies, chkLockRegionalForms, chkBlockUnlistedTrainers, chkDoLevelScaling,
+            chkDoWeightScaling;
     private DoubleField fldTierCap, fldMin, fldAvg, fldMax, fldDecay, fldMinFactor, fldBuff;
 
     SpawnConfigScreen(BaseConfigScreen parent) {
@@ -27,6 +28,7 @@ public final class SpawnConfigScreen extends BaseConfigScreen {
         doSpeciesBlocking      = c.doSpeciesBlocking;
         blockUnknownSpecies    = c.blockUnknownSpecies;
         lockRegionalForms      = c.lockRegionalForms;
+        blockUnlistedTrainers  = c.blockUnlistedTrainers;
         doLevelScaling         = c.doLevelScaling;
         tierCapScaling         = c.tierCapScaling;
         minLevelScaling        = c.minLevelScaling;
@@ -47,6 +49,14 @@ public final class SpawnConfigScreen extends BaseConfigScreen {
         chkDoSpeciesBlocking = Checkbox.builder(Component.literal("Enable Species Blocking"), this.font)
                 .selected(doSpeciesBlocking).pos(labelX, y).build();
         addRenderableWidget(chkDoSpeciesBlocking);
+
+        // Same row, so the screen doesn't grow taller.
+        chkBlockUnlistedTrainers = Checkbox.builder(Component.literal("Block Unlisted Trainers"), this.font)
+                .selected(blockUnlistedTrainers).pos(fieldX, y)
+                .tooltip(Tooltip.create(Component.literal(
+                        "Region mode: Radical Cobblemon Trainers' wild trainers that no region lists (like Pokémon Unbound's) never spawn.")))
+                .build();
+        addRenderableWidget(chkBlockUnlistedTrainers);
 
         y += rowH;
 
@@ -154,6 +164,7 @@ public final class SpawnConfigScreen extends BaseConfigScreen {
         c.doSpeciesBlocking = chkDoSpeciesBlocking.selected();
         c.blockUnknownSpecies = chkBlockUnknownSpecies.selected();
         c.lockRegionalForms = chkLockRegionalForms.selected();
+        c.blockUnlistedTrainers = chkBlockUnlistedTrainers.selected();
 
         c.doLevelScaling = chkDoLevelScaling.selected();
         c.tierCapScaling = fldTierCap.getOrElse(tierCapScaling);

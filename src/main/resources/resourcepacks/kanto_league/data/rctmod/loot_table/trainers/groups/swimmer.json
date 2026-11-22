@@ -1,0 +1,891 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/diverse",
+          "weight": 2500
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/fishing",
+          "weight": 2500
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/nature",
+          "weight": 2500
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/diverse",
+          "weight": 733,
+          "quality": 1466
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/fishing",
+          "weight": 733,
+          "quality": 1466
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/nature",
+          "weight": 733,
+          "quality": 1466
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/diverse",
+          "weight": 100,
+          "quality": 400
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/fishing",
+          "weight": 100,
+          "quality": 400
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/nature",
+          "weight": 100,
+          "quality": 400
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 1,
+            "max": 25
+          }
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:binomial",
+        "n": 2,
+        "p": 0.15
+      },
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/diverse",
+          "weight": 2500
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/fishing",
+          "weight": 2500
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/nature",
+          "weight": 2500
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/diverse",
+          "weight": 733,
+          "quality": 1466
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/fishing",
+          "weight": 733,
+          "quality": 1466
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/nature",
+          "weight": 733,
+          "quality": 1466
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/diverse",
+          "weight": 100,
+          "quality": 400
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/fishing",
+          "weight": 100,
+          "quality": 400
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/nature",
+          "weight": 100,
+          "quality": 400
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 1,
+            "max": 25
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/diverse",
+          "weight": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/fishing",
+          "weight": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/nature",
+          "weight": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/diverse",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/fishing",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/nature",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/diverse",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/fishing",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/nature",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/diverse",
+          "weight": 100,
+          "quality": 400
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/fishing",
+          "weight": 100,
+          "quality": 400
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/nature",
+          "weight": 100,
+          "quality": 400
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 26,
+            "max": 39
+          }
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:binomial",
+        "n": 2,
+        "p": 0.25
+      },
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/diverse",
+          "weight": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/fishing",
+          "weight": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/nature",
+          "weight": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/diverse",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/fishing",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/nature",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/diverse",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/fishing",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/nature",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/diverse",
+          "weight": 100,
+          "quality": 400
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/fishing",
+          "weight": 100,
+          "quality": 400
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/nature",
+          "weight": 100,
+          "quality": 400
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 26,
+            "max": 39
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/diverse",
+          "weight": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/fishing",
+          "weight": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/nature",
+          "weight": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/diverse",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/fishing",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/nature",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/diverse",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/fishing",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/nature",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/diverse",
+          "weight": 100,
+          "quality": 400
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/fishing",
+          "weight": 100,
+          "quality": 400
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/nature",
+          "weight": 100,
+          "quality": 400
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 40,
+            "max": 50
+          }
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:binomial",
+        "n": 2,
+        "p": 0.25
+      },
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/diverse",
+          "weight": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/fishing",
+          "weight": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/nature",
+          "weight": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/diverse",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/fishing",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/nature",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/diverse",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/fishing",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/nature",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/diverse",
+          "weight": 100,
+          "quality": 400
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/fishing",
+          "weight": 100,
+          "quality": 400
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/nature",
+          "weight": 100,
+          "quality": 400
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 40,
+            "max": 50
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/diverse",
+          "weight": 1667
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/fishing",
+          "weight": 1667
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/nature",
+          "weight": 1667
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/diverse",
+          "weight": 1000,
+          "quality": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/fishing",
+          "weight": 1000,
+          "quality": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/nature",
+          "weight": 1000,
+          "quality": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/diverse",
+          "weight": 433,
+          "quality": 1732
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/fishing",
+          "weight": 433,
+          "quality": 1732
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/nature",
+          "weight": 433,
+          "quality": 1732
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/diverse",
+          "weight": 200,
+          "quality": 800
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/fishing",
+          "weight": 200,
+          "quality": 800
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/nature",
+          "weight": 200,
+          "quality": 800
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/diverse",
+          "weight": 33,
+          "quality": 264
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/fishing",
+          "weight": 33,
+          "quality": 264
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/nature",
+          "weight": 33,
+          "quality": 264
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 51,
+            "max": 75
+          }
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:binomial",
+        "n": 2,
+        "p": 0.35
+      },
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/diverse",
+          "weight": 1667
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/fishing",
+          "weight": 1667
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/nature",
+          "weight": 1667
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/diverse",
+          "weight": 1000,
+          "quality": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/fishing",
+          "weight": 1000,
+          "quality": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/nature",
+          "weight": 1000,
+          "quality": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/diverse",
+          "weight": 433,
+          "quality": 1732
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/fishing",
+          "weight": 433,
+          "quality": 1732
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/nature",
+          "weight": 433,
+          "quality": 1732
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/diverse",
+          "weight": 200,
+          "quality": 800
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/fishing",
+          "weight": 200,
+          "quality": 800
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/nature",
+          "weight": 200,
+          "quality": 800
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/diverse",
+          "weight": 33,
+          "quality": 264
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/fishing",
+          "weight": 33,
+          "quality": 264
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/nature",
+          "weight": 33,
+          "quality": 264
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 51,
+            "max": 75
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/diverse",
+          "weight": 1333
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/fishing",
+          "weight": 1333
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/nature",
+          "weight": 1333
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/diverse",
+          "weight": 1067,
+          "quality": 2134
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/fishing",
+          "weight": 1067,
+          "quality": 2134
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/nature",
+          "weight": 1067,
+          "quality": 2134
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/diverse",
+          "weight": 567,
+          "quality": 2268
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/fishing",
+          "weight": 567,
+          "quality": 2268
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/nature",
+          "weight": 567,
+          "quality": 2268
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/diverse",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/fishing",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/nature",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/diverse",
+          "weight": 67,
+          "quality": 536
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/fishing",
+          "weight": 67,
+          "quality": 536
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/nature",
+          "weight": 67,
+          "quality": 536
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 76,
+            "max": 100
+          }
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:binomial",
+        "n": 2,
+        "p": 0.45
+      },
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/diverse",
+          "weight": 1333
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/fishing",
+          "weight": 1333
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/nature",
+          "weight": 1333
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/diverse",
+          "weight": 1067,
+          "quality": 2134
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/fishing",
+          "weight": 1067,
+          "quality": 2134
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/nature",
+          "weight": 1067,
+          "quality": 2134
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/diverse",
+          "weight": 567,
+          "quality": 2268
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/fishing",
+          "weight": 567,
+          "quality": 2268
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/nature",
+          "weight": 567,
+          "quality": 2268
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/diverse",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/fishing",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/nature",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/diverse",
+          "weight": 67,
+          "quality": 536
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/fishing",
+          "weight": 67,
+          "quality": 536
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/nature",
+          "weight": 67,
+          "quality": 536
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 76,
+            "max": 100
+          }
+        }
+      ]
+    }
+  ],
+  "random_sequence": "rctmod:trainers/groups/swimmer"
+}

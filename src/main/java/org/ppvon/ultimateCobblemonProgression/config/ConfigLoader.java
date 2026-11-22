@@ -12,6 +12,7 @@ public final class ConfigLoader {
     public static Supplier<Boolean> DO_SPECIES_BLOCKING;
     public static Supplier<Boolean> BLOCK_UNKNOWN_SPECIES;
     public static Supplier<Boolean> LOCK_REGIONAL_FORMS;
+    public static Supplier<Boolean> BLOCK_UNLISTED_TRAINERS;
 
     public static Supplier<Boolean> DO_LEVEL_SCALING;
     public static Supplier<Double> TIER_CAP_SCALING;
@@ -61,6 +62,7 @@ public final class ConfigLoader {
         DO_SPECIES_BLOCKING = () -> SPAWN.doSpeciesBlocking;
         BLOCK_UNKNOWN_SPECIES = () -> SPAWN.blockUnknownSpecies;
         LOCK_REGIONAL_FORMS = () -> SPAWN.lockRegionalForms;
+        BLOCK_UNLISTED_TRAINERS = () -> SPAWN.blockUnlistedTrainers;
 
         DO_LEVEL_SCALING = () -> SPAWN.doLevelScaling;
         TIER_CAP_SCALING = () -> SPAWN.tierCapScaling;

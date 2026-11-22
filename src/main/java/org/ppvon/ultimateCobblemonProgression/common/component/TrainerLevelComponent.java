@@ -4,6 +4,7 @@ import org.ladysnake.cca.api.v3.component.ComponentV3;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 /**
  * Trainer level applies many scalings in org.ppvon.ultimateCobblemonProgression.influence
@@ -37,6 +38,15 @@ public interface TrainerLevelComponent extends ComponentV3 {
     List<String> getNextRegions();
     void addNextRegion(String regionId);
     void clearNextRegions();
+
+    /**
+     * Radical Cobblemon Trainers' wild trainers (not league trainers) this player has beaten, as recorded by CJP since
+     * the update that added the Trainer Card's Trainers tab. Earlier wins aren't counted: those trainers count once
+     * they're beaten again.
+     */
+    Set<String> getBeatenWildTrainers();
+    /** Returns whether the trainer is new to the record. */
+    boolean addBeatenWildTrainer(String trainerId);
 
     /** Region mode: the gym difficulty this player picked ("normal" or "hard"). Empty until picked. */
     Optional<String> getGymDifficulty();

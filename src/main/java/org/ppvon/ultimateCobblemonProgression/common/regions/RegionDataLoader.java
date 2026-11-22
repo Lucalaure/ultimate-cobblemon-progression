@@ -40,6 +40,7 @@ public final class RegionDataLoader extends SimpleJsonResourceReloadListener imp
     protected void apply(Map<ResourceLocation, JsonElement> files, ResourceManager rm, ProfilerFiller profiler) {
         Map<String, RegionDef.Meta> metas = new HashMap<>();
         Map<String, SortedMap<Integer, TierDef>> tiers = new HashMap<>();
+        Map<String, List<String>> wildTrainers = new HashMap<>();
 
         for (var entry : files.entrySet()) {
             ResourceLocation id = entry.getKey();
@@ -60,10 +61,16 @@ public final class RegionDataLoader extends SimpleJsonResourceReloadListener imp
                     metas.put(regionId, meta);
                     continue;
                 }
+                if (name.equals("wild_trainers")) {
+                    RegionDef.WildTrainerList list = RegionDef.WildTrainerList.CODEC.parse(JsonOps.INSTANCE, entry.getValue())
+                            .getOrThrow(msg -> new IllegalArgumentException("Invalid wild_trainers.json: " + msg));
+                    wildTrainers.put(regionId, list.trainers());
+                    continue;
+                }
 
                 var idx = TierRegistry.tryParseTierIndex(name);
                 if (idx.isEmpty()) {
-                    UltimateCobblemonProgression.LOG.warn("Ignoring {} (not region.json or tier_N.json)", id);
+                    UltimateCobblemonProgression.LOG.warn("Ignoring {} (not region.json, wild_trainers.json or tier_N.json)", id);
                     continue;
                 }
                 TierDef parsed = TierDef.CODEC.parse(JsonOps.INSTANCE, entry.getValue())
@@ -90,7 +97,7 @@ public final class RegionDataLoader extends SimpleJsonResourceReloadListener imp
                         regionId, regionTiers.keySet());
                 continue;
             }
-            regions.add(new RegionDef(regionId, meta, regionTiers));
+            regions.add(new RegionDef(regionId, meta, regionTiers, wildTrainers.getOrDefault(regionId, List.of())));
         }
         for (String regionId : metas.keySet()) {
             if (!tiers.containsKey(regionId)) {
@@ -99,6 +106,7 @@ public final class RegionDataLoader extends SimpleJsonResourceReloadListener imp
         }
 
         RegionRegistry.set(regions);
+        WildTrainers.clearCache();
         UltimateCobblemonProgression.LOG.info("Loaded regions: {}", RegionRegistry.ordered().stream()
                 .map(r -> r.id + " (" + r.maxTier() + " tiers)").toList());
     }

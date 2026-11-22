@@ -1,0 +1,839 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/battle",
+          "weight": 7500
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/battle",
+          "weight": 1100,
+          "quality": 2200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/training",
+          "weight": 1100,
+          "quality": 2200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/battle",
+          "weight": 150,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/training",
+          "weight": 150,
+          "quality": 600
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 1,
+            "max": 25
+          }
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:binomial",
+        "n": 2,
+        "p": 0.15
+      },
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/battle",
+          "weight": 7500
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/battle",
+          "weight": 1100,
+          "quality": 2200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/training",
+          "weight": 1100,
+          "quality": 2200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/battle",
+          "weight": 150,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/training",
+          "weight": 150,
+          "quality": 600
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 1,
+            "max": 25
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/battle",
+          "weight": 6000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/battle",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/evolution",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/training",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/battle",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/tms",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/training",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/battle",
+          "weight": 100,
+          "quality": 400
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/tms",
+          "weight": 100,
+          "quality": 400
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/training",
+          "weight": 100,
+          "quality": 400
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 26,
+            "max": 39
+          }
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:binomial",
+        "n": 2,
+        "p": 0.25
+      },
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/battle",
+          "weight": 6000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/battle",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/evolution",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/training",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/battle",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/tms",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/training",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/battle",
+          "weight": 100,
+          "quality": 400
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/tms",
+          "weight": 100,
+          "quality": 400
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/training",
+          "weight": 100,
+          "quality": 400
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 26,
+            "max": 39
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/battle",
+          "weight": 6000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/battle",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/evolution",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/training",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/battle",
+          "weight": 225,
+          "quality": 900
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/evolution",
+          "weight": 225,
+          "quality": 900
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/tms",
+          "weight": 225,
+          "quality": 900
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/training",
+          "weight": 225,
+          "quality": 900
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/battle",
+          "weight": 75,
+          "quality": 300
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/evolution",
+          "weight": 75,
+          "quality": 300
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/tms",
+          "weight": 75,
+          "quality": 300
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/training",
+          "weight": 75,
+          "quality": 300
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 40,
+            "max": 50
+          }
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:binomial",
+        "n": 2,
+        "p": 0.25
+      },
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/battle",
+          "weight": 6000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/battle",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/evolution",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/training",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/battle",
+          "weight": 225,
+          "quality": 900
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/evolution",
+          "weight": 225,
+          "quality": 900
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/tms",
+          "weight": 225,
+          "quality": 900
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/training",
+          "weight": 225,
+          "quality": 900
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/battle",
+          "weight": 75,
+          "quality": 300
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/evolution",
+          "weight": 75,
+          "quality": 300
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/tms",
+          "weight": 75,
+          "quality": 300
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/training",
+          "weight": 75,
+          "quality": 300
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 40,
+            "max": 50
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/battle",
+          "weight": 5000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/battle",
+          "weight": 1000,
+          "quality": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/evolution",
+          "weight": 1000,
+          "quality": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/training",
+          "weight": 1000,
+          "quality": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/battle",
+          "weight": 325,
+          "quality": 1300
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/evolution",
+          "weight": 325,
+          "quality": 1300
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/tms",
+          "weight": 325,
+          "quality": 1300
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/training",
+          "weight": 325,
+          "quality": 1300
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/battle",
+          "weight": 150,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/evolution",
+          "weight": 150,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/tms",
+          "weight": 150,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/training",
+          "weight": 150,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/battle",
+          "weight": 33,
+          "quality": 264
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/evolution",
+          "weight": 33,
+          "quality": 264
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/training",
+          "weight": 33,
+          "quality": 264
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 51,
+            "max": 75
+          }
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:binomial",
+        "n": 2,
+        "p": 0.35
+      },
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/battle",
+          "weight": 5000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/battle",
+          "weight": 1000,
+          "quality": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/evolution",
+          "weight": 1000,
+          "quality": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/training",
+          "weight": 1000,
+          "quality": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/battle",
+          "weight": 325,
+          "quality": 1300
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/evolution",
+          "weight": 325,
+          "quality": 1300
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/tms",
+          "weight": 325,
+          "quality": 1300
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/training",
+          "weight": 325,
+          "quality": 1300
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/battle",
+          "weight": 150,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/evolution",
+          "weight": 150,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/tms",
+          "weight": 150,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/training",
+          "weight": 150,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/battle",
+          "weight": 33,
+          "quality": 264
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/evolution",
+          "weight": 33,
+          "quality": 264
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/training",
+          "weight": 33,
+          "quality": 264
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 51,
+            "max": 75
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/battle",
+          "weight": 4000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/battle",
+          "weight": 1067,
+          "quality": 2134
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/evolution",
+          "weight": 1067,
+          "quality": 2134
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/training",
+          "weight": 1067,
+          "quality": 2134
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/battle",
+          "weight": 425,
+          "quality": 1700
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/evolution",
+          "weight": 425,
+          "quality": 1700
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/tms",
+          "weight": 425,
+          "quality": 1700
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/training",
+          "weight": 425,
+          "quality": 1700
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/battle",
+          "weight": 225,
+          "quality": 900
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/evolution",
+          "weight": 225,
+          "quality": 900
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/tms",
+          "weight": 225,
+          "quality": 900
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/training",
+          "weight": 225,
+          "quality": 900
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/battle",
+          "weight": 67,
+          "quality": 536
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/evolution",
+          "weight": 67,
+          "quality": 536
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/training",
+          "weight": 67,
+          "quality": 536
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 76,
+            "max": 100
+          }
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:binomial",
+        "n": 2,
+        "p": 0.45
+      },
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/battle",
+          "weight": 4000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/battle",
+          "weight": 1067,
+          "quality": 2134
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/evolution",
+          "weight": 1067,
+          "quality": 2134
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/training",
+          "weight": 1067,
+          "quality": 2134
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/battle",
+          "weight": 425,
+          "quality": 1700
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/evolution",
+          "weight": 425,
+          "quality": 1700
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/tms",
+          "weight": 425,
+          "quality": 1700
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/training",
+          "weight": 425,
+          "quality": 1700
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/battle",
+          "weight": 225,
+          "quality": 900
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/evolution",
+          "weight": 225,
+          "quality": 900
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/tms",
+          "weight": 225,
+          "quality": 900
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/training",
+          "weight": 225,
+          "quality": 900
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/battle",
+          "weight": 67,
+          "quality": 536
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/evolution",
+          "weight": 67,
+          "quality": 536
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/training",
+          "weight": 67,
+          "quality": 536
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 76,
+            "max": 100
+          }
+        }
+      ]
+    }
+  ],
+  "random_sequence": "rctmod:trainers/groups/battleground"
+}

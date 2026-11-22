@@ -1,0 +1,841 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/medicine",
+          "weight": 3750
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/pokeballs",
+          "weight": 3750
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/archeology",
+          "weight": 733,
+          "quality": 1466
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/medicine",
+          "weight": 733,
+          "quality": 1466
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/pokeballs",
+          "weight": 733,
+          "quality": 1466
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/archeology",
+          "weight": 100,
+          "quality": 400
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/medicine",
+          "weight": 100,
+          "quality": 400
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/pokeballs",
+          "weight": 100,
+          "quality": 400
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 1,
+            "max": 25
+          }
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:binomial",
+        "n": 2,
+        "p": 0.15
+      },
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/medicine",
+          "weight": 3750
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/pokeballs",
+          "weight": 3750
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/archeology",
+          "weight": 733,
+          "quality": 1466
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/medicine",
+          "weight": 733,
+          "quality": 1466
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/pokeballs",
+          "weight": 733,
+          "quality": 1466
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/archeology",
+          "weight": 100,
+          "quality": 400
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/medicine",
+          "weight": 100,
+          "quality": 400
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/pokeballs",
+          "weight": 100,
+          "quality": 400
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 1,
+            "max": 25
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/medicine",
+          "weight": 3000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/pokeballs",
+          "weight": 3000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/archeology",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/medicine",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/pokeballs",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/archeology",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/medicine",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/pokeballs",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/archeology",
+          "weight": 100,
+          "quality": 400
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/medicine",
+          "weight": 100,
+          "quality": 400
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/pokeballs",
+          "weight": 100,
+          "quality": 400
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 26,
+            "max": 39
+          }
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:binomial",
+        "n": 2,
+        "p": 0.25
+      },
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/medicine",
+          "weight": 3000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/pokeballs",
+          "weight": 3000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/archeology",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/medicine",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/pokeballs",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/archeology",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/medicine",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/pokeballs",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/archeology",
+          "weight": 100,
+          "quality": 400
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/medicine",
+          "weight": 100,
+          "quality": 400
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/pokeballs",
+          "weight": 100,
+          "quality": 400
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 26,
+            "max": 39
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/medicine",
+          "weight": 3000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/pokeballs",
+          "weight": 3000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/archeology",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/medicine",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/pokeballs",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/archeology",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/medicine",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/pokeballs",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/archeology",
+          "weight": 100,
+          "quality": 400
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/medicine",
+          "weight": 100,
+          "quality": 400
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/pokeballs",
+          "weight": 100,
+          "quality": 400
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 40,
+            "max": 50
+          }
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:binomial",
+        "n": 2,
+        "p": 0.25
+      },
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/medicine",
+          "weight": 3000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/pokeballs",
+          "weight": 3000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/archeology",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/medicine",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/pokeballs",
+          "weight": 933,
+          "quality": 1866
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/archeology",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/medicine",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/pokeballs",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/archeology",
+          "weight": 100,
+          "quality": 400
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/medicine",
+          "weight": 100,
+          "quality": 400
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/pokeballs",
+          "weight": 100,
+          "quality": 400
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 40,
+            "max": 50
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/medicine",
+          "weight": 2500
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/pokeballs",
+          "weight": 2500
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/archeology",
+          "weight": 1000,
+          "quality": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/medicine",
+          "weight": 1000,
+          "quality": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/pokeballs",
+          "weight": 1000,
+          "quality": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/archeology",
+          "weight": 433,
+          "quality": 1732
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/medicine",
+          "weight": 433,
+          "quality": 1732
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/pokeballs",
+          "weight": 433,
+          "quality": 1732
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/archeology",
+          "weight": 200,
+          "quality": 800
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/medicine",
+          "weight": 200,
+          "quality": 800
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/pokeballs",
+          "weight": 200,
+          "quality": 800
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/archeology",
+          "weight": 33,
+          "quality": 264
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/medicine",
+          "weight": 33,
+          "quality": 264
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/pokeballs",
+          "weight": 33,
+          "quality": 264
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 51,
+            "max": 75
+          }
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:binomial",
+        "n": 2,
+        "p": 0.35
+      },
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/medicine",
+          "weight": 2500
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/pokeballs",
+          "weight": 2500
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/archeology",
+          "weight": 1000,
+          "quality": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/medicine",
+          "weight": 1000,
+          "quality": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/pokeballs",
+          "weight": 1000,
+          "quality": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/archeology",
+          "weight": 433,
+          "quality": 1732
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/medicine",
+          "weight": 433,
+          "quality": 1732
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/pokeballs",
+          "weight": 433,
+          "quality": 1732
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/archeology",
+          "weight": 200,
+          "quality": 800
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/medicine",
+          "weight": 200,
+          "quality": 800
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/pokeballs",
+          "weight": 200,
+          "quality": 800
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/archeology",
+          "weight": 33,
+          "quality": 264
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/medicine",
+          "weight": 33,
+          "quality": 264
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/pokeballs",
+          "weight": 33,
+          "quality": 264
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 51,
+            "max": 75
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/medicine",
+          "weight": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/pokeballs",
+          "weight": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/archeology",
+          "weight": 1067,
+          "quality": 2134
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/medicine",
+          "weight": 1067,
+          "quality": 2134
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/pokeballs",
+          "weight": 1067,
+          "quality": 2134
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/archeology",
+          "weight": 567,
+          "quality": 2268
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/medicine",
+          "weight": 567,
+          "quality": 2268
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/pokeballs",
+          "weight": 567,
+          "quality": 2268
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/archeology",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/medicine",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/pokeballs",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/archeology",
+          "weight": 67,
+          "quality": 536
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/medicine",
+          "weight": 67,
+          "quality": 536
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/pokeballs",
+          "weight": 67,
+          "quality": 536
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 76,
+            "max": 100
+          }
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:binomial",
+        "n": 2,
+        "p": 0.45
+      },
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/medicine",
+          "weight": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/pokeballs",
+          "weight": 2000
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/archeology",
+          "weight": 1067,
+          "quality": 2134
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/medicine",
+          "weight": 1067,
+          "quality": 2134
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/pokeballs",
+          "weight": 1067,
+          "quality": 2134
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/archeology",
+          "weight": 567,
+          "quality": 2268
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/medicine",
+          "weight": 567,
+          "quality": 2268
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/pokeballs",
+          "weight": 567,
+          "quality": 2268
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/archeology",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/medicine",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/pokeballs",
+          "weight": 300,
+          "quality": 1200
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/archeology",
+          "weight": 67,
+          "quality": 536
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/medicine",
+          "weight": 67,
+          "quality": 536
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/pokeballs",
+          "weight": 67,
+          "quality": 536
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 76,
+            "max": 100
+          }
+        }
+      ]
+    }
+  ],
+  "random_sequence": "rctmod:trainers/groups/friendly_thug"
+}

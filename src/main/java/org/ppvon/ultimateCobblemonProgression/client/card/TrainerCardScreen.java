@@ -21,6 +21,8 @@ import org.ppvon.ultimateCobblemonProgression.common.card.PickRegionPayload;
 import org.ppvon.ultimateCobblemonProgression.common.card.TrainerCardData;
 import org.ppvon.ultimateCobblemonProgression.common.card.TrainerCardData.RegionEntry;
 import org.ppvon.ultimateCobblemonProgression.common.card.TrainerCardData.RoadEntry;
+import org.ppvon.ultimateCobblemonProgression.common.card.TrainerCardData.TrainerGroup;
+import org.ppvon.ultimateCobblemonProgression.common.card.TrainerCardData.WildTrainer;
 import org.ppvon.ultimateCobblemonProgression.common.card.TrainerCardData.WildGroup;
 import org.ppvon.ultimateCobblemonProgression.common.card.TrainerCardData.WildSpecies;
 
@@ -48,13 +50,16 @@ public class TrainerCardScreen extends Screen {
     private static final int CX0 = 20, CY0 = 38, CX1 = 325, CY1 = 189;
 
     private enum Tab {
-        PROFILE("Profile"), ROAD("Road"), REGIONS("Regions"), WILD("Wild Pokémon");
+        PROFILE("Profile"), ROAD("Road"), TRAINERS("Trainers"), REGIONS("Regions"), WILD("Wild Pokémon");
         final String label;
         Tab(String label) { this.label = label; }
     }
 
     /** The tab last looked at, so the card reopens there (e.g. after picking a region). */
     private static Tab lastTab = Tab.PROFILE;
+    /** Trainers tab: whether beaten trainers are hidden, and which regions' lists are folded away. Kept between openings. */
+    private static boolean hideBeaten;
+    private static final java.util.Set<String> collapsedTrainerGroups = new java.util.HashSet<>();
 
     private final TrainerCardData data;
     private Tab tab;
@@ -78,6 +83,10 @@ public class TrainerCardScreen extends Screen {
     private final List<PickButton> difficultyButtons = new ArrayList<>();
     /** The Road tab's "Switch to ..." button, in content coordinates (before scrolling), or null. */
     private PickButton difficultyToggle;
+    /** The Trainers tab's "Hide beaten" button, in content coordinates (before scrolling), or null. */
+    private PickButton hideBeatenToggle;
+    /** The Trainers tab's region headers, which fold their list, in content coordinates; the pick's id is the region title. */
+    private final List<PickButton> trainerHeaders = new ArrayList<>();
 
     /** A pick to confirm, with its {@link PickRegionPayload} kind (home, next or extra region, or difficulty). */
     private record Pending(String id, String title, int kind) {}
@@ -99,7 +108,10 @@ public class TrainerCardScreen extends Screen {
     }
 
     private List<Tab> tabs() {
-        return data.regionMode() ? List.of(Tab.values()) : List.of(Tab.PROFILE, Tab.WILD);
+        if (!data.regionMode()) return List.of(Tab.PROFILE, Tab.WILD);
+        return data.wildTrainers().isEmpty()
+                ? List.of(Tab.PROFILE, Tab.ROAD, Tab.REGIONS, Tab.WILD)
+                : List.of(Tab.values());
     }
 
     @Override
@@ -166,6 +178,22 @@ public class TrainerCardScreen extends Screen {
                 return true;
             }
         }
+        if (tab == Tab.TRAINERS && y >= CY0 && y < CY1) {
+            double cy = y + scroll;
+            PickButton toggle = hideBeatenToggle;
+            if (toggle != null && x >= toggle.x0 && x < toggle.x1 && cy >= toggle.y0 && cy < toggle.y1) {
+                hideBeaten = !hideBeaten;
+                click();
+                return true;
+            }
+            for (PickButton b : trainerHeaders) {
+                if (x >= b.x0 && x < b.x1 && cy >= b.y0 && cy < b.y1) {
+                    if (!collapsedTrainerGroups.remove(b.pick.id())) collapsedTrainerGroups.add(b.pick.id());
+                    click();
+                    return true;
+                }
+            }
+        }
         if (tab == Tab.REGIONS && y >= CY0 && y < CY1) {
             double cy = y + scroll;
             for (PickButton b : pickButtons) {
@@ -210,7 +238,9 @@ public class TrainerCardScreen extends Screen {
 
     @Override
     public boolean mouseScrolled(double mouseX, double mouseY, double scrollX, double scrollY) {
-        scroll = Mth.clamp(scroll - scrollY * 14, 0, Math.max(0, contentHeight - (CY1 - CY0)));
+        // The Trainers tab's lists run to hundreds of rows, so it scrolls three rows at a time.
+        int step = tab == Tab.TRAINERS ? TRAINER_ROW * 3 : 14;
+        scroll = Mth.clamp(scroll - scrollY * step, 0, Math.max(0, contentHeight - (CY1 - CY0)));
         return true;
     }
 
@@ -249,6 +279,7 @@ public class TrainerCardScreen extends Screen {
         switch (tab) {
             case PROFILE -> drawProfile(g);
             case ROAD -> scrolled(g, () -> drawRoad(g, mx, my));
+            case TRAINERS -> scrolled(g, () -> drawTrainers(g, mx, my));
             case REGIONS -> scrolled(g, () -> drawRegions(g, mx, my));
             case WILD -> scrolled(g, () -> drawWild(g, mx, my));
         }
@@ -570,6 +601,80 @@ public class TrainerCardScreen extends Screen {
             y += 14;
             i++;
         }
+        contentHeight = y - CY0 + 2;
+    }
+
+    // Trainers --------------------------------------------------------
+
+    private static final int TRAINER_ROW = 12;
+
+    private void drawTrainers(GuiGraphics g, int mx, int my) {
+        trainerHeaders.clear();
+        int y = CY0 + 2;
+        int contentMouseY = my + (int) scroll;
+        boolean mouseInView = confirming == null && my >= CY0 && my < CY1 && mx >= CX0 && mx < CX1;
+        int x0 = CX0 + 2, x1 = CX1 - 6;
+
+        // Title, with the button that hides beaten trainers
+        String label = hideBeaten ? "Show beaten" : "Hide beaten";
+        int bw = font.width(label) + 12;
+        int bx1 = x1, bx0 = bx1 - bw, by0 = y, by1 = y + 13;
+        boolean hover = mouseInView && mx >= bx0 && mx < bx1 && contentMouseY >= by0 && contentMouseY < by1;
+        g.fill(bx0, by0, bx1, by1, FRAME_DARK);
+        g.fill(bx0 + 1, by0 + 1, bx1 - 1, by1 - 1, hover ? 0xFFE8574F : RED);
+        text(g, Component.literal(label).withStyle(ChatFormatting.BOLD), (bx0 + bx1) / 2f, by0 + 3, WHITE, 1, true);
+        hideBeatenToggle = new PickButton(bx0, by0, bx1, by1, null);
+        fit(g, Component.literal("Wild Trainers").withStyle(ChatFormatting.BOLD), x0 + 2, y + 3, bx0 - 8 - (x0 + 2), INK, 1, Align.LEFT);
+        y += 17;
+
+        int columns = 2;
+        int cellW = (x1 - x0) / columns;
+        for (TrainerGroup group : data.wildTrainers()) {
+            // Region header: click to fold its list away
+            boolean collapsed = collapsedTrainerGroups.contains(group.title());
+            boolean headerHover = mouseInView && mx >= x0 && mx < x1 && contentMouseY >= y && contentMouseY < y + 13;
+            g.fill(x0, y, x1, y + 13, headerHover ? MID : DARK);
+            String count = group.beaten() + " / " + group.trainers().size() + " beaten";
+            float countW = font.width(count) * 0.75f;
+            text(g, Component.literal(count), x1 - 5 - countW, y + 4.5f, LIGHT, 0.75f, false);
+            float titleW = fit(g, Component.literal((collapsed ? "▶ " : "▼ ") + group.title()).withStyle(ChatFormatting.BOLD),
+                    x0 + 5, y + 3, x1 - 11 - countW - (x0 + 5), WHITE, 1, Align.LEFT);
+            int barX0 = Math.max(x0 + 90, (int) (x0 + 5 + titleW + 8)), barX1 = (int) (x1 - 11 - countW);
+            bar(g, barX0, y + 4, barX1, y + 9, group.trainers().isEmpty() ? 0 : group.beaten() / (float) group.trainers().size(), GREEN);
+            trainerHeaders.add(new PickButton(x0, y, x1, y + 13, new Pending(group.title(), group.title(), 0)));
+            y += 15;
+            if (collapsed) continue;
+
+            List<WildTrainer> shown = hideBeaten
+                    ? group.trainers().stream().filter(t -> !t.beaten()).toList()
+                    : group.trainers();
+            if (shown.isEmpty()) {
+                String none = group.trainers().isEmpty() ? "None listed" : "Every trainer here is beaten!";
+                text(g, Component.literal(none), x0 + 5, y + 2, MUTED, 1, false);
+                y += 15;
+                continue;
+            }
+            int rows = (shown.size() + columns - 1) / columns;
+            for (int i = 0; i < shown.size(); i++) {
+                int row = i / columns, col = i % columns;
+                int cy = y + row * TRAINER_ROW;
+                // Only rows inside the view are drawn: a region lists hundreds of trainers.
+                if (cy + TRAINER_ROW < CY0 + scroll || cy > CY1 + scroll) continue;
+                WildTrainer t = shown.get(i);
+                int cx = x0 + col * cellW, cx1 = cx + cellW - (col == columns - 1 ? 0 : 2);
+                g.fill(cx, cy, cx1, cy + TRAINER_ROW - 1, row % 2 == 0 ? LIGHT : SCREEN);
+                g.fill(cx + 2, cy + 1, cx + 11, cy + 10, t.beaten() ? GREEN : GREY);
+                text(g, Component.literal(t.beaten() ? "✔" : "•"), cx + 6.5f, cy + 2, WHITE, 1, true);
+                String lv = "Lv " + t.level();
+                float lvW = font.width(lv) * 0.75f;
+                text(g, Component.literal(lv), cx1 - 3 - lvW, cy + 3.5f, MUTED, 0.75f, false);
+                fit(g, Component.literal(t.name()), cx + 14, cy + 2, cx1 - 6 - lvW - (cx + 14), t.beaten() ? INK : MUTED, 1, Align.LEFT);
+            }
+            y += rows * TRAINER_ROW + 4;
+        }
+        y += paragraph(g, Component.literal("Wild trainers you beat count here, sorted by their strongest Pokémon. "
+                        + "Wins from before this list was added don't count: beat those trainers again when you meet them."),
+                CX0 + 4, y + 1, CX1 - CX0 - 14, 40, MUTED, 0.75f, Align.LEFT) + 3;
         contentHeight = y - CY0 + 2;
     }
 

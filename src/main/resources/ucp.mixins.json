@@ -13,7 +13,11 @@
     "RctDefeatCountTriggerMixin",
     "RctHardTrainerResourcesMixin",
     "RctRematchBattleMixin",
-    "RctTrainerAssociationMixin"
+    "RctTrainerAssociationMixin",
+    "RctWildTrainerSpawnMixin"
+  ],
+  "client": [
+    "RctTrainerNameTagMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -6,6 +6,7 @@ import org.ppvon.ultimateCobblemonProgression.UltimateCobblemonProgression;
 import org.ppvon.ultimateCobblemonProgression.common.advancements.DefeatTrainerTrigger;
 import org.ppvon.ultimateCobblemonProgression.common.gym.GymDifficulty;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionRegistry;
+import org.ppvon.ultimateCobblemonProgression.common.regions.WildTrainers;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Pseudo;
 import org.spongepowered.asm.mixin.Unique;
@@ -36,6 +37,7 @@ public abstract class RctDefeatCountTriggerMixin {
         String trainerId = ucp$trainerId(trainer);
         if (trainerId == null) return;
         GymDifficulty.onTrainerDefeated(player, trainerId);
+        WildTrainers.recordWin(player, trainerId);
         DefeatTrainerTrigger.INSTANCE.trigger(player, trainerId);
         if (RegionRegistry.isLeagueTrainer(trainerId)) ci.cancel();
     }

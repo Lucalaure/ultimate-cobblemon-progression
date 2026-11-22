@@ -1,0 +1,2483 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/battle",
+          "weight": 1071
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/berries",
+          "weight": 1071
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/diverse",
+          "weight": 1071
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/fishing",
+          "weight": 1071
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/medicine",
+          "weight": 1071
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/nature",
+          "weight": 1071
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/pokeballs",
+          "weight": 1071
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/archeology",
+          "weight": 244,
+          "quality": 488
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/battle",
+          "weight": 244,
+          "quality": 488
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/berries",
+          "weight": 244,
+          "quality": 488
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/diverse",
+          "weight": 244,
+          "quality": 488
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/fishing",
+          "weight": 244,
+          "quality": 488
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/medicine",
+          "weight": 244,
+          "quality": 488
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/nature",
+          "weight": 244,
+          "quality": 488
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/pokeballs",
+          "weight": 244,
+          "quality": 488
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/training",
+          "weight": 244,
+          "quality": 488
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/archeology",
+          "weight": 33,
+          "quality": 132
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/battle",
+          "weight": 33,
+          "quality": 132
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/berries",
+          "weight": 33,
+          "quality": 132
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/diverse",
+          "weight": 33,
+          "quality": 132
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/fishing",
+          "weight": 33,
+          "quality": 132
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/medicine",
+          "weight": 33,
+          "quality": 132
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/nature",
+          "weight": 33,
+          "quality": 132
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/pokeballs",
+          "weight": 33,
+          "quality": 132
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/training",
+          "weight": 33,
+          "quality": 132
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 1,
+            "max": 25
+          }
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:binomial",
+        "n": 2,
+        "p": 0.15
+      },
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/battle",
+          "weight": 1071
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/berries",
+          "weight": 1071
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/diverse",
+          "weight": 1071
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/fishing",
+          "weight": 1071
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/medicine",
+          "weight": 1071
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/nature",
+          "weight": 1071
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/pokeballs",
+          "weight": 1071
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/archeology",
+          "weight": 244,
+          "quality": 488
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/battle",
+          "weight": 244,
+          "quality": 488
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/berries",
+          "weight": 244,
+          "quality": 488
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/diverse",
+          "weight": 244,
+          "quality": 488
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/fishing",
+          "weight": 244,
+          "quality": 488
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/medicine",
+          "weight": 244,
+          "quality": 488
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/nature",
+          "weight": 244,
+          "quality": 488
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/pokeballs",
+          "weight": 244,
+          "quality": 488
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/training",
+          "weight": 244,
+          "quality": 488
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/archeology",
+          "weight": 33,
+          "quality": 132
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/battle",
+          "weight": 33,
+          "quality": 132
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/berries",
+          "weight": 33,
+          "quality": 132
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/diverse",
+          "weight": 33,
+          "quality": 132
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/fishing",
+          "weight": 33,
+          "quality": 132
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/medicine",
+          "weight": 33,
+          "quality": 132
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/nature",
+          "weight": 33,
+          "quality": 132
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/pokeballs",
+          "weight": 33,
+          "quality": 132
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/training",
+          "weight": 33,
+          "quality": 132
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 1,
+            "max": 25
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/battle",
+          "weight": 857
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/berries",
+          "weight": 857
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/diverse",
+          "weight": 857
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/fishing",
+          "weight": 857
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/medicine",
+          "weight": 857
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/nature",
+          "weight": 857
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/pokeballs",
+          "weight": 857
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/archeology",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/battle",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/berries",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/diverse",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/evolution",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/fishing",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/medicine",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/nature",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/pokeballs",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/training",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/archeology",
+          "weight": 90,
+          "quality": 360
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/battle",
+          "weight": 90,
+          "quality": 360
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/berries",
+          "weight": 90,
+          "quality": 360
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/diverse",
+          "weight": 90,
+          "quality": 360
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/fishing",
+          "weight": 90,
+          "quality": 360
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/medicine",
+          "weight": 90,
+          "quality": 360
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/nature",
+          "weight": 90,
+          "quality": 360
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/pokeballs",
+          "weight": 90,
+          "quality": 360
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/tms",
+          "weight": 90,
+          "quality": 360
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/training",
+          "weight": 90,
+          "quality": 360
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/archeology",
+          "weight": 30,
+          "quality": 120
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/battle",
+          "weight": 30,
+          "quality": 120
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/berries",
+          "weight": 30,
+          "quality": 120
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/diverse",
+          "weight": 30,
+          "quality": 120
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/fishing",
+          "weight": 30,
+          "quality": 120
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/medicine",
+          "weight": 30,
+          "quality": 120
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/nature",
+          "weight": 30,
+          "quality": 120
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/pokeballs",
+          "weight": 30,
+          "quality": 120
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/tms",
+          "weight": 30,
+          "quality": 120
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/training",
+          "weight": 30,
+          "quality": 120
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 26,
+            "max": 39
+          }
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:binomial",
+        "n": 2,
+        "p": 0.25
+      },
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/battle",
+          "weight": 857
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/berries",
+          "weight": 857
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/diverse",
+          "weight": 857
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/fishing",
+          "weight": 857
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/medicine",
+          "weight": 857
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/nature",
+          "weight": 857
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/pokeballs",
+          "weight": 857
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/archeology",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/battle",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/berries",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/diverse",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/evolution",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/fishing",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/medicine",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/nature",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/pokeballs",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/training",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/archeology",
+          "weight": 90,
+          "quality": 360
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/battle",
+          "weight": 90,
+          "quality": 360
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/berries",
+          "weight": 90,
+          "quality": 360
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/diverse",
+          "weight": 90,
+          "quality": 360
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/fishing",
+          "weight": 90,
+          "quality": 360
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/medicine",
+          "weight": 90,
+          "quality": 360
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/nature",
+          "weight": 90,
+          "quality": 360
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/pokeballs",
+          "weight": 90,
+          "quality": 360
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/tms",
+          "weight": 90,
+          "quality": 360
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/training",
+          "weight": 90,
+          "quality": 360
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/archeology",
+          "weight": 30,
+          "quality": 120
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/battle",
+          "weight": 30,
+          "quality": 120
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/berries",
+          "weight": 30,
+          "quality": 120
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/diverse",
+          "weight": 30,
+          "quality": 120
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/fishing",
+          "weight": 30,
+          "quality": 120
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/medicine",
+          "weight": 30,
+          "quality": 120
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/nature",
+          "weight": 30,
+          "quality": 120
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/pokeballs",
+          "weight": 30,
+          "quality": 120
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/tms",
+          "weight": 30,
+          "quality": 120
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/training",
+          "weight": 30,
+          "quality": 120
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 26,
+            "max": 39
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/battle",
+          "weight": 857
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/berries",
+          "weight": 857
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/diverse",
+          "weight": 857
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/fishing",
+          "weight": 857
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/medicine",
+          "weight": 857
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/nature",
+          "weight": 857
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/pokeballs",
+          "weight": 857
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/archeology",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/battle",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/berries",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/diverse",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/evolution",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/fishing",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/medicine",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/nature",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/pokeballs",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/training",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/archeology",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/battle",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/berries",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/diverse",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/evolution",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/fishing",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/medicine",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/nature",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/pokeballs",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/tms",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/training",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/archeology",
+          "weight": 27,
+          "quality": 108
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/battle",
+          "weight": 27,
+          "quality": 108
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/berries",
+          "weight": 27,
+          "quality": 108
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/diverse",
+          "weight": 27,
+          "quality": 108
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/evolution",
+          "weight": 27,
+          "quality": 108
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/fishing",
+          "weight": 27,
+          "quality": 108
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/medicine",
+          "weight": 27,
+          "quality": 108
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/nature",
+          "weight": 27,
+          "quality": 108
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/pokeballs",
+          "weight": 27,
+          "quality": 108
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/tms",
+          "weight": 27,
+          "quality": 108
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/training",
+          "weight": 27,
+          "quality": 108
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 40,
+            "max": 50
+          }
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:binomial",
+        "n": 2,
+        "p": 0.25
+      },
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/battle",
+          "weight": 857
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/berries",
+          "weight": 857
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/diverse",
+          "weight": 857
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/fishing",
+          "weight": 857
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/medicine",
+          "weight": 857
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/nature",
+          "weight": 857
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/pokeballs",
+          "weight": 857
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/archeology",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/battle",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/berries",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/diverse",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/evolution",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/fishing",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/medicine",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/nature",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/pokeballs",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/training",
+          "weight": 280,
+          "quality": 560
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/archeology",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/battle",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/berries",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/diverse",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/evolution",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/fishing",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/medicine",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/nature",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/pokeballs",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/tms",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/training",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/archeology",
+          "weight": 27,
+          "quality": 108
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/battle",
+          "weight": 27,
+          "quality": 108
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/berries",
+          "weight": 27,
+          "quality": 108
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/diverse",
+          "weight": 27,
+          "quality": 108
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/evolution",
+          "weight": 27,
+          "quality": 108
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/fishing",
+          "weight": 27,
+          "quality": 108
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/medicine",
+          "weight": 27,
+          "quality": 108
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/nature",
+          "weight": 27,
+          "quality": 108
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/pokeballs",
+          "weight": 27,
+          "quality": 108
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/tms",
+          "weight": 27,
+          "quality": 108
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/training",
+          "weight": 27,
+          "quality": 108
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 40,
+            "max": 50
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/battle",
+          "weight": 714
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/berries",
+          "weight": 714
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/diverse",
+          "weight": 714
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/fishing",
+          "weight": 714
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/medicine",
+          "weight": 714
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/nature",
+          "weight": 714
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/pokeballs",
+          "weight": 714
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/archeology",
+          "weight": 300,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/battle",
+          "weight": 300,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/berries",
+          "weight": 300,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/diverse",
+          "weight": 300,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/evolution",
+          "weight": 300,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/fishing",
+          "weight": 300,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/medicine",
+          "weight": 300,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/nature",
+          "weight": 300,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/pokeballs",
+          "weight": 300,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/training",
+          "weight": 300,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/archeology",
+          "weight": 118,
+          "quality": 472
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/battle",
+          "weight": 118,
+          "quality": 472
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/berries",
+          "weight": 118,
+          "quality": 472
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/diverse",
+          "weight": 118,
+          "quality": 472
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/evolution",
+          "weight": 118,
+          "quality": 472
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/fishing",
+          "weight": 118,
+          "quality": 472
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/medicine",
+          "weight": 118,
+          "quality": 472
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/nature",
+          "weight": 118,
+          "quality": 472
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/pokeballs",
+          "weight": 118,
+          "quality": 472
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/tms",
+          "weight": 118,
+          "quality": 472
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/training",
+          "weight": 118,
+          "quality": 472
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/archeology",
+          "weight": 55,
+          "quality": 220
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/battle",
+          "weight": 55,
+          "quality": 220
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/berries",
+          "weight": 55,
+          "quality": 220
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/diverse",
+          "weight": 55,
+          "quality": 220
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/evolution",
+          "weight": 55,
+          "quality": 220
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/fishing",
+          "weight": 55,
+          "quality": 220
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/medicine",
+          "weight": 55,
+          "quality": 220
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/nature",
+          "weight": 55,
+          "quality": 220
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/pokeballs",
+          "weight": 55,
+          "quality": 220
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/tms",
+          "weight": 55,
+          "quality": 220
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/training",
+          "weight": 55,
+          "quality": 220
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/archeology",
+          "weight": 10,
+          "quality": 80
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/battle",
+          "weight": 10,
+          "quality": 80
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/berries",
+          "weight": 10,
+          "quality": 80
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/diverse",
+          "weight": 10,
+          "quality": 80
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/evolution",
+          "weight": 10,
+          "quality": 80
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/fishing",
+          "weight": 10,
+          "quality": 80
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/medicine",
+          "weight": 10,
+          "quality": 80
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/nature",
+          "weight": 10,
+          "quality": 80
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/pokeballs",
+          "weight": 10,
+          "quality": 80
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/training",
+          "weight": 10,
+          "quality": 80
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 51,
+            "max": 75
+          }
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:binomial",
+        "n": 2,
+        "p": 0.35
+      },
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/battle",
+          "weight": 714
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/berries",
+          "weight": 714
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/diverse",
+          "weight": 714
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/fishing",
+          "weight": 714
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/medicine",
+          "weight": 714
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/nature",
+          "weight": 714
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/pokeballs",
+          "weight": 714
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/archeology",
+          "weight": 300,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/battle",
+          "weight": 300,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/berries",
+          "weight": 300,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/diverse",
+          "weight": 300,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/evolution",
+          "weight": 300,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/fishing",
+          "weight": 300,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/medicine",
+          "weight": 300,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/nature",
+          "weight": 300,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/pokeballs",
+          "weight": 300,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/training",
+          "weight": 300,
+          "quality": 600
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/archeology",
+          "weight": 118,
+          "quality": 472
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/battle",
+          "weight": 118,
+          "quality": 472
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/berries",
+          "weight": 118,
+          "quality": 472
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/diverse",
+          "weight": 118,
+          "quality": 472
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/evolution",
+          "weight": 118,
+          "quality": 472
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/fishing",
+          "weight": 118,
+          "quality": 472
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/medicine",
+          "weight": 118,
+          "quality": 472
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/nature",
+          "weight": 118,
+          "quality": 472
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/pokeballs",
+          "weight": 118,
+          "quality": 472
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/tms",
+          "weight": 118,
+          "quality": 472
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/training",
+          "weight": 118,
+          "quality": 472
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/archeology",
+          "weight": 55,
+          "quality": 220
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/battle",
+          "weight": 55,
+          "quality": 220
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/berries",
+          "weight": 55,
+          "quality": 220
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/diverse",
+          "weight": 55,
+          "quality": 220
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/evolution",
+          "weight": 55,
+          "quality": 220
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/fishing",
+          "weight": 55,
+          "quality": 220
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/medicine",
+          "weight": 55,
+          "quality": 220
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/nature",
+          "weight": 55,
+          "quality": 220
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/pokeballs",
+          "weight": 55,
+          "quality": 220
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/tms",
+          "weight": 55,
+          "quality": 220
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/training",
+          "weight": 55,
+          "quality": 220
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/archeology",
+          "weight": 10,
+          "quality": 80
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/battle",
+          "weight": 10,
+          "quality": 80
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/berries",
+          "weight": 10,
+          "quality": 80
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/diverse",
+          "weight": 10,
+          "quality": 80
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/evolution",
+          "weight": 10,
+          "quality": 80
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/fishing",
+          "weight": 10,
+          "quality": 80
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/medicine",
+          "weight": 10,
+          "quality": 80
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/nature",
+          "weight": 10,
+          "quality": 80
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/pokeballs",
+          "weight": 10,
+          "quality": 80
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/training",
+          "weight": 10,
+          "quality": 80
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 51,
+            "max": 75
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/battle",
+          "weight": 571
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/berries",
+          "weight": 571
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/diverse",
+          "weight": 571
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/fishing",
+          "weight": 571
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/medicine",
+          "weight": 571
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/nature",
+          "weight": 571
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/pokeballs",
+          "weight": 571
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/archeology",
+          "weight": 320,
+          "quality": 640
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/battle",
+          "weight": 320,
+          "quality": 640
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/berries",
+          "weight": 320,
+          "quality": 640
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/diverse",
+          "weight": 320,
+          "quality": 640
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/evolution",
+          "weight": 320,
+          "quality": 640
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/fishing",
+          "weight": 320,
+          "quality": 640
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/medicine",
+          "weight": 320,
+          "quality": 640
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/nature",
+          "weight": 320,
+          "quality": 640
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/pokeballs",
+          "weight": 320,
+          "quality": 640
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/training",
+          "weight": 320,
+          "quality": 640
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/archeology",
+          "weight": 155,
+          "quality": 620
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/battle",
+          "weight": 155,
+          "quality": 620
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/berries",
+          "weight": 155,
+          "quality": 620
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/diverse",
+          "weight": 155,
+          "quality": 620
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/evolution",
+          "weight": 155,
+          "quality": 620
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/fishing",
+          "weight": 155,
+          "quality": 620
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/medicine",
+          "weight": 155,
+          "quality": 620
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/nature",
+          "weight": 155,
+          "quality": 620
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/pokeballs",
+          "weight": 155,
+          "quality": 620
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/tms",
+          "weight": 155,
+          "quality": 620
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/training",
+          "weight": 155,
+          "quality": 620
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/archeology",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/battle",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/berries",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/diverse",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/evolution",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/fishing",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/medicine",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/nature",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/pokeballs",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/tms",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/training",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/archeology",
+          "weight": 20,
+          "quality": 160
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/battle",
+          "weight": 20,
+          "quality": 160
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/berries",
+          "weight": 20,
+          "quality": 160
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/diverse",
+          "weight": 20,
+          "quality": 160
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/evolution",
+          "weight": 20,
+          "quality": 160
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/fishing",
+          "weight": 20,
+          "quality": 160
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/medicine",
+          "weight": 20,
+          "quality": 160
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/nature",
+          "weight": 20,
+          "quality": 160
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/pokeballs",
+          "weight": 20,
+          "quality": 160
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/training",
+          "weight": 20,
+          "quality": 160
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 76,
+            "max": 100
+          }
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:binomial",
+        "n": 2,
+        "p": 0.45
+      },
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/battle",
+          "weight": 571
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/berries",
+          "weight": 571
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/diverse",
+          "weight": 571
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/fishing",
+          "weight": 571
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/medicine",
+          "weight": 571
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/nature",
+          "weight": 571
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/common/pokeballs",
+          "weight": 571
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/archeology",
+          "weight": 320,
+          "quality": 640
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/battle",
+          "weight": 320,
+          "quality": 640
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/berries",
+          "weight": 320,
+          "quality": 640
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/diverse",
+          "weight": 320,
+          "quality": 640
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/evolution",
+          "weight": 320,
+          "quality": 640
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/fishing",
+          "weight": 320,
+          "quality": 640
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/medicine",
+          "weight": 320,
+          "quality": 640
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/nature",
+          "weight": 320,
+          "quality": 640
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/pokeballs",
+          "weight": 320,
+          "quality": 640
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/uncommon/training",
+          "weight": 320,
+          "quality": 640
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/archeology",
+          "weight": 155,
+          "quality": 620
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/battle",
+          "weight": 155,
+          "quality": 620
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/berries",
+          "weight": 155,
+          "quality": 620
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/diverse",
+          "weight": 155,
+          "quality": 620
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/evolution",
+          "weight": 155,
+          "quality": 620
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/fishing",
+          "weight": 155,
+          "quality": 620
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/medicine",
+          "weight": 155,
+          "quality": 620
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/nature",
+          "weight": 155,
+          "quality": 620
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/pokeballs",
+          "weight": 155,
+          "quality": 620
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/tms",
+          "weight": 155,
+          "quality": 620
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/training",
+          "weight": 155,
+          "quality": 620
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/archeology",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/battle",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/berries",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/diverse",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/evolution",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/fishing",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/medicine",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/nature",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/pokeballs",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/tms",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/training",
+          "weight": 82,
+          "quality": 328
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/archeology",
+          "weight": 20,
+          "quality": 160
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/battle",
+          "weight": 20,
+          "quality": 160
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/berries",
+          "weight": 20,
+          "quality": 160
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/diverse",
+          "weight": 20,
+          "quality": 160
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/evolution",
+          "weight": 20,
+          "quality": 160
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/fishing",
+          "weight": 20,
+          "quality": 160
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/medicine",
+          "weight": 20,
+          "quality": 160
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/nature",
+          "weight": 20,
+          "quality": 160
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/pokeballs",
+          "weight": 20,
+          "quality": 160
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/training",
+          "weight": 20,
+          "quality": 160
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "rctmod:level_range",
+          "range": {
+            "min": 76,
+            "max": 100
+          }
+        }
+      ]
+    }
+  ],
+  "random_sequence": "rctmod:trainers/default"
+}

@@ -1,0 +1,53 @@
+{
+  "pools": [
+    {
+      "rolls": {
+        "min": 1,
+        "max": 1
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:ancient_azure_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:ancient_citrine_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:ancient_feather_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:ancient_heavy_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:ancient_ivory_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:ancient_poke_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:ancient_roseate_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:ancient_slate_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:ancient_verdant_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:sky_tumblestone"
+        }
+      ]
+    }
+  ],
+  "random_sequence": "rctmod:generic/uncommon/archeology"
+}

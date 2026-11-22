@@ -23,6 +23,7 @@ import org.ppvon.ultimateCobblemonProgression.common.regions.RegionProgressTrack
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionRegistry;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionSpecies;
 import org.ppvon.ultimateCobblemonProgression.common.regions.TierCatches;
+import org.ppvon.ultimateCobblemonProgression.common.regions.WildTrainers;
 import org.ppvon.ultimateCobblemonProgression.common.tiers.TierDef;
 import org.ppvon.ultimateCobblemonProgression.common.tiers.TierRegistry;
 import org.ppvon.ultimateCobblemonProgression.common.tiers.UltimateCobblemonProgressionTierExt;
@@ -30,6 +31,7 @@ import org.ppvon.ultimateCobblemonProgression.common.tiers.UltimateCobblemonProg
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Set;
 import java.util.function.Predicate;
 
 import static org.ppvon.ultimateCobblemonProgression.common.card.TrainerCardData.*;
@@ -131,7 +133,27 @@ final class TrainerCardDataBuilder {
                 levelCap(player, region, step), counts.seen(), counts.caught(), next, hint, allDone,
                 road, regionEntries, wild, regionChoices, choosingNext,
                 difficulties ? GymDifficulty.of(player).title : "", difficulties && GymDifficulty.playerChooses(),
-                GymDifficulty.needsChoice(player));
+                GymDifficulty.needsChoice(player), wildTrainers(player, progress));
+    }
+
+    /** Each open region's wild trainers, weakest first, and whether the player has beaten each one. */
+    private static List<TrainerGroup> wildTrainers(ServerPlayer player, RegionProgress progress) {
+        if (!RctBridge.isLoaded()) return List.of();
+        Set<String> beaten = TrainerLevelComponents.KEY.get(player).getBeatenWildTrainers();
+        List<RegionDef> regions = RegionRegistry.ordered();
+        List<TrainerGroup> groups = new ArrayList<>();
+        for (int r : progress.priorityOrder()) {
+            RegionDef region = regions.get(r);
+            if (!progress.isUnlocked(r) || region.wildTrainers.isEmpty()) continue;
+            List<WildTrainer> trainers = new ArrayList<>();
+            for (String id : region.wildTrainers) {
+                WildTrainers.info(player.server, id).ifPresent(info ->
+                        trainers.add(new WildTrainer(info.name(), info.level(), beaten.contains(id))));
+            }
+            trainers.sort(Comparator.comparingInt(WildTrainer::level).thenComparing(WildTrainer::name));
+            groups.add(new TrainerGroup(region.title, trainers));
+        }
+        return groups;
     }
 
     /** The trainers listed in a region's tiers, with the player's status against each. */
@@ -200,7 +222,7 @@ final class TrainerCardDataBuilder {
         return new TrainerCardData(player.getGameProfile().getName(), false, "Trainer level", level, TierRegistry.maxTier(),
                 TierRegistry.getCapForTier(level), counts.seen(), counts.caught(), Component.empty(), hint,
                 TierRegistry.get(level + 1).isEmpty(), List.of(), List.of(),
-                List.of(new WildGroup("Your level", upcoming, species)), List.of(), false, "", false, false);
+                List.of(new WildGroup("Your level", upcoming, species)), List.of(), false, "", false, false, List.of());
     }
 
     // ------------------------------------------------------------------ shared

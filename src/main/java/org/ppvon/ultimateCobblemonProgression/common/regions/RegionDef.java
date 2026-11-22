@@ -43,11 +43,17 @@ public final class RegionDef {
     public final Set<String> formAspects;
     /** Tier index (1-based, consecutive) to tier definition. */
     public final SortedMap<Integer, TierDef> tiers;
+    /**
+     * Radical Cobblemon Trainers' wild trainers from this region (wild_trainers.json): in region mode they only spawn
+     * for players who have the region open, and the Trainer Card counts the ones they've beaten.
+     */
+    public final List<String> wildTrainers;
     private final Map<Integer, Integer> realSpeciesByTier = new HashMap<>();
     /** The Cobblemon species belonging to each tier of this region (a species listed in several regions counts in the first). */
     private final Map<Integer, List<Species>> speciesByTier = new HashMap<>();
 
-    public RegionDef(String id, Meta meta, SortedMap<Integer, TierDef> tiers) {
+    public RegionDef(String id, Meta meta, SortedMap<Integer, TierDef> tiers, List<String> wildTrainers) {
+        this.wildTrainers = List.copyOf(wildTrainers);
         this.id = id;
         this.order = meta.order;
         this.title = meta.title.orElse(id);
@@ -94,6 +100,13 @@ public final class RegionDef {
 
     void addSpecies(int tier, Species species) {
         speciesByTier.computeIfAbsent(tier, t -> new ArrayList<>()).add(species);
+    }
+
+    /** Contents of wild_trainers.json. */
+    public record WildTrainerList(List<String> trainers) {
+        public static final Codec<WildTrainerList> CODEC = RecordCodecBuilder.create(i -> i.group(
+                Codec.STRING.listOf().fieldOf("trainers").forGetter(WildTrainerList::trainers)
+        ).apply(i, WildTrainerList::new));
     }
 
     /** Contents of region.json. */

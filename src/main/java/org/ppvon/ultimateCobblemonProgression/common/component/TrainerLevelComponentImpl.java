@@ -5,20 +5,29 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.StringTag;
 import net.minecraft.nbt.Tag;
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
 import org.ladysnake.cca.api.v3.component.sync.AutoSyncedComponent;
 import org.ppvon.ultimateCobblemonProgression.common.tiers.TierRegistry;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 public class TrainerLevelComponentImpl implements TrainerLevelComponent, AutoSyncedComponent {
+    private static final String BEATEN_WILD_TRAINERS = "BeatenWildTrainers";
+
     private int level = 1;
     private String startRegion = null;
     private String homeRegion = null;
     private String gymDifficulty = null;
     private final List<String> nextRegions = new ArrayList<>();
+    /** Server only: never sent to clients (see writeSyncPacket), since the Trainer Card is worked out on the server. */
+    private final Set<String> beatenWildTrainers = new LinkedHashSet<>();
     private final Player player;
     private boolean loadedFromNbt = false;
 
@@ -80,6 +89,17 @@ public class TrainerLevelComponentImpl implements TrainerLevelComponent, AutoSyn
     }
 
     @Override
+    public Set<String> getBeatenWildTrainers() {
+        return Collections.unmodifiableSet(beatenWildTrainers);
+    }
+
+    @Override
+    public boolean addBeatenWildTrainer(String trainerId) {
+        // No sync: clients never see this record.
+        return trainerId != null && beatenWildTrainers.add(trainerId);
+    }
+
+    @Override
     public Optional<String> getGymDifficulty() {
         return Optional.ofNullable(gymDifficulty);
     }
@@ -103,6 +123,10 @@ public class TrainerLevelComponentImpl implements TrainerLevelComponent, AutoSyn
         for (Tag t : tag.getList("NextRegions", Tag.TAG_STRING)) {
             this.nextRegions.add(t.getAsString());
         }
+        this.beatenWildTrainers.clear();
+        for (Tag t : tag.getList(BEATEN_WILD_TRAINERS, Tag.TAG_STRING)) {
+            this.beatenWildTrainers.add(t.getAsString());
+        }
     }
 
     @Override
@@ -122,6 +146,20 @@ public class TrainerLevelComponentImpl implements TrainerLevelComponent, AutoSyn
             for (String id : this.nextRegions) list.add(StringTag.valueOf(id));
             tag.put("NextRegions", list);
         }
+        if (!this.beatenWildTrainers.isEmpty()) {
+            ListTag list = new ListTag();
+            for (String id : this.beatenWildTrainers) list.add(StringTag.valueOf(id));
+            tag.put(BEATEN_WILD_TRAINERS, list);
+        }
+    }
+
+    /** Like the default sync packet (the saved data), minus the beaten wild trainers, which can be over a thousand ids. */
+    @Override
+    public void writeSyncPacket(RegistryFriendlyByteBuf buf, ServerPlayer recipient) {
+        CompoundTag tag = new CompoundTag();
+        writeToNbt(tag, buf.registryAccess());
+        tag.remove(BEATEN_WILD_TRAINERS);
+        buf.writeNbt(tag);
     }
 
     public boolean loadedFromNbt() {

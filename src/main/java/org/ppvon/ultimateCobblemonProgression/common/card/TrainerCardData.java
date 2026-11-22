@@ -21,6 +21,8 @@ import java.util.List;
  *                   no Hard leaders
  * @param difficultyChangeable whether the player can change it (players choose, rather than the server config)
  * @param choosingDifficulty   whether the card first asks the player to pick a difficulty
+ * @param wildTrainers  per open region, the Radical Cobblemon Trainers wild trainers it lists and which the player has
+ *                   beaten. Empty without RCT or outside region mode
  */
 public record TrainerCardData(
         String player,
@@ -41,7 +43,8 @@ public record TrainerCardData(
         boolean choosingNext,
         String difficulty,
         boolean difficultyChangeable,
-        boolean choosingDifficulty
+        boolean choosingDifficulty,
+        List<TrainerGroup> wildTrainers
 ) {
     public static final int BEATEN = 0, NEXT = 1, LATER = 2;
     public static final int LOCKED = 0, OPEN = 1, COMPLETE = 2;
@@ -67,6 +70,16 @@ public record TrainerCardData(
 
     /** A league region the player can start their journey in, or travel to next, shown on the card's choice screen. */
     public record RegionChoice(String id, String title, int trainers, int species, Component firstTrainer) {}
+
+    /** A region's wild trainers, weakest first. */
+    public record TrainerGroup(String title, List<WildTrainer> trainers) {
+        public long beaten() {
+            return trainers.stream().filter(WildTrainer::beaten).count();
+        }
+    }
+
+    /** A wild trainer: its name, the level of its strongest Pokémon, and whether the player has beaten it. */
+    public record WildTrainer(String name, int level, boolean beaten) {}
 
     /** Whether the card should first ask the player where their journey starts, or where it goes next. */
     public boolean needsChoice() {
@@ -139,6 +152,16 @@ public record TrainerCardData(
         buf.writeUtf(d.difficulty);
         buf.writeBoolean(d.difficultyChangeable);
         buf.writeBoolean(d.choosingDifficulty);
+        buf.writeVarInt(d.wildTrainers.size());
+        for (TrainerGroup g : d.wildTrainers) {
+            buf.writeUtf(g.title);
+            buf.writeVarInt(g.trainers.size());
+            for (WildTrainer t : g.trainers) {
+                buf.writeUtf(t.name);
+                buf.writeVarInt(t.level);
+                buf.writeBoolean(t.beaten);
+            }
+        }
     }
 
     private static TrainerCardData read(RegistryFriendlyByteBuf buf) {
@@ -181,8 +204,15 @@ public record TrainerCardData(
         String difficulty = buf.readUtf();
         boolean difficultyChangeable = buf.readBoolean();
         boolean choosingDifficulty = buf.readBoolean();
+        List<TrainerGroup> wildTrainers = new ArrayList<>();
+        for (int i = buf.readVarInt(); i > 0; i--) {
+            String title = buf.readUtf();
+            List<WildTrainer> trainers = new ArrayList<>();
+            for (int j = buf.readVarInt(); j > 0; j--) trainers.add(new WildTrainer(buf.readUtf(), buf.readVarInt(), buf.readBoolean()));
+            wildTrainers.add(new TrainerGroup(title, trainers));
+        }
         return new TrainerCardData(player, regionMode, regionTitle, tier, maxTier, levelCap, seen, caught,
                 next, hint, allDone, road, regions, wild, regionChoices, choosingNext, difficulty, difficultyChangeable,
-                choosingDifficulty);
+                choosingDifficulty, wildTrainers);
     }
 }

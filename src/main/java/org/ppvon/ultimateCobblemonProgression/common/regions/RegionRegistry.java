@@ -19,6 +19,8 @@ public final class RegionRegistry {
     private static Set<String> LEAGUE_TRAINERS = Set.of();
     /** Each regional-form aspect to the index of the region it belongs to. */
     private static Map<String, Integer> FORM_ASPECT_REGIONS = Map.of();
+    /** Each RCT wild trainer listed in a region's wild_trainers.json to that region's index. */
+    private static Map<String, Integer> WILD_TRAINER_REGIONS = Map.of();
 
     private RegionRegistry() {}
 
@@ -44,6 +46,25 @@ public final class RegionRegistry {
             }
         }
         FORM_ASPECT_REGIONS = Map.copyOf(formAspects);
+
+        Map<String, Integer> wildTrainers = new HashMap<>();
+        for (int r = 0; r < REGIONS.size(); r++) {
+            RegionDef region = REGIONS.get(r);
+            for (String trainerId : region.wildTrainers) {
+                Integer previous = wildTrainers.putIfAbsent(trainerId, r);
+                if (previous != null && previous != r) {
+                    UltimateCobblemonProgression.LOG.warn("Wild trainer '{}' is listed in regions '{}' and '{}'; keeping '{}'",
+                            trainerId, REGIONS.get(previous).id, region.id, REGIONS.get(previous).id);
+                }
+            }
+        }
+        WILD_TRAINER_REGIONS = Map.copyOf(wildTrainers);
+    }
+
+    /** The index of the region whose wild_trainers.json lists this RCT trainer, or -1 if none does. */
+    public static int wildTrainerRegion(String trainerId) {
+        Integer r = WILD_TRAINER_REGIONS.get(trainerId);
+        return r != null ? r : -1;
     }
 
     /**
