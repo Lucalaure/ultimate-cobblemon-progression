@@ -1,3 +1,10 @@
+# Unreleased
+
+## Fixes
+- **Baby Pokémon no longer go missing.** Toxel, Riolu, Pichu, Cleffa, Happiny, Smoochum, Igglybuff and others only spawn in herds led by their evolution (Toxel's by Toxtricity). While the evolution was still locked, CJP cancelled the leader and most of the herd after Cobblemon had picked them, so these Pokémon were very rare, and with Catch Every Pokémon on they could hold a tier back for a long time. Locked members are now left out before the herd is picked, so until Toxtricity unlocks, a Toxel herd is all Toxel.
+- **No more gym leaders in the wild.** Radical Cobblemon Trainers' other leagues (the rest of Radical Red, like Clair and its Elite Four, and all of Unbound's leaders, Elite Four and Champions) still spawned naturally and could battle you. The built-in leagues datapack now turns their natural spawning off, as it already did for Kanto and Sinnoh. Ordinary trainers spawn as before.
+- **The Trainer Association no longer spawns in region mode.** RCT's Trainer Association NPC let players join another series, or switch to freeroam (level cap 100) after finishing a league, getting around the journey and its level cap. While region mode is on, CJP keeps it from spawning; without region mode, RCT's `spawnTrainerAssociation` setting applies as before.
+
 # CJP 2.3.0
 
 ## Features

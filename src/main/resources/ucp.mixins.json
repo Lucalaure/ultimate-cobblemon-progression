@@ -6,12 +6,14 @@
   "mixins": [
     "SpeciesTierMixin",
     "BasicSpawnerMixin",
+    "PokemonHerdSpawnDetailMixin",
     "PlayerAdvancementsMixin",
     "StructureTemplatePoolAccessor",
     "JigsawPlacementMixin",
     "RctDefeatCountTriggerMixin",
     "RctHardTrainerResourcesMixin",
-    "RctRematchBattleMixin"
+    "RctRematchBattleMixin",
+    "RctTrainerAssociationMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -62,6 +62,8 @@ This applies to every kind of Cobblemon spawn: normal world spawns, fishing, Pok
 
 **Which player counts.** Cobblemon runs spawning separately around each player. The check uses the player whose spawner made the attempt. If two players are together, Pokémon spawned by the higher-tier player's spawner can appear near both of them. If a spawn isn't tied to a player, the nearest player within 128 blocks counts; if nobody is that close, tiered species are blocked.
 
+**Herds.** Many Pokémon spawn in herds, and some only in herds led by their evolution: Toxel's herds are led by Toxtricity, Riolu's by Lucario, Pichu's by Pikachu. Herd members you can't meet yet are left out, and the herd forms from the rest: until Toxtricity unlocks for you, a Toxel herd is all Toxel.
+
 **Legendaries.** Base Cobblemon doesn't spawn legendaries, mythicals, Ultra Beasts or Paradox Pokémon in the wild at all. Most of them sit in tiers 6 and 7 (a few weak ones, like Cosmog, Meltan, Kubfu and Poipole, are lower) so that anything else that spawns them (other mods, datapacks) follows the same rules.
 
 ---
@@ -372,6 +374,8 @@ Only the region you pick opens. Everything you'd already opened stays open, and 
 
 The pick is permanent and there's no command to undo it, since it also switches your Radical Cobblemon Trainers series. On the Trainer Card, the Road and trainer counts for a finished region still show its trainers as beaten after you switch series, because CJP counts every trainer of an unlocked tier as beaten.
 
+Since CJP decides your series in region mode, RCT's **Trainer Association** NPC doesn't spawn while region mode is on: it would let you join another series, or switch to RCT's freeroam (level cap 100) after finishing a league, and skip past your journey. Without region mode, RCT's own `spawnTrainerAssociation` setting applies.
+
 ### Catch every Pokémon (optional)
 
 With `catchWholeTier` on in `ucp-common.json` (or **Catch Every Pokémon to Advance** in the Mod Menu screen), moving on in a league takes two things: beating the tier's gym leader **and** having caught every Pokémon of the tier you're on. In Kanto, tier 2 needs Brock beaten and all 16 tier-1 Pokémon caught; tier 3 needs Misty and every tier-2 Pokémon; and so on.
@@ -437,7 +441,8 @@ When Radical Cobblemon Trainers is installed, CJP turns on a built-in datapack, 
 - a 10-tier **Kanto**, with each tier after the first unlocked by one of its gym leaders, and the Champion completing it;
 - Kanto's RCT trainers: the 8 leaders (Brock, Misty, Lt. Surge, Erika, Koga, Sabrina, Blaine and Giovanni), the Elite Four (either Agatha counts) and the Champion, with FireRed/LeafGreen-style teams, in a `kanto` series, and their natural spawning turned off so they only appear in gyms;
 - a 10-tier **Sinnoh**, built the same way from RCT's own Brilliant Diamond/Shining Pearl trainers: Roark, Gardenia, Maylene, Wake, Fantina, Byron, Candice and Volkner, then Aaron, Bertha, Flint, Lucian and Champion Cynthia, in a `sinnoh` series. Their teams are RCT's (aces from level 14 to 66), and each one requires the one before it, so RCT's level cap follows the league (15 at the start, then each next trainer's level). Each tier's cap is the level of the next trainer's strongest Pokémon, as in Kanto;
-- every other region (Johto, Hoenn, Unova, Kalos, Alola, Galar, Paldea) as an optional extra region, unlocking with either league's badges.
+- every other region (Johto, Hoenn, Unova, Kalos, Alola, Galar, Paldea) as an optional extra region, unlocking with either league's badges;
+- natural spawning turned off for the leaders, Elite Four and Champions of RCT's other leagues (the rest of the Radical Red series, such as Clair and its Elite Four, and all of Unbound's), so no gym leader wanders the wild outside CJP's gyms. RCT's ordinary trainers still spawn as usual.
 
 The two leagues' tiers:
 

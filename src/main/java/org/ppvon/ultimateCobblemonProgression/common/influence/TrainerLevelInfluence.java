@@ -15,6 +15,7 @@ import com.cobblemon.mod.common.api.spawning.detail.PokemonSpawnDetail;
 import com.cobblemon.mod.common.api.spawning.detail.SpawnAction;
 import com.cobblemon.mod.common.api.spawning.detail.SpawnDetail;
 import com.cobblemon.mod.common.api.spawning.influence.SpawningInfluence;
+import com.cobblemon.mod.common.api.spawning.selection.SpawnSelectionData;
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
@@ -26,6 +27,8 @@ import org.ppvon.ultimateCobblemonProgression.common.progression.TierStanding;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionalForms;
 import org.ppvon.ultimateCobblemonProgression.config.ConfigLoader;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.function.Supplier;
 
@@ -140,15 +143,45 @@ public final class TrainerLevelInfluence implements SpawningInfluence {
 
     /**
      * Herds (and alphas, which are herds with a leader) list several species in one spawn entry.
-     * The herd may spawn if any member is allowed; locked members are cancelled one by one in
-     * {@link #onEntitySpawn}.
+     * The herd may spawn if any member is allowed; locked members are left out of the herd by
+     * {@link #allowedHerdMembers}, and {@link #onEntitySpawn} cancels any that still get through.
      */
     private static boolean anyHerdMemberAllowed(PokemonHerdSpawnDetail herd, ServerPlayer player) {
         for (var member : herd.getHerdablePokemon()) {
-            Species sp = speciesOf(member.getPokemon().getSpecies());
-            if ((sp == null || isAllowed(sp, player)) && RegionalForms.isAllowed(member.getPokemon().getAspects(), player)) return true;
+            if (isHerdMemberAllowed(member, player)) return true;
         }
         return false;
+    }
+
+    private static boolean isHerdMemberAllowed(PokemonHerdSpawnDetail.Herdable member, ServerPlayer player) {
+        Species sp = speciesOf(member.getPokemon().getSpecies());
+        return (sp == null || isAllowed(sp, player)) && RegionalForms.isAllowed(member.getPokemon().getAspects(), player);
+    }
+
+    /** Key in a spawn selection's context for the player a herd is being spawned for. */
+    private static final String HERD_PLAYER_KEY = "ultimate-cobblemon-progression:herd_player";
+
+    /** Remembers which player a herd is spawning for; called before Cobblemon picks each herd member. */
+    public static void rememberHerdPlayer(SpawnSelectionData selection, SpawnablePosition position) {
+        ServerPlayer player = resolvePlayer(position);
+        if (player != null) selection.getContext().put(HERD_PLAYER_KEY, player);
+    }
+
+    /**
+     * The herd members Cobblemon may pick from, without the locked ones. Many herds are led by an evolved
+     * Pokémon (Toxel herds by Toxtricity, Pichu's by Pikachu); cancelling a locked leader after the fact
+     * wasted its slot and most of the herd, so the low-tier members almost never appeared. Dropping them
+     * here lets the herd form from what the player can meet: with no allowed leader, it's all followers.
+     */
+    public static List<PokemonHerdSpawnDetail.Herdable> allowedHerdMembers(List<PokemonHerdSpawnDetail.Herdable> members,
+                                                                          SpawnSelectionData selection) {
+        if (!ConfigLoader.DO_SPECIES_BLOCKING.get() || !TierStanding.hasTierData()) return members;
+        if (!(selection.getContext().get(HERD_PLAYER_KEY) instanceof ServerPlayer player)) return members;
+        List<PokemonHerdSpawnDetail.Herdable> allowed = new ArrayList<>(members.size());
+        for (var member : members) {
+            if (isHerdMemberAllowed(member, player)) allowed.add(member);
+        }
+        return allowed.size() == members.size() ? members : allowed;
     }
 
     /**
