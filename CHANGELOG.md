@@ -1,4 +1,4 @@
-# Unreleased
+# CJP 2.4.0
 
 ## Features
 - **Trainer levels on name tags.** Radical Cobblemon Trainers' trainers show their level next to their name, e.g. "Ace Trainer Kendra Lv 22": the level of their strongest Pokémon, which is what decides their loot. Only the name over their head changes, not chat or battle messages.
