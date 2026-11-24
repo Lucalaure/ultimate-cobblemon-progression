@@ -1,3 +1,11 @@
+# CJP 2.5.2
+
+## Fixes
+- **Fishing follows your regions.** Pokémon fished up with a Poké Rod ignored region mode: any species could bite, whatever you had unlocked. Fishing now works like wild spawns: only Pokémon of your open regions and reached tiers bite, regional forms follow their own region, and fished Pokémon get the same spawn weights and levels as wild ones. If every Pokémon a cast could catch is still locked, nothing bites.
+- **Mod Menu config pages no longer overlap.** Settings ran into each other (Give Trainer Card on First Join over Allow Two Leagues) and, in smaller windows or at larger GUI scales, into the Save and Cancel buttons or off the screen. Both pages now list one setting per row and scroll when the window is too short. The two-league level cap is now its own button, Two-League Level Cap.
+- **Trainer Card buttons fit their labels.** The Road tab's Switch to Normal/Hard button was too narrow for its bold label, which spilled past its edges; the card's other buttons are now sized for their labels too, and a long league name on the Road tab's Show button is shortened instead of pushing the title aside.
+- The gym choice and rematch menus keep a row's colours when a long name is cut short.
+
 # CJP 2.5.1
 
 ## Features
