@@ -1,0 +1,68 @@
+{
+  "name": "Sailor Dylan",
+  "team": [
+    {
+      "species": "horsea",
+      "gender": "MALE",
+      "level": 17,
+      "nature": "hasty",
+      "ability": "swiftswim",
+      "moveset": [
+        "bubble",
+        "smokescreen",
+        "leer"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "horsea",
+      "gender": "MALE",
+      "level": 17,
+      "nature": "hasty",
+      "ability": "swiftswim",
+      "moveset": [
+        "bubble",
+        "smokescreen",
+        "leer"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "horsea",
+      "gender": "FEMALE",
+      "level": 17,
+      "nature": "impish",
+      "ability": "swiftswim",
+      "moveset": [
+        "bubble",
+        "smokescreen",
+        "leer"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

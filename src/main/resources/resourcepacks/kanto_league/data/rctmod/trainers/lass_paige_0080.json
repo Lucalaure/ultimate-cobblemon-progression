@@ -1,0 +1,49 @@
+{
+  "name": "Lass Paige",
+  "team": [
+    {
+      "species": "nidoranf",
+      "gender": "FEMALE",
+      "level": 23,
+      "nature": "bashful",
+      "ability": "poisonpoint",
+      "moveset": [
+        "doublekick",
+        "poisonsting",
+        "bite",
+        "helpinghand"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "nidorina",
+      "gender": "FEMALE",
+      "level": 23,
+      "nature": "impish",
+      "ability": "poisonpoint",
+      "moveset": [
+        "tailwhip",
+        "doublekick",
+        "poisonsting",
+        "bite"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

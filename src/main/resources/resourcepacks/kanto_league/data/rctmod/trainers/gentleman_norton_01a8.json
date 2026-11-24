@@ -1,0 +1,27 @@
+{
+  "name": "Gentleman Norton",
+  "team": [
+    {
+      "species": "persian",
+      "gender": "FEMALE",
+      "level": 48,
+      "nature": "impish",
+      "ability": "limber",
+      "moveset": [
+        "payday",
+        "feintattack",
+        "screech",
+        "furyswipes"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "name": "Team Rocket Grunt",
+  "identity": "Team Rocket Grunt (52)",
+  "team": [
+    {
+      "species": "hypno",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "relaxed",
+      "ability": "insomnia",
+      "moveset": [
+        "meditate",
+        "psychic",
+        "psychup",
+        "swagger"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "hypno",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "jolly",
+      "ability": "insomnia",
+      "moveset": [
+        "meditate",
+        "psychic",
+        "psychup",
+        "swagger"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

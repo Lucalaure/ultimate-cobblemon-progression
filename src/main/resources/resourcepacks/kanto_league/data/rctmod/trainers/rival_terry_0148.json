@@ -1,0 +1,25 @@
+{
+  "name": "Rival Terry",
+  "team": [
+    {
+      "species": "charmander",
+      "gender": "MALE",
+      "level": 5,
+      "nature": "brave",
+      "ability": "blaze",
+      "moveset": [
+        "scratch",
+        "growl"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

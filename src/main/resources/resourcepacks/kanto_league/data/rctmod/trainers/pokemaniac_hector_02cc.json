@@ -1,0 +1,49 @@
+{
+  "name": "Pok\u00e9maniac Hector",
+  "team": [
+    {
+      "species": "rhydon",
+      "gender": "MALE",
+      "level": 55,
+      "nature": "docile",
+      "ability": "lightningrod",
+      "moveset": [
+        "scaryface",
+        "rockblast",
+        "horndrill",
+        "takedown"
+      ],
+      "ivs": {
+        "hp": 18,
+        "atk": 18,
+        "def": 18,
+        "spa": 18,
+        "spd": 18,
+        "spe": 18
+      },
+      "evs": {}
+    },
+    {
+      "species": "kangaskhan",
+      "gender": "FEMALE",
+      "level": 55,
+      "nature": "bashful",
+      "ability": "earlybird",
+      "moveset": [
+        "rage",
+        "endure",
+        "dizzypunch",
+        "reversal"
+      ],
+      "ivs": {
+        "hp": 18,
+        "atk": 18,
+        "def": 18,
+        "spa": 18,
+        "spd": 18,
+        "spe": 18
+      },
+      "evs": {}
+    }
+  ]
+}

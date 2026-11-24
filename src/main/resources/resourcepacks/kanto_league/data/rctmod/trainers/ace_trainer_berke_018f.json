@@ -1,0 +1,130 @@
+{
+  "name": "Ace Trainer Berke",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 4
+  },
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "seel",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "lonely",
+      "ability": "thickfat",
+      "moveset": [
+        "takedown",
+        "aurorabeam",
+        "icywind",
+        "growl"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "graveler",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "timid",
+      "ability": "rockhead",
+      "moveset": [
+        "rockblast",
+        "magnitude",
+        "rockthrow",
+        "mudsport"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "kingler",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "naive",
+      "ability": "hypercutter",
+      "moveset": [
+        "guillotine",
+        "stomp",
+        "mudshot",
+        "bubble"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "onix",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "adamant",
+      "ability": "rockhead",
+      "moveset": [
+        "slam",
+        "sandstorm",
+        "dragonbreath",
+        "rockthrow"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "cloyster",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "adamant",
+      "ability": "shellarmor",
+      "moveset": [
+        "spikecannon",
+        "aurorabeam",
+        "supersonic",
+        "protect"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    }
+  ]
+}

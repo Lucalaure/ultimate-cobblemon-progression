@@ -1,0 +1,93 @@
+{
+  "name": "Tamer John",
+  "team": [
+    {
+      "species": "rhyhorn",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "modest",
+      "ability": "lightningrod",
+      "moveset": [
+        "furyattack",
+        "scaryface",
+        "rockblast",
+        "horndrill"
+      ],
+      "ivs": {
+        "hp": 5,
+        "atk": 5,
+        "def": 5,
+        "spa": 5,
+        "spd": 5,
+        "spe": 5
+      },
+      "evs": {}
+    },
+    {
+      "species": "primeape",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "serious",
+      "ability": "vitalspirit",
+      "moveset": [
+        "focusenergy",
+        "seismictoss",
+        "rage",
+        "crosschop"
+      ],
+      "ivs": {
+        "hp": 5,
+        "atk": 5,
+        "def": 5,
+        "spa": 5,
+        "spd": 5,
+        "spe": 5
+      },
+      "evs": {}
+    },
+    {
+      "species": "arbok",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "adamant",
+      "ability": "intimidate",
+      "moveset": [
+        "bite",
+        "glare",
+        "screech",
+        "acid"
+      ],
+      "ivs": {
+        "hp": 5,
+        "atk": 5,
+        "def": 5,
+        "spa": 5,
+        "spd": 5,
+        "spe": 5
+      },
+      "evs": {}
+    },
+    {
+      "species": "tauros",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "timid",
+      "ability": "intimidate",
+      "moveset": [
+        "scaryface",
+        "pursuit",
+        "swagger",
+        "rest"
+      ],
+      "ivs": {
+        "hp": 5,
+        "atk": 5,
+        "def": 5,
+        "spa": 5,
+        "spd": 5,
+        "spe": 5
+      },
+      "evs": {}
+    }
+  ]
+}

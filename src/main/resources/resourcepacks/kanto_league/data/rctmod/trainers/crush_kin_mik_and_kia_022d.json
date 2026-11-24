@@ -1,0 +1,56 @@
+{
+  "name": "Crush Kin Mik & Kia",
+  "battleFormat": "GEN_9_DOUBLES",
+  "team": [
+    {
+      "species": "machoke",
+      "gender": "MALE",
+      "level": 39,
+      "nature": "gentle",
+      "ability": "guts",
+      "moveset": [
+        "seismictoss",
+        "foresight",
+        "revenge",
+        "vitalthrow"
+      ],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      },
+      "evs": {},
+      "heldItem": [
+        "black_belt"
+      ]
+    },
+    {
+      "species": "primeape",
+      "gender": "FEMALE",
+      "level": 39,
+      "nature": "relaxed",
+      "ability": "vitalspirit",
+      "moveset": [
+        "focusenergy",
+        "seismictoss",
+        "rage",
+        "crosschop"
+      ],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      },
+      "evs": {},
+      "heldItem": [
+        "black_belt"
+      ]
+    }
+  ]
+}

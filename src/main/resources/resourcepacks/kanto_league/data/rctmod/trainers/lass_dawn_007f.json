@@ -1,0 +1,49 @@
+{
+  "name": "Lass Dawn",
+  "team": [
+    {
+      "species": "rattata",
+      "gender": "FEMALE",
+      "level": 18,
+      "nature": "hardy",
+      "ability": "runaway",
+      "moveset": [
+        "tackle",
+        "tailwhip",
+        "quickattack",
+        "hyperfang"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "pikachu",
+      "gender": "FEMALE",
+      "level": 18,
+      "nature": "brave",
+      "ability": "static",
+      "moveset": [
+        "tailwhip",
+        "thunderwave",
+        "quickattack",
+        "doubleteam"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

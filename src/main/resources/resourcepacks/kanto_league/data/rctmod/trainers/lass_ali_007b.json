@@ -1,0 +1,67 @@
+{
+  "name": "Lass Ali",
+  "team": [
+    {
+      "species": "pidgey",
+      "gender": "FEMALE",
+      "level": 12,
+      "nature": "lax",
+      "ability": "keeneye",
+      "moveset": [
+        "tackle",
+        "sandattack",
+        "gust"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "oddish",
+      "gender": "MALE",
+      "level": 12,
+      "nature": "quiet",
+      "ability": "chlorophyll",
+      "moveset": [
+        "absorb",
+        "sweetscent"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "bellsprout",
+      "gender": "MALE",
+      "level": 12,
+      "nature": "impish",
+      "ability": "chlorophyll",
+      "moveset": [
+        "vinewhip",
+        "growth",
+        "wrap"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

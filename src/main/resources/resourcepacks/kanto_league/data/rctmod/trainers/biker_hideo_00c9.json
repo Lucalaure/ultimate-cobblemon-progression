@@ -1,0 +1,27 @@
+{
+  "name": "Biker Hideo",
+  "team": [
+    {
+      "species": "weezing",
+      "gender": "FEMALE",
+      "level": 33,
+      "nature": "lonely",
+      "ability": "levitate",
+      "moveset": [
+        "selfdestruct",
+        "sludge",
+        "smokescreen",
+        "haze"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

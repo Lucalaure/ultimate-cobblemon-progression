@@ -1,0 +1,71 @@
+{
+  "name": "Biker Ruben",
+  "team": [
+    {
+      "species": "weezing",
+      "gender": "MALE",
+      "level": 28,
+      "nature": "hasty",
+      "ability": "levitate",
+      "moveset": [
+        "smokescreen",
+        "sludge",
+        "smog",
+        "tackle"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "koffing",
+      "gender": "MALE",
+      "level": 28,
+      "nature": "quiet",
+      "ability": "levitate",
+      "moveset": [
+        "smokescreen",
+        "sludge",
+        "smog",
+        "tackle"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "weezing",
+      "gender": "MALE",
+      "level": 28,
+      "nature": "hardy",
+      "ability": "levitate",
+      "moveset": [
+        "smokescreen",
+        "sludge",
+        "smog",
+        "tackle"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

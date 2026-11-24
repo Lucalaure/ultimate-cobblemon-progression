@@ -1,0 +1,49 @@
+{
+  "name": "Scientist Ted",
+  "team": [
+    {
+      "species": "electrode",
+      "gender": "GENDERLESS",
+      "level": 29,
+      "nature": "naive",
+      "ability": "soundproof",
+      "moveset": [
+        "screech",
+        "sonicboom",
+        "spark",
+        "selfdestruct"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "weezing",
+      "gender": "FEMALE",
+      "level": 29,
+      "nature": "jolly",
+      "ability": "levitate",
+      "moveset": [
+        "smog",
+        "selfdestruct",
+        "sludge",
+        "smokescreen"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

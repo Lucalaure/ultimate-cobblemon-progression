@@ -1,0 +1,55 @@
+{
+  "name": "Crush Girl Jocelyn",
+  "team": [
+    {
+      "species": "hitmonchan",
+      "gender": "MALE",
+      "level": 38,
+      "nature": "quirky",
+      "ability": "keeneye",
+      "moveset": [
+        "icepunch",
+        "firepunch",
+        "skyuppercut",
+        "megapunch"
+      ],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      },
+      "evs": {},
+      "heldItem": [
+        "black_belt"
+      ]
+    },
+    {
+      "species": "hitmonchan",
+      "gender": "MALE",
+      "level": 38,
+      "nature": "serious",
+      "ability": "keeneye",
+      "moveset": [
+        "icepunch",
+        "firepunch",
+        "skyuppercut",
+        "megapunch"
+      ],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      },
+      "evs": {},
+      "heldItem": [
+        "black_belt"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "name": "Rocker Randall",
+  "team": [
+    {
+      "species": "voltorb",
+      "gender": "GENDERLESS",
+      "level": 20,
+      "nature": "impish",
+      "ability": "soundproof",
+      "moveset": [
+        "charge",
+        "tackle",
+        "screech",
+        "sonicboom"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "magnemite",
+      "gender": "GENDERLESS",
+      "level": 20,
+      "nature": "quiet",
+      "ability": "magnetpull",
+      "moveset": [
+        "tackle",
+        "thundershock",
+        "supersonic",
+        "sonicboom"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "voltorb",
+      "gender": "GENDERLESS",
+      "level": 20,
+      "nature": "hardy",
+      "ability": "soundproof",
+      "moveset": [
+        "charge",
+        "tackle",
+        "screech",
+        "sonicboom"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

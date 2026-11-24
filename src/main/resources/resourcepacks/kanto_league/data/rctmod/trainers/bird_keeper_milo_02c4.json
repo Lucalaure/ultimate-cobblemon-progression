@@ -1,0 +1,49 @@
+{
+  "name": "Bird Keeper Milo",
+  "team": [
+    {
+      "species": "pidgeotto",
+      "gender": "MALE",
+      "level": 53,
+      "nature": "brave",
+      "ability": "keeneye",
+      "moveset": [
+        "wingattack",
+        "featherdance",
+        "agility",
+        "mirrormove"
+      ],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      },
+      "evs": {}
+    },
+    {
+      "species": "pidgeot",
+      "gender": "FEMALE",
+      "level": 55,
+      "nature": "gentle",
+      "ability": "keeneye",
+      "moveset": [
+        "whirlwind",
+        "wingattack",
+        "featherdance",
+        "agility"
+      ],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      },
+      "evs": {}
+    }
+  ]
+}

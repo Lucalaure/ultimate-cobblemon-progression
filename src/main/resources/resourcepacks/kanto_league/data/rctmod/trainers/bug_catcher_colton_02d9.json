@@ -1,0 +1,63 @@
+{
+  "name": "Bug Catcher Colton",
+  "team": [
+    {
+      "species": "metapod",
+      "gender": "FEMALE",
+      "level": 19,
+      "nature": "careful",
+      "ability": "shedskin",
+      "moveset": [
+        "harden"
+      ],
+      "ivs": {
+        "hp": 2,
+        "atk": 2,
+        "def": 2,
+        "spa": 2,
+        "spd": 2,
+        "spe": 2
+      },
+      "evs": {}
+    },
+    {
+      "species": "weedle",
+      "gender": "MALE",
+      "level": 19,
+      "nature": "lonely",
+      "ability": "shielddust",
+      "moveset": [
+        "poisonsting",
+        "stringshot"
+      ],
+      "ivs": {
+        "hp": 2,
+        "atk": 2,
+        "def": 2,
+        "spa": 2,
+        "spd": 2,
+        "spe": 2
+      },
+      "evs": {}
+    },
+    {
+      "species": "metapod",
+      "gender": "MALE",
+      "level": 19,
+      "nature": "modest",
+      "ability": "shedskin",
+      "moveset": [
+        "harden"
+      ],
+      "ivs": {
+        "hp": 2,
+        "atk": 2,
+        "def": 2,
+        "spa": 2,
+        "spd": 2,
+        "spe": 2
+      },
+      "evs": {}
+    }
+  ]
+}

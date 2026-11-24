@@ -1,0 +1,49 @@
+{
+  "name": "Biker Lao",
+  "team": [
+    {
+      "species": "grimer",
+      "gender": "MALE",
+      "level": 29,
+      "nature": "hardy",
+      "ability": "stench",
+      "moveset": [
+        "screech",
+        "minimize",
+        "sludge",
+        "disable"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "koffing",
+      "gender": "FEMALE",
+      "level": 29,
+      "nature": "rash",
+      "ability": "levitate",
+      "moveset": [
+        "smokescreen",
+        "sludge",
+        "smog",
+        "tackle"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

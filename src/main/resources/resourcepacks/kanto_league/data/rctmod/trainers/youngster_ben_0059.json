@@ -1,0 +1,47 @@
+{
+  "name": "Youngster Ben",
+  "team": [
+    {
+      "species": "rattata",
+      "gender": "FEMALE",
+      "level": 11,
+      "nature": "lonely",
+      "ability": "runaway",
+      "moveset": [
+        "tackle",
+        "tailwhip",
+        "quickattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "ekans",
+      "gender": "FEMALE",
+      "level": 11,
+      "nature": "serious",
+      "ability": "intimidate",
+      "moveset": [
+        "wrap",
+        "leer",
+        "poisonsting"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

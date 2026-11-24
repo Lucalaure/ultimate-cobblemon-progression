@@ -1,0 +1,49 @@
+{
+  "name": "Juggler Dalton",
+  "team": [
+    {
+      "species": "kadabra",
+      "gender": "MALE",
+      "level": 29,
+      "nature": "calm",
+      "ability": "synchronize",
+      "moveset": [
+        "disable",
+        "psybeam",
+        "reflect",
+        "recover"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "mrmime",
+      "gender": "MALE",
+      "level": 29,
+      "nature": "sassy",
+      "ability": "soundproof",
+      "moveset": [
+        "reflect",
+        "magicalleaf",
+        "encore",
+        "psybeam"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

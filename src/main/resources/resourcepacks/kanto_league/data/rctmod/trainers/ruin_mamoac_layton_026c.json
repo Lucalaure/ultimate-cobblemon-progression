@@ -1,0 +1,71 @@
+{
+  "name": "Ruin Mamoac Layton",
+  "team": [
+    {
+      "species": "sandslash",
+      "gender": "FEMALE",
+      "level": 48,
+      "nature": "mild",
+      "ability": "sandveil",
+      "moveset": [
+        "poisonsting",
+        "slash",
+        "swift",
+        "furyswipes"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "onix",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "relaxed",
+      "ability": "rockhead",
+      "moveset": [
+        "dragonbreath",
+        "sandstorm",
+        "slam",
+        "irontail"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "sandslash",
+      "gender": "FEMALE",
+      "level": 48,
+      "nature": "relaxed",
+      "ability": "sandveil",
+      "moveset": [
+        "poisonsting",
+        "slash",
+        "swift",
+        "furyswipes"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

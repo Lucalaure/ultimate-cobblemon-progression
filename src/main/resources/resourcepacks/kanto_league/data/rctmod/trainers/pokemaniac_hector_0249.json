@@ -1,0 +1,49 @@
+{
+  "name": "Pok\u00e9maniac Hector",
+  "team": [
+    {
+      "species": "rhyhorn",
+      "gender": "MALE",
+      "level": 49,
+      "nature": "rash",
+      "ability": "lightningrod",
+      "moveset": [
+        "scaryface",
+        "rockblast",
+        "horndrill",
+        "takedown"
+      ],
+      "ivs": {
+        "hp": 4,
+        "atk": 4,
+        "def": 4,
+        "spa": 4,
+        "spd": 4,
+        "spe": 4
+      },
+      "evs": {}
+    },
+    {
+      "species": "kangaskhan",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "impish",
+      "ability": "earlybird",
+      "moveset": [
+        "rage",
+        "endure",
+        "dizzypunch",
+        "reversal"
+      ],
+      "ivs": {
+        "hp": 4,
+        "atk": 4,
+        "def": 4,
+        "spa": 4,
+        "spd": 4,
+        "spe": 4
+      },
+      "evs": {}
+    }
+  ]
+}

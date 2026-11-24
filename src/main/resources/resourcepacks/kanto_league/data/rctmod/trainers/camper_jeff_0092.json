@@ -1,0 +1,49 @@
+{
+  "name": "Camper Jeff",
+  "team": [
+    {
+      "species": "spearow",
+      "gender": "MALE",
+      "level": 16,
+      "nature": "impish",
+      "ability": "keeneye",
+      "moveset": [
+        "peck",
+        "growl",
+        "leer",
+        "furyattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "raticate",
+      "gender": "FEMALE",
+      "level": 16,
+      "nature": "lax",
+      "ability": "runaway",
+      "moveset": [
+        "tackle",
+        "tailwhip",
+        "quickattack",
+        "hyperfang"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

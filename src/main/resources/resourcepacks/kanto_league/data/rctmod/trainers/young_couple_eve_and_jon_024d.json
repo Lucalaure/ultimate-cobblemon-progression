@@ -1,0 +1,50 @@
+{
+  "name": "Young Couple Eve & Jon",
+  "battleFormat": "GEN_9_DOUBLES",
+  "team": [
+    {
+      "species": "golduck",
+      "gender": "FEMALE",
+      "level": 50,
+      "nature": "modest",
+      "ability": "damp",
+      "moveset": [
+        "confusion",
+        "screech",
+        "psychup",
+        "furyswipes"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "psyduck",
+      "gender": "MALE",
+      "level": 50,
+      "nature": "modest",
+      "ability": "damp",
+      "moveset": [
+        "screech",
+        "psychup",
+        "furyswipes",
+        "hydropump"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

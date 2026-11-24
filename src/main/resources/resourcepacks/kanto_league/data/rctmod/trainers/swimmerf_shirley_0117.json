@@ -1,0 +1,71 @@
+{
+  "name": "Swimmer\u2640 Shirley",
+  "team": [
+    {
+      "species": "seadra",
+      "gender": "FEMALE",
+      "level": 30,
+      "nature": "relaxed",
+      "ability": "poisonpoint",
+      "moveset": [
+        "smokescreen",
+        "leer",
+        "watergun",
+        "twister"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "horsea",
+      "gender": "FEMALE",
+      "level": 30,
+      "nature": "modest",
+      "ability": "swiftswim",
+      "moveset": [
+        "smokescreen",
+        "leer",
+        "watergun",
+        "twister"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "seadra",
+      "gender": "MALE",
+      "level": 30,
+      "nature": "relaxed",
+      "ability": "poisonpoint",
+      "moveset": [
+        "smokescreen",
+        "leer",
+        "watergun",
+        "twister"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

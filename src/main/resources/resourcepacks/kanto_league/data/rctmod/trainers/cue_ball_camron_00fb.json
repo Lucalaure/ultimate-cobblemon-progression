@@ -1,0 +1,49 @@
+{
+  "name": "Cue Ball Camron",
+  "team": [
+    {
+      "species": "mankey",
+      "gender": "FEMALE",
+      "level": 29,
+      "nature": "rash",
+      "ability": "vitalspirit",
+      "moveset": [
+        "karatechop",
+        "furyswipes",
+        "focusenergy",
+        "seismictoss"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "machop",
+      "gender": "MALE",
+      "level": 29,
+      "nature": "hasty",
+      "ability": "guts",
+      "moveset": [
+        "karatechop",
+        "seismictoss",
+        "foresight",
+        "revenge"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

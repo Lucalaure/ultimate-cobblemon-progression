@@ -1,0 +1,94 @@
+{
+  "name": "Team Rocket Grunt",
+  "identity": "Team Rocket Grunt (36)",
+  "team": [
+    {
+      "species": "raticate",
+      "gender": "FEMALE",
+      "level": 26,
+      "nature": "hardy",
+      "ability": "runaway",
+      "moveset": [
+        "scaryface",
+        "hyperfang",
+        "quickattack",
+        "tailwhip"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "arbok",
+      "gender": "MALE",
+      "level": 26,
+      "nature": "impish",
+      "ability": "intimidate",
+      "moveset": [
+        "glare",
+        "bite",
+        "poisonsting",
+        "leer"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "koffing",
+      "gender": "FEMALE",
+      "level": 26,
+      "nature": "bold",
+      "ability": "levitate",
+      "moveset": [
+        "smokescreen",
+        "sludge",
+        "smog",
+        "tackle"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "golbat",
+      "gender": "MALE",
+      "level": 26,
+      "nature": "hasty",
+      "ability": "innerfocus",
+      "moveset": [
+        "wingattack",
+        "bite",
+        "astonish",
+        "supersonic"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

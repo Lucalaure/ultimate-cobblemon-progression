@@ -1,0 +1,130 @@
+{
+  "name": "Ace Trainer Colby",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 4
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "kingler",
+      "gender": "FEMALE",
+      "level": 41,
+      "nature": "adamant",
+      "ability": "hypercutter",
+      "moveset": [
+        "guillotine",
+        "stomp",
+        "mudshot",
+        "bubble"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "poliwhirl",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "bold",
+      "ability": "waterabsorb",
+      "moveset": [
+        "bodyslam",
+        "doubleslap",
+        "watergun",
+        "hypnosis"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "tentacruel",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "sassy",
+      "ability": "clearbody",
+      "moveset": [
+        "barrier",
+        "wrap",
+        "bubblebeam",
+        "acid"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "seadra",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "gentle",
+      "ability": "poisonpoint",
+      "moveset": [
+        "watergun",
+        "smokescreen",
+        "twister",
+        "leer"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "blastoise",
+      "gender": "MALE",
+      "level": 43,
+      "nature": "bold",
+      "ability": "torrent",
+      "moveset": [
+        "watergun",
+        "bite",
+        "rapidspin",
+        "raindance"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    }
+  ]
+}

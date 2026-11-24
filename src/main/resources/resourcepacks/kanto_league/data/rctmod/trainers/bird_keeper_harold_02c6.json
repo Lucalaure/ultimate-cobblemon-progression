@@ -1,0 +1,49 @@
+{
+  "name": "Bird Keeper Harold",
+  "team": [
+    {
+      "species": "noctowl",
+      "gender": "MALE",
+      "level": 53,
+      "nature": "serious",
+      "ability": "insomnia",
+      "moveset": [
+        "hypnosis",
+        "reflect",
+        "takedown",
+        "confusion"
+      ],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      },
+      "evs": {}
+    },
+    {
+      "species": "noctowl",
+      "gender": "FEMALE",
+      "level": 55,
+      "nature": "rash",
+      "ability": "insomnia",
+      "moveset": [
+        "hypnosis",
+        "reflect",
+        "takedown",
+        "confusion"
+      ],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      },
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "name": "Ruin Mamoac Larry",
+  "team": [
+    {
+      "species": "machoke",
+      "gender": "MALE",
+      "level": 49,
+      "nature": "docile",
+      "ability": "guts",
+      "moveset": [
+        "revenge",
+        "vitalthrow",
+        "submission",
+        "crosschop"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "machoke",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "jolly",
+      "ability": "guts",
+      "moveset": [
+        "revenge",
+        "vitalthrow",
+        "submission",
+        "crosschop"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "name": "Super Nerd Aavery",
+  "team": [
+    {
+      "species": "ponyta",
+      "gender": "FEMALE",
+      "level": 34,
+      "nature": "lonely",
+      "ability": "runaway",
+      "moveset": [
+        "ember",
+        "stomp",
+        "firespin",
+        "takedown"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "charmander",
+      "gender": "MALE",
+      "level": 34,
+      "nature": "quiet",
+      "ability": "blaze",
+      "moveset": [
+        "metalclaw",
+        "smokescreen",
+        "scaryface",
+        "flamethrower"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "vulpix",
+      "gender": "FEMALE",
+      "level": 34,
+      "nature": "lax",
+      "ability": "flashfire",
+      "moveset": [
+        "confuseray",
+        "imprison",
+        "flamethrower",
+        "safeguard"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "growlithe",
+      "gender": "MALE",
+      "level": 34,
+      "nature": "lax",
+      "ability": "intimidate",
+      "moveset": [
+        "leer",
+        "odorsleuth",
+        "takedown",
+        "flamewheel"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

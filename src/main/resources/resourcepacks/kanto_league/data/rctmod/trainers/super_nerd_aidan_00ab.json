@@ -1,0 +1,93 @@
+{
+  "name": "Super Nerd Aidan",
+  "team": [
+    {
+      "species": "voltorb",
+      "gender": "GENDERLESS",
+      "level": 20,
+      "nature": "serious",
+      "ability": "soundproof",
+      "moveset": [
+        "sonicboom",
+        "screech",
+        "tackle",
+        "charge"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "koffing",
+      "gender": "MALE",
+      "level": 20,
+      "nature": "adamant",
+      "ability": "levitate",
+      "moveset": [
+        "sludge",
+        "smog",
+        "tackle",
+        "poisongas"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "voltorb",
+      "gender": "GENDERLESS",
+      "level": 20,
+      "nature": "lonely",
+      "ability": "soundproof",
+      "moveset": [
+        "sonicboom",
+        "screech",
+        "tackle",
+        "charge"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "magnemite",
+      "gender": "GENDERLESS",
+      "level": 20,
+      "nature": "lax",
+      "ability": "magnetpull",
+      "moveset": [
+        "sonicboom",
+        "supersonic",
+        "thundershock",
+        "tackle"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

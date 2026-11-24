@@ -1,0 +1,72 @@
+{
+  "name": "Team Rocket Grunt",
+  "identity": "Team Rocket Grunt (41)",
+  "team": [
+    {
+      "species": "drowzee",
+      "gender": "MALE",
+      "level": 28,
+      "nature": "quirky",
+      "ability": "insomnia",
+      "moveset": [
+        "confusion",
+        "headbutt",
+        "poisongas",
+        "meditate"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "grimer",
+      "gender": "MALE",
+      "level": 28,
+      "nature": "quiet",
+      "ability": "stench",
+      "moveset": [
+        "disable",
+        "sludge",
+        "minimize",
+        "screech"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "machop",
+      "gender": "FEMALE",
+      "level": 28,
+      "nature": "careful",
+      "ability": "guts",
+      "moveset": [
+        "karatechop",
+        "seismictoss",
+        "foresight",
+        "revenge"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

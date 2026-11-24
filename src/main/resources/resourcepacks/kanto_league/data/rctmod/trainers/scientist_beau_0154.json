@@ -1,0 +1,93 @@
+{
+  "name": "Scientist Beau",
+  "team": [
+    {
+      "species": "magneton",
+      "gender": "GENDERLESS",
+      "level": 26,
+      "nature": "quiet",
+      "ability": "magnetpull",
+      "moveset": [
+        "spark",
+        "thunderwave",
+        "sonicboom",
+        "supersonic"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "koffing",
+      "gender": "MALE",
+      "level": 26,
+      "nature": "serious",
+      "ability": "levitate",
+      "moveset": [
+        "smokescreen",
+        "sludge",
+        "smog",
+        "tackle"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "weezing",
+      "gender": "MALE",
+      "level": 26,
+      "nature": "quiet",
+      "ability": "levitate",
+      "moveset": [
+        "smokescreen",
+        "sludge",
+        "smog",
+        "tackle"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "magnemite",
+      "gender": "GENDERLESS",
+      "level": 26,
+      "nature": "hardy",
+      "ability": "magnetpull",
+      "moveset": [
+        "spark",
+        "thunderwave",
+        "sonicboom",
+        "supersonic"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

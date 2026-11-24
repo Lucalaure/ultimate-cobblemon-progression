@@ -1,0 +1,27 @@
+{
+  "name": "Camper Ricky",
+  "team": [
+    {
+      "species": "squirtle",
+      "gender": "MALE",
+      "level": 22,
+      "nature": "naive",
+      "ability": "torrent",
+      "moveset": [
+        "bubble",
+        "withdraw",
+        "watergun",
+        "bite"
+      ],
+      "ivs": {
+        "hp": 2,
+        "atk": 2,
+        "def": 2,
+        "spa": 2,
+        "spd": 2,
+        "spe": 2
+      },
+      "evs": {}
+    }
+  ]
+}

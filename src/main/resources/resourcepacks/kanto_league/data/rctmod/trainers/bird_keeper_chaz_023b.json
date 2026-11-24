@@ -1,0 +1,49 @@
+{
+  "name": "Bird Keeper Chaz",
+  "team": [
+    {
+      "species": "spearow",
+      "gender": "FEMALE",
+      "level": 47,
+      "nature": "serious",
+      "ability": "keeneye",
+      "moveset": [
+        "aerialace",
+        "mirrormove",
+        "drillpeck",
+        "agility"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "fearow",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "naive",
+      "ability": "keeneye",
+      "moveset": [
+        "pursuit",
+        "mirrormove",
+        "drillpeck",
+        "agility"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

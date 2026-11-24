@@ -1,0 +1,49 @@
+{
+  "name": "Swimmer\u2640 Denise",
+  "team": [
+    {
+      "species": "chinchou",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "impish",
+      "ability": "voltabsorb",
+      "moveset": [
+        "confuseray",
+        "takedown",
+        "hydropump",
+        "charge"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "lanturn",
+      "gender": "MALE",
+      "level": 49,
+      "nature": "rash",
+      "ability": "voltabsorb",
+      "moveset": [
+        "watergun",
+        "spark",
+        "confuseray",
+        "takedown"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

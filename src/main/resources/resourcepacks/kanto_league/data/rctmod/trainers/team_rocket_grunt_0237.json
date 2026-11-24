@@ -1,0 +1,72 @@
+{
+  "name": "Team Rocket Grunt",
+  "identity": "Team Rocket Grunt (53)",
+  "team": [
+    {
+      "species": "rattata",
+      "gender": "FEMALE",
+      "level": 48,
+      "nature": "adamant",
+      "ability": "runaway",
+      "moveset": [
+        "focusenergy",
+        "pursuit",
+        "superfang",
+        "endeavor"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "grimer",
+      "gender": "FEMALE",
+      "level": 48,
+      "nature": "modest",
+      "ability": "stench",
+      "moveset": [
+        "minimize",
+        "screech",
+        "acidarmor",
+        "sludgebomb"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "muk",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "quirky",
+      "ability": "stench",
+      "moveset": [
+        "minimize",
+        "screech",
+        "acidarmor",
+        "sludgebomb"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

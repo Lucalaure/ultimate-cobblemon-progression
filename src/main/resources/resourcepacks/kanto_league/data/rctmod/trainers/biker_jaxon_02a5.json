@@ -1,0 +1,49 @@
+{
+  "name": "Biker Jaxon",
+  "team": [
+    {
+      "species": "weezing",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "adamant",
+      "ability": "levitate",
+      "moveset": [
+        "sludge",
+        "smokescreen",
+        "haze",
+        "explosion"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    },
+    {
+      "species": "muk",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "bold",
+      "ability": "stench",
+      "moveset": [
+        "minimize",
+        "screech",
+        "acidarmor",
+        "sludgebomb"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    }
+  ]
+}

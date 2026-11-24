@@ -23,6 +23,7 @@
       "ability": "steadfast",
       "moveset": [
         "metalclaw",
+        "poweruppunch",
         "detect",
         "counter"
       ],

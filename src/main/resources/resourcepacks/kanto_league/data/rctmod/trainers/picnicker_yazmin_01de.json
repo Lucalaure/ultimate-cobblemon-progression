@@ -1,0 +1,71 @@
+{
+  "name": "Picnicker Yazmin",
+  "team": [
+    {
+      "species": "bellsprout",
+      "gender": "FEMALE",
+      "level": 29,
+      "nature": "careful",
+      "ability": "chlorophyll",
+      "moveset": [
+        "sleeppowder",
+        "poisonpowder",
+        "stunspore",
+        "acid"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "oddish",
+      "gender": "FEMALE",
+      "level": 29,
+      "nature": "quirky",
+      "ability": "chlorophyll",
+      "moveset": [
+        "poisonpowder",
+        "stunspore",
+        "sleeppowder",
+        "acid"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "tangela",
+      "gender": "FEMALE",
+      "level": 29,
+      "nature": "relaxed",
+      "ability": "chlorophyll",
+      "moveset": [
+        "growth",
+        "poisonpowder",
+        "vinewhip",
+        "bind"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

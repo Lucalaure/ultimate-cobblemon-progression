@@ -1,0 +1,49 @@
+{
+  "name": "Camper Shane",
+  "team": [
+    {
+      "species": "rattata",
+      "gender": "MALE",
+      "level": 14,
+      "nature": "bold",
+      "ability": "runaway",
+      "moveset": [
+        "tackle",
+        "tailwhip",
+        "quickattack",
+        "hyperfang"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "ekans",
+      "gender": "MALE",
+      "level": 14,
+      "nature": "timid",
+      "ability": "intimidate",
+      "moveset": [
+        "wrap",
+        "leer",
+        "poisonsting",
+        "bite"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

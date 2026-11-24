@@ -1,0 +1,47 @@
+{
+  "name": "Lass Janice",
+  "team": [
+    {
+      "species": "pidgey",
+      "gender": "FEMALE",
+      "level": 9,
+      "nature": "naughty",
+      "ability": "keeneye",
+      "moveset": [
+        "tackle",
+        "sandattack",
+        "gust"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "pidgey",
+      "gender": "MALE",
+      "level": 9,
+      "nature": "lonely",
+      "ability": "keeneye",
+      "moveset": [
+        "tackle",
+        "sandattack",
+        "gust"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "name": "Bird Keeper Chester",
+  "team": [
+    {
+      "species": "dodrio",
+      "gender": "MALE",
+      "level": 30,
+      "nature": "hasty",
+      "ability": "runaway",
+      "moveset": [
+        "pursuit",
+        "furyattack",
+        "triattack",
+        "rage"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    },
+    {
+      "species": "dodrio",
+      "gender": "FEMALE",
+      "level": 30,
+      "nature": "hasty",
+      "ability": "runaway",
+      "moveset": [
+        "pursuit",
+        "furyattack",
+        "triattack",
+        "rage"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    },
+    {
+      "species": "doduo",
+      "gender": "FEMALE",
+      "level": 30,
+      "nature": "modest",
+      "ability": "runaway",
+      "moveset": [
+        "pursuit",
+        "furyattack",
+        "triattack",
+        "rage"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    }
+  ]
+}

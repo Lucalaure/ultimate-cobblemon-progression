@@ -1,0 +1,50 @@
+{
+  "name": "Team Rocket Grunt",
+  "identity": "Team Rocket Grunt (9)",
+  "team": [
+    {
+      "species": "machop",
+      "gender": "MALE",
+      "level": 17,
+      "nature": "relaxed",
+      "ability": "guts",
+      "moveset": [
+        "lowkick",
+        "leer",
+        "focusenergy",
+        "karatechop"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "drowzee",
+      "gender": "FEMALE",
+      "level": 17,
+      "nature": "bold",
+      "ability": "insomnia",
+      "moveset": [
+        "hypnosis",
+        "disable",
+        "confusion",
+        "headbutt"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

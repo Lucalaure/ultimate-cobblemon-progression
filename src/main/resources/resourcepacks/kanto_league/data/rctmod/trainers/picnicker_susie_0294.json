@@ -1,0 +1,115 @@
+{
+  "name": "Picnicker Susie",
+  "team": [
+    {
+      "species": "pidgeot",
+      "gender": "MALE",
+      "level": 52,
+      "nature": "bold",
+      "ability": "keeneye",
+      "moveset": [
+        "whirlwind",
+        "wingattack",
+        "featherdance",
+        "agility"
+      ],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      },
+      "evs": {}
+    },
+    {
+      "species": "persian",
+      "gender": "FEMALE",
+      "level": 52,
+      "nature": "lonely",
+      "ability": "limber",
+      "moveset": [
+        "feintattack",
+        "screech",
+        "furyswipes",
+        "slash"
+      ],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      },
+      "evs": {}
+    },
+    {
+      "species": "raticate",
+      "gender": "FEMALE",
+      "level": 52,
+      "nature": "mild",
+      "ability": "runaway",
+      "moveset": [
+        "scaryface",
+        "pursuit",
+        "superfang",
+        "endeavor"
+      ],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      },
+      "evs": {}
+    },
+    {
+      "species": "raichu",
+      "gender": "MALE",
+      "level": 52,
+      "nature": "serious",
+      "ability": "static",
+      "moveset": [
+        "thundershock",
+        "tailwhip",
+        "quickattack",
+        "thunderbolt"
+      ],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      },
+      "evs": {}
+    },
+    {
+      "species": "persian",
+      "gender": "MALE",
+      "level": 52,
+      "nature": "sassy",
+      "ability": "limber",
+      "moveset": [
+        "feintattack",
+        "screech",
+        "furyswipes",
+        "slash"
+      ],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      },
+      "evs": {}
+    }
+  ]
+}

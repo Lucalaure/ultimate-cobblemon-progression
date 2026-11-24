@@ -8,6 +8,7 @@
       "nature": "serious",
       "ability": "pickup",
       "moveset": [
+        "trickortreat",
         "bulletseed",
         "shadowsneak"
       ],

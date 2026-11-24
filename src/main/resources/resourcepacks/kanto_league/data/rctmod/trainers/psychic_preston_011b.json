@@ -1,0 +1,27 @@
+{
+  "name": "Psychic Preston",
+  "team": [
+    {
+      "species": "slowbro",
+      "gender": "FEMALE",
+      "level": 38,
+      "nature": "relaxed",
+      "ability": "oblivious",
+      "moveset": [
+        "disable",
+        "headbutt",
+        "amnesia",
+        "withdraw"
+      ],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      },
+      "evs": {}
+    }
+  ]
+}

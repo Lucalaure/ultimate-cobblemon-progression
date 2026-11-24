@@ -1,0 +1,93 @@
+{
+  "name": "Rival Terry",
+  "team": [
+    {
+      "species": "pidgeotto",
+      "gender": "FEMALE",
+      "level": 19,
+      "nature": "sassy",
+      "ability": "keeneye",
+      "moveset": [
+        "tackle",
+        "sandattack",
+        "gust",
+        "quickattack"
+      ],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      },
+      "evs": {}
+    },
+    {
+      "species": "raticate",
+      "gender": "FEMALE",
+      "level": 16,
+      "nature": "brave",
+      "ability": "runaway",
+      "moveset": [
+        "tackle",
+        "tailwhip",
+        "quickattack",
+        "hyperfang"
+      ],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      },
+      "evs": {}
+    },
+    {
+      "species": "kadabra",
+      "gender": "MALE",
+      "level": 18,
+      "nature": "bold",
+      "ability": "synchronize",
+      "moveset": [
+        "teleport",
+        "kinesis",
+        "confusion",
+        "disable"
+      ],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      },
+      "evs": {}
+    },
+    {
+      "species": "charmeleon",
+      "gender": "MALE",
+      "level": 20,
+      "nature": "lax",
+      "ability": "blaze",
+      "moveset": [
+        "growl",
+        "ember",
+        "metalclaw",
+        "smokescreen"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    }
+  ]
+}

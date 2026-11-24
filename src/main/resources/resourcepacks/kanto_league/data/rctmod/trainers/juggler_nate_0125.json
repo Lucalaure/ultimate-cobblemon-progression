@@ -1,0 +1,49 @@
+{
+  "name": "Juggler Nate",
+  "team": [
+    {
+      "species": "drowzee",
+      "gender": "MALE",
+      "level": 34,
+      "nature": "careful",
+      "ability": "insomnia",
+      "moveset": [
+        "headbutt",
+        "poisongas",
+        "meditate",
+        "psychic"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "kadabra",
+      "gender": "MALE",
+      "level": 34,
+      "nature": "jolly",
+      "ability": "synchronize",
+      "moveset": [
+        "reflect",
+        "recover",
+        "futuresight",
+        "roleplay"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

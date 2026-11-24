@@ -1,0 +1,71 @@
+{
+  "name": "Biker Virgil",
+  "team": [
+    {
+      "species": "weezing",
+      "gender": "FEMALE",
+      "level": 28,
+      "nature": "relaxed",
+      "ability": "levitate",
+      "moveset": [
+        "smokescreen",
+        "sludge",
+        "smog",
+        "tackle"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "koffing",
+      "gender": "FEMALE",
+      "level": 28,
+      "nature": "mild",
+      "ability": "levitate",
+      "moveset": [
+        "smokescreen",
+        "sludge",
+        "smog",
+        "tackle"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "weezing",
+      "gender": "MALE",
+      "level": 28,
+      "nature": "quirky",
+      "ability": "levitate",
+      "moveset": [
+        "smokescreen",
+        "sludge",
+        "smog",
+        "tackle"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "name": "Team Rocket Grunt",
+  "identity": "Team Rocket Grunt (30)",
+  "team": [
+    {
+      "species": "machop",
+      "gender": "MALE",
+      "level": 29,
+      "nature": "hardy",
+      "ability": "guts",
+      "moveset": [
+        "karatechop",
+        "seismictoss",
+        "foresight",
+        "revenge"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "drowzee",
+      "gender": "FEMALE",
+      "level": 29,
+      "nature": "hasty",
+      "ability": "insomnia",
+      "moveset": [
+        "confusion",
+        "headbutt",
+        "poisongas",
+        "meditate"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

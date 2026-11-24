@@ -1,0 +1,80 @@
+{
+  "name": "Black Belt Takashi",
+  "team": [
+    {
+      "species": "machoke",
+      "gender": "FEMALE",
+      "level": 38,
+      "nature": "quiet",
+      "ability": "guts",
+      "moveset": [
+        "seismictoss",
+        "foresight",
+        "revenge",
+        "vitalthrow"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {},
+      "heldItem": [
+        "black_belt"
+      ]
+    },
+    {
+      "species": "machop",
+      "gender": "MALE",
+      "level": 38,
+      "nature": "quirky",
+      "ability": "guts",
+      "moveset": [
+        "foresight",
+        "revenge",
+        "vitalthrow",
+        "submission"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {},
+      "heldItem": [
+        "black_belt"
+      ]
+    },
+    {
+      "species": "machoke",
+      "gender": "MALE",
+      "level": 38,
+      "nature": "docile",
+      "ability": "guts",
+      "moveset": [
+        "seismictoss",
+        "foresight",
+        "revenge",
+        "vitalthrow"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {},
+      "heldItem": [
+        "black_belt"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "name": "Super Nerd Zac",
+  "team": [
+    {
+      "species": "growlithe",
+      "gender": "MALE",
+      "level": 37,
+      "nature": "bold",
+      "ability": "intimidate",
+      "moveset": [
+        "odorsleuth",
+        "takedown",
+        "flamewheel",
+        "helpinghand"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "vulpix",
+      "gender": "FEMALE",
+      "level": 37,
+      "nature": "naive",
+      "ability": "flashfire",
+      "moveset": [
+        "imprison",
+        "flamethrower",
+        "safeguard",
+        "grudge"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

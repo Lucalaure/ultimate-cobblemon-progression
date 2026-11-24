@@ -1,0 +1,93 @@
+{
+  "name": "Bird Keeper Jacob",
+  "team": [
+    {
+      "species": "fearow",
+      "gender": "MALE",
+      "level": 47,
+      "nature": "lax",
+      "ability": "keeneye",
+      "moveset": [
+        "pursuit",
+        "mirrormove",
+        "drillpeck",
+        "agility"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    },
+    {
+      "species": "fearow",
+      "gender": "FEMALE",
+      "level": 47,
+      "nature": "docile",
+      "ability": "keeneye",
+      "moveset": [
+        "pursuit",
+        "mirrormove",
+        "drillpeck",
+        "agility"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    },
+    {
+      "species": "fearow",
+      "gender": "FEMALE",
+      "level": 47,
+      "nature": "docile",
+      "ability": "keeneye",
+      "moveset": [
+        "pursuit",
+        "mirrormove",
+        "drillpeck",
+        "agility"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    },
+    {
+      "species": "fearow",
+      "gender": "MALE",
+      "level": 47,
+      "nature": "docile",
+      "ability": "keeneye",
+      "moveset": [
+        "pursuit",
+        "mirrormove",
+        "drillpeck",
+        "agility"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    }
+  ]
+}

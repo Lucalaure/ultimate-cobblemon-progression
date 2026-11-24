@@ -1,0 +1,27 @@
+{
+  "name": "Swimmer\u2642 Dean",
+  "team": [
+    {
+      "species": "staryu",
+      "gender": "GENDERLESS",
+      "level": 35,
+      "nature": "bashful",
+      "ability": "illuminate",
+      "moveset": [
+        "camouflage",
+        "swift",
+        "bubblebeam",
+        "minimize"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

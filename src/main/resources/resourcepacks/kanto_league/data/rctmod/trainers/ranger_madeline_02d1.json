@@ -1,0 +1,55 @@
+{
+  "name": "Ranger Madeline",
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "vileplume",
+      "gender": "FEMALE",
+      "level": 55,
+      "nature": "impish",
+      "ability": "chlorophyll",
+      "moveset": [
+        "petaldance",
+        "moonlight",
+        "acid",
+        "sleeppowder"
+      ],
+      "ivs": {
+        "hp": 27,
+        "atk": 27,
+        "def": 27,
+        "spa": 27,
+        "spd": 27,
+        "spe": 27
+      },
+      "evs": {}
+    },
+    {
+      "species": "vileplume",
+      "gender": "FEMALE",
+      "level": 55,
+      "nature": "rash",
+      "ability": "chlorophyll",
+      "moveset": [
+        "petaldance",
+        "moonlight",
+        "acid",
+        "stunspore"
+      ],
+      "ivs": {
+        "hp": 27,
+        "atk": 27,
+        "def": 27,
+        "spa": 27,
+        "spd": 27,
+        "spe": 27
+      },
+      "evs": {}
+    }
+  ]
+}

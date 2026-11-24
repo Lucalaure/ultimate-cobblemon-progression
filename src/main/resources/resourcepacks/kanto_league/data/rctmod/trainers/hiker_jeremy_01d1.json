@@ -1,0 +1,49 @@
+{
+  "name": "Hiker Jeremy",
+  "team": [
+    {
+      "species": "machop",
+      "gender": "MALE",
+      "level": 20,
+      "nature": "timid",
+      "ability": "guts",
+      "moveset": [
+        "leer",
+        "focusenergy",
+        "karatechop",
+        "seismictoss"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "onix",
+      "gender": "FEMALE",
+      "level": 20,
+      "nature": "modest",
+      "ability": "rockhead",
+      "moveset": [
+        "screech",
+        "bind",
+        "rockthrow",
+        "harden"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

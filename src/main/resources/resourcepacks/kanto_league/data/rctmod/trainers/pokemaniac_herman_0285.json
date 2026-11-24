@@ -1,0 +1,49 @@
+{
+  "name": "Pok\u00e9maniac Herman",
+  "team": [
+    {
+      "species": "marowak",
+      "gender": "MALE",
+      "level": 29,
+      "nature": "rash",
+      "ability": "rockhead",
+      "moveset": [
+        "headbutt",
+        "leer",
+        "focusenergy",
+        "bonemerang"
+      ],
+      "ivs": {
+        "hp": 11,
+        "atk": 11,
+        "def": 11,
+        "spa": 11,
+        "spd": 11,
+        "spe": 11
+      },
+      "evs": {}
+    },
+    {
+      "species": "slowbro",
+      "gender": "MALE",
+      "level": 29,
+      "nature": "rash",
+      "ability": "oblivious",
+      "moveset": [
+        "watergun",
+        "confusion",
+        "disable",
+        "headbutt"
+      ],
+      "ivs": {
+        "hp": 11,
+        "atk": 11,
+        "def": 11,
+        "spa": 11,
+        "spd": 11,
+        "spe": 11
+      },
+      "evs": {}
+    }
+  ]
+}

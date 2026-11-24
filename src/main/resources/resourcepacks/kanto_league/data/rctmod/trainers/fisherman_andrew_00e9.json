@@ -1,0 +1,45 @@
+{
+  "name": "Fisherman Andrew",
+  "team": [
+    {
+      "species": "magikarp",
+      "gender": "MALE",
+      "level": 24,
+      "nature": "naughty",
+      "ability": "swiftswim",
+      "moveset": [
+        "splash",
+        "tackle"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "magikarp",
+      "gender": "FEMALE",
+      "level": 24,
+      "nature": "hasty",
+      "ability": "swiftswim",
+      "moveset": [
+        "splash",
+        "tackle"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

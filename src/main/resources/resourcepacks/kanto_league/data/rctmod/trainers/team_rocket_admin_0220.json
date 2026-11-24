@@ -1,0 +1,84 @@
+{
+  "name": "Team Rocket Admin",
+  "identity": "Team Rocket Admin (2)",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.25
+    }
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "golbat",
+      "gender": "FEMALE",
+      "level": 53,
+      "nature": "bashful",
+      "ability": "innerfocus",
+      "moveset": [
+        "confuseray",
+        "sludgebomb",
+        "aircutter",
+        "shadowball"
+      ],
+      "ivs": {
+        "hp": 24,
+        "atk": 24,
+        "def": 24,
+        "spa": 24,
+        "spd": 24,
+        "spe": 24
+      },
+      "evs": {}
+    },
+    {
+      "species": "weezing",
+      "gender": "FEMALE",
+      "level": 54,
+      "nature": "naive",
+      "ability": "levitate",
+      "moveset": [
+        "sludgebomb",
+        "thunderbolt",
+        "explosion",
+        "shadowball"
+      ],
+      "ivs": {
+        "hp": 24,
+        "atk": 24,
+        "def": 24,
+        "spa": 24,
+        "spd": 24,
+        "spe": 24
+      },
+      "evs": {}
+    },
+    {
+      "species": "houndoom",
+      "gender": "MALE",
+      "level": 55,
+      "nature": "sassy",
+      "ability": "earlybird",
+      "moveset": [
+        "flamethrower",
+        "crunch",
+        "irontail",
+        "shadowball"
+      ],
+      "ivs": {
+        "hp": 24,
+        "atk": 24,
+        "def": 24,
+        "spa": 24,
+        "spd": 24,
+        "spe": 24
+      },
+      "evs": {}
+    }
+  ]
+}

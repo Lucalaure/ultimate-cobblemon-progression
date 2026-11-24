@@ -1,0 +1,50 @@
+{
+  "name": "Sis And Bro Lil & Ian",
+  "battleFormat": "GEN_9_DOUBLES",
+  "team": [
+    {
+      "species": "seadra",
+      "gender": "FEMALE",
+      "level": 33,
+      "nature": "relaxed",
+      "ability": "poisonpoint",
+      "moveset": [
+        "smokescreen",
+        "leer",
+        "watergun",
+        "twister"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "starmie",
+      "gender": "GENDERLESS",
+      "level": 33,
+      "nature": "serious",
+      "ability": "illuminate",
+      "moveset": [
+        "rapidspin",
+        "recover",
+        "swift",
+        "confuseray"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

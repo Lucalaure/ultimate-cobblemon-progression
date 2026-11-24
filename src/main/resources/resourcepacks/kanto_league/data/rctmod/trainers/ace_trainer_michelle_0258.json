@@ -1,0 +1,130 @@
+{
+  "name": "Ace Trainer Michelle",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 4
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "persian",
+      "gender": "FEMALE",
+      "level": 47,
+      "nature": "quirky",
+      "ability": "limber",
+      "moveset": [
+        "slash",
+        "screech",
+        "feintattack",
+        "bite"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "dewgong",
+      "gender": "MALE",
+      "level": 47,
+      "nature": "rash",
+      "ability": "thickfat",
+      "moveset": [
+        "icebeam",
+        "takedown",
+        "icywind",
+        "growl"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "ninetales",
+      "gender": "FEMALE",
+      "level": 48,
+      "nature": "modest",
+      "ability": "flashfire",
+      "moveset": [
+        "flamethrower",
+        "confuseray",
+        "willowisp",
+        "grudge"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "rapidash",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "bold",
+      "ability": "runaway",
+      "moveset": [
+        "bounce",
+        "agility",
+        "firespin",
+        "takedown"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "girafarig",
+      "gender": "MALE",
+      "level": 50,
+      "nature": "hasty",
+      "ability": "innerfocus",
+      "moveset": [
+        "crunch",
+        "psybeam",
+        "stomp",
+        "odorsleuth"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    }
+  ]
+}

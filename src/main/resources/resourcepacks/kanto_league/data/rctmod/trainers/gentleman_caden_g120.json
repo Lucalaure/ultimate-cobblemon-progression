@@ -23,6 +23,7 @@
       "nature": "gentle",
       "ability": "receiver",
       "moveset": [
+        "doubleedge",
         "bulkup",
         "fling",
         "acrobatics"

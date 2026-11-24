@@ -1,0 +1,27 @@
+{
+  "name": "Picnicker Celia",
+  "team": [
+    {
+      "species": "clefairy",
+      "gender": "FEMALE",
+      "level": 33,
+      "nature": "jolly",
+      "ability": "cutecharm",
+      "moveset": [
+        "minimize",
+        "defensecurl",
+        "metronome",
+        "cosmicpower"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

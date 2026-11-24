@@ -1,0 +1,49 @@
+{
+  "name": "Biker Gerald",
+  "team": [
+    {
+      "species": "koffing",
+      "gender": "FEMALE",
+      "level": 29,
+      "nature": "modest",
+      "ability": "levitate",
+      "moveset": [
+        "smokescreen",
+        "sludge",
+        "smog",
+        "tackle"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "muk",
+      "gender": "FEMALE",
+      "level": 29,
+      "nature": "bold",
+      "ability": "stench",
+      "moveset": [
+        "screech",
+        "minimize",
+        "sludge",
+        "disable"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "name": "Bug Catcher Doug",
+  "team": [
+    {
+      "species": "weedle",
+      "gender": "MALE",
+      "level": 7,
+      "nature": "brave",
+      "ability": "shielddust",
+      "moveset": [
+        "poisonsting",
+        "stringshot"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "kakuna",
+      "gender": "FEMALE",
+      "level": 7,
+      "nature": "rash",
+      "ability": "shedskin",
+      "moveset": [
+        "harden"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "weedle",
+      "gender": "MALE",
+      "level": 7,
+      "nature": "quirky",
+      "ability": "shielddust",
+      "moveset": [
+        "poisonsting",
+        "stringshot"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

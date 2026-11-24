@@ -1,0 +1,50 @@
+{
+  "name": "Team Rocket Grunt",
+  "identity": "Team Rocket Grunt (22)",
+  "team": [
+    {
+      "species": "koffing",
+      "gender": "FEMALE",
+      "level": 21,
+      "nature": "modest",
+      "ability": "levitate",
+      "moveset": [
+        "tackle",
+        "smog",
+        "selfdestruct",
+        "sludge"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "zubat",
+      "gender": "FEMALE",
+      "level": 21,
+      "nature": "hasty",
+      "ability": "innerfocus",
+      "moveset": [
+        "astonish",
+        "supersonic",
+        "bite",
+        "wingattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

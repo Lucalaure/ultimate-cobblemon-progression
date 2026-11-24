@@ -1,0 +1,130 @@
+{
+  "name": "Ace Trainer Paul",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 4
+  },
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "slowpoke",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "hardy",
+      "ability": "oblivious",
+      "moveset": [
+        "headbutt",
+        "confusion",
+        "watergun",
+        "disable"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "shellder",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "adamant",
+      "ability": "shellarmor",
+      "moveset": [
+        "aurorabeam",
+        "clamp",
+        "supersonic",
+        "leer"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "kingler",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "rash",
+      "ability": "hypercutter",
+      "moveset": [
+        "guillotine",
+        "stomp",
+        "mudshot",
+        "bubble"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "starmie",
+      "gender": "GENDERLESS",
+      "level": 42,
+      "nature": "sassy",
+      "ability": "illuminate",
+      "moveset": [
+        "bubblebeam",
+        "swift",
+        "recover",
+        "rapidspin"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "golduck",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "brave",
+      "ability": "damp",
+      "moveset": [
+        "confusion",
+        "scratch",
+        "screech",
+        "disable"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    }
+  ]
+}

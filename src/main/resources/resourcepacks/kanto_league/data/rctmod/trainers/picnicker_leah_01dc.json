@@ -1,0 +1,49 @@
+{
+  "name": "Picnicker Leah",
+  "team": [
+    {
+      "species": "bellsprout",
+      "gender": "MALE",
+      "level": 22,
+      "nature": "hasty",
+      "ability": "chlorophyll",
+      "moveset": [
+        "wrap",
+        "sleeppowder",
+        "poisonpowder",
+        "stunspore"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "clefairy",
+      "gender": "FEMALE",
+      "level": 22,
+      "nature": "calm",
+      "ability": "cutecharm",
+      "moveset": [
+        "sing",
+        "doubleslap",
+        "followme",
+        "minimize"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

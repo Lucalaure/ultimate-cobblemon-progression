@@ -1,0 +1,93 @@
+{
+  "name": "Fisherman Elliot",
+  "team": [
+    {
+      "species": "poliwhirl",
+      "gender": "FEMALE",
+      "level": 28,
+      "nature": "naive",
+      "ability": "waterabsorb",
+      "moveset": [
+        "hypnosis",
+        "watergun",
+        "doubleslap",
+        "raindance"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    },
+    {
+      "species": "cloyster",
+      "gender": "FEMALE",
+      "level": 28,
+      "nature": "jolly",
+      "ability": "shellarmor",
+      "moveset": [
+        "withdraw",
+        "supersonic",
+        "aurorabeam",
+        "protect"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    },
+    {
+      "species": "seaking",
+      "gender": "FEMALE",
+      "level": 28,
+      "nature": "docile",
+      "ability": "swiftswim",
+      "moveset": [
+        "watersport",
+        "supersonic",
+        "hornattack",
+        "flail"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    },
+    {
+      "species": "seadra",
+      "gender": "FEMALE",
+      "level": 28,
+      "nature": "impish",
+      "ability": "poisonpoint",
+      "moveset": [
+        "bubble",
+        "smokescreen",
+        "leer",
+        "watergun"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    }
+  ]
+}

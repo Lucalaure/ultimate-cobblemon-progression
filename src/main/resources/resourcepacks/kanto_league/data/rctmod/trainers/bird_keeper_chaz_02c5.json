@@ -1,0 +1,49 @@
+{
+  "name": "Bird Keeper Chaz",
+  "team": [
+    {
+      "species": "fearow",
+      "gender": "MALE",
+      "level": 53,
+      "nature": "rash",
+      "ability": "keeneye",
+      "moveset": [
+        "pursuit",
+        "mirrormove",
+        "drillpeck",
+        "agility"
+      ],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      },
+      "evs": {}
+    },
+    {
+      "species": "fearow",
+      "gender": "FEMALE",
+      "level": 55,
+      "nature": "rash",
+      "ability": "keeneye",
+      "moveset": [
+        "pursuit",
+        "mirrormove",
+        "drillpeck",
+        "agility"
+      ],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      },
+      "evs": {}
+    }
+  ]
+}

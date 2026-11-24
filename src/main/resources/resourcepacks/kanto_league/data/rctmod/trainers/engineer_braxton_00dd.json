@@ -1,0 +1,27 @@
+{
+  "name": "Engineer Braxton",
+  "team": [
+    {
+      "species": "magnemite",
+      "gender": "GENDERLESS",
+      "level": 21,
+      "nature": "modest",
+      "ability": "magnetpull",
+      "moveset": [
+        "thundershock",
+        "supersonic",
+        "sonicboom",
+        "thunderwave"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

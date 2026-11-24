@@ -1,0 +1,71 @@
+{
+  "name": "Swimmer\u2640 Nora",
+  "team": [
+    {
+      "species": "shellder",
+      "gender": "MALE",
+      "level": 30,
+      "nature": "calm",
+      "ability": "shellarmor",
+      "moveset": [
+        "iciclespear",
+        "supersonic",
+        "aurorabeam",
+        "protect"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "shellder",
+      "gender": "FEMALE",
+      "level": 30,
+      "nature": "brave",
+      "ability": "shellarmor",
+      "moveset": [
+        "iciclespear",
+        "supersonic",
+        "aurorabeam",
+        "protect"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "cloyster",
+      "gender": "MALE",
+      "level": 30,
+      "nature": "rash",
+      "ability": "shellarmor",
+      "moveset": [
+        "withdraw",
+        "supersonic",
+        "aurorabeam",
+        "protect"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

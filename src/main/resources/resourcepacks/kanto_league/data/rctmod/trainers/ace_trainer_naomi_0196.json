@@ -1,0 +1,130 @@
+{
+  "name": "Ace Trainer Naomi",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 4
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "persian",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "quiet",
+      "ability": "limber",
+      "moveset": [
+        "furyswipes",
+        "screech",
+        "feintattack",
+        "payday"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "ponyta",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "docile",
+      "ability": "runaway",
+      "moveset": [
+        "agility",
+        "takedown",
+        "firespin",
+        "stomp"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "rapidash",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "serious",
+      "ability": "runaway",
+      "moveset": [
+        "furyattack",
+        "firespin",
+        "stomp",
+        "growl"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "vulpix",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "hasty",
+      "ability": "flashfire",
+      "moveset": [
+        "flamethrower",
+        "confuseray",
+        "quickattack",
+        "imprison"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "ninetales",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "adamant",
+      "ability": "flashfire",
+      "moveset": [
+        "safeguard",
+        "willowisp",
+        "confuseray",
+        "firespin"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    }
+  ]
+}

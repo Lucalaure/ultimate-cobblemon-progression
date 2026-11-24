@@ -1,0 +1,49 @@
+{
+  "name": "Tamer Cole",
+  "team": [
+    {
+      "species": "arbok",
+      "gender": "MALE",
+      "level": 39,
+      "nature": "bold",
+      "ability": "intimidate",
+      "moveset": [
+        "bite",
+        "glare",
+        "screech",
+        "acid"
+      ],
+      "ivs": {
+        "hp": 5,
+        "atk": 5,
+        "def": 5,
+        "spa": 5,
+        "spd": 5,
+        "spe": 5
+      },
+      "evs": {}
+    },
+    {
+      "species": "tauros",
+      "gender": "MALE",
+      "level": 39,
+      "nature": "relaxed",
+      "ability": "intimidate",
+      "moveset": [
+        "scaryface",
+        "pursuit",
+        "swagger",
+        "rest"
+      ],
+      "ivs": {
+        "hp": 5,
+        "atk": 5,
+        "def": 5,
+        "spa": 5,
+        "spd": 5,
+        "spe": 5
+      },
+      "evs": {}
+    }
+  ]
+}

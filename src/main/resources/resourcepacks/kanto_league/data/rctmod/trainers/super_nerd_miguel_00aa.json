@@ -1,0 +1,69 @@
+{
+  "name": "Super Nerd Miguel",
+  "team": [
+    {
+      "species": "grimer",
+      "gender": "FEMALE",
+      "level": 12,
+      "nature": "docile",
+      "ability": "stench",
+      "moveset": [
+        "poisongas",
+        "pound",
+        "harden",
+        "disable"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "voltorb",
+      "gender": "GENDERLESS",
+      "level": 12,
+      "nature": "rash",
+      "ability": "soundproof",
+      "moveset": [
+        "charge",
+        "tackle",
+        "screech"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "koffing",
+      "gender": "FEMALE",
+      "level": 12,
+      "nature": "jolly",
+      "ability": "levitate",
+      "moveset": [
+        "poisongas",
+        "tackle",
+        "smog"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

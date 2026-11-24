@@ -1,0 +1,94 @@
+{
+  "name": "Team Rocket Grunt",
+  "identity": "Team Rocket Grunt (39)",
+  "team": [
+    {
+      "species": "raticate",
+      "gender": "FEMALE",
+      "level": 26,
+      "nature": "gentle",
+      "ability": "runaway",
+      "moveset": [
+        "tailwhip",
+        "quickattack",
+        "hyperfang",
+        "scaryface"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "zubat",
+      "gender": "MALE",
+      "level": 26,
+      "nature": "hardy",
+      "ability": "innerfocus",
+      "moveset": [
+        "supersonic",
+        "bite",
+        "wingattack",
+        "confuseray"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "golbat",
+      "gender": "MALE",
+      "level": 26,
+      "nature": "calm",
+      "ability": "innerfocus",
+      "moveset": [
+        "astonish",
+        "supersonic",
+        "bite",
+        "wingattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "rattata",
+      "gender": "FEMALE",
+      "level": 26,
+      "nature": "relaxed",
+      "ability": "runaway",
+      "moveset": [
+        "tailwhip",
+        "quickattack",
+        "hyperfang",
+        "focusenergy"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

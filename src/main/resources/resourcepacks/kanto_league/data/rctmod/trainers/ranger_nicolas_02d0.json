@@ -1,0 +1,55 @@
+{
+  "name": "Ranger Nicolas",
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "victreebel",
+      "gender": "FEMALE",
+      "level": 55,
+      "nature": "calm",
+      "ability": "chlorophyll",
+      "moveset": [
+        "razorleaf",
+        "acid",
+        "stunspore",
+        "wrap"
+      ],
+      "ivs": {
+        "hp": 27,
+        "atk": 27,
+        "def": 27,
+        "spa": 27,
+        "spd": 27,
+        "spe": 27
+      },
+      "evs": {}
+    },
+    {
+      "species": "victreebel",
+      "gender": "MALE",
+      "level": 55,
+      "nature": "impish",
+      "ability": "chlorophyll",
+      "moveset": [
+        "razorleaf",
+        "acid",
+        "sleeppowder",
+        "slam"
+      ],
+      "ivs": {
+        "hp": 27,
+        "atk": 27,
+        "def": 27,
+        "spa": 27,
+        "spd": 27,
+        "spe": 27
+      },
+      "evs": {}
+    }
+  ]
+}

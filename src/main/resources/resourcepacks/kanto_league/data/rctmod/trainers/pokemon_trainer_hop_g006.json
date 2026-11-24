@@ -10,6 +10,7 @@
       "moveset": [
         "takedown",
         "doublekick",
+        "doubleedge",
         "headbutt"
       ],
       "ivs": {},
@@ -37,6 +38,7 @@
       "nature": "adamant",
       "ability": "blaze",
       "moveset": [
+        "doubleedge",
         "headbutt",
         "pyroball",
         "agility"

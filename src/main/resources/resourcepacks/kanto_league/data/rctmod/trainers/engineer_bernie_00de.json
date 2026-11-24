@@ -1,0 +1,71 @@
+{
+  "name": "Engineer Bernie",
+  "team": [
+    {
+      "species": "magnemite",
+      "gender": "GENDERLESS",
+      "level": 18,
+      "nature": "bold",
+      "ability": "magnetpull",
+      "moveset": [
+        "tackle",
+        "thundershock",
+        "supersonic",
+        "sonicboom"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "magnemite",
+      "gender": "GENDERLESS",
+      "level": 18,
+      "nature": "jolly",
+      "ability": "magnetpull",
+      "moveset": [
+        "tackle",
+        "thundershock",
+        "supersonic",
+        "sonicboom"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "magneton",
+      "gender": "GENDERLESS",
+      "level": 18,
+      "nature": "gentle",
+      "ability": "magnetpull",
+      "moveset": [
+        "tackle",
+        "thundershock",
+        "supersonic",
+        "sonicboom"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

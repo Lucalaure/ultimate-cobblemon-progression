@@ -1,0 +1,71 @@
+{
+  "name": "Super Nerd Glenn",
+  "team": [
+    {
+      "species": "grimer",
+      "gender": "MALE",
+      "level": 22,
+      "nature": "hardy",
+      "ability": "stench",
+      "moveset": [
+        "harden",
+        "disable",
+        "sludge",
+        "minimize"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "muk",
+      "gender": "FEMALE",
+      "level": 22,
+      "nature": "jolly",
+      "ability": "stench",
+      "moveset": [
+        "harden",
+        "disable",
+        "sludge",
+        "minimize"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "grimer",
+      "gender": "FEMALE",
+      "level": 22,
+      "nature": "hardy",
+      "ability": "stench",
+      "moveset": [
+        "harden",
+        "disable",
+        "sludge",
+        "minimize"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

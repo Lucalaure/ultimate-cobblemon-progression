@@ -1,0 +1,49 @@
+{
+  "name": "Gambler Darian",
+  "team": [
+    {
+      "species": "growlithe",
+      "gender": "MALE",
+      "level": 29,
+      "nature": "lonely",
+      "ability": "intimidate",
+      "moveset": [
+        "ember",
+        "leer",
+        "odorsleuth",
+        "takedown"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    },
+    {
+      "species": "vulpix",
+      "gender": "FEMALE",
+      "level": 29,
+      "nature": "quirky",
+      "ability": "flashfire",
+      "moveset": [
+        "willowisp",
+        "confuseray",
+        "imprison",
+        "flamethrower"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "name": "Fisherman Ned",
+  "team": [
+    {
+      "species": "goldeen",
+      "gender": "MALE",
+      "level": 22,
+      "nature": "quiet",
+      "ability": "swiftswim",
+      "moveset": [
+        "tailwhip",
+        "watersport",
+        "supersonic",
+        "hornattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "poliwag",
+      "gender": "MALE",
+      "level": 22,
+      "nature": "serious",
+      "ability": "waterabsorb",
+      "moveset": [
+        "bubble",
+        "hypnosis",
+        "watergun",
+        "doubleslap"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "goldeen",
+      "gender": "MALE",
+      "level": 22,
+      "nature": "docile",
+      "ability": "swiftswim",
+      "moveset": [
+        "tailwhip",
+        "watersport",
+        "supersonic",
+        "hornattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

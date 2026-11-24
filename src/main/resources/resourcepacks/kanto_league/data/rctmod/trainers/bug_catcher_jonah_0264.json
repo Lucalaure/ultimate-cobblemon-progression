@@ -1,0 +1,93 @@
+{
+  "name": "Bug Catcher Jonah",
+  "team": [
+    {
+      "species": "yanma",
+      "gender": "MALE",
+      "level": 45,
+      "nature": "bashful",
+      "ability": "speedboost",
+      "moveset": [
+        "detect",
+        "uproar",
+        "wingattack",
+        "supersonic"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "beedrill",
+      "gender": "FEMALE",
+      "level": 45,
+      "nature": "docile",
+      "ability": "swarm",
+      "moveset": [
+        "pursuit",
+        "pinmissile",
+        "agility",
+        "endeavor"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "yanma",
+      "gender": "FEMALE",
+      "level": 46,
+      "nature": "impish",
+      "ability": "speedboost",
+      "moveset": [
+        "detect",
+        "uproar",
+        "wingattack",
+        "supersonic"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "beedrill",
+      "gender": "MALE",
+      "level": 47,
+      "nature": "calm",
+      "ability": "swarm",
+      "moveset": [
+        "pursuit",
+        "pinmissile",
+        "agility",
+        "endeavor"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "name": "Pok\u00e9maniac Dawson",
+  "team": [
+    {
+      "species": "charmeleon",
+      "gender": "MALE",
+      "level": 40,
+      "nature": "jolly",
+      "ability": "blaze",
+      "moveset": [
+        "metalclaw",
+        "smokescreen",
+        "scaryface",
+        "flamethrower"
+      ],
+      "ivs": {
+        "hp": 4,
+        "atk": 4,
+        "def": 4,
+        "spa": 4,
+        "spd": 4,
+        "spe": 4
+      },
+      "evs": {}
+    },
+    {
+      "species": "lapras",
+      "gender": "MALE",
+      "level": 40,
+      "nature": "quiet",
+      "ability": "waterabsorb",
+      "moveset": [
+        "confuseray",
+        "perishsong",
+        "icebeam",
+        "raindance"
+      ],
+      "ivs": {
+        "hp": 4,
+        "atk": 4,
+        "def": 4,
+        "spa": 4,
+        "spd": 4,
+        "spe": 4
+      },
+      "evs": {}
+    },
+    {
+      "species": "lickitung",
+      "gender": "MALE",
+      "level": 40,
+      "nature": "docile",
+      "ability": "owntempo",
+      "moveset": [
+        "stomp",
+        "wrap",
+        "disable",
+        "slam"
+      ],
+      "ivs": {
+        "hp": 4,
+        "atk": 4,
+        "def": 4,
+        "spa": 4,
+        "spd": 4,
+        "spe": 4
+      },
+      "evs": {}
+    }
+  ]
+}

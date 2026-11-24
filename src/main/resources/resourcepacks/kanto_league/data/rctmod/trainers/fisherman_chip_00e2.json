@@ -1,0 +1,49 @@
+{
+  "name": "Fisherman Chip",
+  "team": [
+    {
+      "species": "tentacool",
+      "gender": "FEMALE",
+      "level": 24,
+      "nature": "hasty",
+      "ability": "clearbody",
+      "moveset": [
+        "poisonsting",
+        "supersonic",
+        "constrict",
+        "acid"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "goldeen",
+      "gender": "FEMALE",
+      "level": 24,
+      "nature": "quirky",
+      "ability": "swiftswim",
+      "moveset": [
+        "watersport",
+        "supersonic",
+        "hornattack",
+        "flail"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

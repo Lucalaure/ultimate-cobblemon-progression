@@ -1,0 +1,58 @@
+{
+  "name": "Ace Trainer Wilton",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 4
+  },
+  "team": [
+    {
+      "species": "spearow",
+      "gender": "FEMALE",
+      "level": 29,
+      "nature": "sassy",
+      "ability": "keeneye",
+      "moveset": [
+        "leer",
+        "furyattack",
+        "pursuit",
+        "aerialace"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "fearow",
+      "gender": "FEMALE",
+      "level": 29,
+      "nature": "serious",
+      "ability": "keeneye",
+      "moveset": [
+        "growl",
+        "leer",
+        "furyattack",
+        "pursuit"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

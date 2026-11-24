@@ -1,0 +1,27 @@
+{
+  "name": "Painter Rayna",
+  "team": [
+    {
+      "species": "smeargle",
+      "gender": "FEMALE",
+      "level": 50,
+      "nature": "serious",
+      "ability": "owntempo",
+      "moveset": [
+        "crosschop",
+        "megahorn",
+        "doubleedge",
+        "selfdestruct"
+      ],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      },
+      "evs": {}
+    }
+  ]
+}

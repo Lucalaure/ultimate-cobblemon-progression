@@ -1,0 +1,84 @@
+{
+  "name": "Team Rocket Admin",
+  "identity": "Team Rocket Admin (1)",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.25
+    }
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "muk",
+      "gender": "FEMALE",
+      "level": 52,
+      "nature": "jolly",
+      "ability": "stench",
+      "moveset": [
+        "sludgebomb",
+        "screech",
+        "minimize",
+        "rocktomb"
+      ],
+      "ivs": {
+        "hp": 18,
+        "atk": 18,
+        "def": 18,
+        "spa": 18,
+        "spd": 18,
+        "spe": 18
+      },
+      "evs": {}
+    },
+    {
+      "species": "arbok",
+      "gender": "MALE",
+      "level": 53,
+      "nature": "gentle",
+      "ability": "intimidate",
+      "moveset": [
+        "sludgebomb",
+        "bite",
+        "earthquake",
+        "irontail"
+      ],
+      "ivs": {
+        "hp": 18,
+        "atk": 18,
+        "def": 18,
+        "spa": 18,
+        "spd": 18,
+        "spe": 18
+      },
+      "evs": {}
+    },
+    {
+      "species": "vileplume",
+      "gender": "FEMALE",
+      "level": 54,
+      "nature": "serious",
+      "ability": "chlorophyll",
+      "moveset": [
+        "sludgebomb",
+        "gigadrain",
+        "sleeppowder",
+        "stunspore"
+      ],
+      "ivs": {
+        "hp": 18,
+        "atk": 18,
+        "def": 18,
+        "spa": 18,
+        "spd": 18,
+        "spe": 18
+      },
+      "evs": {}
+    }
+  ]
+}

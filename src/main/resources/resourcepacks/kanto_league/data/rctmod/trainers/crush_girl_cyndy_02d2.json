@@ -1,0 +1,80 @@
+{
+  "name": "Crush Girl Cyndy",
+  "team": [
+    {
+      "species": "primeape",
+      "gender": "MALE",
+      "level": 54,
+      "nature": "adamant",
+      "ability": "vitalspirit",
+      "moveset": [
+        "rage",
+        "crosschop",
+        "swagger",
+        "screech"
+      ],
+      "ivs": {
+        "hp": 21,
+        "atk": 21,
+        "def": 21,
+        "spa": 21,
+        "spd": 21,
+        "spe": 21
+      },
+      "evs": {},
+      "heldItem": [
+        "black_belt"
+      ]
+    },
+    {
+      "species": "hitmontop",
+      "gender": "MALE",
+      "level": 54,
+      "nature": "calm",
+      "ability": "intimidate",
+      "moveset": [
+        "counter",
+        "agility",
+        "detect",
+        "endeavor"
+      ],
+      "ivs": {
+        "hp": 21,
+        "atk": 21,
+        "def": 21,
+        "spa": 21,
+        "spd": 21,
+        "spe": 21
+      },
+      "evs": {},
+      "heldItem": [
+        "black_belt"
+      ]
+    },
+    {
+      "species": "machamp",
+      "gender": "MALE",
+      "level": 54,
+      "nature": "mild",
+      "ability": "guts",
+      "moveset": [
+        "vitalthrow",
+        "submission",
+        "crosschop",
+        "scaryface"
+      ],
+      "ivs": {
+        "hp": 21,
+        "atk": 21,
+        "def": 21,
+        "spa": 21,
+        "spd": 21,
+        "spe": 21
+      },
+      "evs": {},
+      "heldItem": [
+        "black_belt"
+      ]
+    }
+  ]
+}

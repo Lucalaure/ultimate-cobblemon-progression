@@ -1,0 +1,27 @@
+{
+  "name": "Scientist Rodney",
+  "team": [
+    {
+      "species": "electrode",
+      "gender": "GENDERLESS",
+      "level": 33,
+      "nature": "naive",
+      "ability": "soundproof",
+      "moveset": [
+        "screech",
+        "sonicboom",
+        "spark",
+        "selfdestruct"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

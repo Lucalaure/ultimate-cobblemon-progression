@@ -1,0 +1,55 @@
+{
+  "name": "Black Belt Shea",
+  "team": [
+    {
+      "species": "machop",
+      "gender": "MALE",
+      "level": 38,
+      "nature": "calm",
+      "ability": "guts",
+      "moveset": [
+        "foresight",
+        "revenge",
+        "vitalthrow",
+        "submission"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {},
+      "heldItem": [
+        "black_belt"
+      ]
+    },
+    {
+      "species": "machoke",
+      "gender": "MALE",
+      "level": 38,
+      "nature": "timid",
+      "ability": "guts",
+      "moveset": [
+        "seismictoss",
+        "foresight",
+        "revenge",
+        "vitalthrow"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {},
+      "heldItem": [
+        "black_belt"
+      ]
+    }
+  ]
+}

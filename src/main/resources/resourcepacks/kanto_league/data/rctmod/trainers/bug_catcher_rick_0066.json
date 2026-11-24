@@ -1,0 +1,45 @@
+{
+  "name": "Bug Catcher Rick",
+  "team": [
+    {
+      "species": "weedle",
+      "gender": "MALE",
+      "level": 6,
+      "nature": "hasty",
+      "ability": "shielddust",
+      "moveset": [
+        "poisonsting",
+        "stringshot"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "caterpie",
+      "gender": "FEMALE",
+      "level": 6,
+      "nature": "brave",
+      "ability": "shielddust",
+      "moveset": [
+        "tackle",
+        "stringshot"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

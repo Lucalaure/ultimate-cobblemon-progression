@@ -1,0 +1,49 @@
+{
+  "name": "Swimmer\u2642 Barry",
+  "team": [
+    {
+      "species": "shellder",
+      "gender": "FEMALE",
+      "level": 31,
+      "nature": "serious",
+      "ability": "shellarmor",
+      "moveset": [
+        "iciclespear",
+        "supersonic",
+        "aurorabeam",
+        "protect"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "cloyster",
+      "gender": "MALE",
+      "level": 31,
+      "nature": "naughty",
+      "ability": "shellarmor",
+      "moveset": [
+        "withdraw",
+        "supersonic",
+        "aurorabeam",
+        "protect"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

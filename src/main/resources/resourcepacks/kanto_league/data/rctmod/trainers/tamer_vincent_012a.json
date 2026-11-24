@@ -1,0 +1,49 @@
+{
+  "name": "Tamer Vincent",
+  "team": [
+    {
+      "species": "persian",
+      "gender": "FEMALE",
+      "level": 44,
+      "nature": "quiet",
+      "ability": "limber",
+      "moveset": [
+        "payday",
+        "feintattack",
+        "screech",
+        "furyswipes"
+      ],
+      "ivs": {
+        "hp": 5,
+        "atk": 5,
+        "def": 5,
+        "spa": 5,
+        "spd": 5,
+        "spe": 5
+      },
+      "evs": {}
+    },
+    {
+      "species": "golduck",
+      "gender": "MALE",
+      "level": 44,
+      "nature": "bashful",
+      "ability": "damp",
+      "moveset": [
+        "confusion",
+        "screech",
+        "psychup",
+        "furyswipes"
+      ],
+      "ivs": {
+        "hp": 5,
+        "atk": 5,
+        "def": 5,
+        "spa": 5,
+        "spd": 5,
+        "spe": 5
+      },
+      "evs": {}
+    }
+  ]
+}

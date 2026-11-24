@@ -1,0 +1,49 @@
+{
+  "name": "Cue Ball Corey",
+  "team": [
+    {
+      "species": "primeape",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "serious",
+      "ability": "vitalspirit",
+      "moveset": [
+        "seismictoss",
+        "rage",
+        "crosschop",
+        "swagger"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    },
+    {
+      "species": "machamp",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "jolly",
+      "ability": "guts",
+      "moveset": [
+        "revenge",
+        "vitalthrow",
+        "submission",
+        "crosschop"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "name": "Fisherman Tommy",
+  "team": [
+    {
+      "species": "goldeen",
+      "gender": "MALE",
+      "level": 33,
+      "nature": "jolly",
+      "ability": "swiftswim",
+      "moveset": [
+        "supersonic",
+        "hornattack",
+        "flail",
+        "furyattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "goldeen",
+      "gender": "FEMALE",
+      "level": 33,
+      "nature": "calm",
+      "ability": "swiftswim",
+      "moveset": [
+        "supersonic",
+        "hornattack",
+        "flail",
+        "furyattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "seaking",
+      "gender": "FEMALE",
+      "level": 35,
+      "nature": "lonely",
+      "ability": "swiftswim",
+      "moveset": [
+        "supersonic",
+        "hornattack",
+        "flail",
+        "furyattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "seaking",
+      "gender": "MALE",
+      "level": 35,
+      "nature": "impish",
+      "ability": "swiftswim",
+      "moveset": [
+        "supersonic",
+        "hornattack",
+        "flail",
+        "furyattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "seaking",
+      "gender": "FEMALE",
+      "level": 35,
+      "nature": "modest",
+      "ability": "swiftswim",
+      "moveset": [
+        "supersonic",
+        "hornattack",
+        "flail",
+        "furyattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

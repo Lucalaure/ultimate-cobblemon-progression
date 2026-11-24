@@ -1,0 +1,27 @@
+{
+  "name": "Breeder Bethany",
+  "team": [
+    {
+      "species": "chansey",
+      "gender": "FEMALE",
+      "level": 50,
+      "nature": "mild",
+      "ability": "naturalcure",
+      "moveset": [
+        "sing",
+        "eggbomb",
+        "defensecurl",
+        "lightscreen"
+      ],
+      "ivs": {
+        "hp": 4,
+        "atk": 4,
+        "def": 4,
+        "spa": 4,
+        "spd": 4,
+        "spe": 4
+      },
+      "evs": {}
+    }
+  ]
+}

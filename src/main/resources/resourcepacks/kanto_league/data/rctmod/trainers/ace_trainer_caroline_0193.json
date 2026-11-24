@@ -1,0 +1,130 @@
+{
+  "name": "Ace Trainer Caroline",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 4
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "bellsprout",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "quiet",
+      "ability": "chlorophyll",
+      "moveset": [
+        "razorleaf",
+        "acid",
+        "stunspore",
+        "poisonpowder"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "weepinbell",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "quirky",
+      "ability": "chlorophyll",
+      "moveset": [
+        "razorleaf",
+        "acid",
+        "sleeppowder",
+        "poisonpowder"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "victreebel",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "lax",
+      "ability": "chlorophyll",
+      "moveset": [
+        "razorleaf",
+        "acid",
+        "stunspore",
+        "sleeppowder"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "paras",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "quirky",
+      "ability": "effectspore",
+      "moveset": [
+        "growth",
+        "slash",
+        "leechlife",
+        "stunspore"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "parasect",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "relaxed",
+      "ability": "effectspore",
+      "moveset": [
+        "spore",
+        "slash",
+        "leechlife",
+        "poisonpowder"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    }
+  ]
+}

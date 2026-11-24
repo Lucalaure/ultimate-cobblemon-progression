@@ -1,0 +1,130 @@
+{
+  "name": "Ace Trainer George",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 4
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "exeggutor",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "sassy",
+      "ability": "chlorophyll",
+      "moveset": [
+        "eggbomb",
+        "confusion",
+        "stunspore",
+        "sleeppowder"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "sandslash",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "sassy",
+      "ability": "sandveil",
+      "moveset": [
+        "furyswipes",
+        "swift",
+        "poisonsting",
+        "sandattack"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "cloyster",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "bold",
+      "ability": "shellarmor",
+      "moveset": [
+        "spikecannon",
+        "spikes",
+        "aurorabeam",
+        "supersonic"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "electrode",
+      "gender": "GENDERLESS",
+      "level": 42,
+      "nature": "quiet",
+      "ability": "soundproof",
+      "moveset": [
+        "spark",
+        "sonicboom",
+        "screech",
+        "lightscreen"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "arcanine",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "timid",
+      "ability": "intimidate",
+      "moveset": [
+        "flamewheel",
+        "roar",
+        "bite",
+        "takedown"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    }
+  ]
+}

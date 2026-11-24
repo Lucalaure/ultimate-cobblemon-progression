@@ -1,0 +1,49 @@
+{
+  "name": "Swimmer\u2642 Mymo",
+  "team": [
+    {
+      "species": "kingler",
+      "gender": "MALE",
+      "level": 49,
+      "nature": "careful",
+      "ability": "hypercutter",
+      "moveset": [
+        "mudshot",
+        "stomp",
+        "guillotine",
+        "protect"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "wartortle",
+      "gender": "MALE",
+      "level": 49,
+      "nature": "jolly",
+      "ability": "torrent",
+      "moveset": [
+        "rapidspin",
+        "protect",
+        "raindance",
+        "skullbash"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

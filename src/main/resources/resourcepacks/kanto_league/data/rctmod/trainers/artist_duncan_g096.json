@@ -8,6 +8,7 @@
       "nature": "quiet",
       "ability": "levitate",
       "moveset": [
+        "selfdestruct",
         "haze",
         "smokescreen",
         "clearsmog"

@@ -1,0 +1,71 @@
+{
+  "name": "Tamer Edgar",
+  "team": [
+    {
+      "species": "arbok",
+      "gender": "MALE",
+      "level": 33,
+      "nature": "lax",
+      "ability": "intimidate",
+      "moveset": [
+        "poisonsting",
+        "bite",
+        "glare",
+        "screech"
+      ],
+      "ivs": {
+        "hp": 5,
+        "atk": 5,
+        "def": 5,
+        "spa": 5,
+        "spd": 5,
+        "spe": 5
+      },
+      "evs": {}
+    },
+    {
+      "species": "sandslash",
+      "gender": "MALE",
+      "level": 33,
+      "nature": "impish",
+      "ability": "sandveil",
+      "moveset": [
+        "sandattack",
+        "poisonsting",
+        "slash",
+        "swift"
+      ],
+      "ivs": {
+        "hp": 5,
+        "atk": 5,
+        "def": 5,
+        "spa": 5,
+        "spd": 5,
+        "spe": 5
+      },
+      "evs": {}
+    },
+    {
+      "species": "arbok",
+      "gender": "MALE",
+      "level": 33,
+      "nature": "quirky",
+      "ability": "intimidate",
+      "moveset": [
+        "poisonsting",
+        "bite",
+        "glare",
+        "screech"
+      ],
+      "ivs": {
+        "hp": 5,
+        "atk": 5,
+        "def": 5,
+        "spa": 5,
+        "spd": 5,
+        "spe": 5
+      },
+      "evs": {}
+    }
+  ]
+}

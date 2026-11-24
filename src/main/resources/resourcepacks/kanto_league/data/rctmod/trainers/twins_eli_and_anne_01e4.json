@@ -1,0 +1,50 @@
+{
+  "name": "Twins Eli & Anne",
+  "battleFormat": "GEN_9_DOUBLES",
+  "team": [
+    {
+      "species": "clefairy",
+      "gender": "MALE",
+      "level": 22,
+      "nature": "timid",
+      "ability": "cutecharm",
+      "moveset": [
+        "sing",
+        "doubleslap",
+        "followme",
+        "minimize"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "jigglypuff",
+      "gender": "FEMALE",
+      "level": 22,
+      "nature": "mild",
+      "ability": "cutecharm",
+      "moveset": [
+        "defensecurl",
+        "pound",
+        "disable",
+        "rollout"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

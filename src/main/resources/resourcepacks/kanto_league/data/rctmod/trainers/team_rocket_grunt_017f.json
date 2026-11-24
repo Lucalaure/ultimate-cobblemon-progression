@@ -1,0 +1,50 @@
+{
+  "name": "Team Rocket Grunt",
+  "identity": "Team Rocket Grunt (37)",
+  "team": [
+    {
+      "species": "cubone",
+      "gender": "FEMALE",
+      "level": 29,
+      "nature": "hasty",
+      "ability": "rockhead",
+      "moveset": [
+        "leer",
+        "focusenergy",
+        "bonemerang",
+        "rage"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "cubone",
+      "gender": "MALE",
+      "level": 29,
+      "nature": "hasty",
+      "ability": "rockhead",
+      "moveset": [
+        "leer",
+        "focusenergy",
+        "bonemerang",
+        "rage"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

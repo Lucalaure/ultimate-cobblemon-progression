@@ -1,0 +1,27 @@
+{
+  "name": "Picnicker Diana",
+  "team": [
+    {
+      "species": "goldeen",
+      "gender": "FEMALE",
+      "level": 19,
+      "nature": "docile",
+      "ability": "swiftswim",
+      "moveset": [
+        "tailwhip",
+        "watersport",
+        "supersonic",
+        "hornattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

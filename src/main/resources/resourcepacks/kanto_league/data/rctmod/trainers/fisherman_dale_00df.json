@@ -1,0 +1,70 @@
+{
+  "name": "Fisherman Dale",
+  "team": [
+    {
+      "species": "goldeen",
+      "gender": "MALE",
+      "level": 17,
+      "nature": "naughty",
+      "ability": "swiftswim",
+      "moveset": [
+        "tailwhip",
+        "watersport",
+        "supersonic",
+        "hornattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "tentacool",
+      "gender": "FEMALE",
+      "level": 17,
+      "nature": "adamant",
+      "ability": "clearbody",
+      "moveset": [
+        "poisonsting",
+        "supersonic",
+        "constrict"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "goldeen",
+      "gender": "FEMALE",
+      "level": 17,
+      "nature": "gentle",
+      "ability": "swiftswim",
+      "moveset": [
+        "tailwhip",
+        "watersport",
+        "supersonic",
+        "hornattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

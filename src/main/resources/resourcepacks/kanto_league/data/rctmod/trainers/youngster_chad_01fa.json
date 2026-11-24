@@ -1,0 +1,49 @@
+{
+  "name": "Youngster Chad",
+  "team": [
+    {
+      "species": "arbok",
+      "gender": "FEMALE",
+      "level": 28,
+      "nature": "lax",
+      "ability": "intimidate",
+      "moveset": [
+        "poisonsting",
+        "bite",
+        "glare",
+        "screech"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    },
+    {
+      "species": "sandshrew",
+      "gender": "MALE",
+      "level": 28,
+      "nature": "impish",
+      "ability": "sandveil",
+      "moveset": [
+        "defensecurl",
+        "sandattack",
+        "poisonsting",
+        "slash"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    }
+  ]
+}

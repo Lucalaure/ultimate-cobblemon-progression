@@ -1,0 +1,49 @@
+{
+  "name": "Fisherman Tylor",
+  "team": [
+    {
+      "species": "qwilfish",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "sassy",
+      "ability": "poisonpoint",
+      "moveset": [
+        "revenge",
+        "takedown",
+        "hydropump",
+        "destinybond"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "qwilfish",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "naughty",
+      "ability": "poisonpoint",
+      "moveset": [
+        "revenge",
+        "takedown",
+        "hydropump",
+        "destinybond"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

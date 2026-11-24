@@ -1,0 +1,49 @@
+{
+  "name": "Juggler Shawn",
+  "team": [
+    {
+      "species": "drowzee",
+      "gender": "MALE",
+      "level": 34,
+      "nature": "sassy",
+      "ability": "insomnia",
+      "moveset": [
+        "headbutt",
+        "poisongas",
+        "meditate",
+        "psychic"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "hypno",
+      "gender": "MALE",
+      "level": 34,
+      "nature": "quiet",
+      "ability": "insomnia",
+      "moveset": [
+        "confusion",
+        "headbutt",
+        "poisongas",
+        "meditate"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

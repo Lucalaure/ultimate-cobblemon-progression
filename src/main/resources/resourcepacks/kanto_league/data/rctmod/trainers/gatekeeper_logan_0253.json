@@ -1,0 +1,55 @@
+{
+  "name": "Pok\u00e9mon Ranger Logan",
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "exeggcute",
+      "gender": "FEMALE",
+      "level": 37,
+      "nature": "docile",
+      "ability": "chlorophyll",
+      "moveset": [
+        "sleeppowder",
+        "poisonpowder",
+        "stunspore",
+        "confusion"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "exeggutor",
+      "gender": "FEMALE",
+      "level": 40,
+      "nature": "quirky",
+      "ability": "chlorophyll",
+      "moveset": [
+        "eggbomb",
+        "stomp",
+        "confusion",
+        "hypnosis"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "name": "Cue Ball Camron",
+  "team": [
+    {
+      "species": "primeape",
+      "gender": "MALE",
+      "level": 49,
+      "nature": "quiet",
+      "ability": "vitalspirit",
+      "moveset": [
+        "seismictoss",
+        "rage",
+        "crosschop",
+        "swagger"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    },
+    {
+      "species": "machoke",
+      "gender": "MALE",
+      "level": 49,
+      "nature": "adamant",
+      "ability": "guts",
+      "moveset": [
+        "revenge",
+        "vitalthrow",
+        "submission",
+        "crosschop"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    }
+  ]
+}

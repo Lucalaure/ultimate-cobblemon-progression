@@ -1,0 +1,49 @@
+{
+  "name": "Hiker Earl",
+  "team": [
+    {
+      "species": "onix",
+      "gender": "FEMALE",
+      "level": 54,
+      "nature": "sassy",
+      "ability": "rockhead",
+      "moveset": [
+        "sandstorm",
+        "slam",
+        "irontail",
+        "sandtomb"
+      ],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      },
+      "evs": {}
+    },
+    {
+      "species": "machamp",
+      "gender": "MALE",
+      "level": 54,
+      "nature": "docile",
+      "ability": "guts",
+      "moveset": [
+        "vitalthrow",
+        "submission",
+        "crosschop",
+        "scaryface"
+      ],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      },
+      "evs": {}
+    }
+  ]
+}

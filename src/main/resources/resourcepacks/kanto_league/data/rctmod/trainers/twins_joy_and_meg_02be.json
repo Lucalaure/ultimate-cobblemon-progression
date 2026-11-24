@@ -1,0 +1,50 @@
+{
+  "name": "Twins Joy & Meg",
+  "battleFormat": "GEN_9_DOUBLES",
+  "team": [
+    {
+      "species": "clefairy",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "modest",
+      "ability": "cutecharm",
+      "moveset": [
+        "cosmicpower",
+        "moonlight",
+        "lightscreen",
+        "meteormash"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    },
+    {
+      "species": "clefairy",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "sassy",
+      "ability": "cutecharm",
+      "moveset": [
+        "cosmicpower",
+        "moonlight",
+        "lightscreen",
+        "meteormash"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    }
+  ]
+}

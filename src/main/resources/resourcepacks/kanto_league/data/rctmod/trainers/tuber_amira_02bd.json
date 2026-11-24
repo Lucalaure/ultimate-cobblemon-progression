@@ -1,0 +1,71 @@
+{
+  "name": "Tuber Amira",
+  "team": [
+    {
+      "species": "poliwhirl",
+      "gender": "MALE",
+      "level": 47,
+      "nature": "quirky",
+      "ability": "waterabsorb",
+      "moveset": [
+        "doubleslap",
+        "raindance",
+        "bodyslam",
+        "bellydrum"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    },
+    {
+      "species": "poliwhirl",
+      "gender": "FEMALE",
+      "level": 47,
+      "nature": "timid",
+      "ability": "waterabsorb",
+      "moveset": [
+        "doubleslap",
+        "raindance",
+        "bodyslam",
+        "bellydrum"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    },
+    {
+      "species": "poliwhirl",
+      "gender": "FEMALE",
+      "level": 47,
+      "nature": "bashful",
+      "ability": "waterabsorb",
+      "moveset": [
+        "doubleslap",
+        "raindance",
+        "bodyslam",
+        "bellydrum"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "name": "Channeler Angelica",
+  "team": [
+    {
+      "species": "gastly",
+      "gender": "MALE",
+      "level": 22,
+      "nature": "bashful",
+      "ability": "levitate",
+      "moveset": [
+        "spite",
+        "curse",
+        "nightshade",
+        "confuseray"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "gastly",
+      "gender": "FEMALE",
+      "level": 22,
+      "nature": "bashful",
+      "ability": "levitate",
+      "moveset": [
+        "spite",
+        "curse",
+        "nightshade",
+        "confuseray"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "gastly",
+      "gender": "MALE",
+      "level": 22,
+      "nature": "modest",
+      "ability": "levitate",
+      "moveset": [
+        "spite",
+        "curse",
+        "nightshade",
+        "confuseray"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

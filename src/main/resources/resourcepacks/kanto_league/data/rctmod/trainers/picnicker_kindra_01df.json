@@ -1,0 +1,71 @@
+{
+  "name": "Picnicker Kindra",
+  "team": [
+    {
+      "species": "gloom",
+      "gender": "FEMALE",
+      "level": 28,
+      "nature": "bold",
+      "ability": "chlorophyll",
+      "moveset": [
+        "poisonpowder",
+        "stunspore",
+        "sleeppowder",
+        "acid"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "oddish",
+      "gender": "MALE",
+      "level": 28,
+      "nature": "bold",
+      "ability": "chlorophyll",
+      "moveset": [
+        "poisonpowder",
+        "stunspore",
+        "sleeppowder",
+        "acid"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "oddish",
+      "gender": "FEMALE",
+      "level": 28,
+      "nature": "bold",
+      "ability": "chlorophyll",
+      "moveset": [
+        "poisonpowder",
+        "stunspore",
+        "sleeppowder",
+        "acid"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

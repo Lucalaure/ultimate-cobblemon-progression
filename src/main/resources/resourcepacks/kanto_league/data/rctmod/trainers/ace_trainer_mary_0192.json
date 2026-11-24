@@ -1,0 +1,130 @@
+{
+  "name": "Ace Trainer Mary",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 4
+  },
+  "bag": [
+    {
+      "item": "cobblemon:super_potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "bellsprout",
+      "gender": "MALE",
+      "level": 22,
+      "nature": "hasty",
+      "ability": "chlorophyll",
+      "moveset": [
+        "wrap",
+        "stunspore",
+        "poisonpowder",
+        "growth"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "oddish",
+      "gender": "MALE",
+      "level": 22,
+      "nature": "impish",
+      "ability": "chlorophyll",
+      "moveset": [
+        "poisonpowder",
+        "stunspore",
+        "absorb",
+        "sweetscent"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "weepinbell",
+      "gender": "MALE",
+      "level": 22,
+      "nature": "docile",
+      "ability": "chlorophyll",
+      "moveset": [
+        "vinewhip",
+        "stunspore",
+        "poisonpowder",
+        "growth"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "gloom",
+      "gender": "FEMALE",
+      "level": 22,
+      "nature": "docile",
+      "ability": "chlorophyll",
+      "moveset": [
+        "absorb",
+        "stunspore",
+        "poisonpowder",
+        "sweetscent"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "ivysaur",
+      "gender": "MALE",
+      "level": 22,
+      "nature": "gentle",
+      "ability": "overgrow",
+      "moveset": [
+        "razorleaf",
+        "sleeppowder",
+        "vinewhip",
+        "leechseed"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    }
+  ]
+}

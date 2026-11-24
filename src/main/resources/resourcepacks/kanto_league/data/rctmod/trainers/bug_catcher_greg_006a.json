@@ -1,0 +1,83 @@
+{
+  "name": "Bug Catcher Greg",
+  "team": [
+    {
+      "species": "weedle",
+      "gender": "FEMALE",
+      "level": 9,
+      "nature": "lax",
+      "ability": "shielddust",
+      "moveset": [
+        "poisonsting",
+        "stringshot"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "kakuna",
+      "gender": "FEMALE",
+      "level": 9,
+      "nature": "naughty",
+      "ability": "shedskin",
+      "moveset": [
+        "harden"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "caterpie",
+      "gender": "FEMALE",
+      "level": 9,
+      "nature": "sassy",
+      "ability": "shielddust",
+      "moveset": [
+        "tackle",
+        "stringshot"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "metapod",
+      "gender": "FEMALE",
+      "level": 9,
+      "nature": "bold",
+      "ability": "shedskin",
+      "moveset": [
+        "harden"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

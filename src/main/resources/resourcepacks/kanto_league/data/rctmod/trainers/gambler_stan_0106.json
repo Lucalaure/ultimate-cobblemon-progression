@@ -1,0 +1,71 @@
+{
+  "name": "Gambler Stan",
+  "team": [
+    {
+      "species": "poliwag",
+      "gender": "FEMALE",
+      "level": 22,
+      "nature": "relaxed",
+      "ability": "waterabsorb",
+      "moveset": [
+        "bubble",
+        "hypnosis",
+        "watergun",
+        "doubleslap"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "poliwag",
+      "gender": "FEMALE",
+      "level": 22,
+      "nature": "naive",
+      "ability": "waterabsorb",
+      "moveset": [
+        "bubble",
+        "hypnosis",
+        "watergun",
+        "doubleslap"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "poliwhirl",
+      "gender": "FEMALE",
+      "level": 22,
+      "nature": "brave",
+      "ability": "waterabsorb",
+      "moveset": [
+        "bubble",
+        "hypnosis",
+        "watergun",
+        "doubleslap"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

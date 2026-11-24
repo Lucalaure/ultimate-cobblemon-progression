@@ -1,0 +1,55 @@
+{
+  "name": "Black Belt Atsushi",
+  "team": [
+    {
+      "species": "machop",
+      "gender": "MALE",
+      "level": 40,
+      "nature": "naive",
+      "ability": "guts",
+      "moveset": [
+        "revenge",
+        "vitalthrow",
+        "submission",
+        "crosschop"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {},
+      "heldItem": [
+        "black_belt"
+      ]
+    },
+    {
+      "species": "machoke",
+      "gender": "MALE",
+      "level": 40,
+      "nature": "naughty",
+      "ability": "guts",
+      "moveset": [
+        "seismictoss",
+        "foresight",
+        "revenge",
+        "vitalthrow"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {},
+      "heldItem": [
+        "black_belt"
+      ]
+    }
+  ]
+}

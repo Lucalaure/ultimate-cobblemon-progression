@@ -26,7 +26,8 @@
       "ability": "swarm",
       "moveset": [
         "ironhead",
-        "crunch"
+        "crunch",
+        "xscissor"
       ],
       "ivs": {},
       "evs": {}

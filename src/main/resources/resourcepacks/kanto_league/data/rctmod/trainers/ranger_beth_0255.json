@@ -1,0 +1,77 @@
+{
+  "name": "Ranger Beth",
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "bellsprout",
+      "gender": "FEMALE",
+      "level": 38,
+      "nature": "lonely",
+      "ability": "chlorophyll",
+      "moveset": [
+        "stunspore",
+        "acid",
+        "sweetscent",
+        "razorleaf"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "gloom",
+      "gender": "FEMALE",
+      "level": 38,
+      "nature": "jolly",
+      "ability": "chlorophyll",
+      "moveset": [
+        "stunspore",
+        "sleeppowder",
+        "acid",
+        "moonlight"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "gloom",
+      "gender": "FEMALE",
+      "level": 38,
+      "nature": "sassy",
+      "ability": "chlorophyll",
+      "moveset": [
+        "stunspore",
+        "sleeppowder",
+        "acid",
+        "moonlight"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    }
+  ]
+}

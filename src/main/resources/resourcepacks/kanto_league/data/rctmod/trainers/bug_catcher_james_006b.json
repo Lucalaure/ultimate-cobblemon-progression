@@ -1,0 +1,44 @@
+{
+  "name": "Bug Catcher James",
+  "team": [
+    {
+      "species": "caterpie",
+      "gender": "FEMALE",
+      "level": 11,
+      "nature": "lax",
+      "ability": "shielddust",
+      "moveset": [
+        "tackle",
+        "stringshot"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "metapod",
+      "gender": "MALE",
+      "level": 11,
+      "nature": "lax",
+      "ability": "shedskin",
+      "moveset": [
+        "harden"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

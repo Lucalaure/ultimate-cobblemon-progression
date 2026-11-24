@@ -1,0 +1,130 @@
+{
+  "name": "Ace Trainer Gilbert",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 4
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "pidgeotto",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "modest",
+      "ability": "keeneye",
+      "moveset": [
+        "wingattack",
+        "featherdance",
+        "whirlwind",
+        "quickattack"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "fearow",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "serious",
+      "ability": "keeneye",
+      "moveset": [
+        "drillpeck",
+        "mirrormove",
+        "pursuit",
+        "leer"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "persian",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "bashful",
+      "ability": "limber",
+      "moveset": [
+        "payday",
+        "feintattack",
+        "screech",
+        "bite"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "lickitung",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "modest",
+      "ability": "owntempo",
+      "moveset": [
+        "slam",
+        "disable",
+        "wrap",
+        "supersonic"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "tauros",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "impish",
+      "ability": "intimidate",
+      "moveset": [
+        "hornattack",
+        "scaryface",
+        "swagger",
+        "tailwhip"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    }
+  ]
+}

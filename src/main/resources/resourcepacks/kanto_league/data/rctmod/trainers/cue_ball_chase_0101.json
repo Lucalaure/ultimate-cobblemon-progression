@@ -1,0 +1,71 @@
+{
+  "name": "Cue Ball Chase",
+  "team": [
+    {
+      "species": "tentacool",
+      "gender": "MALE",
+      "level": 31,
+      "nature": "serious",
+      "ability": "clearbody",
+      "moveset": [
+        "constrict",
+        "acid",
+        "bubblebeam",
+        "wrap"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "tentacool",
+      "gender": "MALE",
+      "level": 31,
+      "nature": "calm",
+      "ability": "clearbody",
+      "moveset": [
+        "constrict",
+        "acid",
+        "bubblebeam",
+        "wrap"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "tentacruel",
+      "gender": "MALE",
+      "level": 31,
+      "nature": "careful",
+      "ability": "clearbody",
+      "moveset": [
+        "constrict",
+        "acid",
+        "bubblebeam",
+        "wrap"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

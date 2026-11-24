@@ -1,0 +1,45 @@
+{
+  "name": "Bug Catcher Anthony",
+  "team": [
+    {
+      "species": "caterpie",
+      "gender": "FEMALE",
+      "level": 7,
+      "nature": "lax",
+      "ability": "shielddust",
+      "moveset": [
+        "tackle",
+        "stringshot"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "caterpie",
+      "gender": "FEMALE",
+      "level": 8,
+      "nature": "mild",
+      "ability": "shielddust",
+      "moveset": [
+        "tackle",
+        "stringshot"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "name": "Biker Ricardo",
+  "team": [
+    {
+      "species": "koffing",
+      "gender": "FEMALE",
+      "level": 22,
+      "nature": "hasty",
+      "ability": "levitate",
+      "moveset": [
+        "sludge",
+        "smog",
+        "tackle",
+        "poisongas"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "koffing",
+      "gender": "MALE",
+      "level": 22,
+      "nature": "bashful",
+      "ability": "levitate",
+      "moveset": [
+        "sludge",
+        "smog",
+        "tackle",
+        "poisongas"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "grimer",
+      "gender": "FEMALE",
+      "level": 23,
+      "nature": "lonely",
+      "ability": "stench",
+      "moveset": [
+        "minimize",
+        "sludge",
+        "disable",
+        "pound"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

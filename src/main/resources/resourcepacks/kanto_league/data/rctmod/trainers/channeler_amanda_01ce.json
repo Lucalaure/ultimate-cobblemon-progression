@@ -1,0 +1,49 @@
+{
+  "name": "Channeler Amanda",
+  "team": [
+    {
+      "species": "gastly",
+      "gender": "FEMALE",
+      "level": 34,
+      "nature": "brave",
+      "ability": "levitate",
+      "moveset": [
+        "nightshade",
+        "confuseray",
+        "dreameater",
+        "destinybond"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "haunter",
+      "gender": "MALE",
+      "level": 34,
+      "nature": "impish",
+      "ability": "levitate",
+      "moveset": [
+        "nightshade",
+        "confuseray",
+        "shadowpunch",
+        "dreameater"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

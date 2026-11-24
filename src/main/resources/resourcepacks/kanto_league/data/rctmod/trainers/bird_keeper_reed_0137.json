@@ -1,0 +1,93 @@
+{
+  "name": "Bird Keeper Reed",
+  "team": [
+    {
+      "species": "pidgeotto",
+      "gender": "FEMALE",
+      "level": 39,
+      "nature": "bold",
+      "ability": "keeneye",
+      "moveset": [
+        "quickattack",
+        "whirlwind",
+        "wingattack",
+        "featherdance"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "pidgeotto",
+      "gender": "FEMALE",
+      "level": 39,
+      "nature": "jolly",
+      "ability": "keeneye",
+      "moveset": [
+        "quickattack",
+        "whirlwind",
+        "wingattack",
+        "featherdance"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "pidgey",
+      "gender": "MALE",
+      "level": 39,
+      "nature": "serious",
+      "ability": "keeneye",
+      "moveset": [
+        "whirlwind",
+        "wingattack",
+        "featherdance",
+        "agility"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "pidgeotto",
+      "gender": "MALE",
+      "level": 39,
+      "nature": "naughty",
+      "ability": "keeneye",
+      "moveset": [
+        "quickattack",
+        "whirlwind",
+        "wingattack",
+        "featherdance"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

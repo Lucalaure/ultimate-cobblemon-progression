@@ -1,0 +1,27 @@
+{
+  "name": "Cue Ball Zeek",
+  "team": [
+    {
+      "species": "machoke",
+      "gender": "FEMALE",
+      "level": 33,
+      "nature": "rash",
+      "ability": "guts",
+      "moveset": [
+        "seismictoss",
+        "foresight",
+        "revenge",
+        "vitalthrow"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

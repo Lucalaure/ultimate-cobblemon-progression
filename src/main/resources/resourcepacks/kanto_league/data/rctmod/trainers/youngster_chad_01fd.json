@@ -1,0 +1,49 @@
+{
+  "name": "Youngster Chad",
+  "team": [
+    {
+      "species": "arbok",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "impish",
+      "ability": "intimidate",
+      "moveset": [
+        "acid",
+        "stockpile",
+        "swallow",
+        "spitup"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    },
+    {
+      "species": "sandslash",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "docile",
+      "ability": "sandveil",
+      "moveset": [
+        "poisonsting",
+        "slash",
+        "swift",
+        "furyswipes"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    }
+  ]
+}

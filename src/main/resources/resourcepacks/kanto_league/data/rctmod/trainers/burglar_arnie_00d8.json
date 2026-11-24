@@ -1,0 +1,49 @@
+{
+  "name": "Burglar Arnie",
+  "team": [
+    {
+      "species": "charmander",
+      "gender": "MALE",
+      "level": 34,
+      "nature": "docile",
+      "ability": "blaze",
+      "moveset": [
+        "metalclaw",
+        "smokescreen",
+        "scaryface",
+        "flamethrower"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "charmeleon",
+      "gender": "MALE",
+      "level": 34,
+      "nature": "jolly",
+      "ability": "blaze",
+      "moveset": [
+        "metalclaw",
+        "smokescreen",
+        "scaryface",
+        "flamethrower"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Super Nerd Derek",
+  "team": [
+    {
+      "species": "rapidash",
+      "gender": "MALE",
+      "level": 41,
+      "nature": "mild",
+      "ability": "runaway",
+      "moveset": [
+        "firespin",
+        "takedown",
+        "agility",
+        "furyattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

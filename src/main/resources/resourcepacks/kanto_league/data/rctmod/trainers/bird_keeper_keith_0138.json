@@ -1,0 +1,49 @@
+{
+  "name": "Bird Keeper Keith",
+  "team": [
+    {
+      "species": "farfetchd",
+      "gender": "MALE",
+      "level": 39,
+      "nature": "timid",
+      "ability": "keeneye",
+      "moveset": [
+        "knockoff",
+        "furycutter",
+        "swordsdance",
+        "agility"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "fearow",
+      "gender": "MALE",
+      "level": 39,
+      "nature": "serious",
+      "ability": "keeneye",
+      "moveset": [
+        "leer",
+        "furyattack",
+        "pursuit",
+        "mirrormove"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "name": "Psychic Rodette",
+  "team": [
+    {
+      "species": "natu",
+      "gender": "FEMALE",
+      "level": 53,
+      "nature": "sassy",
+      "ability": "synchronize",
+      "moveset": [
+        "psychic",
+        "confuseray",
+        "wish",
+        "futuresight"
+      ],
+      "ivs": {
+        "hp": 27,
+        "atk": 27,
+        "def": 27,
+        "spa": 27,
+        "spd": 27,
+        "spe": 27
+      },
+      "evs": {}
+    },
+    {
+      "species": "hypno",
+      "gender": "FEMALE",
+      "level": 53,
+      "nature": "careful",
+      "ability": "insomnia",
+      "moveset": [
+        "psychic",
+        "disable",
+        "psychup",
+        "futuresight"
+      ],
+      "ivs": {
+        "hp": 27,
+        "atk": 27,
+        "def": 27,
+        "spa": 27,
+        "spd": 27,
+        "spe": 27
+      },
+      "evs": {}
+    },
+    {
+      "species": "hypno",
+      "gender": "FEMALE",
+      "level": 53,
+      "nature": "relaxed",
+      "ability": "insomnia",
+      "moveset": [
+        "psychic",
+        "hypnosis",
+        "psychup",
+        "futuresight"
+      ],
+      "ivs": {
+        "hp": 27,
+        "atk": 27,
+        "def": 27,
+        "spa": 27,
+        "spd": 27,
+        "spe": 27
+      },
+      "evs": {}
+    }
+  ]
+}

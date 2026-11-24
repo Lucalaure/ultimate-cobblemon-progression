@@ -1,0 +1,49 @@
+{
+  "name": "Youngster Ben",
+  "team": [
+    {
+      "species": "raticate",
+      "gender": "FEMALE",
+      "level": 28,
+      "nature": "naive",
+      "ability": "runaway",
+      "moveset": [
+        "tailwhip",
+        "quickattack",
+        "hyperfang",
+        "scaryface"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    },
+    {
+      "species": "ekans",
+      "gender": "FEMALE",
+      "level": 28,
+      "nature": "quirky",
+      "ability": "intimidate",
+      "moveset": [
+        "poisonsting",
+        "bite",
+        "glare",
+        "screech"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    }
+  ]
+}

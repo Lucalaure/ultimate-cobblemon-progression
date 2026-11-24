@@ -1,0 +1,49 @@
+{
+  "name": "Gentleman Walter",
+  "team": [
+    {
+      "species": "growlithe",
+      "gender": "MALE",
+      "level": 17,
+      "nature": "relaxed",
+      "ability": "intimidate",
+      "moveset": [
+        "bite",
+        "roar",
+        "ember",
+        "leer"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "ponyta",
+      "gender": "MALE",
+      "level": 17,
+      "nature": "docile",
+      "ability": "runaway",
+      "moveset": [
+        "quickattack",
+        "growl",
+        "tailwhip",
+        "ember"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

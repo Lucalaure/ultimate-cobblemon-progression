@@ -1,0 +1,49 @@
+{
+  "name": "Lass Reli",
+  "team": [
+    {
+      "species": "pidgeotto",
+      "gender": "MALE",
+      "level": 28,
+      "nature": "lax",
+      "ability": "keeneye",
+      "moveset": [
+        "gust",
+        "quickattack",
+        "whirlwind",
+        "wingattack"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    },
+    {
+      "species": "nidorina",
+      "gender": "FEMALE",
+      "level": 28,
+      "nature": "gentle",
+      "ability": "poisonpoint",
+      "moveset": [
+        "doublekick",
+        "poisonsting",
+        "bite",
+        "helpinghand"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    }
+  ]
+}

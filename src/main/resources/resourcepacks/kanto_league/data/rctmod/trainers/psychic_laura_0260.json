@@ -1,0 +1,71 @@
+{
+  "name": "Psychic Laura",
+  "team": [
+    {
+      "species": "natu",
+      "gender": "FEMALE",
+      "level": 48,
+      "nature": "modest",
+      "ability": "synchronize",
+      "moveset": [
+        "teleport",
+        "wish",
+        "futuresight",
+        "confuseray"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "natu",
+      "gender": "FEMALE",
+      "level": 48,
+      "nature": "mild",
+      "ability": "synchronize",
+      "moveset": [
+        "teleport",
+        "wish",
+        "futuresight",
+        "confuseray"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "xatu",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "brave",
+      "ability": "synchronize",
+      "moveset": [
+        "nightshade",
+        "teleport",
+        "wish",
+        "futuresight"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    }
+  ]
+}

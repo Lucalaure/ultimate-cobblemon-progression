@@ -1,0 +1,115 @@
+{
+  "name": "Bird Keeper Perry",
+  "team": [
+    {
+      "species": "spearow",
+      "gender": "FEMALE",
+      "level": 25,
+      "nature": "impish",
+      "ability": "keeneye",
+      "moveset": [
+        "leer",
+        "furyattack",
+        "pursuit",
+        "aerialace"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "pidgey",
+      "gender": "FEMALE",
+      "level": 25,
+      "nature": "sassy",
+      "ability": "keeneye",
+      "moveset": [
+        "gust",
+        "quickattack",
+        "whirlwind",
+        "wingattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "pidgey",
+      "gender": "MALE",
+      "level": 25,
+      "nature": "rash",
+      "ability": "keeneye",
+      "moveset": [
+        "gust",
+        "quickattack",
+        "whirlwind",
+        "wingattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "spearow",
+      "gender": "FEMALE",
+      "level": 25,
+      "nature": "relaxed",
+      "ability": "keeneye",
+      "moveset": [
+        "leer",
+        "furyattack",
+        "pursuit",
+        "aerialace"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "spearow",
+      "gender": "MALE",
+      "level": 25,
+      "nature": "naive",
+      "ability": "keeneye",
+      "moveset": [
+        "leer",
+        "furyattack",
+        "pursuit",
+        "aerialace"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

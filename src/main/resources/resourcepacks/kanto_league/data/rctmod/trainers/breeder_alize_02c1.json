@@ -1,0 +1,71 @@
+{
+  "name": "Breeder Alize",
+  "team": [
+    {
+      "species": "pikachu",
+      "gender": "FEMALE",
+      "level": 53,
+      "nature": "hasty",
+      "ability": "static",
+      "moveset": [
+        "thunderbolt",
+        "agility",
+        "thunder",
+        "lightscreen"
+      ],
+      "ivs": {
+        "hp": 18,
+        "atk": 18,
+        "def": 18,
+        "spa": 18,
+        "spd": 18,
+        "spe": 18
+      },
+      "evs": {}
+    },
+    {
+      "species": "clefairy",
+      "gender": "MALE",
+      "level": 53,
+      "nature": "mild",
+      "ability": "cutecharm",
+      "moveset": [
+        "cosmicpower",
+        "moonlight",
+        "lightscreen",
+        "meteormash"
+      ],
+      "ivs": {
+        "hp": 18,
+        "atk": 18,
+        "def": 18,
+        "spa": 18,
+        "spd": 18,
+        "spe": 18
+      },
+      "evs": {}
+    },
+    {
+      "species": "marill",
+      "gender": "FEMALE",
+      "level": 53,
+      "nature": "quiet",
+      "ability": "thickfat",
+      "moveset": [
+        "bubblebeam",
+        "doubleedge",
+        "raindance",
+        "hydropump"
+      ],
+      "ivs": {
+        "hp": 18,
+        "atk": 18,
+        "def": 18,
+        "spa": 18,
+        "spd": 18,
+        "spe": 18
+      },
+      "evs": {}
+    }
+  ]
+}

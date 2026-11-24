@@ -1,0 +1,71 @@
+{
+  "name": "Channeler Tasha",
+  "team": [
+    {
+      "species": "gastly",
+      "gender": "MALE",
+      "level": 33,
+      "nature": "serious",
+      "ability": "levitate",
+      "moveset": [
+        "nightshade",
+        "confuseray",
+        "dreameater",
+        "destinybond"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "gastly",
+      "gender": "FEMALE",
+      "level": 33,
+      "nature": "serious",
+      "ability": "levitate",
+      "moveset": [
+        "nightshade",
+        "confuseray",
+        "dreameater",
+        "destinybond"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "haunter",
+      "gender": "MALE",
+      "level": 33,
+      "nature": "lonely",
+      "ability": "levitate",
+      "moveset": [
+        "nightshade",
+        "confuseray",
+        "shadowpunch",
+        "dreameater"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

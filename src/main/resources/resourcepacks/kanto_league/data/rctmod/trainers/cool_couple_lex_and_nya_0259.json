@@ -1,0 +1,56 @@
+{
+  "name": "Cool Couple Lex & Nya",
+  "battleFormat": "GEN_9_DOUBLES",
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "miltank",
+      "gender": "FEMALE",
+      "level": 52,
+      "nature": "timid",
+      "ability": "thickfat",
+      "moveset": [
+        "bodyslam",
+        "milkdrink",
+        "growl",
+        "defensecurl"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "tauros",
+      "gender": "MALE",
+      "level": 52,
+      "nature": "naive",
+      "ability": "intimidate",
+      "moveset": [
+        "thrash",
+        "hornattack",
+        "pursuit",
+        "swagger"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    }
+  ]
+}

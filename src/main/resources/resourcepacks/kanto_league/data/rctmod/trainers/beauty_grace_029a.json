@@ -1,0 +1,49 @@
+{
+  "name": "Beauty Grace",
+  "team": [
+    {
+      "species": "pidgeot",
+      "gender": "MALE",
+      "level": 49,
+      "nature": "lonely",
+      "ability": "keeneye",
+      "moveset": [
+        "whirlwind",
+        "wingattack",
+        "featherdance",
+        "agility"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    },
+    {
+      "species": "wigglytuff",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "adamant",
+      "ability": "cutecharm",
+      "moveset": [
+        "sing",
+        "disable",
+        "defensecurl",
+        "doubleslap"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    }
+  ]
+}

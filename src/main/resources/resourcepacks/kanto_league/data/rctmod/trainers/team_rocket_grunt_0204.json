@@ -1,0 +1,50 @@
+{
+  "name": "Team Rocket Grunt",
+  "identity": "Team Rocket Grunt (46)",
+  "team": [
+    {
+      "species": "houndour",
+      "gender": "MALE",
+      "level": 49,
+      "nature": "careful",
+      "ability": "earlybird",
+      "moveset": [
+        "odorsleuth",
+        "feintattack",
+        "flamethrower",
+        "crunch"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "houndour",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "bold",
+      "ability": "earlybird",
+      "moveset": [
+        "odorsleuth",
+        "feintattack",
+        "flamethrower",
+        "crunch"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

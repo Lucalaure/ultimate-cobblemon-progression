@@ -1,0 +1,93 @@
+{
+  "name": "Juggler Nelson",
+  "team": [
+    {
+      "species": "drowzee",
+      "gender": "MALE",
+      "level": 41,
+      "nature": "brave",
+      "ability": "insomnia",
+      "moveset": [
+        "meditate",
+        "psychic",
+        "psychup",
+        "swagger"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "hypno",
+      "gender": "MALE",
+      "level": 41,
+      "nature": "lonely",
+      "ability": "insomnia",
+      "moveset": [
+        "headbutt",
+        "poisongas",
+        "meditate",
+        "psychic"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "kadabra",
+      "gender": "MALE",
+      "level": 41,
+      "nature": "brave",
+      "ability": "synchronize",
+      "moveset": [
+        "recover",
+        "futuresight",
+        "roleplay",
+        "psychic"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "kadabra",
+      "gender": "MALE",
+      "level": 41,
+      "nature": "serious",
+      "ability": "synchronize",
+      "moveset": [
+        "recover",
+        "futuresight",
+        "roleplay",
+        "psychic"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

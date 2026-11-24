@@ -1,0 +1,27 @@
+{
+  "name": "Juggler Kayden",
+  "team": [
+    {
+      "species": "hypno",
+      "gender": "MALE",
+      "level": 38,
+      "nature": "mild",
+      "ability": "insomnia",
+      "moveset": [
+        "headbutt",
+        "poisongas",
+        "meditate",
+        "psychic"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

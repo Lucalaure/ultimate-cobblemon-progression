@@ -1,0 +1,115 @@
+{
+  "name": "Picnicker Susie",
+  "team": [
+    {
+      "species": "pidgeotto",
+      "gender": "MALE",
+      "level": 27,
+      "nature": "quirky",
+      "ability": "keeneye",
+      "moveset": [
+        "gust",
+        "quickattack",
+        "whirlwind",
+        "wingattack"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    },
+    {
+      "species": "meowth",
+      "gender": "FEMALE",
+      "level": 27,
+      "nature": "brave",
+      "ability": "pickup",
+      "moveset": [
+        "growl",
+        "bite",
+        "payday",
+        "feintattack"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    },
+    {
+      "species": "raticate",
+      "gender": "MALE",
+      "level": 27,
+      "nature": "serious",
+      "ability": "runaway",
+      "moveset": [
+        "tailwhip",
+        "quickattack",
+        "hyperfang",
+        "scaryface"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    },
+    {
+      "species": "pikachu",
+      "gender": "MALE",
+      "level": 27,
+      "nature": "lonely",
+      "ability": "static",
+      "moveset": [
+        "quickattack",
+        "doubleteam",
+        "slam",
+        "thunderbolt"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    },
+    {
+      "species": "meowth",
+      "gender": "FEMALE",
+      "level": 27,
+      "nature": "brave",
+      "ability": "pickup",
+      "moveset": [
+        "growl",
+        "bite",
+        "payday",
+        "feintattack"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    }
+  ]
+}

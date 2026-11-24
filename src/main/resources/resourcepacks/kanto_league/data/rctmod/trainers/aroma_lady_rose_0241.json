@@ -1,0 +1,49 @@
+{
+  "name": "Aroma Lady Rose",
+  "team": [
+    {
+      "species": "sunkern",
+      "gender": "MALE",
+      "level": 49,
+      "nature": "mild",
+      "ability": "chlorophyll",
+      "moveset": [
+        "endeavor",
+        "sunnyday",
+        "synthesis",
+        "gigadrain"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "sunflora",
+      "gender": "MALE",
+      "level": 49,
+      "nature": "careful",
+      "ability": "chlorophyll",
+      "moveset": [
+        "bulletseed",
+        "sunnyday",
+        "petaldance",
+        "solarbeam"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

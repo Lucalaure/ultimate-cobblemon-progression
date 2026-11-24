@@ -1,0 +1,33 @@
+{
+  "name": "Ranger Katelyn",
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "chansey",
+      "gender": "FEMALE",
+      "level": 56,
+      "nature": "lax",
+      "ability": "naturalcure",
+      "moveset": [
+        "eggbomb",
+        "defensecurl",
+        "minimize",
+        "softboiled"
+      ],
+      "ivs": {
+        "hp": 27,
+        "atk": 27,
+        "def": 27,
+        "spa": 27,
+        "spd": 27,
+        "spe": 27
+      },
+      "evs": {}
+    }
+  ]
+}

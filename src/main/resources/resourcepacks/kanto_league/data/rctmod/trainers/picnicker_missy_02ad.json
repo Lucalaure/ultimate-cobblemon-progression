@@ -1,0 +1,49 @@
+{
+  "name": "Picnicker Missy",
+  "team": [
+    {
+      "species": "seaking",
+      "gender": "FEMALE",
+      "level": 54,
+      "nature": "bashful",
+      "ability": "swiftswim",
+      "moveset": [
+        "flail",
+        "furyattack",
+        "waterfall",
+        "horndrill"
+      ],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      },
+      "evs": {}
+    },
+    {
+      "species": "seaking",
+      "gender": "MALE",
+      "level": 54,
+      "nature": "hardy",
+      "ability": "swiftswim",
+      "moveset": [
+        "flail",
+        "furyattack",
+        "waterfall",
+        "horndrill"
+      ],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      },
+      "evs": {}
+    }
+  ]
+}

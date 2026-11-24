@@ -1,0 +1,71 @@
+{
+  "name": "Picnicker Sofia",
+  "team": [
+    {
+      "species": "jigglypuff",
+      "gender": "FEMALE",
+      "level": 21,
+      "nature": "adamant",
+      "ability": "cutecharm",
+      "moveset": [
+        "defensecurl",
+        "pound",
+        "disable",
+        "rollout"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "pidgey",
+      "gender": "MALE",
+      "level": 21,
+      "nature": "lonely",
+      "ability": "keeneye",
+      "moveset": [
+        "sandattack",
+        "gust",
+        "quickattack",
+        "whirlwind"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "meowth",
+      "gender": "FEMALE",
+      "level": 21,
+      "nature": "naive",
+      "ability": "pickup",
+      "moveset": [
+        "scratch",
+        "growl",
+        "bite",
+        "payday"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

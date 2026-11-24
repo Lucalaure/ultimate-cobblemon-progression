@@ -1,0 +1,28 @@
+{
+  "name": "Team Rocket Grunt",
+  "identity": "Team Rocket Grunt (32)",
+  "team": [
+    {
+      "species": "arbok",
+      "gender": "MALE",
+      "level": 33,
+      "nature": "gentle",
+      "ability": "intimidate",
+      "moveset": [
+        "poisonsting",
+        "bite",
+        "glare",
+        "screech"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "name": "Ace Trainer Shannon",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 4
+  },
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "beedrill",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "impish",
+      "ability": "swarm",
+      "moveset": [
+        "pinmissile",
+        "twineedle",
+        "agility",
+        "pursuit"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "butterfree",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "modest",
+      "ability": "compoundeyes",
+      "moveset": [
+        "safeguard",
+        "psybeam",
+        "gust",
+        "supersonic"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "parasect",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "serious",
+      "ability": "effectspore",
+      "moveset": [
+        "spore",
+        "leechlife",
+        "slash",
+        "growth"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "venonat",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "timid",
+      "ability": "compoundeyes",
+      "moveset": [
+        "psybeam",
+        "stunspore",
+        "leechlife",
+        "disable"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "venomoth",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "rash",
+      "ability": "shielddust",
+      "moveset": [
+        "psybeam",
+        "gust",
+        "supersonic",
+        "leechlife"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    }
+  ]
+}

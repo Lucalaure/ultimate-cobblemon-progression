@@ -1,0 +1,71 @@
+{
+  "name": "Bird Keeper Roger",
+  "team": [
+    {
+      "species": "fearow",
+      "gender": "MALE",
+      "level": 30,
+      "nature": "bashful",
+      "ability": "keeneye",
+      "moveset": [
+        "growl",
+        "leer",
+        "furyattack",
+        "pursuit"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "fearow",
+      "gender": "FEMALE",
+      "level": 30,
+      "nature": "modest",
+      "ability": "keeneye",
+      "moveset": [
+        "growl",
+        "leer",
+        "furyattack",
+        "pursuit"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "pidgeotto",
+      "gender": "MALE",
+      "level": 30,
+      "nature": "quiet",
+      "ability": "keeneye",
+      "moveset": [
+        "gust",
+        "quickattack",
+        "whirlwind",
+        "wingattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

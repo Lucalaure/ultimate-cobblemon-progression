@@ -1,0 +1,80 @@
+{
+  "name": "Boss Giovanni",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "team": [
+    {
+      "species": "onix",
+      "gender": "FEMALE",
+      "level": 25,
+      "nature": "gentle",
+      "ability": "rockhead",
+      "moveset": [
+        "bind",
+        "rockthrow",
+        "harden",
+        "rage"
+      ],
+      "ivs": {
+        "hp": 30,
+        "atk": 30,
+        "def": 30,
+        "spa": 30,
+        "spd": 30,
+        "spe": 30
+      },
+      "evs": {}
+    },
+    {
+      "species": "rhyhorn",
+      "gender": "FEMALE",
+      "level": 24,
+      "nature": "naughty",
+      "ability": "lightningrod",
+      "moveset": [
+        "tailwhip",
+        "stomp",
+        "furyattack",
+        "scaryface"
+      ],
+      "ivs": {
+        "hp": 30,
+        "atk": 30,
+        "def": 30,
+        "spa": 30,
+        "spd": 30,
+        "spe": 30
+      },
+      "evs": {}
+    },
+    {
+      "species": "kangaskhan",
+      "gender": "FEMALE",
+      "level": 29,
+      "nature": "serious",
+      "ability": "earlybird",
+      "moveset": [
+        "bite",
+        "tailwhip",
+        "fakeout",
+        "megapunch"
+      ],
+      "ivs": {
+        "hp": 30,
+        "atk": 30,
+        "def": 30,
+        "spa": 30,
+        "spd": 30,
+        "spe": 30
+      },
+      "evs": {}
+    }
+  ]
+}

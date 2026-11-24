@@ -1,0 +1,49 @@
+{
+  "name": "Biker Jaren",
+  "team": [
+    {
+      "species": "muk",
+      "gender": "MALE",
+      "level": 28,
+      "nature": "docile",
+      "ability": "stench",
+      "moveset": [
+        "disable",
+        "sludge",
+        "minimize",
+        "screech"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    },
+    {
+      "species": "muk",
+      "gender": "FEMALE",
+      "level": 30,
+      "nature": "brave",
+      "ability": "stench",
+      "moveset": [
+        "disable",
+        "sludge",
+        "minimize",
+        "screech"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    }
+  ]
+}

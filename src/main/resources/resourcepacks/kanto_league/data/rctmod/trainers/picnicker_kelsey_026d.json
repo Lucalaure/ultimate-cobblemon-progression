@@ -1,0 +1,49 @@
+{
+  "name": "Picnicker Kelsey",
+  "team": [
+    {
+      "species": "nidoranm",
+      "gender": "MALE",
+      "level": 21,
+      "nature": "brave",
+      "ability": "poisonpoint",
+      "moveset": [
+        "focusenergy",
+        "doublekick",
+        "poisonsting",
+        "hornattack"
+      ],
+      "ivs": {
+        "hp": 2,
+        "atk": 2,
+        "def": 2,
+        "spa": 2,
+        "spd": 2,
+        "spe": 2
+      },
+      "evs": {}
+    },
+    {
+      "species": "nidoranf",
+      "gender": "FEMALE",
+      "level": 21,
+      "nature": "brave",
+      "ability": "poisonpoint",
+      "moveset": [
+        "tailwhip",
+        "doublekick",
+        "poisonsting",
+        "bite"
+      ],
+      "ivs": {
+        "hp": 2,
+        "atk": 2,
+        "def": 2,
+        "spa": 2,
+        "spd": 2,
+        "spe": 2
+      },
+      "evs": {}
+    }
+  ]
+}

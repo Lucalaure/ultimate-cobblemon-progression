@@ -1,0 +1,49 @@
+{
+  "name": "Sailor Edmond",
+  "team": [
+    {
+      "species": "machop",
+      "gender": "MALE",
+      "level": 18,
+      "nature": "modest",
+      "ability": "guts",
+      "moveset": [
+        "lowkick",
+        "leer",
+        "focusenergy",
+        "karatechop"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "shellder",
+      "gender": "FEMALE",
+      "level": 18,
+      "nature": "impish",
+      "ability": "shellarmor",
+      "moveset": [
+        "tackle",
+        "withdraw",
+        "iciclespear",
+        "supersonic"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

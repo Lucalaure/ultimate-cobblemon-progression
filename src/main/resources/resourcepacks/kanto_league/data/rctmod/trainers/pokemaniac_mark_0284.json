@@ -1,0 +1,49 @@
+{
+  "name": "Pok\u00e9maniac Mark",
+  "team": [
+    {
+      "species": "rhydon",
+      "gender": "MALE",
+      "level": 54,
+      "nature": "quirky",
+      "ability": "lightningrod",
+      "moveset": [
+        "scaryface",
+        "rockblast",
+        "horndrill",
+        "takedown"
+      ],
+      "ivs": {
+        "hp": 18,
+        "atk": 18,
+        "def": 18,
+        "spa": 18,
+        "spd": 18,
+        "spe": 18
+      },
+      "evs": {}
+    },
+    {
+      "species": "lickitung",
+      "gender": "MALE",
+      "level": 54,
+      "nature": "bashful",
+      "ability": "owntempo",
+      "moveset": [
+        "disable",
+        "slam",
+        "screech",
+        "refresh"
+      ],
+      "ivs": {
+        "hp": 18,
+        "atk": 18,
+        "def": 18,
+        "spa": 18,
+        "spd": 18,
+        "spe": 18
+      },
+      "evs": {}
+    }
+  ]
+}

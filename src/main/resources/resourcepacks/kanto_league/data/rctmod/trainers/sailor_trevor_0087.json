@@ -1,0 +1,48 @@
+{
+  "name": "Sailor Trevor",
+  "team": [
+    {
+      "species": "machop",
+      "gender": "MALE",
+      "level": 17,
+      "nature": "modest",
+      "ability": "guts",
+      "moveset": [
+        "lowkick",
+        "leer",
+        "focusenergy",
+        "karatechop"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "tentacool",
+      "gender": "FEMALE",
+      "level": 17,
+      "nature": "lax",
+      "ability": "clearbody",
+      "moveset": [
+        "poisonsting",
+        "supersonic",
+        "constrict"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

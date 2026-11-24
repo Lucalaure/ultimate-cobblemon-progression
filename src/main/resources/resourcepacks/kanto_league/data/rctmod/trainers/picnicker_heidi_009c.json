@@ -1,0 +1,49 @@
+{
+  "name": "Picnicker Heidi",
+  "team": [
+    {
+      "species": "pikachu",
+      "gender": "MALE",
+      "level": 20,
+      "nature": "timid",
+      "ability": "static",
+      "moveset": [
+        "thunderwave",
+        "quickattack",
+        "doubleteam",
+        "slam"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "clefairy",
+      "gender": "FEMALE",
+      "level": 20,
+      "nature": "bashful",
+      "ability": "cutecharm",
+      "moveset": [
+        "encore",
+        "sing",
+        "doubleslap",
+        "followme"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

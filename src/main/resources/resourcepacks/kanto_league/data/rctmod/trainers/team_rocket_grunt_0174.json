@@ -1,0 +1,50 @@
+{
+  "name": "Team Rocket Grunt",
+  "identity": "Team Rocket Grunt (26)",
+  "team": [
+    {
+      "species": "drowzee",
+      "gender": "FEMALE",
+      "level": 26,
+      "nature": "rash",
+      "ability": "insomnia",
+      "moveset": [
+        "disable",
+        "confusion",
+        "headbutt",
+        "poisongas"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "koffing",
+      "gender": "FEMALE",
+      "level": 26,
+      "nature": "relaxed",
+      "ability": "levitate",
+      "moveset": [
+        "smog",
+        "selfdestruct",
+        "sludge",
+        "smokescreen"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

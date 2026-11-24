@@ -1,0 +1,49 @@
+{
+  "name": "Gambler Rich",
+  "team": [
+    {
+      "species": "growlithe",
+      "gender": "MALE",
+      "level": 24,
+      "nature": "adamant",
+      "ability": "intimidate",
+      "moveset": [
+        "roar",
+        "ember",
+        "leer",
+        "odorsleuth"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "vulpix",
+      "gender": "MALE",
+      "level": 24,
+      "nature": "lax",
+      "ability": "flashfire",
+      "moveset": [
+        "roar",
+        "quickattack",
+        "willowisp",
+        "confuseray"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

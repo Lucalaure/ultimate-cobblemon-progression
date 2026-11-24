@@ -1,0 +1,93 @@
+{
+  "name": "Psychic Johan",
+  "team": [
+    {
+      "species": "kadabra",
+      "gender": "MALE",
+      "level": 31,
+      "nature": "sassy",
+      "ability": "synchronize",
+      "moveset": [
+        "psybeam",
+        "reflect",
+        "recover",
+        "futuresight"
+      ],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      },
+      "evs": {}
+    },
+    {
+      "species": "slowpoke",
+      "gender": "MALE",
+      "level": 31,
+      "nature": "gentle",
+      "ability": "oblivious",
+      "moveset": [
+        "watergun",
+        "confusion",
+        "disable",
+        "headbutt"
+      ],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      },
+      "evs": {}
+    },
+    {
+      "species": "mrmime",
+      "gender": "FEMALE",
+      "level": 31,
+      "nature": "brave",
+      "ability": "soundproof",
+      "moveset": [
+        "reflect",
+        "magicalleaf",
+        "encore",
+        "psybeam"
+      ],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      },
+      "evs": {}
+    },
+    {
+      "species": "kadabra",
+      "gender": "MALE",
+      "level": 31,
+      "nature": "gentle",
+      "ability": "synchronize",
+      "moveset": [
+        "psybeam",
+        "reflect",
+        "recover",
+        "futuresight"
+      ],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      },
+      "evs": {}
+    }
+  ]
+}

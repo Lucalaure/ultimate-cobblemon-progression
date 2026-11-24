@@ -1,0 +1,49 @@
+{
+  "name": "Cue Ball Isaiah",
+  "team": [
+    {
+      "species": "machop",
+      "gender": "MALE",
+      "level": 29,
+      "nature": "naughty",
+      "ability": "guts",
+      "moveset": [
+        "karatechop",
+        "seismictoss",
+        "foresight",
+        "revenge"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "machamp",
+      "gender": "MALE",
+      "level": 29,
+      "nature": "bashful",
+      "ability": "guts",
+      "moveset": [
+        "karatechop",
+        "seismictoss",
+        "foresight",
+        "revenge"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "name": "Hiker Dudley",
+  "team": [
+    {
+      "species": "geodude",
+      "gender": "MALE",
+      "level": 21,
+      "nature": "naive",
+      "ability": "rockhead",
+      "moveset": [
+        "magnitude",
+        "rockthrow",
+        "mudsport",
+        "defensecurl"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "geodude",
+      "gender": "FEMALE",
+      "level": 21,
+      "nature": "gentle",
+      "ability": "rockhead",
+      "moveset": [
+        "magnitude",
+        "rockthrow",
+        "mudsport",
+        "defensecurl"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "graveler",
+      "gender": "MALE",
+      "level": 21,
+      "nature": "modest",
+      "ability": "rockhead",
+      "moveset": [
+        "magnitude",
+        "rockthrow",
+        "mudsport",
+        "defensecurl"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Swimmer\u2642 Samir",
+  "team": [
+    {
+      "species": "gyarados",
+      "gender": "MALE",
+      "level": 50,
+      "nature": "hasty",
+      "ability": "intimidate",
+      "moveset": [
+        "twister",
+        "hydropump",
+        "raindance",
+        "dragondance"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

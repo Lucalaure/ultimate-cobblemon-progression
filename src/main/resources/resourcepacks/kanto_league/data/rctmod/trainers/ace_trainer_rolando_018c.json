@@ -1,0 +1,130 @@
+{
+  "name": "Ace Trainer Rolando",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 4
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "raticate",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "rash",
+      "ability": "runaway",
+      "moveset": [
+        "superfang",
+        "pursuit",
+        "scaryface",
+        "quickattack"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "ivysaur",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "serious",
+      "ability": "overgrow",
+      "moveset": [
+        "razorleaf",
+        "sleeppowder",
+        "sweetscent",
+        "synthesis"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "wartortle",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "naughty",
+      "ability": "torrent",
+      "moveset": [
+        "watergun",
+        "bite",
+        "rapidspin",
+        "tailwhip"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "charmeleon",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "lax",
+      "ability": "blaze",
+      "moveset": [
+        "flamethrower",
+        "slash",
+        "smokescreen",
+        "scaryface"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "charizard",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "gentle",
+      "ability": "blaze",
+      "moveset": [
+        "flamethrower",
+        "wingattack",
+        "smokescreen",
+        "scaryface"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "name": "Pok\u00e9maniac Mark",
+  "team": [
+    {
+      "species": "rhyhorn",
+      "gender": "FEMALE",
+      "level": 33,
+      "nature": "naughty",
+      "ability": "lightningrod",
+      "moveset": [
+        "stomp",
+        "furyattack",
+        "scaryface",
+        "rockblast"
+      ],
+      "ivs": {
+        "hp": 11,
+        "atk": 11,
+        "def": 11,
+        "spa": 11,
+        "spd": 11,
+        "spe": 11
+      },
+      "evs": {}
+    },
+    {
+      "species": "lickitung",
+      "gender": "MALE",
+      "level": 33,
+      "nature": "naughty",
+      "ability": "owntempo",
+      "moveset": [
+        "defensecurl",
+        "knockoff",
+        "stomp",
+        "wrap"
+      ],
+      "ivs": {
+        "hp": 11,
+        "atk": 11,
+        "def": 11,
+        "spa": 11,
+        "spd": 11,
+        "spe": 11
+      },
+      "evs": {}
+    }
+  ]
+}

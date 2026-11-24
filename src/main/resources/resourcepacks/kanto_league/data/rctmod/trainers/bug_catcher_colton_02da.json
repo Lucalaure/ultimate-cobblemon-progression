@@ -1,0 +1,68 @@
+{
+  "name": "Bug Catcher Colton",
+  "team": [
+    {
+      "species": "butterfree",
+      "gender": "MALE",
+      "level": 27,
+      "nature": "lonely",
+      "ability": "compoundeyes",
+      "moveset": [
+        "stunspore",
+        "sleeppowder",
+        "supersonic",
+        "whirlwind"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    },
+    {
+      "species": "kakuna",
+      "gender": "FEMALE",
+      "level": 27,
+      "nature": "quiet",
+      "ability": "shedskin",
+      "moveset": [
+        "harden"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    },
+    {
+      "species": "butterfree",
+      "gender": "MALE",
+      "level": 27,
+      "nature": "brave",
+      "ability": "compoundeyes",
+      "moveset": [
+        "stunspore",
+        "sleeppowder",
+        "supersonic",
+        "whirlwind"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    }
+  ]
+}

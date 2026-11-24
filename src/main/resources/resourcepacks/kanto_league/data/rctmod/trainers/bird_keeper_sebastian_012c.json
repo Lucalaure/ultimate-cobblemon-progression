@@ -1,0 +1,49 @@
+{
+  "name": "Bird Keeper Sebastian",
+  "team": [
+    {
+      "species": "pidgey",
+      "gender": "FEMALE",
+      "level": 29,
+      "nature": "jolly",
+      "ability": "keeneye",
+      "moveset": [
+        "gust",
+        "quickattack",
+        "whirlwind",
+        "wingattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "pidgeotto",
+      "gender": "MALE",
+      "level": 29,
+      "nature": "quiet",
+      "ability": "keeneye",
+      "moveset": [
+        "gust",
+        "quickattack",
+        "whirlwind",
+        "wingattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

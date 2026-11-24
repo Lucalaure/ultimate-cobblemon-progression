@@ -1,0 +1,49 @@
+{
+  "name": "Camper Chris",
+  "team": [
+    {
+      "species": "arcanine",
+      "gender": "MALE",
+      "level": 54,
+      "nature": "sassy",
+      "ability": "intimidate",
+      "moveset": [
+        "roar",
+        "ember",
+        "odorsleuth",
+        "extremespeed"
+      ],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      },
+      "evs": {}
+    },
+    {
+      "species": "charmeleon",
+      "gender": "MALE",
+      "level": 54,
+      "nature": "naive",
+      "ability": "blaze",
+      "moveset": [
+        "scaryface",
+        "flamethrower",
+        "slash",
+        "dragonrage"
+      ],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      },
+      "evs": {}
+    }
+  ]
+}

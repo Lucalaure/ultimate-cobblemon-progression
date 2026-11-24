@@ -1,0 +1,71 @@
+{
+  "name": "Swimmer\u2642 David",
+  "team": [
+    {
+      "species": "goldeen",
+      "gender": "FEMALE",
+      "level": 29,
+      "nature": "bashful",
+      "ability": "swiftswim",
+      "moveset": [
+        "supersonic",
+        "hornattack",
+        "flail",
+        "furyattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "shellder",
+      "gender": "FEMALE",
+      "level": 29,
+      "nature": "modest",
+      "ability": "shellarmor",
+      "moveset": [
+        "iciclespear",
+        "supersonic",
+        "aurorabeam",
+        "protect"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "seaking",
+      "gender": "MALE",
+      "level": 29,
+      "nature": "docile",
+      "ability": "swiftswim",
+      "moveset": [
+        "supersonic",
+        "hornattack",
+        "flail",
+        "furyattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

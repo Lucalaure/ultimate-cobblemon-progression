@@ -1,0 +1,27 @@
+{
+  "name": "Pok\u00e9maniac Winston",
+  "team": [
+    {
+      "species": "slowpoke",
+      "gender": "MALE",
+      "level": 25,
+      "nature": "adamant",
+      "ability": "oblivious",
+      "moveset": [
+        "growl",
+        "watergun",
+        "confusion",
+        "disable"
+      ],
+      "ivs": {
+        "hp": 4,
+        "atk": 4,
+        "def": 4,
+        "spa": 4,
+        "spd": 4,
+        "spe": 4
+      },
+      "evs": {}
+    }
+  ]
+}

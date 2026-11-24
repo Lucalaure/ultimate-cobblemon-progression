@@ -1,0 +1,72 @@
+{
+  "name": "Team Rocket Grunt",
+  "identity": "Team Rocket Grunt (42)",
+  "team": [
+    {
+      "species": "golbat",
+      "gender": "MALE",
+      "level": 28,
+      "nature": "mild",
+      "ability": "innerfocus",
+      "moveset": [
+        "supersonic",
+        "bite",
+        "wingattack",
+        "confuseray"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "drowzee",
+      "gender": "FEMALE",
+      "level": 28,
+      "nature": "naive",
+      "ability": "insomnia",
+      "moveset": [
+        "confusion",
+        "headbutt",
+        "poisongas",
+        "meditate"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "hypno",
+      "gender": "FEMALE",
+      "level": 28,
+      "nature": "bashful",
+      "ability": "insomnia",
+      "moveset": [
+        "disable",
+        "confusion",
+        "headbutt",
+        "poisongas"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

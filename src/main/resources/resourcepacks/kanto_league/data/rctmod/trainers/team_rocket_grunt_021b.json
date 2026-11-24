@@ -1,0 +1,72 @@
+{
+  "name": "Team Rocket Grunt",
+  "identity": "Team Rocket Grunt (49)",
+  "team": [
+    {
+      "species": "zubat",
+      "gender": "MALE",
+      "level": 38,
+      "nature": "calm",
+      "ability": "innerfocus",
+      "moveset": [
+        "wingattack",
+        "confuseray",
+        "aircutter",
+        "meanlook"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "zubat",
+      "gender": "MALE",
+      "level": 38,
+      "nature": "naughty",
+      "ability": "innerfocus",
+      "moveset": [
+        "wingattack",
+        "confuseray",
+        "aircutter",
+        "meanlook"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "golbat",
+      "gender": "MALE",
+      "level": 38,
+      "nature": "bold",
+      "ability": "innerfocus",
+      "moveset": [
+        "bite",
+        "wingattack",
+        "confuseray",
+        "aircutter"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

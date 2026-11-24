@@ -1,0 +1,49 @@
+{
+  "name": "Youngster Joey",
+  "team": [
+    {
+      "species": "rattata",
+      "gender": "MALE",
+      "level": 15,
+      "nature": "sassy",
+      "ability": "runaway",
+      "moveset": [
+        "tackle",
+        "tailwhip",
+        "quickattack",
+        "hyperfang"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "spearow",
+      "gender": "FEMALE",
+      "level": 15,
+      "nature": "jolly",
+      "ability": "keeneye",
+      "moveset": [
+        "peck",
+        "growl",
+        "leer",
+        "furyattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

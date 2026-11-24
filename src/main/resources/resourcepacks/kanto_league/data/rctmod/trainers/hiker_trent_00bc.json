@@ -1,0 +1,49 @@
+{
+  "name": "Hiker Trent",
+  "team": [
+    {
+      "species": "onix",
+      "gender": "MALE",
+      "level": 19,
+      "nature": "sassy",
+      "ability": "rockhead",
+      "moveset": [
+        "screech",
+        "bind",
+        "rockthrow",
+        "harden"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "graveler",
+      "gender": "MALE",
+      "level": 19,
+      "nature": "modest",
+      "ability": "rockhead",
+      "moveset": [
+        "defensecurl",
+        "mudsport",
+        "rockthrow",
+        "magnitude"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

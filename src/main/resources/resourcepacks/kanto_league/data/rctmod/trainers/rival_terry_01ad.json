@@ -1,0 +1,115 @@
+{
+  "name": "Rival Terry",
+  "team": [
+    {
+      "species": "pidgeotto",
+      "gender": "MALE",
+      "level": 25,
+      "nature": "docile",
+      "ability": "keeneye",
+      "moveset": [
+        "sandattack",
+        "gust",
+        "quickattack",
+        "whirlwind"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "growlithe",
+      "gender": "MALE",
+      "level": 23,
+      "nature": "impish",
+      "ability": "intimidate",
+      "moveset": [
+        "roar",
+        "ember",
+        "leer",
+        "odorsleuth"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "exeggcute",
+      "gender": "MALE",
+      "level": 22,
+      "nature": "bashful",
+      "ability": "chlorophyll",
+      "moveset": [
+        "hypnosis",
+        "reflect",
+        "leechseed",
+        "confusion"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "kadabra",
+      "gender": "MALE",
+      "level": 20,
+      "nature": "calm",
+      "ability": "synchronize",
+      "moveset": [
+        "teleport",
+        "kinesis",
+        "confusion",
+        "disable"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "wartortle",
+      "gender": "MALE",
+      "level": 25,
+      "nature": "naive",
+      "ability": "torrent",
+      "moveset": [
+        "withdraw",
+        "watergun",
+        "bite",
+        "rapidspin"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "name": "Bird Keeper Edwin",
+  "team": [
+    {
+      "species": "pidgeotto",
+      "gender": "MALE",
+      "level": 26,
+      "nature": "quirky",
+      "ability": "keeneye",
+      "moveset": [
+        "sandattack",
+        "gust",
+        "quickattack",
+        "whirlwind"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "farfetchd",
+      "gender": "FEMALE",
+      "level": 26,
+      "nature": "careful",
+      "ability": "keeneye",
+      "moveset": [
+        "leer",
+        "furyattack",
+        "knockoff",
+        "furycutter"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "doduo",
+      "gender": "MALE",
+      "level": 26,
+      "nature": "bashful",
+      "ability": "runaway",
+      "moveset": [
+        "pursuit",
+        "furyattack",
+        "triattack",
+        "rage"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "pidgey",
+      "gender": "MALE",
+      "level": 26,
+      "nature": "docile",
+      "ability": "keeneye",
+      "moveset": [
+        "gust",
+        "quickattack",
+        "whirlwind",
+        "wingattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

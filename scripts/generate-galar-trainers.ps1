@@ -90,53 +90,7 @@ $ITEMS = @{
     oranberry = 'oran_berry'; leftovers = 'leftovers'; lifeorb = 'life_orb'; choicescarf = 'choice_scarf'
 }
 
-$NATURES = 'hardy', 'lonely', 'brave', 'adamant', 'naughty', 'bold', 'docile', 'relaxed', 'impish', 'lax', 'timid',
-        'hasty', 'serious', 'jolly', 'naive', 'modest', 'mild', 'quiet', 'bashful', 'rash', 'calm', 'gentle', 'sassy',
-        'careful', 'quirky'
-
-function Get-Plain([string]$s) { $s.Replace([string][char]0xE9, 'e').Replace([string][char]0xE8, 'e') }
-function Get-Slug([string]$s) { ((Get-Plain $s).ToLowerInvariant() -replace '[^a-z0-9]+', '_').Trim('_') }
-function Get-Key([string]$s) { (Get-Plain $s).ToLowerInvariant() -replace '[^a-z0-9]', '' }
-# A stable number from a string, so generated values are the same every run.
-function Get-Hash([string]$s) { $h = 0; foreach ($ch in $s.ToCharArray()) { $h = ($h * 31 + [int]$ch) % 2147483647 }; $h }
-
-# PowerShell 5.1's ConvertTo-Json turns one-element and empty arrays into plain values, so JSON is written by hand.
-function ConvertTo-PrettyJson($value, [string]$indent = '') {
-    $next = $indent + '  '
-    if ($null -eq $value) { return 'null' }
-    if ($value -is [bool]) { if ($value) { return 'true' } else { return 'false' } }
-    if ($value -is [string]) {
-        $sb = New-Object System.Text.StringBuilder
-        foreach ($ch in $value.ToCharArray()) {
-            if ($ch -eq '"' -or $ch -eq '\') { [void]$sb.Append('\').Append($ch) }
-            elseif ([int]$ch -gt 126) { [void]$sb.AppendFormat('\u{0:x4}', [int]$ch) }
-            else { [void]$sb.Append($ch) }
-        }
-        return '"' + $sb.ToString() + '"'
-    }
-    if ($value -is [ValueType]) { return [System.Convert]::ToString($value, [System.Globalization.CultureInfo]::InvariantCulture) }
-    if ($value -is [System.Collections.IDictionary]) {
-        if ($value.Count -eq 0) { return '{}' }
-        $parts = foreach ($k in $value.Keys) { $next + '"' + $k + '": ' + (ConvertTo-PrettyJson $value[$k] $next) }
-        return "{`n" + ($parts -join ",`n") + "`n$indent}"
-    }
-    if ($value -is [System.Management.Automation.PSCustomObject]) {
-        $d = [ordered]@{}
-        foreach ($p in $value.PSObject.Properties) { $d[$p.Name] = $p.Value }
-        return ConvertTo-PrettyJson $d $indent
-    }
-    if ($value -is [System.Collections.IEnumerable]) {
-        $items = @($value)
-        if ($items.Count -eq 0) { return '[]' }
-        $parts = foreach ($i in $items) { $next + (ConvertTo-PrettyJson $i $next) }
-        return "[`n" + ($parts -join ",`n") + "`n$indent]"
-    }
-    throw "Can't write $($value.GetType()) as JSON"
-}
-function Write-JsonFile([string]$path, $value) {
-    New-Item -ItemType Directory -Force (Split-Path -Parent $path) | Out-Null
-    [System.IO.File]::WriteAllText($path, (ConvertTo-PrettyJson $value) + "`n", (New-Object System.Text.UTF8Encoding $false))
-}
+. (Join-Path $PSScriptRoot 'lib/TrainerBuild.ps1')
 
 # ------------------------------------------------------------------ 1. Serebii pages -> galar-trainers.json
 
@@ -168,7 +122,8 @@ if ($Serebii) {
                     $moves = @()
                     if ($i -lt @($attackBlocks).Count) {
                         $block = ($attackBlocks[$i] -split '<b>Hold Item</b>')[0]
-                        $moves = @([regex]::Matches($block, '/attackdex-swsh/([a-z0-9]+)\.shtml') | ForEach-Object { $_.Groups[1].Value })
+                        # Some move links have hyphens (double-edge, x-scissor); the ids drop them when built.
+                        $moves = @([regex]::Matches($block, '/attackdex-swsh/([a-z0-9-]+)\.shtml') | ForEach-Object { $_.Groups[1].Value })
                     }
                     $held = $null
                     if ($i -lt $heldBlocks.Count) {
@@ -204,29 +159,9 @@ if ($Serebii) {
 
 # ------------------------------------------------------------------ 2. Cobblemon's species data
 
-$species = @{}      # Get-Key name -> @{ id; json }
-$knownMoves = New-Object System.Collections.Generic.HashSet[string]
-$zip = [System.IO.Compression.ZipFile]::OpenRead((Resolve-Path $CobblemonJar))
-try {
-    foreach ($e in $zip.Entries) {
-        if ($e.FullName -notmatch '^data/cobblemon/species/[^/]+/([^/]+)\.json$') { continue }
-        $id = $Matches[1]
-        $reader = New-Object System.IO.StreamReader($e.Open())
-        try { $json = $reader.ReadToEnd() | ConvertFrom-Json } finally { $reader.Dispose() }
-        $species[(Get-Key $json.name)] = @{ id = $id; json = $json }
-        $species[(Get-Key $id)] = $species[(Get-Key $json.name)]
-        $lists = @($json.moves) + @($json.forms | ForEach-Object { $_.moves })
-        foreach ($m in $lists) { if ($m) { [void]$knownMoves.Add(($m -split ':')[-1]) } }
-    }
-} finally { $zip.Dispose() }
-if ($species.Count -eq 0) { throw "$CobblemonJar has no data/cobblemon/species" }
+$db = Import-CobblemonSpecies $CobblemonJar
+$species = $db.species
 
-# The form's own data for an aspect, or null.
-function Get-Form($sp, [string]$aspect) {
-    if (-not $aspect) { return $null }
-    foreach ($form in @($sp.json.forms)) { if ($form -and @($form.aspects) -contains $aspect) { return $form } }
-    return $null
-}
 
 # ------------------------------------------------------------------ 3. galar-trainers.json -> RCT trainers
 
@@ -274,43 +209,18 @@ foreach ($t in @($data.trainers)) {
             elseif ($FORMS.ContainsKey($p.form)) { $aspect = $FORMS[$p.form] }
             elseif ($code -notmatch $REGULAR_FORMS) { $warnings.Add("$($t.name): unknown form $code of $($sp.id); used the regular form") }
         }
-        $form = Get-Form $sp $aspect
-        if ($aspect -and -not $form -and $aspect -eq 'galarian') {
+        if ($aspect -and -not (Get-Form $sp $aspect) -and $aspect -eq 'galarian') {
             $warnings.Add("$($t.name): Cobblemon has no Galarian $($sp.id); used the regular form"); $aspect = $null
         }
-        $level = [Math]::Max(1, [int]$p.level)
-        $seed = Get-Hash "$($t.name)|$($t.location)|$($t.note)|$($team.Count)|$($sp.id)"
-
-        $ratio = if ($form -and $null -ne $form.maleRatio) { [double]$form.maleRatio } else { [double]$sp.json.maleRatio }
-        $gender = if ($female) { 'FEMALE' } elseif ($ratio -lt 0) { 'GENDERLESS' } elseif ($ratio -eq 0) { 'FEMALE' }
-                  elseif ($ratio -ge 1) { 'MALE' } elseif (($seed % 1000) / 1000.0 -lt $ratio) { 'MALE' } else { 'FEMALE' }
-        $abilities = if ($form -and @($form.abilities).Count) { @($form.abilities) } else { @($sp.json.abilities) }
-        $ability = @($abilities | Where-Object { $_ -and -not $_.StartsWith('h:') })[0]
-
-        $moves = @($p.moves | Where-Object { $_ -and $IGNORED_MOVES -notcontains $_ } | ForEach-Object {
-            if ($knownMoves.Contains($_)) { $_ } else { $warnings.Add("$($t.name): unknown move '$_' on $($sp.id); left out") }
-        })
-        if ($moves.Count -eq 0) {
-            # The last four moves it learns by level, as Sword & Shield gives trainers' Pokemon by default.
-            $learnset = if ($form -and @($form.moves).Count) { @($form.moves) } else { @($sp.json.moves) }
-            $byLevel = @($learnset | Where-Object { $_ -match '^(\d+):(.+)$' -and [int]$Matches[1] -le $level } |
-                    ForEach-Object { $_ -match '^(\d+):(.+)$' | Out-Null; [pscustomobject]@{ l = [int]$Matches[1]; m = $Matches[2] } } |
-                    Sort-Object l)
-            $moves = @($byLevel | ForEach-Object { $_.m } | Select-Object -Unique | Select-Object -Last 4)
-        }
-        $moves = @($moves | Select-Object -First 4)
-
-        $mon = [ordered]@{ species = $sp.id; gender = $gender; level = $level; nature = $NATURES[$seed % 25] }
-        if ($ability) { $mon.ability = $ability }
-        $mon.moveset = $moves
-        $mon.ivs = [ordered]@{}
-        $mon.evs = [ordered]@{}
+        $held = $null
         if ($p.item -and $IGNORED_ITEMS -notcontains $p.item) {
-            if ($ITEMS.ContainsKey($p.item)) { $mon.heldItem = @($ITEMS[$p.item]) }
+            if ($ITEMS.ContainsKey($p.item)) { $held = $ITEMS[$p.item] }
             else { $warnings.Add("$($t.name): unknown held item '$($p.item)'; left out") }
         }
-        if ($aspect) { $mon.aspects = @($aspect) }
-        $team.Add($mon)
+        # Serebii's move names as Cobblemon ids: "double-edge" -> "doubleedge".
+        $moves = @($p.moves | Where-Object { $_ } | ForEach-Object { Get-Key $_ } | Where-Object { $IGNORED_MOVES -notcontains $_ })
+        $seed = Get-Hash "$($t.name)|$($t.location)|$($t.note)|$($team.Count)|$($sp.id)"
+        $team.Add((New-TrainerPokemon $db $sp $aspect $female ([int]$p.level) $moves $held $seed $warnings $t.name))
     }
     if ($team.Count -eq 0) { $warnings.Add("$($t.name) ($($t.location)) has no Pokemon Cobblemon knows; left out"); continue }
 

@@ -1,0 +1,72 @@
+{
+  "name": "Team Rocket Grunt",
+  "identity": "Team Rocket Grunt (18)",
+  "team": [
+    {
+      "species": "rattata",
+      "gender": "FEMALE",
+      "level": 20,
+      "nature": "docile",
+      "ability": "runaway",
+      "moveset": [
+        "tailwhip",
+        "quickattack",
+        "hyperfang",
+        "focusenergy"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "raticate",
+      "gender": "FEMALE",
+      "level": 20,
+      "nature": "sassy",
+      "ability": "runaway",
+      "moveset": [
+        "tailwhip",
+        "quickattack",
+        "hyperfang",
+        "scaryface"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "drowzee",
+      "gender": "MALE",
+      "level": 20,
+      "nature": "calm",
+      "ability": "insomnia",
+      "moveset": [
+        "hypnosis",
+        "disable",
+        "confusion",
+        "headbutt"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

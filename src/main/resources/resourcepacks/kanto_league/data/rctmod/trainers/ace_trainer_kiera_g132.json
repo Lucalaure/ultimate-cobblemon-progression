@@ -9,7 +9,8 @@
       "ability": "sturdy",
       "moveset": [
         "stealthrock",
-        "rockslide"
+        "rockslide",
+        "xscissor"
       ],
       "ivs": {},
       "evs": {}

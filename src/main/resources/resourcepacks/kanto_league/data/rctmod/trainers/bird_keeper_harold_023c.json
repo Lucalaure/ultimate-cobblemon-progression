@@ -1,0 +1,49 @@
+{
+  "name": "Bird Keeper Harold",
+  "team": [
+    {
+      "species": "hoothoot",
+      "gender": "FEMALE",
+      "level": 47,
+      "nature": "impish",
+      "ability": "insomnia",
+      "moveset": [
+        "hypnosis",
+        "reflect",
+        "takedown",
+        "confusion"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "noctowl",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "quiet",
+      "ability": "insomnia",
+      "moveset": [
+        "hypnosis",
+        "reflect",
+        "takedown",
+        "confusion"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

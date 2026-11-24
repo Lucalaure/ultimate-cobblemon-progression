@@ -1,0 +1,80 @@
+{
+  "name": "Black Belt Hitoshi",
+  "team": [
+    {
+      "species": "machop",
+      "gender": "FEMALE",
+      "level": 31,
+      "nature": "relaxed",
+      "ability": "guts",
+      "moveset": [
+        "seismictoss",
+        "foresight",
+        "revenge",
+        "vitalthrow"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {},
+      "heldItem": [
+        "black_belt"
+      ]
+    },
+    {
+      "species": "mankey",
+      "gender": "FEMALE",
+      "level": 31,
+      "nature": "modest",
+      "ability": "vitalspirit",
+      "moveset": [
+        "furyswipes",
+        "focusenergy",
+        "seismictoss",
+        "crosschop"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {},
+      "heldItem": [
+        "black_belt"
+      ]
+    },
+    {
+      "species": "primeape",
+      "gender": "MALE",
+      "level": 31,
+      "nature": "bashful",
+      "ability": "vitalspirit",
+      "moveset": [
+        "furyswipes",
+        "focusenergy",
+        "seismictoss",
+        "rage"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {},
+      "heldItem": [
+        "black_belt"
+      ]
+    }
+  ]
+}

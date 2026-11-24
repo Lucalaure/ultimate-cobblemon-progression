@@ -1,0 +1,27 @@
+{
+  "name": "Swimmer\u2640 Nicole",
+  "team": [
+    {
+      "species": "marill",
+      "gender": "MALE",
+      "level": 50,
+      "nature": "jolly",
+      "ability": "thickfat",
+      "moveset": [
+        "bubblebeam",
+        "doubleedge",
+        "raindance",
+        "hydropump"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "name": "Swimmer\u2640 Abigail",
+  "team": [
+    {
+      "species": "psyduck",
+      "gender": "FEMALE",
+      "level": 35,
+      "nature": "docile",
+      "ability": "damp",
+      "moveset": [
+        "disable",
+        "confusion",
+        "screech",
+        "psychup"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "psyduck",
+      "gender": "MALE",
+      "level": 36,
+      "nature": "jolly",
+      "ability": "damp",
+      "moveset": [
+        "disable",
+        "confusion",
+        "screech",
+        "psychup"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "golduck",
+      "gender": "FEMALE",
+      "level": 37,
+      "nature": "brave",
+      "ability": "damp",
+      "moveset": [
+        "disable",
+        "confusion",
+        "screech",
+        "psychup"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

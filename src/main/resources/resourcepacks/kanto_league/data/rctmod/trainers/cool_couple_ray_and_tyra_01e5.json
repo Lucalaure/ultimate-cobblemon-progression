@@ -1,0 +1,50 @@
+{
+  "name": "Cool Couple Ray & Tyra",
+  "battleFormat": "GEN_9_DOUBLES",
+  "team": [
+    {
+      "species": "nidoqueen",
+      "gender": "FEMALE",
+      "level": 45,
+      "nature": "naive",
+      "ability": "poisonpoint",
+      "moveset": [
+        "superpower",
+        "bodyslam",
+        "doublekick",
+        "poisonsting"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "nidoking",
+      "gender": "MALE",
+      "level": 45,
+      "nature": "bold",
+      "ability": "poisonpoint",
+      "moveset": [
+        "megahorn",
+        "thrash",
+        "doublekick",
+        "poisonsting"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    }
+  ]
+}

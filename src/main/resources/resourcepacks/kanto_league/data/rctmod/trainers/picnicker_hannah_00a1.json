@@ -1,0 +1,115 @@
+{
+  "name": "Picnicker Hannah",
+  "team": [
+    {
+      "species": "pidgey",
+      "gender": "MALE",
+      "level": 24,
+      "nature": "lonely",
+      "ability": "keeneye",
+      "moveset": [
+        "sandattack",
+        "gust",
+        "quickattack",
+        "whirlwind"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "meowth",
+      "gender": "FEMALE",
+      "level": 24,
+      "nature": "naive",
+      "ability": "pickup",
+      "moveset": [
+        "scratch",
+        "growl",
+        "bite",
+        "payday"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "rattata",
+      "gender": "MALE",
+      "level": 24,
+      "nature": "careful",
+      "ability": "runaway",
+      "moveset": [
+        "tailwhip",
+        "quickattack",
+        "hyperfang",
+        "focusenergy"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "pikachu",
+      "gender": "MALE",
+      "level": 24,
+      "nature": "hardy",
+      "ability": "static",
+      "moveset": [
+        "thunderwave",
+        "quickattack",
+        "doubleteam",
+        "slam"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "meowth",
+      "gender": "FEMALE",
+      "level": 24,
+      "nature": "hasty",
+      "ability": "pickup",
+      "moveset": [
+        "scratch",
+        "growl",
+        "bite",
+        "payday"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

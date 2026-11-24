@@ -1,0 +1,77 @@
+{
+  "name": "Ranger Jackson",
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "tangela",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "impish",
+      "ability": "chlorophyll",
+      "moveset": [
+        "slam",
+        "megadrain",
+        "bind",
+        "ingrain"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "exeggcute",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "careful",
+      "ability": "chlorophyll",
+      "moveset": [
+        "confusion",
+        "poisonpowder",
+        "barrage",
+        "reflect"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "exeggutor",
+      "gender": "MALE",
+      "level": 49,
+      "nature": "rash",
+      "ability": "chlorophyll",
+      "moveset": [
+        "confusion",
+        "eggbomb",
+        "sleeppowder",
+        "stomp"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    }
+  ]
+}

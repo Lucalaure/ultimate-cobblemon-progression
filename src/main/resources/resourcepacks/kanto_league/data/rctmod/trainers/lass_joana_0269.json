@@ -1,0 +1,27 @@
+{
+  "name": "Lass Joana",
+  "team": [
+    {
+      "species": "snubbull",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "mild",
+      "ability": "intimidate",
+      "moveset": [
+        "lick",
+        "roar",
+        "rage",
+        "takedown"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

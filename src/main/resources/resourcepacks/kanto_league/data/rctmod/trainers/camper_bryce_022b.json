@@ -1,0 +1,71 @@
+{
+  "name": "Camper Bryce",
+  "team": [
+    {
+      "species": "nidorino",
+      "gender": "MALE",
+      "level": 36,
+      "nature": "naughty",
+      "ability": "poisonpoint",
+      "moveset": [
+        "poisonsting",
+        "hornattack",
+        "helpinghand",
+        "furyattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "raticate",
+      "gender": "MALE",
+      "level": 36,
+      "nature": "naive",
+      "ability": "runaway",
+      "moveset": [
+        "quickattack",
+        "hyperfang",
+        "scaryface",
+        "pursuit"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "sandslash",
+      "gender": "FEMALE",
+      "level": 36,
+      "nature": "careful",
+      "ability": "sandveil",
+      "moveset": [
+        "sandattack",
+        "poisonsting",
+        "slash",
+        "swift"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

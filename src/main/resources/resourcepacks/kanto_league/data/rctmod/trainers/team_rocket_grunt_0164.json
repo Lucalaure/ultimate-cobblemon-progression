@@ -1,0 +1,49 @@
+{
+  "name": "Team Rocket Grunt",
+  "identity": "Team Rocket Grunt (10)",
+  "team": [
+    {
+      "species": "ekans",
+      "gender": "MALE",
+      "level": 15,
+      "nature": "mild",
+      "ability": "intimidate",
+      "moveset": [
+        "wrap",
+        "leer",
+        "poisonsting",
+        "bite"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "zubat",
+      "gender": "FEMALE",
+      "level": 15,
+      "nature": "timid",
+      "ability": "innerfocus",
+      "moveset": [
+        "leechlife",
+        "astonish",
+        "supersonic"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

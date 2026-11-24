@@ -1,0 +1,49 @@
+{
+  "name": "Gambler Dirk",
+  "team": [
+    {
+      "species": "voltorb",
+      "gender": "GENDERLESS",
+      "level": 18,
+      "nature": "impish",
+      "ability": "soundproof",
+      "moveset": [
+        "charge",
+        "tackle",
+        "screech",
+        "sonicboom"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "magnemite",
+      "gender": "GENDERLESS",
+      "level": 18,
+      "nature": "docile",
+      "ability": "magnetpull",
+      "moveset": [
+        "tackle",
+        "thundershock",
+        "supersonic",
+        "sonicboom"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

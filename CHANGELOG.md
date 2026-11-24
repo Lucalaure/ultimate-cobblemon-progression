@@ -6,7 +6,7 @@
 
 ## Changes
 - **The Trainers tab counts each trainer once.** Trainers you can rematch at higher levels, and rivals with a copy of each battle for every starter, used to be listed once per version: Youngster Ben four times, Rival Terry twelve. They're now one row each, with their level range (Lv 12–48), beaten when you beat any version. Every version still spawns in the wild, so trainers keep turning up as your team gets stronger. Grunts are still one row per battle.
-- **Kanto's wild trainers are FireRed's own.** Radical Red's additions no longer spawn in region mode: the Friendly Coaches and other tutorial trainers, its joke trainers, and post-game cameos like Brendan, May, Red, Professor Oak and the Gatekeepers. Kanto now lists 474 trainers and Sinnoh 483.
+- **Kanto's wild trainers are FireRed's own, with FireRed's teams.** RCT's Kanto trainers come from Radical Red, a FireRed hack that rebuilds every team (harder, at higher levels, with about a quarter of the Pokémon from later games: Youngster Ben's Ekans was a Stunky, Bug Catcher Rick's Weedle a Wurmple). They now have FireRed's original teams, from pret's FireRed decompilation: species, levels, IVs, held items and moves, and FireRed's double battles. Radical Red's own additions no longer spawn in region mode: the Friendly Coaches and other tutorial trainers, its joke trainers, its post-game cameos like Brendan, May and Red, and the trainers it put in FireRed's unused slots ("Ace Trainer Janny"). A few FireRed trainers it gave made-up classes get their FireRed names back ("Dragon Tamer Ramiro" is Bird Keeper Ramiro). Kanto now lists 447 trainers and Sinnoh 483.
 - Datapacks: an entry in `wild_trainers.json` can be a list of ids, the versions of one trainer.
 
 ## Fixes

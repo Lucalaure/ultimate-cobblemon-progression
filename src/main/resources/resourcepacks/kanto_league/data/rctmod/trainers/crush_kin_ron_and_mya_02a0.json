@@ -1,0 +1,56 @@
+{
+  "name": "Crush Kin Ron & Mya",
+  "battleFormat": "GEN_9_DOUBLES",
+  "team": [
+    {
+      "species": "hitmonchan",
+      "gender": "MALE",
+      "level": 33,
+      "nature": "careful",
+      "ability": "keeneye",
+      "moveset": [
+        "thunderpunch",
+        "icepunch",
+        "firepunch",
+        "skyuppercut"
+      ],
+      "ivs": {
+        "hp": 13,
+        "atk": 13,
+        "def": 13,
+        "spa": 13,
+        "spd": 13,
+        "spe": 13
+      },
+      "evs": {},
+      "heldItem": [
+        "black_belt"
+      ]
+    },
+    {
+      "species": "hitmonlee",
+      "gender": "MALE",
+      "level": 33,
+      "nature": "impish",
+      "ability": "limber",
+      "moveset": [
+        "brickbreak",
+        "focusenergy",
+        "highjumpkick",
+        "mindreader"
+      ],
+      "ivs": {
+        "hp": 13,
+        "atk": 13,
+        "def": 13,
+        "spa": 13,
+        "spd": 13,
+        "spe": 13
+      },
+      "evs": {},
+      "heldItem": [
+        "black_belt"
+      ]
+    }
+  ]
+}

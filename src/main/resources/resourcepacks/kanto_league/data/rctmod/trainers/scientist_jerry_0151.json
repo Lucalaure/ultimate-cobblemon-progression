@@ -1,0 +1,71 @@
+{
+  "name": "Scientist Jerry",
+  "team": [
+    {
+      "species": "magnemite",
+      "gender": "GENDERLESS",
+      "level": 28,
+      "nature": "sassy",
+      "ability": "magnetpull",
+      "moveset": [
+        "supersonic",
+        "sonicboom",
+        "thunderwave",
+        "spark"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "voltorb",
+      "gender": "GENDERLESS",
+      "level": 28,
+      "nature": "adamant",
+      "ability": "soundproof",
+      "moveset": [
+        "screech",
+        "sonicboom",
+        "spark",
+        "selfdestruct"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "magneton",
+      "gender": "GENDERLESS",
+      "level": 28,
+      "nature": "naive",
+      "ability": "magnetpull",
+      "moveset": [
+        "supersonic",
+        "sonicboom",
+        "thunderwave",
+        "spark"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

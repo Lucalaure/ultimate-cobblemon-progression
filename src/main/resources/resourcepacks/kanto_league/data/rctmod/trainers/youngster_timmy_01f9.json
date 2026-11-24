@@ -1,0 +1,71 @@
+{
+  "name": "Youngster Timmy",
+  "team": [
+    {
+      "species": "raticate",
+      "gender": "MALE",
+      "level": 52,
+      "nature": "rash",
+      "ability": "runaway",
+      "moveset": [
+        "scaryface",
+        "pursuit",
+        "superfang",
+        "endeavor"
+      ],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      },
+      "evs": {}
+    },
+    {
+      "species": "arbok",
+      "gender": "MALE",
+      "level": 52,
+      "nature": "naughty",
+      "ability": "intimidate",
+      "moveset": [
+        "acid",
+        "stockpile",
+        "swallow",
+        "spitup"
+      ],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      },
+      "evs": {}
+    },
+    {
+      "species": "golbat",
+      "gender": "MALE",
+      "level": 52,
+      "nature": "modest",
+      "ability": "innerfocus",
+      "moveset": [
+        "confuseray",
+        "aircutter",
+        "meanlook",
+        "poisonfang"
+      ],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      },
+      "evs": {}
+    }
+  ]
+}

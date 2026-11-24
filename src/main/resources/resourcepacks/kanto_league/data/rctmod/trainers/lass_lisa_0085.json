@@ -1,0 +1,49 @@
+{
+  "name": "Lass Lisa",
+  "team": [
+    {
+      "species": "oddish",
+      "gender": "FEMALE",
+      "level": 23,
+      "nature": "serious",
+      "ability": "chlorophyll",
+      "moveset": [
+        "poisonpowder",
+        "stunspore",
+        "sleeppowder",
+        "acid"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "gloom",
+      "gender": "FEMALE",
+      "level": 23,
+      "nature": "naughty",
+      "ability": "chlorophyll",
+      "moveset": [
+        "sweetscent",
+        "poisonpowder",
+        "stunspore",
+        "sleeppowder"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

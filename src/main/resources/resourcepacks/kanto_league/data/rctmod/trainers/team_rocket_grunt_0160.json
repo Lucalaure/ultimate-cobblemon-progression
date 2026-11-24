@@ -1,0 +1,69 @@
+{
+  "name": "Team Rocket Grunt",
+  "identity": "Team Rocket Grunt (6)",
+  "team": [
+    {
+      "species": "sandshrew",
+      "gender": "MALE",
+      "level": 11,
+      "nature": "naive",
+      "ability": "sandveil",
+      "moveset": [
+        "scratch",
+        "defensecurl",
+        "sandattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "rattata",
+      "gender": "MALE",
+      "level": 11,
+      "nature": "docile",
+      "ability": "runaway",
+      "moveset": [
+        "tackle",
+        "tailwhip",
+        "quickattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "zubat",
+      "gender": "FEMALE",
+      "level": 11,
+      "nature": "timid",
+      "ability": "innerfocus",
+      "moveset": [
+        "leechlife",
+        "astonish",
+        "supersonic"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

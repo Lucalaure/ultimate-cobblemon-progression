@@ -1,0 +1,49 @@
+{
+  "name": "Pok\u00e9maniac Steve",
+  "team": [
+    {
+      "species": "charmander",
+      "gender": "FEMALE",
+      "level": 22,
+      "nature": "quiet",
+      "ability": "blaze",
+      "moveset": [
+        "growl",
+        "ember",
+        "metalclaw",
+        "smokescreen"
+      ],
+      "ivs": {
+        "hp": 4,
+        "atk": 4,
+        "def": 4,
+        "spa": 4,
+        "spd": 4,
+        "spe": 4
+      },
+      "evs": {}
+    },
+    {
+      "species": "cubone",
+      "gender": "FEMALE",
+      "level": 22,
+      "nature": "naughty",
+      "ability": "rockhead",
+      "moveset": [
+        "boneclub",
+        "headbutt",
+        "leer",
+        "focusenergy"
+      ],
+      "ivs": {
+        "hp": 4,
+        "atk": 4,
+        "def": 4,
+        "spa": 4,
+        "spd": 4,
+        "spe": 4
+      },
+      "evs": {}
+    }
+  ]
+}

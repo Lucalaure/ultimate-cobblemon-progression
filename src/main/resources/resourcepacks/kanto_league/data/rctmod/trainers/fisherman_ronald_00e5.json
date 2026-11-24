@@ -1,0 +1,93 @@
+{
+  "name": "Fisherman Ronald",
+  "team": [
+    {
+      "species": "seaking",
+      "gender": "FEMALE",
+      "level": 28,
+      "nature": "bashful",
+      "ability": "swiftswim",
+      "moveset": [
+        "watersport",
+        "supersonic",
+        "hornattack",
+        "flail"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "goldeen",
+      "gender": "FEMALE",
+      "level": 28,
+      "nature": "lonely",
+      "ability": "swiftswim",
+      "moveset": [
+        "watersport",
+        "supersonic",
+        "hornattack",
+        "flail"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "seaking",
+      "gender": "FEMALE",
+      "level": 28,
+      "nature": "relaxed",
+      "ability": "swiftswim",
+      "moveset": [
+        "watersport",
+        "supersonic",
+        "hornattack",
+        "flail"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "seaking",
+      "gender": "MALE",
+      "level": 28,
+      "nature": "naive",
+      "ability": "swiftswim",
+      "moveset": [
+        "watersport",
+        "supersonic",
+        "hornattack",
+        "flail"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

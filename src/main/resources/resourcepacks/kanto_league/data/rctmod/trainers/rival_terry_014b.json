@@ -1,0 +1,45 @@
+{
+  "name": "Rival Terry",
+  "team": [
+    {
+      "species": "pidgey",
+      "gender": "FEMALE",
+      "level": 9,
+      "nature": "brave",
+      "ability": "keeneye",
+      "moveset": [
+        "tackle",
+        "sandattack"
+      ],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      },
+      "evs": {}
+    },
+    {
+      "species": "charmander",
+      "gender": "MALE",
+      "level": 9,
+      "nature": "bashful",
+      "ability": "blaze",
+      "moveset": [
+        "scratch",
+        "growl"
+      ],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      },
+      "evs": {}
+    }
+  ]
+}

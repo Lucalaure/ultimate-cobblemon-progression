@@ -1,0 +1,50 @@
+{
+  "name": "Team Rocket Grunt",
+  "identity": "Team Rocket Grunt (54)",
+  "team": [
+    {
+      "species": "koffing",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "naive",
+      "ability": "levitate",
+      "moveset": [
+        "memento",
+        "haze",
+        "smokescreen",
+        "sludge"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "weezing",
+      "gender": "MALE",
+      "level": 49,
+      "nature": "sassy",
+      "ability": "levitate",
+      "moveset": [
+        "haze",
+        "smokescreen",
+        "sludge",
+        "selfdestruct"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

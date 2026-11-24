@@ -88,6 +88,7 @@
           "moves": [
             "takedown",
             "doublekick",
+            "double-edge",
             "headbutt"
           ]
         },
@@ -109,7 +110,8 @@
           "moves": [
             "snipeshot",
             "suckerpunch",
-            "liquidation"
+            "liquidation",
+            "u-turn"
           ]
         }
       ]
@@ -126,6 +128,7 @@
           "moves": [
             "takedown",
             "doublekick",
+            "double-edge",
             "headbutt"
           ]
         },
@@ -165,6 +168,7 @@
           "moves": [
             "takedown",
             "doublekick",
+            "double-edge",
             "headbutt"
           ]
         },
@@ -184,6 +188,7 @@
           "dex": 815,
           "level": 62,
           "moves": [
+            "double-edge",
             "headbutt",
             "pyroball",
             "agility"
@@ -203,6 +208,7 @@
           "moves": [
             "firstimpression",
             "liquidation",
+            "x-scissor",
             "suckerpunch"
           ]
         },
@@ -283,6 +289,7 @@
           "moves": [
             "cottonguard",
             "doublekick",
+            "double-edge",
             "headbutt"
           ]
         },
@@ -337,7 +344,8 @@
           "moves": [
             "snipeshot",
             "suckerpunch",
-            "liquidation"
+            "liquidation",
+            "u-turn"
           ]
         }
       ],
@@ -358,6 +366,7 @@
           "moves": [
             "cottonguard",
             "doublekick",
+            "double-edge",
             "headbutt"
           ]
         },
@@ -434,6 +443,7 @@
           "moves": [
             "cottonguard",
             "doublekick",
+            "double-edge",
             "headbutt"
           ]
         },
@@ -486,6 +496,7 @@
           "dex": 815,
           "level": 60,
           "moves": [
+            "double-edge",
             "headbutt",
             "pyroball",
             "agility"
@@ -520,6 +531,7 @@
           "moves": [
             "firstimpression",
             "liquidation",
+            "x-scissor",
             "suckerpunch"
           ]
         },
@@ -611,6 +623,7 @@
           "moves": [
             "cottonguard",
             "doublekick",
+            "double-edge",
             "headbutt"
           ]
         },
@@ -688,6 +701,7 @@
           "moves": [
             "cottonguard",
             "doublekick",
+            "double-edge",
             "headbutt"
           ]
         },
@@ -765,6 +779,7 @@
           "moves": [
             "cottonguard",
             "doublekick",
+            "double-edge",
             "headbutt"
           ]
         },
@@ -842,6 +857,7 @@
           "moves": [
             "cottonguard",
             "doublekick",
+            "double-edge",
             "headbutt"
           ]
         },
@@ -919,6 +935,7 @@
           "moves": [
             "cottonguard",
             "doublekick",
+            "double-edge",
             "headbutt"
           ]
         },
@@ -996,6 +1013,7 @@
           "moves": [
             "cottonguard",
             "doublekick",
+            "double-edge",
             "headbutt"
           ]
         },
@@ -1708,6 +1726,7 @@
           "moves": [
             "poisonfang",
             "ember",
+            "will-o-wisp",
             "scratch"
           ]
         }
@@ -1730,7 +1749,8 @@
           "level": 24,
           "moves": [
             "fakeout",
-            "sandattack"
+            "sandattack",
+            "will-o-wisp"
           ]
         }
       ]
@@ -2090,6 +2110,7 @@
           "level": 15,
           "moves": [
             "quickattack",
+            "baby-dolleyes",
             "tailwhip",
             "tackle"
           ]
@@ -2219,7 +2240,8 @@
           "moves": [
             "charge",
             "quickattack",
-            "thundershock"
+            "thundershock",
+            "mud-slap"
           ]
         }
       ]
@@ -2341,7 +2363,8 @@
           "moves": [
             "tackle",
             "lick",
-            "snarl"
+            "snarl",
+            "baby-dolleyes"
           ]
         },
         {
@@ -2545,6 +2568,7 @@
           "level": 19,
           "moves": [
             "astonish",
+            "mud-slap",
             "taunt",
             "poisonsting"
           ]
@@ -2877,6 +2901,7 @@
           "level": 22,
           "moves": [
             "nightslash",
+            "baby-dolleyes",
             "sandattack",
             "lick"
           ]
@@ -2944,7 +2969,8 @@
           "moves": [
             "honeclaws",
             "takedown",
-            "nightslash"
+            "nightslash",
+            "baby-dolleyes"
           ]
         }
       ]
@@ -3097,6 +3123,7 @@
           "dex": 109,
           "level": 29,
           "moves": [
+            "self-destruct",
             "haze",
             "smokescreen",
             "clearsmog"
@@ -3410,6 +3437,7 @@
           "dex": 710,
           "level": 31,
           "moves": [
+            "trick-or-treat",
             "bulletseed",
             "shadowsneak"
           ]
@@ -3955,6 +3983,7 @@
           "dex": 766,
           "level": 44,
           "moves": [
+            "double-edge",
             "bulkup",
             "fling",
             "acrobatics"
@@ -4066,6 +4095,7 @@
           "level": 37,
           "moves": [
             "metalclaw",
+            "power-uppunch",
             "detect",
             "counter"
           ]
@@ -4408,7 +4438,8 @@
           "level": 38,
           "moves": [
             "smackdown",
-            "rockblast"
+            "rockblast",
+            "mud-slap"
           ]
         }
       ]
@@ -4425,7 +4456,8 @@
           "level": 38,
           "moves": [
             "stealthrock",
-            "rockslide"
+            "rockslide",
+            "x-scissor"
           ]
         }
       ]
@@ -4723,7 +4755,8 @@
           "level": 39,
           "moves": [
             "bubblebeam",
-            "aurorabeam"
+            "aurorabeam",
+            "lock-on"
           ]
         },
         {
@@ -5142,6 +5175,7 @@
           "dex": 38,
           "level": 45,
           "moves": [
+            "will-o-wisp",
             "flamethrower",
             "disable",
             "extrasensory"
@@ -5398,6 +5432,7 @@
           "moves": [
             "paraboliccharge",
             "thunder",
+            "mud-slap",
             "eerieimpulse"
           ]
         },
@@ -5486,6 +5521,7 @@
           "moves": [
             "leafstorm",
             "voltswitch",
+            "will-o-wisp",
             "lightscreen"
           ]
         },
@@ -5497,6 +5533,7 @@
           "moves": [
             "hydropump",
             "voltswitch",
+            "will-o-wisp",
             "hex"
           ]
         },
@@ -5508,6 +5545,7 @@
           "moves": [
             "overheat",
             "voltswitch",
+            "will-o-wisp",
             "hex"
           ]
         }
@@ -5535,7 +5573,8 @@
           "level": 47,
           "moves": [
             "ironhead",
-            "crunch"
+            "crunch",
+            "x-scissor"
           ]
         }
       ]
@@ -5776,6 +5815,7 @@
           "level": 48,
           "moves": [
             "shiftgear",
+            "lock-on",
             "geargrind",
             "screech"
           ]
@@ -5849,6 +5889,7 @@
           "moves": [
             "hex",
             "icywind",
+            "will-o-wisp",
             "doubleteam"
           ]
         },
@@ -5923,6 +5964,7 @@
           "moves": [
             "firstimpression",
             "liquidation",
+            "x-scissor",
             "suckerpunch"
           ]
         },
@@ -6391,6 +6433,7 @@
           "dex": 452,
           "level": 65,
           "moves": [
+            "x-scissor",
             "poisonfang",
             "crunch",
             "icefang"

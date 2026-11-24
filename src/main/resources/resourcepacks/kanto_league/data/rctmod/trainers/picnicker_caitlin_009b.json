@@ -1,0 +1,27 @@
+{
+  "name": "Picnicker Caitlin",
+  "team": [
+    {
+      "species": "meowth",
+      "gender": "MALE",
+      "level": 23,
+      "nature": "impish",
+      "ability": "pickup",
+      "moveset": [
+        "scratch",
+        "growl",
+        "bite",
+        "payday"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

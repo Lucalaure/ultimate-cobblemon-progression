@@ -1,0 +1,27 @@
+{
+  "name": "Swimmer\u2642 Finn",
+  "team": [
+    {
+      "species": "starmie",
+      "gender": "GENDERLESS",
+      "level": 38,
+      "nature": "naughty",
+      "ability": "illuminate",
+      "moveset": [
+        "rapidspin",
+        "recover",
+        "swift",
+        "confuseray"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

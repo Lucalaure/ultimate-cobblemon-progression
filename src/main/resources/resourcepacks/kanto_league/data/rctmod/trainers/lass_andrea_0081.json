@@ -1,0 +1,71 @@
+{
+  "name": "Lass Andrea",
+  "team": [
+    {
+      "species": "meowth",
+      "gender": "MALE",
+      "level": 24,
+      "nature": "quirky",
+      "ability": "pickup",
+      "moveset": [
+        "scratch",
+        "growl",
+        "bite",
+        "payday"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "meowth",
+      "gender": "MALE",
+      "level": 24,
+      "nature": "quirky",
+      "ability": "pickup",
+      "moveset": [
+        "scratch",
+        "growl",
+        "bite",
+        "payday"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "meowth",
+      "gender": "MALE",
+      "level": 24,
+      "nature": "gentle",
+      "ability": "pickup",
+      "moveset": [
+        "scratch",
+        "growl",
+        "bite",
+        "payday"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

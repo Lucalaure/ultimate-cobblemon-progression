@@ -1,0 +1,115 @@
+{
+  "name": "Picnicker Susie",
+  "team": [
+    {
+      "species": "pidgeotto",
+      "gender": "MALE",
+      "level": 47,
+      "nature": "impish",
+      "ability": "keeneye",
+      "moveset": [
+        "whirlwind",
+        "wingattack",
+        "featherdance",
+        "agility"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    },
+    {
+      "species": "persian",
+      "gender": "MALE",
+      "level": 47,
+      "nature": "modest",
+      "ability": "limber",
+      "moveset": [
+        "payday",
+        "feintattack",
+        "screech",
+        "furyswipes"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    },
+    {
+      "species": "raticate",
+      "gender": "MALE",
+      "level": 47,
+      "nature": "adamant",
+      "ability": "runaway",
+      "moveset": [
+        "hyperfang",
+        "scaryface",
+        "pursuit",
+        "superfang"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    },
+    {
+      "species": "pikachu",
+      "gender": "MALE",
+      "level": 47,
+      "nature": "lax",
+      "ability": "static",
+      "moveset": [
+        "slam",
+        "thunderbolt",
+        "agility",
+        "thunder"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    },
+    {
+      "species": "persian",
+      "gender": "MALE",
+      "level": 47,
+      "nature": "naive",
+      "ability": "limber",
+      "moveset": [
+        "payday",
+        "feintattack",
+        "screech",
+        "furyswipes"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    }
+  ]
+}

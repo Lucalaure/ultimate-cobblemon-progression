@@ -1,0 +1,49 @@
+{
+  "name": "Youngster Cordell",
+  "team": [
+    {
+      "species": "farfetchd",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "modest",
+      "ability": "keeneye",
+      "moveset": [
+        "swordsdance",
+        "agility",
+        "slash",
+        "falseswipe"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "farfetchd",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "careful",
+      "ability": "keeneye",
+      "moveset": [
+        "swordsdance",
+        "agility",
+        "slash",
+        "falseswipe"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

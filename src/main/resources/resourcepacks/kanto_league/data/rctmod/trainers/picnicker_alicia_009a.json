@@ -1,0 +1,93 @@
+{
+  "name": "Picnicker Alicia",
+  "team": [
+    {
+      "species": "oddish",
+      "gender": "FEMALE",
+      "level": 18,
+      "nature": "impish",
+      "ability": "chlorophyll",
+      "moveset": [
+        "sweetscent",
+        "poisonpowder",
+        "stunspore",
+        "sleeppowder"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "bellsprout",
+      "gender": "MALE",
+      "level": 18,
+      "nature": "brave",
+      "ability": "chlorophyll",
+      "moveset": [
+        "growth",
+        "wrap",
+        "sleeppowder",
+        "poisonpowder"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "oddish",
+      "gender": "FEMALE",
+      "level": 18,
+      "nature": "bold",
+      "ability": "chlorophyll",
+      "moveset": [
+        "sweetscent",
+        "poisonpowder",
+        "stunspore",
+        "sleeppowder"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "bellsprout",
+      "gender": "FEMALE",
+      "level": 18,
+      "nature": "adamant",
+      "ability": "chlorophyll",
+      "moveset": [
+        "growth",
+        "wrap",
+        "sleeppowder",
+        "poisonpowder"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

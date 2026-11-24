@@ -1,0 +1,30 @@
+{
+  "name": "Black Belt Aaron",
+  "team": [
+    {
+      "species": "primeape",
+      "gender": "FEMALE",
+      "level": 36,
+      "nature": "sassy",
+      "ability": "vitalspirit",
+      "moveset": [
+        "focusenergy",
+        "seismictoss",
+        "rage",
+        "crosschop"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {},
+      "heldItem": [
+        "black_belt"
+      ]
+    }
+  ]
+}

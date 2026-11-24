@@ -1,0 +1,67 @@
+{
+  "name": "Lass Haley",
+  "team": [
+    {
+      "species": "oddish",
+      "gender": "MALE",
+      "level": 13,
+      "nature": "jolly",
+      "ability": "chlorophyll",
+      "moveset": [
+        "absorb",
+        "sweetscent"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "pidgey",
+      "gender": "MALE",
+      "level": 13,
+      "nature": "bold",
+      "ability": "keeneye",
+      "moveset": [
+        "tackle",
+        "sandattack",
+        "gust",
+        "quickattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "oddish",
+      "gender": "MALE",
+      "level": 13,
+      "nature": "timid",
+      "ability": "chlorophyll",
+      "moveset": [
+        "absorb",
+        "sweetscent"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

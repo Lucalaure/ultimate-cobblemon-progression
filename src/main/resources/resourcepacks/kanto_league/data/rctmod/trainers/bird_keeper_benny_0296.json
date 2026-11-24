@@ -1,0 +1,49 @@
+{
+  "name": "Bird Keeper Benny",
+  "team": [
+    {
+      "species": "fearow",
+      "gender": "MALE",
+      "level": 32,
+      "nature": "mild",
+      "ability": "keeneye",
+      "moveset": [
+        "leer",
+        "furyattack",
+        "pursuit",
+        "mirrormove"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    },
+    {
+      "species": "fearow",
+      "gender": "FEMALE",
+      "level": 32,
+      "nature": "mild",
+      "ability": "keeneye",
+      "moveset": [
+        "leer",
+        "furyattack",
+        "pursuit",
+        "mirrormove"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    }
+  ]
+}

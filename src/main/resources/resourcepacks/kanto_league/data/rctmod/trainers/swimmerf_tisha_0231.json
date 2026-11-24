@@ -1,0 +1,27 @@
+{
+  "name": "Swimmer\u2640 Tisha",
+  "team": [
+    {
+      "species": "kingler",
+      "gender": "FEMALE",
+      "level": 38,
+      "nature": "naughty",
+      "ability": "hypercutter",
+      "moveset": [
+        "harden",
+        "mudshot",
+        "stomp",
+        "guillotine"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

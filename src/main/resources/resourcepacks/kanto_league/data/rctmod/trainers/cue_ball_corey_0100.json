@@ -1,0 +1,49 @@
+{
+  "name": "Cue Ball Corey",
+  "team": [
+    {
+      "species": "primeape",
+      "gender": "FEMALE",
+      "level": 29,
+      "nature": "quiet",
+      "ability": "vitalspirit",
+      "moveset": [
+        "furyswipes",
+        "focusenergy",
+        "seismictoss",
+        "rage"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "machoke",
+      "gender": "MALE",
+      "level": 29,
+      "nature": "brave",
+      "ability": "guts",
+      "moveset": [
+        "karatechop",
+        "seismictoss",
+        "foresight",
+        "revenge"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

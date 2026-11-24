@@ -1,0 +1,93 @@
+{
+  "name": "Tuber Alexis",
+  "team": [
+    {
+      "species": "staryu",
+      "gender": "GENDERLESS",
+      "level": 34,
+      "nature": "bashful",
+      "ability": "illuminate",
+      "moveset": [
+        "camouflage",
+        "swift",
+        "bubblebeam",
+        "minimize"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "staryu",
+      "gender": "GENDERLESS",
+      "level": 34,
+      "nature": "bashful",
+      "ability": "illuminate",
+      "moveset": [
+        "camouflage",
+        "swift",
+        "bubblebeam",
+        "minimize"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "krabby",
+      "gender": "MALE",
+      "level": 34,
+      "nature": "bold",
+      "ability": "hypercutter",
+      "moveset": [
+        "harden",
+        "mudshot",
+        "stomp",
+        "guillotine"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "krabby",
+      "gender": "MALE",
+      "level": 34,
+      "nature": "bold",
+      "ability": "hypercutter",
+      "moveset": [
+        "harden",
+        "mudshot",
+        "stomp",
+        "guillotine"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

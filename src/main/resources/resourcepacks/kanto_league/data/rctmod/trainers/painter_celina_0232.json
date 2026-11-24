@@ -1,0 +1,27 @@
+{
+  "name": "Painter Celina",
+  "team": [
+    {
+      "species": "smeargle",
+      "gender": "FEMALE",
+      "level": 50,
+      "nature": "sassy",
+      "ability": "owntempo",
+      "moveset": [
+        "fly",
+        "dig",
+        "dive",
+        "bounce"
+      ],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      },
+      "evs": {}
+    }
+  ]
+}

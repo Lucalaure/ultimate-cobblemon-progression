@@ -1,0 +1,71 @@
+{
+  "name": "Tamer Evan",
+  "team": [
+    {
+      "species": "sandslash",
+      "gender": "FEMALE",
+      "level": 52,
+      "nature": "lax",
+      "ability": "sandveil",
+      "moveset": [
+        "slash",
+        "swift",
+        "furyswipes",
+        "sandtomb"
+      ],
+      "ivs": {
+        "hp": 19,
+        "atk": 19,
+        "def": 19,
+        "spa": 19,
+        "spd": 19,
+        "spe": 19
+      },
+      "evs": {}
+    },
+    {
+      "species": "lickitung",
+      "gender": "FEMALE",
+      "level": 52,
+      "nature": "careful",
+      "ability": "owntempo",
+      "moveset": [
+        "disable",
+        "slam",
+        "screech",
+        "refresh"
+      ],
+      "ivs": {
+        "hp": 19,
+        "atk": 19,
+        "def": 19,
+        "spa": 19,
+        "spd": 19,
+        "spe": 19
+      },
+      "evs": {}
+    },
+    {
+      "species": "ursaring",
+      "gender": "FEMALE",
+      "level": 55,
+      "nature": "bold",
+      "ability": "guts",
+      "moveset": [
+        "rest",
+        "slash",
+        "snore",
+        "thrash"
+      ],
+      "ivs": {
+        "hp": 19,
+        "atk": 19,
+        "def": 19,
+        "spa": 19,
+        "spd": 19,
+        "spe": 19
+      },
+      "evs": {}
+    }
+  ]
+}

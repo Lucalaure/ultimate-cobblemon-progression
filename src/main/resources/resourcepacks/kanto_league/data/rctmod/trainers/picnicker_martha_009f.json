@@ -1,0 +1,49 @@
+{
+  "name": "Picnicker Martha",
+  "team": [
+    {
+      "species": "oddish",
+      "gender": "FEMALE",
+      "level": 22,
+      "nature": "mild",
+      "ability": "chlorophyll",
+      "moveset": [
+        "sweetscent",
+        "poisonpowder",
+        "stunspore",
+        "sleeppowder"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "bulbasaur",
+      "gender": "MALE",
+      "level": 22,
+      "nature": "naughty",
+      "ability": "overgrow",
+      "moveset": [
+        "vinewhip",
+        "poisonpowder",
+        "sleeppowder",
+        "razorleaf"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

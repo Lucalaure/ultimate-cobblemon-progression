@@ -1,0 +1,27 @@
+{
+  "name": "Swimmer\u2640 Tiffany",
+  "team": [
+    {
+      "species": "seaking",
+      "gender": "MALE",
+      "level": 35,
+      "nature": "brave",
+      "ability": "swiftswim",
+      "moveset": [
+        "supersonic",
+        "hornattack",
+        "flail",
+        "furyattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

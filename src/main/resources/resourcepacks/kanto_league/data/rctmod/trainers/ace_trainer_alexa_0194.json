@@ -1,0 +1,130 @@
+{
+  "name": "Ace Trainer Alexa",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 4
+  },
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "clefairy",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "relaxed",
+      "ability": "cutecharm",
+      "moveset": [
+        "lightscreen",
+        "cosmicpower",
+        "doubleslap",
+        "encore"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "jigglypuff",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "naive",
+      "ability": "cutecharm",
+      "moveset": [
+        "sing",
+        "bodyslam",
+        "rollout",
+        "disable"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "persian",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "impish",
+      "ability": "limber",
+      "moveset": [
+        "payday",
+        "feintattack",
+        "bite",
+        "screech"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "dewgong",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "adamant",
+      "ability": "thickfat",
+      "moveset": [
+        "sheercold",
+        "takedown",
+        "rest",
+        "aurorabeam"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "chansey",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "modest",
+      "ability": "naturalcure",
+      "moveset": [
+        "sing",
+        "eggbomb",
+        "softboiled",
+        "minimize"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    }
+  ]
+}

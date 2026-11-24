@@ -1,0 +1,49 @@
+{
+  "name": "Burglar Lewis",
+  "team": [
+    {
+      "species": "growlithe",
+      "gender": "MALE",
+      "level": 34,
+      "nature": "calm",
+      "ability": "intimidate",
+      "moveset": [
+        "leer",
+        "odorsleuth",
+        "takedown",
+        "flamewheel"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "ponyta",
+      "gender": "FEMALE",
+      "level": 34,
+      "nature": "adamant",
+      "ability": "runaway",
+      "moveset": [
+        "ember",
+        "stomp",
+        "firespin",
+        "takedown"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

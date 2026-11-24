@@ -1,0 +1,83 @@
+{
+  "name": "Bug Catcher Cale",
+  "team": [
+    {
+      "species": "caterpie",
+      "gender": "MALE",
+      "level": 10,
+      "nature": "lax",
+      "ability": "shielddust",
+      "moveset": [
+        "tackle",
+        "stringshot"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "weedle",
+      "gender": "FEMALE",
+      "level": 10,
+      "nature": "impish",
+      "ability": "shielddust",
+      "moveset": [
+        "poisonsting",
+        "stringshot"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "metapod",
+      "gender": "MALE",
+      "level": 10,
+      "nature": "quirky",
+      "ability": "shedskin",
+      "moveset": [
+        "harden"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "kakuna",
+      "gender": "FEMALE",
+      "level": 10,
+      "nature": "hardy",
+      "ability": "shedskin",
+      "moveset": [
+        "harden"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

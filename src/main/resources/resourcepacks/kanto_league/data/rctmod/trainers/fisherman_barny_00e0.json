@@ -1,0 +1,70 @@
+{
+  "name": "Fisherman Barny",
+  "team": [
+    {
+      "species": "tentacool",
+      "gender": "FEMALE",
+      "level": 17,
+      "nature": "brave",
+      "ability": "clearbody",
+      "moveset": [
+        "poisonsting",
+        "supersonic",
+        "constrict"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "staryu",
+      "gender": "GENDERLESS",
+      "level": 17,
+      "nature": "modest",
+      "ability": "illuminate",
+      "moveset": [
+        "harden",
+        "watergun",
+        "rapidspin",
+        "recover"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "shellder",
+      "gender": "MALE",
+      "level": 17,
+      "nature": "adamant",
+      "ability": "shellarmor",
+      "moveset": [
+        "tackle",
+        "withdraw",
+        "iciclespear",
+        "supersonic"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

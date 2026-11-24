@@ -1,0 +1,71 @@
+{
+  "name": "Picnicker Irene",
+  "team": [
+    {
+      "species": "tentacool",
+      "gender": "FEMALE",
+      "level": 30,
+      "nature": "quiet",
+      "ability": "clearbody",
+      "moveset": [
+        "constrict",
+        "acid",
+        "bubblebeam",
+        "wrap"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "horsea",
+      "gender": "MALE",
+      "level": 30,
+      "nature": "careful",
+      "ability": "swiftswim",
+      "moveset": [
+        "smokescreen",
+        "leer",
+        "watergun",
+        "twister"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "seel",
+      "gender": "MALE",
+      "level": 30,
+      "nature": "naive",
+      "ability": "thickfat",
+      "moveset": [
+        "growl",
+        "icywind",
+        "aurorabeam",
+        "rest"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

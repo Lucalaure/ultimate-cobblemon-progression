@@ -1,0 +1,61 @@
+{
+  "name": "Lady Jacki",
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "hoppip",
+      "gender": "FEMALE",
+      "level": 48,
+      "nature": "sassy",
+      "ability": "chlorophyll",
+      "moveset": [
+        "sleeppowder",
+        "leechseed",
+        "cottonspore",
+        "megadrain"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {},
+      "heldItem": [
+        "stardust"
+      ]
+    },
+    {
+      "species": "skiploom",
+      "gender": "MALE",
+      "level": 50,
+      "nature": "hardy",
+      "ability": "chlorophyll",
+      "moveset": [
+        "sleeppowder",
+        "leechseed",
+        "cottonspore",
+        "megadrain"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {},
+      "heldItem": [
+        "stardust"
+      ]
+    }
+  ]
+}

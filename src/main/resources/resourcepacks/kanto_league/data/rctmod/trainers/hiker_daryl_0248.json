@@ -1,0 +1,27 @@
+{
+  "name": "Hiker Daryl",
+  "team": [
+    {
+      "species": "sudowoodo",
+      "gender": "FEMALE",
+      "level": 50,
+      "nature": "sassy",
+      "ability": "sturdy",
+      "moveset": [
+        "rockslide",
+        "block",
+        "feintattack",
+        "slam"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

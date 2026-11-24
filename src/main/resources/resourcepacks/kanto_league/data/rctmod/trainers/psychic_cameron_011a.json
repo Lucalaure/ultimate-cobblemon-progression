@@ -1,0 +1,71 @@
+{
+  "name": "Psychic Cameron",
+  "team": [
+    {
+      "species": "slowpoke",
+      "gender": "MALE",
+      "level": 33,
+      "nature": "hardy",
+      "ability": "oblivious",
+      "moveset": [
+        "watergun",
+        "confusion",
+        "disable",
+        "headbutt"
+      ],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      },
+      "evs": {}
+    },
+    {
+      "species": "slowpoke",
+      "gender": "FEMALE",
+      "level": 33,
+      "nature": "relaxed",
+      "ability": "oblivious",
+      "moveset": [
+        "watergun",
+        "confusion",
+        "disable",
+        "headbutt"
+      ],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      },
+      "evs": {}
+    },
+    {
+      "species": "slowbro",
+      "gender": "FEMALE",
+      "level": 33,
+      "nature": "naive",
+      "ability": "oblivious",
+      "moveset": [
+        "watergun",
+        "confusion",
+        "disable",
+        "headbutt"
+      ],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      },
+      "evs": {}
+    }
+  ]
+}

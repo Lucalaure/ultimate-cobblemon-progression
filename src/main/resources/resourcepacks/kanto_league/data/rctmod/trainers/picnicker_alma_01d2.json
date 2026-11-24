@@ -1,0 +1,71 @@
+{
+  "name": "Picnicker Alma",
+  "team": [
+    {
+      "species": "goldeen",
+      "gender": "MALE",
+      "level": 28,
+      "nature": "mild",
+      "ability": "swiftswim",
+      "moveset": [
+        "watersport",
+        "supersonic",
+        "hornattack",
+        "flail"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "poliwag",
+      "gender": "MALE",
+      "level": 28,
+      "nature": "hasty",
+      "ability": "waterabsorb",
+      "moveset": [
+        "hypnosis",
+        "watergun",
+        "doubleslap",
+        "raindance"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "horsea",
+      "gender": "MALE",
+      "level": 28,
+      "nature": "serious",
+      "ability": "swiftswim",
+      "moveset": [
+        "bubble",
+        "smokescreen",
+        "leer",
+        "watergun"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

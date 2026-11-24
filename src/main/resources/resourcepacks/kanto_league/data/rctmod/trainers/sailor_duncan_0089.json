@@ -1,0 +1,69 @@
+{
+  "name": "Sailor Duncan",
+  "team": [
+    {
+      "species": "horsea",
+      "gender": "MALE",
+      "level": 17,
+      "nature": "bold",
+      "ability": "swiftswim",
+      "moveset": [
+        "bubble",
+        "smokescreen",
+        "leer"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "shellder",
+      "gender": "FEMALE",
+      "level": 17,
+      "nature": "mild",
+      "ability": "shellarmor",
+      "moveset": [
+        "tackle",
+        "withdraw",
+        "iciclespear",
+        "supersonic"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "tentacool",
+      "gender": "FEMALE",
+      "level": 17,
+      "nature": "calm",
+      "ability": "clearbody",
+      "moveset": [
+        "poisonsting",
+        "supersonic",
+        "constrict"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Picnicker Alicia",
+  "team": [
+    {
+      "species": "persian",
+      "gender": "FEMALE",
+      "level": 30,
+      "nature": "naive",
+      "ability": "limber",
+      "moveset": [
+        "growl",
+        "bite",
+        "payday",
+        "feintattack"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    }
+  ]
+}

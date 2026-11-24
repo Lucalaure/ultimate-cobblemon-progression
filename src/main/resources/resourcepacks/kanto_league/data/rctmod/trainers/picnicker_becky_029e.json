@@ -1,0 +1,49 @@
+{
+  "name": "Picnicker Becky",
+  "team": [
+    {
+      "species": "pikachu",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "jolly",
+      "ability": "static",
+      "moveset": [
+        "slam",
+        "thunderbolt",
+        "agility",
+        "thunder"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    },
+    {
+      "species": "raichu",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "quiet",
+      "ability": "static",
+      "moveset": [
+        "thundershock",
+        "tailwhip",
+        "quickattack",
+        "thunderbolt"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    }
+  ]
+}

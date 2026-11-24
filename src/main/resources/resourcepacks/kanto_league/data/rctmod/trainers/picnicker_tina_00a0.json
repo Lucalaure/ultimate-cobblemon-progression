@@ -1,0 +1,49 @@
+{
+  "name": "Picnicker Tina",
+  "team": [
+    {
+      "species": "bulbasaur",
+      "gender": "MALE",
+      "level": 24,
+      "nature": "timid",
+      "ability": "overgrow",
+      "moveset": [
+        "vinewhip",
+        "poisonpowder",
+        "sleeppowder",
+        "razorleaf"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "ivysaur",
+      "gender": "FEMALE",
+      "level": 24,
+      "nature": "jolly",
+      "ability": "overgrow",
+      "moveset": [
+        "vinewhip",
+        "poisonpowder",
+        "sleeppowder",
+        "razorleaf"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

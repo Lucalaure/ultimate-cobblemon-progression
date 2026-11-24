@@ -1,0 +1,49 @@
+{
+  "name": "Swimmer\u2640 Melissa",
+  "team": [
+    {
+      "species": "poliwhirl",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "impish",
+      "ability": "waterabsorb",
+      "moveset": [
+        "doubleslap",
+        "raindance",
+        "bodyslam",
+        "bellydrum"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    },
+    {
+      "species": "seaking",
+      "gender": "MALE",
+      "level": 49,
+      "nature": "docile",
+      "ability": "swiftswim",
+      "moveset": [
+        "flail",
+        "furyattack",
+        "waterfall",
+        "horndrill"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    }
+  ]
+}

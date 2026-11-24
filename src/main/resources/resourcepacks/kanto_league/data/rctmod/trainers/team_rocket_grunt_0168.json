@@ -1,0 +1,70 @@
+{
+  "name": "Team Rocket Grunt",
+  "identity": "Team Rocket Grunt (14)",
+  "team": [
+    {
+      "species": "grimer",
+      "gender": "FEMALE",
+      "level": 20,
+      "nature": "hasty",
+      "ability": "stench",
+      "moveset": [
+        "minimize",
+        "sludge",
+        "disable",
+        "harden"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "koffing",
+      "gender": "MALE",
+      "level": 20,
+      "nature": "naughty",
+      "ability": "levitate",
+      "moveset": [
+        "smog",
+        "tackle",
+        "poisongas"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "koffing",
+      "gender": "FEMALE",
+      "level": 20,
+      "nature": "hasty",
+      "ability": "levitate",
+      "moveset": [
+        "smog",
+        "tackle",
+        "poisongas"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

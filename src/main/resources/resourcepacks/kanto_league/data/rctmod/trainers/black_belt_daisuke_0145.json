@@ -1,0 +1,80 @@
+{
+  "name": "Black Belt Daisuke",
+  "team": [
+    {
+      "species": "machoke",
+      "gender": "FEMALE",
+      "level": 43,
+      "nature": "bold",
+      "ability": "guts",
+      "moveset": [
+        "foresight",
+        "revenge",
+        "vitalthrow",
+        "submission"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {},
+      "heldItem": [
+        "black_belt"
+      ]
+    },
+    {
+      "species": "machop",
+      "gender": "MALE",
+      "level": 43,
+      "nature": "careful",
+      "ability": "guts",
+      "moveset": [
+        "vitalthrow",
+        "submission",
+        "crosschop",
+        "scaryface"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {},
+      "heldItem": [
+        "black_belt"
+      ]
+    },
+    {
+      "species": "machoke",
+      "gender": "MALE",
+      "level": 43,
+      "nature": "sassy",
+      "ability": "guts",
+      "moveset": [
+        "foresight",
+        "revenge",
+        "vitalthrow",
+        "submission"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {},
+      "heldItem": [
+        "black_belt"
+      ]
+    }
+  ]
+}

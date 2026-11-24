@@ -1,0 +1,71 @@
+{
+  "name": "Hiker Brice",
+  "team": [
+    {
+      "species": "geodude",
+      "gender": "FEMALE",
+      "level": 20,
+      "nature": "naive",
+      "ability": "rockhead",
+      "moveset": [
+        "defensecurl",
+        "mudsport",
+        "rockthrow",
+        "magnitude"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "machop",
+      "gender": "MALE",
+      "level": 20,
+      "nature": "impish",
+      "ability": "guts",
+      "moveset": [
+        "leer",
+        "focusenergy",
+        "karatechop",
+        "seismictoss"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "geodude",
+      "gender": "FEMALE",
+      "level": 20,
+      "nature": "adamant",
+      "ability": "rockhead",
+      "moveset": [
+        "defensecurl",
+        "mudsport",
+        "rockthrow",
+        "magnitude"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

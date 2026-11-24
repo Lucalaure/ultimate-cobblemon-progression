@@ -1,0 +1,49 @@
+{
+  "name": "Scientist Parkker",
+  "team": [
+    {
+      "species": "grimer",
+      "gender": "MALE",
+      "level": 29,
+      "nature": "brave",
+      "ability": "stench",
+      "moveset": [
+        "disable",
+        "sludge",
+        "minimize",
+        "screech"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "electrode",
+      "gender": "GENDERLESS",
+      "level": 29,
+      "nature": "naughty",
+      "ability": "soundproof",
+      "moveset": [
+        "screech",
+        "sonicboom",
+        "spark",
+        "selfdestruct"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

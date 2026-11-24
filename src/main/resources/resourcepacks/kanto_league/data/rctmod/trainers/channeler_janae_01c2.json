@@ -1,0 +1,27 @@
+{
+  "name": "Channeler Janae",
+  "team": [
+    {
+      "species": "gastly",
+      "gender": "MALE",
+      "level": 22,
+      "nature": "lonely",
+      "ability": "levitate",
+      "moveset": [
+        "spite",
+        "curse",
+        "nightshade",
+        "confuseray"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

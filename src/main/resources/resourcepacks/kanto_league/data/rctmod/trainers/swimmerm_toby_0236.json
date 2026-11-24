@@ -1,0 +1,71 @@
+{
+  "name": "Swimmer\u2642 Toby",
+  "team": [
+    {
+      "species": "poliwhirl",
+      "gender": "FEMALE",
+      "level": 48,
+      "nature": "careful",
+      "ability": "waterabsorb",
+      "moveset": [
+        "doubleslap",
+        "raindance",
+        "bodyslam",
+        "bellydrum"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "tentacool",
+      "gender": "FEMALE",
+      "level": 48,
+      "nature": "hardy",
+      "ability": "clearbody",
+      "moveset": [
+        "bubblebeam",
+        "wrap",
+        "barrier",
+        "screech"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "tentacruel",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "jolly",
+      "ability": "clearbody",
+      "moveset": [
+        "bubblebeam",
+        "wrap",
+        "barrier",
+        "screech"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

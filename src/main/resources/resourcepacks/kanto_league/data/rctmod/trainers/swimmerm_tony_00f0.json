@@ -1,0 +1,49 @@
+{
+  "name": "Swimmer\u2642 Tony",
+  "team": [
+    {
+      "species": "horsea",
+      "gender": "FEMALE",
+      "level": 30,
+      "nature": "adamant",
+      "ability": "swiftswim",
+      "moveset": [
+        "smokescreen",
+        "leer",
+        "watergun",
+        "twister"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "horsea",
+      "gender": "MALE",
+      "level": 30,
+      "nature": "hardy",
+      "ability": "swiftswim",
+      "moveset": [
+        "smokescreen",
+        "leer",
+        "watergun",
+        "twister"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

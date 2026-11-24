@@ -1,0 +1,71 @@
+{
+  "name": "Swimmer\u2642 Reece",
+  "team": [
+    {
+      "species": "goldeen",
+      "gender": "MALE",
+      "level": 29,
+      "nature": "timid",
+      "ability": "swiftswim",
+      "moveset": [
+        "supersonic",
+        "hornattack",
+        "flail",
+        "furyattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "horsea",
+      "gender": "MALE",
+      "level": 29,
+      "nature": "mild",
+      "ability": "swiftswim",
+      "moveset": [
+        "smokescreen",
+        "leer",
+        "watergun",
+        "twister"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "staryu",
+      "gender": "GENDERLESS",
+      "level": 29,
+      "nature": "naive",
+      "ability": "illuminate",
+      "moveset": [
+        "recover",
+        "camouflage",
+        "swift",
+        "bubblebeam"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

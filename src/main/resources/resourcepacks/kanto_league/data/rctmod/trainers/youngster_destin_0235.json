@@ -1,0 +1,49 @@
+{
+  "name": "Youngster Destin",
+  "team": [
+    {
+      "species": "raticate",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "serious",
+      "ability": "runaway",
+      "moveset": [
+        "hyperfang",
+        "scaryface",
+        "pursuit",
+        "superfang"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "pidgeotto",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "careful",
+      "ability": "keeneye",
+      "moveset": [
+        "whirlwind",
+        "wingattack",
+        "featherdance",
+        "agility"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

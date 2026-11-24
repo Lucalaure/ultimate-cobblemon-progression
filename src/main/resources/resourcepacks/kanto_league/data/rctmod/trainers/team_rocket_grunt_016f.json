@@ -1,0 +1,72 @@
+{
+  "name": "Team Rocket Grunt",
+  "identity": "Team Rocket Grunt (21)",
+  "team": [
+    {
+      "species": "ekans",
+      "gender": "MALE",
+      "level": 23,
+      "nature": "modest",
+      "ability": "intimidate",
+      "moveset": [
+        "leer",
+        "poisonsting",
+        "bite",
+        "glare"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "sandshrew",
+      "gender": "FEMALE",
+      "level": 23,
+      "nature": "naive",
+      "ability": "sandveil",
+      "moveset": [
+        "defensecurl",
+        "sandattack",
+        "poisonsting",
+        "slash"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "arbok",
+      "gender": "MALE",
+      "level": 23,
+      "nature": "quiet",
+      "ability": "intimidate",
+      "moveset": [
+        "leer",
+        "poisonsting",
+        "bite",
+        "glare"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "name": "Swimmer\u2642 Luis",
+  "team": [
+    {
+      "species": "horsea",
+      "gender": "MALE",
+      "level": 16,
+      "nature": "bold",
+      "ability": "swiftswim",
+      "moveset": [
+        "bubble",
+        "smokescreen",
+        "leer"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "shellder",
+      "gender": "MALE",
+      "level": 16,
+      "nature": "brave",
+      "ability": "shellarmor",
+      "moveset": [
+        "tackle",
+        "withdraw",
+        "iciclespear",
+        "supersonic"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

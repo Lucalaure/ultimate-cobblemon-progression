@@ -1,0 +1,93 @@
+{
+  "name": "Beauty Bridget",
+  "team": [
+    {
+      "species": "oddish",
+      "gender": "MALE",
+      "level": 21,
+      "nature": "modest",
+      "ability": "chlorophyll",
+      "moveset": [
+        "sweetscent",
+        "poisonpowder",
+        "stunspore",
+        "sleeppowder"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "bellsprout",
+      "gender": "FEMALE",
+      "level": 21,
+      "nature": "lonely",
+      "ability": "chlorophyll",
+      "moveset": [
+        "wrap",
+        "sleeppowder",
+        "poisonpowder",
+        "stunspore"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "oddish",
+      "gender": "MALE",
+      "level": 21,
+      "nature": "serious",
+      "ability": "chlorophyll",
+      "moveset": [
+        "sweetscent",
+        "poisonpowder",
+        "stunspore",
+        "sleeppowder"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "bellsprout",
+      "gender": "FEMALE",
+      "level": 21,
+      "nature": "brave",
+      "ability": "chlorophyll",
+      "moveset": [
+        "wrap",
+        "sleeppowder",
+        "poisonpowder",
+        "stunspore"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

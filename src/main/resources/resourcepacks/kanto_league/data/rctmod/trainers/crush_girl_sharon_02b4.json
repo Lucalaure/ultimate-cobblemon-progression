@@ -1,0 +1,55 @@
+{
+  "name": "Crush Girl Sharon",
+  "team": [
+    {
+      "species": "primeape",
+      "gender": "FEMALE",
+      "level": 55,
+      "nature": "modest",
+      "ability": "vitalspirit",
+      "moveset": [
+        "rage",
+        "crosschop",
+        "swagger",
+        "screech"
+      ],
+      "ivs": {
+        "hp": 21,
+        "atk": 21,
+        "def": 21,
+        "spa": 21,
+        "spd": 21,
+        "spe": 21
+      },
+      "evs": {},
+      "heldItem": [
+        "black_belt"
+      ]
+    },
+    {
+      "species": "primeape",
+      "gender": "FEMALE",
+      "level": 55,
+      "nature": "sassy",
+      "ability": "vitalspirit",
+      "moveset": [
+        "rage",
+        "crosschop",
+        "swagger",
+        "screech"
+      ],
+      "ivs": {
+        "hp": 21,
+        "atk": 21,
+        "def": 21,
+        "spa": 21,
+        "spd": 21,
+        "spe": 21
+      },
+      "evs": {},
+      "heldItem": [
+        "black_belt"
+      ]
+    }
+  ]
+}

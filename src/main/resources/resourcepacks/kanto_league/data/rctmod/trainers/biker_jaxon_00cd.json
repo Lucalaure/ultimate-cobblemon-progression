@@ -1,0 +1,49 @@
+{
+  "name": "Biker Jaxon",
+  "team": [
+    {
+      "species": "weezing",
+      "gender": "MALE",
+      "level": 29,
+      "nature": "hasty",
+      "ability": "levitate",
+      "moveset": [
+        "sludge",
+        "smokescreen",
+        "smog",
+        "tackle"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "muk",
+      "gender": "MALE",
+      "level": 29,
+      "nature": "bold",
+      "ability": "stench",
+      "moveset": [
+        "screech",
+        "minimize",
+        "sludge",
+        "disable"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

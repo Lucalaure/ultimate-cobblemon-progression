@@ -1,0 +1,93 @@
+{
+  "name": "Swimmer\u2642 Darrin",
+  "team": [
+    {
+      "species": "horsea",
+      "gender": "MALE",
+      "level": 28,
+      "nature": "adamant",
+      "ability": "swiftswim",
+      "moveset": [
+        "bubble",
+        "smokescreen",
+        "leer",
+        "watergun"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "horsea",
+      "gender": "MALE",
+      "level": 28,
+      "nature": "adamant",
+      "ability": "swiftswim",
+      "moveset": [
+        "bubble",
+        "smokescreen",
+        "leer",
+        "watergun"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "seadra",
+      "gender": "FEMALE",
+      "level": 28,
+      "nature": "calm",
+      "ability": "poisonpoint",
+      "moveset": [
+        "bubble",
+        "smokescreen",
+        "leer",
+        "watergun"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "horsea",
+      "gender": "MALE",
+      "level": 28,
+      "nature": "adamant",
+      "ability": "swiftswim",
+      "moveset": [
+        "bubble",
+        "smokescreen",
+        "leer",
+        "watergun"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

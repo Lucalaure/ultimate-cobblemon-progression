@@ -1,0 +1,71 @@
+{
+  "name": "Picnicker Marcy",
+  "team": [
+    {
+      "species": "paras",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "relaxed",
+      "ability": "effectspore",
+      "moveset": [
+        "spore",
+        "slash",
+        "growth",
+        "gigadrain"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "paras",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "mild",
+      "ability": "effectspore",
+      "moveset": [
+        "spore",
+        "slash",
+        "growth",
+        "gigadrain"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "parasect",
+      "gender": "MALE",
+      "level": 49,
+      "nature": "calm",
+      "ability": "effectspore",
+      "moveset": [
+        "leechlife",
+        "spore",
+        "slash",
+        "growth"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

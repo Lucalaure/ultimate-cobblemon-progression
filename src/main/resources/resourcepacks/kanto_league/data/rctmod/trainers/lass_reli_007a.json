@@ -1,0 +1,49 @@
+{
+  "name": "Lass Reli",
+  "team": [
+    {
+      "species": "nidoranm",
+      "gender": "MALE",
+      "level": 16,
+      "nature": "calm",
+      "ability": "poisonpoint",
+      "moveset": [
+        "leer",
+        "peck",
+        "focusenergy",
+        "doublekick"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "nidoranf",
+      "gender": "FEMALE",
+      "level": 16,
+      "nature": "calm",
+      "ability": "poisonpoint",
+      "moveset": [
+        "growl",
+        "scratch",
+        "tailwhip",
+        "doublekick"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

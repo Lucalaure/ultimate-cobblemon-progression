@@ -1,0 +1,49 @@
+{
+  "name": "Biker Goon",
+  "team": [
+    {
+      "species": "koffing",
+      "gender": "MALE",
+      "level": 37,
+      "nature": "brave",
+      "ability": "levitate",
+      "moveset": [
+        "haze",
+        "smokescreen",
+        "sludge",
+        "tackle"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "grimer",
+      "gender": "MALE",
+      "level": 37,
+      "nature": "serious",
+      "ability": "stench",
+      "moveset": [
+        "acidarmor",
+        "screech",
+        "minimize",
+        "sludge"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "name": "Swimmer\u2640 Maria",
+  "team": [
+    {
+      "species": "seadra",
+      "gender": "FEMALE",
+      "level": 37,
+      "nature": "gentle",
+      "ability": "poisonpoint",
+      "moveset": [
+        "smokescreen",
+        "leer",
+        "watergun",
+        "twister"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "seadra",
+      "gender": "MALE",
+      "level": 37,
+      "nature": "gentle",
+      "ability": "poisonpoint",
+      "moveset": [
+        "smokescreen",
+        "leer",
+        "watergun",
+        "twister"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

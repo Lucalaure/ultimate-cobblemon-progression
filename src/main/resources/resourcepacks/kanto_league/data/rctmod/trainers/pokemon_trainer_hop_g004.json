@@ -10,6 +10,7 @@
       "moveset": [
         "takedown",
         "doublekick",
+        "doubleedge",
         "headbutt"
       ],
       "ivs": {},
@@ -39,7 +40,8 @@
       "moveset": [
         "snipeshot",
         "suckerpunch",
-        "liquidation"
+        "liquidation",
+        "uturn"
       ],
       "ivs": {},
       "evs": {}

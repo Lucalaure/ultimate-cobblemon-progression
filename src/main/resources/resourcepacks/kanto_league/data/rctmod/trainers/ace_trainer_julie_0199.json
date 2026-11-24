@@ -1,0 +1,130 @@
+{
+  "name": "Ace Trainer Julie",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 4
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "persian",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "timid",
+      "ability": "limber",
+      "moveset": [
+        "furyswipes",
+        "bite",
+        "screech",
+        "feintattack"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "ninetales",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "naughty",
+      "ability": "flashfire",
+      "moveset": [
+        "flamethrower",
+        "willowisp",
+        "confuseray",
+        "grudge"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "rapidash",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "naive",
+      "ability": "runaway",
+      "moveset": [
+        "furyattack",
+        "firespin",
+        "takedown",
+        "agility"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "pikachu",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "impish",
+      "ability": "static",
+      "moveset": [
+        "thunderbolt",
+        "thunderwave",
+        "doubleteam",
+        "quickattack"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    },
+    {
+      "species": "raichu",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "modest",
+      "ability": "static",
+      "moveset": [
+        "thunder",
+        "thunderwave",
+        "slam",
+        "doubleteam"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "evs": {}
+    }
+  ]
+}

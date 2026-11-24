@@ -1,0 +1,94 @@
+{
+  "name": "Team Rocket Grunt",
+  "identity": "Team Rocket Grunt (48)",
+  "team": [
+    {
+      "species": "rattata",
+      "gender": "MALE",
+      "level": 35,
+      "nature": "lax",
+      "ability": "runaway",
+      "moveset": [
+        "hyperfang",
+        "focusenergy",
+        "pursuit",
+        "superfang"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "raticate",
+      "gender": "MALE",
+      "level": 35,
+      "nature": "bold",
+      "ability": "runaway",
+      "moveset": [
+        "quickattack",
+        "hyperfang",
+        "scaryface",
+        "pursuit"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "sandshrew",
+      "gender": "MALE",
+      "level": 35,
+      "nature": "modest",
+      "ability": "sandveil",
+      "moveset": [
+        "sandattack",
+        "poisonsting",
+        "slash",
+        "swift"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "sandslash",
+      "gender": "MALE",
+      "level": 35,
+      "nature": "rash",
+      "ability": "sandveil",
+      "moveset": [
+        "sandattack",
+        "poisonsting",
+        "slash",
+        "swift"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Gentleman Tucker",
+  "team": [
+    {
+      "species": "pikachu",
+      "gender": "MALE",
+      "level": 23,
+      "nature": "bashful",
+      "ability": "static",
+      "moveset": [
+        "thunderwave",
+        "quickattack",
+        "doubleteam",
+        "slam"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

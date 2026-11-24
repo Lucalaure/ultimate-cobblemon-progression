@@ -1,0 +1,71 @@
+{
+  "name": "Lass Crissy",
+  "team": [
+    {
+      "species": "paras",
+      "gender": "FEMALE",
+      "level": 31,
+      "nature": "gentle",
+      "ability": "effectspore",
+      "moveset": [
+        "poisonpowder",
+        "leechlife",
+        "spore",
+        "slash"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "paras",
+      "gender": "MALE",
+      "level": 31,
+      "nature": "bold",
+      "ability": "effectspore",
+      "moveset": [
+        "poisonpowder",
+        "leechlife",
+        "spore",
+        "slash"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "parasect",
+      "gender": "FEMALE",
+      "level": 31,
+      "nature": "careful",
+      "ability": "effectspore",
+      "moveset": [
+        "stunspore",
+        "poisonpowder",
+        "leechlife",
+        "spore"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "name": "Swimmer\u2642 Douglas",
+  "team": [
+    {
+      "species": "horsea",
+      "gender": "FEMALE",
+      "level": 27,
+      "nature": "naive",
+      "ability": "swiftswim",
+      "moveset": [
+        "bubble",
+        "smokescreen",
+        "leer",
+        "watergun"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "tentacool",
+      "gender": "FEMALE",
+      "level": 27,
+      "nature": "impish",
+      "ability": "clearbody",
+      "moveset": [
+        "supersonic",
+        "constrict",
+        "acid",
+        "bubblebeam"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "tentacool",
+      "gender": "FEMALE",
+      "level": 27,
+      "nature": "mild",
+      "ability": "clearbody",
+      "moveset": [
+        "supersonic",
+        "constrict",
+        "acid",
+        "bubblebeam"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "goldeen",
+      "gender": "FEMALE",
+      "level": 27,
+      "nature": "serious",
+      "ability": "swiftswim",
+      "moveset": [
+        "watersport",
+        "supersonic",
+        "hornattack",
+        "flail"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

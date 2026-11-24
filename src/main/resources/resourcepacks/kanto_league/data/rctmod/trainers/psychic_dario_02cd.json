@@ -1,0 +1,27 @@
+{
+  "name": "Psychic Dario",
+  "team": [
+    {
+      "species": "girafarig",
+      "gender": "FEMALE",
+      "level": 56,
+      "nature": "lonely",
+      "ability": "innerfocus",
+      "moveset": [
+        "crunch",
+        "psybeam",
+        "odorsleuth",
+        "agility"
+      ],
+      "ivs": {
+        "hp": 27,
+        "atk": 27,
+        "def": 27,
+        "spa": 27,
+        "spd": 27,
+        "spe": 27
+      },
+      "evs": {}
+    }
+  ]
+}

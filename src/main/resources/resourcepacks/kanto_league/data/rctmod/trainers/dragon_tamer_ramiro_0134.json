@@ -1,0 +1,36 @@
+{
+  "name": "Bird Keeper Ramiro",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 4
+  },
+  "team": [
+    {
+      "species": "dodrio",
+      "gender": "FEMALE",
+      "level": 34,
+      "nature": "serious",
+      "ability": "runaway",
+      "moveset": [
+        "pursuit",
+        "furyattack",
+        "triattack",
+        "rage"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

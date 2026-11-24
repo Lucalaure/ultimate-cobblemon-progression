@@ -1,0 +1,50 @@
+{
+  "name": "Young Couple Gia & Jes",
+  "battleFormat": "GEN_9_DOUBLES",
+  "team": [
+    {
+      "species": "nidorina",
+      "gender": "FEMALE",
+      "level": 30,
+      "nature": "hardy",
+      "ability": "poisonpoint",
+      "moveset": [
+        "doublekick",
+        "poisonsting",
+        "bite",
+        "helpinghand"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    },
+    {
+      "species": "nidorino",
+      "gender": "MALE",
+      "level": 30,
+      "nature": "gentle",
+      "ability": "poisonpoint",
+      "moveset": [
+        "doublekick",
+        "poisonsting",
+        "hornattack",
+        "helpinghand"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    }
+  ]
+}

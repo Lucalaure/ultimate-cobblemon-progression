@@ -1,0 +1,50 @@
+{
+  "name": "Sis And Bro Ava & Geb",
+  "battleFormat": "GEN_9_DOUBLES",
+  "team": [
+    {
+      "species": "poliwhirl",
+      "gender": "MALE",
+      "level": 50,
+      "nature": "lonely",
+      "ability": "waterabsorb",
+      "moveset": [
+        "doubleslap",
+        "raindance",
+        "bodyslam",
+        "bellydrum"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "starmie",
+      "gender": "GENDERLESS",
+      "level": 50,
+      "nature": "impish",
+      "ability": "illuminate",
+      "moveset": [
+        "rapidspin",
+        "recover",
+        "swift",
+        "confuseray"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

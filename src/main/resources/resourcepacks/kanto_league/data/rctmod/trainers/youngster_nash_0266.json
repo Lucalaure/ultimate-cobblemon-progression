@@ -1,0 +1,71 @@
+{
+  "name": "Youngster Nash",
+  "team": [
+    {
+      "species": "weepinbell",
+      "gender": "FEMALE",
+      "level": 47,
+      "nature": "timid",
+      "ability": "chlorophyll",
+      "moveset": [
+        "stunspore",
+        "acid",
+        "sweetscent",
+        "razorleaf"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "weepinbell",
+      "gender": "MALE",
+      "level": 47,
+      "nature": "careful",
+      "ability": "chlorophyll",
+      "moveset": [
+        "stunspore",
+        "acid",
+        "sweetscent",
+        "razorleaf"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "victreebel",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "impish",
+      "ability": "chlorophyll",
+      "moveset": [
+        "vinewhip",
+        "sleeppowder",
+        "sweetscent",
+        "razorleaf"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

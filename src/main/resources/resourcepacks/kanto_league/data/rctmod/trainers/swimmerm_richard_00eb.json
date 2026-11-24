@@ -1,0 +1,49 @@
+{
+  "name": "Swimmer\u2642 Richard",
+  "team": [
+    {
+      "species": "tentacool",
+      "gender": "MALE",
+      "level": 30,
+      "nature": "adamant",
+      "ability": "clearbody",
+      "moveset": [
+        "constrict",
+        "acid",
+        "bubblebeam",
+        "wrap"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "shellder",
+      "gender": "MALE",
+      "level": 30,
+      "nature": "sassy",
+      "ability": "shellarmor",
+      "moveset": [
+        "iciclespear",
+        "supersonic",
+        "aurorabeam",
+        "protect"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

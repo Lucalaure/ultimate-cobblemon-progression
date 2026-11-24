@@ -9,6 +9,7 @@
       "ability": "plus",
       "moveset": [
         "shiftgear",
+        "lockon",
         "geargrind",
         "screech"
       ],

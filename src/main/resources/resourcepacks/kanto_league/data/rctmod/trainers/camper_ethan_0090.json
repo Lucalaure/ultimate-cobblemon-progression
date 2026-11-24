@@ -1,0 +1,27 @@
+{
+  "name": "Camper Ethan",
+  "team": [
+    {
+      "species": "mankey",
+      "gender": "MALE",
+      "level": 18,
+      "nature": "lax",
+      "ability": "vitalspirit",
+      "moveset": [
+        "leer",
+        "lowkick",
+        "karatechop",
+        "furyswipes"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

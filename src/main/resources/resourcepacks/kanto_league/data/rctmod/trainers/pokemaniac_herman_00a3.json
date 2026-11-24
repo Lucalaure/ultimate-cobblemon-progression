@@ -1,0 +1,49 @@
+{
+  "name": "Pok\u00e9maniac Herman",
+  "team": [
+    {
+      "species": "cubone",
+      "gender": "MALE",
+      "level": 20,
+      "nature": "gentle",
+      "ability": "rockhead",
+      "moveset": [
+        "tailwhip",
+        "boneclub",
+        "headbutt",
+        "leer"
+      ],
+      "ivs": {
+        "hp": 4,
+        "atk": 4,
+        "def": 4,
+        "spa": 4,
+        "spd": 4,
+        "spe": 4
+      },
+      "evs": {}
+    },
+    {
+      "species": "slowpoke",
+      "gender": "FEMALE",
+      "level": 20,
+      "nature": "quiet",
+      "ability": "oblivious",
+      "moveset": [
+        "tackle",
+        "growl",
+        "watergun",
+        "confusion"
+      ],
+      "ivs": {
+        "hp": 4,
+        "atk": 4,
+        "def": 4,
+        "spa": 4,
+        "spd": 4,
+        "spe": 4
+      },
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "name": "Crush Girl Sharon",
+  "team": [
+    {
+      "species": "mankey",
+      "gender": "FEMALE",
+      "level": 37,
+      "nature": "calm",
+      "ability": "vitalspirit",
+      "moveset": [
+        "focusenergy",
+        "seismictoss",
+        "crosschop",
+        "swagger"
+      ],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      },
+      "evs": {},
+      "heldItem": [
+        "black_belt"
+      ]
+    },
+    {
+      "species": "primeape",
+      "gender": "FEMALE",
+      "level": 37,
+      "nature": "quiet",
+      "ability": "vitalspirit",
+      "moveset": [
+        "focusenergy",
+        "seismictoss",
+        "rage",
+        "crosschop"
+      ],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      },
+      "evs": {},
+      "heldItem": [
+        "black_belt"
+      ]
+    }
+  ]
+}

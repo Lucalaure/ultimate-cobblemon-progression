@@ -1,0 +1,50 @@
+{
+  "name": "Sis And Bro Lia & Luc",
+  "battleFormat": "GEN_9_DOUBLES",
+  "team": [
+    {
+      "species": "goldeen",
+      "gender": "MALE",
+      "level": 30,
+      "nature": "lonely",
+      "ability": "swiftswim",
+      "moveset": [
+        "supersonic",
+        "hornattack",
+        "flail",
+        "furyattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "seaking",
+      "gender": "FEMALE",
+      "level": 30,
+      "nature": "relaxed",
+      "ability": "swiftswim",
+      "moveset": [
+        "supersonic",
+        "hornattack",
+        "flail",
+        "furyattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

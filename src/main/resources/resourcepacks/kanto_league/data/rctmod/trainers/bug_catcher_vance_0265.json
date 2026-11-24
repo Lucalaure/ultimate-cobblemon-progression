@@ -1,0 +1,49 @@
+{
+  "name": "Bug Catcher Vance",
+  "team": [
+    {
+      "species": "venonat",
+      "gender": "FEMALE",
+      "level": 48,
+      "nature": "brave",
+      "ability": "compoundeyes",
+      "moveset": [
+        "stunspore",
+        "psybeam",
+        "sleeppowder",
+        "psychic"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "venomoth",
+      "gender": "FEMALE",
+      "level": 48,
+      "nature": "quirky",
+      "ability": "shielddust",
+      "moveset": [
+        "stunspore",
+        "gust",
+        "psybeam",
+        "sleeppowder"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

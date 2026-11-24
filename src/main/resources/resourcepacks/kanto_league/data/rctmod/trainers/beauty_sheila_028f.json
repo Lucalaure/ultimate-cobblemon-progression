@@ -1,0 +1,49 @@
+{
+  "name": "Beauty Sheila",
+  "team": [
+    {
+      "species": "clefairy",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "brave",
+      "ability": "cutecharm",
+      "moveset": [
+        "cosmicpower",
+        "moonlight",
+        "lightscreen",
+        "meteormash"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    },
+    {
+      "species": "persian",
+      "gender": "MALE",
+      "level": 49,
+      "nature": "bashful",
+      "ability": "limber",
+      "moveset": [
+        "feintattack",
+        "screech",
+        "furyswipes",
+        "slash"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    }
+  ]
+}

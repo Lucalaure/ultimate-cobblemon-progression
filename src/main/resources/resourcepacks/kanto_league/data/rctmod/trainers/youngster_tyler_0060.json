@@ -1,0 +1,27 @@
+{
+  "name": "Youngster Tyler",
+  "team": [
+    {
+      "species": "nidoranm",
+      "gender": "MALE",
+      "level": 21,
+      "nature": "mild",
+      "ability": "poisonpoint",
+      "moveset": [
+        "focusenergy",
+        "doublekick",
+        "poisonsting",
+        "hornattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "name": "Picnicker Nancy",
+  "team": [
+    {
+      "species": "rattata",
+      "gender": "FEMALE",
+      "level": 16,
+      "nature": "lonely",
+      "ability": "runaway",
+      "moveset": [
+        "tackle",
+        "tailwhip",
+        "quickattack",
+        "hyperfang"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "pikachu",
+      "gender": "MALE",
+      "level": 16,
+      "nature": "adamant",
+      "ability": "static",
+      "moveset": [
+        "tailwhip",
+        "thunderwave",
+        "quickattack",
+        "doubleteam"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

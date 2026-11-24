@@ -1,0 +1,115 @@
+{
+  "name": "Swimmer\u2642 Axle",
+  "team": [
+    {
+      "species": "tentacool",
+      "gender": "MALE",
+      "level": 27,
+      "nature": "docile",
+      "ability": "clearbody",
+      "moveset": [
+        "supersonic",
+        "constrict",
+        "acid",
+        "bubblebeam"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "tentacool",
+      "gender": "MALE",
+      "level": 27,
+      "nature": "naive",
+      "ability": "clearbody",
+      "moveset": [
+        "supersonic",
+        "constrict",
+        "acid",
+        "bubblebeam"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "staryu",
+      "gender": "GENDERLESS",
+      "level": 27,
+      "nature": "naughty",
+      "ability": "illuminate",
+      "moveset": [
+        "rapidspin",
+        "recover",
+        "camouflage",
+        "swift"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "horsea",
+      "gender": "FEMALE",
+      "level": 27,
+      "nature": "docile",
+      "ability": "swiftswim",
+      "moveset": [
+        "bubble",
+        "smokescreen",
+        "leer",
+        "watergun"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "tentacruel",
+      "gender": "MALE",
+      "level": 27,
+      "nature": "modest",
+      "ability": "clearbody",
+      "moveset": [
+        "supersonic",
+        "constrict",
+        "acid",
+        "bubblebeam"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

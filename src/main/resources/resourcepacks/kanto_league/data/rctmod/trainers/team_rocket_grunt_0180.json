@@ -1,0 +1,50 @@
+{
+  "name": "Team Rocket Grunt",
+  "identity": "Team Rocket Grunt (38)",
+  "team": [
+    {
+      "species": "sandshrew",
+      "gender": "FEMALE",
+      "level": 29,
+      "nature": "adamant",
+      "ability": "sandveil",
+      "moveset": [
+        "defensecurl",
+        "sandattack",
+        "poisonsting",
+        "slash"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "sandslash",
+      "gender": "FEMALE",
+      "level": 29,
+      "nature": "relaxed",
+      "ability": "sandveil",
+      "moveset": [
+        "defensecurl",
+        "sandattack",
+        "poisonsting",
+        "slash"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

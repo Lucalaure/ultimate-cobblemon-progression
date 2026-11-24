@@ -1,0 +1,71 @@
+{
+  "name": "Ruin Mamoac Benjamin",
+  "team": [
+    {
+      "species": "geodude",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "hasty",
+      "ability": "rockhead",
+      "moveset": [
+        "earthquake",
+        "rockblast",
+        "rollout",
+        "selfdestruct"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "graveler",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "rash",
+      "ability": "rockhead",
+      "moveset": [
+        "earthquake",
+        "rockblast",
+        "rockthrow",
+        "selfdestruct"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "graveler",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "lonely",
+      "ability": "rockhead",
+      "moveset": [
+        "earthquake",
+        "rockblast",
+        "rockthrow",
+        "selfdestruct"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

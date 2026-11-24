@@ -1,0 +1,27 @@
+{
+  "name": "Biker Goon",
+  "team": [
+    {
+      "species": "grimer",
+      "gender": "FEMALE",
+      "level": 38,
+      "nature": "quiet",
+      "ability": "stench",
+      "moveset": [
+        "sludge",
+        "minimize",
+        "screech",
+        "acidarmor"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

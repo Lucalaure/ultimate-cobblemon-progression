@@ -15,7 +15,13 @@ the other (REGIONS below). Kanto is FireRed's own table, as Radical Red numbers 
 Champion's last rematch); Radical Red's additions sit in the unused slots below it and are left out, like the Friendly
 Coaches, the joke trainers and its post-game cameos. Sinnoh is Brilliant Diamond / Shining Pearl's (02e7 to 05a8).
 Pokemon Unbound's come after (Borrius isn't a CJP region, so they're listed nowhere). Double battles end in m000-m00f
-instead and are placed by hand (DOUBLES). NOT_IN_GAME drops the few additions Radical Red put in FireRed's own range.
+instead and are placed by hand (DOUBLES).
+
+Inside FireRed's range, Radical Red also filled FireRed's unused slots with its own trainers: empty placeholders (the
+"Player" placeholders, nameless bug catchers) and nameless leftovers from the first games that FireRed never uses
+(TRAINER_SUPER_NERD_2 became "Ace Trainer Janny"). A Kanto id is only listed if FireRed has a named trainer with a
+team in its slot, read from scripts/data/kanto-trainers.json (FireRed's trainers, see generate-kanto-trainers.ps1,
+which then gives the listed trainers FireRed's teams). Run this script first after changing either.
 
 Each trainer is one entry: its versions (rematches at higher levels, and the copies of rival battles for each
 starter) are grouped, so the Trainer Card counts the trainer once, beaten when any version is. Every version still
@@ -42,8 +48,15 @@ $REGIONS = [ordered]@{
     kanto  = @{ from = 0x0059; to = 0x02e6 }
     sinnoh = @{ from = 0x02e7; to = 0x05a8 }
 }
-# Per region: trainers in its range that aren't from its game (Radical Red's own, in reused FireRed slots).
-$NOT_IN_GAME = @{ kanto = '^(gatekeeper|dragon_tamer|professor_oak)_' }
+# FireRed's trainer numbers that are in the game: a name and a team. Nameless slots (TRAINER_SUPER_NERD_1-3,
+# TRAINER_CHANNELER_1-8 and the like) are leftovers no map uses, and empty ones placeholders; Radical Red put its own
+# trainers in many of them. Grunts are named ("GRUNT").
+$fireRedFile = Join-Path $PSScriptRoot 'data/kanto-trainers.json'
+if (-not (Test-Path $fireRedFile)) { throw "Missing $fireRedFile (built by generate-kanto-trainers.ps1 -Pokefirered)" }
+$FIRERED_TRAINERS = New-Object System.Collections.Generic.HashSet[int]
+foreach ($t in @((Get-Content $fireRedFile -Raw | ConvertFrom-Json).trainers)) {
+    if ($t.name -and @($t.team).Count -gt 0) { [void]$FIRERED_TRAINERS.Add([int]$t.number) }
+}
 # Trainers whose id has no name of their own besides these (each one is a different battle), on top of RCT's classes.
 $NAMELESS = '_grunt$|^biker_goon$'
 # Double battles (ids ending in m0xx). Anything not listed here belongs to no region (Archer & Ariana are Radical
@@ -171,7 +184,9 @@ $skipped = [ordered]@{ 'no region' = 0; 'not in the original game' = 0; 'league 
 foreach ($id in ($trainerIds | Sort-Object)) {
     $region = Get-Region $id
     if (-not $region) { $skipped['no region']++; continue }
-    if ($NOT_IN_GAME.ContainsKey($region) -and $id -match $NOT_IN_GAME[$region]) { $skipped['not in the original game']++; continue }
+    if ($region -eq 'kanto' -and ($id -notmatch '_([0-9a-f]{4})$' -or -not $FIRERED_TRAINERS.Contains([Convert]::ToInt32($Matches[1], 16)))) {
+        $skipped['not in the original game']++; continue
+    }
     if ($league.Contains($id)) { $skipped['league trainer']++; continue }
     $mob = Get-MobData $id
     $weight = if ($null -ne $mob.spawnWeightFactor) { [double]$mob.spawnWeightFactor } else { 1.0 }

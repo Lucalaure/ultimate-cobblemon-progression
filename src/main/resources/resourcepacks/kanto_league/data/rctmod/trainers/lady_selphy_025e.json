@@ -1,0 +1,61 @@
+{
+  "name": "Lady Selphy",
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "persian",
+      "gender": "MALE",
+      "level": 49,
+      "nature": "careful",
+      "ability": "limber",
+      "moveset": [
+        "payday",
+        "bite",
+        "taunt",
+        "torment"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {},
+      "heldItem": [
+        "nugget"
+      ]
+    },
+    {
+      "species": "persian",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "bold",
+      "ability": "limber",
+      "moveset": [
+        "payday",
+        "scratch",
+        "torment",
+        "taunt"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {},
+      "heldItem": [
+        "nugget"
+      ]
+    }
+  ]
+}

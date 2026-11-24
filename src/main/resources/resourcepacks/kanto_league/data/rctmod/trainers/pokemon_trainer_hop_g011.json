@@ -10,6 +10,7 @@
       "moveset": [
         "cottonguard",
         "doublekick",
+        "doubleedge",
         "headbutt"
       ],
       "ivs": {},
@@ -82,6 +83,7 @@
       "nature": "hardy",
       "ability": "blaze",
       "moveset": [
+        "doubleedge",
         "headbutt",
         "pyroball",
         "agility"

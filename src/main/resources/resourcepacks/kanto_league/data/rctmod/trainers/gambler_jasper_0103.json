@@ -1,0 +1,49 @@
+{
+  "name": "Gambler Jasper",
+  "team": [
+    {
+      "species": "bellsprout",
+      "gender": "FEMALE",
+      "level": 18,
+      "nature": "impish",
+      "ability": "chlorophyll",
+      "moveset": [
+        "growth",
+        "wrap",
+        "sleeppowder",
+        "poisonpowder"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "oddish",
+      "gender": "FEMALE",
+      "level": 18,
+      "nature": "naive",
+      "ability": "chlorophyll",
+      "moveset": [
+        "sweetscent",
+        "poisonpowder",
+        "stunspore",
+        "sleeppowder"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

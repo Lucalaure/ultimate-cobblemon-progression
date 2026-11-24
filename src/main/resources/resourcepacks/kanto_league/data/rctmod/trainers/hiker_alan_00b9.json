@@ -1,0 +1,49 @@
+{
+  "name": "Hiker Alan",
+  "team": [
+    {
+      "species": "geodude",
+      "gender": "FEMALE",
+      "level": 21,
+      "nature": "docile",
+      "ability": "rockhead",
+      "moveset": [
+        "magnitude",
+        "rockthrow",
+        "mudsport",
+        "defensecurl"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "onix",
+      "gender": "MALE",
+      "level": 21,
+      "nature": "brave",
+      "ability": "rockhead",
+      "moveset": [
+        "harden",
+        "rockthrow",
+        "bind",
+        "screech"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

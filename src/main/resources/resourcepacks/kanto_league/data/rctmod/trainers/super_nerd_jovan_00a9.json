@@ -1,0 +1,48 @@
+{
+  "name": "Super Nerd Jovan",
+  "team": [
+    {
+      "species": "magnemite",
+      "gender": "GENDERLESS",
+      "level": 11,
+      "nature": "careful",
+      "ability": "magnetpull",
+      "moveset": [
+        "metalsound",
+        "tackle",
+        "thundershock",
+        "supersonic"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "voltorb",
+      "gender": "GENDERLESS",
+      "level": 11,
+      "nature": "docile",
+      "ability": "soundproof",
+      "moveset": [
+        "charge",
+        "tackle",
+        "screech"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

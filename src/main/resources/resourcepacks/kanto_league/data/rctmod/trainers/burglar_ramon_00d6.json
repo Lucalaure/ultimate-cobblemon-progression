@@ -1,0 +1,27 @@
+{
+  "name": "Burglar Ramon",
+  "team": [
+    {
+      "species": "ponyta",
+      "gender": "FEMALE",
+      "level": 41,
+      "nature": "naughty",
+      "ability": "runaway",
+      "moveset": [
+        "stomp",
+        "firespin",
+        "takedown",
+        "agility"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

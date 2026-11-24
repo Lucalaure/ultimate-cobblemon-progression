@@ -9,7 +9,8 @@
       "ability": "sturdy",
       "moveset": [
         "smackdown",
-        "rockblast"
+        "rockblast",
+        "mudslap"
       ],
       "ivs": {},
       "evs": {}

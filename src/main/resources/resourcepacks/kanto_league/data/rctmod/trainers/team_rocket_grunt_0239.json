@@ -1,0 +1,72 @@
+{
+  "name": "Team Rocket Grunt",
+  "identity": "Team Rocket Grunt (55)",
+  "team": [
+    {
+      "species": "ekans",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "mild",
+      "ability": "intimidate",
+      "moveset": [
+        "stockpile",
+        "swallow",
+        "spitup",
+        "haze"
+      ],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      },
+      "evs": {}
+    },
+    {
+      "species": "gloom",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "serious",
+      "ability": "chlorophyll",
+      "moveset": [
+        "sleeppowder",
+        "acid",
+        "moonlight",
+        "petaldance"
+      ],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      },
+      "evs": {}
+    },
+    {
+      "species": "gloom",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "bashful",
+      "ability": "chlorophyll",
+      "moveset": [
+        "sleeppowder",
+        "acid",
+        "moonlight",
+        "petaldance"
+      ],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      },
+      "evs": {}
+    }
+  ]
+}

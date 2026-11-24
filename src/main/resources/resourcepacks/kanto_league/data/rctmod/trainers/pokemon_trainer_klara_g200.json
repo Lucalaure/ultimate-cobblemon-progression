@@ -8,6 +8,7 @@
       "nature": "gentle",
       "ability": "battlearmor",
       "moveset": [
+        "xscissor",
         "poisonfang",
         "crunch",
         "icefang"

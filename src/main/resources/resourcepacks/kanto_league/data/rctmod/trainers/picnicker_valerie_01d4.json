@@ -1,0 +1,49 @@
+{
+  "name": "Picnicker Valerie",
+  "team": [
+    {
+      "species": "poliwag",
+      "gender": "FEMALE",
+      "level": 30,
+      "nature": "quirky",
+      "ability": "waterabsorb",
+      "moveset": [
+        "hypnosis",
+        "watergun",
+        "doubleslap",
+        "raindance"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "poliwag",
+      "gender": "FEMALE",
+      "level": 30,
+      "nature": "docile",
+      "ability": "waterabsorb",
+      "moveset": [
+        "hypnosis",
+        "watergun",
+        "doubleslap",
+        "raindance"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

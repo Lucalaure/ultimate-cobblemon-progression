@@ -1,0 +1,49 @@
+{
+  "name": "Hiker Trent",
+  "team": [
+    {
+      "species": "onix",
+      "gender": "MALE",
+      "level": 31,
+      "nature": "careful",
+      "ability": "rockhead",
+      "moveset": [
+        "rockthrow",
+        "harden",
+        "rage",
+        "dragonbreath"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    },
+    {
+      "species": "graveler",
+      "gender": "MALE",
+      "level": 31,
+      "nature": "quiet",
+      "ability": "rockhead",
+      "moveset": [
+        "rockthrow",
+        "magnitude",
+        "selfdestruct",
+        "rollout"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    }
+  ]
+}

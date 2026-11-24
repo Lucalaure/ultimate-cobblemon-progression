@@ -1,0 +1,92 @@
+{
+  "name": "Fisherman Elliot",
+  "team": [
+    {
+      "species": "poliwag",
+      "gender": "FEMALE",
+      "level": 21,
+      "nature": "quirky",
+      "ability": "waterabsorb",
+      "moveset": [
+        "bubble",
+        "hypnosis",
+        "watergun",
+        "doubleslap"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "shellder",
+      "gender": "MALE",
+      "level": 21,
+      "nature": "naive",
+      "ability": "shellarmor",
+      "moveset": [
+        "tackle",
+        "withdraw",
+        "iciclespear",
+        "supersonic"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "goldeen",
+      "gender": "MALE",
+      "level": 21,
+      "nature": "hardy",
+      "ability": "swiftswim",
+      "moveset": [
+        "tailwhip",
+        "watersport",
+        "supersonic",
+        "hornattack"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "horsea",
+      "gender": "FEMALE",
+      "level": 21,
+      "nature": "sassy",
+      "ability": "swiftswim",
+      "moveset": [
+        "bubble",
+        "smokescreen",
+        "leer"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

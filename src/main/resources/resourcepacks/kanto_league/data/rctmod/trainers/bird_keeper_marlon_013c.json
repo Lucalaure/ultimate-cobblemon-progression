@@ -1,0 +1,71 @@
+{
+  "name": "Bird Keeper Marlon",
+  "team": [
+    {
+      "species": "spearow",
+      "gender": "FEMALE",
+      "level": 28,
+      "nature": "modest",
+      "ability": "keeneye",
+      "moveset": [
+        "leer",
+        "furyattack",
+        "pursuit",
+        "aerialace"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "doduo",
+      "gender": "FEMALE",
+      "level": 28,
+      "nature": "bashful",
+      "ability": "runaway",
+      "moveset": [
+        "pursuit",
+        "furyattack",
+        "triattack",
+        "rage"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "fearow",
+      "gender": "MALE",
+      "level": 28,
+      "nature": "mild",
+      "ability": "keeneye",
+      "moveset": [
+        "growl",
+        "leer",
+        "furyattack",
+        "pursuit"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

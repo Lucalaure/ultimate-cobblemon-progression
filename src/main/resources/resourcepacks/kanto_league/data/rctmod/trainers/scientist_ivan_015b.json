@@ -1,0 +1,49 @@
+{
+  "name": "Scientist Ivan",
+  "team": [
+    {
+      "species": "magnemite",
+      "gender": "GENDERLESS",
+      "level": 34,
+      "nature": "adamant",
+      "ability": "magnetpull",
+      "moveset": [
+        "sonicboom",
+        "thunderwave",
+        "spark",
+        "lockon"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "electrode",
+      "gender": "GENDERLESS",
+      "level": 34,
+      "nature": "timid",
+      "ability": "soundproof",
+      "moveset": [
+        "sonicboom",
+        "spark",
+        "selfdestruct",
+        "rollout"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

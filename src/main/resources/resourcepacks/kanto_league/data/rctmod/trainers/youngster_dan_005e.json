@@ -1,0 +1,27 @@
+{
+  "name": "Youngster Dan",
+  "team": [
+    {
+      "species": "slowpoke",
+      "gender": "MALE",
+      "level": 17,
+      "nature": "bashful",
+      "ability": "oblivious",
+      "moveset": [
+        "tackle",
+        "growl",
+        "watergun",
+        "confusion"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

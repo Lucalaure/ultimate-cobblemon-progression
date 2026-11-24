@@ -1,0 +1,71 @@
+{
+  "name": "Swimmer\u2640 Connie",
+  "team": [
+    {
+      "species": "staryu",
+      "gender": "GENDERLESS",
+      "level": 29,
+      "nature": "hasty",
+      "ability": "illuminate",
+      "moveset": [
+        "recover",
+        "camouflage",
+        "swift",
+        "bubblebeam"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "staryu",
+      "gender": "GENDERLESS",
+      "level": 29,
+      "nature": "hasty",
+      "ability": "illuminate",
+      "moveset": [
+        "recover",
+        "camouflage",
+        "swift",
+        "bubblebeam"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "staryu",
+      "gender": "GENDERLESS",
+      "level": 29,
+      "nature": "hasty",
+      "ability": "illuminate",
+      "moveset": [
+        "recover",
+        "camouflage",
+        "swift",
+        "bubblebeam"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

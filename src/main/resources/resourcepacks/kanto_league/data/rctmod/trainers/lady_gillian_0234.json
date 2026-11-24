@@ -1,0 +1,86 @@
+{
+  "name": "Lady Gillian",
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "mareep",
+      "gender": "FEMALE",
+      "level": 47,
+      "nature": "hasty",
+      "ability": "static",
+      "moveset": [
+        "thunderwave",
+        "cottonspore",
+        "lightscreen",
+        "thunder"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {},
+      "heldItem": [
+        "stardust"
+      ]
+    },
+    {
+      "species": "mareep",
+      "gender": "FEMALE",
+      "level": 48,
+      "nature": "hasty",
+      "ability": "static",
+      "moveset": [
+        "thunderwave",
+        "cottonspore",
+        "lightscreen",
+        "thunder"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {},
+      "heldItem": [
+        "stardust"
+      ]
+    },
+    {
+      "species": "flaaffy",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "serious",
+      "ability": "static",
+      "moveset": [
+        "thunderwave",
+        "cottonspore",
+        "lightscreen",
+        "thunder"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {},
+      "heldItem": [
+        "nugget"
+      ]
+    }
+  ]
+}

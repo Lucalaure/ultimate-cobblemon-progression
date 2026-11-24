@@ -1,0 +1,49 @@
+{
+  "name": "Camper Riley",
+  "team": [
+    {
+      "species": "pinsir",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "bold",
+      "ability": "hypercutter",
+      "moveset": [
+        "brickbreak",
+        "guillotine",
+        "submission",
+        "swordsdance"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "heracross",
+      "gender": "FEMALE",
+      "level": 50,
+      "nature": "naive",
+      "ability": "swarm",
+      "moveset": [
+        "brickbreak",
+        "counter",
+        "takedown",
+        "reversal"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

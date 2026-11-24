@@ -1,0 +1,49 @@
+{
+  "name": "Hiker Lucas",
+  "team": [
+    {
+      "species": "geodude",
+      "gender": "MALE",
+      "level": 21,
+      "nature": "rash",
+      "ability": "rockhead",
+      "moveset": [
+        "magnitude",
+        "rockthrow",
+        "mudsport",
+        "defensecurl"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "graveler",
+      "gender": "FEMALE",
+      "level": 21,
+      "nature": "calm",
+      "ability": "rockhead",
+      "moveset": [
+        "magnitude",
+        "rockthrow",
+        "mudsport",
+        "defensecurl"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

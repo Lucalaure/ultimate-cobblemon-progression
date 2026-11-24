@@ -1,0 +1,93 @@
+{
+  "name": "Juggler Mason",
+  "team": [
+    {
+      "species": "electrode",
+      "gender": "GENDERLESS",
+      "level": 52,
+      "nature": "rash",
+      "ability": "soundproof",
+      "moveset": [
+        "selfdestruct",
+        "rollout",
+        "lightscreen",
+        "swift"
+      ],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      },
+      "evs": {}
+    },
+    {
+      "species": "pineco",
+      "gender": "MALE",
+      "level": 52,
+      "nature": "timid",
+      "ability": "sturdy",
+      "moveset": [
+        "bide",
+        "explosion",
+        "spikes",
+        "doubleedge"
+      ],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      },
+      "evs": {}
+    },
+    {
+      "species": "electrode",
+      "gender": "GENDERLESS",
+      "level": 52,
+      "nature": "timid",
+      "ability": "soundproof",
+      "moveset": [
+        "selfdestruct",
+        "rollout",
+        "lightscreen",
+        "swift"
+      ],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      },
+      "evs": {}
+    },
+    {
+      "species": "pineco",
+      "gender": "MALE",
+      "level": 52,
+      "nature": "relaxed",
+      "ability": "sturdy",
+      "moveset": [
+        "bide",
+        "explosion",
+        "spikes",
+        "doubleedge"
+      ],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      },
+      "evs": {}
+    }
+  ]
+}

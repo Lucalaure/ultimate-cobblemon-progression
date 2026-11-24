@@ -10,6 +10,7 @@
       "moveset": [
         "takedown",
         "doublekick",
+        "doubleedge",
         "headbutt"
       ],
       "ivs": {},

@@ -1,0 +1,55 @@
+{
+  "name": "Crush Girl Tanya",
+  "team": [
+    {
+      "species": "hitmonlee",
+      "gender": "MALE",
+      "level": 50,
+      "nature": "rash",
+      "ability": "limber",
+      "moveset": [
+        "mindreader",
+        "foresight",
+        "endure",
+        "megakick"
+      ],
+      "ivs": {
+        "hp": 16,
+        "atk": 16,
+        "def": 16,
+        "spa": 16,
+        "spd": 16,
+        "spe": 16
+      },
+      "evs": {},
+      "heldItem": [
+        "black_belt"
+      ]
+    },
+    {
+      "species": "hitmonchan",
+      "gender": "MALE",
+      "level": 50,
+      "nature": "hasty",
+      "ability": "keeneye",
+      "moveset": [
+        "skyuppercut",
+        "megapunch",
+        "detect",
+        "counter"
+      ],
+      "ivs": {
+        "hp": 16,
+        "atk": 16,
+        "def": 16,
+        "spa": 16,
+        "spd": 16,
+        "spe": 16
+      },
+      "evs": {},
+      "heldItem": [
+        "black_belt"
+      ]
+    }
+  ]
+}

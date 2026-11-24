@@ -1,0 +1,93 @@
+{
+  "name": "Juggler Kirk",
+  "team": [
+    {
+      "species": "drowzee",
+      "gender": "FEMALE",
+      "level": 31,
+      "nature": "sassy",
+      "ability": "insomnia",
+      "moveset": [
+        "headbutt",
+        "poisongas",
+        "meditate",
+        "psychic"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "drowzee",
+      "gender": "MALE",
+      "level": 31,
+      "nature": "naughty",
+      "ability": "insomnia",
+      "moveset": [
+        "headbutt",
+        "poisongas",
+        "meditate",
+        "psychic"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "kadabra",
+      "gender": "MALE",
+      "level": 31,
+      "nature": "sassy",
+      "ability": "synchronize",
+      "moveset": [
+        "psybeam",
+        "reflect",
+        "recover",
+        "futuresight"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "drowzee",
+      "gender": "FEMALE",
+      "level": 31,
+      "nature": "gentle",
+      "ability": "insomnia",
+      "moveset": [
+        "headbutt",
+        "poisongas",
+        "meditate",
+        "psychic"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

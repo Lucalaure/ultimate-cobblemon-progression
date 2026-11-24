@@ -1,0 +1,71 @@
+{
+  "name": "Engineer Bernie",
+  "team": [
+    {
+      "species": "magneton",
+      "gender": "GENDERLESS",
+      "level": 28,
+      "nature": "gentle",
+      "ability": "magnetpull",
+      "moveset": [
+        "supersonic",
+        "sonicboom",
+        "thunderwave",
+        "spark"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    },
+    {
+      "species": "magneton",
+      "gender": "GENDERLESS",
+      "level": 28,
+      "nature": "adamant",
+      "ability": "magnetpull",
+      "moveset": [
+        "supersonic",
+        "sonicboom",
+        "thunderwave",
+        "spark"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    },
+    {
+      "species": "magneton",
+      "gender": "GENDERLESS",
+      "level": 28,
+      "nature": "timid",
+      "ability": "magnetpull",
+      "moveset": [
+        "supersonic",
+        "sonicboom",
+        "thunderwave",
+        "spark"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    }
+  ]
+}

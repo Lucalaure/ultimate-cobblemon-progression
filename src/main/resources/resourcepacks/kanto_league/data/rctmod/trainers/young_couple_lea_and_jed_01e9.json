@@ -1,0 +1,50 @@
+{
+  "name": "Young Couple Lea & Jed",
+  "battleFormat": "GEN_9_DOUBLES",
+  "team": [
+    {
+      "species": "rapidash",
+      "gender": "FEMALE",
+      "level": 29,
+      "nature": "calm",
+      "ability": "runaway",
+      "moveset": [
+        "tailwhip",
+        "ember",
+        "stomp",
+        "firespin"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "ninetales",
+      "gender": "FEMALE",
+      "level": 29,
+      "nature": "calm",
+      "ability": "flashfire",
+      "moveset": [
+        "ember",
+        "quickattack",
+        "confuseray",
+        "safeguard"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

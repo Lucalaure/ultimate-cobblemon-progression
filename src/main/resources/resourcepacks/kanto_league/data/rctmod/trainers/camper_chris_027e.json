@@ -1,0 +1,49 @@
+{
+  "name": "Camper Chris",
+  "team": [
+    {
+      "species": "growlithe",
+      "gender": "MALE",
+      "level": 29,
+      "nature": "docile",
+      "ability": "intimidate",
+      "moveset": [
+        "ember",
+        "leer",
+        "odorsleuth",
+        "takedown"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    },
+    {
+      "species": "charmeleon",
+      "gender": "FEMALE",
+      "level": 29,
+      "nature": "relaxed",
+      "ability": "blaze",
+      "moveset": [
+        "ember",
+        "metalclaw",
+        "smokescreen",
+        "scaryface"
+      ],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      },
+      "evs": {}
+    }
+  ]
+}

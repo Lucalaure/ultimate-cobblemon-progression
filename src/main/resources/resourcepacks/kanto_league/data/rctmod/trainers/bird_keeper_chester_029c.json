@@ -1,0 +1,71 @@
+{
+  "name": "Bird Keeper Chester",
+  "team": [
+    {
+      "species": "dodrio",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "bashful",
+      "ability": "runaway",
+      "moveset": [
+        "triattack",
+        "rage",
+        "uproar",
+        "drillpeck"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    },
+    {
+      "species": "dodrio",
+      "gender": "FEMALE",
+      "level": 48,
+      "nature": "bashful",
+      "ability": "runaway",
+      "moveset": [
+        "triattack",
+        "rage",
+        "uproar",
+        "drillpeck"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    },
+    {
+      "species": "dodrio",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "bashful",
+      "ability": "runaway",
+      "moveset": [
+        "triattack",
+        "rage",
+        "uproar",
+        "drillpeck"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    }
+  ]
+}

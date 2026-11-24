@@ -1,0 +1,115 @@
+{
+  "name": "Lass Megan",
+  "team": [
+    {
+      "species": "pidgeot",
+      "gender": "MALE",
+      "level": 46,
+      "nature": "naughty",
+      "ability": "keeneye",
+      "moveset": [
+        "quickattack",
+        "whirlwind",
+        "wingattack",
+        "featherdance"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    },
+    {
+      "species": "raticate",
+      "gender": "FEMALE",
+      "level": 47,
+      "nature": "jolly",
+      "ability": "runaway",
+      "moveset": [
+        "hyperfang",
+        "scaryface",
+        "pursuit",
+        "superfang"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    },
+    {
+      "species": "nidorino",
+      "gender": "MALE",
+      "level": 47,
+      "nature": "naive",
+      "ability": "poisonpoint",
+      "moveset": [
+        "hornattack",
+        "helpinghand",
+        "furyattack",
+        "flatter"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    },
+    {
+      "species": "persian",
+      "gender": "MALE",
+      "level": 47,
+      "nature": "naive",
+      "ability": "limber",
+      "moveset": [
+        "payday",
+        "feintattack",
+        "screech",
+        "furyswipes"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    },
+    {
+      "species": "raichu",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "jolly",
+      "ability": "static",
+      "moveset": [
+        "thundershock",
+        "tailwhip",
+        "quickattack",
+        "thunderbolt"
+      ],
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 10,
+        "spa": 10,
+        "spd": 10,
+        "spe": 10
+      },
+      "evs": {}
+    }
+  ]
+}

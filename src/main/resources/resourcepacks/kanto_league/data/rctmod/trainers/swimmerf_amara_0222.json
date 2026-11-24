@@ -1,0 +1,71 @@
+{
+  "name": "Swimmer\u2640 Amara",
+  "team": [
+    {
+      "species": "seel",
+      "gender": "FEMALE",
+      "level": 36,
+      "nature": "naive",
+      "ability": "thickfat",
+      "moveset": [
+        "growl",
+        "icywind",
+        "aurorabeam",
+        "rest"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "seel",
+      "gender": "FEMALE",
+      "level": 36,
+      "nature": "modest",
+      "ability": "thickfat",
+      "moveset": [
+        "growl",
+        "icywind",
+        "aurorabeam",
+        "rest"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "dewgong",
+      "gender": "FEMALE",
+      "level": 36,
+      "nature": "jolly",
+      "ability": "thickfat",
+      "moveset": [
+        "icywind",
+        "aurorabeam",
+        "rest",
+        "sheercold"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}

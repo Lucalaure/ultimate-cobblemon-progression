@@ -1,0 +1,49 @@
+{
+  "name": "Gentleman Arthur",
+  "team": [
+    {
+      "species": "nidoranm",
+      "gender": "MALE",
+      "level": 19,
+      "nature": "impish",
+      "ability": "poisonpoint",
+      "moveset": [
+        "peck",
+        "focusenergy",
+        "doublekick",
+        "poisonsting"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    },
+    {
+      "species": "nidoranf",
+      "gender": "FEMALE",
+      "level": 19,
+      "nature": "impish",
+      "ability": "poisonpoint",
+      "moveset": [
+        "scratch",
+        "tailwhip",
+        "doublekick",
+        "poisonsting"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "evs": {}
+    }
+  ]
+}
