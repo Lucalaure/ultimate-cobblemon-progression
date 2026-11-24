@@ -1,0 +1,150 @@
+{
+  "name": "Champion Leon",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:aegislash",
+      "gender": "MALE",
+      "level": 62,
+      "nature": "cobblemon:adamant",
+      "ability": "stancechange",
+      "moveset": [
+        "kingsshield",
+        "shadowball",
+        "sacredsword",
+        "flashcannon"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
+    },
+    {
+      "species": "cobblemon:dragapult",
+      "gender": "MALE",
+      "level": 62,
+      "nature": "cobblemon:adamant",
+      "ability": "clearbody",
+      "moveset": [
+        "shadowball",
+        "flamethrower",
+        "thunderbolt",
+        "dragonbreath"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
+    },
+    {
+      "species": "cobblemon:haxorus",
+      "gender": "MALE",
+      "level": 63,
+      "nature": "cobblemon:adamant",
+      "ability": "rivalry",
+      "moveset": [
+        "poisonjab",
+        "irontail",
+        "outrage",
+        "earthquake"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
+    },
+    {
+      "species": "cobblemon:seismitoad",
+      "gender": "MALE",
+      "level": 64,
+      "nature": "cobblemon:adamant",
+      "ability": "swiftswim",
+      "moveset": [
+        "toxic",
+        "drainpunch",
+        "liquidation",
+        "earthquake"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
+    },
+    {
+      "species": "cobblemon:cinderace",
+      "gender": "MALE",
+      "level": 64,
+      "nature": "cobblemon:adamant",
+      "ability": "blaze",
+      "moveset": [
+        "pyroball",
+        "feint",
+        "acrobatics",
+        "quickattack"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
+    },
+    {
+      "species": "cobblemon:charizard",
+      "gender": "MALE",
+      "level": 65,
+      "nature": "cobblemon:modest",
+      "ability": "blaze",
+      "moveset": [
+        "fireblast",
+        "airslash",
+        "solarbeam",
+        "ancientpower"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "gimmicks": {
+        "dynamax": true,
+        "gmax": true
+      }
+    }
+  ]
+}

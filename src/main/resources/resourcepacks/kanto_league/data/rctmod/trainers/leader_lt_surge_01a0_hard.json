@@ -19,7 +19,7 @@
     {
       "species": "cobblemon:voltorb",
       "gender": "GENDERLESS",
-      "level": 21,
+      "level": 24,
       "nature": "cobblemon:hasty",
       "ability": "static",
       "moveset": ["spark", "screech", "chargebeam", "selfdestruct"],
@@ -43,7 +43,7 @@
     {
       "species": "cobblemon:magnemite",
       "gender": "GENDERLESS",
-      "level": 21,
+      "level": 24,
       "nature": "cobblemon:modest",
       "ability": "sturdy",
       "moveset": ["thunderwave", "spark", "supersonic", "flashcannon"],
@@ -68,7 +68,7 @@
     {
       "species": "cobblemon:pikachu",
       "gender": "MALE",
-      "level": 20,
+      "level": 24,
       "nature": "cobblemon:hasty",
       "ability": "static",
       "moveset": ["electroball", "quickattack", "thunderwave", "irontail"],

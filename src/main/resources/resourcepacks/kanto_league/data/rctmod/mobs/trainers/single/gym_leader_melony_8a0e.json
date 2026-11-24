@@ -1,0 +1,25 @@
+{
+  "type": "leader",
+  "series": [
+    "galar"
+  ],
+  "optional": false,
+  "requiredDefeats": [
+    [
+      "gym_leader_gordie_8a06"
+    ]
+  ],
+  "maxTrainerDefeats": 1,
+  "maxTrainerWins": -1,
+  "battleCooldownTicks": 240,
+  "signatureItem": "cobblemon:never_melt_ice",
+  "spawnWeightFactor": 0,
+  "biomeTagWhitelist": [
+    "is_snowy"
+  ],
+  "biomeTagBlacklist": [
+    "is_void",
+    "is_nether",
+    "is_end"
+  ]
+}

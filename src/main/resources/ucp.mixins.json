@@ -12,7 +12,9 @@
     "JigsawPlacementMixin",
     "RctDefeatCountTriggerMixin",
     "RctHardTrainerResourcesMixin",
+    "RctLevelCapMixin",
     "RctRematchBattleMixin",
+    "RctSyncedLevelCapMixin",
     "RctTrainerAssociationMixin",
     "RctWildTrainerSpawnMixin"
   ],

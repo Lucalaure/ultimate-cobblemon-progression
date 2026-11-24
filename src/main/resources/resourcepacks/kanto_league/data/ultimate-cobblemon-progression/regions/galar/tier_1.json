@@ -1,5 +1,5 @@
 {
-  "levelCap": 15,
+  "levelCap": 20,
   "species": [
     "cobblemon:applin",
     "cobblemon:blipbug",
@@ -9,6 +9,7 @@
     "cobblemon:rolycoly",
     "cobblemon:rookidee",
     "cobblemon:snom",
-    "cobblemon:toxel"
+    "cobblemon:toxel",
+    "cobblemon:zigzagoon galarian"
   ]
 }

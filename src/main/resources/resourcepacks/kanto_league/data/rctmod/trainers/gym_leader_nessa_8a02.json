@@ -1,0 +1,87 @@
+{
+  "name": "Gym Leader Nessa",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:goldeen",
+      "gender": "FEMALE",
+      "level": 22,
+      "nature": "cobblemon:adamant",
+      "ability": "swiftswim",
+      "moveset": [
+        "waterpulse",
+        "whirlpool",
+        "hornattack",
+        "agility"
+      ],
+      "ivs": {
+        "hp": 9,
+        "atk": 9,
+        "def": 9,
+        "spa": 9,
+        "spd": 9,
+        "spe": 9
+      }
+    },
+    {
+      "species": "cobblemon:arrokuda",
+      "gender": "FEMALE",
+      "level": 23,
+      "nature": "cobblemon:adamant",
+      "ability": "swiftswim",
+      "moveset": [
+        "aquajet",
+        "bite",
+        "whirlpool",
+        "furyattack"
+      ],
+      "ivs": {
+        "hp": 9,
+        "atk": 9,
+        "def": 9,
+        "spa": 9,
+        "spd": 9,
+        "spe": 9
+      }
+    },
+    {
+      "species": "cobblemon:drednaw",
+      "gender": "FEMALE",
+      "level": 24,
+      "nature": "cobblemon:adamant",
+      "ability": "strongjaw",
+      "moveset": [
+        "razorshell",
+        "watergun",
+        "bite",
+        "headbutt"
+      ],
+      "ivs": {
+        "hp": 9,
+        "atk": 9,
+        "def": 9,
+        "spa": 9,
+        "spd": 9,
+        "spe": 9
+      },
+      "gimmicks": {
+        "dynamax": true,
+        "gmax": true
+      }
+    }
+  ]
+}

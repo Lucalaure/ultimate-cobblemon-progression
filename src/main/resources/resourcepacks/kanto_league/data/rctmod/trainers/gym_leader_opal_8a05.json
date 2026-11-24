@@ -1,0 +1,108 @@
+{
+  "name": "Gym Leader Opal",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:weezing",
+      "gender": "FEMALE",
+      "level": 36,
+      "nature": "cobblemon:adamant",
+      "ability": "levitate",
+      "moveset": [
+        "sludge",
+        "fairywind",
+        "tackle"
+      ],
+      "ivs": {
+        "hp": 18,
+        "atk": 18,
+        "def": 18,
+        "spa": 18,
+        "spd": 18,
+        "spe": 18
+      },
+      "aspects": [
+        "galarian"
+      ]
+    },
+    {
+      "species": "cobblemon:mawile",
+      "gender": "FEMALE",
+      "level": 36,
+      "nature": "cobblemon:adamant",
+      "ability": "hypercutter",
+      "moveset": [
+        "drainingkiss",
+        "crunch",
+        "irondefense",
+        "astonish"
+      ],
+      "ivs": {
+        "hp": 18,
+        "atk": 18,
+        "def": 18,
+        "spa": 18,
+        "spd": 18,
+        "spe": 18
+      }
+    },
+    {
+      "species": "cobblemon:togekiss",
+      "gender": "FEMALE",
+      "level": 37,
+      "nature": "cobblemon:modest",
+      "ability": "hustle",
+      "moveset": [
+        "airslash",
+        "drainingkiss",
+        "ancientpower"
+      ],
+      "ivs": {
+        "hp": 18,
+        "atk": 18,
+        "def": 18,
+        "spa": 18,
+        "spd": 18,
+        "spe": 18
+      }
+    },
+    {
+      "species": "cobblemon:alcremie",
+      "gender": "FEMALE",
+      "level": 38,
+      "nature": "cobblemon:modest",
+      "ability": "sweetveil",
+      "moveset": [
+        "drainingkiss",
+        "acidarmor",
+        "sweetkiss"
+      ],
+      "ivs": {
+        "hp": 18,
+        "atk": 18,
+        "def": 18,
+        "spa": 18,
+        "spd": 18,
+        "spe": 18
+      },
+      "gimmicks": {
+        "dynamax": true,
+        "gmax": true
+      }
+    }
+  ]
+}

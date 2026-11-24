@@ -5,6 +5,8 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
+import org.ppvon.ultimateCobblemonProgression.common.gym.LeagueLevelCap;
+import org.ppvon.ultimateCobblemonProgression.common.gym.RctBridge;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +32,7 @@ public final class RegionProgressTracker {
         if (!RegionRegistry.isActive()) return;
         RegionProgress now = RegionProgress.compute(player);
         RegionProgress before = CACHE.put(player.getUUID(), now);
+        LeagueLevelCap.update(player);
         if (before != null && before.size() == now.size()) {
             announce(player, before, now);
         }
@@ -42,6 +45,7 @@ public final class RegionProgressTracker {
             return;
         }
         CACHE.put(player.getUUID(), RegionProgress.compute(player));
+        LeagueLevelCap.update(player);
     }
 
     public static void refreshAllSilently(MinecraftServer server) {
@@ -79,9 +83,10 @@ public final class RegionProgressTracker {
             }
 
             if (now.isCompleted(r) && !before.isCompleted(r)) {
+                creditRctSeries(player, region);
                 player.displayClientMessage(regionTag(region)
                         .append(Component.literal("Region complete!").withStyle(ChatFormatting.GOLD, ChatFormatting.BOLD)), false);
-                if (now.isOnJourney(r)) journeyRegionCompleted = true;
+                if (now.isPlayerPick(r) && region.isLeague()) journeyRegionCompleted = true;
             }
 
             // Journey regions are announced when they're picked; this lists the ones that opened on their own.
@@ -92,17 +97,33 @@ public final class RegionProgressTracker {
             player.displayClientMessage(Component.literal("Now open: " + String.join(", ", opened) + ".")
                     .withStyle(ChatFormatting.GOLD), false);
         }
-        if (journeyRegionCompleted && now.current() < 0) {
+        if (journeyRegionCompleted) {
             if (RegionProgress.needsNextRegion(player)) {
                 player.displayClientMessage(Component.literal(
                         "Where does your journey go next? Open your Trainer Card to choose your next region.")
                         .withStyle(ChatFormatting.YELLOW), false);
-            } else {
+            } else if (now.activeLeagues().isEmpty()) {
                 player.displayClientMessage(Component.literal(
                         "You've completed every league. Congratulations, Champion!")
                         .withStyle(ChatFormatting.GOLD, ChatFormatting.BOLD), false);
+            } else {
+                // Two leagues are a pair: the next region comes once the other one is done too.
+                RegionDef other = RegionRegistry.get(now.current());
+                player.displayClientMessage(Component.literal("Keep going in " + other.title
+                        + ": you'll choose where your journey goes next once it's complete too. Until then, your level cap follows "
+                        + other.title + ".").withStyle(ChatFormatting.YELLOW), false);
             }
         }
+    }
+
+    /**
+     * A league completed outside the player's RCT series (the second of two leagues) isn't one RCT saw them complete,
+     * so CJP records it in RCT, which counts completed series towards its loot luck bonus.
+     */
+    private static void creditRctSeries(ServerPlayer player, RegionDef region) {
+        if (region.series.isEmpty() || !RctBridge.isLoaded()) return;
+        String current = RctBridge.currentSeries(player);
+        if (current != null && !current.equals(region.series.get())) RctBridge.addSeriesCompletion(player, region.series.get());
     }
 
     private static MutableComponent regionTag(RegionDef region) {

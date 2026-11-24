@@ -14,10 +14,11 @@ Run it after changing a league's trainers or adding a region. It writes, under
 
 - root.json: the "Pokemon Journey" tab.
 - <region>/...: for each league region (one with a "series"), one advancement per trainer listed in its tier files,
-  chained in order: a badge for each gym leader, one per Elite Four member, then the Champion. Each is earned by
+  chained in order: a badge for each gym leader (a gym can have two, beaten in order, like Galar's Bea and Allister),
+  one per Elite Four member, then the Champion. Each is earned by
   beating that trainer (trigger ultimate-cobblemon-progression:defeat_trainer).
-- milestones/badge_<n>.json and milestones/champion.json: hidden advancements earned by the n-th badge (or the
-  Champion) of ANY league. Regions without a series unlock their tiers with these, so they follow whichever
+- milestones/badge_<n>.json and milestones/champion.json: hidden advancements earned by beating the n-th gym (its last
+  leader) or the Champion of ANY league. Regions without a series unlock their tiers with these, so they follow whichever
   league the player is in, and adding a league only means adding its trainers here.
 
 It also rewrites the "requirements" of every region's tier files to use these advancements (a league's tier N needs
@@ -164,23 +165,29 @@ def main():
 
         parent = "journey/root"
         unlocks = {}  # tier -> advancement id that unlocks it
-        badge = 0
+        badge = 0     # badges so far (a gym with two leaders gives two)
+        slot = 0      # gyms so far: milestone n is the n-th gym of any league, whatever its number of leaders
         for t in steps:
             groups = [g if isinstance(g, list) else [g] for g in tiers[t]["trainers"]]
             last_tier = t == steps[-1]
+            if not last_tier:
+                slot += 1
             for gi, group in enumerate(groups):
                 first = group[0]
                 if last_tier and gi == len(groups) - 1:
                     path, frame = f"journey/{region_id}/champion", "challenge"
                     adv_title, desc = league["champion"], f"Defeat {trainers.name(first)} and become Champion of {title}"
                     champion_trainers += group
-                elif not last_tier and len(groups) == 1:
+                elif not last_tier:
+                    # A gym leader: each earns a badge. A gym with two leaders (Galar's Bea and Allister) is beaten
+                    # in order, and its milestone comes with the last one.
                     badge += 1
                     if badge > len(league["badges"]):
                         sys.exit(f"'{region_id}' has more gym leaders than badge names in {args.names}")
                     adv_title = league["badges"][badge - 1]
                     path, frame, desc = f"journey/{region_id}/{slug(adv_title)}", "goal", f"Defeat {trainers.name(first)}"
-                    badge_trainers.setdefault(badge, []).extend(group)
+                    if gi == len(groups) - 1:
+                        badge_trainers.setdefault(slot, []).extend(group)
                 else:
                     adv_title = trainers.name(first)
                     path, frame, desc = f"journey/{region_id}/{slug(adv_title)}", "task", f"Defeat {adv_title}"

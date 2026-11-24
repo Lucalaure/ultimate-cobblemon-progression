@@ -11,6 +11,7 @@ A Fabric side-mod for **Cobblemon** that turns the game into a region-by-region 
 - **[How CJP Works](docs/how-it-works.md)**: the full guide to regions, gyms, the Trainer Card, tiers, rarity, spawning, wild levels, the level cap, configuration, datapacks and commands.
 - **[Species by Tier and Rarity](docs/species-by-tier.md)**: every naturally spawning Pokémon, its tier, and how rare Cobblemon makes it.
 - **[Changelog](CHANGELOG.md)**
+- **[Roadmap](docs/roadmap.md)**: planned features.
 
 ---
 
@@ -18,10 +19,11 @@ A Fabric side-mod for **Cobblemon** that turns the game into a region-by-region 
 
 Required: **Cobblemon 1.8**, **Fabric API**, **Fabric Language Kotlin** and **Cardinal Components API**.
 
-For the region journey (gyms and the built-in Kanto and Sinnoh leagues), also install:
+For the region journey (gyms and the built-in Kanto, Sinnoh and Galar leagues), also install:
 
 - **[Radical Cobblemon Trainers](https://modrinth.com/mod/rctmod)** (RCT): the trainers, their teams and their battles.
 - **[CobbleFurnies](https://modrinth.com/mod/cobblefurnies)**: furniture used inside the gym buildings.
+- Optional: **[Cobblemon: Mega Showdown](https://modrinth.com/mod/cobblemon-mega-showdown)**, for Dynamax and Gigantamax. Galar's leaders then Dynamax their ace as in Sword and Shield, and every Gym Challenge block is a Power Spot, so you can Dynamax there too with a Dynamax Band.
 - Recommended, client-side: the **[RCT Trainer Textures Plus](https://modrinth.com/resourcepack/rct-trainer-textures-plus)** resource pack, for gym leaders that look like themselves.
 
 Don't install Radical Gyms & Structures alongside CJP: CJP already ships its gym buildings, and RGS would add more of them outside villages.
@@ -32,7 +34,7 @@ Without RCT, CJP still works, using its original trainer-level ladder (see [Clas
 
 ## How it plays
 
-1. **Pick where your journey starts.** Every player gets a **Trainer Card** on joining. The first time you open it, it asks which region to start in: Kanto or Sinnoh. That region opens, and you join its trainer series.
+1. **Pick where your journey starts.** Every player gets a **Trainer Card** on joining. The first time you open it, it asks which region to start in: Kanto, Sinnoh or Galar. That region opens, and you join its trainer series.
 2. **Find a gym.** New villages can have a **gym** at their centre, one at most per village. Using its **Gym Challenge** block summons your next leader into the arena; sneaking while using it lets you rematch any leader you've already beaten. One leader stands in a gym at a time.
 3. **Beat the leader to unlock the next tier.** Each badge opens more of the region's Pokémon, stronger wild levels and a higher level cap. After the eight gyms come the Elite Four and the Champion, and beating the Champion completes the region.
 4. **Choose where your journey goes next.** Once you're Champion, your Trainer Card asks which league to travel to next. Your journey continues there from its first gym, with a fresh level cap. The regions you've finished stay open: their Pokémon keep spawning, mostly at levels that fit your new team.
@@ -42,7 +44,7 @@ You can also pick one **extra region** to explore from the start, on the card's 
 
 ### The built-in leagues
 
-With RCT installed, CJP turns on a built-in datapack, **CJP Kanto & Sinnoh Leagues**: a 10-tier Kanto with its 8 gym leaders, the Elite Four and the Champion (FireRed/LeafGreen-style teams), a 10-tier Sinnoh with RCT's Brilliant Diamond/Shining Pearl leaders, Elite Four and Champion Cynthia, plus every other region from Johto to Paldea as an optional extra region that grows with either league's badges. It's an ordinary datapack, so you can turn it off, or override it with your own region data. See [Region mode](docs/how-it-works.md#9-region-mode).
+With RCT installed, CJP turns on a built-in datapack, **CJP Kanto, Sinnoh & Galar Leagues**: a 10-tier Kanto with its 8 gym leaders, the Elite Four and the Champion (FireRed/LeafGreen-style teams), a 10-tier Sinnoh with RCT's Brilliant Diamond/Shining Pearl leaders, Elite Four and Champion Cynthia, a 10-tier Galar with its 8 Gym Leaders, the Champion Cup and Champion Leon (Sword teams, Normal difficulty only for now), plus every other region from Johto to Paldea as an optional extra region that grows with any league's badges. It's an ordinary datapack, so you can turn it off, or override it with your own region data. See [Region mode](docs/how-it-works.md#9-region-mode).
 
 ---
 
@@ -96,6 +98,7 @@ Settings live in `config/ultimate-cobblemon-progression/`. Highlights from `ucp-
 - `gymVillageChance` (default `0.3`): the share of new villages whose centre is a gym. `0` turns village gyms off.
 - `giveTrainerCard` (default `true`): give every player a Trainer Card on their first join.
 - `gymDifficulty` (default `"player_choice"`): each player picks Normal or Hard gym leaders on their Trainer Card and can switch any time; `"normal"` or `"hard"` sets it for everyone. See [Gym difficulty](docs/how-it-works.md#gym-difficulty).
+- `allowTwoLeagues` (default `true`): players may pick a second league, with its own gym leaders, and work through both at once. Gyms ask which league's leader to battle, and the level cap is the average of the two (or the lower of the two, with `twoLeagueCap` set to `"lowest"`). See [Two leagues at once](docs/how-it-works.md#two-leagues-at-once).
 - `catchWholeTier` (default `false`): difficulty option, catch every Pokémon of your tier before you can face the next gym leader (your extra region also waits until its tier is caught).
 
 And from `ucp-spawn.json`:

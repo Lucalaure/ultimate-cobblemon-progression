@@ -18,6 +18,17 @@ public class CommonConfig {
      * starting region just waits at its tier, without holding the league back.
      */
     public boolean catchWholeTier = false;
+    /**
+     * Region mode: a player's second region (picked on the Trainer Card next to their home league) may also be a
+     * league with gym leaders, so they can work through two leagues side by side. Off: only a region without gyms.
+     */
+    public boolean allowTwoLeagues = true;
+    /**
+     * Two leagues at once: how the level cap follows both leagues. "average" (the default): the average of the two
+     * leagues' caps, rounded up, so it rises whichever league the player advances. "lowest": the lower of the two, so
+     * the player has to keep both leagues level, much like one combined league.
+     */
+    public String twoLeagueCap = "average";
     /** Give every player a Trainer Card on their first join. */
     public boolean giveTrainerCard = true;
 }

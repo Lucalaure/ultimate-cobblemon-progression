@@ -1,0 +1,35 @@
+{
+  "parent": "ultimate-cobblemon-progression:journey/galar/grass_badge",
+  "display": {
+    "icon": {
+      "id": "cobblemon:mystic_water"
+    },
+    "title": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.galar.water_badge.title",
+      "fallback": "Water Badge"
+    },
+    "description": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.galar.water_badge.description",
+      "fallback": "Defeat Gym Leader Nessa"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat": {
+      "trigger": "ultimate-cobblemon-progression:defeat_trainer",
+      "conditions": {
+        "trainers": [
+          "gym_leader_nessa_8a02"
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "defeat"
+    ]
+  ]
+}

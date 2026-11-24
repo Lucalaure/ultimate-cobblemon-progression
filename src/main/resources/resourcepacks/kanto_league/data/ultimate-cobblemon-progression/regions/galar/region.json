@@ -5,5 +5,7 @@
   "formAspects": [
     "galarian",
     "region-bias-galar"
-  ]
+  ],
+  "series": "galar",
+  "completedBy": "ultimate-cobblemon-progression:journey/galar/champion"
 }

@@ -19,7 +19,7 @@
     {
       "species": "meditite",
       "gender": "MALE",
-      "level": 27,
+      "level": 24,
       "nature": "naive",
       "ability": "purepower",
       "moveset": ["drainpunch", "lightscreen", "flash", "bulkup"],
@@ -41,7 +41,7 @@
     {
       "species": "machoke",
       "gender": "FEMALE",
-      "level": 27,
+      "level": 24,
       "nature": "adamant",
       "ability": "guts",
       "moveset": ["lowsweep", "knockoff", "rocktomb", "bulldoze"],
@@ -63,7 +63,7 @@
     {
       "species": "lucario",
       "gender": "FEMALE",
-      "level": 30,
+      "level": 27,
       "nature": "adamant",
       "ability": "steadfast",
       "moveset": ["drainpunch", "screech", "metalclaw", "bulkup"],

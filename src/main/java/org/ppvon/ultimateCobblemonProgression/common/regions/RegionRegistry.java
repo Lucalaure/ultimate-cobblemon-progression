@@ -1,6 +1,7 @@
 package org.ppvon.ultimateCobblemonProgression.common.regions;
 
 import org.ppvon.ultimateCobblemonProgression.UltimateCobblemonProgression;
+import org.ppvon.ultimateCobblemonProgression.config.ConfigLoader;
 
 import java.util.Collection;
 import java.util.Comparator;
@@ -114,10 +115,19 @@ public final class RegionRegistry {
     }
 
     /**
-     * Regions players may pick as their extra starting region. The first region is always open, so it's never offered,
-     * and league regions open through the journey instead.
+     * Regions players may pick as their second region: regions without gyms marked "startChoice", and, with
+     * allowTwoLeagues on, every league, so two leagues can be worked through side by side.
      */
     public static List<RegionDef> startChoices() {
-        return REGIONS.stream().skip(1).filter(r -> r.startChoice && !r.isLeague()).toList();
+        boolean leagues = ConfigLoader.ALLOW_TWO_LEAGUES.get();
+        return REGIONS.stream().filter(r -> r.isLeague() ? leagues : r.startChoice).toList();
+    }
+
+    /**
+     * Whether a player's saved second-region pick still counts: any league (even with allowTwoLeagues turned off
+     * since, so no one loses a league they're working through), or a region without gyms marked "startChoice".
+     */
+    public static boolean isSecondRegionChoice(RegionDef region) {
+        return region != null && (region.isLeague() || region.startChoice);
     }
 }

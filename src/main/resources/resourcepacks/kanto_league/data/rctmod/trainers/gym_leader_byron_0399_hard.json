@@ -19,7 +19,7 @@
     {
       "species": "cobblemon:bronzor",
       "gender": "GENDERLESS",
-      "level": 36,
+      "level": 39,
       "nature": "cobblemon:relaxed",
       "ability": "levitate",
       "moveset": ["stealthrock", "confuseray", "gyroball", "psychic"],
@@ -44,7 +44,7 @@
     {
       "species": "cobblemon:magneton",
       "gender": "GENDERLESS",
-      "level": 37,
+      "level": 39,
       "nature": "cobblemon:modest",
       "ability": "sturdy",
       "moveset": ["thunderbolt", "flashcannon", "thunderwave", "voltswitch"],
@@ -68,7 +68,7 @@
     {
       "species": "cobblemon:steelix",
       "gender": "FEMALE",
-      "level": 36,
+      "level": 39,
       "nature": "cobblemon:brave",
       "ability": "sturdy",
       "moveset": ["earthquake", "gyroball", "stealthrock", "thunderfang"],

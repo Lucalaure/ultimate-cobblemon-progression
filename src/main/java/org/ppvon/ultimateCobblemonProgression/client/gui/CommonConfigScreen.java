@@ -15,9 +15,9 @@ public final class CommonConfigScreen extends BaseConfigScreen {
     private static final int MAX_GYM_PERCENT = 95;
     private static final int GYM_PERCENT_STEP = 5;
 
-    private Checkbox chkLevelCap, chkDex, chkTrainerCard, chkGymTeamLimit, chkCatchWholeTier;
+    private Checkbox chkLevelCap, chkDex, chkTrainerCard, chkGymTeamLimit, chkCatchWholeTier, chkTwoLeagues;
     private GymChanceSlider sldGymChance;
-    private CycleButton<String> btnGymDifficulty;
+    private CycleButton<String> btnGymDifficulty, btnTwoLeagueCap;
 
     /** gymDifficulty values, in the order the button cycles through them. */
     private static final List<String> DIFFICULTIES = List.of("player_choice", "normal", "hard");
@@ -43,6 +43,12 @@ public final class CommonConfigScreen extends BaseConfigScreen {
 
         chkTrainerCard = addRenderableWidget(Checkbox.builder(Component.literal("Give Trainer Card on First Join"), this.font)
                 .selected(c.giveTrainerCard).pos(x, y).build());
+        // Same row, so the screen doesn't grow taller.
+        chkTwoLeagues = addRenderableWidget(Checkbox.builder(Component.literal("Allow Two Leagues"), this.font)
+                .selected(c.allowTwoLeagues).pos(cx + 10, y)
+                .tooltip(Tooltip.create(Component.literal(
+                        "Players may pick a second league with gym leaders as their second region, and work through both side by side.")))
+                .build());
         y += rowH + 8;
 
         chkGymTeamLimit = addRenderableWidget(Checkbox.builder(Component.literal("Gym Team Limit"), this.font)
@@ -60,6 +66,15 @@ public final class CommonConfigScreen extends BaseConfigScreen {
 
         chkCatchWholeTier = addRenderableWidget(Checkbox.builder(Component.literal("Catch Every Pokémon to Advance"), this.font)
                 .selected(c.catchWholeTier).pos(x, y).build());
+        // Same row, so the screen doesn't grow taller: the two-league level cap rule.
+        String capMode = "lowest".equalsIgnoreCase(c.twoLeagueCap) ? "lowest" : "average";
+        btnTwoLeagueCap = addRenderableWidget(CycleButton.<String>builder(v -> Component.literal(v.equals("lowest") ? "Lowest" : "Average"))
+                .withValues(List.of("average", "lowest"))
+                .withInitialValue(capMode)
+                .withTooltip(v -> Tooltip.create(Component.literal(v.equals("lowest")
+                        ? "With two leagues, the level cap is the lower of the two leagues' caps: keep both leagues level."
+                        : "With two leagues, the level cap is the average of the two leagues' caps, so it rises whichever you play.")))
+                .create(cx + 45, y, 105, 20, Component.literal("Cap")));
         addNote("Catch all of a tier's Pokémon before its next gym leader", x, y + rowH);
         y += rowH * 2;
 
@@ -88,6 +103,8 @@ public final class CommonConfigScreen extends BaseConfigScreen {
         c.gymTeamLimit = chkGymTeamLimit.selected();
         c.gymDifficulty = btnGymDifficulty.getValue();
         c.catchWholeTier = chkCatchWholeTier.selected();
+        c.allowTwoLeagues = chkTwoLeagues.selected();
+        c.twoLeagueCap = btnTwoLeagueCap.getValue();
         c.gymVillageChance = sldGymChance.percent() / 100.0;
         ConfigLoader.saveAll();
     }

@@ -1,0 +1,35 @@
+{
+  "parent": "ultimate-cobblemon-progression:journey/galar/ice_badge",
+  "display": {
+    "icon": {
+      "id": "cobblemon:black_glasses"
+    },
+    "title": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.galar.dark_badge.title",
+      "fallback": "Dark Badge"
+    },
+    "description": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.galar.dark_badge.description",
+      "fallback": "Defeat Gym Leader Piers"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat": {
+      "trigger": "ultimate-cobblemon-progression:defeat_trainer",
+      "conditions": {
+        "trainers": [
+          "gym_leader_piers_8a07"
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "defeat"
+    ]
+  ]
+}

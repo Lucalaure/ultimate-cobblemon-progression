@@ -48,6 +48,29 @@ public interface TrainerLevelComponent extends ComponentV3 {
     /** Returns whether the trainer is new to the record. */
     boolean addBeatenWildTrainer(String trainerId);
 
+    /**
+     * Region mode: the highest tier this player has reached in each region (by region id). With catchWholeTier, the
+     * catch check only holds back tiers above it, so Pokémon added to a tier later (a datapack update, new regional
+     * forms) never take away a tier the player already has. Gym badges and other requirements still apply.
+     */
+    /** -1 until the player's tier in the region was first worked out. */
+    int getReachedTier(String regionId);
+    void setReachedTier(String regionId, int tier);
+
+    /**
+     * Region mode, with a league as the player's second region: the level cap CJP gives Radical Cobblemon Trainers in
+     * place of its own (see LeagueLevelCap), or -1 to leave RCT's. Synced, so RCT's screens show it too.
+     */
+    int getLevelCapOverride();
+    void setLevelCapOverride(int cap);
+
+    /**
+     * The lowest the two-league level cap goes: the RCT cap the player had when they first worked through two leagues,
+     * so adding a league (or a region becoming one) never lowers it. -1 until then.
+     */
+    int getLevelCapFloor();
+    void setLevelCapFloor(int cap);
+
     /** Region mode: the gym difficulty this player picked ("normal" or "hard"). Empty until picked. */
     Optional<String> getGymDifficulty();
     /** Pass null to clear the choice. */

@@ -19,7 +19,7 @@
     {
       "species": "gyarados",
       "gender": "MALE",
-      "level": 27,
+      "level": 28,
       "nature": "jolly",
       "ability": "intimidate",
       "moveset": ["brine", "icefang", "crunch", "flail"],
@@ -41,7 +41,7 @@
     {
       "species": "quagsire",
       "gender": "FEMALE",
-      "level": 27,
+      "level": 28,
       "nature": "quiet",
       "ability": "damp",
       "moveset": ["raindance", "haze", "mudshot", "scald"],
@@ -65,7 +65,7 @@
     {
       "species": "floatzel",
       "gender": "MALE",
-      "level": 30,
+      "level": 31,
       "nature": "adamant",
       "ability": "swiftswim",
       "moveset": ["brine", "icefang", "bite", "aquajet"],

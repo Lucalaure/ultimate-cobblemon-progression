@@ -11,7 +11,6 @@ public final class ConfigLoader {
     // ucp-spawn.json
     public static Supplier<Boolean> DO_SPECIES_BLOCKING;
     public static Supplier<Boolean> BLOCK_UNKNOWN_SPECIES;
-    public static Supplier<Boolean> LOCK_REGIONAL_FORMS;
     public static Supplier<Boolean> BLOCK_UNLISTED_TRAINERS;
 
     public static Supplier<Boolean> DO_LEVEL_SCALING;
@@ -38,6 +37,9 @@ public final class ConfigLoader {
     public static Supplier<String> GYM_DIFFICULTY;
     public static Supplier<Boolean> CATCH_WHOLE_TIER;
     public static Supplier<Boolean> GIVE_TRAINER_CARD;
+    public static Supplier<Boolean> ALLOW_TWO_LEAGUES;
+    /** True for "lowest", false for "average" (anything else counts as "average"). */
+    public static Supplier<Boolean> TWO_LEAGUE_CAP_LOWEST;
 
     private ConfigLoader() {}
 
@@ -61,7 +63,6 @@ public final class ConfigLoader {
     private static void wireSuppliers() {
         DO_SPECIES_BLOCKING = () -> SPAWN.doSpeciesBlocking;
         BLOCK_UNKNOWN_SPECIES = () -> SPAWN.blockUnknownSpecies;
-        LOCK_REGIONAL_FORMS = () -> SPAWN.lockRegionalForms;
         BLOCK_UNLISTED_TRAINERS = () -> SPAWN.blockUnlistedTrainers;
 
         DO_LEVEL_SCALING = () -> SPAWN.doLevelScaling;
@@ -87,6 +88,8 @@ public final class ConfigLoader {
         GYM_DIFFICULTY = () -> COMMON.gymDifficulty == null ? "player_choice" : COMMON.gymDifficulty;
         CATCH_WHOLE_TIER = () -> COMMON.catchWholeTier;
         GIVE_TRAINER_CARD = () -> COMMON.giveTrainerCard;
+        ALLOW_TWO_LEAGUES = () -> COMMON.allowTwoLeagues;
+        TWO_LEAGUE_CAP_LOWEST = () -> "lowest".equalsIgnoreCase(COMMON.twoLeagueCap);
     }
 
     public static SpawnConfig spawn() { return SPAWN; }

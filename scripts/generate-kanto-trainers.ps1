@@ -204,7 +204,8 @@ foreach ($id in $ids) {
         if ($base.PSObject.Properties[$prop]) { $trainer[$prop] = $base.$prop }
     }
     if ($t.double -and $team.Count -ge 2) { $trainer.battleFormat = 'GEN_9_DOUBLES' }
-    $bag = @($t.items | Where-Object { $_ } | Group-Object | ForEach-Object { [ordered]@{ item = "cobblemon:$($_.Name)"; quantity = $_.Count } })
+    # Bag items Cobblemon doesn't have are left out, like held items.
+    $bag = @($t.items | Where-Object { $_ -and $db.items.Contains($_) } | Group-Object | ForEach-Object { [ordered]@{ item = "cobblemon:$($_.Name)"; quantity = $_.Count } })
     if ($bag.Count) { $trainer.bag = $bag }
     $trainer.team = $team.ToArray()
     Write-JsonFile (Join-Path $trainerDir "$id.json") $trainer

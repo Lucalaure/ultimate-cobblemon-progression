@@ -1,0 +1,35 @@
+{
+  "parent": "ultimate-cobblemon-progression:journey/galar/marnie",
+  "display": {
+    "icon": {
+      "id": "cobblemon:sharp_beak"
+    },
+    "title": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.galar.hop.title",
+      "fallback": "Hop"
+    },
+    "description": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.galar.hop.description",
+      "fallback": "Defeat Hop"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat": {
+      "trigger": "ultimate-cobblemon-progression:defeat_trainer",
+      "conditions": {
+        "trainers": [
+          "hop_8a0a"
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "defeat"
+    ]
+  ]
+}

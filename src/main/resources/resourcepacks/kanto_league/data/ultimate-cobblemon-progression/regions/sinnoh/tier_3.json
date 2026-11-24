@@ -1,5 +1,5 @@
 {
-  "levelCap": 30,
+  "levelCap": 27,
   "trainers": [["gym_leader_gardenia_03d6", "gym_leader_gardenia_03d6_hard"]],
   "requirements": {
     "advancements": ["ultimate-cobblemon-progression:journey/sinnoh/forest_badge"]
@@ -16,6 +16,7 @@
     "cobblemon:shieldon",
     "cobblemon:skorupi",
     "cobblemon:snover",
-    "cobblemon:staravia"
+    "cobblemon:staravia",
+    "cobblemon:growlithe hisuian"
   ]
 }

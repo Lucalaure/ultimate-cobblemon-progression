@@ -27,10 +27,7 @@
         "spd": 0,
         "spe": 0
       },
-      "evs": {},
-      "heldItem": [
-        "stardust"
-      ]
+      "evs": {}
     },
     {
       "species": "mareep",
@@ -52,10 +49,7 @@
         "spd": 0,
         "spe": 0
       },
-      "evs": {},
-      "heldItem": [
-        "stardust"
-      ]
+      "evs": {}
     },
     {
       "species": "flaaffy",
@@ -77,10 +71,7 @@
         "spd": 0,
         "spe": 0
       },
-      "evs": {},
-      "heldItem": [
-        "nugget"
-      ]
+      "evs": {}
     }
   ]
 }

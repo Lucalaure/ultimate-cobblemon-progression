@@ -1,7 +1,8 @@
 {
-  "levelCap": 43,
+  "levelCap": 42,
+  "trainers": [["gym_leader_opal_8a05"]],
   "requirements": {
-    "advancements": ["ultimate-cobblemon-progression:journey/milestones/badge_5"]
+    "advancements": ["ultimate-cobblemon-progression:journey/galar/fairy_badge"]
   },
   "species": [
     "cobblemon:appletun",
@@ -12,6 +13,10 @@
     "cobblemon:frosmoth",
     "cobblemon:grapploct",
     "cobblemon:indeedee",
-    "cobblemon:runerigus"
+    "cobblemon:runerigus",
+    "cobblemon:darmanitan galarian",
+    "cobblemon:slowbro galarian",
+    "cobblemon:slowking galarian",
+    "cobblemon:weezing galarian"
   ]
 }

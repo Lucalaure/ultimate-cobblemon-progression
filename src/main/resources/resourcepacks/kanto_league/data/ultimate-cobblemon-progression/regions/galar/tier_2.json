@@ -1,7 +1,8 @@
 {
-  "levelCap": 21,
+  "levelCap": 24,
+  "trainers": [["gym_leader_milo_8a01"]],
   "requirements": {
-    "advancements": ["ultimate-cobblemon-progression:journey/milestones/badge_1"]
+    "advancements": ["ultimate-cobblemon-progression:journey/galar/grass_badge"]
   },
   "species": [
     "cobblemon:arrokuda",
@@ -12,6 +13,8 @@
     "cobblemon:sizzlipede",
     "cobblemon:skwovet",
     "cobblemon:wooloo",
-    "cobblemon:yamper"
+    "cobblemon:yamper",
+    "cobblemon:meowth galarian",
+    "cobblemon:yamask galarian"
   ]
 }

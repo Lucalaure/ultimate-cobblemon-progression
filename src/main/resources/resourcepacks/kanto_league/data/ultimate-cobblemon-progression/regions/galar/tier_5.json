@@ -1,7 +1,8 @@
 {
-  "levelCap": 43,
+  "levelCap": 38,
+  "trainers": [["gym_leader_bea_8a04"], ["gym_leader_allister_8a0d"]],
   "requirements": {
-    "advancements": ["ultimate-cobblemon-progression:journey/milestones/badge_4"]
+    "advancements": ["ultimate-cobblemon-progression:journey/galar/ghost_badge"]
   },
   "species": [
     "cobblemon:cramorant",
@@ -12,6 +13,8 @@
     "cobblemon:morpeko",
     "cobblemon:perrserker",
     "cobblemon:stonjourner",
-    "cobblemon:thievul"
+    "cobblemon:thievul",
+    "cobblemon:mrmime galarian",
+    "cobblemon:stunfisk galarian"
   ]
 }

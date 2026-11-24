@@ -19,7 +19,7 @@
     {
       "species": "cobblemon:dusclops",
       "gender": "FEMALE",
-      "level": 54,
+      "level": 58,
       "nature": "cobblemon:impish",
       "ability": "frisk",
       "moveset": ["willowisp", "nightshade", "painsplit", "shadowsneak"],
@@ -44,7 +44,7 @@
     {
       "species": "cobblemon:haunter",
       "gender": "FEMALE",
-      "level": 54,
+      "level": 58,
       "nature": "cobblemon:timid",
       "ability": "levitate",
       "moveset": ["shadowball", "sludgebomb", "willowisp", "destinybond"],
@@ -69,7 +69,7 @@
     {
       "species": "cobblemon:crobat",
       "gender": "FEMALE",
-      "level": 54,
+      "level": 58,
       "nature": "cobblemon:jolly",
       "ability": "innerfocus",
       "moveset": ["crosspoison", "bravebird", "uturn", "roost"],
@@ -94,7 +94,7 @@
     {
       "species": "cobblemon:mismagius",
       "gender": "FEMALE",
-      "level": 54,
+      "level": 58,
       "nature": "cobblemon:timid",
       "ability": "levitate",
       "moveset": ["shadowball", "dazzlinggleam", "thunderbolt", "nastyplot"],
@@ -118,7 +118,7 @@
     {
       "species": "cobblemon:arbok",
       "gender": "FEMALE",
-      "level": 56,
+      "level": 58,
       "nature": "cobblemon:adamant",
       "ability": "intimidate",
       "moveset": ["gunkshot", "crunch", "glare", "earthquake"],

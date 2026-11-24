@@ -1,0 +1,104 @@
+{
+  "name": "Gym Leader Piers",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:scrafty",
+      "gender": "MALE",
+      "level": 44,
+      "nature": "cobblemon:adamant",
+      "ability": "shedskin",
+      "moveset": [
+        "fakeout",
+        "sandattack",
+        "brickbreak",
+        "payback"
+      ],
+      "ivs": {
+        "hp": 22,
+        "atk": 22,
+        "def": 22,
+        "spa": 22,
+        "spd": 22,
+        "spe": 22
+      }
+    },
+    {
+      "species": "cobblemon:malamar",
+      "gender": "MALE",
+      "level": 45,
+      "nature": "cobblemon:adamant",
+      "ability": "contrary",
+      "moveset": [
+        "nightslash",
+        "foulplay",
+        "psychocut",
+        "payback"
+      ],
+      "ivs": {
+        "hp": 22,
+        "atk": 22,
+        "def": 22,
+        "spa": 22,
+        "spd": 22,
+        "spe": 22
+      }
+    },
+    {
+      "species": "cobblemon:skuntank",
+      "gender": "MALE",
+      "level": 45,
+      "nature": "cobblemon:adamant",
+      "ability": "stench",
+      "moveset": [
+        "suckerpunch",
+        "screech",
+        "toxic",
+        "snarl"
+      ],
+      "ivs": {
+        "hp": 22,
+        "atk": 22,
+        "def": 22,
+        "spa": 22,
+        "spd": 22,
+        "spe": 22
+      }
+    },
+    {
+      "species": "cobblemon:obstagoon",
+      "gender": "MALE",
+      "level": 46,
+      "nature": "cobblemon:adamant",
+      "ability": "reckless",
+      "moveset": [
+        "obstruct",
+        "throatchop",
+        "counter",
+        "shadowclaw"
+      ],
+      "ivs": {
+        "hp": 22,
+        "atk": 22,
+        "def": 22,
+        "spa": 22,
+        "spd": 22,
+        "spe": 22
+      }
+    }
+  ]
+}

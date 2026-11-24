@@ -19,7 +19,7 @@
     {
       "species": "cobblemon:mrmime",
       "gender": "FEMALE",
-      "level": 59,
+      "level": 63,
       "nature": "cobblemon:timid",
       "ability": "filter",
       "moveset": ["lightscreen", "reflect", "psychic", "dazzlinggleam"],
@@ -44,7 +44,7 @@
     {
       "species": "cobblemon:girafarig",
       "gender": "MALE",
-      "level": 59,
+      "level": 63,
       "nature": "cobblemon:calm",
       "ability": "sapsipper",
       "moveset": ["nastyplot", "psychic", "thunderbolt", "shadowball"],
@@ -69,7 +69,7 @@
     {
       "species": "cobblemon:medicham",
       "gender": "MALE",
-      "level": 60,
+      "level": 63,
       "nature": "cobblemon:jolly",
       "ability": "purepower",
       "moveset": ["zenheadbutt", "highjumpkick", "icepunch", "bulletpunch"],
@@ -94,7 +94,7 @@
     {
       "species": "cobblemon:gallade",
       "gender": "MALE",
-      "level": 59,
+      "level": 63,
       "nature": "cobblemon:adamant",
       "ability": "justified",
       "moveset": ["closecombat", "psychocut", "leafblade", "swordsdance"],
@@ -118,7 +118,7 @@
     {
       "species": "cobblemon:alakazam",
       "gender": "FEMALE",
-      "level": 60,
+      "level": 63,
       "nature": "cobblemon:timid",
       "ability": "magicguard",
       "moveset": ["nastyplot", "psychic", "focusblast", "shadowball"],

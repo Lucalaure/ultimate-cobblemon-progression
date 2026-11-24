@@ -1,0 +1,35 @@
+{
+  "parent": "ultimate-cobblemon-progression:journey/galar/water_badge",
+  "display": {
+    "icon": {
+      "id": "cobblemon:charcoal_stick"
+    },
+    "title": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.galar.fire_badge.title",
+      "fallback": "Fire Badge"
+    },
+    "description": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.galar.fire_badge.description",
+      "fallback": "Defeat Gym Leader Kabu"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat": {
+      "trigger": "ultimate-cobblemon-progression:defeat_trainer",
+      "conditions": {
+        "trainers": [
+          "gym_leader_kabu_8a03"
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "defeat"
+    ]
+  ]
+}

@@ -81,6 +81,17 @@ public final class GymDifficulty {
     }
 
     /** Whether any loaded league trainer has a Hard version, i.e. whether there's a difficulty to pick at all. */
+    /** Whether any of the region's trainers has a Hard version. */
+    public static boolean availableIn(RegionDef region) {
+        if (region == null || !RctBridge.isLoaded()) return false;
+        for (TierDef tier : region.tiers.values()) {
+            for (List<String> group : tier.trainers) {
+                if (hardVersion(group) != null) return true;
+            }
+        }
+        return false;
+    }
+
     public static boolean available() {
         if (!RegionRegistry.isActive() || !RctBridge.isLoaded()) return false;
         for (RegionDef region : RegionRegistry.ordered()) {
@@ -128,7 +139,12 @@ public final class GymDifficulty {
     public static void onTrainerDefeated(ServerPlayer player, String trainerId) {
         if (!isHard(trainerId) || !RctBridge.isLoaded() || !RegionRegistry.isLeagueTrainer(trainerId)) return;
         String normal = trainerId.substring(0, trainerId.length() - HARD_SUFFIX.length());
-        if (RegionRegistry.isLeagueTrainer(normal)) RctBridge.addProgress(player, normal);
+        if (!RegionRegistry.isLeagueTrainer(normal)) return;
+        // Only in the player's RCT series: with two leagues, the other league's progress is CJP's alone.
+        RegionDef region = GymRematch.regionOf(normal);
+        String series = RctBridge.currentSeries(player);
+        if (region != null && region.series.isPresent() && series != null && !region.series.get().equals(series)) return;
+        RctBridge.addProgress(player, normal);
     }
 
     /** Sets the player's difficulty, from the Trainer Card or the command. */

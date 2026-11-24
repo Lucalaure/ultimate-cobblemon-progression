@@ -19,7 +19,7 @@
     {
       "species": "cobblemon:tangela",
       "gender": "FEMALE",
-      "level": 27,
+      "level": 29,
       "nature": "cobblemon:calm",
       "ability": "regenerator",
       "moveset": ["gigadrain", "poisonpowder", "knockoff", "ancientpower"],
@@ -44,7 +44,7 @@
     {
       "species": "cobblemon:bellossom",
       "gender": "FEMALE",
-      "level": 28,
+      "level": 29,
       "nature": "cobblemon:modest",
       "ability": "chlorophyll",
       "moveset": ["quiverdance", "gigadrain", "moonblast", "sunnyday"],

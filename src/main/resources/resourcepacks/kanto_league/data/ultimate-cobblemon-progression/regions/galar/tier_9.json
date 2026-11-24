@@ -1,7 +1,8 @@
 {
-  "levelCap": 54,
+  "levelCap": 49,
+  "trainers": [["gym_leader_raihan_8a08"]],
   "requirements": {
-    "advancements": ["ultimate-cobblemon-progression:journey/milestones/badge_8"]
+    "advancements": ["ultimate-cobblemon-progression:journey/galar/dragon_badge"]
   },
   "species": [
     "cobblemon:centiskorch",
@@ -12,6 +13,9 @@
     "cobblemon:mrrime",
     "cobblemon:obstagoon",
     "cobblemon:rillaboom",
-    "cobblemon:urshifu"
+    "cobblemon:urshifu",
+    "cobblemon:articuno galarian",
+    "cobblemon:moltres galarian",
+    "cobblemon:zapdos galarian"
   ]
 }

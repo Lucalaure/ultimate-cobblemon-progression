@@ -1,7 +1,8 @@
 {
-  "levelCap": 29,
+  "levelCap": 32,
+  "trainers": [["gym_leader_kabu_8a03"]],
   "requirements": {
-    "advancements": ["ultimate-cobblemon-progression:journey/milestones/badge_3"]
+    "advancements": ["ultimate-cobblemon-progression:journey/galar/fire_badge"]
   },
   "species": [
     "cobblemon:carkol",
@@ -12,6 +13,10 @@
     "cobblemon:morgrem",
     "cobblemon:pincurchin",
     "cobblemon:raboot",
-    "cobblemon:thwackey"
+    "cobblemon:thwackey",
+    "cobblemon:corsola galarian",
+    "cobblemon:farfetchd galarian",
+    "cobblemon:linoone galarian",
+    "cobblemon:ponyta galarian"
   ]
 }

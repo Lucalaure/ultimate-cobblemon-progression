@@ -1,0 +1,127 @@
+{
+  "name": "Hop",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:dubwool",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "cobblemon:adamant",
+      "ability": "fluffy",
+      "moveset": [
+        "cottonguard",
+        "reversal",
+        "bodyslam",
+        "zenheadbutt"
+      ],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      }
+    },
+    {
+      "species": "cobblemon:corviknight",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "cobblemon:adamant",
+      "ability": "pressure",
+      "moveset": [
+        "steelwing",
+        "drillpeck",
+        "scaryface",
+        "swagger"
+      ],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      }
+    },
+    {
+      "species": "cobblemon:pincurchin",
+      "gender": "MALE",
+      "level": 47,
+      "nature": "cobblemon:adamant",
+      "ability": "lightningrod",
+      "moveset": [
+        "thunderbolt",
+        "poisonjab",
+        "curse"
+      ],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      }
+    },
+    {
+      "species": "cobblemon:snorlax",
+      "gender": "MALE",
+      "level": 47,
+      "nature": "cobblemon:adamant",
+      "ability": "immunity",
+      "moveset": [
+        "heavyslam",
+        "highhorsepower",
+        "hammerarm"
+      ],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      }
+    },
+    {
+      "species": "cobblemon:inteleon",
+      "gender": "MALE",
+      "level": 49,
+      "nature": "cobblemon:modest",
+      "ability": "torrent",
+      "moveset": [
+        "snipeshot",
+        "mudshot",
+        "icywind",
+        "darkpulse"
+      ],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      },
+      "gimmicks": {
+        "dynamax": true,
+        "gmax": false
+      }
+    }
+  ]
+}

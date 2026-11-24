@@ -1,0 +1,107 @@
+{
+  "name": "Gym Leader Gordie",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:barbaracle",
+      "gender": "MALE",
+      "level": 40,
+      "nature": "cobblemon:adamant",
+      "ability": "toughclaws",
+      "moveset": [
+        "shellsmash",
+        "rocktomb",
+        "razorshell"
+      ],
+      "ivs": {
+        "hp": 20,
+        "atk": 20,
+        "def": 20,
+        "spa": 20,
+        "spd": 20,
+        "spe": 20
+      }
+    },
+    {
+      "species": "cobblemon:shuckle",
+      "gender": "MALE",
+      "level": 40,
+      "nature": "cobblemon:adamant",
+      "ability": "sturdy",
+      "moveset": [
+        "powersplit",
+        "stoneedge",
+        "strugglebug",
+        "rocktomb"
+      ],
+      "ivs": {
+        "hp": 20,
+        "atk": 20,
+        "def": 20,
+        "spa": 20,
+        "spd": 20,
+        "spe": 20
+      }
+    },
+    {
+      "species": "cobblemon:stonjourner",
+      "gender": "MALE",
+      "level": 41,
+      "nature": "cobblemon:adamant",
+      "ability": "powerspot",
+      "moveset": [
+        "stealthrock",
+        "rocktomb",
+        "bodyslam",
+        "wonderroom"
+      ],
+      "ivs": {
+        "hp": 20,
+        "atk": 20,
+        "def": 20,
+        "spa": 20,
+        "spd": 20,
+        "spe": 20
+      }
+    },
+    {
+      "species": "cobblemon:coalossal",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "cobblemon:adamant",
+      "ability": "steamengine",
+      "moveset": [
+        "tarshot",
+        "stealthrock",
+        "heatcrash",
+        "rocktomb"
+      ],
+      "ivs": {
+        "hp": 20,
+        "atk": 20,
+        "def": 20,
+        "spa": 20,
+        "spd": 20,
+        "spe": 20
+      },
+      "gimmicks": {
+        "dynamax": true,
+        "gmax": true
+      }
+    }
+  ]
+}

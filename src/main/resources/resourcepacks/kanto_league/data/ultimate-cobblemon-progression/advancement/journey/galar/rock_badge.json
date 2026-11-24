@@ -1,0 +1,35 @@
+{
+  "parent": "ultimate-cobblemon-progression:journey/galar/fairy_badge",
+  "display": {
+    "icon": {
+      "id": "cobblemon:hard_stone"
+    },
+    "title": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.galar.rock_badge.title",
+      "fallback": "Rock Badge"
+    },
+    "description": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.galar.rock_badge.description",
+      "fallback": "Defeat Gym Leader Gordie"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat": {
+      "trigger": "ultimate-cobblemon-progression:defeat_trainer",
+      "conditions": {
+        "trainers": [
+          "gym_leader_gordie_8a06"
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "defeat"
+    ]
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "name": "Marnie",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:liepard",
+      "gender": "FEMALE",
+      "level": 47,
+      "nature": "cobblemon:adamant",
+      "ability": "limber",
+      "moveset": [
+        "fakeout",
+        "torment",
+        "nastyplot",
+        "snarl"
+      ],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      }
+    },
+    {
+      "species": "cobblemon:toxicroak",
+      "gender": "FEMALE",
+      "level": 47,
+      "nature": "cobblemon:adamant",
+      "ability": "anticipation",
+      "moveset": [
+        "venoshock",
+        "suckerpunch",
+        "swagger",
+        "toxic"
+      ],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      }
+    },
+    {
+      "species": "cobblemon:scrafty",
+      "gender": "FEMALE",
+      "level": 47,
+      "nature": "cobblemon:adamant",
+      "ability": "shedskin",
+      "moveset": [
+        "swagger",
+        "scaryface",
+        "brickbreak",
+        "crunch"
+      ],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      }
+    },
+    {
+      "species": "cobblemon:morpeko",
+      "gender": "FEMALE",
+      "level": 48,
+      "nature": "cobblemon:adamant",
+      "ability": "hungerswitch",
+      "moveset": [
+        "bulletseed",
+        "torment",
+        "spark",
+        "bite"
+      ],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      }
+    },
+    {
+      "species": "cobblemon:grimmsnarl",
+      "gender": "MALE",
+      "level": 49,
+      "nature": "cobblemon:adamant",
+      "ability": "prankster",
+      "moveset": [
+        "spiritbreak",
+        "darkestlariat",
+        "bulkup",
+        "torment"
+      ],
+      "ivs": {
+        "hp": 28,
+        "atk": 28,
+        "def": 28,
+        "spa": 28,
+        "spd": 28,
+        "spe": 28
+      },
+      "gimmicks": {
+        "dynamax": true,
+        "gmax": true
+      }
+    }
+  ]
+}

@@ -19,7 +19,7 @@
     {
       "species": "cobblemon:dewgong",
       "gender": "FEMALE",
-      "level": 52,
+      "level": 54,
       "nature": "cobblemon:bold",
       "ability": "thickfat",
       "moveset": ["icebeam", "surf", "encore", "protect"],
@@ -44,7 +44,7 @@
     {
       "species": "cobblemon:cloyster",
       "gender": "FEMALE",
-      "level": 51,
+      "level": 54,
       "nature": "cobblemon:adamant",
       "ability": "skilllink",
       "moveset": ["shellsmash", "iciclespear", "rockblast", "spikes"],
@@ -69,7 +69,7 @@
     {
       "species": "cobblemon:slowbro",
       "gender": "FEMALE",
-      "level": 52,
+      "level": 54,
       "nature": "cobblemon:bold",
       "ability": "regenerator",
       "moveset": ["scald", "psychic", "slackoff", "thunderwave"],
@@ -94,7 +94,7 @@
     {
       "species": "cobblemon:mamoswine",
       "gender": "FEMALE",
-      "level": 53,
+      "level": 54,
       "nature": "cobblemon:jolly",
       "ability": "thickfat",
       "moveset": ["earthquake", "iciclecrash", "iceshard", "stoneedge"],

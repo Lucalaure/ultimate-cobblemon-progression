@@ -33,6 +33,11 @@ loom {
     }
 
     runs {
+        named("client") {
+            // 6 GB heap: Java's default (a quarter of a 16 GB laptop's RAM, about 4 GB) is too small with Mega
+            // Showdown and its dependencies loaded, and the game stalls in back-to-back full garbage collections.
+            vmArgs("-Xmx6G")
+        }
         create("client2") {
             client()
             name("Client 2")
@@ -68,6 +73,19 @@ repositories {
 val devServerLibs = tasks.register<Copy>("devServerLibs") {
     from(configurations.detachedConfiguration(project.dependencies.create("com.ibm.icu:icu4j:73.2")).apply { isTransitive = false })
     into(layout.buildDirectory.dir("devServerLibs"))
+}
+
+// owo-lib (needed by Mega Showdown in dev runs) bundles its libraries as nested jars (endec and its Gson, Jankson and
+// Netty modules, Jankson), which dev runs don't load from Modrinth mods. Unpack them for the dev classpath.
+val devNestedLibs = tasks.register<Copy>("devNestedLibs") {
+    val owo = configurations.detachedConfiguration(project.dependencies.create("maven.modrinth:owo-lib:7B3jQilk"))
+        .apply { isTransitive = false }
+    from({ owo.files.map { zipTree(it) } }) {
+        include("META-INF/jars/*.jar")
+        eachFile { path = name }
+        includeEmptyDirs = false
+    }
+    into(layout.buildDirectory.dir("devNestedLibs"))
 }
 
 dependencies {
@@ -108,6 +126,12 @@ dependencies {
     // would also place them outside villages. scripts/convert-rgs-gyms.py rebuilds them from RGS 0.7.
     modRuntimeOnly("maven.modrinth:cobblefurnies:54k31lEX")
     modRuntimeOnly("maven.modrinth:athena-ctm:JfyYsWKP")
+    // Cobblemon: Mega Showdown 1.4 (Dynamax and Gigantamax, for testing Galar's Dynamax leaders and the Gym Challenge
+    // block as a Power Spot), with Accessories 1.1.0-beta.54 and owo-lib 0.13.0-alpha.15.1, which it needs.
+    modRuntimeOnly("maven.modrinth:cobblemon-mega-showdown:ZyP6pGGc")
+    modRuntimeOnly("maven.modrinth:accessories:YZ9RWTNl")
+    modRuntimeOnly("maven.modrinth:owo-lib:7B3jQilk")
+    runtimeOnly(fileTree(layout.buildDirectory.dir("devNestedLibs")) { include("*.jar") }.builtBy(devNestedLibs))
     // Bundled inside Forge Config API Port, but nested jars of Modrinth mods aren't loaded in dev, so add them directly.
     runtimeOnly("com.electronwill.night-config:core:3.8.0")
     runtimeOnly("com.electronwill.night-config:toml:3.8.0")

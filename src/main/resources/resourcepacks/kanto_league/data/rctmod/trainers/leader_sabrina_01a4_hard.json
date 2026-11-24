@@ -19,7 +19,7 @@
     {
       "species": "cobblemon:mrmime",
       "gender": "MALE",
-      "level": 37,
+      "level": 43,
       "nature": "cobblemon:timid",
       "ability": "filter",
       "moveset": ["reflect", "lightscreen", "psychic", "dazzlinggleam"],
@@ -44,7 +44,7 @@
     {
       "species": "cobblemon:hypno",
       "gender": "MALE",
-      "level": 38,
+      "level": 43,
       "nature": "cobblemon:calm",
       "ability": "insomnia",
       "moveset": ["psychic", "hypnosis", "nastyplot", "dazzlinggleam"],
@@ -69,7 +69,7 @@
     {
       "species": "cobblemon:slowbro",
       "gender": "MALE",
-      "level": 38,
+      "level": 43,
       "nature": "cobblemon:bold",
       "ability": "regenerator",
       "moveset": ["scald", "psychic", "slackoff", "thunderwave"],
@@ -94,7 +94,7 @@
     {
       "species": "cobblemon:kadabra",
       "gender": "MALE",
-      "level": 38,
+      "level": 43,
       "nature": "cobblemon:timid",
       "ability": "magicguard",
       "moveset": ["psychic", "shadowball", "recover", "calmmind"],

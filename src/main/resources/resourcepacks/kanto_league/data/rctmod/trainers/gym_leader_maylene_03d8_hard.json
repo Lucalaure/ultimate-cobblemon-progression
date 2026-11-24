@@ -94,7 +94,7 @@
     {
       "species": "cobblemon:lucario",
       "gender": "FEMALE",
-      "level": 30,
+      "level": 27,
       "nature": "cobblemon:adamant",
       "ability": "justified",
       "moveset": ["drainpunch", "bulletpunch", "crunch", "swordsdance"],

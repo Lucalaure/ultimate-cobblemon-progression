@@ -19,7 +19,7 @@
     {
       "species": "cobblemon:staryu",
       "gender": "GENDERLESS",
-      "level": 18,
+      "level": 21,
       "nature": "cobblemon:timid",
       "ability": "naturalcure",
       "moveset": ["waterpulse", "rapidspin", "swift", "thunderwave"],
@@ -44,7 +44,7 @@
     {
       "species": "cobblemon:psyduck",
       "gender": "FEMALE",
-      "level": 18,
+      "level": 21,
       "nature": "cobblemon:modest",
       "ability": "damp",
       "moveset": ["confusion", "disable", "waterpulse", "scratch"],
@@ -68,7 +68,7 @@
     {
       "species": "cobblemon:horsea",
       "gender": "FEMALE",
-      "level": 20,
+      "level": 21,
       "nature": "cobblemon:modest",
       "ability": "sniper",
       "moveset": ["waterpulse", "smokescreen", "focusenergy", "dragonbreath"],

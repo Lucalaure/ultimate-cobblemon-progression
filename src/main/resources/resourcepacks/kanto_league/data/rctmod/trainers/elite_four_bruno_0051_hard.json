@@ -19,7 +19,7 @@
     {
       "species": "cobblemon:hitmontop",
       "gender": "MALE",
-      "level": 53,
+      "level": 56,
       "nature": "cobblemon:impish",
       "ability": "intimidate",
       "moveset": ["rapidspin", "fakeout", "closecombat", "suckerpunch"],
@@ -44,7 +44,7 @@
     {
       "species": "cobblemon:steelix",
       "gender": "MALE",
-      "level": 54,
+      "level": 56,
       "nature": "cobblemon:impish",
       "ability": "sturdy",
       "moveset": ["stealthrock", "earthquake", "ironhead", "roar"],
@@ -69,7 +69,7 @@
     {
       "species": "cobblemon:hitmonchan",
       "gender": "MALE",
-      "level": 53,
+      "level": 56,
       "nature": "cobblemon:adamant",
       "ability": "ironfist",
       "moveset": ["drainpunch", "icepunch", "thunderpunch", "machpunch"],
@@ -94,7 +94,7 @@
     {
       "species": "cobblemon:hitmonlee",
       "gender": "MALE",
-      "level": 53,
+      "level": 56,
       "nature": "cobblemon:jolly",
       "ability": "reckless",
       "moveset": ["highjumpkick", "knockoff", "machpunch", "stoneedge"],
@@ -119,7 +119,7 @@
     {
       "species": "cobblemon:golem",
       "gender": "MALE",
-      "level": 54,
+      "level": 56,
       "nature": "cobblemon:adamant",
       "ability": "sturdy",
       "moveset": ["earthquake", "stoneedge", "explosion", "suckerpunch"],

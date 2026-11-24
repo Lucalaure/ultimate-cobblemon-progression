@@ -58,6 +58,7 @@ public class UltimateCobblemonProgression implements ModInitializer {
         VillageGyms.register();
         GymTeamLimit.register();
         org.ppvon.ultimateCobblemonProgression.common.gym.GymRematch.register();
+        org.ppvon.ultimateCobblemonProgression.common.gym.GymChoice.register();
         TrainerCard.register();
         DefeatTrainerTrigger.register();
 
@@ -217,6 +218,7 @@ public class UltimateCobblemonProgression implements ModInitializer {
             TierSpeciesApplier.applyFromRegistry();
             RegionSpecies.applyFromRegistry();
             TierCatches.invalidate();
+            org.ppvon.ultimateCobblemonProgression.common.gym.RctBridge.clearCache();
             RegionProgressTracker.refreshAllSilently(server);
         });
 
@@ -245,7 +247,7 @@ public class UltimateCobblemonProgression implements ModInitializer {
         }
         FabricLoader.getInstance().getModContainer(MOD_ID).ifPresent(mod -> ResourceManagerHelper.registerBuiltinResourcePack(
                 ResourceLocation.fromNamespaceAndPath(MOD_ID, "kanto_league"), mod,
-                Component.literal("CJP Kanto & Sinnoh Leagues"), ResourcePackActivationType.DEFAULT_ENABLED));
+                Component.literal("CJP Kanto, Sinnoh & Galar Leagues"), ResourcePackActivationType.DEFAULT_ENABLED));
     }
 
     /**

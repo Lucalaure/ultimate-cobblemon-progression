@@ -1,5 +1,6 @@
 package org.ppvon.ultimateCobblemonProgression.common.gym;
 
+import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
@@ -21,8 +22,10 @@ import org.ppvon.ultimateCobblemonProgression.UltimateCobblemonProgression;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Talks to Radical Cobblemon Trainers through its own commands, so UCP needs no compile-time dependency
@@ -83,6 +86,28 @@ public final class RctBridge {
                 "rctmod player add progress after " + trainerId) >= 0;
     }
 
+    /**
+     * Records a completed series in the player's RCT data, which RCT's loot luck bonus counts. RCT does this itself
+     * for the series a player is in; CJP calls it for a league completed outside it (the second of two leagues).
+     * RCT isn't a compile-time dependency, so its API is called by reflection. Returns false if that failed.
+     */
+    public static boolean addSeriesCompletion(ServerPlayer player, String seriesId) {
+        try {
+            Class<?> rct = Class.forName("com.gitlab.srcmc.rctmod.api.RCTMod");
+            Object instance = rct.getMethod("getInstance").invoke(null);
+            Object manager = rct.getMethod("getTrainerManager").invoke(instance);
+            Object data = manager.getClass().getMethod("getData", net.minecraft.world.entity.player.Player.class).invoke(manager, player);
+            data.getClass().getMethod("addSeriesCompletion", String.class).invoke(data, seriesId);
+            if (data instanceof net.minecraft.world.level.saveddata.SavedData saved) saved.setDirty();
+            data.getClass().getMethod("sync").invoke(data);
+            return true;
+        } catch (ReflectiveOperationException | RuntimeException e) {
+            UltimateCobblemonProgression.LOG.warn("Couldn't record {}'s completed '{}' series in RCT: {}",
+                    player.getGameProfile().getName(), seriesId, e.toString());
+            return false;
+        }
+    }
+
     /** The player's RCT level cap, or -1 if it couldn't be read. */
     public static int levelCap(ServerPlayer player) {
         return run(source(player.serverLevel(), player.position()).withEntity(player), "rctmod player get level_cap");
@@ -90,16 +115,48 @@ public final class RctBridge {
 
     /** How many Pokémon the trainer's team has, read from its RCT trainer file, or -1 if that can't be read. */
     public static int teamSize(MinecraftServer server, String trainerId) {
+        JsonArray team = team(server, trainerId);
+        return team != null ? team.size() : -1;
+    }
+
+    /** Level of each trainer's strongest Pokémon, by trainer id; cleared when datapacks reload. */
+    private static final Map<String, Integer> ACE_LEVELS = new ConcurrentHashMap<>();
+
+    /**
+     * The level of the trainer's strongest Pokémon, read from its RCT trainer file (what RCT bases its level cap on),
+     * or -1 if that can't be read.
+     */
+    public static int aceLevel(MinecraftServer server, String trainerId) {
+        return ACE_LEVELS.computeIfAbsent(trainerId, id -> {
+            JsonArray team = team(server, id);
+            int best = -1;
+            if (team != null) {
+                for (JsonElement member : team) {
+                    if (member.isJsonObject() && member.getAsJsonObject().has("level")) {
+                        best = Math.max(best, member.getAsJsonObject().get("level").getAsInt());
+                    }
+                }
+            }
+            return best;
+        });
+    }
+
+    /** Forgets the trainers' ace levels, e.g. after a datapack reload changed their teams. */
+    public static void clearCache() {
+        ACE_LEVELS.clear();
+    }
+
+    private static JsonArray team(MinecraftServer server, String trainerId) {
         ResourceLocation file = ResourceLocation.tryBuild(MOD_ID, "trainers/" + trainerId + ".json");
-        if (file == null) return -1;
+        if (file == null) return null;
         Optional<Resource> resource = server.getResourceManager().getResource(file);
-        if (resource.isEmpty()) return -1;
+        if (resource.isEmpty()) return null;
         try (Reader reader = resource.get().openAsReader()) {
             JsonElement team = JsonParser.parseReader(reader).getAsJsonObject().get("team");
-            return team != null && team.isJsonArray() ? team.getAsJsonArray().size() : -1;
+            return team != null && team.isJsonArray() ? team.getAsJsonArray() : null;
         } catch (IOException | RuntimeException e) {
             UltimateCobblemonProgression.LOG.warn("Couldn't read RCT trainer {}: {}", trainerId, e.getMessage());
-            return -1;
+            return null;
         }
     }
 

@@ -1,7 +1,8 @@
 {
   "levelCap": 100,
+  "trainers": [["marnie_8a09"], ["hop_8a0a"], ["bede_8a0b"], ["champion_leon_8a0c"]],
   "requirements": {
-    "advancements": ["ultimate-cobblemon-progression:journey/milestones/champion"]
+    "advancements": ["ultimate-cobblemon-progression:journey/galar/champion"]
   },
   "species": [
     "cobblemon:dragapult",

@@ -19,7 +19,7 @@
     {
       "species": "cobblemon:koffing",
       "gender": "MALE",
-      "level": 37,
+      "level": 30,
       "nature": "cobblemon:bold",
       "ability": "levitate",
       "moveset": ["sludge", "smokescreen", "clearsmog", "selfdestruct"],
@@ -35,7 +35,7 @@
     {
       "species": "cobblemon:muk",
       "gender": "MALE",
-      "level": 39,
+      "level": 32,
       "nature": "cobblemon:adamant",
       "ability": "stickyhold",
       "moveset": ["sludgebomb", "minimize", "acidarmor", "disable"],
@@ -51,7 +51,7 @@
     {
       "species": "cobblemon:koffing",
       "gender": "MALE",
-      "level": 37,
+      "level": 30,
       "nature": "cobblemon:bold",
       "ability": "levitate",
       "moveset": ["sludge", "willowisp", "smokescreen", "selfdestruct"],
@@ -67,7 +67,7 @@
     {
       "species": "cobblemon:weezing",
       "gender": "MALE",
-      "level": 43,
+      "level": 36,
       "nature": "cobblemon:bold",
       "ability": "levitate",
       "moveset": ["sludgebomb", "willowisp", "toxicspikes", "explosion"],

@@ -23,6 +23,7 @@ import org.ppvon.ultimateCobblemonProgression.common.regions.RegionProgressTrack
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionRegistry;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionSpecies;
 import org.ppvon.ultimateCobblemonProgression.common.regions.TierCatches;
+import org.ppvon.ultimateCobblemonProgression.common.regions.TierEntry;
 import org.ppvon.ultimateCobblemonProgression.common.regions.WildTrainers;
 import org.ppvon.ultimateCobblemonProgression.common.tiers.TierDef;
 import org.ppvon.ultimateCobblemonProgression.common.tiers.TierRegistry;
@@ -74,7 +75,7 @@ final class TrainerCardDataBuilder {
 
         Component next = road.stream().filter(r -> r.status() == NEXT).map(RoadEntry::name).findFirst().orElse(Component.empty());
         // catchWholeTier: what's left to catch in the current tier before the next leader.
-        List<Species> toCatch = progress.isCompleted(focus) || step >= region.maxTier()
+        List<TierEntry> toCatch = progress.isCompleted(focus) || step >= region.maxTier()
                 ? List.of() : TierCatches.missing(player, region, step);
         Component hint;
         if (allDone) {
@@ -108,10 +109,8 @@ final class TrainerCardDataBuilder {
                     reg.id.equals(startPick), choices.contains(reg), toCatchHere));
 
             if (state == LOCKED) continue;
-            int regionIndex = r;
             int regionStep = progress.step(r);
-            List<WildSpecies> species = species(dex, sp -> RegionSpecies.region(sp) == regionIndex
-                    && RegionSpecies.regionTier(sp) >= 1 && RegionSpecies.regionTier(sp) <= regionStep);
+            List<WildSpecies> species = regionSpecies(dex, reg, regionStep);
             int upcoming = regionStep < reg.maxTier() ? reg.realSpecies(regionStep + 1) : 0;
             wild.add(new WildGroup(reg.title, upcoming, species));
         }
@@ -133,7 +132,23 @@ final class TrainerCardDataBuilder {
                 levelCap(player, region, step), counts.seen(), counts.caught(), next, hint, allDone,
                 road, regionEntries, wild, regionChoices, choosingNext,
                 difficulties ? GymDifficulty.of(player).title : "", difficulties && GymDifficulty.playerChooses(),
-                GymDifficulty.needsChoice(player), wildTrainers(player, progress));
+                GymDifficulty.needsChoice(player), wildTrainers(player, progress), otherLeagues(player, progress, focus),
+                GymDifficulty.availableIn(region));
+    }
+
+    /** With two leagues in progress, the one the card isn't focused on, with its next trainer and road. */
+    private static List<TrainerCardData.LeagueView> otherLeagues(ServerPlayer player, RegionProgress progress, int focus) {
+        List<TrainerCardData.LeagueView> out = new ArrayList<>();
+        for (int r : progress.activeLeagues()) {
+            if (r == focus) continue;
+            RegionDef region = RegionRegistry.get(r);
+            int step = progress.step(r);
+            List<RoadEntry> road = road(player, region, step, false);
+            Component next = road.stream().filter(e -> e.status() == NEXT).map(RoadEntry::name).findFirst().orElse(Component.empty());
+            out.add(new TrainerCardData.LeagueView(region.title, step, region.maxTier(), next, road,
+                    GymDifficulty.availableIn(region)));
+        }
+        return out;
     }
 
     /**
@@ -236,7 +251,7 @@ final class TrainerCardDataBuilder {
         return new TrainerCardData(player.getGameProfile().getName(), false, "Trainer level", level, TierRegistry.maxTier(),
                 TierRegistry.getCapForTier(level), counts.seen(), counts.caught(), Component.empty(), hint,
                 TierRegistry.get(level + 1).isEmpty(), List.of(), List.of(),
-                List.of(new WildGroup("Your level", upcoming, species)), List.of(), false, "", false, false, List.of());
+                List.of(new WildGroup("Your level", upcoming, species)), List.of(), false, "", false, false, List.of(), List.of(), false);
     }
 
     // ------------------------------------------------------------------ shared
@@ -248,6 +263,24 @@ final class TrainerCardDataBuilder {
         }
         list.sort(Comparator.comparingInt(Species::getNationalPokedexNumber));
         return list.stream().map(sp -> new WildSpecies(sp.getResourceIdentifier(), knowledge(dex, sp))).toList();
+    }
+
+    /** The region's species and regional forms up to this tier, in Pokédex order, each caught or seen on its own. */
+    private static List<WildSpecies> regionSpecies(AbstractPokedexManager dex, RegionDef region, int step) {
+        List<TierEntry> entries = new ArrayList<>();
+        for (int t = 1; t <= step; t++) {
+            for (TierEntry e : region.entries(t)) {
+                if (e.species().getImplemented()) entries.add(e);
+            }
+        }
+        entries.sort(Comparator.comparingInt((TierEntry e) -> e.species().getNationalPokedexNumber())
+                .thenComparing(TierEntry::isForm));
+        return entries.stream().map(e -> new WildSpecies(e.species().getResourceIdentifier(), e.formName(), e.prefix(),
+                knowledge(TierCatches.knowledge(dex, e)))).toList();
+    }
+
+    private static int knowledge(PokedexEntryProgress p) {
+        return p == PokedexEntryProgress.OWNED ? CAUGHT : p == PokedexEntryProgress.SEEN ? SEEN : UNKNOWN;
     }
 
     private static int knowledge(AbstractPokedexManager dex, Species sp) {

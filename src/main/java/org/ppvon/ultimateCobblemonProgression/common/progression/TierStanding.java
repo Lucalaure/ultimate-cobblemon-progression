@@ -9,9 +9,11 @@ import org.ppvon.ultimateCobblemonProgression.common.regions.RegionProgress;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionProgressTracker;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionRegistry;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionSpecies;
+import org.ppvon.ultimateCobblemonProgression.common.regions.TierEntry;
 import org.ppvon.ultimateCobblemonProgression.common.tiers.TierRegistry;
 import org.ppvon.ultimateCobblemonProgression.config.ConfigLoader;
 
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -62,14 +64,32 @@ public record TierStanding(boolean allowed, List<Pool> pools) {
 
     /** Whether the species has a tier (in region mode: belongs to a region). */
     public static boolean isKnown(Species species) {
+        return isKnown(species, List.of());
+    }
+
+    /**
+     * Whether a Pokémon of this species with these aspects has a tier. In region mode its regional form (e.g.
+     * "alolan") can belong to a region even when its species doesn't.
+     */
+    public static boolean isKnown(Species species, Collection<String> aspects) {
         return RegionRegistry.isActive()
-                ? RegionSpecies.region(species) >= 0
+                ? RegionSpecies.entry(species, aspects) != null
                 : UCPApi.getTier(species) > 0;
     }
 
     /** Only valid for species where {@link #isKnown} is true. */
     public static TierStanding of(ServerPlayer player, Species species) {
-        return RegionRegistry.isActive() ? ofRegion(player, species) : ofTiers(player, species);
+        return of(player, species, List.of());
+    }
+
+    /**
+     * Where a Pokémon of this species with these aspects stands: in region mode, a regional form is measured against
+     * its own region and tier (see {@link RegionSpecies#entry}). Only valid when {@link #isKnown} is true for them.
+     */
+    public static TierStanding of(ServerPlayer player, Species species, Collection<String> aspects) {
+        if (!RegionRegistry.isActive()) return ofTiers(player, species);
+        TierEntry entry = RegionSpecies.entry(species, aspects);
+        return ofRegion(player, entry.region(), entry.tier());
     }
 
     private static TierStanding ofTiers(ServerPlayer player, Species species) {
@@ -78,9 +98,7 @@ public record TierStanding(boolean allowed, List<Pool> pools) {
         return single(speciesTier <= playerTier, tierCap(speciesTier), tierCap(playerTier), playerTier - speciesTier);
     }
 
-    private static TierStanding ofRegion(ServerPlayer player, Species species) {
-        int region = RegionSpecies.region(species);
-        int speciesTier = RegionSpecies.regionTier(species);
+    private static TierStanding ofRegion(ServerPlayer player, int region, int speciesTier) {
         RegionDef def = RegionRegistry.get(region);
         RegionProgress progress = RegionProgressTracker.get(player);
         int step = progress.step(region);

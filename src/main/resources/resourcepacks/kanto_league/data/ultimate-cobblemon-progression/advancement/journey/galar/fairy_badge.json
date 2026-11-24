@@ -1,0 +1,35 @@
+{
+  "parent": "ultimate-cobblemon-progression:journey/galar/ghost_badge",
+  "display": {
+    "icon": {
+      "id": "cobblemon:fairy_feather"
+    },
+    "title": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.galar.fairy_badge.title",
+      "fallback": "Fairy Badge"
+    },
+    "description": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.galar.fairy_badge.description",
+      "fallback": "Defeat Gym Leader Opal"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat": {
+      "trigger": "ultimate-cobblemon-progression:defeat_trainer",
+      "conditions": {
+        "trainers": [
+          "gym_leader_opal_8a05"
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "defeat"
+    ]
+  ]
+}

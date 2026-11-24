@@ -1,7 +1,10 @@
 package org.ppvon.ultimateCobblemonProgression.common.regions;
 
 import com.cobblemon.mod.common.api.pokedex.AbstractPokedexManager;
+import com.cobblemon.mod.common.api.pokedex.FormDexRecord;
 import com.cobblemon.mod.common.api.pokedex.PokedexEntryProgress;
+import com.cobblemon.mod.common.api.pokedex.SpeciesDexRecord;
+import com.cobblemon.mod.common.api.pokemon.PokemonProperties;
 import com.cobblemon.mod.common.api.pokemon.evolution.Evolution;
 import com.cobblemon.mod.common.api.spawning.CobblemonSpawnPools;
 import com.cobblemon.mod.common.api.spawning.detail.PokemonHerdSpawnDetail;
@@ -26,13 +29,17 @@ import java.util.Set;
 /**
  * The {@code catchWholeTier} difficulty option: in every region, reaching tier N+1 also needs every obtainable
  * Pokémon of tier N caught. In a league this holds the next gym leader back (see GymLeaderPicker); the extra starting
- * region, which has no leaders, simply waits at its tier until it's caught, without ever holding the league back. "Obtainable" means it can spawn in the wild (Cobblemon's world spawn pool, so datapacks
- * that add spawns count) or evolves from something that can; anything else, like most legendaries, is skipped so
- * no one gets stuck. Catching, evolving and trading all register a Pokémon as caught in the Pokédex.
+ * region, which has no leaders, simply waits at its tier until it's caught, without ever holding the league back.
+ *
+ * <p>A tier's Pokémon are its {@link TierEntry entries}: its species, and the regional forms that belong to it. Each is
+ * caught on its own, with Cobblemon's per-form Pokédex records: an Alolan Rattata counts for Alola's Alolan Rattata,
+ * not for Kanto's Rattata. "Obtainable" means it can spawn in the wild (Cobblemon's world spawn pool, so datapacks that
+ * add spawns count) or evolves from something that can; anything else, like most legendaries, is skipped so no one
+ * gets stuck. Catching, evolving and trading all register a Pokémon as caught in the Pokédex.
  */
 public final class TierCatches {
-    /** Species that can be obtained, or null until the spawn pools are loaded. */
-    private static Set<Species> obtainable;
+    /** Obtainable species (key "species") and regional forms (key "species/Form"), or null until spawns load. */
+    private static Set<String> obtainable;
 
     private TierCatches() {}
 
@@ -41,81 +48,173 @@ public final class TierCatches {
         return ConfigLoader.CATCH_WHOLE_TIER.get();
     }
 
-    /** Forgets the obtainable species, e.g. after a datapack reload changed the spawn pools. */
+    /** Forgets what can be obtained, e.g. after a datapack reload changed the spawn pools. */
     public static void invalidate() {
         obtainable = null;
     }
 
-    /** The species of this tier the player still has to catch, in Pokédex order. Empty when the option is off. */
-    public static List<Species> missing(ServerPlayer player, RegionDef region, int tier) {
+    /** The Pokémon of this tier the player still has to catch, in Pokédex order. Empty when the option is off. */
+    public static List<TierEntry> missing(ServerPlayer player, RegionDef region, int tier) {
         if (!applies(region) || tier < 1) return List.of();
         AbstractPokedexManager dex = PlayerExtensionsKt.pokedex(player);
-        Set<Species> canGet = obtainable();
-        List<Species> out = new ArrayList<>();
-        for (Species sp : region.species(tier)) {
-            if (!sp.getImplemented() || !canGet.contains(sp)) continue;
-            if (dex == null || dex.getKnowledgeForSpecies(sp.getResourceIdentifier()) != PokedexEntryProgress.OWNED) {
-                out.add(sp);
-            }
+        Set<String> canGet = obtainable();
+        List<TierEntry> out = new ArrayList<>();
+        for (TierEntry entry : region.entries(tier)) {
+            if (!counts(entry, canGet)) continue;
+            if (!isCaught(dex, entry)) out.add(entry);
         }
-        out.sort(Comparator.comparingInt(Species::getNationalPokedexNumber));
+        out.sort(Comparator.comparingInt((TierEntry e) -> e.species().getNationalPokedexNumber())
+                .thenComparing(TierEntry::isForm));
         return out;
     }
 
-    /** How many of this tier's species count for the option: the obtainable ones. */
-    public static int targets(RegionDef region, int tier) {
-        Set<Species> canGet = obtainable();
-        return (int) region.species(tier).stream().filter(sp -> sp.getImplemented() && canGet.contains(sp)).count();
+    /**
+     * Like {@link #missing}, but counting only the tier's species and any form of them as caught: how CJP counted
+     * before regional forms were caught on their own. Used once, to keep the tiers of players from before that.
+     */
+    public static List<TierEntry> missingSpecies(ServerPlayer player, RegionDef region, int tier) {
+        if (!applies(region) || tier < 1) return List.of();
+        AbstractPokedexManager dex = PlayerExtensionsKt.pokedex(player);
+        Set<String> canGet = obtainable();
+        List<TierEntry> out = new ArrayList<>();
+        for (TierEntry entry : region.entries(tier)) {
+            if (entry.isForm() || !counts(entry, canGet)) continue;
+            if (dex == null || dex.getKnowledgeForSpecies(entry.species().getResourceIdentifier()) != PokedexEntryProgress.OWNED) {
+                out.add(entry);
+            }
+        }
+        return out;
     }
 
-    /** "Pidgey, Rattata and 3 more". */
-    public static String names(List<Species> species, int shown) {
-        List<String> names = species.stream().limit(shown).map(sp -> sp.getTranslatedName().getString()).toList();
+    /** Whether the spawn pools are loaded, so what's obtainable (and so what's missing) is known. */
+    public static boolean isReady() {
+        return !obtainable().isEmpty();
+    }
+
+    /** How many of this tier's Pokémon count for the option: the obtainable ones. */
+    public static int targets(RegionDef region, int tier) {
+        Set<String> canGet = obtainable();
+        return (int) region.entries(tier).stream().filter(e -> counts(e, canGet)).count();
+    }
+
+    /** "Pidgey, Alolan Rattata and 3 more". */
+    public static String names(List<TierEntry> entries, int shown) {
+        List<String> names = entries.stream().limit(shown).map(e -> e.displayName().getString()).toList();
         String list = String.join(", ", names);
-        int rest = species.size() - names.size();
+        int rest = entries.size() - names.size();
         return rest > 0 ? list + " and " + rest + " more" : list;
     }
 
-    private static Set<Species> obtainable() {
+    private static boolean counts(TierEntry entry, Set<String> canGet) {
+        return entry.species().getImplemented() && canGet.contains(key(entry));
+    }
+
+    /**
+     * Whether the player has caught this Pokémon. A regional form needs its own form caught; a species needs any of
+     * its other forms caught (a region-bias Pikachu is still a Pikachu).
+     */
+    public static boolean isCaught(AbstractPokedexManager dex, TierEntry entry) {
+        return knowledge(dex, entry) == PokedexEntryProgress.OWNED;
+    }
+
+    /** The player's Pokédex knowledge of this Pokémon, worked out per form as in {@link #isCaught}. */
+    public static PokedexEntryProgress knowledge(AbstractPokedexManager dex, TierEntry entry) {
+        if (dex == null) return PokedexEntryProgress.UNREGISTERED;
+        Species sp = entry.species();
+        SpeciesDexRecord record = dex.getSpeciesRecord(sp.getResourceIdentifier());
+        if (record == null) return PokedexEntryProgress.UNREGISTERED;
+        if (entry.isForm()) return formKnowledge(record, entry.form().getName());
+
+        List<TierEntry> regionalForms = RegionSpecies.forms(sp);
+        if (regionalForms.isEmpty() || record.isFormRecordsEmpty()) {
+            return dex.getKnowledgeForSpecies(sp.getResourceIdentifier());
+        }
+        PokedexEntryProgress best = PokedexEntryProgress.UNREGISTERED;
+        Set<String> names = new HashSet<>();
+        names.add(sp.getStandardForm().getName());
+        for (FormData form : sp.getForms()) names.add(form.getName());
+        for (String name : names) {
+            if (RegionSpecies.formByName(sp, name) != null) continue; // a regional form of its own
+            PokedexEntryProgress p = formKnowledge(record, name);
+            if (p.ordinal() > best.ordinal()) best = p;
+        }
+        return best;
+    }
+
+    private static PokedexEntryProgress formKnowledge(SpeciesDexRecord record, String formName) {
+        FormDexRecord form = record.getFormRecord(formName);
+        return form != null ? form.getKnowledge() : PokedexEntryProgress.UNREGISTERED;
+    }
+
+    private static String key(TierEntry entry) {
+        return entry.isForm() ? key(entry.species(), entry.form()) : entry.species().getResourceIdentifier().toString();
+    }
+
+    private static String key(Species sp, FormData form) {
+        TierEntry regional = form != null ? RegionSpecies.formByName(sp, form.getName()) : null;
+        return regional != null
+                ? sp.getResourceIdentifier() + "/" + form.getName()
+                : sp.getResourceIdentifier().toString();
+    }
+
+    private static Set<String> obtainable() {
         if (obtainable == null) {
-            Set<Species> found = compute();
+            Set<String> found = compute();
             if (found.isEmpty()) return found; // the spawn pools aren't loaded yet; try again next time
             obtainable = found;
-            UltimateCobblemonProgression.LOG.info("{} species can be obtained in the wild or by evolution", found.size());
+            UltimateCobblemonProgression.LOG.info("{} species and regional forms can be obtained in the wild or by evolution",
+                    found.size());
         }
         return obtainable;
     }
 
-    private static Set<Species> compute() {
-        Set<Species> found = new HashSet<>();
+    /** A species and one of its forms. */
+    private record Obtained(Species species, FormData form) {}
+
+    private static Set<String> compute() {
+        Deque<Obtained> queue = new ArrayDeque<>();
+        Set<String> found = new HashSet<>();
         try {
             for (SpawnDetail detail : CobblemonSpawnPools.WORLD_SPAWN_POOL.getDetails()) {
                 if (detail instanceof PokemonSpawnDetail p) {
-                    add(found, p.getPokemon().getSpecies());
+                    add(found, queue, p.getPokemon(), null);
                 } else if (detail instanceof PokemonHerdSpawnDetail herd) {
-                    for (var member : herd.getHerdablePokemon()) add(found, member.getPokemon().getSpecies());
+                    for (var member : herd.getHerdablePokemon()) add(found, queue, member.getPokemon(), null);
                 }
             }
         } catch (RuntimeException e) { // Cobblemon's spawn pool isn't initialised yet
             return Set.of();
         }
 
-        // Anything a wild species evolves into can be obtained too.
-        Deque<Species> queue = new ArrayDeque<>(found);
+        // Anything an obtainable Pokémon evolves into can be obtained too, regional forms included (an Alolan
+        // Rattata's Raticate is Alolan, and a Pikachu evolved in an Alola-style biome becomes an Alolan Raichu).
+        Set<String> visited = new HashSet<>();
         while (!queue.isEmpty()) {
-            Species sp = queue.poll();
-            List<Evolution> evolutions = new ArrayList<>(sp.getEvolutions());
-            for (FormData form : sp.getForms()) evolutions.addAll(form.getEvolutions());
-            for (Evolution evolution : evolutions) {
-                Species result = TrainerLevelInfluence.speciesOf(evolution.getResult().getSpecies());
-                if (result != null && found.add(result)) queue.add(result);
-            }
+            Obtained o = queue.poll();
+            if (!visited.add(o.species.getResourceIdentifier() + "/" + o.form.getName())) continue;
+            Set<Evolution> evolutions = new HashSet<>(o.form.getEvolutions());
+            if (evolutions.isEmpty()) evolutions.addAll(o.species.getEvolutions());
+            for (Evolution evolution : evolutions) add(found, queue, evolution.getResult(), o);
         }
         return found;
     }
 
-    private static void add(Set<Species> found, String speciesStr) {
-        Species sp = TrainerLevelInfluence.speciesOf(speciesStr);
-        if (sp != null) found.add(sp);
+    /**
+     * Records the Pokémon these properties describe as obtainable and queues it for its evolutions. Region-bias
+     * Pokémon never spawn in region mode, so their spawns are skipped. An evolution keeps the regional aspect of the
+     * Pokémon it evolves from unless its result names a form itself.
+     */
+    private static void add(Set<String> found, Deque<Obtained> queue, PokemonProperties props, Obtained from) {
+        Species sp = TrainerLevelInfluence.speciesOf(props.getSpecies());
+        if (sp == null) return;
+        Set<String> aspects = RegionalForms.aspectsOf(props);
+        if (from == null && RegionRegistry.isActive() && RegionSpecies.isRegionBias(aspects)) return;
+        if (from != null && aspects.isEmpty()) {
+            TierEntry regional = RegionSpecies.formByName(from.species, from.form.getName());
+            if (regional != null) aspects.add(regional.aspect());
+        }
+        FormData form = aspects.isEmpty() ? sp.getStandardForm() : sp.getForm(aspects);
+        found.add(key(sp, form));
+        queue.add(new Obtained(sp, form));
     }
 }

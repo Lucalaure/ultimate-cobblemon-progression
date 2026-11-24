@@ -8,11 +8,11 @@ import org.ppvon.ultimateCobblemonProgression.config.ConfigLoader;
 import org.ppvon.ultimateCobblemonProgression.config.SpawnConfig;
 
 public final class SpawnConfigScreen extends BaseConfigScreen {
-    private boolean doSpeciesBlocking, blockUnknownSpecies, lockRegionalForms, blockUnlistedTrainers, doLevelScaling, doWeightScaling;
+    private boolean doSpeciesBlocking, blockUnknownSpecies, blockUnlistedTrainers, doLevelScaling, doWeightScaling;
     private double tierCapScaling, minLevelScaling, avgLevelScaling, maxLevelScaling;
     private double weightDecayPerTier, weightMinFactor, weightCurrentTierBuff;
 
-    private Checkbox chkDoSpeciesBlocking, chkBlockUnknownSpecies, chkLockRegionalForms, chkBlockUnlistedTrainers, chkDoLevelScaling,
+    private Checkbox chkDoSpeciesBlocking, chkBlockUnknownSpecies, chkBlockUnlistedTrainers, chkDoLevelScaling,
             chkDoWeightScaling;
     private DoubleField fldTierCap, fldMin, fldAvg, fldMax, fldDecay, fldMinFactor, fldBuff;
 
@@ -27,7 +27,6 @@ public final class SpawnConfigScreen extends BaseConfigScreen {
         SpawnConfig c = ConfigLoader.spawn();
         doSpeciesBlocking      = c.doSpeciesBlocking;
         blockUnknownSpecies    = c.blockUnknownSpecies;
-        lockRegionalForms      = c.lockRegionalForms;
         blockUnlistedTrainers  = c.blockUnlistedTrainers;
         doLevelScaling         = c.doLevelScaling;
         tierCapScaling         = c.tierCapScaling;
@@ -63,14 +62,6 @@ public final class SpawnConfigScreen extends BaseConfigScreen {
         chkBlockUnknownSpecies = Checkbox.builder(Component.literal("Block Unknown Species"), this.font)
                 .selected(blockUnknownSpecies).pos(labelX, y).build();
         addRenderableWidget(chkBlockUnknownSpecies);
-
-        // Same row, so the screen doesn't grow taller.
-        chkLockRegionalForms = Checkbox.builder(Component.literal("Lock Regional Forms"), this.font)
-                .selected(lockRegionalForms).pos(fieldX, y)
-                .tooltip(Tooltip.create(Component.literal(
-                        "Region mode: Alolan, Galarian, Hisuian and Paldean forms only spawn once their region is open.")))
-                .build();
-        addRenderableWidget(chkLockRegionalForms);
 
         y += rowH + 6;
 
@@ -163,7 +154,6 @@ public final class SpawnConfigScreen extends BaseConfigScreen {
         var c = ConfigLoader.spawn();
         c.doSpeciesBlocking = chkDoSpeciesBlocking.selected();
         c.blockUnknownSpecies = chkBlockUnknownSpecies.selected();
-        c.lockRegionalForms = chkLockRegionalForms.selected();
         c.blockUnlistedTrainers = chkBlockUnlistedTrainers.selected();
 
         c.doLevelScaling = chkDoLevelScaling.selected();

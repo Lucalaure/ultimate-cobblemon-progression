@@ -53,14 +53,23 @@ function Write-JsonFile([string]$path, $value) {
     [System.IO.File]::WriteAllText($path, (ConvertTo-PrettyJson $value) + "`n", (New-Object System.Text.UTF8Encoding $false))
 }
 
-# Cobblemon's species data from its jar: species (by name and by id, accent- and punctuation-free) and every move
-# any of them learns.
+# Cobblemon's species data from its jar: species (by name and by id, accent- and punctuation-free), every move
+# any of them learns, and every Cobblemon item id (without namespace).
 function Import-CobblemonSpecies([string]$jar) {
     $species = @{}
     $moves = New-Object System.Collections.Generic.HashSet[string]
+    $items = New-Object System.Collections.Generic.HashSet[string]
     $zip = [System.IO.Compression.ZipFile]::OpenRead((Resolve-Path $jar))
     try {
         foreach ($e in $zip.Entries) {
+            if ($e.FullName -eq 'assets/cobblemon/lang/en_us.json') {
+                $reader = New-Object System.IO.StreamReader($e.Open())
+                try { $lang = $reader.ReadToEnd() | ConvertFrom-Json } finally { $reader.Dispose() }
+                foreach ($key in $lang.PSObject.Properties.Name) {
+                    if ($key -match '^item\.cobblemon\.([a-z0-9_]+)$') { [void]$items.Add($Matches[1]) }
+                }
+                continue
+            }
             if ($e.FullName -notmatch '^data/cobblemon/species/[^/]+/([^/]+)\.json$') { continue }
             $id = $Matches[1]
             $reader = New-Object System.IO.StreamReader($e.Open())
@@ -74,7 +83,7 @@ function Import-CobblemonSpecies([string]$jar) {
         }
     } finally { $zip.Dispose() }
     if ($species.Count -eq 0) { throw "$jar has no data/cobblemon/species" }
-    return @{ species = $species; moves = $moves }
+    return @{ species = $species; moves = $moves; items = $items }
 }
 
 # The species' form for an aspect, or null.
@@ -88,7 +97,8 @@ function Get-Form($sp, [string]$aspect) {
 One Pokemon of an RCT trainer team. $moves are move ids from the game data; unknown ones are reported and left out,
 and with none left the Pokemon gets the last four moves it learns by level (what trainers in the games get by
 default). Gender (by the species' ratio), ability (its first regular one) and nature come from Cobblemon's data and
-$seed, so they're the same every run. $heldItem is a Cobblemon item id without namespace, or empty. $iv, from 0 to 31,
+$seed, so they're the same every run. $heldItem is a Cobblemon item id without namespace, or empty; one Cobblemon
+doesn't have (FireRed's Stardust and Nugget) is reported and left out, since RCT rejects it. $iv, from 0 to 31,
 sets every IV; -1 leaves them to RCT.
 #>
 function New-TrainerPokemon($db, $sp, [string]$aspect, [bool]$female, [int]$level, $moves, [string]$heldItem,
@@ -117,6 +127,10 @@ function New-TrainerPokemon($db, $sp, [string]$aspect, [bool]$female, [int]$leve
     $mon.moveset = @($valid | Select-Object -First 4)
     $mon.ivs = if ($iv -ge 0) { [ordered]@{ hp = $iv; atk = $iv; def = $iv; spa = $iv; spd = $iv; spe = $iv } } else { [ordered]@{} }
     $mon.evs = [ordered]@{}
+    if ($heldItem -and $db.items.Count -and -not $db.items.Contains($heldItem)) {
+        $warnings.Add("${who}: Cobblemon has no item '$heldItem' for $($sp.id) to hold; left out")
+        $heldItem = ''
+    }
     if ($heldItem) { $mon.heldItem = @($heldItem) }
     if ($aspect) { $mon.aspects = @($aspect) }
     return $mon

@@ -19,7 +19,7 @@
     {
       "species": "cobblemon:pidgeot",
       "gender": "MALE",
-      "level": 59,
+      "level": 63,
       "nature": "cobblemon:timid",
       "ability": "keeneye",
       "moveset": ["hurricane", "heatwave", "roost", "uturn"],
@@ -44,7 +44,7 @@
     {
       "species": "cobblemon:alakazam",
       "gender": "MALE",
-      "level": 57,
+      "level": 63,
       "nature": "cobblemon:timid",
       "ability": "magicguard",
       "moveset": ["psychic", "shadowball", "focusblast", "calmmind"],
@@ -69,7 +69,7 @@
     {
       "species": "cobblemon:rhydon",
       "gender": "MALE",
-      "level": 59,
+      "level": 63,
       "nature": "cobblemon:adamant",
       "ability": "lightningrod",
       "moveset": ["earthquake", "stoneedge", "megahorn", "stealthrock"],
@@ -94,7 +94,7 @@
     {
       "species": "cobblemon:exeggutor",
       "gender": "MALE",
-      "level": 59,
+      "level": 63,
       "nature": "cobblemon:modest",
       "ability": "chlorophyll",
       "moveset": ["gigadrain", "psychic", "sleeppowder", "sludgebomb"],
@@ -119,7 +119,7 @@
     {
       "species": "cobblemon:arcanine",
       "gender": "MALE",
-      "level": 59,
+      "level": 63,
       "nature": "cobblemon:adamant",
       "ability": "intimidate",
       "moveset": ["flareblitz", "extremespeed", "wildcharge", "morningsun"],

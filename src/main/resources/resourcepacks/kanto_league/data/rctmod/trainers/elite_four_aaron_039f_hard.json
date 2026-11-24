@@ -19,7 +19,7 @@
     {
       "species": "cobblemon:dustox",
       "gender": "FEMALE",
-      "level": 53,
+      "level": 57,
       "nature": "cobblemon:bold",
       "ability": "shielddust",
       "moveset": ["toxic", "bugbuzz", "roost", "quiverdance"],
@@ -44,7 +44,7 @@
     {
       "species": "cobblemon:beautifly",
       "gender": "FEMALE",
-      "level": 53,
+      "level": 57,
       "nature": "cobblemon:timid",
       "ability": "swarm",
       "moveset": ["quiverdance", "bugbuzz", "shadowball", "gigadrain"],
@@ -69,7 +69,7 @@
     {
       "species": "cobblemon:vespiquen",
       "gender": "FEMALE",
-      "level": 54,
+      "level": 57,
       "nature": "cobblemon:impish",
       "ability": "pressure",
       "moveset": ["defendorder", "attackorder", "roost", "toxic"],
@@ -94,7 +94,7 @@
     {
       "species": "cobblemon:heracross",
       "gender": "FEMALE",
-      "level": 54,
+      "level": 57,
       "nature": "cobblemon:jolly",
       "ability": "guts",
       "moveset": ["megahorn", "closecombat", "facade", "knockoff"],
@@ -119,7 +119,7 @@
     {
       "species": "cobblemon:scizor",
       "gender": "MALE",
-      "level": 55,
+      "level": 57,
       "nature": "cobblemon:adamant",
       "ability": "technician",
       "moveset": ["bulletpunch", "uturn", "swordsdance", "roost"],

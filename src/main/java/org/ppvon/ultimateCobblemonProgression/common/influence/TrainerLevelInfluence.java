@@ -28,6 +28,8 @@ import org.ppvon.ultimateCobblemonProgression.common.regions.RegionalForms;
 import org.ppvon.ultimateCobblemonProgression.config.ConfigLoader;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Set;
 import java.util.List;
 import java.util.Locale;
 import java.util.function.Supplier;
@@ -41,8 +43,8 @@ import java.util.function.Supplier;
  *  allowed to spawn if a trainer is at least that tier.  If a species is not
  *  found in a tier, by default the spawn is still blocked, but can be configured
  *  with BLOCK_UNKNOWN_SPECIES.  In region mode, each region has its own tier
- *  ladder instead (see {@link TierStanding}), and regional forms also need
- *  their own region open (see {@link RegionalForms}).
+ *  ladder instead (see {@link TierStanding}), and a regional form follows its
+ *  own region's ladder instead of its species' (see {@link RegionalForms}).
  *
  * Weight:
  *  Pokemon in the same tier as the player get a buff to their weight via
@@ -135,10 +137,15 @@ public final class TrainerLevelInfluence implements SpawningInfluence {
         return id != null ? PokemonSpecies.getByIdentifier(id) : null;
     }
 
-    /** Whether species blocking lets this species spawn for the player. */
-    static boolean isAllowed(Species sp, ServerPlayer player) {
-        if (!TierStanding.isKnown(sp)) return !BLOCK_UNKNOWN_SPECIES.get();
-        return player != null && TierStanding.of(player, sp).allowed();
+    /**
+     * Whether species blocking lets a Pokémon of this species with these aspects spawn for the player. In region
+     * mode a regional form is judged by its own region and tier, and region-bias Pokémon never spawn
+     * (see {@link RegionalForms}).
+     */
+    static boolean isAllowed(Species sp, Collection<String> aspects, ServerPlayer player) {
+        if (!RegionalForms.maySpawn(aspects)) return false;
+        if (!TierStanding.isKnown(sp, aspects)) return !BLOCK_UNKNOWN_SPECIES.get();
+        return player != null && TierStanding.of(player, sp, aspects).allowed();
     }
 
     /**
@@ -155,7 +162,7 @@ public final class TrainerLevelInfluence implements SpawningInfluence {
 
     private static boolean isHerdMemberAllowed(PokemonHerdSpawnDetail.Herdable member, ServerPlayer player) {
         Species sp = speciesOf(member.getPokemon().getSpecies());
-        return (sp == null || isAllowed(sp, player)) && RegionalForms.isAllowed(member.getPokemon().getAspects(), player);
+        return sp == null || isAllowed(sp, RegionalForms.aspectsOf(member.getPokemon()), player);
     }
 
     /** Key in a spawn selection's context for the player a herd is being spawned for. */
@@ -198,7 +205,7 @@ public final class TrainerLevelInfluence implements SpawningInfluence {
 
         var pokemon = pe.getPokemon();
         ServerPlayer player = resolvePlayer(event.getSpawnablePosition());
-        if (!isAllowed(pokemon.getSpecies(), player) || !RegionalForms.isAllowed(pokemon.getAspects(), player)) {
+        if (!isAllowed(pokemon.getSpecies(), pokemon.getAspects(), player)) {
             event.cancel();
         }
         return Unit.INSTANCE;
@@ -232,8 +239,7 @@ public final class TrainerLevelInfluence implements SpawningInfluence {
         if (sp == null) return true;
 
         ServerPlayer player = resolvePlayer(spawningContext);
-        return isAllowed(sp, player)
-                && RegionalForms.isAllowed(((PokemonSpawnDetail) spawnDetail).getPokemon().getAspects(), player);
+        return isAllowed(sp, RegionalForms.aspectsOf(((PokemonSpawnDetail) spawnDetail).getPokemon()), player);
     }
 
     @Override
@@ -247,15 +253,16 @@ public final class TrainerLevelInfluence implements SpawningInfluence {
         }
         Species sp = speciesOf(spawnDetail);
         if (sp == null) return currentWeight;
+        Set<String> aspects = RegionalForms.aspectsOf(((PokemonSpawnDetail) spawnDetail).getPokemon());
 
-        if (!TierStanding.isKnown(sp)) {
+        if (!TierStanding.isKnown(sp, aspects)) {
             return weightScaling && BLOCK_UNKNOWN_SPECIES.get() ? 0.0f : currentWeight;
         }
 
         ServerPlayer player = resolvePlayer(ctx);
         if (player == null) return currentWeight;
 
-        return (float)(currentWeight * weightMultiplier(TierStanding.of(player, sp)));
+        return (float)(currentWeight * weightMultiplier(TierStanding.of(player, sp, aspects)));
     }
 
     /** How much one pool adds to a species' spawn weight: its pool weight times the tier weight scaling. */
@@ -311,9 +318,9 @@ public final class TrainerLevelInfluence implements SpawningInfluence {
 
         var poke = pe.getPokemon();
         Species sp = poke.getSpecies();
-        if (!TierStanding.isKnown(sp)) return;
+        if (!TierStanding.isKnown(sp, poke.getAspects())) return;
 
-        TierStanding standing = TierStanding.of(player, sp);
+        TierStanding standing = TierStanding.of(player, sp, poke.getAspects());
         int[] range = levelRange(pickPool(standing, pe.getRandom()));
         int newLevel = sampleTriangularInt(range[0], range[1], range[2], pe.getRandom());
 

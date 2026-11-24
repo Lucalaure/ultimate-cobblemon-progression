@@ -5,7 +5,6 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.resources.ResourceLocation;
 import org.ppvon.ultimateCobblemonProgression.common.tiers.TierDef;
 
-import com.cobblemon.mod.common.pokemon.Species;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -36,9 +35,9 @@ public final class RegionDef {
      */
     public final Optional<String> series;
     /**
-     * Cobblemon aspects that mark a Pokémon as one of this region's forms (e.g. "alolan", or "region-bias-alola" for a
-     * Pikachu that will evolve into Alolan Raichu). With lockRegionalForms on, such a Pokémon only spawns for players
-     * who have this region open, on top of its species' own tier and region.
+     * Cobblemon aspects that mark a Pokémon as one of this region's forms (e.g. "alolan"). Such a form belongs to this
+     * region instead of its species' (see {@link RegionSpecies}). "region-bias-alola" marks a Pikachu that always
+     * evolves into Alolan Raichu: those never spawn in region mode, since the regional forms spawn themselves.
      */
     public final Set<String> formAspects;
     /** Tier index (1-based, consecutive) to tier definition. */
@@ -49,9 +48,8 @@ public final class RegionDef {
      * for players who have the region open, and the Trainer Card counts each trainer once.
      */
     public final List<List<String>> wildTrainers;
-    private final Map<Integer, Integer> realSpeciesByTier = new HashMap<>();
-    /** The Cobblemon species belonging to each tier of this region (a species listed in several regions counts in the first). */
-    private final Map<Integer, List<Species>> speciesByTier = new HashMap<>();
+    /** The species and regional forms belonging to each tier of this region (see {@link RegionSpecies}). */
+    private final Map<Integer, List<TierEntry>> entriesByTier = new HashMap<>();
 
     public RegionDef(String id, Meta meta, SortedMap<Integer, TierDef> tiers, List<List<String>> wildTrainers) {
         this.wildTrainers = wildTrainers.stream().filter(t -> !t.isEmpty()).map(List::copyOf).toList();
@@ -81,26 +79,22 @@ public final class RegionDef {
         return def != null ? def.levelCap : 100;
     }
 
-    /** Number of species from this tier that exist in the loaded Cobblemon species registry. */
+    /** How many loaded species and regional forms belong to this tier. */
     public int realSpecies(int tier) {
-        return realSpeciesByTier.getOrDefault(tier, 0);
+        return entries(tier).size();
     }
 
-    void putRealSpecies(int tier, int count) {
-        realSpeciesByTier.put(tier, count);
-    }
-
-    /** The loaded Cobblemon species that belong to this tier of the region. */
-    public List<Species> species(int tier) {
-        return speciesByTier.getOrDefault(tier, List.of());
+    /** The loaded species and regional forms that belong to this tier of the region. */
+    public List<TierEntry> entries(int tier) {
+        return entriesByTier.getOrDefault(tier, List.of());
     }
 
     void clearSpecies() {
-        speciesByTier.clear();
+        entriesByTier.clear();
     }
 
-    void addSpecies(int tier, Species species) {
-        speciesByTier.computeIfAbsent(tier, t -> new ArrayList<>()).add(species);
+    void addEntry(TierEntry entry) {
+        entriesByTier.computeIfAbsent(entry.tier(), t -> new ArrayList<>()).add(entry);
     }
 
     /** Contents of wild_trainers.json: each entry a trainer id, or a list of ids for the versions of one trainer. */

@@ -19,7 +19,7 @@
     {
       "species": "cobblemon:snover",
       "gender": "MALE",
-      "level": 38,
+      "level": 42,
       "nature": "cobblemon:quiet",
       "ability": "snowwarning",
       "moveset": ["leechseed", "blizzard", "gigadrain", "iceshard"],
@@ -44,7 +44,7 @@
     {
       "species": "cobblemon:sneasel",
       "gender": "FEMALE",
-      "level": 38,
+      "level": 42,
       "nature": "cobblemon:jolly",
       "ability": "pickpocket",
       "moveset": ["iceshard", "knockoff", "swordsdance", "lowkick"],
@@ -68,7 +68,7 @@
     {
       "species": "cobblemon:froslass",
       "gender": "FEMALE",
-      "level": 39,
+      "level": 42,
       "nature": "cobblemon:timid",
       "ability": "cursedbody",
       "moveset": ["icebeam", "shadowball", "spikes", "destinybond"],
@@ -93,7 +93,7 @@
     {
       "species": "cobblemon:medicham",
       "gender": "MALE",
-      "level": 40,
+      "level": 42,
       "nature": "cobblemon:jolly",
       "ability": "purepower",
       "moveset": ["icepunch", "highjumpkick", "zenheadbutt", "bulletpunch"],

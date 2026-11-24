@@ -2,7 +2,7 @@ package org.ppvon.ultimateCobblemonProgression.common.regions;
 
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
-import com.cobblemon.mod.common.pokemon.Species;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
@@ -51,10 +51,10 @@ public final class RegionCommands {
             }
 
             if (region.id.equals(RegionProgress.chosenStartRegion(player))) {
-                out.append(Component.literal(" (your starting pick)").withStyle(ChatFormatting.GRAY));
+                out.append(Component.literal(" (your second region)").withStyle(ChatFormatting.GRAY));
             }
-            if (r == progress.current()) {
-                out.append(Component.literal(" (current region)").withStyle(ChatFormatting.GRAY));
+            if (progress.activeLeagues().contains(r)) {
+                out.append(Component.literal(" (in progress)").withStyle(ChatFormatting.GRAY));
             }
 
             TierDef next = region.tiers.get(step + 1);
@@ -81,16 +81,17 @@ public final class RegionCommands {
         if (journey.isEmpty()) {
             return r > 0 ? "complete " + regions.get(r - 1).title + " first" : "pick your starting region first";
         }
+        if (RegionProgress.openableStartChoices(player).contains(region)) {
+            return "you can pick it as your second region";
+        }
         if (region.isLeague()) {
+            if (RegionProgress.nextChoices(player).contains(region)) return "pick it as your next region on your Trainer Card";
             int current = progress.current();
             return current >= 0
                     ? "travel here after completing " + regions.get(current).title
-                    : "pick it as your next region on your Trainer Card";
+                    : "not on your journey";
         }
-        // Regions without a series only open as the extra starting region.
-        return RegionProgress.openableStartChoices(player).contains(region)
-                ? "you can pick it as your extra starting region"
-                : "not on your journey";
+        return "not on your journey";
     }
 
     /** /trainerlevel region choose|next &lt;region&gt; and /trainerlevel region reset &lt;player&gt;. */
@@ -184,7 +185,10 @@ public final class RegionCommands {
         }
         TrainerLevelComponents.KEY.get(player).setHomeRegion(region.id);
         RegionProgressTracker.refresh(player);
-        return new Choice(true, Component.literal("Your journey begins in " + region.title + "! Find a gym in a village to challenge its first leader.")
+        String more = RegionProgress.openableStartChoices(player).stream().anyMatch(RegionDef::isLeague)
+                ? " You can also pick a second region, even a second league, on your Trainer Card's Regions tab."
+                : "";
+        return new Choice(true, Component.literal("Your journey begins in " + region.title + "! Find a gym in a village to challenge its first leader." + more)
                 .withStyle(ChatFormatting.GREEN));
     }
 
@@ -216,7 +220,16 @@ public final class RegionCommands {
             return new Choice(false, Component.literal("Couldn't start the " + region.title
                     + " trainer series in Radical Cobblemon Trainers. Check the server log."));
         }
-        TrainerLevelComponents.KEY.get(player).addNextRegion(region.id);
+        var component = TrainerLevelComponents.KEY.get(player);
+        // A finished second league joins the journey's history, so it stays open, and the second region is free to
+        // pick again: two leagues are a pair, and the next round starts afresh, level cap included.
+        RegionDef second = RegionRegistry.byId(RegionProgress.chosenStartRegion(player));
+        if (second != null && second.isLeague() && progress.isCompleted(RegionRegistry.ordered().indexOf(second))) {
+            component.addNextRegion(second.id);
+            component.setStartRegion(null);
+            component.setLevelCapFloor(-1);
+        }
+        component.addNextRegion(region.id);
         RegionProgressTracker.refresh(player);
         return new Choice(true, Component.literal("Your journey continues in " + region.title
                 + "! Find a gym in a village to challenge its first leader.").withStyle(ChatFormatting.GREEN));
@@ -238,6 +251,9 @@ public final class RegionCommands {
         }
         if (region != null && RegionRegistry.startChoices().contains(region)
                 && !RegionProgress.openableStartChoices(player).contains(region)) {
+            if (region.isLeague() && RegionProgress.chosenHomeRegion(player) == null) {
+                return new Choice(false, Component.literal("Choose where your journey starts first: open your Trainer Card."));
+            }
             return new Choice(false, Component.literal(region.title + " is already open."));
         }
         if (region == null || !RegionRegistry.startChoices().contains(region)) {
@@ -250,7 +266,10 @@ public final class RegionCommands {
         RegionProgressTracker.refresh(player);
         String home = RegionProgress.chosenHomeRegion(player);
         String alongside = home != null ? RegionRegistry.byId(home).title : RegionRegistry.ordered().getFirst().title;
-        return new Choice(true, Component.literal(region.title + " is now open alongside " + alongside + ".")
+        String leaders = region.isLeague()
+                ? " Its gym leaders are waiting too: when both leagues have a leader ready, a Gym Challenge block lets you choose."
+                : "";
+        return new Choice(true, Component.literal(region.title + " is now open alongside " + alongside + "." + leaders)
                 .withStyle(ChatFormatting.GREEN));
     }
 
@@ -279,7 +298,7 @@ public final class RegionCommands {
      * it still to catch, e.g. "catch Pidgey and Rattata, Boulder Badge".
      */
     public static String describeMissing(ServerPlayer player, RegionDef region, TierDef tier) {
-        List<Species> toCatch = TierCatches.missing(player, region, tier.index - 1);
+        List<TierEntry> toCatch = TierCatches.missing(player, region, tier.index - 1);
         String rest = describeMissing(player, tier);
         if (toCatch.isEmpty()) return rest;
         String catches = "catch " + TierCatches.names(toCatch, 5);

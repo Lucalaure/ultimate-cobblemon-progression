@@ -1,5 +1,5 @@
 {
-  "levelCap": 30,
+  "levelCap": 31,
   "trainers": [["gym_leader_maylene_03d8", "gym_leader_maylene_03d8_hard"]],
   "requirements": {
     "advancements": ["ultimate-cobblemon-progression:journey/sinnoh/cobble_badge"]
@@ -15,6 +15,8 @@
     "cobblemon:pachirisu",
     "cobblemon:prinplup",
     "cobblemon:rotom",
-    "cobblemon:wormadam"
+    "cobblemon:wormadam",
+    "cobblemon:qwilfish hisuian",
+    "cobblemon:sneasel hisuian"
   ]
 }

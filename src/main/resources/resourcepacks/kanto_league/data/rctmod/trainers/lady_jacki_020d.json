@@ -27,10 +27,7 @@
         "spd": 0,
         "spe": 0
       },
-      "evs": {},
-      "heldItem": [
-        "stardust"
-      ]
+      "evs": {}
     },
     {
       "species": "skiploom",
@@ -52,10 +49,7 @@
         "spd": 0,
         "spe": 0
       },
-      "evs": {},
-      "heldItem": [
-        "stardust"
-      ]
+      "evs": {}
     }
   ]
 }

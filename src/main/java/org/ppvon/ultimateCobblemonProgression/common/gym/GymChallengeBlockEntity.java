@@ -2,6 +2,7 @@ package org.ppvon.ultimateCobblemonProgression.common.gym;
 
 import com.cobblemon.mod.common.battles.BattleRegistry;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
+import org.ppvon.ultimateCobblemonProgression.common.component.TrainerLevelComponents;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -29,6 +30,11 @@ public class GymChallengeBlockEntity extends BlockEntity {
     /** Put on every trainer a gym summons, so leftovers can be cleaned up. */
     public static final String LEADER_TAG = "ucp_gym_leader";
 
+    /** Put on a leader a gym summons for this player (not for rematches), naming who it's for. */
+    public static String challengerTag(ServerPlayer player) {
+        return "ucp_gym_for_" + player.getUUID();
+    }
+
     /** How far the challenger may wander from the gym before the leader leaves. */
     private static final double MAX_CHALLENGER_DISTANCE = 32;
     /** Ticks without a battle before an unchallenged leader leaves (3 minutes). */
@@ -53,22 +59,46 @@ public class GymChallengeBlockEntity extends BlockEntity {
         super(GymBlocks.GYM_CHALLENGE_ENTITY, pos, state);
     }
 
-    /** Handles a player using the block: summons their next gym leader. */
+    /**
+     * Handles a player using the block: summons their next gym leader. With two leagues in progress and a leader
+     * ready in each, it opens a menu to pick one instead (see {@link GymChoice}).
+     */
     public void use(ServerPlayer player) {
         ServerLevel level = (ServerLevel) this.level;
         if (level == null) return;
         if (isTaken(level, player)) return;
 
-        GymLeaderPicker.Pick pick = GymLeaderPicker.pick(player);
-        if (!pick.found()) {
-            tell(player, pick.problem().copy().withStyle(ChatFormatting.GRAY));
+        GymLeaderPicker.Result result = GymLeaderPicker.pickAll(player);
+        if (!result.found()) {
+            tell(player, result.problem().copy().withStyle(ChatFormatting.GRAY));
             if (!GymRematch.rematchable(player).isEmpty()) {
                 tell(player, Component.literal("Sneak and use the block with an empty hand to rematch a leader you've beaten.")
                         .withStyle(ChatFormatting.GRAY));
             }
             return;
         }
+        if (result.ready().size() > 1) {
+            ServerPlayNetworking.send(player, new GymChoice.Open(worldPosition, GymChoice.options(player, result.ready())));
+            return;
+        }
+        // One leader ready: summon it, and say why the other league's leader isn't.
+        for (Component why : result.waiting()) tell(player, why.copy().withStyle(ChatFormatting.GRAY));
+        GymLeaderPicker.Pick pick = result.ready().get(0);
         summon(level, player, pick.trainerId(), pick.region().title, false);
+    }
+
+    /** Summons the leader the player picked from the menu, if it's still one of the leaders ready for them. */
+    public void challenge(ServerPlayer player, String pickedId) {
+        ServerLevel level = (ServerLevel) this.level;
+        if (level == null) return;
+        if (isTaken(level, player)) return;
+        for (GymLeaderPicker.Pick pick : GymLeaderPicker.pickAll(player).ready()) {
+            if (pick.trainerId().equals(pickedId)) {
+                summon(level, player, pick.trainerId(), pick.region().title, false);
+                return;
+            }
+        }
+        tell(player, Component.literal("That leader isn't ready for you any more. Use the block again.").withStyle(ChatFormatting.RED));
     }
 
     /** Handles a player sneaking and using the block: opens the menu of leaders they can rematch. */
@@ -115,10 +145,21 @@ public class GymChallengeBlockEntity extends BlockEntity {
     }
 
     private void summon(ServerLevel level, ServerPlayer player, String id, String regionTitle, boolean rematch) {
+        if (!rematch) {
+            // Two leagues at once: the leader won't battle while a party Pokémon is above the level cap, so say so now.
+            var over = LeagueLevelCap.aboveCap(player);
+            if (over != null) {
+                tell(player, Component.literal(over.getDisplayName(false).getString() + " is level " + over.getLevel()
+                        + ", above your level cap of " + TrainerLevelComponents.KEY.get(player).getLevelCapOverride()
+                        + ". Gym leaders won't battle you until every Pokémon in your party is at or below it.")
+                        .withStyle(ChatFormatting.RED));
+                return;
+            }
+        }
         clearLeftovers(level);
         Entity trainer = rematch
                 ? RctBridge.summon(level, leaderSpot(level), id, GymRematch.REMATCH_TAG)
-                : RctBridge.summon(level, leaderSpot(level), id);
+                : RctBridge.summon(level, leaderSpot(level), id, challengerTag(player));
         if (trainer == null) {
             tell(player, Component.literal("The gym leader couldn't be summoned. Check the server log.").withStyle(ChatFormatting.RED));
             return;
@@ -177,6 +218,8 @@ public class GymChallengeBlockEntity extends BlockEntity {
         }
 
         if (RctBridge.defeats(player, trainerId) > defeatsAtSummon) {
+            // RCT counts the win after CJP's advancement fires, so the two-league level cap catches up here.
+            LeagueLevelCap.update(player);
             dismiss(trainer, player, Component.literal(leaderName + " heads back to the league. The gym is free again.")
                     .withStyle(ChatFormatting.GREEN));
         } else if (level.getGameTime() - lastActive > IDLE_TIMEOUT) {

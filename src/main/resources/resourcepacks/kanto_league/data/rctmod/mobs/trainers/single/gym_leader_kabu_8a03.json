@@ -1,0 +1,25 @@
+{
+  "type": "leader",
+  "series": [
+    "galar"
+  ],
+  "optional": false,
+  "requiredDefeats": [
+    [
+      "gym_leader_nessa_8a02"
+    ]
+  ],
+  "maxTrainerDefeats": 1,
+  "maxTrainerWins": -1,
+  "battleCooldownTicks": 240,
+  "signatureItem": "cobblemon:charcoal_stick",
+  "spawnWeightFactor": 0,
+  "biomeTagWhitelist": [
+    "is_badlands"
+  ],
+  "biomeTagBlacklist": [
+    "is_void",
+    "is_nether",
+    "is_end"
+  ]
+}

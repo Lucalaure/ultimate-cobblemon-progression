@@ -1,0 +1,64 @@
+{
+  "name": "Gym Leader Milo",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:gossifleur",
+      "gender": "MALE",
+      "level": 19,
+      "nature": "cobblemon:adamant",
+      "ability": "cottondown",
+      "moveset": [
+        "magicalleaf",
+        "round",
+        "rapidspin"
+      ],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      }
+    },
+    {
+      "species": "cobblemon:eldegoss",
+      "gender": "MALE",
+      "level": 20,
+      "nature": "cobblemon:modest",
+      "ability": "cottondown",
+      "moveset": [
+        "magicalleaf",
+        "leafage",
+        "round"
+      ],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      },
+      "gimmicks": {
+        "dynamax": true,
+        "gmax": false
+      }
+    }
+  ]
+}

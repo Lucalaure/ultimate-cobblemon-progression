@@ -2,6 +2,7 @@ package org.ppvon.ultimateCobblemonProgression.client.card;
 
 import com.cobblemon.mod.common.api.pokemon.PokemonSpecies;
 import com.cobblemon.mod.common.api.types.ElementalType;
+import com.cobblemon.mod.common.pokemon.FormData;
 import com.cobblemon.mod.common.pokemon.Species;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
@@ -68,7 +69,10 @@ public class TrainerCardScreen extends Screen {
     private float scale = 1;
     private int left, top;
     /** Species under the mouse on the Wild tab, for the tooltip. */
-    private Species hovered;
+    private WildSpecies hovered;
+    /** Two leagues at once: whether the Road tab shows the other league, and where its switch is drawn. */
+    private boolean showOtherRoad;
+    private int[] roadToggle;
     /** "Pick" buttons on the Regions tab, in content coordinates (before scrolling). */
     private final List<PickButton> pickButtons = new ArrayList<>();
     /** The pick waiting for the player to confirm it, or null. */
@@ -168,6 +172,15 @@ public class TrainerCardScreen extends Screen {
                 }
             }
             return true;
+        }
+        if (tab == Tab.ROAD && y >= CY0 && y < CY1 && roadToggle != null) {
+            double cy = y + scroll;
+            int[] b = roadToggle;
+            if (x >= b[0] && x < b[2] && cy >= b[1] && cy < b[3]) {
+                showOtherRoad = !showOtherRoad;
+                click();
+                return true;
+            }
         }
         if (tab == Tab.ROAD && y >= CY0 && y < CY1 && difficultyToggle != null) {
             double cy = y + scroll;
@@ -303,7 +316,7 @@ public class TrainerCardScreen extends Screen {
         choiceButtons.clear();
         laterButton = null;
         boolean next = data.choosingNext();
-        text(g, Component.literal(next ? "CHOOSE YOUR NEXT REGION" : "CHOOSE YOUR STARTING REGION").withStyle(ChatFormatting.BOLD),
+        text(g, Component.literal(next ? "CHOOSE YOUR NEXT REGION" : "CHOOSE YOUR SECOND REGION").withStyle(ChatFormatting.BOLD),
                 W / 2f, 22, INK, 1, true);
         text(g, Component.literal(next ? "Where does your journey go next?" : "Where does your journey begin?"), W / 2f, 34, MUTED, 1, true);
 
@@ -456,7 +469,9 @@ public class TrainerCardScreen extends Screen {
         int x0 = 98, x1 = CX1;
         int y = 40;
         if (data.regionMode()) {
-            row(g, x0, x1, y, "Region", Component.literal(data.regionTitle()).withStyle(ChatFormatting.BOLD), INK);
+            String regions = data.regionTitle();
+            for (TrainerCardData.LeagueView other : data.otherLeagues()) regions += " + " + other.title();
+            row(g, x0, x1, y, "Region", Component.literal(regions).withStyle(ChatFormatting.BOLD), INK);
             y += 18;
             barRow(g, x0, x1, y, "Tier", data.tier(), data.maxTier(), DARK);
         } else {
@@ -483,6 +498,12 @@ public class TrainerCardScreen extends Screen {
         if (hasNext) {
             fit(g, Component.literal("▶ ").append(data.next()).withStyle(ChatFormatting.BOLD), 31, by0 + 14, textW, WHITE, 1.25f, Align.LEFT);
             hintY = by0 + 28;
+        }
+        // Two leagues at once: the other league's next leader too.
+        for (TrainerCardData.LeagueView other : data.otherLeagues()) {
+            if (other.next().getString().isEmpty()) continue;
+            fit(g, Component.literal("▶ " + other.title() + ": ").append(other.next()), 31, hintY, textW, WHITE, 1, Align.LEFT);
+            hintY += 12;
         }
         // The hint can be long (e.g. the Pokémon still to catch): it shrinks to fit the box rather than being cut off.
         paragraph(g, data.hint(), 31, hintY, textW, by1 - 2 - hintY, LIGHT, 1, Align.LEFT);
@@ -521,26 +542,51 @@ public class TrainerCardScreen extends Screen {
 
     private void drawRoad(GuiGraphics g, int mx, int my) {
         difficultyToggle = null;
+        roadToggle = null;
         int y = CY0 + 2;
-        if (data.road().isEmpty()) {
-            paragraph(g, Component.literal("No trainers are listed for " + data.regionTitle() + "."), (CX0 + CX1) / 2f, y + 20,
+        // Two leagues at once: a switch between the focused league's road and the other league's.
+        TrainerCardData.LeagueView otherLeague = data.otherLeagues().isEmpty() ? null : data.otherLeagues().get(0);
+        if (otherLeague == null) showOtherRoad = false;
+        String roadTitle = showOtherRoad ? otherLeague.title() : data.regionTitle();
+        List<RoadEntry> road = showOtherRoad ? otherLeague.road() : data.road();
+        long beaten = showOtherRoad ? otherLeague.beaten() : data.beaten();
+        if (road.isEmpty()) {
+            paragraph(g, Component.literal("No trainers are listed for " + roadTitle + "."), (CX0 + CX1) / 2f, y + 20,
                     CX1 - CX0 - 12, 30, MUTED, 1, Align.CENTRE);
             contentHeight = 0;
             return;
         }
-        String summary = data.beaten() + " / " + data.road().size() + " beaten";
-        g.drawString(font, summary, CX1 - 8 - font.width(summary), y, MUTED, false);
-        fit(g, Component.literal(data.regionTitle() + " Road").withStyle(ChatFormatting.BOLD), CX0 + 4, y,
-                CX1 - 14 - font.width(summary) - (CX0 + 4), INK, 1, Align.LEFT);
+        String summary = beaten + " / " + road.size() + " beaten";
+        int titleEnd = CX1 - 14 - font.width(summary);
+        if (otherLeague != null) {
+            String label = "Show " + (showOtherRoad ? data.regionTitle() : otherLeague.title());
+            int bw = font.width(label) + 10;
+            int bx1 = CX1 - 6, bx0 = bx1 - bw, by0 = y - 2, by1 = y + 10;
+            int contentMouseY = my + (int) scroll;
+            boolean hover = confirming == null && my >= CY0 && my < CY1 && mx >= bx0 && mx < bx1
+                    && contentMouseY >= by0 && contentMouseY < by1;
+            g.fill(bx0, by0, bx1, by1, FRAME_DARK);
+            g.fill(bx0 + 1, by0 + 1, bx1 - 1, by1 - 1, hover ? MID : DARK);
+            text(g, Component.literal(label), (bx0 + bx1) / 2f, by0 + 2, WHITE, 1, true);
+            roadToggle = new int[]{bx0, by0, bx1, by1};
+            g.drawString(font, summary, bx0 - 6 - font.width(summary), y, MUTED, false);
+            titleEnd = bx0 - 12 - font.width(summary);
+        } else {
+            g.drawString(font, summary, CX1 - 8 - font.width(summary), y, MUTED, false);
+        }
+        fit(g, Component.literal(roadTitle + " Road").withStyle(ChatFormatting.BOLD), CX0 + 4, y,
+                titleEnd - (CX0 + 4), INK, 1, Align.LEFT);
         y += 13;
 
         if (!data.difficulty().isEmpty()) {
             // Gym difficulty, with a button to switch it when players choose their own.
             int rx0 = CX0 + 2, rx1 = CX1 - 6, ry1 = y + 15;
             panel(g, rx0, y, rx1, ry1);
-            boolean hard = data.difficulty().equals("Hard");
+            // A region without Hard leaders always summons Normal ones, so there's nothing to switch.
+            boolean hardHere = showOtherRoad ? otherLeague.hardAvailable() : data.hardAvailable();
+            boolean hard = hardHere && data.difficulty().equals("Hard");
             int labelEnd = rx1 - 6;
-            if (data.difficultyChangeable()) {
+            if (data.difficultyChangeable() && hardHere) {
                 String other = hard ? "Normal" : "Hard";
                 String label = "Switch to " + other;
                 int bw = font.width(label) + 12;
@@ -555,14 +601,15 @@ public class TrainerCardScreen extends Screen {
                         new Pending(other.toLowerCase(java.util.Locale.ROOT), other, PickRegionPayload.DIFFICULTY));
                 labelEnd = bx0 - 6;
             }
-            MutableComponent line = Component.literal("Gym leaders: ").append(Component.literal(data.difficulty())
+            MutableComponent line = Component.literal("Gym leaders: ").append(Component.literal(hardHere ? data.difficulty() : "Normal")
                     .withStyle(s -> s.withBold(true).withColor(hard ? RED : INK)));
+            if (!hardHere) line.append(Component.literal("  ·  no Hard leaders in " + roadTitle + " yet"));
             fit(g, line, rx0 + 6, y + 4, labelEnd - (rx0 + 6), MUTED, 1, Align.LEFT);
             y += 18;
         }
 
         int i = 0;
-        for (RoadEntry r : data.road()) {
+        for (RoadEntry r : road) {
             int rx0 = CX0 + 2, rx1 = CX1 - 6, ry1 = y + 13;
             if (r.status() == TrainerCardData.NEXT) {
                 g.fill(rx0, y, rx1, ry1, RED);
@@ -688,10 +735,11 @@ public class TrainerCardScreen extends Screen {
         boolean mouseInView = my >= CY0 && my < CY1 && mx >= CX0 && mx < CX1;
 
         if (data.canPickStart()) {
-            String first = data.regions().isEmpty() ? "" : data.regions().get(0).title();
+            String first = data.regionTitle();
             int bx0 = CX0 + 2, bx1 = CX1 - 6;
-            List<FormattedCharSequence> lines = font.split(Component.literal("Pick one more region to explore from the start, alongside "
-                    + first + ". Its Pokémon can spawn for you right away. You only get one pick."), bx1 - bx0 - 12);
+            List<FormattedCharSequence> lines = font.split(Component.literal("Pick a second region to work through alongside "
+                    + first + ": another league with its own gym leaders, or a region without gyms that grows with your badges. "
+                    + "Its Pokémon can spawn for you right away. You only get one pick."), bx1 - bx0 - 12);
             int by1 = y + 16 + lines.size() * 10;
             g.fill(bx0, y, bx1, by1, FRAME_DARK);
             g.fill(bx0 + 1, y + 1, bx1 - 1, by1 - 1, DARK);
@@ -727,7 +775,7 @@ public class TrainerCardScreen extends Screen {
                 text(g, Component.literal(label).withStyle(ChatFormatting.BOLD), (bx0 + bx1) / 2f, by0 + 3, WHITE, 1, true);
                 pickButtons.add(new PickButton(bx0, by0, bx1, by1, new Pending(r.id(), r.title(), PickRegionPayload.EXTRA)));
                 rightEdge = bx0 - 6;
-                String note = "starting choice";
+                String note = "second region";
                 float noteW = font.width(note) * 0.75f;
                 text(g, Component.literal(note), rightEdge - noteW, y + 6.5f, MUTED, 0.75f, false);
                 fit(g, title, rx0 + 6, y + 5, rightEdge - noteW - 6 - (rx0 + 6), titleColour, 1, Align.LEFT);
@@ -837,10 +885,11 @@ public class TrainerCardScreen extends Screen {
                 boolean hover = mouseInView && mx >= cx && mx < cx + cellW - 2 && contentMouseY >= y && contentMouseY < y + 12;
                 if (hover) {
                     g.fill(cx, y, cx + cellW - 2, y + 12, LIGHT);
-                    hovered = sp;
+                    hovered = sp != null ? s : null;
                 }
                 dexIcon(g, cx + 2, y + 2, s.knowledge());
                 Component name = sp != null ? sp.getTranslatedName() : Component.literal(s.id().getPath());
+                if (!s.prefix().isEmpty()) name = Component.literal(s.prefix() + " ").append(name);
                 int colour = s.knowledge() == TrainerCardData.UNKNOWN ? MUTED : INK;
                 fit(g, name, cx + 13, y + 2, cellW - 16, colour, 1, Align.LEFT);
                 col++;
@@ -870,13 +919,18 @@ public class TrainerCardScreen extends Screen {
         g.setColor(1, 1, 1, 1);
     }
 
-    private List<Component> speciesTooltip(Species sp) {
+    private List<Component> speciesTooltip(WildSpecies s) {
+        Species sp = PokemonSpecies.getByIdentifier(s.id());
         List<Component> lines = new ArrayList<>();
-        lines.add(sp.getTranslatedName().copy().withStyle(ChatFormatting.BOLD)
+        if (sp == null) return lines;
+        // A regional form has its own types (Alolan Rattata is Dark/Normal).
+        FormData form = s.form().isEmpty() ? null : sp.getFormByName(s.form());
+        MutableComponent name = s.prefix().isEmpty() ? Component.empty() : Component.literal(s.prefix() + " ");
+        lines.add(name.append(sp.getTranslatedName()).withStyle(ChatFormatting.BOLD)
                 .append(Component.literal("  #" + String.format("%04d", sp.getNationalPokedexNumber())).withStyle(ChatFormatting.GRAY)));
         MutableComponent types = Component.empty();
-        types.append(typeName(sp.getPrimaryType()));
-        ElementalType second = sp.getSecondaryType();
+        types.append(typeName(form != null ? form.getPrimaryType() : sp.getPrimaryType()));
+        ElementalType second = form != null ? form.getSecondaryType() : sp.getSecondaryType();
         if (second != null) types.append(Component.literal(" / ").withStyle(ChatFormatting.GRAY)).append(typeName(second));
         lines.add(types);
         return lines;

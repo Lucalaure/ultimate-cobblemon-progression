@@ -19,7 +19,7 @@
     {
       "species": "cobblemon:spiritomb",
       "gender": "MALE",
-      "level": 61,
+      "level": 66,
       "nature": "cobblemon:careful",
       "ability": "pressure",
       "moveset": ["willowisp", "painsplit", "suckerpunch", "foulplay"],
@@ -44,7 +44,7 @@
     {
       "species": "cobblemon:roserade",
       "gender": "MALE",
-      "level": 60,
+      "level": 66,
       "nature": "cobblemon:timid",
       "ability": "naturalcure",
       "moveset": ["sludgebomb", "gigadrain", "shadowball", "spikes"],
@@ -69,7 +69,7 @@
     {
       "species": "cobblemon:gastrodon",
       "gender": "FEMALE",
-      "level": 60,
+      "level": 66,
       "nature": "cobblemon:calm",
       "ability": "stormdrain",
       "moveset": ["surf", "earthpower", "recover", "icebeam"],
@@ -94,7 +94,7 @@
     {
       "species": "cobblemon:lucario",
       "gender": "MALE",
-      "level": 63,
+      "level": 66,
       "nature": "cobblemon:timid",
       "ability": "innerfocus",
       "moveset": ["aurasphere", "flashcannon", "nastyplot", "vacuumwave"],
@@ -119,7 +119,7 @@
     {
       "species": "cobblemon:milotic",
       "gender": "FEMALE",
-      "level": 63,
+      "level": 66,
       "nature": "cobblemon:bold",
       "ability": "marvelscale",
       "moveset": ["scald", "icebeam", "recover", "haze"],

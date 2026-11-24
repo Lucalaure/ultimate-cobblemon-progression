@@ -1,7 +1,8 @@
 {
-  "levelCap": 50,
+  "levelCap": 48,
+  "trainers": [["gym_leader_piers_8a07"]],
   "requirements": {
-    "advancements": ["ultimate-cobblemon-progression:journey/milestones/badge_7"]
+    "advancements": ["ultimate-cobblemon-progression:journey/galar/dark_badge"]
   },
   "species": [
     "cobblemon:coalossal",

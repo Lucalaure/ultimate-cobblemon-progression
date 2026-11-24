@@ -19,7 +19,7 @@
     {
       "species": "cobblemon:pelipper",
       "gender": "MALE",
-      "level": 28,
+      "level": 31,
       "nature": "cobblemon:modest",
       "ability": "drizzle",
       "moveset": ["waterpulse", "airslash", "protect", "roost"],
@@ -44,7 +44,7 @@
     {
       "species": "cobblemon:gyarados",
       "gender": "MALE",
-      "level": 27,
+      "level": 31,
       "nature": "cobblemon:jolly",
       "ability": "intimidate",
       "moveset": ["aquatail", "icefang", "crunch", "bulldoze"],
@@ -69,7 +69,7 @@
     {
       "species": "cobblemon:quagsire",
       "gender": "FEMALE",
-      "level": 27,
+      "level": 31,
       "nature": "cobblemon:relaxed",
       "ability": "unaware",
       "moveset": ["waterpulse", "bulldoze", "recover", "toxic"],
@@ -94,7 +94,7 @@
     {
       "species": "cobblemon:floatzel",
       "gender": "MALE",
-      "level": 30,
+      "level": 31,
       "nature": "cobblemon:adamant",
       "ability": "swiftswim",
       "moveset": ["aquajet", "waterfall", "icefang", "crunch"],

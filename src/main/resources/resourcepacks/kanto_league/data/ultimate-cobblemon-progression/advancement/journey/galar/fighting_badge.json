@@ -1,0 +1,35 @@
+{
+  "parent": "ultimate-cobblemon-progression:journey/galar/fire_badge",
+  "display": {
+    "icon": {
+      "id": "cobblemon:black_belt"
+    },
+    "title": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.galar.fighting_badge.title",
+      "fallback": "Fighting Badge"
+    },
+    "description": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.galar.fighting_badge.description",
+      "fallback": "Defeat Gym Leader Bea"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat": {
+      "trigger": "ultimate-cobblemon-progression:defeat_trainer",
+      "conditions": {
+        "trainers": [
+          "gym_leader_bea_8a04"
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "defeat"
+    ]
+  ]
+}

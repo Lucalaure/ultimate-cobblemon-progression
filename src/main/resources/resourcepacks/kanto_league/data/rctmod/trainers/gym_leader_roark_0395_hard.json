@@ -19,7 +19,7 @@
     {
       "species": "cobblemon:geodude",
       "gender": "MALE",
-      "level": 12,
+      "level": 14,
       "nature": "cobblemon:impish",
       "ability": "sturdy",
       "moveset": ["stealthrock", "defensecurl", "rollout", "rocktomb"],
@@ -44,7 +44,7 @@
     {
       "species": "cobblemon:onix",
       "gender": "FEMALE",
-      "level": 12,
+      "level": 14,
       "nature": "cobblemon:adamant",
       "ability": "sturdy",
       "moveset": ["rockthrow", "bind", "dragonbreath", "smackdown"],
@@ -68,7 +68,7 @@
     {
       "species": "cobblemon:nosepass",
       "gender": "MALE",
-      "level": 13,
+      "level": 14,
       "nature": "cobblemon:impish",
       "ability": "sturdy",
       "moveset": ["thunderwave", "rockthrow", "block", "tackle"],

@@ -1,0 +1,25 @@
+{
+  "type": "leader",
+  "series": [
+    "galar"
+  ],
+  "optional": false,
+  "requiredDefeats": [
+    [
+      "gym_leader_melony_8a0e"
+    ]
+  ],
+  "maxTrainerDefeats": 1,
+  "maxTrainerWins": -1,
+  "battleCooldownTicks": 240,
+  "signatureItem": "cobblemon:black_glasses",
+  "spawnWeightFactor": 0,
+  "biomeTagWhitelist": [
+    "is_plains"
+  ],
+  "biomeTagBlacklist": [
+    "is_void",
+    "is_nether",
+    "is_end"
+  ]
+}

@@ -23,6 +23,8 @@ import java.util.List;
  * @param choosingDifficulty   whether the card first asks the player to pick a difficulty
  * @param wildTrainers  per open region, the Radical Cobblemon Trainers wild trainers it lists and which the player has
  *                   beaten. Empty without RCT or outside region mode
+ * @param otherLeagues  with two leagues in progress, the one the card isn't focused on (at most one). Empty otherwise
+ * @param hardAvailable whether the card's region has Hard leaders; without them its leaders are always Normal
  */
 public record TrainerCardData(
         String player,
@@ -44,11 +46,20 @@ public record TrainerCardData(
         String difficulty,
         boolean difficultyChangeable,
         boolean choosingDifficulty,
-        List<TrainerGroup> wildTrainers
+        List<TrainerGroup> wildTrainers,
+        List<LeagueView> otherLeagues,
+        boolean hardAvailable
 ) {
     public static final int BEATEN = 0, NEXT = 1, LATER = 2;
     public static final int LOCKED = 0, OPEN = 1, COMPLETE = 2;
     public static final int UNKNOWN = 0, SEEN = 1, CAUGHT = 2;
+
+    /** Another league in progress: its name, tier, next trainer and road, for the card's Profile and Road tabs. */
+    public record LeagueView(String title, int tier, int maxTier, Component next, List<RoadEntry> road, boolean hardAvailable) {
+        public long beaten() {
+            return road.stream().filter(r -> r.status == BEATEN).count();
+        }
+    }
 
     /** A trainer in the region's order. */
     public record RoadEntry(int tier, int levelCap, Component name, int status, boolean hard) {}
@@ -66,7 +77,17 @@ public record TrainerCardData(
     /** The species allowed to spawn from one region, and how many the next tier adds. */
     public record WildGroup(String title, int upcoming, List<WildSpecies> species) {}
 
-    public record WildSpecies(ResourceLocation id, int knowledge) {}
+    /**
+     * A wild Pokémon on the card: a species, or one of its regional forms.
+     *
+     * @param form   the regional form's Cobblemon form name ("Alola"), or "" for the species
+     * @param prefix shown before the species' name for a regional form ("Alolan"), or ""
+     */
+    public record WildSpecies(ResourceLocation id, String form, String prefix, int knowledge) {
+        public WildSpecies(ResourceLocation id, int knowledge) {
+            this(id, "", "", knowledge);
+        }
+    }
 
     /** A league region the player can start their journey in, or travel to next, shown on the card's choice screen. */
     public record RegionChoice(String id, String title, int trainers, int species, Component firstTrainer) {}
@@ -114,14 +135,7 @@ public record TrainerCardData(
         ComponentSerialization.STREAM_CODEC.encode(buf, d.hint);
         buf.writeBoolean(d.allDone);
 
-        buf.writeVarInt(d.road.size());
-        for (RoadEntry r : d.road) {
-            buf.writeVarInt(r.tier);
-            buf.writeVarInt(r.levelCap);
-            ComponentSerialization.STREAM_CODEC.encode(buf, r.name);
-            buf.writeVarInt(r.status);
-            buf.writeBoolean(r.hard);
-        }
+        writeRoad(buf, d.road);
         buf.writeVarInt(d.regions.size());
         for (RegionEntry r : d.regions) {
             buf.writeUtf(r.id);
@@ -140,6 +154,8 @@ public record TrainerCardData(
             buf.writeVarInt(g.species.size());
             for (WildSpecies s : g.species) {
                 buf.writeResourceLocation(s.id);
+                buf.writeUtf(s.form);
+                buf.writeUtf(s.prefix);
                 buf.writeVarInt(s.knowledge);
             }
         }
@@ -166,6 +182,36 @@ public record TrainerCardData(
                 buf.writeBoolean(t.beaten);
             }
         }
+        buf.writeVarInt(d.otherLeagues.size());
+        for (LeagueView l : d.otherLeagues) {
+            buf.writeUtf(l.title);
+            buf.writeVarInt(l.tier);
+            buf.writeVarInt(l.maxTier);
+            ComponentSerialization.STREAM_CODEC.encode(buf, l.next);
+            writeRoad(buf, l.road);
+            buf.writeBoolean(l.hardAvailable);
+        }
+        buf.writeBoolean(d.hardAvailable);
+    }
+
+    private static void writeRoad(RegistryFriendlyByteBuf buf, List<RoadEntry> road) {
+        buf.writeVarInt(road.size());
+        for (RoadEntry r : road) {
+            buf.writeVarInt(r.tier);
+            buf.writeVarInt(r.levelCap);
+            ComponentSerialization.STREAM_CODEC.encode(buf, r.name);
+            buf.writeVarInt(r.status);
+            buf.writeBoolean(r.hard);
+        }
+    }
+
+    private static List<RoadEntry> readRoad(RegistryFriendlyByteBuf buf) {
+        List<RoadEntry> road = new ArrayList<>();
+        for (int i = buf.readVarInt(); i > 0; i--) {
+            road.add(new RoadEntry(buf.readVarInt(), buf.readVarInt(), ComponentSerialization.STREAM_CODEC.decode(buf), buf.readVarInt(),
+                    buf.readBoolean()));
+        }
+        return road;
     }
 
     private static TrainerCardData read(RegistryFriendlyByteBuf buf) {
@@ -181,11 +227,7 @@ public record TrainerCardData(
         Component hint = ComponentSerialization.STREAM_CODEC.decode(buf);
         boolean allDone = buf.readBoolean();
 
-        List<RoadEntry> road = new ArrayList<>();
-        for (int i = buf.readVarInt(); i > 0; i--) {
-            road.add(new RoadEntry(buf.readVarInt(), buf.readVarInt(), ComponentSerialization.STREAM_CODEC.decode(buf), buf.readVarInt(),
-                    buf.readBoolean()));
-        }
+        List<RoadEntry> road = readRoad(buf);
         List<RegionEntry> regions = new ArrayList<>();
         for (int i = buf.readVarInt(); i > 0; i--) {
             regions.add(new RegionEntry(buf.readUtf(), buf.readUtf(), buf.readVarInt(), buf.readVarInt(), buf.readVarInt(),
@@ -196,7 +238,7 @@ public record TrainerCardData(
             String title = buf.readUtf();
             int upcoming = buf.readVarInt();
             List<WildSpecies> species = new ArrayList<>();
-            for (int j = buf.readVarInt(); j > 0; j--) species.add(new WildSpecies(buf.readResourceLocation(), buf.readVarInt()));
+            for (int j = buf.readVarInt(); j > 0; j--) species.add(new WildSpecies(buf.readResourceLocation(), buf.readUtf(), buf.readUtf(), buf.readVarInt()));
             wild.add(new WildGroup(title, upcoming, species));
         }
         boolean choosingNext = buf.readBoolean();
@@ -217,8 +259,14 @@ public record TrainerCardData(
             }
             wildTrainers.add(new TrainerGroup(title, trainers));
         }
+        List<LeagueView> otherLeagues = new ArrayList<>();
+        for (int i = buf.readVarInt(); i > 0; i--) {
+            otherLeagues.add(new LeagueView(buf.readUtf(), buf.readVarInt(), buf.readVarInt(),
+                    ComponentSerialization.STREAM_CODEC.decode(buf), readRoad(buf), buf.readBoolean()));
+        }
+        boolean hardAvailable = buf.readBoolean();
         return new TrainerCardData(player, regionMode, regionTitle, tier, maxTier, levelCap, seen, caught,
                 next, hint, allDone, road, regions, wild, regionChoices, choosingNext, difficulty, difficultyChangeable,
-                choosingDifficulty, wildTrainers);
+                choosingDifficulty, wildTrainers, otherLeagues, hardAvailable);
     }
 }

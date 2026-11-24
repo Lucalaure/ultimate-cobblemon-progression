@@ -19,7 +19,7 @@
     {
       "species": "cobblemon:dugtrio",
       "gender": "MALE",
-      "level": 44,
+      "level": 50,
       "nature": "cobblemon:jolly",
       "ability": "arenatrap",
       "moveset": ["earthquake", "suckerpunch", "stoneedge", "memento"],
@@ -44,7 +44,7 @@
     {
       "species": "cobblemon:marowak",
       "gender": "MALE",
-      "level": 45,
+      "level": 50,
       "nature": "cobblemon:adamant",
       "ability": "rockhead",
       "moveset": ["earthquake", "stoneedge", "firepunch", "knockoff"],
@@ -68,7 +68,7 @@
     {
       "species": "cobblemon:sandslash",
       "gender": "MALE",
-      "level": 45,
+      "level": 50,
       "nature": "cobblemon:jolly",
       "ability": "sandrush",
       "moveset": ["earthquake", "knockoff", "rapidspin", "swordsdance"],
@@ -93,7 +93,7 @@
     {
       "species": "cobblemon:nidoqueen",
       "gender": "FEMALE",
-      "level": 45,
+      "level": 50,
       "nature": "cobblemon:modest",
       "ability": "sheerforce",
       "moveset": ["earthpower", "sludgewave", "icebeam", "stealthrock"],
@@ -118,7 +118,7 @@
     {
       "species": "cobblemon:nidoking",
       "gender": "MALE",
-      "level": 46,
+      "level": 50,
       "nature": "cobblemon:timid",
       "ability": "sheerforce",
       "moveset": ["earthpower", "sludgewave", "icebeam", "thunderbolt"],

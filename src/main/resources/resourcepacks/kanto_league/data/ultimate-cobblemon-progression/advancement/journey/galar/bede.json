@@ -1,0 +1,35 @@
+{
+  "parent": "ultimate-cobblemon-progression:journey/galar/hop",
+  "display": {
+    "icon": {
+      "id": "cobblemon:twisted_spoon"
+    },
+    "title": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.galar.bede.title",
+      "fallback": "Bede"
+    },
+    "description": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.galar.bede.description",
+      "fallback": "Defeat Bede"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat": {
+      "trigger": "ultimate-cobblemon-progression:defeat_trainer",
+      "conditions": {
+        "trainers": [
+          "bede_8a0b"
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "defeat"
+    ]
+  ]
+}

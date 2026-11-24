@@ -1,0 +1,35 @@
+{
+  "parent": "ultimate-cobblemon-progression:journey/galar/bede",
+  "display": {
+    "icon": {
+      "id": "cobblemon:life_orb"
+    },
+    "title": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.galar.champion.title",
+      "fallback": "Galar Champion"
+    },
+    "description": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.galar.champion.description",
+      "fallback": "Defeat Champion Leon and become Champion of Galar"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat": {
+      "trigger": "ultimate-cobblemon-progression:defeat_trainer",
+      "conditions": {
+        "trainers": [
+          "champion_leon_8a0c"
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "defeat"
+    ]
+  ]
+}

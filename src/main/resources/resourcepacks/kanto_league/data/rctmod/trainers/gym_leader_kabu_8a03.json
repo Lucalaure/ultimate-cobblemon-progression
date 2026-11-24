@@ -1,0 +1,87 @@
+{
+  "name": "Gym Leader Kabu",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:super_potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:ninetales",
+      "gender": "MALE",
+      "level": 25,
+      "nature": "cobblemon:modest",
+      "ability": "flashfire",
+      "moveset": [
+        "willowisp",
+        "firespin",
+        "quickattack",
+        "ember"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "cobblemon:arcanine",
+      "gender": "MALE",
+      "level": 25,
+      "nature": "cobblemon:adamant",
+      "ability": "intimidate",
+      "moveset": [
+        "willowisp",
+        "flamewheel",
+        "bite",
+        "agility"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "cobblemon:centiskorch",
+      "gender": "MALE",
+      "level": 27,
+      "nature": "cobblemon:adamant",
+      "ability": "flashfire",
+      "moveset": [
+        "flamewheel",
+        "coil",
+        "bugbite",
+        "smokescreen"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      },
+      "gimmicks": {
+        "dynamax": true,
+        "gmax": true
+      }
+    }
+  ]
+}

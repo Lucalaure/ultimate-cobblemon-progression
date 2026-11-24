@@ -1,0 +1,108 @@
+{
+  "name": "Gym Leader Raihan",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:gigalith",
+      "gender": "MALE",
+      "level": 46,
+      "nature": "cobblemon:adamant",
+      "ability": "sturdy",
+      "moveset": [
+        "stealthrock",
+        "sandtomb",
+        "rockblast",
+        "bodypress"
+      ],
+      "ivs": {
+        "hp": 24,
+        "atk": 24,
+        "def": 24,
+        "spa": 24,
+        "spd": 24,
+        "spe": 24
+      }
+    },
+    {
+      "species": "cobblemon:flygon",
+      "gender": "MALE",
+      "level": 47,
+      "nature": "cobblemon:adamant",
+      "ability": "levitate",
+      "moveset": [
+        "thunderpunch",
+        "breakingswipe",
+        "crunch",
+        "steelwing"
+      ],
+      "ivs": {
+        "hp": 24,
+        "atk": 24,
+        "def": 24,
+        "spa": 24,
+        "spd": 24,
+        "spe": 24
+      }
+    },
+    {
+      "species": "cobblemon:sandaconda",
+      "gender": "MALE",
+      "level": 46,
+      "nature": "cobblemon:adamant",
+      "ability": "sandspit",
+      "moveset": [
+        "protect",
+        "glare",
+        "firefang",
+        "earthpower"
+      ],
+      "ivs": {
+        "hp": 24,
+        "atk": 24,
+        "def": 24,
+        "spa": 24,
+        "spd": 24,
+        "spe": 24
+      }
+    },
+    {
+      "species": "cobblemon:duraludon",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "cobblemon:modest",
+      "ability": "lightmetal",
+      "moveset": [
+        "breakingswipe",
+        "bodypress",
+        "stoneedge",
+        "ironhead"
+      ],
+      "ivs": {
+        "hp": 24,
+        "atk": 24,
+        "def": 24,
+        "spa": 24,
+        "spd": 24,
+        "spe": 24
+      },
+      "gimmicks": {
+        "dynamax": true,
+        "gmax": true
+      }
+    }
+  ]
+}

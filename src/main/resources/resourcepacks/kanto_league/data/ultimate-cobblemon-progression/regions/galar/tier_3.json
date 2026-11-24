@@ -1,7 +1,8 @@
 {
-  "levelCap": 24,
+  "levelCap": 27,
+  "trainers": [["gym_leader_nessa_8a02"]],
   "requirements": {
-    "advancements": ["ultimate-cobblemon-progression:journey/milestones/badge_2"]
+    "advancements": ["ultimate-cobblemon-progression:journey/galar/water_badge"]
   },
   "species": [
     "cobblemon:clobbopus",
@@ -12,6 +13,8 @@
     "cobblemon:scorbunny",
     "cobblemon:silicobra",
     "cobblemon:sinistea",
-    "cobblemon:sobble"
+    "cobblemon:sobble",
+    "cobblemon:darumaka galarian",
+    "cobblemon:slowpoke galarian"
   ]
 }

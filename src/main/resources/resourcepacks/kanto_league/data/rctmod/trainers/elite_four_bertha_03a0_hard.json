@@ -19,7 +19,7 @@
     {
       "species": "cobblemon:quagsire",
       "gender": "FEMALE",
-      "level": 55,
+      "level": 59,
       "nature": "cobblemon:relaxed",
       "ability": "unaware",
       "moveset": ["recover", "toxic", "earthquake", "liquidation"],
@@ -44,7 +44,7 @@
     {
       "species": "cobblemon:sudowoodo",
       "gender": "MALE",
-      "level": 56,
+      "level": 59,
       "nature": "cobblemon:adamant",
       "ability": "rockhead",
       "moveset": ["headsmash", "woodhammer", "suckerpunch", "stealthrock"],
@@ -68,7 +68,7 @@
     {
       "species": "cobblemon:golem",
       "gender": "FEMALE",
-      "level": 56,
+      "level": 59,
       "nature": "cobblemon:jolly",
       "ability": "sturdy",
       "moveset": ["rockpolish", "earthquake", "stoneedge", "explosion"],
@@ -93,7 +93,7 @@
     {
       "species": "cobblemon:whiscash",
       "gender": "MALE",
-      "level": 55,
+      "level": 59,
       "nature": "cobblemon:adamant",
       "ability": "oblivious",
       "moveset": ["earthquake", "waterfall", "dragondance", "stoneedge"],
@@ -118,7 +118,7 @@
     {
       "species": "cobblemon:gliscor",
       "gender": "FEMALE",
-      "level": 56,
+      "level": 59,
       "nature": "cobblemon:impish",
       "ability": "poisonheal",
       "moveset": ["earthquake", "knockoff", "protect", "swordsdance"],

@@ -27,10 +27,7 @@
         "spd": 0,
         "spe": 0
       },
-      "evs": {},
-      "heldItem": [
-        "nugget"
-      ]
+      "evs": {}
     },
     {
       "species": "persian",
@@ -52,10 +49,7 @@
         "spd": 0,
         "spe": 0
       },
-      "evs": {},
-      "heldItem": [
-        "nugget"
-      ]
+      "evs": {}
     }
   ]
 }

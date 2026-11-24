@@ -3,8 +3,6 @@ package org.ppvon.ultimateCobblemonProgression.config;
 public class SpawnConfig {
     public boolean doSpeciesBlocking = true;
     public boolean blockUnknownSpecies = true;
-    /** Region mode: regional forms (Alolan, Galarian, ...) only spawn once their own region is open. */
-    public boolean lockRegionalForms = true;
     /** Region mode: Radical Cobblemon Trainers' wild trainers that no region lists (e.g. Pokémon Unbound's) never spawn. */
     public boolean blockUnlistedTrainers = true;
 

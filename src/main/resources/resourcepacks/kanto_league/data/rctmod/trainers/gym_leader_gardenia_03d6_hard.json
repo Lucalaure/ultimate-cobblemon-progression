@@ -19,7 +19,7 @@
     {
       "species": "cobblemon:cherubi",
       "gender": "FEMALE",
-      "level": 19,
+      "level": 22,
       "nature": "cobblemon:modest",
       "ability": "chlorophyll",
       "moveset": ["grassknot", "growth", "dazzlinggleam", "morningsun"],
@@ -44,7 +44,7 @@
     {
       "species": "cobblemon:tangela",
       "gender": "FEMALE",
-      "level": 20,
+      "level": 22,
       "nature": "cobblemon:calm",
       "ability": "regenerator",
       "moveset": ["megadrain", "poisonpowder", "ancientpower", "knockoff"],
@@ -69,7 +69,7 @@
     {
       "species": "cobblemon:turtwig",
       "gender": "MALE",
-      "level": 21,
+      "level": 22,
       "nature": "cobblemon:impish",
       "ability": "shellarmor",
       "moveset": ["razorleaf", "bite", "curse", "synthesis"],

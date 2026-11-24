@@ -19,7 +19,7 @@
     {
       "species": "cobblemon:geodude",
       "gender": "MALE",
-      "level": 12,
+      "level": 14,
       "nature": "cobblemon:impish",
       "ability": "sturdy",
       "moveset": ["defensecurl", "rollout", "rocktomb", "magnitude"],
@@ -44,7 +44,7 @@
     {
       "species": "cobblemon:rhyhorn",
       "gender": "MALE",
-      "level": 12,
+      "level": 14,
       "nature": "cobblemon:adamant",
       "ability": "rockhead",
       "moveset": ["smackdown", "bulldoze", "tackle", "tailwhip"],

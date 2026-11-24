@@ -1,0 +1,35 @@
+{
+  "parent": "ultimate-cobblemon-progression:journey/galar/dark_badge",
+  "display": {
+    "icon": {
+      "id": "cobblemon:dragon_fang"
+    },
+    "title": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.galar.dragon_badge.title",
+      "fallback": "Dragon Badge"
+    },
+    "description": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.galar.dragon_badge.description",
+      "fallback": "Defeat Gym Leader Raihan"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat": {
+      "trigger": "ultimate-cobblemon-progression:defeat_trainer",
+      "conditions": {
+        "trainers": [
+          "gym_leader_raihan_8a08"
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "defeat"
+    ]
+  ]
+}

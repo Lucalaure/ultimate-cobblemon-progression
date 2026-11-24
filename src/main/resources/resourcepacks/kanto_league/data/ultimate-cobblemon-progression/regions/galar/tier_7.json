@@ -1,7 +1,8 @@
 {
-  "levelCap": 47,
+  "levelCap": 46,
+  "trainers": [["gym_leader_gordie_8a06"], ["gym_leader_melony_8a0e"]],
   "requirements": {
-    "advancements": ["ultimate-cobblemon-progression:journey/milestones/badge_6"]
+    "advancements": ["ultimate-cobblemon-progression:journey/galar/ice_badge"]
   },
   "species": [
     "cobblemon:alcremie",
@@ -12,6 +13,7 @@
     "cobblemon:corviknight",
     "cobblemon:dracovish",
     "cobblemon:dubwool",
-    "cobblemon:toxtricity"
+    "cobblemon:toxtricity",
+    "cobblemon:rapidash galarian"
   ]
 }

@@ -19,7 +19,7 @@
     {
       "species": "cobblemon:growlithe",
       "gender": "MALE",
-      "level": 42,
+      "level": 47,
       "nature": "cobblemon:adamant",
       "ability": "intimidate",
       "moveset": ["firefang", "crunch", "willowisp", "roar"],
@@ -44,7 +44,7 @@
     {
       "species": "cobblemon:ninetales",
       "gender": "FEMALE",
-      "level": 43,
+      "level": 47,
       "nature": "cobblemon:timid",
       "ability": "drought",
       "moveset": ["flamethrower", "solarbeam", "willowisp", "nastyplot"],
@@ -68,7 +68,7 @@
     {
       "species": "cobblemon:magmar",
       "gender": "MALE",
-      "level": 43,
+      "level": 47,
       "nature": "cobblemon:modest",
       "ability": "flamebody",
       "moveset": ["flamethrower", "thunderpunch", "confuseray", "lowkick"],
@@ -92,7 +92,7 @@
     {
       "species": "cobblemon:rapidash",
       "gender": "MALE",
-      "level": 43,
+      "level": 47,
       "nature": "cobblemon:jolly",
       "ability": "flashfire",
       "moveset": ["flareblitz", "wildcharge", "highhorsepower", "morningsun"],

@@ -1,0 +1,108 @@
+{
+  "name": "Gym Leader Bea",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:super_potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:hitmontop",
+      "gender": "MALE",
+      "level": 30,
+      "nature": "cobblemon:adamant",
+      "ability": "intimidate",
+      "moveset": [
+        "triplekick",
+        "quickattack",
+        "counter",
+        "revenge"
+      ],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      }
+    },
+    {
+      "species": "cobblemon:pangoro",
+      "gender": "FEMALE",
+      "level": 30,
+      "nature": "cobblemon:adamant",
+      "ability": "ironfist",
+      "moveset": [
+        "bulletpunch",
+        "circlethrow",
+        "nightslash",
+        "workup"
+      ],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      }
+    },
+    {
+      "species": "cobblemon:sirfetchd",
+      "gender": "FEMALE",
+      "level": 31,
+      "nature": "cobblemon:adamant",
+      "ability": "steadfast",
+      "moveset": [
+        "detect",
+        "swordsdance",
+        "brutalswing",
+        "revenge"
+      ],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      }
+    },
+    {
+      "species": "cobblemon:machamp",
+      "gender": "FEMALE",
+      "level": 32,
+      "nature": "cobblemon:adamant",
+      "ability": "guts",
+      "moveset": [
+        "scaryface",
+        "revenge",
+        "knockoff",
+        "strength"
+      ],
+      "ivs": {
+        "hp": 15,
+        "atk": 15,
+        "def": 15,
+        "spa": 15,
+        "spd": 15,
+        "spe": 15
+      },
+      "gimmicks": {
+        "dynamax": true,
+        "gmax": true
+      }
+    }
+  ]
+}

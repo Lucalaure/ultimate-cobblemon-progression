@@ -1,0 +1,111 @@
+{
+  "name": "Gym Leader Melony",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:frosmoth",
+      "gender": "FEMALE",
+      "level": 40,
+      "nature": "cobblemon:modest",
+      "ability": "shielddust",
+      "moveset": [
+        "icywind",
+        "featherdance",
+        "bugbuzz",
+        "hail"
+      ],
+      "ivs": {
+        "hp": 20,
+        "atk": 20,
+        "def": 20,
+        "spa": 20,
+        "spd": 20,
+        "spe": 20
+      }
+    },
+    {
+      "species": "cobblemon:darmanitan",
+      "gender": "FEMALE",
+      "level": 40,
+      "nature": "cobblemon:adamant",
+      "ability": "gorillatactics",
+      "moveset": [
+        "iciclecrash",
+        "headbutt",
+        "taunt",
+        "firefang"
+      ],
+      "ivs": {
+        "hp": 20,
+        "atk": 20,
+        "def": 20,
+        "spa": 20,
+        "spd": 20,
+        "spe": 20
+      },
+      "aspects": [
+        "galarian"
+      ]
+    },
+    {
+      "species": "cobblemon:eiscue",
+      "gender": "FEMALE",
+      "level": 41,
+      "nature": "cobblemon:adamant",
+      "ability": "iceface",
+      "moveset": [
+        "amnesia",
+        "freezedry",
+        "hail",
+        "icywind"
+      ],
+      "ivs": {
+        "hp": 20,
+        "atk": 20,
+        "def": 20,
+        "spa": 20,
+        "spd": 20,
+        "spe": 20
+      }
+    },
+    {
+      "species": "cobblemon:lapras",
+      "gender": "FEMALE",
+      "level": 42,
+      "nature": "cobblemon:adamant",
+      "ability": "waterabsorb",
+      "moveset": [
+        "icywind",
+        "icebeam",
+        "surf",
+        "sing"
+      ],
+      "ivs": {
+        "hp": 20,
+        "atk": 20,
+        "def": 20,
+        "spa": 20,
+        "spd": 20,
+        "spe": 20
+      },
+      "gimmicks": {
+        "dynamax": true,
+        "gmax": true
+      }
+    }
+  ]
+}
