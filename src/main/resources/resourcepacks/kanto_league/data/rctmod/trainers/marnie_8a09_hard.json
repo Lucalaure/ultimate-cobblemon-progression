@@ -1,0 +1,220 @@
+{
+  "name": "Marnie",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.05
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 1
+    },
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:liepard",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "cobblemon:timid",
+      "ability": "prankster",
+      "moveset": [
+        "fakeout",
+        "thunderwave",
+        "nastyplot",
+        "darkpulse"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": [
+        "focus_sash"
+      ]
+    },
+    {
+      "species": "cobblemon:toxicroak",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "cobblemon:adamant",
+      "ability": "dryskin",
+      "moveset": [
+        "drainpunch",
+        "suckerpunch",
+        "gunkshot",
+        "swordsdance"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": [
+        "black_sludge"
+      ]
+    },
+    {
+      "species": "cobblemon:scrafty",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "cobblemon:careful",
+      "ability": "intimidate",
+      "moveset": [
+        "fakeout",
+        "drainpunch",
+        "knockoff",
+        "bulkup"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 4,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      },
+      "heldItem": [
+        "leftovers"
+      ]
+    },
+    {
+      "species": "cobblemon:krookodile",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "cobblemon:jolly",
+      "ability": "intimidate",
+      "moveset": [
+        "earthquake",
+        "knockoff",
+        "stoneedge",
+        "closecombat"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": [
+        "choice_scarf"
+      ]
+    },
+    {
+      "species": "cobblemon:morpeko",
+      "gender": "FEMALE",
+      "level": 49,
+      "nature": "cobblemon:jolly",
+      "ability": "hungerswitch",
+      "moveset": [
+        "aurawheel",
+        "knockoff",
+        "partingshot",
+        "protect"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": [
+        "sitrus_berry"
+      ]
+    },
+    {
+      "species": "cobblemon:grimmsnarl",
+      "gender": "MALE",
+      "level": 49,
+      "nature": "cobblemon:careful",
+      "ability": "prankster",
+      "moveset": [
+        "spiritbreak",
+        "darkestlariat",
+        "reflect",
+        "lightscreen"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 4,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      },
+      "heldItem": [
+        "light_clay"
+      ],
+      "gimmicks": {
+        "dynamax": true,
+        "gmax": true
+      }
+    }
+  ]
+}

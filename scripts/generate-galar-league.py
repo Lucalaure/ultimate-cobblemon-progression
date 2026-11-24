@@ -1,4 +1,4 @@
-"""Builds the Galar league (Normal difficulty) into the built-in leagues datapack.
+"""Builds the Galar league (Normal and Hard) into the built-in leagues datapack.
 
 Usage:
     python scripts/generate-galar-league.py [--pack DIR] [--cobblemon-jar JAR]
@@ -12,9 +12,12 @@ has six equal IVs rising through the journey (6 at the first gym up to 24 at the
 for the Champion), no EVs and no held item, and abilities are each species' first one. Natures follow the Pokémon's
 stronger attack stat (Adamant or Modest).
 
+Each trainer also has a Hard version ("<id>_hard", see HARD): the Normal team plus one more Pokémon, all at the Normal
+ace's level, with 31 IVs, EV spreads, held items, picked abilities and natures, and stronger moves.
+
 It writes, under the pack's data folder:
 
-- rctmod/trainers/<id>.json: each trainer's team;
+- rctmod/trainers/<id>.json and <id>_hard.json: each trainer's Normal and Hard team;
 - rctmod/mobs/trainers/single/<id>.json: RCT's trainer entry (type, the "galar" series, the trainer it requires);
 - rctmod/series/galar.json: the series;
 - the "trainers" and "levelCap" of each of Galar's tier files (each tier's cap is its next trainer's strongest
@@ -149,6 +152,118 @@ TIER_OF = {
     "gym_leader_raihan_8a08": 9, "marnie_8a09": 10, "hop_8a0a": 10, "bede_8a0b": 10, "champion_leon_8a0c": 10,
 }
 
+# Hard versions ("<id>_hard"), like the other regions' Hard leaders: every Pokémon at the Normal team's ace level, one
+# more Pokémon than Normal (six in the Champion Cup), 31 IVs, full EV spreads, held items and competitive moves. Each
+# Hard team keeps the Normal team's Pokémon and Dynamaxes the same one (see DYNAMAX).
+# Team entries: (species, ability, nature, held item or None, EV spread, moves), plus an aspect for a regional form.
+# EV spreads: "atk" (Attack and Speed), "spa" (Sp. Atk and Speed), "hpatk" (HP and Attack), "hpspa" (HP and Sp. Atk),
+# "def" (HP and Defense), "spd" (HP and Sp. Def).
+EV_SPREADS = {
+    "atk": {"hp": 4, "atk": 252, "spe": 252}, "spa": {"hp": 4, "spa": 252, "spe": 252},
+    "hpatk": {"hp": 252, "atk": 252, "def": 4}, "hpspa": {"hp": 252, "spa": 252, "spd": 4},
+    "def": {"hp": 252, "def": 252, "spd": 4}, "spd": {"hp": 252, "def": 4, "spd": 252},
+}
+HARD = {
+    "gym_leader_milo_8a01": ([("super_potion", 2)], [
+        ("gossifleur", "regenerator", "bold", "eviolite", "def", ["magicalleaf", "rapidspin", "sweetscent", "hypervoice"]),
+        ("nuzleaf", "chlorophyll", "adamant", "miracle_seed", "atk", ["razorleaf", "fakeout", "payback", "quickattack"]),
+        ("eldegoss", "regenerator", "modest", "sitrus_berry", "hpspa", ["magicalleaf", "hypervoice", "cottonguard", "synthesis"]),
+    ]),
+    "gym_leader_nessa_8a02": ([("super_potion", 2)], [
+        ("pelipper", "drizzle", "modest", "damp_rock", "hpspa", ["waterpulse", "airslash", "roost", "uturn"]),
+        ("goldeen", "swiftswim", "adamant", "eviolite", "atk", ["waterfall", "hornattack", "agility", "flail"]),
+        ("arrokuda", "swiftswim", "adamant", "mystic_water", "atk", ["aquajet", "liquidation", "bite", "psychicfangs"]),
+        ("drednaw", "swiftswim", "adamant", "white_herb", "atk", ["razorshell", "rocktomb", "crunch", "shellsmash"]),
+    ]),
+    "gym_leader_kabu_8a03": ([("super_potion", 2)], [
+        ("torkoal", "drought", "relaxed", "heat_rock", "def", ["stealthrock", "flamewheel", "bodyslam", "yawn"]),
+        ("ninetales", "flashfire", "timid", "charcoal_stick", "spa", ["willowisp", "flamethrower", "hex", "nastyplot"]),
+        ("arcanine", "intimidate", "adamant", "sitrus_berry", "atk", ["flamewheel", "crunch", "wildcharge", "extremespeed"]),
+        ("centiskorch", "flamebody", "adamant", "sitrus_berry", "hpatk", ["firelash", "leechlife", "coil", "crunch"]),
+    ]),
+    "gym_leader_bea_8a04": ([("hyper_potion", 2)], [
+        ("hitmontop", "intimidate", "impish", "sitrus_berry", "def", ["fakeout", "triplekick", "rapidspin", "suckerpunch"]),
+        ("grapploct", "limber", "careful", "leftovers", "spd", ["octolock", "brickbreak", "suckerpunch", "bulkup"]),
+        ("pangoro", "ironfist", "adamant", "expert_belt", "hpatk", ["drainpunch", "bulletpunch", "crunch", "bulkup"]),
+        ("sirfetchd", "steadfast", "adamant", "black_belt", "atk", ["brickbreak", "leafblade", "knockoff", "swordsdance"]),
+        ("machamp", "guts", "adamant", "flame_orb", "hpatk", ["crosschop", "knockoff", "rocktomb", "bulletpunch"]),
+    ]),
+    "gym_leader_allister_8a0d": ([("hyper_potion", 2)], [
+        ("yamask", "wanderingspirit", "bold", "eviolite", "def", ["willowisp", "hex", "protect", "brutalswing"], "galarian"),
+        ("mimikyu", "disguise", "jolly", "life_orb", "atk", ["shadowclaw", "playrough", "swordsdance", "shadowsneak"]),
+        ("cursola", "perishbody", "modest", "spell_tag", "hpspa", ["hex", "ancientpower", "willowisp", "strengthsap"]),
+        ("polteageist", "weakarmor", "modest", "white_herb", "spa", ["shellsmash", "shadowball", "gigadrain", "storedpower"]),
+        ("gengar", "cursedbody", "timid", "black_sludge", "spa", ["shadowball", "sludgebomb", "hypnosis", "willowisp"]),
+    ]),
+    "gym_leader_opal_8a05": ([("hyper_potion", 2)], [
+        ("weezing", "mistysurge", "bold", "black_sludge", "def", ["strangesteam", "sludgebomb", "willowisp", "defog"], "galarian"),
+        ("klefki", "prankster", "bold", "light_clay", "def", ["thunderwave", "reflect", "lightscreen", "dazzlinggleam"]),
+        ("mawile", "intimidate", "adamant", "sitrus_berry", "hpatk", ["playrough", "ironhead", "suckerpunch", "swordsdance"]),
+        ("togekiss", "serenegrace", "timid", "leftovers", "spa", ["airslash", "dazzlinggleam", "thunderwave", "roost"]),
+        ("alcremie", "sweetveil", "calm", "leftovers", "spd", ["dazzlinggleam", "mysticalfire", "calmmind", "recover"]),
+    ]),
+    "gym_leader_gordie_8a06": ([("hyper_potion", 2)], [
+        ("shuckle", "sturdy", "bold", "mental_herb", "def", ["stealthrock", "stickyweb", "encore", "toxic"]),
+        ("barbaracle", "toughclaws", "adamant", "white_herb", "atk", ["shellsmash", "stoneedge", "razorshell", "xscissor"]),
+        ("rhydon", "lightningrod", "adamant", "eviolite", "hpatk", ["stoneedge", "earthquake", "megahorn", "rockpolish"]),
+        ("stonjourner", "powerspot", "adamant", "hard_stone", "hpatk", ["stoneedge", "heavyslam", "highhorsepower", "wonderroom"]),
+        ("coalossal", "flamebody", "relaxed", "leftovers", "def", ["heatcrash", "stoneedge", "willowisp", "rapidspin"]),
+    ]),
+    "gym_leader_melony_8a0e": ([("hyper_potion", 2)], [
+        ("abomasnow", "snowwarning", "quiet", "never_melt_ice", "hpspa", ["blizzard", "gigadrain", "iceshard", "woodhammer"]),
+        ("frosmoth", "icescales", "modest", "leftovers", "spa", ["quiverdance", "icebeam", "bugbuzz", "gigadrain"]),
+        ("darmanitan", "gorillatactics", "jolly", "choice_scarf", "atk", ["iciclecrash", "flareblitz", "uturn", "earthquake"], "galarian"),
+        ("eiscue", "iceface", "adamant", "sitrus_berry", "atk", ["iciclecrash", "bellydrum", "zenheadbutt", "liquidation"]),
+        ("lapras", "waterabsorb", "modest", "leftovers", "hpspa", ["freezedry", "surf", "thunderbolt", "icebeam"]),
+    ]),
+    "gym_leader_piers_8a07": ([("hyper_potion", 2)], [
+        ("scrafty", "intimidate", "careful", "sitrus_berry", "spd", ["fakeout", "drainpunch", "knockoff", "bulkup"]),
+        ("malamar", "contrary", "adamant", "leftovers", "hpatk", ["superpower", "knockoff", "psychocut", "rest"]),
+        ("skuntank", "aftermath", "adamant", "black_sludge", "atk", ["suckerpunch", "crunch", "poisonjab", "toxic"]),
+        ("toxtricity", "punkrock", "modest", "throat_spray", "spa", ["overdrive", "sludgebomb", "boomburst", "voltswitch"]),
+        ("obstagoon", "guts", "adamant", "flame_orb", "atk", ["facade", "obstruct", "knockoff", "closecombat"]),
+    ]),
+    "gym_leader_raihan_8a08": ([("hyper_potion", 2)], [
+        ("gigalith", "sandstream", "adamant", "smooth_rock", "hpatk", ["stealthrock", "stoneedge", "earthquake", "heavyslam"]),
+        ("flygon", "levitate", "jolly", "choice_scarf", "atk", ["earthquake", "dragonclaw", "uturn", "firepunch"]),
+        ("sandaconda", "sandspit", "impish", "leftovers", "def", ["glare", "earthquake", "coil", "stoneedge"]),
+        ("turtonator", "shellarmor", "modest", "white_herb", "spa", ["shellsmash", "dragonpulse", "flamethrower", "focusblast"]),
+        ("duraludon", "lightmetal", "modest", "life_orb", "spa", ["dracometeor", "flashcannon", "thunderbolt", "bodypress"]),
+    ]),
+    "marnie_8a09": ([("full_restore", 1), ("hyper_potion", 1)], [
+        ("liepard", "prankster", "timid", "focus_sash", "spa", ["fakeout", "thunderwave", "nastyplot", "darkpulse"]),
+        ("toxicroak", "dryskin", "adamant", "black_sludge", "atk", ["drainpunch", "suckerpunch", "gunkshot", "swordsdance"]),
+        ("scrafty", "intimidate", "careful", "leftovers", "spd", ["fakeout", "drainpunch", "knockoff", "bulkup"]),
+        ("krookodile", "intimidate", "jolly", "choice_scarf", "atk", ["earthquake", "knockoff", "stoneedge", "closecombat"]),
+        ("morpeko", "hungerswitch", "jolly", "sitrus_berry", "atk", ["aurawheel", "knockoff", "partingshot", "protect"]),
+        ("grimmsnarl", "prankster", "careful", "light_clay", "spd", ["spiritbreak", "darkestlariat", "reflect", "lightscreen"]),
+    ]),
+    "hop_8a0a": ([("full_restore", 1), ("hyper_potion", 1)], [
+        ("dubwool", "fluffy", "impish", "leftovers", "def", ["cottonguard", "bodypress", "doubleedge", "swordsdance"]),
+        ("corviknight", "pressure", "impish", "leftovers", "def", ["bravebird", "bodypress", "roost", "bulkup"]),
+        ("trevenant", "harvest", "careful", "sitrus_berry", "spd", ["woodhammer", "hornleech", "willowisp", "phantomforce"]),
+        ("pincurchin", "electricsurge", "modest", "sitrus_berry", "hpspa", ["risingvoltage", "thunderbolt", "toxicspikes", "suckerpunch"]),
+        ("snorlax", "thickfat", "adamant", "leftovers", "hpatk", ["bodyslam", "heavyslam", "highhorsepower", "curse"]),
+        ("inteleon", "torrent", "timid", "life_orb", "spa", ["snipeshot", "icebeam", "darkpulse", "uturn"]),
+    ]),
+    "bede_8a0b": ([("full_restore", 2)], [
+        ("mawile", "intimidate", "adamant", "sitrus_berry", "hpatk", ["playrough", "ironhead", "suckerpunch", "swordsdance"]),
+        ("gothitelle", "shadowtag", "calm", "leftovers", "spd", ["psychic", "thunderbolt", "calmmind", "rest"]),
+        ("sylveon", "pixilate", "modest", "choice_scarf", "spa", ["hypervoice", "mysticalfire", "shadowball", "psyshock"]),
+        ("gardevoir", "trace", "timid", "life_orb", "spa", ["moonblast", "psychic", "calmmind", "mysticalfire"]),
+        ("rapidash", "pastelveil", "jolly", "life_orb", "atk", ["playrough", "zenheadbutt", "highhorsepower", "swordsdance"], "galarian"),
+        ("hatterene", "magicbounce", "quiet", "leftovers", "hpspa", ["psychic", "dazzlinggleam", "mysticalfire", "trickroom"]),
+    ]),
+    "champion_leon_8a0c": ([("full_restore", 2)], [
+        ("aegislash", "stancechange", "quiet", "leftovers", "hpspa", ["kingsshield", "shadowball", "flashcannon", "shadowsneak"]),
+        ("dragapult", "infiltrator", "timid", "choice_scarf", "spa", ["shadowball", "dracometeor", "flamethrower", "uturn"]),
+        ("haxorus", "moldbreaker", "jolly", "lum_berry", "atk", ["dragondance", "outrage", "earthquake", "poisonjab"]),
+        ("seismitoad", "swiftswim", "adamant", "life_orb", "atk", ["liquidation", "earthquake", "drainpunch", "raindance"]),
+        ("cinderace", "blaze", "jolly", "heavy_duty_boots", "atk", ["pyroball", "highjumpkick", "uturn", "suckerpunch"]),
+        ("charizard", "solarpower", "timid", "life_orb", "spa", ["fireblast", "airslash", "solarbeam", "focusblast"]),
+    ]),
+}
+
 # Biomes for each trainer's RCT entry (they never spawn naturally: spawnWeightFactor is 0).
 BIOMES = {"gym_leader_milo_8a01": "is_forest", "gym_leader_nessa_8a02": "is_ocean", "gym_leader_kabu_8a03": "is_badlands",
           "gym_leader_bea_8a04": "is_mountain", "gym_leader_allister_8a0d": "is_forest", "gym_leader_opal_8a05": "is_forest",
@@ -280,9 +395,82 @@ def main():
             "biomeTagWhitelist": [BIOMES.get(tid, "is_plains")],
             "biomeTagBlacklist": ["is_void", "is_nether", "is_end"],
         }
+        # The Hard version: same RCT entry, but optional, so RCT's series and level cap only follow the Normal one.
+        if tid in HARD:
+            hard_bag, hard_team = HARD[tid]
+            ace = max(e[1] for e in team)
+            for item, _ in hard_bag:
+                if item not in items:
+                    problems.append(f"{tid}_hard: bag item {item} doesn't exist")
+            size = 6 if kind in ("e4", "champ") else min(6, len(team) + 1)
+            if len(hard_team) != size:
+                problems.append(f"{tid}_hard: has {len(hard_team)} Pokémon, expected {size}")
+            normal_species = {(e[0], e[3] if len(e) > 3 else None) for e in team}
+            hard_species = {(e[0], e[6] if len(e) > 6 else None) for e in hard_team}
+            if not normal_species <= hard_species:
+                problems.append(f"{tid}_hard: leaves out Normal Pokémon {sorted(normal_species - hard_species, key=str)}")
+            hard_members = []
+            for entry in hard_team:
+                sid, ability, nat, held, spread, moves = entry[:6]
+                aspect = entry[6] if len(entry) > 6 else None
+                data = species.get(sid)
+                if data is None or not data.get("implemented", False):
+                    problems.append(f"{tid}_hard: {sid} isn't an implemented Cobblemon species")
+                    continue
+                form = None
+                if aspect:
+                    form = next((f for f in data.get("forms", []) if aspect in f.get("aspects", [])), None)
+                    if form is None:
+                        problems.append(f"{tid}_hard: {sid} has no {aspect} form")
+                        continue
+                known = learnable(data, form)
+                for move in moves:
+                    if move not in known:
+                        problems.append(f"{tid}_hard: {sid} can't learn {move}")
+                if len(set(moves)) != len(moves) or not 1 <= len(moves) <= 4:
+                    problems.append(f"{tid}_hard: {sid} has a bad moveset {moves}")
+                abilities = [a.replace("h:", "") for a in ((form or {}).get("abilities") or data.get("abilities", []))]
+                if ability not in abilities:
+                    problems.append(f"{tid}_hard: {sid} can't have {ability} (has {abilities})")
+                if held and held not in items:
+                    problems.append(f"{tid}_hard: held item {held} doesn't exist")
+                evs = {s: EV_SPREADS[spread].get(s, 0) for s in ("hp", "atk", "def", "spa", "spd", "spe")}
+                member = {
+                    "species": f"cobblemon:{sid}",
+                    "gender": gender(data, female),
+                    "level": ace,
+                    "nature": f"cobblemon:{nat}",
+                    "ability": ability,
+                    "moveset": moves,
+                    "ivs": {s: 31 for s in ("hp", "atk", "def", "spa", "spd", "spe")},
+                    "evs": evs,
+                }
+                if held:
+                    member["heldItem"] = [held]
+                if aspect:
+                    member["aspects"] = [aspect]
+                max_pick = DYNAMAX.get(tid)
+                if max_pick and max_pick[0] == sid:
+                    member["gimmicks"] = {"dynamax": True, "gmax": max_pick[1] == "gmax"}
+                hard_members.append(member)
+            files[f"rctmod/trainers/{tid}_hard.json"] = {
+                "name": name,
+                "ai": {"type": "rct", "data": {"maxSelectMargin": 0.05}},
+                "battleRules": {"maxItemUses": 2},
+                "bag": [{"item": f"cobblemon:{i}", "quantity": q} for i, q in hard_bag],
+                "team": hard_members,
+            }
+            files[f"rctmod/mobs/trainers/single/{tid}_hard.json"] = dict(
+                files[f"rctmod/mobs/trainers/single/{tid}.json"], optional=True)
         previous = tid
 
+    missing_hard = [t[0] for t in TRAINERS if t[0] not in HARD]
+    if missing_hard:
+        problems.append(f"no Hard version for {missing_hard}")
     for tid, (sid, _) in DYNAMAX.items():
+        hard_team = files.get(f"rctmod/trainers/{tid}_hard.json", {}).get("team", [])
+        if not any(m["species"] == f"cobblemon:{sid}" and "gimmicks" in m for m in hard_team):
+            problems.append(f"{tid}_hard: its Dynamax Pokémon {sid} isn't on its team")
         if not any(m["species"] == f"cobblemon:{sid}" and "gimmicks" in m
                    for m in files.get(f"rctmod/trainers/{tid}.json", {}).get("team", [])):
             problems.append(f"{tid}: its Dynamax Pokémon {sid} isn't on its team")
@@ -310,7 +498,7 @@ def main():
         path = os.path.join(region_dir, f"tier_{tier}.json")
         with open(path, encoding="utf-8") as f:
             data = json.load(f)
-        trainers = [[t] for t in order if TIER_OF[t] == tier]
+        trainers = [[t, t + "_hard"] for t in order if TIER_OF[t] == tier]
         next_trainer = next((t for t in order if TIER_OF[t] > tier), None)
         data["levelCap"] = aces[next_trainer] if next_trainer else 100
         data["trainers"] = trainers

@@ -22,7 +22,8 @@
       "trigger": "ultimate-cobblemon-progression:defeat_trainer",
       "conditions": {
         "trainers": [
-          "marnie_8a09"
+          "marnie_8a09",
+          "marnie_8a09_hard"
         ]
       }
     }

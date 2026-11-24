@@ -1,0 +1,152 @@
+{
+  "name": "Gym Leader Kabu",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.05
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:super_potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:torkoal",
+      "gender": "MALE",
+      "level": 27,
+      "nature": "cobblemon:relaxed",
+      "ability": "drought",
+      "moveset": [
+        "stealthrock",
+        "flamewheel",
+        "bodyslam",
+        "yawn"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": [
+        "heat_rock"
+      ]
+    },
+    {
+      "species": "cobblemon:ninetales",
+      "gender": "MALE",
+      "level": 27,
+      "nature": "cobblemon:timid",
+      "ability": "flashfire",
+      "moveset": [
+        "willowisp",
+        "flamethrower",
+        "hex",
+        "nastyplot"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": [
+        "charcoal_stick"
+      ]
+    },
+    {
+      "species": "cobblemon:arcanine",
+      "gender": "MALE",
+      "level": 27,
+      "nature": "cobblemon:adamant",
+      "ability": "intimidate",
+      "moveset": [
+        "flamewheel",
+        "crunch",
+        "wildcharge",
+        "extremespeed"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": [
+        "sitrus_berry"
+      ]
+    },
+    {
+      "species": "cobblemon:centiskorch",
+      "gender": "MALE",
+      "level": 27,
+      "nature": "cobblemon:adamant",
+      "ability": "flamebody",
+      "moveset": [
+        "firelash",
+        "leechlife",
+        "coil",
+        "crunch"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 252,
+        "def": 4,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "heldItem": [
+        "sitrus_berry"
+      ],
+      "gimmicks": {
+        "dynamax": true,
+        "gmax": true
+      }
+    }
+  ]
+}

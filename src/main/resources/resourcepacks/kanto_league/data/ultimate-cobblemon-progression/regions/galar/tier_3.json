@@ -1,6 +1,6 @@
 {
   "levelCap": 27,
-  "trainers": [["gym_leader_nessa_8a02"]],
+  "trainers": [["gym_leader_nessa_8a02", "gym_leader_nessa_8a02_hard"]],
   "requirements": {
     "advancements": ["ultimate-cobblemon-progression:journey/galar/water_badge"]
   },

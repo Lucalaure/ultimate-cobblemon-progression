@@ -1,6 +1,6 @@
 {
   "levelCap": 48,
-  "trainers": [["gym_leader_piers_8a07"]],
+  "trainers": [["gym_leader_piers_8a07", "gym_leader_piers_8a07_hard"]],
   "requirements": {
     "advancements": ["ultimate-cobblemon-progression:journey/galar/dark_badge"]
   },

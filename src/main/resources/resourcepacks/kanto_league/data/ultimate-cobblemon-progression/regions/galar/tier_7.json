@@ -1,6 +1,6 @@
 {
   "levelCap": 46,
-  "trainers": [["gym_leader_gordie_8a06"], ["gym_leader_melony_8a0e"]],
+  "trainers": [["gym_leader_gordie_8a06", "gym_leader_gordie_8a06_hard"], ["gym_leader_melony_8a0e", "gym_leader_melony_8a0e_hard"]],
   "requirements": {
     "advancements": ["ultimate-cobblemon-progression:journey/galar/ice_badge"]
   },

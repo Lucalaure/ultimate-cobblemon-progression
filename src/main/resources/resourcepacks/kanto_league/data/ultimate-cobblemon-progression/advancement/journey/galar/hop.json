@@ -22,7 +22,8 @@
       "trigger": "ultimate-cobblemon-progression:defeat_trainer",
       "conditions": {
         "trainers": [
-          "hop_8a0a"
+          "hop_8a0a",
+          "hop_8a0a_hard"
         ]
       }
     }

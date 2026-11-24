@@ -1,0 +1,184 @@
+{
+  "name": "Gym Leader Raihan",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.05
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:gigalith",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "cobblemon:adamant",
+      "ability": "sandstream",
+      "moveset": [
+        "stealthrock",
+        "stoneedge",
+        "earthquake",
+        "heavyslam"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 252,
+        "def": 4,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "heldItem": [
+        "smooth_rock"
+      ]
+    },
+    {
+      "species": "cobblemon:flygon",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "cobblemon:jolly",
+      "ability": "levitate",
+      "moveset": [
+        "earthquake",
+        "dragonclaw",
+        "uturn",
+        "firepunch"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": [
+        "choice_scarf"
+      ]
+    },
+    {
+      "species": "cobblemon:sandaconda",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "cobblemon:impish",
+      "ability": "sandspit",
+      "moveset": [
+        "glare",
+        "earthquake",
+        "coil",
+        "stoneedge"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": [
+        "leftovers"
+      ]
+    },
+    {
+      "species": "cobblemon:turtonator",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "cobblemon:modest",
+      "ability": "shellarmor",
+      "moveset": [
+        "shellsmash",
+        "dragonpulse",
+        "flamethrower",
+        "focusblast"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": [
+        "white_herb"
+      ]
+    },
+    {
+      "species": "cobblemon:duraludon",
+      "gender": "MALE",
+      "level": 48,
+      "nature": "cobblemon:modest",
+      "ability": "lightmetal",
+      "moveset": [
+        "dracometeor",
+        "flashcannon",
+        "thunderbolt",
+        "bodypress"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": [
+        "life_orb"
+      ],
+      "gimmicks": {
+        "dynamax": true,
+        "gmax": true
+      }
+    }
+  ]
+}

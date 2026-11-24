@@ -1,6 +1,6 @@
 {
   "levelCap": 32,
-  "trainers": [["gym_leader_kabu_8a03"]],
+  "trainers": [["gym_leader_kabu_8a03", "gym_leader_kabu_8a03_hard"]],
   "requirements": {
     "advancements": ["ultimate-cobblemon-progression:journey/galar/fire_badge"]
   },

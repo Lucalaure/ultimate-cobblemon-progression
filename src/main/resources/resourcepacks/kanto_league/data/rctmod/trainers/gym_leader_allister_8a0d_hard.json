@@ -1,0 +1,187 @@
+{
+  "name": "Gym Leader Allister",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.05
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:yamask",
+      "gender": "MALE",
+      "level": 32,
+      "nature": "cobblemon:bold",
+      "ability": "wanderingspirit",
+      "moveset": [
+        "willowisp",
+        "hex",
+        "protect",
+        "brutalswing"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": [
+        "eviolite"
+      ],
+      "aspects": [
+        "galarian"
+      ]
+    },
+    {
+      "species": "cobblemon:mimikyu",
+      "gender": "MALE",
+      "level": 32,
+      "nature": "cobblemon:jolly",
+      "ability": "disguise",
+      "moveset": [
+        "shadowclaw",
+        "playrough",
+        "swordsdance",
+        "shadowsneak"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": [
+        "life_orb"
+      ]
+    },
+    {
+      "species": "cobblemon:cursola",
+      "gender": "MALE",
+      "level": 32,
+      "nature": "cobblemon:modest",
+      "ability": "perishbody",
+      "moveset": [
+        "hex",
+        "ancientpower",
+        "willowisp",
+        "strengthsap"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": [
+        "spell_tag"
+      ]
+    },
+    {
+      "species": "cobblemon:polteageist",
+      "gender": "GENDERLESS",
+      "level": 32,
+      "nature": "cobblemon:modest",
+      "ability": "weakarmor",
+      "moveset": [
+        "shellsmash",
+        "shadowball",
+        "gigadrain",
+        "storedpower"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": [
+        "white_herb"
+      ]
+    },
+    {
+      "species": "cobblemon:gengar",
+      "gender": "MALE",
+      "level": 32,
+      "nature": "cobblemon:timid",
+      "ability": "cursedbody",
+      "moveset": [
+        "shadowball",
+        "sludgebomb",
+        "hypnosis",
+        "willowisp"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": [
+        "black_sludge"
+      ],
+      "gimmicks": {
+        "dynamax": true,
+        "gmax": true
+      }
+    }
+  ]
+}

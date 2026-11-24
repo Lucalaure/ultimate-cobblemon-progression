@@ -1,6 +1,6 @@
 {
   "levelCap": 38,
-  "trainers": [["gym_leader_bea_8a04"], ["gym_leader_allister_8a0d"]],
+  "trainers": [["gym_leader_bea_8a04", "gym_leader_bea_8a04_hard"], ["gym_leader_allister_8a0d", "gym_leader_allister_8a0d_hard"]],
   "requirements": {
     "advancements": ["ultimate-cobblemon-progression:journey/galar/ghost_badge"]
   },

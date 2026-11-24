@@ -1,6 +1,6 @@
 {
   "levelCap": 42,
-  "trainers": [["gym_leader_opal_8a05"]],
+  "trainers": [["gym_leader_opal_8a05", "gym_leader_opal_8a05_hard"]],
   "requirements": {
     "advancements": ["ultimate-cobblemon-progression:journey/galar/fairy_badge"]
   },

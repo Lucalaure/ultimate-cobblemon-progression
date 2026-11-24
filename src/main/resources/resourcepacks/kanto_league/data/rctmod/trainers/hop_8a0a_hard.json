@@ -1,0 +1,220 @@
+{
+  "name": "Hop",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.05
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 1
+    },
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 1
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:dubwool",
+      "gender": "MALE",
+      "level": 49,
+      "nature": "cobblemon:impish",
+      "ability": "fluffy",
+      "moveset": [
+        "cottonguard",
+        "bodypress",
+        "doubleedge",
+        "swordsdance"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": [
+        "leftovers"
+      ]
+    },
+    {
+      "species": "cobblemon:corviknight",
+      "gender": "MALE",
+      "level": 49,
+      "nature": "cobblemon:impish",
+      "ability": "pressure",
+      "moveset": [
+        "bravebird",
+        "bodypress",
+        "roost",
+        "bulkup"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": [
+        "leftovers"
+      ]
+    },
+    {
+      "species": "cobblemon:trevenant",
+      "gender": "MALE",
+      "level": 49,
+      "nature": "cobblemon:careful",
+      "ability": "harvest",
+      "moveset": [
+        "woodhammer",
+        "hornleech",
+        "willowisp",
+        "phantomforce"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 4,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      },
+      "heldItem": [
+        "sitrus_berry"
+      ]
+    },
+    {
+      "species": "cobblemon:pincurchin",
+      "gender": "MALE",
+      "level": 49,
+      "nature": "cobblemon:modest",
+      "ability": "electricsurge",
+      "moveset": [
+        "risingvoltage",
+        "thunderbolt",
+        "toxicspikes",
+        "suckerpunch"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": [
+        "sitrus_berry"
+      ]
+    },
+    {
+      "species": "cobblemon:snorlax",
+      "gender": "MALE",
+      "level": 49,
+      "nature": "cobblemon:adamant",
+      "ability": "thickfat",
+      "moveset": [
+        "bodyslam",
+        "heavyslam",
+        "highhorsepower",
+        "curse"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 252,
+        "def": 4,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "heldItem": [
+        "leftovers"
+      ]
+    },
+    {
+      "species": "cobblemon:inteleon",
+      "gender": "MALE",
+      "level": 49,
+      "nature": "cobblemon:timid",
+      "ability": "torrent",
+      "moveset": [
+        "snipeshot",
+        "icebeam",
+        "darkpulse",
+        "uturn"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": [
+        "life_orb"
+      ],
+      "gimmicks": {
+        "dynamax": true,
+        "gmax": false
+      }
+    }
+  ]
+}

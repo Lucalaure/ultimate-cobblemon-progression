@@ -22,7 +22,8 @@
       "trigger": "ultimate-cobblemon-progression:defeat_trainer",
       "conditions": {
         "trainers": [
-          "gym_leader_gordie_8a06"
+          "gym_leader_gordie_8a06",
+          "gym_leader_gordie_8a06_hard"
         ]
       }
     }

@@ -1,3 +1,8 @@
+# Unreleased
+
+## Features
+- **Galar on Hard.** Galar's Gym Leaders, Champion Cup and Champion Leon now have Hard versions, so Galar's Road tab shows the difficulty switch like Kanto's and Sinnoh's. As for the other Hard leaders, each team is the Normal team plus one more Pokémon (six for Marnie, Hop, Bede and Leon), all at the Normal ace's level, with perfect IVs, EV spreads, held items, picked abilities and natures, and stronger moves: Nessa sets rain with Pelipper for her Swift Swim team, Kabu sun with Torkoal, Melony snow with Abomasnow and Raihan sand with Gigalith. On Hard you still beat both Bea and Allister at gym 4, and both Gordie and Melony at gym 6. Each Dynamaxes the same Pokémon as on Normal. Level caps and loot don't change.
+
 # CJP 2.5.0
 
 ## Features

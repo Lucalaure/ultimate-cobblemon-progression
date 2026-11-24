@@ -22,7 +22,8 @@
       "trigger": "ultimate-cobblemon-progression:defeat_trainer",
       "conditions": {
         "trainers": [
-          "gym_leader_melony_8a0e"
+          "gym_leader_melony_8a0e",
+          "gym_leader_melony_8a0e_hard"
         ]
       }
     }

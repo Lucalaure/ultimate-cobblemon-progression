@@ -22,7 +22,8 @@
       "trigger": "ultimate-cobblemon-progression:defeat_trainer",
       "conditions": {
         "trainers": [
-          "gym_leader_nessa_8a02"
+          "gym_leader_nessa_8a02",
+          "gym_leader_nessa_8a02_hard"
         ]
       }
     }

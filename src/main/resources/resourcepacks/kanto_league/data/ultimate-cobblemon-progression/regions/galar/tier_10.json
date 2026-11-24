@@ -1,6 +1,6 @@
 {
   "levelCap": 100,
-  "trainers": [["marnie_8a09"], ["hop_8a0a"], ["bede_8a0b"], ["champion_leon_8a0c"]],
+  "trainers": [["marnie_8a09", "marnie_8a09_hard"], ["hop_8a0a", "hop_8a0a_hard"], ["bede_8a0b", "bede_8a0b_hard"], ["champion_leon_8a0c", "champion_leon_8a0c_hard"]],
   "requirements": {
     "advancements": ["ultimate-cobblemon-progression:journey/galar/champion"]
   },

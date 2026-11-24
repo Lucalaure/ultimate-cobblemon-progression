@@ -1,0 +1,184 @@
+{
+  "name": "Gym Leader Bea",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.05
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:hitmontop",
+      "gender": "MALE",
+      "level": 32,
+      "nature": "cobblemon:impish",
+      "ability": "intimidate",
+      "moveset": [
+        "fakeout",
+        "triplekick",
+        "rapidspin",
+        "suckerpunch"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": [
+        "sitrus_berry"
+      ]
+    },
+    {
+      "species": "cobblemon:grapploct",
+      "gender": "FEMALE",
+      "level": 32,
+      "nature": "cobblemon:careful",
+      "ability": "limber",
+      "moveset": [
+        "octolock",
+        "brickbreak",
+        "suckerpunch",
+        "bulkup"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 4,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      },
+      "heldItem": [
+        "leftovers"
+      ]
+    },
+    {
+      "species": "cobblemon:pangoro",
+      "gender": "FEMALE",
+      "level": 32,
+      "nature": "cobblemon:adamant",
+      "ability": "ironfist",
+      "moveset": [
+        "drainpunch",
+        "bulletpunch",
+        "crunch",
+        "bulkup"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 252,
+        "def": 4,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "heldItem": [
+        "expert_belt"
+      ]
+    },
+    {
+      "species": "cobblemon:sirfetchd",
+      "gender": "FEMALE",
+      "level": 32,
+      "nature": "cobblemon:adamant",
+      "ability": "steadfast",
+      "moveset": [
+        "brickbreak",
+        "leafblade",
+        "knockoff",
+        "swordsdance"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": [
+        "black_belt"
+      ]
+    },
+    {
+      "species": "cobblemon:machamp",
+      "gender": "FEMALE",
+      "level": 32,
+      "nature": "cobblemon:adamant",
+      "ability": "guts",
+      "moveset": [
+        "crosschop",
+        "knockoff",
+        "rocktomb",
+        "bulletpunch"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 252,
+        "def": 4,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "heldItem": [
+        "flame_orb"
+      ],
+      "gimmicks": {
+        "dynamax": true,
+        "gmax": true
+      }
+    }
+  ]
+}

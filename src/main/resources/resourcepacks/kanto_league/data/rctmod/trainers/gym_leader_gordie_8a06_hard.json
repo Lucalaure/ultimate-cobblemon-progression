@@ -1,0 +1,184 @@
+{
+  "name": "Gym Leader Gordie",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.05
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:shuckle",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "cobblemon:bold",
+      "ability": "sturdy",
+      "moveset": [
+        "stealthrock",
+        "stickyweb",
+        "encore",
+        "toxic"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": [
+        "mental_herb"
+      ]
+    },
+    {
+      "species": "cobblemon:barbaracle",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "cobblemon:adamant",
+      "ability": "toughclaws",
+      "moveset": [
+        "shellsmash",
+        "stoneedge",
+        "razorshell",
+        "xscissor"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": [
+        "white_herb"
+      ]
+    },
+    {
+      "species": "cobblemon:rhydon",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "cobblemon:adamant",
+      "ability": "lightningrod",
+      "moveset": [
+        "stoneedge",
+        "earthquake",
+        "megahorn",
+        "rockpolish"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 252,
+        "def": 4,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "heldItem": [
+        "eviolite"
+      ]
+    },
+    {
+      "species": "cobblemon:stonjourner",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "cobblemon:adamant",
+      "ability": "powerspot",
+      "moveset": [
+        "stoneedge",
+        "heavyslam",
+        "highhorsepower",
+        "wonderroom"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 252,
+        "def": 4,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "heldItem": [
+        "hard_stone"
+      ]
+    },
+    {
+      "species": "cobblemon:coalossal",
+      "gender": "MALE",
+      "level": 42,
+      "nature": "cobblemon:relaxed",
+      "ability": "flamebody",
+      "moveset": [
+        "heatcrash",
+        "stoneedge",
+        "willowisp",
+        "rapidspin"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": [
+        "leftovers"
+      ],
+      "gimmicks": {
+        "dynamax": true,
+        "gmax": true
+      }
+    }
+  ]
+}

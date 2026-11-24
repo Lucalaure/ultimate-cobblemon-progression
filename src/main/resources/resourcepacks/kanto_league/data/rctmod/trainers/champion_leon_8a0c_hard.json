@@ -1,0 +1,216 @@
+{
+  "name": "Champion Leon",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.05
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:full_restore",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:aegislash",
+      "gender": "MALE",
+      "level": 65,
+      "nature": "cobblemon:quiet",
+      "ability": "stancechange",
+      "moveset": [
+        "kingsshield",
+        "shadowball",
+        "flashcannon",
+        "shadowsneak"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": [
+        "leftovers"
+      ]
+    },
+    {
+      "species": "cobblemon:dragapult",
+      "gender": "MALE",
+      "level": 65,
+      "nature": "cobblemon:timid",
+      "ability": "infiltrator",
+      "moveset": [
+        "shadowball",
+        "dracometeor",
+        "flamethrower",
+        "uturn"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": [
+        "choice_scarf"
+      ]
+    },
+    {
+      "species": "cobblemon:haxorus",
+      "gender": "MALE",
+      "level": 65,
+      "nature": "cobblemon:jolly",
+      "ability": "moldbreaker",
+      "moveset": [
+        "dragondance",
+        "outrage",
+        "earthquake",
+        "poisonjab"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": [
+        "lum_berry"
+      ]
+    },
+    {
+      "species": "cobblemon:seismitoad",
+      "gender": "MALE",
+      "level": 65,
+      "nature": "cobblemon:adamant",
+      "ability": "swiftswim",
+      "moveset": [
+        "liquidation",
+        "earthquake",
+        "drainpunch",
+        "raindance"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": [
+        "life_orb"
+      ]
+    },
+    {
+      "species": "cobblemon:cinderace",
+      "gender": "MALE",
+      "level": 65,
+      "nature": "cobblemon:jolly",
+      "ability": "blaze",
+      "moveset": [
+        "pyroball",
+        "highjumpkick",
+        "uturn",
+        "suckerpunch"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 252,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": [
+        "heavy_duty_boots"
+      ]
+    },
+    {
+      "species": "cobblemon:charizard",
+      "gender": "MALE",
+      "level": 65,
+      "nature": "cobblemon:timid",
+      "ability": "solarpower",
+      "moveset": [
+        "fireblast",
+        "airslash",
+        "solarbeam",
+        "focusblast"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": [
+        "life_orb"
+      ],
+      "gimmicks": {
+        "dynamax": true,
+        "gmax": true
+      }
+    }
+  ]
+}

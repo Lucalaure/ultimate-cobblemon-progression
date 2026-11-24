@@ -1,6 +1,6 @@
 {
   "levelCap": 24,
-  "trainers": [["gym_leader_milo_8a01"]],
+  "trainers": [["gym_leader_milo_8a01", "gym_leader_milo_8a01_hard"]],
   "requirements": {
     "advancements": ["ultimate-cobblemon-progression:journey/galar/grass_badge"]
   },

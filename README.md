@@ -44,7 +44,7 @@ You can also pick one **extra region** to explore from the start, on the card's 
 
 ### The built-in leagues
 
-With RCT installed, CJP turns on a built-in datapack, **CJP Kanto, Sinnoh & Galar Leagues**: a 10-tier Kanto with its 8 gym leaders, the Elite Four and the Champion (FireRed/LeafGreen-style teams), a 10-tier Sinnoh with RCT's Brilliant Diamond/Shining Pearl leaders, Elite Four and Champion Cynthia, a 10-tier Galar with its 8 Gym Leaders, the Champion Cup and Champion Leon (Sword teams, Normal difficulty only for now), plus every other region from Johto to Paldea as an optional extra region that grows with any league's badges. It's an ordinary datapack, so you can turn it off, or override it with your own region data. See [Region mode](docs/how-it-works.md#9-region-mode).
+With RCT installed, CJP turns on a built-in datapack, **CJP Kanto, Sinnoh & Galar Leagues**: a 10-tier Kanto with its 8 gym leaders, the Elite Four and the Champion (FireRed/LeafGreen-style teams), a 10-tier Sinnoh with RCT's Brilliant Diamond/Shining Pearl leaders, Elite Four and Champion Cynthia, a 10-tier Galar with its 8 Gym Leaders, the Champion Cup and Champion Leon (Sword and Shield teams, with Hard versions), plus every other region from Johto to Paldea as an optional extra region that grows with any league's badges. It's an ordinary datapack, so you can turn it off, or override it with your own region data. See [Region mode](docs/how-it-works.md#9-region-mode).
 
 ---
 

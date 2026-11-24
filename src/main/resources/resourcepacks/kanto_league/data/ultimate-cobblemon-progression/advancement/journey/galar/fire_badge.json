@@ -22,7 +22,8 @@
       "trigger": "ultimate-cobblemon-progression:defeat_trainer",
       "conditions": {
         "trainers": [
-          "gym_leader_kabu_8a03"
+          "gym_leader_kabu_8a03",
+          "gym_leader_kabu_8a03_hard"
         ]
       }
     }

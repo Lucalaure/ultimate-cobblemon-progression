@@ -22,7 +22,8 @@
       "trigger": "ultimate-cobblemon-progression:defeat_trainer",
       "conditions": {
         "trainers": [
-          "champion_leon_8a0c"
+          "champion_leon_8a0c",
+          "champion_leon_8a0c_hard"
         ]
       }
     }

@@ -1,6 +1,6 @@
 {
   "levelCap": 49,
-  "trainers": [["gym_leader_raihan_8a08"]],
+  "trainers": [["gym_leader_raihan_8a08", "gym_leader_raihan_8a08_hard"]],
   "requirements": {
     "advancements": ["ultimate-cobblemon-progression:journey/galar/dragon_badge"]
   },

@@ -1,0 +1,187 @@
+{
+  "name": "Gym Leader Opal",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.05
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:hyper_potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "cobblemon:weezing",
+      "gender": "FEMALE",
+      "level": 38,
+      "nature": "cobblemon:bold",
+      "ability": "mistysurge",
+      "moveset": [
+        "strangesteam",
+        "sludgebomb",
+        "willowisp",
+        "defog"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": [
+        "black_sludge"
+      ],
+      "aspects": [
+        "galarian"
+      ]
+    },
+    {
+      "species": "cobblemon:klefki",
+      "gender": "FEMALE",
+      "level": 38,
+      "nature": "cobblemon:bold",
+      "ability": "prankster",
+      "moveset": [
+        "thunderwave",
+        "reflect",
+        "lightscreen",
+        "dazzlinggleam"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": [
+        "light_clay"
+      ]
+    },
+    {
+      "species": "cobblemon:mawile",
+      "gender": "FEMALE",
+      "level": 38,
+      "nature": "cobblemon:adamant",
+      "ability": "intimidate",
+      "moveset": [
+        "playrough",
+        "ironhead",
+        "suckerpunch",
+        "swordsdance"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 252,
+        "def": 4,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "heldItem": [
+        "sitrus_berry"
+      ]
+    },
+    {
+      "species": "cobblemon:togekiss",
+      "gender": "FEMALE",
+      "level": 38,
+      "nature": "cobblemon:timid",
+      "ability": "serenegrace",
+      "moveset": [
+        "airslash",
+        "dazzlinggleam",
+        "thunderwave",
+        "roost"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
+      },
+      "heldItem": [
+        "leftovers"
+      ]
+    },
+    {
+      "species": "cobblemon:alcremie",
+      "gender": "FEMALE",
+      "level": 38,
+      "nature": "cobblemon:calm",
+      "ability": "sweetveil",
+      "moveset": [
+        "dazzlinggleam",
+        "mysticalfire",
+        "calmmind",
+        "recover"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 252,
+        "atk": 0,
+        "def": 4,
+        "spa": 0,
+        "spd": 252,
+        "spe": 0
+      },
+      "heldItem": [
+        "leftovers"
+      ],
+      "gimmicks": {
+        "dynamax": true,
+        "gmax": true
+      }
+    }
+  ]
+}
