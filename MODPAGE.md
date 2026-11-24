@@ -7,7 +7,7 @@ This mod is designed for **server progression, modpacks, and RPG-style playthrou
 Cobblemon Versions:
 - Cobblemon 1.6.1: ucp-1.2.2
 - Cobblemon 1.7.0: ucp-1.3.0
-- Cobblemon 1.8.0: ucp-1.4.0, ucp-2.0.0 (regions, village gyms, Trainer Card), ucp-2.1.0 (Sinnoh league, journey, Pokémon Journey advancements), cjp-2.2.0 (renamed to Cobblemon Journey Progression, fixes), cjp-2.3.0 (Normal and Hard gym difficulty, gym rematches, regional forms tied to their region), cjp-2.4.0 (trainer levels on name tags, reworked trainer loot, wild trainers tied to their region, Trainers tab on the Trainer Card), cjp-2.5.0 (Galar league, two leagues at once, regional forms per region, Galar and FireRed wild trainers, Dynamax with Mega Showdown)
+- Cobblemon 1.8.0: ucp-1.4.0, ucp-2.0.0 (regions, village gyms, Trainer Card), ucp-2.1.0 (Sinnoh league, journey, Pokémon Journey advancements), cjp-2.2.0 (renamed to Cobblemon Journey Progression, fixes), cjp-2.3.0 (Normal and Hard gym difficulty, gym rematches, regional forms tied to their region), cjp-2.4.0 (trainer levels on name tags, reworked trainer loot, wild trainers tied to their region, Trainers tab on the Trainer Card), cjp-2.5.0 (Galar league, two leagues at once, regional forms per region, Galar and FireRed wild trainers, Dynamax with Mega Showdown), cjp-2.5.1 (Hard Galar leaders)
 
 ---
 

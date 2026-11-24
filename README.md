@@ -4,7 +4,7 @@
 
 A Fabric side-mod for **Cobblemon** that turns the game into a region-by-region Pokémon journey. Start in a region, find its gyms in villages, beat its leaders, and unlock its Pokémon tier by tier: what spawns, how strong it is, and how far your team can level all grow with your progress.
 
-**Requires Cobblemon 1.8** (Minecraft 1.21.1, Fabric). Latest release: [2.5.0](https://github.com/Lucalaure/ultimate-cobblemon-progression/releases/latest).
+**Requires Cobblemon 1.8** (Minecraft 1.21.1, Fabric). Latest release: [2.5.1](https://github.com/Lucalaure/ultimate-cobblemon-progression/releases/latest).
 
 ## Documentation
 
