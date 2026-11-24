@@ -18,6 +18,7 @@ import net.minecraft.network.chat.Style;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.FormattedCharSequence;
 import net.minecraft.util.Mth;
+import org.ppvon.ultimateCobblemonProgression.client.gui.layout.UiSweepable;
 import org.ppvon.ultimateCobblemonProgression.common.card.PickRegionPayload;
 import org.ppvon.ultimateCobblemonProgression.common.card.TrainerCardData;
 import org.ppvon.ultimateCobblemonProgression.common.card.TrainerCardData.RegionEntry;
@@ -35,7 +36,7 @@ import java.util.List;
  * player's profile, the region's trainer road, every region, and the wild Pokémon they can meet.
  * Cobblemon's textures are loaded from the installed Cobblemon jar, not copied into UCP.
  */
-public class TrainerCardScreen extends Screen {
+public class TrainerCardScreen extends Screen implements UiSweepable {
     private static final int W = 345, H = 207;
 
     private static final ResourceLocation FRAME = cobblemon("textures/gui/pokedex/pokedex_base_red.png");
@@ -128,6 +129,41 @@ public class TrainerCardScreen extends Screen {
     @Override
     public boolean isPauseScreen() {
         return false;
+    }
+
+    /** For the layout check: every tab a page at a time, the other league's road, and each confirmation box. */
+    @Override
+    public void sweepStates(java.util.function.Consumer<String> draw) {
+        Tab before = lastTab;
+        if (showingChoice() || showingDifficultyChoice()) {
+            draw.accept(showingChoice() ? "region choice" : "difficulty choice");
+        } else {
+            for (Tab t : tabs()) {
+                tab = t;
+                for (boolean other : t == Tab.ROAD && !data.otherLeagues().isEmpty() ? new boolean[]{false, true} : new boolean[]{false}) {
+                    showOtherRoad = other;
+                    scroll = 0;
+                    contentHeight = 0;
+                    int page = 1;
+                    draw.accept(t.label + (other ? ", other league" : "") + ", page 1");
+                    int view = CY1 - CY0;
+                    while (scroll + view < contentHeight && page < 40) {
+                        scroll = Math.min(scroll + view - 20, contentHeight - view);
+                        draw.accept(t.label + (other ? ", other league" : "") + ", page " + ++page);
+                    }
+                }
+            }
+            showOtherRoad = false;
+            tab = tabs().get(0);
+            scroll = 0;
+        }
+        String title = data.regionChoices().isEmpty() ? data.regionTitle() : data.regionChoices().get(0).title();
+        for (int kind : new int[]{PickRegionPayload.HOME, PickRegionPayload.NEXT, PickRegionPayload.EXTRA, PickRegionPayload.DIFFICULTY}) {
+            confirming = new Pending("x", kind == PickRegionPayload.DIFFICULTY ? "Normal" : title, kind);
+            draw.accept("confirm box " + kind);
+        }
+        confirming = null;
+        lastTab = before;
     }
 
     // ------------------------------------------------------------------ input
@@ -354,12 +390,12 @@ public class TrainerCardScreen extends Screen {
         if (next) {
             // "Not now": look at the card first; it asks again the next time it's opened.
             String label = "Not now";
-            int bw = font.width(label) + 16;
+            int bw = boldWidth(label) + 16;
             int bx0 = W - 22 - bw, bx1 = W - 22, by0 = fy - 2, by1 = fy + 12;
             boolean hover = confirming == null && mx >= bx0 && mx < bx1 && my >= by0 && my < by1;
             g.fill(bx0, by0, bx1, by1, FRAME_DARK);
             g.fill(bx0 + 1, by0 + 1, bx1 - 1, by1 - 1, hover ? LIGHT : MID);
-            text(g, Component.literal(label).withStyle(ChatFormatting.BOLD), (bx0 + bx1) / 2f, by0 + 3, hover ? INK : WHITE, 1, true);
+            fit(g, Component.literal(label).withStyle(ChatFormatting.BOLD), (bx0 + bx1) / 2f, by0 + 3, bw - 6, hover ? INK : WHITE, 1, Align.CENTRE);
             laterButton = new PickButton(bx0, by0, bx1, by1, null);
         }
         // Narrower beside "Not now", so it can't run into the button.
@@ -560,14 +596,14 @@ public class TrainerCardScreen extends Screen {
         int titleEnd = CX1 - 14 - font.width(summary);
         if (otherLeague != null) {
             String label = "Show " + (showOtherRoad ? data.regionTitle() : otherLeague.title());
-            int bw = font.width(label) + 10;
+            int bw = Math.min(font.width(label) + 10, 110);
             int bx1 = CX1 - 6, bx0 = bx1 - bw, by0 = y - 2, by1 = y + 10;
             int contentMouseY = my + (int) scroll;
             boolean hover = confirming == null && my >= CY0 && my < CY1 && mx >= bx0 && mx < bx1
                     && contentMouseY >= by0 && contentMouseY < by1;
             g.fill(bx0, by0, bx1, by1, FRAME_DARK);
             g.fill(bx0 + 1, by0 + 1, bx1 - 1, by1 - 1, hover ? MID : DARK);
-            text(g, Component.literal(label), (bx0 + bx1) / 2f, by0 + 2, WHITE, 1, true);
+            fit(g, Component.literal(label), (bx0 + bx1) / 2f, by0 + 2, bw - 6, WHITE, 1, Align.CENTRE);
             roadToggle = new int[]{bx0, by0, bx1, by1};
             g.drawString(font, summary, bx0 - 6 - font.width(summary), y, MUTED, false);
             titleEnd = bx0 - 12 - font.width(summary);
@@ -589,14 +625,14 @@ public class TrainerCardScreen extends Screen {
             if (data.difficultyChangeable() && hardHere) {
                 String other = hard ? "Normal" : "Hard";
                 String label = "Switch to " + other;
-                int bw = font.width(label) + 12;
+                int bw = boldWidth(label) + 12;
                 int bx1 = rx1 - 2, bx0 = bx1 - bw, by0 = y + 2, by1 = ry1 - 2;
                 int contentMouseY = my + (int) scroll;
                 boolean hover = confirming == null && my >= CY0 && my < CY1 && mx >= bx0 && mx < bx1
                         && contentMouseY >= by0 && contentMouseY < by1;
                 g.fill(bx0, by0, bx1, by1, FRAME_DARK);
                 g.fill(bx0 + 1, by0 + 1, bx1 - 1, by1 - 1, hover ? 0xFFE8574F : RED);
-                text(g, Component.literal(label).withStyle(ChatFormatting.BOLD), (bx0 + bx1) / 2f, by0 + 2, WHITE, 1, true);
+                fit(g, Component.literal(label).withStyle(ChatFormatting.BOLD), (bx0 + bx1) / 2f, by0 + 2, bw - 6, WHITE, 1, Align.CENTRE);
                 difficultyToggle = new PickButton(bx0, by0, bx1, by1,
                         new Pending(other.toLowerCase(java.util.Locale.ROOT), other, PickRegionPayload.DIFFICULTY));
                 labelEnd = bx0 - 6;
@@ -664,12 +700,12 @@ public class TrainerCardScreen extends Screen {
 
         // Title, with the button that hides beaten trainers
         String label = hideBeaten ? "Show beaten" : "Hide beaten";
-        int bw = font.width(label) + 12;
+        int bw = boldWidth(label) + 12;
         int bx1 = x1, bx0 = bx1 - bw, by0 = y, by1 = y + 13;
         boolean hover = mouseInView && mx >= bx0 && mx < bx1 && contentMouseY >= by0 && contentMouseY < by1;
         g.fill(bx0, by0, bx1, by1, FRAME_DARK);
         g.fill(bx0 + 1, by0 + 1, bx1 - 1, by1 - 1, hover ? 0xFFE8574F : RED);
-        text(g, Component.literal(label).withStyle(ChatFormatting.BOLD), (bx0 + bx1) / 2f, by0 + 3, WHITE, 1, true);
+        fit(g, Component.literal(label).withStyle(ChatFormatting.BOLD), (bx0 + bx1) / 2f, by0 + 3, bw - 6, WHITE, 1, Align.CENTRE);
         hideBeatenToggle = new PickButton(bx0, by0, bx1, by1, null);
         fit(g, Component.literal("Wild Trainers").withStyle(ChatFormatting.BOLD), x0 + 2, y + 3, bx0 - 8 - (x0 + 2), INK, 1, Align.LEFT);
         y += 17;
@@ -766,13 +802,13 @@ public class TrainerCardScreen extends Screen {
             if (r.choosable()) {
                 // A "Pick" button instead of the region's state
                 String label = "Pick";
-                int bw = font.width(label) + 16;
+                int bw = boldWidth(label) + 16;
                 int bx1 = rx1 - 3, bx0 = bx1 - bw, by0 = y + 3, by1 = ry1 - 3;
                 boolean hover = mouseInView && confirming == null
                         && mx >= bx0 && mx < bx1 && contentMouseY >= by0 && contentMouseY < by1;
                 g.fill(bx0, by0, bx1, by1, FRAME_DARK);
                 g.fill(bx0 + 1, by0 + 1, bx1 - 1, by1 - 1, hover ? 0xFFE8574F : RED);
-                text(g, Component.literal(label).withStyle(ChatFormatting.BOLD), (bx0 + bx1) / 2f, by0 + 3, WHITE, 1, true);
+                fit(g, Component.literal(label).withStyle(ChatFormatting.BOLD), (bx0 + bx1) / 2f, by0 + 3, bw - 6, WHITE, 1, Align.CENTRE);
                 pickButtons.add(new PickButton(bx0, by0, bx1, by1, new Pending(r.id(), r.title(), PickRegionPayload.EXTRA)));
                 rightEdge = bx0 - 6;
                 String note = "second region";
@@ -948,6 +984,11 @@ public class TrainerCardScreen extends Screen {
 
     private enum Align { LEFT, CENTRE, RIGHT }
 
+    /** A button label's width: labels are bold, which is wider than plain text. */
+    private int boldWidth(String label) {
+        return font.width(Component.literal(label).withStyle(ChatFormatting.BOLD));
+    }
+
     /** Draws text at a scale, optionally centred on x. */
     private void text(GuiGraphics g, Component text, float x, float y, int colour, float scale, boolean centred) {
         draw(g, text.getVisualOrderText(), x, y, colour, scale, centred ? Align.CENTRE : Align.LEFT);
@@ -1012,7 +1053,6 @@ public class TrainerCardScreen extends Screen {
 
     /** The text cut to fit width (in unscaled font units), ending in "…". */
     private FormattedCharSequence ellipsize(FormattedText text, float width) {
-        FormattedText cut = font.substrByWidth(text, Math.max(0, (int) width - font.width("…")));
-        return Language.getInstance().getVisualOrder(FormattedText.composite(cut, FormattedText.of("…")));
+        return org.ppvon.ultimateCobblemonProgression.client.gui.UiText.ellipsize(font, text, (int) width);
     }
 }

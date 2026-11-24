@@ -28,6 +28,12 @@ public abstract class BaseConfigScreen extends Screen {
                 .bounds(cx + 5, y, 150, 20).build());
     }
 
+    /** A scrolling list for the screen's settings, between the title and the Save and Cancel buttons. */
+    protected org.ppvon.ultimateCobblemonProgression.client.gui.widgets.ConfigList addSettingsList() {
+        return addRenderableWidget(new org.ppvon.ultimateCobblemonProgression.client.gui.widgets.ConfigList(
+                this.minecraft, this.width, this.height - 32 - 36, 32));
+    }
+
     protected void setDoneEnabled(boolean enabled) {
         if (saveButton != null) {
             saveButton.active = enabled;

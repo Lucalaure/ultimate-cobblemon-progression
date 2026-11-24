@@ -7,6 +7,7 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import org.ppvon.ultimateCobblemonProgression.client.gui.UiText;
 import org.ppvon.ultimateCobblemonProgression.common.gym.GymChoice;
 
 import java.util.List;
@@ -47,9 +48,9 @@ public class GymChoiceScreen extends Screen {
     @Override
     public void render(GuiGraphics g, int mouseX, int mouseY, float partialTick) {
         super.render(g, mouseX, mouseY, partialTick);
-        g.drawCenteredString(font, title, width / 2, 14, 0xFFFFFFFF);
-        g.drawCenteredString(font, Component.literal("Both of your leagues have a gym leader ready. Which one do you want to battle?")
-                .withStyle(ChatFormatting.GRAY), width / 2, 26, 0xFFA0A0A0);
+        UiText.drawCentredFitted(g, font, title, width / 2, 14, width - 20, 0xFFFFFFFF);
+        UiText.drawCentredFitted(g, font, Component.literal("Both of your leagues have a gym leader ready. Which one do you want to battle?")
+                .withStyle(ChatFormatting.GRAY), width / 2, 26, width - 20, 0xFFA0A0A0);
 
         int x0 = (width - ROW_W) / 2, y = 44;
         int maxW = ROW_W - BUTTON_W - 8;
@@ -58,11 +59,7 @@ public class GymChoiceScreen extends Screen {
                     .append(o.name().copy().withStyle(ChatFormatting.WHITE))
                     .append(Component.literal("  Lv " + o.aceLevel()).withStyle(ChatFormatting.GRAY));
             if (o.hard()) label = label.copy().append(Component.literal("  Hard").withStyle(ChatFormatting.RED));
-            if (font.width(label) > maxW) {
-                g.drawString(font, font.substrByWidth(label, maxW - font.width("…")).getString() + "…", x0, y + 6, 0xFFFFFFFF);
-            } else {
-                g.drawString(font, label, x0, y + 6, 0xFFFFFFFF);
-            }
+            UiText.drawFitted(g, font, label, x0, y + 6, maxW, 0xFFFFFFFF, true);
             y += ROW_H;
         }
     }

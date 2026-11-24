@@ -3,6 +3,7 @@ package org.ppvon.ultimateCobblemonProgression.client.gui;
 import net.minecraft.client.gui.components.Checkbox;
 import net.minecraft.client.gui.components.Tooltip;
 import net.minecraft.network.chat.Component;
+import org.ppvon.ultimateCobblemonProgression.client.gui.widgets.ConfigList;
 import org.ppvon.ultimateCobblemonProgression.client.gui.widgets.DoubleField;
 import org.ppvon.ultimateCobblemonProgression.config.ConfigLoader;
 import org.ppvon.ultimateCobblemonProgression.config.SpawnConfig;
@@ -16,7 +17,7 @@ public final class SpawnConfigScreen extends BaseConfigScreen {
             chkDoWeightScaling;
     private DoubleField fldTierCap, fldMin, fldAvg, fldMax, fldDecay, fldMinFactor, fldBuff;
 
-    SpawnConfigScreen(BaseConfigScreen parent) {
+    public SpawnConfigScreen(BaseConfigScreen parent) {
         super(parent, "CJP – Spawn Config");
     }
 
@@ -38,93 +39,40 @@ public final class SpawnConfigScreen extends BaseConfigScreen {
         weightMinFactor        = c.weightMinFactor;
         weightCurrentTierBuff  = c.weightCurrentTierBuff;
 
-        int cx = width / 2, y = 34, labelX = cx - 150, fieldX = cx + 30, rowH = 22;
-
-        java.util.function.BiConsumer<String, Integer> label = (text, yy) ->
-                this.addRenderableOnly((gfx, mx, my, d) ->
-                        gfx.drawString(this.font, text, labelX, yy + 6, 0xFFA0A0A0, false));
+        ConfigList list = addSettingsList();
 
         // --- Species blocking ---
-        chkDoSpeciesBlocking = Checkbox.builder(Component.literal("Enable Species Blocking"), this.font)
-                .selected(doSpeciesBlocking).pos(labelX, y).build();
-        addRenderableWidget(chkDoSpeciesBlocking);
-
-        // Same row, so the screen doesn't grow taller.
-        chkBlockUnlistedTrainers = Checkbox.builder(Component.literal("Block Unlisted Trainers"), this.font)
-                .selected(blockUnlistedTrainers).pos(fieldX, y)
+        chkDoSpeciesBlocking = list.add(Checkbox.builder(Component.literal("Enable Species Blocking"), this.font)
+                .selected(doSpeciesBlocking).build());
+        chkBlockUnknownSpecies = list.add(Checkbox.builder(Component.literal("Block Unknown Species"), this.font)
+                .selected(blockUnknownSpecies).build());
+        chkBlockUnlistedTrainers = list.add(Checkbox.builder(Component.literal("Block Unlisted Trainers"), this.font)
+                .selected(blockUnlistedTrainers)
                 .tooltip(Tooltip.create(Component.literal(
                         "Region mode: Radical Cobblemon Trainers' wild trainers that no region lists (like Pokémon Unbound's) never spawn.")))
-                .build();
-        addRenderableWidget(chkBlockUnlistedTrainers);
-
-        y += rowH;
-
-        chkBlockUnknownSpecies = Checkbox.builder(Component.literal("Block Unknown Species"), this.font)
-                .selected(blockUnknownSpecies).pos(labelX, y).build();
-        addRenderableWidget(chkBlockUnknownSpecies);
-
-        y += rowH + 6;
+                .build());
 
         // --- Level scaling ---
-        chkDoLevelScaling = Checkbox.builder(Component.literal("Enable Level Scaling"), this.font)
-                .selected(doLevelScaling).pos(labelX, y).build();
-        addRenderableWidget(chkDoLevelScaling);
-
-        y += rowH;
-
-        label.accept("Tier Cap Scaling", y);
-        fldTierCap = new DoubleField(this.font, fieldX, y, 100, 20, tierCapScaling);
+        chkDoLevelScaling = list.add(Checkbox.builder(Component.literal("Enable Level Scaling"), this.font)
+                .selected(doLevelScaling).build());
+        fldTierCap = list.addLabelled("Tier Cap Scaling", new DoubleField(this.font, 0, 0, 100, 20, tierCapScaling));
         fldTierCap.setOnValidChange(v -> tierCapScaling = v);
-        addRenderableWidget(fldTierCap);
-
-        y += rowH;
-
-        label.accept("Min Level % of Cap", y);
-        fldMin = new DoubleField(this.font, fieldX, y, 100, 20, minLevelScaling);
+        fldMin = list.addLabelled("Min Level % of Cap", new DoubleField(this.font, 0, 0, 100, 20, minLevelScaling));
         fldMin.setOnValidChange(v -> minLevelScaling = v);
-        addRenderableWidget(fldMin);
-
-        y += rowH;
-
-        label.accept("Avg Level % of Cap", y);
-        fldAvg = new DoubleField(this.font, fieldX, y, 100, 20, avgLevelScaling);
+        fldAvg = list.addLabelled("Avg Level % of Cap", new DoubleField(this.font, 0, 0, 100, 20, avgLevelScaling));
         fldAvg.setOnValidChange(v -> avgLevelScaling = v);
-        addRenderableWidget(fldAvg);
-
-        y += rowH;
-
-        label.accept("Max Level % of Cap", y);
-        fldMax = new DoubleField(this.font, fieldX, y, 100, 20, maxLevelScaling);
+        fldMax = list.addLabelled("Max Level % of Cap", new DoubleField(this.font, 0, 0, 100, 20, maxLevelScaling));
         fldMax.setOnValidChange(v -> maxLevelScaling = v);
-        addRenderableWidget(fldMax);
-
-        y += rowH + 8;
 
         // --- Weight scaling ---
-        chkDoWeightScaling = Checkbox.builder(Component.literal("Enable Weight Scaling"), this.font)
-                .selected(doWeightScaling).pos(labelX, y).build();
-        addRenderableWidget(chkDoWeightScaling);
-
-        y += rowH;
-
-        label.accept("Weight Decay Per Tier", y);
-        fldDecay = new DoubleField(this.font, fieldX, y, 100, 20, weightDecayPerTier);
+        chkDoWeightScaling = list.add(Checkbox.builder(Component.literal("Enable Weight Scaling"), this.font)
+                .selected(doWeightScaling).build());
+        fldDecay = list.addLabelled("Weight Decay Per Tier", new DoubleField(this.font, 0, 0, 100, 20, weightDecayPerTier));
         fldDecay.setOnValidChange(v -> weightDecayPerTier = v);
-        addRenderableWidget(fldDecay);
-
-        y += rowH;
-
-        label.accept("Weight Min Factor", y);
-        fldMinFactor = new DoubleField(this.font, fieldX, y, 100, 20, weightMinFactor);
+        fldMinFactor = list.addLabelled("Weight Min Factor", new DoubleField(this.font, 0, 0, 100, 20, weightMinFactor));
         fldMinFactor.setOnValidChange(v -> weightMinFactor = v);
-        addRenderableWidget(fldMinFactor);
-
-        y += rowH;
-
-        label.accept("Current-Tier Weight Buff", y);
-        fldBuff = new DoubleField(this.font, fieldX, y, 100, 20, weightCurrentTierBuff);
+        fldBuff = list.addLabelled("Current-Tier Weight Buff", new DoubleField(this.font, 0, 0, 100, 20, weightCurrentTierBuff));
         fldBuff.setOnValidChange(v -> weightCurrentTierBuff = v);
-        addRenderableWidget(fldBuff);
 
         Runnable refresh = this::updateDoneState;
         fldTierCap.setOnValidityChange(refresh);

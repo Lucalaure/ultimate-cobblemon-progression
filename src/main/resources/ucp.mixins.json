@@ -19,7 +19,10 @@
     "RctWildTrainerSpawnMixin"
   ],
   "client": [
-    "RctTrainerNameTagMixin"
+    "RctTrainerNameTagMixin",
+    "UiCheckGuiGraphicsMixin",
+    "UiCheckScreenMixin",
+    "UiCheckWidgetMixin"
   ],
   "injectors": {
     "defaultRequire": 1

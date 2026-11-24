@@ -38,6 +38,12 @@ loom {
             // Showdown and its dependencies loaded, and the game stalls in back-to-back full garbage collections.
             vmArgs("-Xmx6G")
         }
+        // gradlew runUiCheck: draws every UCP screen at every GUI size, writes run/ucp-ui-check.txt and closes.
+        create("uiCheck") {
+            client()
+            name("UI Check")
+            vmArgs("-Xmx6G", "-Ducp.uiCheck=exit")
+        }
         create("client2") {
             client()
             name("Client 2")
