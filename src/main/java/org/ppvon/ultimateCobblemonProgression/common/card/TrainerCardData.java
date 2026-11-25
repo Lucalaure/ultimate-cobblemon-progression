@@ -61,8 +61,13 @@ public record TrainerCardData(
         }
     }
 
-    /** A trainer in the region's order. */
-    public record RoadEntry(int tier, int levelCap, Component name, int status, boolean hard) {}
+    /**
+     * A trainer in the region's order.
+     *
+     * @param tier  the tier beating this trainer unlocks
+     * @param level the level of its strongest Pokémon, in the version a gym summons for the player; 0 if unknown
+     */
+    public record RoadEntry(int tier, int level, Component name, int status, boolean hard) {}
 
     /**
      * A region and the player's standing in it.
@@ -198,7 +203,7 @@ public record TrainerCardData(
         buf.writeVarInt(road.size());
         for (RoadEntry r : road) {
             buf.writeVarInt(r.tier);
-            buf.writeVarInt(r.levelCap);
+            buf.writeVarInt(r.level);
             ComponentSerialization.STREAM_CODEC.encode(buf, r.name);
             buf.writeVarInt(r.status);
             buf.writeBoolean(r.hard);

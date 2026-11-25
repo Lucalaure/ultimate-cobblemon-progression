@@ -138,7 +138,7 @@ final class RoadTab extends CardTab {
             g.fill(rx0 + 3, y + 2, rx0 + 12, y + 11, chipColour);
             p.text(g, Component.literal(chip), rx0 + 7.5f, y + 3, WHITE, 1, true);
 
-            String meta = "Tier " + r.tier() + "  ·  cap " + r.levelCap();
+            String meta = r.level() > 0 ? "Tier " + r.tier() + "  ·  Lv " + r.level() : "Tier " + r.tier();
             float metaW = font.width(meta) * 0.75f;
             p.text(g, Component.literal(meta), rx1 - 4 - metaW, y + 4.5f, MUTED, 0.75f, false);
             if (r.hard()) {

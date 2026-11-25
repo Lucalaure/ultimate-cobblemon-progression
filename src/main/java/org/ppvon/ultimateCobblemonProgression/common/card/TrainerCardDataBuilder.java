@@ -211,7 +211,11 @@ final class TrainerCardDataBuilder {
                 // Beaten on Hard: the slot's Hard version is the one the player beat.
                 String hardId = GymDifficulty.hardVersion(group);
                 boolean hard = beaten && hardId != null && RctBridge.isLoaded() && RctBridge.defeats(player, hardId) > 0;
-                road.add(new RoadEntry(tier.index, region.levelCap(tier.index), trainerName(group.get(0)), status, hard));
+                // The level shown is the trainer's own (its strongest Pokémon), in the version a gym summons on the
+                // player's difficulty, or the version they beat.
+                String shown = hard ? hardId : beaten ? group.get(0) : GymDifficulty.trainerFor(player, group);
+                int level = RctBridge.isLoaded() ? Math.max(0, RctBridge.aceLevel(player.server, shown)) : 0;
+                road.add(new RoadEntry(tier.index, level, trainerName(group.get(0)), status, hard));
             }
         }
         return road;
