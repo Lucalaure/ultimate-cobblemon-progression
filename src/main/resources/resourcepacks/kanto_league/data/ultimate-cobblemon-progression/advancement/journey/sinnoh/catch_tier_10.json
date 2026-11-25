@@ -1,5 +1,5 @@
 {
-  "parent": "ultimate-cobblemon-progression:journey/sinnoh/champion",
+  "parent": "ultimate-cobblemon-progression:journey/sinnoh/catch_tier_9",
   "display": {
     "icon": {
       "id": "cobblemon:master_ball"

@@ -2,6 +2,7 @@
 
 ## Fixes
 - **The Road tab shows each leader's level.** The number next to each trainer on the Trainer Card's Road tab was the level cap you get after beating them, which read as the trainer's own level (Erika showed 36, Koga's level, though her team tops out at 29). It now shows the level of the trainer's strongest Pokémon on your difficulty, as "Tier 5 · Lv 29". Your current level cap is still on the Profile tab.
+- **Tidier Pokémon Journey tab.** Each league's tier catch advancements ("Kanto Tier 2 Caught") branched off a different badge, and every league's Tier 1 off the tab's root, so the tree split at every step. They're now one line per league, under its badges: Tier 1 hangs off the first badge, and each tier off the one before. They're still hidden until earned, but earning one also shows the earlier tiers of its line. Progress isn't affected.
 
 # CJP 2.7.0
 

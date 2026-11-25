@@ -1,5 +1,5 @@
 {
-  "parent": "ultimate-cobblemon-progression:journey/sinnoh/relic_badge",
+  "parent": "ultimate-cobblemon-progression:journey/sinnoh/catch_tier_5",
   "display": {
     "icon": {
       "id": "cobblemon:great_ball"

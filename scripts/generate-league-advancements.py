@@ -20,8 +20,8 @@ Run it after changing a league's trainers or adding a region. It writes, under
   PokeBadges item ("ultimate-cobblemon-progression:badge", e.g. pokebadges:boulder_kanto_badge): with PokeBadges
   installed, UCP shows it as the icon and awards that badge.
 - <region>/catch_tier_<n>.json: for each tier of a league region with Pokémon, a hidden advancement earned by catching
-  every obtainable Pokémon of that tier (trigger ultimate-cobblemon-progression:catch_tier). Each hangs off the
-  advancement that opens its tier (tier 2 off the first badge); tier 1, open from the start, off the root.
+  every obtainable Pokémon of that tier (trigger ultimate-cobblemon-progression:catch_tier). They form one line per
+  league under its badges: tier 1 hangs off the first badge, and each later tier off the tier before it.
 - milestones/badge_<n>.json and milestones/champion.json: hidden advancements earned by beating the n-th gym (its last
   leader) or the Champion of ANY league. Regions without a series unlock their tiers with these, so they follow whichever
   league the player is in, and adding a league only means adding its trainers here.
@@ -237,13 +237,16 @@ def main():
                                        badge=badge_id))
                 parent = path
             unlocks[t] = parent
-        # Catching every Pokémon of a tier, hanging off whatever opens that tier.
+        # Catching every Pokémon of a tier: one line per league, tier 1 off the first badge and each tier off the one
+        # before, so the line runs under the badges instead of branching off each of them.
         caught = 0
+        catch_parent = unlocks[steps[0]]
         for t in sorted(tiers):
             if not tiers[t].get("species"):
                 continue
-            path, adv = catch_advancement(region_id, title, t, t == max(tiers), unlocks.get(t, "journey/root"))
+            path, adv = catch_advancement(region_id, title, t, t == max(tiers), catch_parent)
             write_json(os.path.join(out, *path.split("/")[1:]) + ".json", adv)
+            catch_parent = path
             caught += 1
 
         if badge != len(league["badges"]):

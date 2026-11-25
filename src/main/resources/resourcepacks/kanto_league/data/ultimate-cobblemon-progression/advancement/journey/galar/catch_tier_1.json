@@ -1,5 +1,5 @@
 {
-  "parent": "ultimate-cobblemon-progression:journey/root",
+  "parent": "ultimate-cobblemon-progression:journey/galar/grass_badge",
   "display": {
     "icon": {
       "id": "cobblemon:poke_ball"

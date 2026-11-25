@@ -1,5 +1,5 @@
 {
-  "parent": "ultimate-cobblemon-progression:journey/kanto/boulder_badge",
+  "parent": "ultimate-cobblemon-progression:journey/kanto/catch_tier_1",
   "display": {
     "icon": {
       "id": "cobblemon:poke_ball"
