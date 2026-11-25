@@ -53,6 +53,11 @@ public final class ExpCapListener {
         return Unit.INSTANCE;
     }
 
+    /** Drops what's remembered about a player who left. */
+    public static void forget(ServerPlayer player) {
+        lastMsgTick.remove(player.getUUID());
+    }
+
     private static void notify(ServerPlayer sp, Pokemon mon, int cap, String msg) {
         int now = sp.server.getTickCount();
         Integer last = lastMsgTick.get(sp.getUUID());

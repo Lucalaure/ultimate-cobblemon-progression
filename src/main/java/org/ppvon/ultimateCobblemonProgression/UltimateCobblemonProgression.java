@@ -26,7 +26,6 @@ import org.ppvon.ultimateCobblemonProgression.config.ConfigLoader;
 import org.ppvon.ultimateCobblemonProgression.common.influence.TrainerLevelInfluence;
 import org.ppvon.ultimateCobblemonProgression.common.influence.TrainerLevelInfluenceRegistrar;
 import org.ppvon.ultimateCobblemonProgression.common.levelcap.CandyEntityBlock;
-import org.ppvon.ultimateCobblemonProgression.common.levelcap.CandyRefund;
 import org.ppvon.ultimateCobblemonProgression.common.levelcap.ExpCapListener;
 import org.ppvon.ultimateCobblemonProgression.common.tiers.TierDataLoader;
 import org.ppvon.ultimateCobblemonProgression.common.regions.RegionCommands;
@@ -57,6 +56,7 @@ public class UltimateCobblemonProgression implements ModInitializer {
         GymBlocks.register();
         VillageGyms.register();
         GymTeamLimit.register();
+        org.ppvon.ultimateCobblemonProgression.common.gym.GymLegality.register();
         org.ppvon.ultimateCobblemonProgression.common.gym.GymRematch.register();
         org.ppvon.ultimateCobblemonProgression.common.gym.GymChoice.register();
         TrainerCard.register();
@@ -79,7 +79,10 @@ public class UltimateCobblemonProgression implements ModInitializer {
             org.ppvon.ultimateCobblemonProgression.common.badges.PokeBadgesCompat.onJoin(player);
         });
 
-        ServerPlayConnectionEvents.DISCONNECT.register((handler, server) -> RegionProgressTracker.forget(handler.player));
+        ServerPlayConnectionEvents.DISCONNECT.register((handler, server) -> {
+            RegionProgressTracker.forget(handler.player);
+            ExpCapListener.forget(handler.player);
+        });
 
         ServerPlayerEvents.AFTER_RESPAWN.register((oldPlayer, newPlayer, alive) -> {
             TrainerLevelComponents.KEY.sync(newPlayer);
@@ -210,6 +213,11 @@ public class UltimateCobblemonProgression implements ModInitializer {
         RegionDataLoader.register();
         registerKantoLeague();
         registerLegendaryMonumentsFix();
+        warnIfRctUntested();
+
+        // Cobblemon sets its own starter handler when it loads; CJP's takes over from it before anyone can join.
+        ServerLifecycleEvents.SERVER_STARTING.register(server ->
+                org.ppvon.ultimateCobblemonProgression.common.starter.RegionStarterHandler.install());
 
         ServerLifecycleEvents.SERVER_STARTED.register(server -> {
             TierSpeciesApplier.applyFromRegistry();
@@ -226,8 +234,9 @@ public class UltimateCobblemonProgression implements ModInitializer {
             RegionProgressTracker.refreshAllSilently(server);
         });
 
+        // Candies used from the party menu need no blocking: Cobblemon only uses one up when it adds XP, and
+        // ExpCapListener takes the XP away at the cap.
         CandyEntityBlock.register();
-        CandyRefund.register();
         ExpCapListener.register();
         ProgressionManager.register();
         LOG.info("Done Loading");
@@ -259,6 +268,27 @@ public class UltimateCobblemonProgression implements ModInitializer {
      * NPC. Radical Cobblemon Trainers' trainers aren't, so beating one (a gym leader included) crashed the server.
      * This pack replaces those four scripts with copies that skip other trainers. Only added with both mods installed.
      */
+    /** The Radical Cobblemon Trainers versions CJP's RCT hooks were built and tested against (0.19.x). */
+    static final String RCT_TESTED = ">=0.19.0-alpha <0.20.0-alpha";
+
+    /**
+     * CJP's hooks into Radical Cobblemon Trainers are optional mixins, so a new RCT version doesn't crash the game when
+     * one no longer fits: it just stops applying. Say so in the log, where a server owner will look first.
+     */
+    private static void warnIfRctUntested() {
+        FabricLoader.getInstance().getModContainer("rctmod").ifPresent(rct -> {
+            var version = rct.getMetadata().getVersion();
+            try {
+                if (!net.fabricmc.loader.api.metadata.version.VersionPredicate.parse(RCT_TESTED).test(version)) {
+                    LOG.warn("Radical Cobblemon Trainers {} hasn't been tested with this CJP version (tested with 0.19.x). "
+                            + "Gyms, level caps and rematches may not work as described.", version.getFriendlyString());
+                }
+            } catch (net.fabricmc.loader.api.VersionParsingException e) {
+                LOG.debug("Couldn't check the RCT version: {}", e.getMessage());
+            }
+        });
+    }
+
     private static void registerLegendaryMonumentsFix() {
         FabricLoader loader = FabricLoader.getInstance();
         if (!loader.isModLoaded("rctmod") || !loader.isModLoaded("legendarymonuments")) return;

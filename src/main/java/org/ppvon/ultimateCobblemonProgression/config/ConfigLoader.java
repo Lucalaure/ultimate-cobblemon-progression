@@ -34,9 +34,14 @@ public final class ConfigLoader {
     public static Supplier<Boolean> DO_DEX_PROGRESSION;
     public static Supplier<Double> GYM_VILLAGE_CHANCE;
     public static Supplier<Boolean> GYM_TEAM_LIMIT;
+    /** "off", "warn" or "block" (see {@link CommonConfig#gymLegalityCheck}). */
+    public static Supplier<String> GYM_LEGALITY_CHECK;
     public static Supplier<String> GYM_DIFFICULTY;
     public static Supplier<Boolean> CATCH_WHOLE_TIER;
     public static Supplier<Boolean> GIVE_TRAINER_CARD;
+    public static Supplier<Boolean> REGION_STARTERS;
+    /** 0 or less: Cobblemon's own starter levels. */
+    public static Supplier<Integer> STARTER_LEVEL;
     public static Supplier<Boolean> ALLOW_TWO_LEAGUES;
     /** True for "lowest", false for "average" (anything else counts as "average"). */
     public static Supplier<Boolean> TWO_LEAGUE_CAP_LOWEST;
@@ -45,6 +50,13 @@ public final class ConfigLoader {
 
     public static void init() {
         reload();
+        wireSuppliers();
+    }
+
+    /** Uses these settings instead of the config files, without touching the disk. For unit tests. */
+    public static void initWith(SpawnConfig spawn, CommonConfig common) {
+        SPAWN = spawn;
+        COMMON = common;
         wireSuppliers();
     }
 
@@ -85,9 +97,12 @@ public final class ConfigLoader {
         DO_DEX_PROGRESSION = () -> COMMON.doDexProgression;
         GYM_VILLAGE_CHANCE = () -> COMMON.gymVillageChance;
         GYM_TEAM_LIMIT = () -> COMMON.gymTeamLimit;
+        GYM_LEGALITY_CHECK = () -> COMMON.gymLegalityCheck == null ? "off" : COMMON.gymLegalityCheck;
         GYM_DIFFICULTY = () -> COMMON.gymDifficulty == null ? "player_choice" : COMMON.gymDifficulty;
         CATCH_WHOLE_TIER = () -> COMMON.catchWholeTier;
         GIVE_TRAINER_CARD = () -> COMMON.giveTrainerCard;
+        REGION_STARTERS = () -> COMMON.regionStarters;
+        STARTER_LEVEL = () -> Math.min(100, COMMON.starterLevel);
         ALLOW_TWO_LEAGUES = () -> COMMON.allowTwoLeagues;
         TWO_LEAGUE_CAP_LOWEST = () -> "lowest".equalsIgnoreCase(COMMON.twoLeagueCap);
     }

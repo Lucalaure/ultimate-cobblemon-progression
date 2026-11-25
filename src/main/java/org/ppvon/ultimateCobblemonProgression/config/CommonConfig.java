@@ -8,6 +8,12 @@ public class CommonConfig {
     /** Difficulty option: players may bring no more Pokémon to a gym battle than the gym leader has. */
     public boolean gymTeamLimit = false;
     /**
+     * Whether the Pokémon a player brings to a gym battle must be from tiers they've unlocked (eggs, trades and fossils
+     * can bring others). "off": no check. "warn": the leader names them when it accepts. "block": the battle doesn't
+     * start while one is in the party. The player's starter is always allowed.
+     */
+    public String gymLegalityCheck = "off";
+    /**
      * Gym leader difficulty (region mode, with RCT): "player_choice" lets each player pick Normal or Hard on their
      * Trainer Card and change it between gyms; "normal" or "hard" sets it for everyone.
      */
@@ -29,6 +35,13 @@ public class CommonConfig {
      * the player has to keep both leagues level, much like one combined league.
      */
     public String twoLeagueCap = "average";
+    /**
+     * Region mode: players pick their starter only once they've chosen where their journey starts, and only from that
+     * region's starters (plus their second region's, if they picked it first).
+     */
+    public boolean regionStarters = true;
+    /** The level starters come at, as in the original games. 0 keeps the level in Cobblemon's starter list (10). */
+    public int starterLevel = 5;
     /** Give every player a Trainer Card on their first join. */
     public boolean giveTrainerCard = true;
 }

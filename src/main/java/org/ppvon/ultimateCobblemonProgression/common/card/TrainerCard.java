@@ -62,6 +62,10 @@ public final class TrainerCard {
             player.displayClientMessage(result.ok() ? result.message()
                     : result.message().copy().withStyle(ChatFormatting.RED), false);
             open(player); // show the card again with the new choice in place
+            // Where the journey starts decides the starters on offer: show them now, over the card.
+            if (result.ok() && payload.kind() == PickRegionPayload.HOME) {
+                org.ppvon.ultimateCobblemonProgression.common.starter.RegionStarterHandler.offerStarter(player);
+            }
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(entries -> entries.accept(ITEM));
     }

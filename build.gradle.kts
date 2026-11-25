@@ -57,9 +57,9 @@ loom {
             client()
             name("Client 3")
             // separate game directory so files/locks don't clash
-            runDir("run2")
+            runDir("run3")
             // give it a unique username (dev/offline auth)
-            programArgs("--username", "Tester3", "--uuid", "00000000-0000-0000-0000-000000000002")
+            programArgs("--username", "Tester3", "--uuid", "00000000-0000-0000-0000-000000000003")
             vmArgs("-Xmx2G")
         }
     }
@@ -114,6 +114,10 @@ dependencies {
 
     modImplementation("dev.onyxstudios.cardinal-components-api:cardinal-components-base:6.1.2")
     modImplementation("dev.onyxstudios.cardinal-components-api:cardinal-components-entity:6.1.2")
+
+    testImplementation(platform("org.junit:junit-bom:5.11.4"))
+    testImplementation("org.junit.jupiter:junit-jupiter")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
     modCompileOnly("com.terraformersmc:modmenu:11.0.3")
     //modImplementation("com.terraformersmc:modmenu:11.0.3")
@@ -182,6 +186,11 @@ tasks.named<JavaExec>("runClient") {
     //30815191-a90b-433a-aa64-e3e819bcc4be
 
     //args("--username", "UCP_Tester-2")
+}
+
+// Unit tests for the logic that runs without a game (spawn levels and weights, level caps, messages).
+tasks.test {
+    useJUnitPlatform()
 }
 
 tasks.javadoc {

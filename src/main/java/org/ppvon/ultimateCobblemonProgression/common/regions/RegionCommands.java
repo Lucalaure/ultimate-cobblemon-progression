@@ -127,7 +127,9 @@ public final class RegionCommands {
 
     private static Component startChoicePrompt(ServerPlayer player) {
         if (RegionProgress.needsHomeRegion(player)) {
-            return Component.literal("Open your Trainer Card to choose the region your journey starts in.")
+            return Component.literal(org.ppvon.ultimateCobblemonProgression.common.starter.RegionStarterHandler.waitsForStarter(player)
+                            ? "Open your Trainer Card to choose the region your journey starts in, then your starter from it."
+                            : "Open your Trainer Card to choose the region your journey starts in.")
                     .withStyle(ChatFormatting.YELLOW);
         }
         List<RegionDef> next = RegionProgress.nextChoices(player);

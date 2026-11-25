@@ -34,7 +34,7 @@ Without RCT, CJP still works, using its original trainer-level ladder (see [Clas
 
 ## How it plays
 
-1. **Pick where your journey starts.** Every player gets a **Trainer Card** on joining. The first time you open it, it asks which region to start in: Kanto, Sinnoh or Galar. That region opens, and you join its trainer series.
+1. **Pick where your journey starts.** Every player gets a **Trainer Card** on joining. The first time you open it, it asks which region to start in: Kanto, Sinnoh or Galar. That region opens, you join its trainer series, and you pick your starter from that region's starters, at level 5.
 2. **Find a gym.** New villages can have a **gym** at their centre, one at most per village. Using its **Gym Challenge** block summons your next leader into the arena; sneaking while using it lets you rematch any leader you've already beaten. One leader stands in a gym at a time.
 3. **Beat the leader to unlock the next tier.** Each badge opens more of the region's Pokémon, stronger wild levels and a higher level cap. After the eight gyms come the Elite Four and the Champion, and beating the Champion completes the region.
 4. **Choose where your journey goes next.** Once you're Champion, your Trainer Card asks which league to travel to next. Your journey continues there from its first gym, with a fresh level cap. The regions you've finished stay open: their Pokémon keep spawning, mostly at levels that fit your new team.
@@ -97,9 +97,11 @@ Settings live in `config/ultimate-cobblemon-progression/`. Highlights from `ucp-
 
 - `gymVillageChance` (default `0.3`): the share of new villages whose centre is a gym. `0` turns village gyms off.
 - `giveTrainerCard` (default `true`): give every player a Trainer Card on their first join.
+- `regionStarters` (default `true`) and `starterLevel` (default `5`): your starter comes from the region your journey starts in, picked once you've chosen it, at level 5.
 - `gymDifficulty` (default `"player_choice"`): each player picks Normal or Hard gym leaders on their Trainer Card and can switch any time; `"normal"` or `"hard"` sets it for everyone. See [Gym difficulty](docs/how-it-works.md#gym-difficulty).
 - `allowTwoLeagues` (default `true`): players may pick a second league, with its own gym leaders, and work through both at once. Gyms ask which league's leader to battle, and the level cap is the average of the two (or the lower of the two, with `twoLeagueCap` set to `"lowest"`). See [Two leagues at once](docs/how-it-works.md#two-leagues-at-once).
 - `catchWholeTier` (default `false`): difficulty option, catch every Pokémon of your tier before you can face the next gym leader (your extra region also waits until its tier is caught).
+- `gymLegalityCheck` (default `"off"`): `"warn"` or `"block"` gym battles while your party has Pokémon from tiers you haven't unlocked (from eggs, trades or fossils). Your starter is always allowed.
 
 And from `ucp-spawn.json`:
 

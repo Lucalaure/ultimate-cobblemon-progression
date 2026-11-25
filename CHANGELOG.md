@@ -1,3 +1,16 @@
+# Unreleased
+
+## Features
+- **Your starter comes from your region.** In region mode you now pick your starter after choosing where your journey starts, and only from that region's starters (and your second region's, if you picked it first). Choosing where your journey starts opens the starter choice right away; before that, the starter screen tells you to open your Trainer Card. Players who already have a starter keep it. Turn it off with `regionStarters` in `ucp-common.json` (Starters From Your Region on the Mod Menu General page).
+- **Starters at level 5**, as in the original games, with the moves they know at level 5, instead of Cobblemon's level 10. Change it with `starterLevel` (Starter Level on the Mod Menu General page); `0` keeps Cobblemon's level. If another mod handles starters, CJP leaves them to it.
+- **Unlocked Pokémon only at gyms (optional).** With `gymLegalityCheck` in `ucp-common.json` (or Unlocked Pokémon Only on the Mod Menu General page), gym leaders check that the Pokémon you bring are from tiers you've unlocked, since eggs, trades and fossils can bring others. `"warn"` names them when the leader accepts your challenge; `"block"` also stops the battle until they're in the PC. Your starter is always allowed. Off by default.
+
+## Fixes
+- The Trainer Card's first region choice was titled "Choose your second region", and the Regions tab's second-region pick "Choose your starting region". They're the right way round again.
+- **Wild levels follow the right player.** A wild Pokémon's level came from the progress of whoever stood closest when it spawned, while whether it could spawn at all came from the player it spawned for. On a server, a Pokémon allowed by one player's progress could get its level from another's. Both now use the same player.
+- The server log now warns when Radical Cobblemon Trainers isn't a version CJP was tested with (0.19.x), since CJP's hooks into it stop working quietly rather than crashing.
+- CJP now requires Cobblemon 1.8.x, so a Cobblemon version it can't run on shows Fabric's "incompatible mods" screen instead of crashing.
+
 # CJP 2.6.0
 
 ## Features

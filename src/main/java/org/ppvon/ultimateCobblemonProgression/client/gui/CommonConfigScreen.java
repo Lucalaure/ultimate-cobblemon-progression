@@ -16,9 +16,13 @@ public final class CommonConfigScreen extends BaseConfigScreen {
     private static final int MAX_GYM_PERCENT = 95;
     private static final int GYM_PERCENT_STEP = 5;
 
-    private Checkbox chkLevelCap, chkDex, chkTrainerCard, chkGymTeamLimit, chkCatchWholeTier, chkTwoLeagues;
+    private Checkbox chkLevelCap, chkDex, chkTrainerCard, chkGymTeamLimit, chkCatchWholeTier, chkTwoLeagues, chkRegionStarters;
+    private CycleButton<Integer> btnStarterLevel;
     private GymChanceSlider sldGymChance;
-    private CycleButton<String> btnGymDifficulty, btnTwoLeagueCap;
+    private CycleButton<String> btnGymDifficulty, btnTwoLeagueCap, btnGymLegality;
+
+    /** gymLegalityCheck values, in the order the button cycles through them. */
+    private static final List<String> LEGALITY_MODES = List.of("off", "warn", "block");
 
     /** gymDifficulty values, in the order the button cycles through them. */
     private static final List<String> DIFFICULTIES = List.of("player_choice", "normal", "hard");
@@ -40,6 +44,24 @@ public final class CommonConfigScreen extends BaseConfigScreen {
         chkTrainerCard = list.add(Checkbox.builder(Component.literal("Give Trainer Card on First Join"), this.font)
                 .selected(c.giveTrainerCard).build());
 
+        chkRegionStarters = list.add(Checkbox.builder(Component.literal("Starters From Your Region"), this.font)
+                .selected(c.regionStarters)
+                .tooltip(Tooltip.create(Component.literal(
+                        "Players pick their starter after choosing where their journey starts, from that region's starters (and their second region's, if picked first).")))
+                .build());
+        List<Integer> levels = new java.util.ArrayList<>(List.of(0, 1, 5, 10, 15, 20));
+        if (!levels.contains(c.starterLevel)) {
+            levels.add(c.starterLevel);
+            levels.sort(null);
+        }
+        btnStarterLevel = list.add(CycleButton.<Integer>builder(v -> Component.literal(v <= 0 ? "Cobblemon's" : "Lv. " + v))
+                .withValues(levels)
+                .withInitialValue(c.starterLevel)
+                .withTooltip(v -> Tooltip.create(Component.literal(v <= 0
+                        ? "Starters come at the level in Cobblemon's starter list (10)."
+                        : "Starters come at level " + v + ", with the moves they know at that level.")))
+                .create(0, 0, 150, 20, Component.literal("Starter Level")));
+
         chkTwoLeagues = list.add(Checkbox.builder(Component.literal("Allow Two Leagues"), this.font)
                 .selected(c.allowTwoLeagues)
                 .tooltip(Tooltip.create(Component.literal(
@@ -57,6 +79,16 @@ public final class CommonConfigScreen extends BaseConfigScreen {
         chkGymTeamLimit = list.add(Checkbox.builder(Component.literal("Gym Team Limit"), this.font)
                 .selected(c.gymTeamLimit).build());
         list.addNote("Bring no more Pokémon to a gym battle than the leader has");
+        String legality = LEGALITY_MODES.contains(c.gymLegalityCheck) ? c.gymLegalityCheck : "off";
+        btnGymLegality = list.add(CycleButton.<String>builder(CommonConfigScreen::legalityName)
+                .withValues(LEGALITY_MODES)
+                .withInitialValue(legality)
+                .withTooltip(v -> Tooltip.create(Component.literal(switch (v) {
+                    case "warn" -> "Gym leaders name party Pokémon from tiers you haven't unlocked, but battle anyway.";
+                    case "block" -> "Gym leaders won't battle while your party has Pokémon from tiers you haven't unlocked. Your starter is always allowed.";
+                    default -> "No check: bring any Pokémon to a gym battle.";
+                })))
+                .create(0, 0, 150, 20, Component.literal("Unlocked Pokémon Only")));
         String current = DIFFICULTIES.contains(c.gymDifficulty) ? c.gymDifficulty : "player_choice";
         btnGymDifficulty = list.add(CycleButton.<String>builder(CommonConfigScreen::difficultyName)
                 .withValues(DIFFICULTIES)
@@ -73,6 +105,14 @@ public final class CommonConfigScreen extends BaseConfigScreen {
         list.addNote("Applies to newly generated villages after the world restarts");
     }
 
+    private static Component legalityName(String value) {
+        return Component.literal(switch (value) {
+            case "warn" -> "Warn";
+            case "block" -> "Block";
+            default -> "Off";
+        });
+    }
+
     private static Component difficultyName(String value) {
         return Component.literal(switch (value) {
             case "normal" -> "Normal";
@@ -87,7 +127,10 @@ public final class CommonConfigScreen extends BaseConfigScreen {
         c.doLevelCap = chkLevelCap.selected();
         c.doDexProgression = chkDex.selected();
         c.giveTrainerCard = chkTrainerCard.selected();
+        c.regionStarters = chkRegionStarters.selected();
+        c.starterLevel = btnStarterLevel.getValue();
         c.gymTeamLimit = chkGymTeamLimit.selected();
+        c.gymLegalityCheck = btnGymLegality.getValue();
         c.gymDifficulty = btnGymDifficulty.getValue();
         c.catchWholeTier = chkCatchWholeTier.selected();
         c.allowTwoLeagues = chkTwoLeagues.selected();

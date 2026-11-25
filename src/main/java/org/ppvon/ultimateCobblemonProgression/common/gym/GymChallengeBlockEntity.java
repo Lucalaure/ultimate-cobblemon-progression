@@ -188,6 +188,10 @@ public class GymChallengeBlockEntity extends BlockEntity {
             Component hint = GymTeamLimit.hint(leaderName, RctBridge.teamSize(level.getServer(), trainerId));
             if (hint != null) tell(player, hint);
         }
+        if (!rematch) {
+            Component legality = GymLegality.hint(player, leaderName);
+            if (legality != null) tell(player, legality);
+        }
     }
 
     public static void serverTick(Level level, BlockPos pos, BlockState state, GymChallengeBlockEntity gym) {

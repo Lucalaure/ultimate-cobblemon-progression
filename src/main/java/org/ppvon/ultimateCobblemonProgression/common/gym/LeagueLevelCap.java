@@ -50,17 +50,22 @@ public final class LeagueLevelCap {
         int cap = compute(player);
         if (cap > 0) {
             int floor = component.getLevelCapFloor();
-            if (floor < 0) {
-                floor = journeyCap(player);
-                component.setLevelCapFloor(floor);
-            }
-            if (cap >= floor) {
-                if (floor > 0) component.setLevelCapFloor(0);
-            } else {
-                cap = floor;
-            }
+            if (floor < 0) floor = journeyCap(player);
+            int[] result = applyFloor(cap, floor);
+            cap = result[0];
+            if (result[1] != component.getLevelCapFloor()) component.setLevelCapFloor(result[1]);
         }
         component.setLevelCapOverride(cap);
+    }
+
+    /**
+     * The floor rule of {@link #update}, for a two-league cap and the floor in force (never negative here): returns
+     * {cap to use, floor to store}. Below the floor the cap is held at it; once the cap reaches it, the floor is
+     * dropped for good (stored as 0).
+     */
+    static int[] applyFloor(int cap, int floor) {
+        if (cap >= floor) return new int[]{cap, 0};
+        return new int[]{floor, floor};
     }
 
     /** The cap CJP gives RCT for this player, or -1 to keep RCT's own. */
@@ -104,7 +109,7 @@ public final class LeagueLevelCap {
         return cap;
     }
 
-    private static int average(int a, int b) {
+    static int average(int a, int b) {
         return (a + b + 1) / 2;
     }
 

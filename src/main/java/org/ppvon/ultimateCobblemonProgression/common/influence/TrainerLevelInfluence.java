@@ -98,7 +98,7 @@ public final class TrainerLevelInfluence implements SpawningInfluence {
     private static final Supplier<Double> WEIGHT_MIN_FACTOR = ConfigLoader.WEIGHT_MIN_FACTOR;
     private static final Supplier<Double> WEIGHT_CURRENT_TIER_BUFF = ConfigLoader.WEIGHT_CURRENT_TIER_BUFF;
 
-    private static int sampleTriangularInt(int min, int mode, int max, RandomSource rand) {
+    static int sampleTriangularInt(int min, int mode, int max, RandomSource rand) {
         if (min >= max) return min;
         if (max > 100) max = 100;
         mode = Mth.clamp(mode, min, max);
@@ -114,7 +114,7 @@ public final class TrainerLevelInfluence implements SpawningInfluence {
         return Mth.clamp((int)Math.round(x), min, max);
     }
 
-    private static double weightFactor(int tierGap) {
+    static double weightFactor(int tierGap) {
         int diff = Math.abs(tierGap);
         double f = WEIGHT_CURRENT_TIER_BUFF.get() - (WEIGHT_DECAY_PER_TIER.get() * diff);
         return (f < WEIGHT_MIN_FACTOR.get()) ? WEIGHT_MIN_FACTOR.get() : f;
@@ -309,11 +309,13 @@ public final class TrainerLevelInfluence implements SpawningInfluence {
         if (!(entity instanceof PokemonEntity pe)){
             return;
         }
-        if (!(pe.level() instanceof ServerLevel server)) {
+        if (!(pe.level() instanceof ServerLevel)) {
             return;
         }
 
-        ServerPlayer player = (ServerPlayer) server.getNearestPlayer(pe, 128.0);
+        // The same player the spawn was allowed and weighed for, so the level follows their progress, not that of
+        // whoever happens to stand closest.
+        ServerPlayer player = resolvePlayer(action.getSpawnablePosition());
         if (player == null) return;
 
         var poke = pe.getPokemon();

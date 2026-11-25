@@ -206,9 +206,12 @@ On a dedicated server, edit the **server's** files and restart it; the in-game s
 |---|---|---|
 | `doLevelCap` | `true` | Stop your Pokémon gaining XP past your tier's level cap ([section 5](#5-level-cap-on-your-pokémon)). |
 | `doDexProgression` | `true` | Level players up automatically from Pokédex progress. If off, trainer levels only change through commands. |
+| `regionStarters` | `true` | Region mode: you pick your starter after choosing where your journey starts, and only from that region's starters (plus your second region's, if you picked it first). Choosing where your journey starts opens the starter choice. |
+| `starterLevel` | `5` | The level starters come at, as in the original games, with the moves they know at that level. `0` keeps the level in Cobblemon's starter list (10). |
 | `giveTrainerCard` | `true` | Give every player a [Trainer Card](#trainer-card) on their first join. |
 | `gymVillageChance` | `0.3` | Share of newly generated villages (0 to 0.95) whose centre is a [gym](#gyms). `0` turns village gyms off. Takes effect the next time a world starts. |
 | `gymTeamLimit` | `false` | Difficulty option: you can bring no more Pokémon to a [gym](#gyms) battle than the leader has. |
+| `gymLegalityCheck` | `"off"` | Whether the Pokémon you bring to a [gym](#gyms) battle must be from tiers you've unlocked. `"off"`: no check. `"warn"`: the leader names any that aren't when it accepts your challenge. `"block"`: the battle doesn't start while one is in your party. Your starter is always allowed. |
 | `gymDifficulty` | `"player_choice"` | [Gym difficulty](#gym-difficulty): `"player_choice"` lets each player pick Normal or Hard leaders on their Trainer Card and change it any time; `"normal"` or `"hard"` sets it for everyone. |
 | `allowTwoLeagues` | `true` | Region mode: players may pick another league, with its own gym leaders, as their second region and work through both side by side ([Two leagues at once](#two-leagues-at-once)). Off: the second region can only be one without gyms. Players who already picked a league keep it. |
 | `twoLeagueCap` | `"average"` | Region mode, with [two leagues at once](#two-leagues-at-once): how the level cap follows both leagues. `"average"`: the average of the two leagues' caps, rounded up. `"lowest"`: the lower of the two, so you keep both leagues level. |
@@ -655,6 +658,8 @@ Each entry is a Radical Cobblemon Trainers trainer id. A nested list means "any 
 **Rematches.** Sneak and use a Gym Challenge block with an empty hand to open the rematch menu: every leader, Elite Four member and Champion you've beaten, from every region on your journey, each with a **Normal** button and (when it has one) a **Hard** button, whatever your [gym difficulty](#gym-difficulty). The leader is summoned like any other and leaves the same way. A rematch changes nothing: no badges, tiers or level cap. Radical Cobblemon Trainers' progression rules are skipped for it, so you can rematch an earlier region's leaders after travelling on, and your level cap doesn't stop the battle. The leader drops its loot again, as RCT trainers always do.
 
 **Team limit (optional).** With `gymTeamLimit` on in `ucp-common.json`, you can bring no more Pokémon to a gym battle than the leader has: Brock has 2, so you can bring at most 2. The leader says so when it accepts your challenge. If your party is bigger, the battle doesn't start, and you're told how many to put in the PC. Every Pokémon in your party counts, fainted ones included. It applies to every trainer a Gym Challenge block summons, the Elite Four and Champion included.
+
+**Unlocked Pokémon only (optional).** Eggs, trades, fossils and other mods can give you a Pokémon from a tier, or a region, you haven't unlocked yet. With `gymLegalityCheck` set to `"block"` in `ucp-common.json`, a gym leader won't battle you while one is in your party: it names them when it accepts your challenge, and the battle doesn't start until they're in the PC. `"warn"` only names them. Your starter is always allowed, from whichever region you picked it, and so are Pokémon without a tier. Rematches aren't checked, since they don't change your progress.
 
 ### Gym difficulty
 
