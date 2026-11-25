@@ -1,6 +1,7 @@
-# Unreleased
+# CJP 2.6.0
 
 ## Features
+- **PokeBadges support.** With the PokeBadges mod installed, the 26 Kanto, Sinnoh and Galar badge advancements use PokeBadges' badge items as their icons, and earning one also gives you that badge for your Badge Box. Players who earned badges before PokeBadges was added get them when they next join, unless they've owned them before. PokeBadges is optional and not included: without it, nothing changes.
 - **Tier catch advancements.** Each tier of a league now has a hidden advancement in the Pokémon Journey tab for catching every Pokémon of that tier, regional forms included ("Kanto Tier 2 Caught"). It hangs off the gym leader whose badge opens the tier (Kanto's tier 2 under Brock's Boulder Badge, tier 1 under the tab's root) and stays hidden until you earn it. The last tier's is a challenge, with a Master Ball icon. They count the same Pokémon as the Catch Every Pokémon option, but work whether it's on or off, and players who already caught a tier get its advancement when they next join or catch something. Regions without gyms don't have them.
 - Datapacks: `scripts/generate-league-advancements.py` writes them, and the new trigger `ultimate-cobblemon-progression:catch_tier` (conditions `region` and `tier`) can be used in any advancement.
 

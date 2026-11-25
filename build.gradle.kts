@@ -9,7 +9,7 @@ plugins {
 
 group = "org.ppvon"
 val minecraftVersion = "1.21.1"
-version = "2.5.2"
+version = "2.6.0"
 
 base {
     archivesName.set("cjp-fabric+mc${minecraftVersion}");
