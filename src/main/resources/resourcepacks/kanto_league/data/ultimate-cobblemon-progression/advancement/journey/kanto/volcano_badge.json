@@ -1,5 +1,6 @@
 {
   "parent": "ultimate-cobblemon-progression:journey/kanto/marsh_badge",
+  "ultimate-cobblemon-progression:badge": "pokebadges:volcano_kanto_badge",
   "display": {
     "icon": {
       "id": "cobblemon:charcoal_stick"

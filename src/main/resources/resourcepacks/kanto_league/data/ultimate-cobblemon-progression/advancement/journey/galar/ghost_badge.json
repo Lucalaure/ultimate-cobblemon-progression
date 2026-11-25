@@ -1,5 +1,6 @@
 {
   "parent": "ultimate-cobblemon-progression:journey/galar/fighting_badge",
+  "ultimate-cobblemon-progression:badge": "pokebadges:ghost_galar_badge",
   "display": {
     "icon": {
       "id": "cobblemon:spell_tag"

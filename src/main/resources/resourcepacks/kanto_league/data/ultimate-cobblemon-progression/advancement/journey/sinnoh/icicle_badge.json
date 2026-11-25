@@ -1,5 +1,6 @@
 {
   "parent": "ultimate-cobblemon-progression:journey/sinnoh/mine_badge",
+  "ultimate-cobblemon-progression:badge": "pokebadges:icicle_sinnoh_badge",
   "display": {
     "icon": {
       "id": "cobblemon:ice_stone"

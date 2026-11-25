@@ -1,5 +1,6 @@
 {
   "parent": "ultimate-cobblemon-progression:journey/root",
+  "ultimate-cobblemon-progression:badge": "pokebadges:grass_galar_badge",
   "display": {
     "icon": {
       "id": "cobblemon:miracle_seed"

@@ -1,5 +1,6 @@
 {
   "parent": "ultimate-cobblemon-progression:journey/galar/ghost_badge",
+  "ultimate-cobblemon-progression:badge": "pokebadges:fairy_galar_badge",
   "display": {
     "icon": {
       "id": "cobblemon:fairy_feather"

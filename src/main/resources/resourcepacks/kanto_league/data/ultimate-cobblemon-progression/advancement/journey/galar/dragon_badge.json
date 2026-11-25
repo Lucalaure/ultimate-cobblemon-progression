@@ -1,5 +1,6 @@
 {
   "parent": "ultimate-cobblemon-progression:journey/galar/dark_badge",
+  "ultimate-cobblemon-progression:badge": "pokebadges:dragon_galar_badge",
   "display": {
     "icon": {
       "id": "cobblemon:dragon_fang"

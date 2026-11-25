@@ -1,5 +1,6 @@
 {
   "parent": "ultimate-cobblemon-progression:journey/sinnoh/forest_badge",
+  "ultimate-cobblemon-progression:badge": "pokebadges:cobble_sinnoh_badge",
   "display": {
     "icon": {
       "id": "cobblemon:black_belt"

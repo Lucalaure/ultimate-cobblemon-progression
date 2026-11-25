@@ -1,5 +1,6 @@
 {
   "parent": "ultimate-cobblemon-progression:journey/galar/rock_badge",
+  "ultimate-cobblemon-progression:badge": "pokebadges:ice_galar_badge",
   "display": {
     "icon": {
       "id": "cobblemon:never_melt_ice"

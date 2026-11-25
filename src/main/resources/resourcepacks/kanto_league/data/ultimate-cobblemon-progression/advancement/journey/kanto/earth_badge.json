@@ -1,5 +1,6 @@
 {
   "parent": "ultimate-cobblemon-progression:journey/kanto/volcano_badge",
+  "ultimate-cobblemon-progression:badge": "pokebadges:earth_kanto_badge",
   "display": {
     "icon": {
       "id": "cobblemon:soft_sand"

@@ -1,5 +1,6 @@
 {
   "parent": "ultimate-cobblemon-progression:journey/kanto/soul_badge",
+  "ultimate-cobblemon-progression:badge": "pokebadges:marsh_kanto_badge",
   "display": {
     "icon": {
       "id": "cobblemon:twisted_spoon"

@@ -1,5 +1,6 @@
 {
   "parent": "ultimate-cobblemon-progression:journey/galar/water_badge",
+  "ultimate-cobblemon-progression:badge": "pokebadges:fire_galar_badge",
   "display": {
     "icon": {
       "id": "cobblemon:charcoal_stick"

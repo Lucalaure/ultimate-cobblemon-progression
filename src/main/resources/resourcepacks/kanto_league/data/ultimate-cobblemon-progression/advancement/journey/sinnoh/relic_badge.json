@@ -1,5 +1,6 @@
 {
   "parent": "ultimate-cobblemon-progression:journey/sinnoh/fen_badge",
+  "ultimate-cobblemon-progression:badge": "pokebadges:relic_sinnoh_badge",
   "display": {
     "icon": {
       "id": "minecraft:ender_eye"

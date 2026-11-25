@@ -1,5 +1,6 @@
 {
   "parent": "ultimate-cobblemon-progression:journey/root",
+  "ultimate-cobblemon-progression:badge": "pokebadges:coal_sinnoh_badge",
   "display": {
     "icon": {
       "id": "cobblemon:smooth_rock"

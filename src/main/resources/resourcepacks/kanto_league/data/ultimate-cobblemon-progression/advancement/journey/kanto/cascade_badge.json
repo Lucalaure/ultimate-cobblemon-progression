@@ -1,5 +1,6 @@
 {
   "parent": "ultimate-cobblemon-progression:journey/kanto/boulder_badge",
+  "ultimate-cobblemon-progression:badge": "pokebadges:cascade_kanto_badge",
   "display": {
     "icon": {
       "id": "cobblemon:mystic_water"

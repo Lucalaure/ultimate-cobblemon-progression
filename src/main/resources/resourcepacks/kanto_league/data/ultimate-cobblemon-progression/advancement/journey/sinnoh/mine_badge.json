@@ -1,5 +1,6 @@
 {
   "parent": "ultimate-cobblemon-progression:journey/sinnoh/relic_badge",
+  "ultimate-cobblemon-progression:badge": "pokebadges:mine_sinnoh_badge",
   "display": {
     "icon": {
       "id": "cobblemon:metal_coat"

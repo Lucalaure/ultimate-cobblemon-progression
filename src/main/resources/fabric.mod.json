@@ -43,7 +43,8 @@
     "cardinal-components-entity": ">=6.1.2"
   },
   "suggests": {
-    "modmenu": "*"
+    "modmenu": "*",
+    "pokebadges": "*"
   },
   "recommends": {
     "rctmod": "*",

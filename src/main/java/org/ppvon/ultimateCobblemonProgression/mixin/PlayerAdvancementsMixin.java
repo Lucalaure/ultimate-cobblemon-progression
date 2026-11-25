@@ -3,6 +3,7 @@ package org.ppvon.ultimateCobblemonProgression.mixin;
 import net.minecraft.advancements.AdvancementHolder;
 import net.minecraft.server.PlayerAdvancements;
 import net.minecraft.server.level.ServerPlayer;
+import org.ppvon.ultimateCobblemonProgression.common.badges.PokeBadgesCompat;
 import org.ppvon.ultimateCobblemonProgression.common.progression.ProgressionManager;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -22,6 +23,7 @@ public abstract class PlayerAdvancementsMixin {
     @Inject(method = "award", at = @At("RETURN"))
     private void ucp$onAward(AdvancementHolder advancement, String criterionKey, CallbackInfoReturnable<Boolean> cir) {
         ucp$onChanged(advancement, cir.getReturnValueZ());
+        if (cir.getReturnValueZ()) PokeBadgesCompat.onAdvancementAwarded(this.player, advancement);
     }
 
     @Inject(method = "revoke", at = @At("RETURN"))

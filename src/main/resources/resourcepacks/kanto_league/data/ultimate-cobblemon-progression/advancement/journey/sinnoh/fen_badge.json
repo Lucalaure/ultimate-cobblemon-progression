@@ -1,5 +1,6 @@
 {
   "parent": "ultimate-cobblemon-progression:journey/sinnoh/cobble_badge",
+  "ultimate-cobblemon-progression:badge": "pokebadges:fen_sinnoh_badge",
   "display": {
     "icon": {
       "id": "minecraft:nautilus_shell"

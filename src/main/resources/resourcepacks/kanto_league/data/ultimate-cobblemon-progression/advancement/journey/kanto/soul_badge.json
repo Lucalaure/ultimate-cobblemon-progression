@@ -1,5 +1,6 @@
 {
   "parent": "ultimate-cobblemon-progression:journey/kanto/rainbow_badge",
+  "ultimate-cobblemon-progression:badge": "pokebadges:soul_kanto_badge",
   "display": {
     "icon": {
       "id": "cobblemon:poison_barb"

@@ -1,5 +1,6 @@
 {
   "parent": "ultimate-cobblemon-progression:journey/kanto/thunder_badge",
+  "ultimate-cobblemon-progression:badge": "pokebadges:rainbow_kanto_badge",
   "display": {
     "icon": {
       "id": "cobblemon:miracle_seed"

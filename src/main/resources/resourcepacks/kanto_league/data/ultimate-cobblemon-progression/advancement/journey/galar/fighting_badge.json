@@ -1,5 +1,6 @@
 {
   "parent": "ultimate-cobblemon-progression:journey/galar/fire_badge",
+  "ultimate-cobblemon-progression:badge": "pokebadges:fighting_galar_badge",
   "display": {
     "icon": {
       "id": "cobblemon:black_belt"

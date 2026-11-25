@@ -1,5 +1,6 @@
 {
   "parent": "ultimate-cobblemon-progression:journey/sinnoh/coal_badge",
+  "ultimate-cobblemon-progression:badge": "pokebadges:forest_sinnoh_badge",
   "display": {
     "icon": {
       "id": "minecraft:sunflower"

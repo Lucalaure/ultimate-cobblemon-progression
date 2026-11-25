@@ -1,5 +1,6 @@
 {
   "parent": "ultimate-cobblemon-progression:journey/root",
+  "ultimate-cobblemon-progression:badge": "pokebadges:boulder_kanto_badge",
   "display": {
     "icon": {
       "id": "cobblemon:hard_stone"

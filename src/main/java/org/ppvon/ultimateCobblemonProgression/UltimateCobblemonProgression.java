@@ -73,6 +73,7 @@ public class UltimateCobblemonProgression implements ModInitializer {
             RegionProgressTracker.refreshSilently(player);
             if (RegionRegistry.isActive()) RegionCommands.promptStartChoice(player);
             TrainerCard.onJoin(player);
+            org.ppvon.ultimateCobblemonProgression.common.badges.PokeBadgesCompat.onJoin(player);
         });
 
         ServerPlayConnectionEvents.DISCONNECT.register((handler, server) -> RegionProgressTracker.forget(handler.player));

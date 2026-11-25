@@ -8,6 +8,7 @@
     "BasicSpawnerMixin",
     "PokemonHerdSpawnDetailMixin",
     "PlayerAdvancementsMixin",
+    "ServerAdvancementManagerMixin",
     "StructureTemplatePoolAccessor",
     "JigsawPlacementMixin",
     "RctDefeatCountTriggerMixin",

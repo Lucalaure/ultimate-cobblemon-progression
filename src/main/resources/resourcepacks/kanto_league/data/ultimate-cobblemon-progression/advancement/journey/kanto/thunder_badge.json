@@ -1,5 +1,6 @@
 {
   "parent": "ultimate-cobblemon-progression:journey/kanto/cascade_badge",
+  "ultimate-cobblemon-progression:badge": "pokebadges:thunder_kanto_badge",
   "display": {
     "icon": {
       "id": "cobblemon:magnet"

@@ -1,5 +1,6 @@
 {
   "parent": "ultimate-cobblemon-progression:journey/galar/fairy_badge",
+  "ultimate-cobblemon-progression:badge": "pokebadges:rock_galar_badge",
   "display": {
     "icon": {
       "id": "cobblemon:hard_stone"

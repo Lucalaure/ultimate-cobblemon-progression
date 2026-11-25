@@ -16,7 +16,9 @@ Run it after changing a league's trainers or adding a region. It writes, under
 - <region>/...: for each league region (one with a "series"), one advancement per trainer listed in its tier files,
   chained in order: a badge for each gym leader (a gym can have two, beaten in order, like Galar's Bea and Allister),
   one per Elite Four member, then the Champion. Each is earned by
-  beating that trainer (trigger ultimate-cobblemon-progression:defeat_trainer).
+  beating that trainer (trigger ultimate-cobblemon-progression:defeat_trainer). Badge advancements also name their
+  PokeBadges item ("ultimate-cobblemon-progression:badge", e.g. pokebadges:boulder_kanto_badge): with PokeBadges
+  installed, UCP shows it as the icon and awards that badge.
 - milestones/badge_<n>.json and milestones/champion.json: hidden advancements earned by beating the n-th gym (its last
   leader) or the Champion of ANY league. Regions without a series unlock their tiers with these, so they follow whichever
   league the player is in, and adding a league only means adding its trainers here.
@@ -81,11 +83,19 @@ def text(key, fallback):
     return {"translate": f"advancements.{MOD}.{key}", "fallback": fallback}
 
 
-def advancement(path, parent, icon, title, description, frame, trainers, hidden_display=False):
+def badge_item(region_id, badge_name):
+    """The PokeBadges item for a badge, e.g. "Boulder Badge" in kanto -> pokebadges:boulder_kanto_badge."""
+    return f"pokebadges:{slug(badge_name).removesuffix('_badge')}_{region_id}_badge"
+
+
+def advancement(path, parent, icon, title, description, frame, trainers, hidden_display=False, badge=None):
     key = path.replace("/", ".")
     adv = {}
     if parent:
         adv["parent"] = f"{MOD}:{parent}"
+    if badge:
+        # Read by UCP (PokeBadgesCompat): with PokeBadges installed, this item becomes the icon and is awarded too.
+        adv[f"{MOD}:badge"] = badge
     if not hidden_display:
         adv["display"] = {
             "icon": {"id": icon},
@@ -174,6 +184,7 @@ def main():
                 slot += 1
             for gi, group in enumerate(groups):
                 first = group[0]
+                badge_id = None
                 if last_tier and gi == len(groups) - 1:
                     path, frame = f"journey/{region_id}/champion", "challenge"
                     adv_title, desc = league["champion"], f"Defeat {trainers.name(first)} and become Champion of {title}"
@@ -186,13 +197,15 @@ def main():
                         sys.exit(f"'{region_id}' has more gym leaders than badge names in {args.names}")
                     adv_title = league["badges"][badge - 1]
                     path, frame, desc = f"journey/{region_id}/{slug(adv_title)}", "goal", f"Defeat {trainers.name(first)}"
+                    badge_id = badge_item(region_id, adv_title)
                     if gi == len(groups) - 1:
                         badge_trainers.setdefault(slot, []).extend(group)
                 else:
                     adv_title = trainers.name(first)
                     path, frame, desc = f"journey/{region_id}/{slug(adv_title)}", "task", f"Defeat {adv_title}"
                 write_json(os.path.join(out, *path.split("/")[1:]) + ".json",
-                           advancement(path, parent, trainers.icon(first), adv_title, desc, frame, group))
+                           advancement(path, parent, trainers.icon(first), adv_title, desc, frame, group,
+                                       badge=badge_id))
                 parent = path
             unlocks[t] = parent
         if badge != len(league["badges"]):

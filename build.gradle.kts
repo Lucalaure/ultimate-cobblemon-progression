@@ -97,7 +97,7 @@ val devNestedLibs = tasks.register<Copy>("devNestedLibs") {
 dependencies {
     minecraft("net.minecraft:minecraft:1.21.1")
     mappings(loom.officialMojangMappings())
-    modImplementation("net.fabricmc:fabric-loader:0.18.1")
+    modImplementation("net.fabricmc:fabric-loader:0.18.4")
 
     modRuntimeOnly("net.fabricmc.fabric-api:fabric-api:0.116.7+1.21.1")
     modImplementation(fabricApi.module("fabric-command-api-v2", "0.116.7+1.21.1"))
@@ -137,6 +137,16 @@ dependencies {
     modRuntimeOnly("maven.modrinth:cobblemon-mega-showdown:ZyP6pGGc")
     modRuntimeOnly("maven.modrinth:accessories:YZ9RWTNl")
     modRuntimeOnly("maven.modrinth:owo-lib:7B3jQilk")
+    // PokeBadges 2.1.1 (gym badge items and the Badge Box). Optional: UCP awards its badges through PokeBadgesApi
+    // when it's installed, and its badge items are the Pokemon Journey advancement icons. Not bundled (All Rights
+    // Reserved); players install it themselves.
+    modCompileOnly("maven.modrinth:pokebadges:MxPimB9j")
+    modRuntimeOnly("maven.modrinth:pokebadges:MxPimB9j")
+    // OS Cobblemon Library 1.5.2: PokeBadges refuses to start without it when Cobblemon is installed. (1.6.0+ are
+    // built with Loom 1.17, which this Loom 1.9 build can't remap.)
+    modRuntimeOnly("maven.modrinth:os-cobblemon-library:hT3yLdDC")
+    // Cobblemon PokeNav (Cobblenav) 2.4.2, for testing that its Fishingnav lists only the Pokémon a player can fish.
+    modRuntimeOnly("maven.modrinth:cobblemon-pokenav:wq3mHFqw")
     runtimeOnly(fileTree(layout.buildDirectory.dir("devNestedLibs")) { include("*.jar") }.builtBy(devNestedLibs))
     // Bundled inside Forge Config API Port, but nested jars of Modrinth mods aren't loaded in dev, so add them directly.
     runtimeOnly("com.electronwill.night-config:core:3.8.0")
