@@ -1,0 +1,34 @@
+{
+  "parent": "ultimate-cobblemon-progression:journey/kanto/rainbow_badge",
+  "display": {
+    "icon": {
+      "id": "cobblemon:great_ball"
+    },
+    "title": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.kanto.catch_tier_5.title",
+      "fallback": "Kanto Tier 5 Caught"
+    },
+    "description": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.kanto.catch_tier_5.description",
+      "fallback": "Catch every Pokémon of Kanto's tier 5"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "catch": {
+      "trigger": "ultimate-cobblemon-progression:catch_tier",
+      "conditions": {
+        "region": "kanto",
+        "tier": 5
+      }
+    }
+  },
+  "requirements": [
+    [
+      "catch"
+    ]
+  ]
+}

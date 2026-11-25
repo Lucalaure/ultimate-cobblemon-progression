@@ -1,0 +1,34 @@
+{
+  "parent": "ultimate-cobblemon-progression:journey/sinnoh/cobble_badge",
+  "display": {
+    "icon": {
+      "id": "cobblemon:great_ball"
+    },
+    "title": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.sinnoh.catch_tier_4.title",
+      "fallback": "Sinnoh Tier 4 Caught"
+    },
+    "description": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.sinnoh.catch_tier_4.description",
+      "fallback": "Catch every Pokémon of Sinnoh's tier 4"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "catch": {
+      "trigger": "ultimate-cobblemon-progression:catch_tier",
+      "conditions": {
+        "region": "sinnoh",
+        "tier": 4
+      }
+    }
+  },
+  "requirements": [
+    [
+      "catch"
+    ]
+  ]
+}

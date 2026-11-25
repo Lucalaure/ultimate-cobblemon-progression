@@ -1,0 +1,34 @@
+{
+  "parent": "ultimate-cobblemon-progression:journey/kanto/boulder_badge",
+  "display": {
+    "icon": {
+      "id": "cobblemon:poke_ball"
+    },
+    "title": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.kanto.catch_tier_2.title",
+      "fallback": "Kanto Tier 2 Caught"
+    },
+    "description": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.kanto.catch_tier_2.description",
+      "fallback": "Catch every Pokémon of Kanto's tier 2"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "catch": {
+      "trigger": "ultimate-cobblemon-progression:catch_tier",
+      "conditions": {
+        "region": "kanto",
+        "tier": 2
+      }
+    }
+  },
+  "requirements": [
+    [
+      "catch"
+    ]
+  ]
+}

@@ -1,3 +1,12 @@
+# Unreleased
+
+## Features
+- **Tier catch advancements.** Each tier of a league now has a hidden advancement in the Pokémon Journey tab for catching every Pokémon of that tier, regional forms included ("Kanto Tier 2 Caught"). It hangs off the gym leader whose badge opens the tier (Kanto's tier 2 under Brock's Boulder Badge, tier 1 under the tab's root) and stays hidden until you earn it. The last tier's is a challenge, with a Master Ball icon. They count the same Pokémon as the Catch Every Pokémon option, but work whether it's on or off, and players who already caught a tier get its advancement when they next join or catch something. Regions without gyms don't have them.
+- Datapacks: `scripts/generate-league-advancements.py` writes them, and the new trigger `ultimate-cobblemon-progression:catch_tier` (conditions `region` and `tier`) can be used in any advancement.
+
+## Fixes
+- **Cobblenav's Fishingnav lists only Pokémon you can fish.** The Fishingnav from Cobblemon PokeNav worked out what can bite with its own fishing rules, so it listed species from regions and tiers you haven't unlocked. It now shows the same Pokémon fishing actually gives you.
+
 # CJP 2.5.2
 
 ## Fixes

@@ -1,0 +1,34 @@
+{
+  "parent": "ultimate-cobblemon-progression:journey/kanto/champion",
+  "display": {
+    "icon": {
+      "id": "cobblemon:master_ball"
+    },
+    "title": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.kanto.catch_tier_10.title",
+      "fallback": "Kanto Tier 10 Caught"
+    },
+    "description": {
+      "translate": "advancements.ultimate-cobblemon-progression.journey.kanto.catch_tier_10.description",
+      "fallback": "Catch every Pokémon of Kanto's tier 10"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "catch": {
+      "trigger": "ultimate-cobblemon-progression:catch_tier",
+      "conditions": {
+        "region": "kanto",
+        "tier": 10
+      }
+    }
+  },
+  "requirements": [
+    [
+      "catch"
+    ]
+  ]
+}

@@ -61,6 +61,7 @@ public class UltimateCobblemonProgression implements ModInitializer {
         org.ppvon.ultimateCobblemonProgression.common.gym.GymChoice.register();
         TrainerCard.register();
         DefeatTrainerTrigger.register();
+        org.ppvon.ultimateCobblemonProgression.common.advancements.CatchTierTrigger.register();
 
         ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> {
             var player = handler.player;
@@ -71,6 +72,8 @@ public class UltimateCobblemonProgression implements ModInitializer {
             }
             TrainerLevelComponents.KEY.sync(player);
             RegionProgressTracker.refreshSilently(player);
+            // Tiers caught before the catch advancements existed, or while the server was off.
+            org.ppvon.ultimateCobblemonProgression.common.advancements.CatchTierTrigger.INSTANCE.check(player);
             if (RegionRegistry.isActive()) RegionCommands.promptStartChoice(player);
             TrainerCard.onJoin(player);
             org.ppvon.ultimateCobblemonProgression.common.badges.PokeBadgesCompat.onJoin(player);

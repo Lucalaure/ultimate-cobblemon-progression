@@ -55,7 +55,16 @@ public final class TierCatches {
 
     /** The Pokémon of this tier the player still has to catch, in Pokédex order. Empty when the option is off. */
     public static List<TierEntry> missing(ServerPlayer player, RegionDef region, int tier) {
-        if (!applies(region) || tier < 1) return List.of();
+        if (!applies(region)) return List.of();
+        return missingAll(player, region, tier);
+    }
+
+    /**
+     * The Pokémon of this tier the player hasn't caught, in Pokédex order, whether or not the option is on: for the
+     * tier catch advancements (see CatchTierTrigger).
+     */
+    public static List<TierEntry> missingAll(ServerPlayer player, RegionDef region, int tier) {
+        if (tier < 1) return List.of();
         AbstractPokedexManager dex = PlayerExtensionsKt.pokedex(player);
         Set<String> canGet = obtainable();
         List<TierEntry> out = new ArrayList<>();

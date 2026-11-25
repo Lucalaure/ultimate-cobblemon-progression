@@ -19,6 +19,9 @@ Run it after changing a league's trainers or adding a region. It writes, under
   beating that trainer (trigger ultimate-cobblemon-progression:defeat_trainer). Badge advancements also name their
   PokeBadges item ("ultimate-cobblemon-progression:badge", e.g. pokebadges:boulder_kanto_badge): with PokeBadges
   installed, UCP shows it as the icon and awards that badge.
+- <region>/catch_tier_<n>.json: for each tier of a league region with Pokémon, a hidden advancement earned by catching
+  every obtainable Pokémon of that tier (trigger ultimate-cobblemon-progression:catch_tier). Each hangs off the
+  advancement that opens its tier (tier 2 off the first badge); tier 1, open from the start, off the root.
 - milestones/badge_<n>.json and milestones/champion.json: hidden advancements earned by beating the n-th gym (its last
   leader) or the Champion of ANY league. Regions without a series unlock their tiers with these, so they follow whichever
   league the player is in, and adding a league only means adding its trainers here.
@@ -109,6 +112,32 @@ def advancement(path, parent, icon, title, description, frame, trainers, hidden_
     adv["criteria"] = {"defeat": {"trigger": f"{MOD}:defeat_trainer", "conditions": {"trainers": trainers}}}
     adv["requirements"] = [["defeat"]]
     return adv
+
+
+def catch_icon(tier, last):
+    """A Poké Ball for the early tiers, better balls for later ones, a Master Ball for the last."""
+    if last:
+        return "cobblemon:master_ball"
+    return "cobblemon:poke_ball" if tier <= 3 else "cobblemon:great_ball" if tier <= 6 else "cobblemon:ultra_ball"
+
+
+def catch_advancement(region_id, region_title, tier, last, parent):
+    path = f"journey/{region_id}/catch_tier_{tier}"
+    key = path.replace("/", ".")
+    return path, {
+        "parent": f"{MOD}:{parent}",
+        "display": {
+            "icon": {"id": catch_icon(tier, last)},
+            "title": text(key + ".title", f"{region_title} Tier {tier} Caught"),
+            "description": text(key + ".description", f"Catch every Pokémon of {region_title}'s tier {tier}"),
+            "frame": "challenge" if last else "goal",
+            "show_toast": True,
+            "announce_to_chat": True,
+            "hidden": True,
+        },
+        "criteria": {"catch": {"trigger": f"{MOD}:catch_tier", "conditions": {"region": region_id, "tier": tier}}},
+        "requirements": [["catch"]],
+    }
 
 
 def write_json(path, data):
@@ -208,6 +237,15 @@ def main():
                                        badge=badge_id))
                 parent = path
             unlocks[t] = parent
+        # Catching every Pokémon of a tier, hanging off whatever opens that tier.
+        caught = 0
+        for t in sorted(tiers):
+            if not tiers[t].get("species"):
+                continue
+            path, adv = catch_advancement(region_id, title, t, t == max(tiers), unlocks.get(t, "journey/root"))
+            write_json(os.path.join(out, *path.split("/")[1:]) + ".json", adv)
+            caught += 1
+
         if badge != len(league["badges"]):
             print(f"warning: '{region_id}' has {badge} gym leaders but {len(league['badges'])} badge names")
 
@@ -217,7 +255,8 @@ def main():
                                     reqs, tier.get("species", []))
         meta["completedBy"] = f"{MOD}:{unlocks[steps[-1]]}"
         write_json(os.path.join(folder, "region.json"), meta)
-        print(f"{region_id}: {badge} badges, then {len(tiers[steps[-1]]['trainers'])} trainers for the last tier")
+        print(f"{region_id}: {badge} badges, then {len(tiers[steps[-1]]['trainers'])} trainers for the last tier, "
+              f"{caught} tier catch advancements")
 
     for n, group in sorted(badge_trainers.items()):
         write_json(os.path.join(out, "milestones", f"badge_{n}.json"),
