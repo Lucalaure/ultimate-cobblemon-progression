@@ -1,4 +1,4 @@
-# Unreleased
+# CJP 2.7.0
 
 ## Features
 - **Your starter comes from your region.** In region mode you now pick your starter after choosing where your journey starts, and only from that region's starters (and your second region's, if you picked it first). Choosing where your journey starts opens the starter choice right away; before that, the starter screen tells you to open your Trainer Card. Players who already have a starter keep it. Turn it off with `regionStarters` in `ucp-common.json` (Starters From Your Region on the Mod Menu General page).
