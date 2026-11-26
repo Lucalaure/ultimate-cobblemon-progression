@@ -8,11 +8,17 @@ public class CommonConfig {
     /** Difficulty option: players may bring no more Pokémon to a gym battle than the gym leader has. */
     public boolean gymTeamLimit = false;
     /**
-     * Whether the Pokémon a player brings to a gym battle must be from tiers they've unlocked (eggs, trades and fossils
-     * can bring others). "off": no check. "warn": the leader names them when it accepts. "block": the battle doesn't
-     * start while one is in the party. The player's starter is always allowed.
+     * Whether the Pokémon a player brings to a gym battle must be ones they could have by now (eggs, trades and fossils
+     * can bring others; see gymLegalityRule). "off": no check. "warn": the leader names them when it accepts. "block":
+     * the battle doesn't start while one is in the party. The player's starter is always allowed.
      */
     public String gymLegalityCheck = "off";
+    /**
+     * What gymLegalityCheck allows. "region": any Pokémon of a region the player has opened (so evolutions of what they
+     * catch), at or below their level cap; a regional form counts as its own region's. "strict": only Pokémon of tiers
+     * they've unlocked, the ones they can meet in the wild now, at or below their level cap.
+     */
+    public String gymLegalityRule = "region";
     /**
      * Gym leader difficulty (region mode, with RCT): "player_choice" lets each player pick Normal or Hard on their
      * Trainer Card and change it between gyms; "normal" or "hard" sets it for everyone.

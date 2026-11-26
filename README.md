@@ -101,7 +101,8 @@ Settings live in `config/ultimate-cobblemon-progression/`. Highlights from `ucp-
 - `gymDifficulty` (default `"player_choice"`): each player picks Normal or Hard gym leaders on their Trainer Card and can switch any time; `"normal"` or `"hard"` sets it for everyone. See [Gym difficulty](docs/how-it-works.md#gym-difficulty).
 - `allowTwoLeagues` (default `true`): players may pick a second league, with its own gym leaders, and work through both at once. Gyms ask which league's leader to battle, and the level cap is the average of the two (or the lower of the two, with `twoLeagueCap` set to `"lowest"`). See [Two leagues at once](docs/how-it-works.md#two-leagues-at-once).
 - `catchWholeTier` (default `false`): difficulty option, catch every Pokémon of your tier before you can face the next gym leader (your extra region also waits until its tier is caught).
-- `gymLegalityCheck` (default `"off"`): `"warn"` or `"block"` gym battles while your party has Pokémon from tiers you haven't unlocked (from eggs, trades or fossils). Your starter is always allowed.
+- `gymLegalityCheck` (default `"off"`): `"warn"` or `"block"` gym battles while your party has Pokémon you couldn't have yet (from eggs, trades or fossils). Your starter is always allowed.
+- `gymLegalityRule` (default `"region"`): what that check allows. `"region"`: any Pokémon of a region you've opened, evolutions included, within your level cap (regional forms need their own region). `"strict"`: only Pokémon of tiers you've unlocked, as they spawn in the wild, within your level cap.
 
 And from `ucp-spawn.json`:
 

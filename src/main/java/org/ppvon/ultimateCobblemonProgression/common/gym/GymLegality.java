@@ -9,6 +9,7 @@ import com.cobblemon.mod.common.api.events.battles.BattleStartedEvent;
 import com.cobblemon.mod.common.battles.actor.PlayerBattleActor;
 import com.cobblemon.mod.common.battles.pokemon.BattlePokemon;
 import com.cobblemon.mod.common.pokemon.Pokemon;
+import com.cobblemon.mod.common.pokemon.Species;
 import com.cobblemon.mod.common.util.PlayerExtensionsKt;
 import kotlin.Unit;
 import net.minecraft.ChatFormatting;
@@ -16,21 +17,41 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
+import org.ppvon.ultimateCobblemonProgression.api.UCPApi;
+import org.ppvon.ultimateCobblemonProgression.common.component.TrainerLevelComponents;
 import org.ppvon.ultimateCobblemonProgression.common.progression.TierStanding;
+import org.ppvon.ultimateCobblemonProgression.common.regions.RegionProgressTracker;
+import org.ppvon.ultimateCobblemonProgression.common.regions.RegionRegistry;
+import org.ppvon.ultimateCobblemonProgression.common.regions.RegionSpecies;
+import org.ppvon.ultimateCobblemonProgression.common.regions.TierEntry;
+import org.ppvon.ultimateCobblemonProgression.common.tiers.TierRegistry;
 import org.ppvon.ultimateCobblemonProgression.config.ConfigLoader;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.UUID;
 
 /**
  * Optional rule ({@code gymLegalityCheck}): the Pokémon a player brings to a gym battle must be ones they could have
- * met in the wild by now. Eggs, trades, fossils and other mods can hand a player a Pokémon of a tier, or a region, they
- * haven't unlocked; this keeps those out of gym battles.
+ * by now. Eggs, trades, fossils and other mods can hand a player a Pokémon of a region, or a tier, they haven't
+ * unlocked; this keeps those out of gym battles.
  *
- * <p>A Pokémon is out of reach when it has a tier and the player hasn't unlocked that tier (in region mode: in its
- * region, see {@link TierStanding}). Pokémon without a tier are always allowed, and so is the player's starter, since
- * Cobblemon offers starters from every region. Rematches aren't checked: they don't change progress.
+ * <p>What counts as "could have" is {@code gymLegalityRule}:
+ * <ul>
+ *   <li>{@code "region"} (the default): the Pokémon is from a region the player has opened, so anything they could
+ *       catch there and evolve is fine. A regional form counts as its own region's: a Kanto Pikachu evolved into an
+ *       Alolan Raichu needs Alola. Without regions (the tier ladder), the Pokémon or one of its pre-evolutions must be
+ *       from a tier the player has unlocked.</li>
+ *   <li>{@code "strict"}: the Pokémon itself must be one they could meet in the wild now: its own tier is unlocked
+ *       (in region mode, in its region, see {@link TierStanding}). Evolutions of higher tiers aren't allowed yet.</li>
+ * </ul>
+ * Under both rules the Pokémon must also be at or below the player's level cap, when one is known. Pokémon without a
+ * region or tier are always allowed, and so is the player's starter, since Cobblemon offers starters from every
+ * region. Rematches aren't checked: they don't change progress.
  *
  * <ul>
  *   <li>{@code "off"} (the default): no check.</li>
@@ -40,6 +61,22 @@ import java.util.UUID;
  */
 public final class GymLegality {
     public enum Mode { OFF, WARN, BLOCK }
+
+    public enum Rule { REGION, STRICT }
+
+    /** Why a Pokémon can't join a gym battle, in the order a message names them. */
+    enum Problem {
+        REGION("from a region you've opened"),
+        TIER("from a tier you've unlocked yet"),
+        LEVEL("within your level cap");
+
+        /** Completes "isn't …" / "aren't …". */
+        final String phrase;
+
+        Problem(String phrase) {
+            this.phrase = phrase;
+        }
+    }
 
     /** How many Pokémon a message names before it says "and N more". */
     private static final int MAX_NAMED = 3;
@@ -57,19 +94,86 @@ public final class GymLegality {
         return Mode.OFF;
     }
 
-    /** Whether the player could have this Pokémon by now (see the class comment). */
-    public static boolean isLegal(ServerPlayer player, Pokemon pokemon) {
-        if (pokemon == null || isStarter(player, pokemon)) return true;
-        var aspects = pokemon.getAspects();
-        if (!TierStanding.hasTierData() || !TierStanding.isKnown(pokemon.getSpecies(), aspects)) return true;
-        return TierStanding.of(player, pokemon.getSpecies(), aspects).allowed();
+    public static Rule rule() {
+        return "strict".equalsIgnoreCase(ConfigLoader.GYM_LEGALITY_RULE.get()) ? Rule.STRICT : Rule.REGION;
     }
 
-    /** The Pokémon in the player's party that are out of reach, in party order. */
+    /** Whether the player could have this Pokémon by now (see the class comment). */
+    public static boolean isLegal(ServerPlayer player, Pokemon pokemon) {
+        return problem(player, pokemon, levelCap(player)) == null;
+    }
+
+    /** Why the Pokémon can't join a gym battle, or null if it can. {@code cap} is the player's level cap, or -1. */
+    static Problem problem(ServerPlayer player, Pokemon pokemon, int cap) {
+        if (pokemon == null || isStarter(player, pokemon)) return null;
+        Problem origin = originProblem(player, pokemon);
+        if (origin != null) return origin;
+        return cap > 0 && pokemon.getLevel() > cap ? Problem.LEVEL : null;
+    }
+
+    private static Problem originProblem(ServerPlayer player, Pokemon pokemon) {
+        if (!TierStanding.hasTierData()) return null;
+        Species species = pokemon.getSpecies();
+        var aspects = pokemon.getAspects();
+        if (!TierStanding.isKnown(species, aspects)) return null;
+
+        if (rule() == Rule.STRICT) {
+            return TierStanding.of(player, species, aspects).allowed() ? null : Problem.TIER;
+        }
+        if (RegionRegistry.isActive()) {
+            TierEntry entry = RegionSpecies.entry(species, aspects);
+            return RegionProgressTracker.get(player).isUnlocked(entry.region()) ? null : Problem.REGION;
+        }
+        // The tier ladder has no regions: allow anything the player could catch and evolve.
+        int playerTier = Math.max(0, TrainerLevelComponents.KEY.get(player).getLevel());
+        Set<Species> seen = new HashSet<>();
+        for (Species s = species; s != null && seen.add(s); s = preEvolution(s)) {
+            int tier = UCPApi.getTier(s);
+            if (tier > 0 && tier <= playerTier) return null;
+        }
+        return Problem.TIER;
+    }
+
+    private static Species preEvolution(Species species) {
+        var pre = species.getPreEvolution();
+        return pre != null ? pre.getSpecies() : null;
+    }
+
+    /**
+     * The player's level cap, or -1 if there isn't one: in region mode the trainer mod's (Radical Cobblemon Trainers),
+     * otherwise their tier's, when the level cap is on.
+     */
+    static int levelCap(ServerPlayer player) {
+        if (RegionRegistry.isActive()) {
+            return RctBridge.isLoaded() ? RctBridge.levelCap(player) : -1;
+        }
+        if (!ConfigLoader.DO_LEVEL_CAP.get() || TierRegistry.maxTier() <= 0) return -1;
+        try {
+            return TierRegistry.getCapForTier(Math.max(0, TrainerLevelComponents.KEY.get(player).getLevel()));
+        } catch (RuntimeException e) {
+            return -1;
+        }
+    }
+
+    /** The Pokémon in the player's party that can't join a gym battle, by problem, in party order. */
+    static Map<Problem, List<Pokemon>> problems(ServerPlayer player, Iterable<Pokemon> team) {
+        int cap = levelCap(player);
+        Map<Problem, List<Pokemon>> out = new LinkedHashMap<>();
+        for (Problem p : Problem.values()) out.put(p, new ArrayList<>());
+        for (Pokemon pokemon : team) {
+            Problem p = problem(player, pokemon, cap);
+            if (p != null) out.get(p).add(pokemon);
+        }
+        out.values().removeIf(List::isEmpty);
+        return out;
+    }
+
+    /** The Pokémon in the player's party that can't join a gym battle, in party order. */
     public static List<Pokemon> outOfReach(ServerPlayer player) {
         List<Pokemon> out = new ArrayList<>();
+        int cap = levelCap(player);
         for (Pokemon pokemon : PlayerExtensionsKt.party(player)) {
-            if (pokemon != null && !isLegal(player, pokemon)) out.add(pokemon);
+            if (pokemon != null && problem(player, pokemon, cap) != null) out.add(pokemon);
         }
         return out;
     }
@@ -78,14 +182,17 @@ public final class GymLegality {
     public static Component hint(ServerPlayer player, String leaderName) {
         Mode mode = mode();
         if (mode == Mode.OFF) return null;
-        List<Pokemon> out = outOfReach(player);
-        if (out.isEmpty()) return null;
-        String names = names(out);
-        String verb = out.size() == 1 ? "isn't" : "aren't";
+        List<Pokemon> party = new ArrayList<>();
+        for (Pokemon pokemon : PlayerExtensionsKt.party(player)) {
+            if (pokemon != null) party.add(pokemon);
+        }
+        Map<Problem, List<Pokemon>> problems = problems(player, party);
+        if (problems.isEmpty()) return null;
+        int count = problems.values().stream().mapToInt(List::size).sum();
         String text = mode == Mode.BLOCK
-                ? names + " " + verb + " from a tier you've unlocked yet. " + leaderName
-                        + " won't battle you until you put " + (out.size() == 1 ? "it" : "them") + " in the PC."
-                : names + " " + verb + " from a tier you've unlocked yet. " + leaderName + " will battle you anyway.";
+                ? describe(problems) + ". " + leaderName + " won't battle you until you put "
+                        + (count == 1 ? "it" : "them") + " in the PC."
+                : describe(problems) + ". " + leaderName + " will battle you anyway.";
         return Component.literal(text).withStyle(mode == Mode.BLOCK ? ChatFormatting.RED : ChatFormatting.YELLOW);
     }
 
@@ -103,17 +210,14 @@ public final class GymLegality {
                 ServerPlayer player = playerActor.getEntity();
                 if (player == null) continue;
 
-                List<Pokemon> out = new ArrayList<>();
-                for (BattlePokemon battlePokemon : other.getPokemonList()) {
-                    Pokemon pokemon = battlePokemon.getOriginalPokemon();
-                    if (!isLegal(player, pokemon)) out.add(pokemon);
-                }
-                if (out.isEmpty()) continue;
+                List<Pokemon> team = new ArrayList<>();
+                for (BattlePokemon battlePokemon : other.getPokemonList()) team.add(battlePokemon.getOriginalPokemon());
+                Map<Problem, List<Pokemon>> problems = problems(player, team);
+                if (problems.isEmpty()) continue;
 
-                MutableComponent reason = Component.literal(leader.getDisplayName().getString()
-                        + " won't battle " + names(out) + ": " + (out.size() == 1 ? "it isn't" : "they aren't")
-                        + " from a tier you've unlocked yet. Put " + (out.size() == 1 ? "it" : "them")
-                        + " in the PC first.");
+                int count = problems.values().stream().mapToInt(List::size).sum();
+                MutableComponent reason = Component.literal(leader.getDisplayName().getString() + " won't battle yet: "
+                        + describe(problems) + ". Put " + (count == 1 ? "it" : "them") + " in the PC first.");
                 event.setReason(reason);
                 event.cancel();
                 return Unit.INSTANCE;
@@ -132,14 +236,26 @@ public final class GymLegality {
         }
     }
 
-    /** "Piplup", "Piplup and Eevee", "Piplup, Eevee and Riolu", or "Piplup, Eevee, Riolu and 2 more". */
-    static String names(List<Pokemon> pokemon) {
-        List<String> names = new ArrayList<>();
-        for (Pokemon p : pokemon) names.add(p.getDisplayName(false).getString());
-        return joinNames(names);
+    /** "Raichu isn't from a region you've opened, and Snorlax isn't within your level cap". */
+    private static String describe(Map<Problem, List<Pokemon>> problems) {
+        Map<Problem, List<String>> named = new LinkedHashMap<>();
+        problems.forEach((p, list) -> {
+            List<String> names = new ArrayList<>();
+            for (Pokemon pokemon : list) names.add(pokemon.getDisplayName(false).getString());
+            named.put(p, names);
+        });
+        return describeNames(named);
     }
 
-    /** Joins names as in {@link #names}, naming at most {@value #MAX_NAMED}. */
+    /** Builds the sentence {@link #describe} gives, from names. */
+    static String describeNames(Map<Problem, List<String>> problems) {
+        List<String> parts = new ArrayList<>();
+        problems.forEach((p, names) ->
+                parts.add(joinNames(names) + " " + (names.size() == 1 ? "isn't " : "aren't ") + p.phrase));
+        return String.join(", and ", parts);
+    }
+
+    /** Joins names: "Piplup", "Piplup and Eevee", "Piplup, Eevee and Riolu", or "Piplup, Eevee, Riolu and 2 more". */
     static String joinNames(List<String> names) {
         if (names.isEmpty()) return "";
         if (names.size() == 1) return names.get(0);

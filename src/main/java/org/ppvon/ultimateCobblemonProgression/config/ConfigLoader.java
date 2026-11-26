@@ -36,6 +36,8 @@ public final class ConfigLoader {
     public static Supplier<Boolean> GYM_TEAM_LIMIT;
     /** "off", "warn" or "block" (see {@link CommonConfig#gymLegalityCheck}). */
     public static Supplier<String> GYM_LEGALITY_CHECK;
+    /** "region" or "strict" (see {@link CommonConfig#gymLegalityRule}). */
+    public static Supplier<String> GYM_LEGALITY_RULE;
     public static Supplier<String> GYM_DIFFICULTY;
     public static Supplier<Boolean> CATCH_WHOLE_TIER;
     public static Supplier<Boolean> GIVE_TRAINER_CARD;
@@ -98,6 +100,7 @@ public final class ConfigLoader {
         GYM_VILLAGE_CHANCE = () -> COMMON.gymVillageChance;
         GYM_TEAM_LIMIT = () -> COMMON.gymTeamLimit;
         GYM_LEGALITY_CHECK = () -> COMMON.gymLegalityCheck == null ? "off" : COMMON.gymLegalityCheck;
+        GYM_LEGALITY_RULE = () -> COMMON.gymLegalityRule == null ? "region" : COMMON.gymLegalityRule;
         GYM_DIFFICULTY = () -> COMMON.gymDifficulty == null ? "player_choice" : COMMON.gymDifficulty;
         CATCH_WHOLE_TIER = () -> COMMON.catchWholeTier;
         GIVE_TRAINER_CARD = () -> COMMON.giveTrainerCard;

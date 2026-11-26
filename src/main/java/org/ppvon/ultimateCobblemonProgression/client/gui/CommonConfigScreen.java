@@ -19,10 +19,12 @@ public final class CommonConfigScreen extends BaseConfigScreen {
     private Checkbox chkLevelCap, chkDex, chkTrainerCard, chkGymTeamLimit, chkCatchWholeTier, chkTwoLeagues, chkRegionStarters;
     private CycleButton<Integer> btnStarterLevel;
     private GymChanceSlider sldGymChance;
-    private CycleButton<String> btnGymDifficulty, btnTwoLeagueCap, btnGymLegality;
+    private CycleButton<String> btnGymDifficulty, btnTwoLeagueCap, btnGymLegality, btnGymLegalityRule;
 
     /** gymLegalityCheck values, in the order the button cycles through them. */
     private static final List<String> LEGALITY_MODES = List.of("off", "warn", "block");
+    /** gymLegalityRule values, in the order the button cycles through them. */
+    private static final List<String> LEGALITY_RULES = List.of("region", "strict");
 
     /** gymDifficulty values, in the order the button cycles through them. */
     private static final List<String> DIFFICULTIES = List.of("player_choice", "normal", "hard");
@@ -84,11 +86,19 @@ public final class CommonConfigScreen extends BaseConfigScreen {
                 .withValues(LEGALITY_MODES)
                 .withInitialValue(legality)
                 .withTooltip(v -> Tooltip.create(Component.literal(switch (v) {
-                    case "warn" -> "Gym leaders name party Pokémon from tiers you haven't unlocked, but battle anyway.";
-                    case "block" -> "Gym leaders won't battle while your party has Pokémon from tiers you haven't unlocked. Your starter is always allowed.";
+                    case "warn" -> "Gym leaders name party Pokémon you couldn't have yet (see Allowed Pokémon), but battle anyway.";
+                    case "block" -> "Gym leaders won't battle while your party has Pokémon you couldn't have yet (see Allowed Pokémon). Your starter is always allowed.";
                     default -> "No check: bring any Pokémon to a gym battle.";
                 })))
                 .create(0, 0, 150, 20, Component.literal("Unlocked Pokémon Only")));
+        String rule = "strict".equalsIgnoreCase(c.gymLegalityRule) ? "strict" : "region";
+        btnGymLegalityRule = list.add(CycleButton.<String>builder(v -> Component.literal(v.equals("strict") ? "Wild spawns" : "Your regions"))
+                .withValues(LEGALITY_RULES)
+                .withInitialValue(rule)
+                .withTooltip(v -> Tooltip.create(Component.literal(v.equals("strict")
+                        ? "Only Pokémon of tiers you've unlocked, the ones you can meet in the wild now, within your level cap."
+                        : "Any Pokémon of a region you've opened, evolutions included, within your level cap. Regional forms need their own region.")))
+                .create(0, 0, 150, 20, Component.literal("Allowed Pokémon")));
         String current = DIFFICULTIES.contains(c.gymDifficulty) ? c.gymDifficulty : "player_choice";
         btnGymDifficulty = list.add(CycleButton.<String>builder(CommonConfigScreen::difficultyName)
                 .withValues(DIFFICULTIES)
@@ -131,6 +141,7 @@ public final class CommonConfigScreen extends BaseConfigScreen {
         c.starterLevel = btnStarterLevel.getValue();
         c.gymTeamLimit = chkGymTeamLimit.selected();
         c.gymLegalityCheck = btnGymLegality.getValue();
+        c.gymLegalityRule = btnGymLegalityRule.getValue();
         c.gymDifficulty = btnGymDifficulty.getValue();
         c.catchWholeTier = chkCatchWholeTier.selected();
         c.allowTwoLeagues = chkTwoLeagues.selected();
