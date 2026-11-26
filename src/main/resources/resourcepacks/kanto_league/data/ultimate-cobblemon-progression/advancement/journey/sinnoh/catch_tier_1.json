@@ -1,5 +1,5 @@
 {
-  "parent": "ultimate-cobblemon-progression:journey/sinnoh/coal_badge",
+  "parent": "ultimate-cobblemon-progression:journey/root",
   "display": {
     "icon": {
       "id": "cobblemon:poke_ball"

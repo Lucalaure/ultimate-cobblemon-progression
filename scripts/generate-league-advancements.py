@@ -20,8 +20,9 @@ Run it after changing a league's trainers or adding a region. It writes, under
   PokeBadges item ("ultimate-cobblemon-progression:badge", e.g. pokebadges:boulder_kanto_badge): with PokeBadges
   installed, UCP shows it as the icon and awards that badge.
 - <region>/catch_tier_<n>.json: for each tier of a league region with Pokémon, a hidden advancement earned by catching
-  every obtainable Pokémon of that tier (trigger ultimate-cobblemon-progression:catch_tier). They form one line per
-  league under its badges: tier 1 hangs off the first badge, and each later tier off the tier before it.
+  every obtainable Pokémon of that tier (trigger ultimate-cobblemon-progression:catch_tier). They form a second lane
+  per league, off the root beside its badges: tier 1 off the root, each later tier off the tier before it, so tier N
+  sits in the same column as the leader it comes before.
 - milestones/badge_<n>.json and milestones/champion.json: hidden advancements earned by beating the n-th gym (its last
   leader) or the Champion of ANY league. Regions without a series unlock their tiers with these, so they follow whichever
   league the player is in, and adding a league only means adding its trainers here.
@@ -237,10 +238,10 @@ def main():
                                        badge=badge_id))
                 parent = path
             unlocks[t] = parent
-        # Catching every Pokémon of a tier: one line per league, tier 1 off the first badge and each tier off the one
-        # before, so the line runs under the badges instead of branching off each of them.
+        # Catching every Pokémon of a tier: a second lane per league, off the root beside its badges. Tier N sits in the
+        # same column as the N-th leader, the one catchWholeTier holds back until the tier is caught.
         caught = 0
-        catch_parent = unlocks[steps[0]]
+        catch_parent = "journey/root"
         for t in sorted(tiers):
             if not tiers[t].get("species"):
                 continue
