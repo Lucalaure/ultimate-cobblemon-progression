@@ -1,3 +1,9 @@
+# CJP 2.8.0
+
+## Changes
+- **Evolutions are allowed at gyms.** With `gymLegalityCheck` on, gym leaders now accept any Pokémon of a region you've opened, so the Pokémon you catch can evolve and still come along, even when the evolution doesn't spawn in the wild yet. A regional form counts as its own region's: a Kanto Pikachu evolved into an Alolan Raichu needs Alola. The Pokémon must also be within your level cap. The old rule, only Pokémon of tiers you've unlocked, is still there as `gymLegalityRule: "strict"` (Allowed Pokémon: Wild spawns on the Mod Menu General page).
+- **Tier catches before their leaders.** In the Pokémon Journey tab, each league's tier catch line hung off its first badge, so "Kanto Tier 1 Caught" came after Brock, though Catch Every Pokémon makes you catch tier 1 before he'll battle you. The catch line now starts at the tab's root, as its own lane beside the league's badges: each tier sits in the same column as the leader it comes before (Tier 1 above the Boulder Badge). They're still hidden until earned. Progress isn't affected.
+
 # CJP 2.7.1
 
 ## Fixes
