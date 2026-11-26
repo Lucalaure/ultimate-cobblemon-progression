@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "defeat": {
+      "trigger": "ultimate-cobblemon-progression:defeat_trainer",
+      "conditions": {
+        "trainers": [
+          "gym_leader_milo_8a01_hard"
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "defeat"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "ultimate-cobblemon-progression:journey_rewards/galar/hard/grass_badge"
+    ]
+  }
+}

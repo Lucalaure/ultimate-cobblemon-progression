@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "defeat": {
+      "trigger": "ultimate-cobblemon-progression:defeat_trainer",
+      "conditions": {
+        "trainers": [
+          "leader_blaine_01a3_hard"
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "defeat"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "ultimate-cobblemon-progression:journey_rewards/kanto/hard/volcano_badge"
+    ]
+  }
+}

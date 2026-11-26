@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:advancement_reward",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:water_stone"
+        }
+      ]
+    }
+  ],
+  "random_sequence": "ultimate-cobblemon-progression:journey_rewards/galar/hard/hop"
+}

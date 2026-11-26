@@ -1,11 +1,12 @@
 """Generates UCP's "Pokemon Journey" advancements from the region data, and points the tier files at them.
 
 Usage:
-    python scripts/generate-league-advancements.py [--pack DIR] [--names FILE] [--rct-jar JAR]
+    python scripts/generate-league-advancements.py [--pack DIR] [--names FILE] [--rewards FILE] [--rct-jar JAR]
 
     --pack     The datapack's data folder (default: the built-in leagues pack,
                src/main/resources/resourcepacks/kanto_league/data).
     --names    Badge and Champion names per league (default: scripts/league-advancements.json).
+    --rewards  The one-time rewards for beating league trainers (default: scripts/league-rewards.json).
     --rct-jar  The Radical Cobblemon Trainers jar, for the names and signature items of trainers the pack doesn't
                override. By default it's looked up in the Gradle cache (run ./gradlew build once first).
 
@@ -26,6 +27,13 @@ Run it after changing a league's trainers or adding a region. It writes, under
 - milestones/badge_<n>.json and milestones/champion.json: hidden advancements earned by beating the n-th gym (its last
   leader) or the Champion of ANY league. Regions without a series unlock their tiers with these, so they follow whichever
   league the player is in, and adding a league only means adding its trainers here.
+
+Rewards (from --rewards): every league trainer's advancement above gives, once, its TM and the bundle of its stage
+(picked by the level of its strongest Pokémon; the Champion has its own). A hidden advancement per trainer,
+<region>/hard/<trainer>.json, is earned only by beating its Hard version (<id>_hard) and gives its hardItem, also once.
+Their loot tables go to <pack>/ultimate-cobblemon-progression/loot_table/journey_rewards/, rebuilt each run.
+Advancement rewards only run the first time a player earns the advancement, so rematches give nothing. (The league
+trainers' own RCT loot is emptied by generate-trainer-loot.ps1.)
 
 It also rewrites the "requirements" of every region's tier files to use these advancements (a league's tier N needs
 the advancement of the trainer that unlocks it; tier N of any other region needs milestone N-1, its last tier the
@@ -78,6 +86,13 @@ class Trainers:
     def icon(self, trainer_id):
         return self._json(f"mobs/trainers/single/{trainer_id}.json").get("signatureItem") or "cobblemon:poke_ball"
 
+    def ace(self, trainer_id):
+        """The level of the trainer's strongest Pokémon."""
+        team = self._json(f"trainers/{trainer_id}.json").get("team") or []
+        if not team:
+            sys.exit(f"Trainer '{trainer_id}' has no team to read its level from")
+        return max(p.get("level", 0) for p in team)
+
 
 def slug(text):
     return re.sub(r"[^a-z0-9]+", "_", text.lower()).strip("_")
@@ -92,7 +107,8 @@ def badge_item(region_id, badge_name):
     return f"pokebadges:{slug(badge_name).removesuffix('_badge')}_{region_id}_badge"
 
 
-def advancement(path, parent, icon, title, description, frame, trainers, hidden_display=False, badge=None):
+def advancement(path, parent, icon, title, description, frame, trainers, hidden_display=False, badge=None,
+                reward=None):
     key = path.replace("/", ".")
     adv = {}
     if parent:
@@ -112,7 +128,88 @@ def advancement(path, parent, icon, title, description, frame, trainers, hidden_
         }
     adv["criteria"] = {"defeat": {"trigger": f"{MOD}:defeat_trainer", "conditions": {"trainers": trainers}}}
     adv["requirements"] = [["defeat"]]
+    if reward:
+        adv["rewards"] = {"loot": [f"{MOD}:{reward}"]}
     return adv
+
+
+HARD_SUFFIX = "_hard"
+
+
+class Rewards:
+    """The one-time rewards of league trainers (see --rewards), written as advancement reward loot tables."""
+
+    def __init__(self, path, pack):
+        with open(path, encoding="utf-8") as f:
+            data = json.load(f)
+        self.path = path
+        self.trainers = data["trainers"]
+        self.stages = {s["id"]: s for s in data["stages"]}
+        self.pools = data["pools"]
+        self.out = os.path.join(pack, MOD, "loot_table", "journey_rewards")
+        self.used = set()
+        for required in ("elite_four", "champion"):
+            if required not in self.stages:
+                sys.exit(f"{path} has no '{required}' stage")
+        for stage in self.stages.values():
+            for entry in stage["bundle"]:
+                if "pool" in entry and entry["pool"] not in self.pools:
+                    sys.exit(f"{path}: stage '{stage['id']}' uses unknown pool '{entry['pool']}'")
+
+    def stage(self, ace, champion):
+        """The Champion's stage, else the first whose maxAce covers the trainer, else the Elite Four's."""
+        if champion:
+            return self.stages["champion"]
+        for stage in self.stages.values():
+            if "maxAce" in stage and ace <= stage["maxAce"]:
+                return stage
+        return self.stages["elite_four"]
+
+    def _entry(self, trainer_id, key):
+        entry = self.trainers.get(trainer_id)
+        if not entry or key not in entry:
+            sys.exit(f"League trainer '{trainer_id}' has no '{key}' in {self.path}")
+        self.used.add(trainer_id)
+        return entry[key]
+
+    @staticmethod
+    def _item(item, count=1, functions=()):
+        entry = {"type": "minecraft:item", "name": item}
+        functions = list(functions)
+        if count != 1:
+            functions.append({"function": "minecraft:set_count", "count": count})
+        if functions:
+            entry["functions"] = functions
+        return entry
+
+    def _write(self, name, pools):
+        write_json(os.path.join(self.out, *name.split("/")) + ".json",
+                   {"type": "minecraft:advancement_reward", "pools": pools,
+                    "random_sequence": f"{MOD}:journey_rewards/{name}"})
+        return f"journey_rewards/{name}"
+
+    def first_win(self, region_id, name, trainer_id, ace, champion):
+        """The TM plus the stage's bundle. Returns the loot table (without namespace) and the stage's id."""
+        tm = self._entry(trainer_id, "tm")
+        stage = self.stage(ace, champion)
+        pools = [{"rolls": 1, "entries": [self._item("cobblemon:technical_machine", functions=[
+            {"function": "minecraft:set_components", "components": {"cobblemon:tm_move": {"move": tm}}}])]}]
+        for entry in stage["bundle"]:
+            if "pool" in entry:
+                pools.append({"rolls": 1, "entries": [self._item(i) for i in self.pools[entry["pool"]]]})
+            else:
+                pools.append({"rolls": 1, "entries": [self._item(entry["item"], entry.get("count", 1))]})
+        return self._write(f"{region_id}/{name}", pools), stage["id"]
+
+    def hard_win(self, region_id, name, trainer_id):
+        """The Hard version's item. Returns the loot table (without namespace)."""
+        item = self._entry(trainer_id, "hardItem")
+        return self._write(f"{region_id}/hard/{name}", [{"rolls": 1, "entries": [self._item(item)]}])
+
+    def check_unused(self):
+        unused = sorted(set(self.trainers) - self.used)
+        if unused:
+            sys.exit(f"{self.path} has rewards for trainers no league lists: {', '.join(unused)}")
 
 
 def catch_icon(tier, last):
@@ -162,6 +259,7 @@ def main():
     p = argparse.ArgumentParser(description="Generate UCP's Pokemon Journey advancements (see the top of this file).")
     p.add_argument("--pack", default=DEFAULT_PACK)
     p.add_argument("--names", default=os.path.join(HERE, "league-advancements.json"))
+    p.add_argument("--rewards", default=os.path.join(HERE, "league-rewards.json"))
     p.add_argument("--rct-jar")
     args = p.parse_args()
 
@@ -169,10 +267,12 @@ def main():
     with open(args.names, encoding="utf-8") as f:
         names = json.load(f)
     trainers = Trainers(pack, args.rct_jar or find_rct_jar())
+    rewards = Rewards(args.rewards, pack)
     regions = load_regions(pack)
     out = os.path.join(pack, MOD, "advancement", "journey")
-    if os.path.isdir(out):
-        shutil.rmtree(out)
+    for folder in (out, rewards.out):
+        if os.path.isdir(folder):
+            shutil.rmtree(folder)
 
     write_json(os.path.join(out, "root.json"), {
         "display": {
@@ -204,6 +304,7 @@ def main():
             continue
 
         parent = "journey/root"
+        stages = {}   # reward stage id -> trainers given its bundle
         unlocks = {}  # tier -> advancement id that unlocks it
         badge = 0     # badges so far (a gym with two leaders gives two)
         slot = 0      # gyms so far: milestone n is the n-th gym of any league, whatever its number of leaders
@@ -215,7 +316,8 @@ def main():
             for gi, group in enumerate(groups):
                 first = group[0]
                 badge_id = None
-                if last_tier and gi == len(groups) - 1:
+                champion = last_tier and gi == len(groups) - 1
+                if champion:
                     path, frame = f"journey/{region_id}/champion", "challenge"
                     adv_title, desc = league["champion"], f"Defeat {trainers.name(first)} and become Champion of {title}"
                     champion_trainers += group
@@ -233,9 +335,21 @@ def main():
                 else:
                     adv_title = trainers.name(first)
                     path, frame, desc = f"journey/{region_id}/{slug(adv_title)}", "task", f"Defeat {adv_title}"
+                name = path.split("/")[-1]
+                reward, stage_id = rewards.first_win(region_id, name, first, trainers.ace(first), champion)
+                stages[stage_id] = stages.get(stage_id, 0) + 1
                 write_json(os.path.join(out, *path.split("/")[1:]) + ".json",
                            advancement(path, parent, trainers.icon(first), adv_title, desc, frame, group,
-                                       badge=badge_id))
+                                       badge=badge_id, reward=reward))
+                # Beating the Hard version, the first time or in a later rematch: a hidden advancement of its own.
+                hard = first + HARD_SUFFIX
+                if hard in group:
+                    hard_path = f"journey/{region_id}/hard/{name}"
+                    write_json(os.path.join(out, *hard_path.split("/")[1:]) + ".json",
+                               advancement(hard_path, None, None, None, None, None, [hard], hidden_display=True,
+                                           reward=rewards.hard_win(region_id, name, first)))
+                else:
+                    print(f"warning: '{first}' has no Hard version, so no Hard reward")
                 parent = path
             unlocks[t] = parent
         # Catching every Pokémon of a tier: a second lane per league, off the root beside its badges. Tier N sits in the
@@ -260,7 +374,7 @@ def main():
         meta["completedBy"] = f"{MOD}:{unlocks[steps[-1]]}"
         write_json(os.path.join(folder, "region.json"), meta)
         print(f"{region_id}: {badge} badges, then {len(tiers[steps[-1]]['trainers'])} trainers for the last tier, "
-              f"{caught} tier catch advancements")
+              f"{caught} tier catch advancements, reward stages {stages}")
 
     for n, group in sorted(badge_trainers.items()):
         write_json(os.path.join(out, "milestones", f"badge_{n}.json"),
@@ -285,6 +399,7 @@ def main():
             region_tiers.write_tier(os.path.join(folder, f"tier_{t}.json"), tier["levelCap"], tier.get("trainers", []),
                                     reqs, tier.get("species", []))
         print(f"{region_id}: tiers follow the badge milestones")
+    rewards.check_unused()
     print(f"milestones: {len(badge_trainers)} badges + champion")
 
 

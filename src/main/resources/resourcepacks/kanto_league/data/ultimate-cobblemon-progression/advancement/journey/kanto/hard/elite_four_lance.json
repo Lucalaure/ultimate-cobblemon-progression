@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "defeat": {
+      "trigger": "ultimate-cobblemon-progression:defeat_trainer",
+      "conditions": {
+        "trainers": [
+          "elite_four_lance_0057_hard"
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "defeat"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "ultimate-cobblemon-progression:journey_rewards/kanto/hard/elite_four_lance"
+    ]
+  }
+}

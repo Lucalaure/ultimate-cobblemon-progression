@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "defeat": {
+      "trigger": "ultimate-cobblemon-progression:defeat_trainer",
+      "conditions": {
+        "trainers": [
+          "champion_cynthia_03a5_hard"
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "defeat"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "ultimate-cobblemon-progression:journey_rewards/sinnoh/hard/champion"
+    ]
+  }
+}

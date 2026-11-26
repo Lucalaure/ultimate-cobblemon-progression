@@ -1,0 +1,119 @@
+{
+  "_comment": [
+    "One-time rewards for beating league trainers, written into the Pokemon Journey advancements by generate-league-advancements.py.",
+    "trainers: per Normal trainer id, the TM move (any first win, Normal or Hard) and the hardItem (only for beating its Hard version).",
+    "stages: the bundle every first win also gives, picked by the level of the trainer's strongest Pokemon ('maxAce'); 'elite_four' is for the last tier's trainers above every maxAce, 'champion' for each league's Champion.",
+    "Each bundle entry is a fixed item ('item' and 'count') or one random pick from a named pool ('pool')."
+  ],
+  "trainers": {
+    "leader_brock_019e": { "tm": "rocktomb", "hardItem": "cobblemon:hard_stone" },
+    "leader_misty_019f": { "tm": "waterpulse", "hardItem": "cobblemon:water_stone" },
+    "leader_lt_surge_01a0": { "tm": "shockwave", "hardItem": "cobblemon:thunder_stone" },
+    "leader_erika_01a1": { "tm": "gigadrain", "hardItem": "cobblemon:leaf_stone" },
+    "leader_koga_01a2": { "tm": "toxic", "hardItem": "cobblemon:poison_barb" },
+    "leader_sabrina_01a4": { "tm": "calmmind", "hardItem": "cobblemon:twisted_spoon" },
+    "leader_blaine_01a3": { "tm": "fireblast", "hardItem": "cobblemon:fire_stone" },
+    "leader_giovanni_015e": { "tm": "earthquake", "hardItem": "cobblemon:soft_sand" },
+    "elite_four_lorelei_004e": { "tm": "icebeam", "hardItem": "cobblemon:ice_stone" },
+    "elite_four_bruno_0051": { "tm": "bulkup", "hardItem": "cobblemon:black_belt" },
+    "elite_four_agatha_0053": { "tm": "shadowball", "hardItem": "cobblemon:dusk_stone" },
+    "elite_four_lance_0057": { "tm": "dragondance", "hardItem": "cobblemon:dragon_fang" },
+    "champion_terry_01b8": { "tm": "hydropump", "hardItem": "cobblemon:life_orb" },
+
+    "gym_leader_roark_0395": { "tm": "stealthrock", "hardItem": "cobblemon:hard_stone" },
+    "gym_leader_gardenia_03d6": { "tm": "grassknot", "hardItem": "cobblemon:leaf_stone" },
+    "gym_leader_maylene_03d8": { "tm": "drainpunch", "hardItem": "cobblemon:black_belt" },
+    "gym_leader_wake_03d7": { "tm": "brine", "hardItem": "cobblemon:water_stone" },
+    "gym_leader_fantina_03d9": { "tm": "shadowclaw", "hardItem": "cobblemon:dusk_stone" },
+    "gym_leader_byron_0399": { "tm": "flashcannon", "hardItem": "cobblemon:metal_coat" },
+    "gym_leader_candice_03da": { "tm": "avalanche", "hardItem": "cobblemon:ice_stone" },
+    "gym_leader_volkner_03db": { "tm": "chargebeam", "hardItem": "cobblemon:thunder_stone" },
+    "elite_four_aaron_039f": { "tm": "xscissor", "hardItem": "cobblemon:silver_powder" },
+    "elite_four_bertha_03a0": { "tm": "earthpower", "hardItem": "cobblemon:soft_sand" },
+    "elite_four_flint_03a1": { "tm": "flamethrower", "hardItem": "cobblemon:fire_stone" },
+    "elite_four_lucian_03a2": { "tm": "psychic", "hardItem": "cobblemon:twisted_spoon" },
+    "champion_cynthia_03a5": { "tm": "dracometeor", "hardItem": "cobblemon:choice_scarf" },
+
+    "gym_leader_milo_8a01": { "tm": "magicalleaf", "hardItem": "cobblemon:leaf_stone" },
+    "gym_leader_nessa_8a02": { "tm": "whirlpool", "hardItem": "cobblemon:water_stone" },
+    "gym_leader_kabu_8a03": { "tm": "willowisp", "hardItem": "cobblemon:fire_stone" },
+    "gym_leader_bea_8a04": { "tm": "revenge", "hardItem": "cobblemon:black_belt" },
+    "gym_leader_allister_8a0d": { "tm": "hex", "hardItem": "cobblemon:dusk_stone" },
+    "gym_leader_opal_8a05": { "tm": "dazzlinggleam", "hardItem": "cobblemon:shiny_stone" },
+    "gym_leader_gordie_8a06": { "tm": "rocktomb", "hardItem": "cobblemon:hard_stone" },
+    "gym_leader_melony_8a0e": { "tm": "icywind", "hardItem": "cobblemon:ice_stone" },
+    "gym_leader_piers_8a07": { "tm": "snarl", "hardItem": "cobblemon:dusk_stone" },
+    "gym_leader_raihan_8a08": { "tm": "breakingswipe", "hardItem": "cobblemon:dragon_fang" },
+    "marnie_8a09": { "tm": "darkpulse", "hardItem": "cobblemon:dusk_stone" },
+    "hop_8a0a": { "tm": "bravebird", "hardItem": "cobblemon:water_stone" },
+    "bede_8a0b": { "tm": "psyshock", "hardItem": "cobblemon:moon_stone" },
+    "champion_leon_8a0c": { "tm": "flareblitz", "hardItem": "cobblemon:life_orb" }
+  },
+  "stages": [
+    { "id": "stage_1", "maxAce": 22, "bundle": [
+      { "item": "cobblemon:great_ball", "count": 5 },
+      { "item": "cobblemon:exp_candy_s", "count": 3 },
+      { "pool": "uncommon" }
+    ] },
+    { "id": "stage_2", "maxAce": 32, "bundle": [
+      { "item": "cobblemon:great_ball", "count": 5 },
+      { "item": "cobblemon:exp_candy_m", "count": 2 },
+      { "pool": "rare" }
+    ] },
+    { "id": "stage_3", "maxAce": 43, "bundle": [
+      { "item": "cobblemon:ultra_ball", "count": 5 },
+      { "item": "cobblemon:rare_candy", "count": 2 },
+      { "pool": "epic" }
+    ] },
+    { "id": "stage_4", "maxAce": 53, "bundle": [
+      { "item": "cobblemon:rare_candy", "count": 3 },
+      { "pool": "mints" },
+      { "pool": "epic" }
+    ] },
+    { "id": "elite_four", "bundle": [
+      { "item": "cobblemon:exp_candy_l", "count": 2 },
+      { "pool": "mints" },
+      { "pool": "epic" }
+    ] },
+    { "id": "champion", "bundle": [
+      { "item": "cobblemon:master_ball", "count": 1 },
+      { "item": "cobblemon:ability_patch", "count": 1 },
+      { "pool": "legendary" }
+    ] }
+  ],
+  "pools": {
+    "uncommon": [
+      "cobblemon:hp_up", "cobblemon:protein", "cobblemon:iron", "cobblemon:calcium", "cobblemon:zinc", "cobblemon:carbos",
+      "cobblemon:white_herb", "cobblemon:mental_herb", "cobblemon:power_herb", "cobblemon:mirror_herb",
+      "cobblemon:focus_sash"
+    ],
+    "rare": [
+      "cobblemon:power_anklet", "cobblemon:power_band", "cobblemon:power_belt", "cobblemon:power_bracer",
+      "cobblemon:power_lens", "cobblemon:power_weight", "cobblemon:destiny_knot", "cobblemon:soothe_bell",
+      "cobblemon:quick_claw", "cobblemon:heavy_duty_boots", "cobblemon:air_balloon", "cobblemon:safety_goggles",
+      "cobblemon:charcoal_stick", "cobblemon:mystic_water", "cobblemon:magnet", "cobblemon:miracle_seed",
+      "cobblemon:never_melt_ice", "cobblemon:black_belt", "cobblemon:poison_barb", "cobblemon:soft_sand",
+      "cobblemon:sharp_beak", "cobblemon:twisted_spoon", "cobblemon:silver_powder", "cobblemon:hard_stone",
+      "cobblemon:spell_tag", "cobblemon:dragon_fang", "cobblemon:black_glasses", "cobblemon:silk_scarf",
+      "cobblemon:fairy_feather"
+    ],
+    "epic": [
+      "cobblemon:ability_capsule", "cobblemon:lucky_egg", "cobblemon:eviolite", "cobblemon:weakness_policy",
+      "cobblemon:rocky_helmet", "cobblemon:expert_belt", "cobblemon:focus_band", "cobblemon:shell_bell",
+      "cobblemon:covert_cloak", "cobblemon:loaded_dice", "cobblemon:eject_button", "cobblemon:red_card",
+      "cobblemon:assault_vest"
+    ],
+    "legendary": [
+      "cobblemon:choice_band", "cobblemon:choice_scarf", "cobblemon:choice_specs", "cobblemon:leftovers",
+      "cobblemon:life_orb", "cobblemon:exp_share", "cobblemon:muscle_band"
+    ],
+    "mints": [
+      "cobblemon:adamant_mint", "cobblemon:bold_mint", "cobblemon:brave_mint", "cobblemon:calm_mint",
+      "cobblemon:careful_mint", "cobblemon:gentle_mint", "cobblemon:hasty_mint", "cobblemon:impish_mint",
+      "cobblemon:jolly_mint", "cobblemon:lax_mint", "cobblemon:lonely_mint", "cobblemon:mild_mint",
+      "cobblemon:modest_mint", "cobblemon:naive_mint", "cobblemon:naughty_mint", "cobblemon:quiet_mint",
+      "cobblemon:rash_mint", "cobblemon:relaxed_mint", "cobblemon:sassy_mint", "cobblemon:serious_mint",
+      "cobblemon:timid_mint"
+    ]
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "type": "minecraft:advancement_reward",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:technical_machine",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "cobblemon:tm_move": {
+                  "move": "bravebird"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:rare_candy",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:adamant_mint"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:bold_mint"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:brave_mint"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:calm_mint"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:careful_mint"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:gentle_mint"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:hasty_mint"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:impish_mint"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:jolly_mint"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:lax_mint"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:lonely_mint"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:mild_mint"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:modest_mint"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:naive_mint"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:naughty_mint"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:quiet_mint"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:rash_mint"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:relaxed_mint"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:sassy_mint"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:serious_mint"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:timid_mint"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:ability_capsule"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:lucky_egg"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:eviolite"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:weakness_policy"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:rocky_helmet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:expert_belt"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:focus_band"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:shell_bell"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:covert_cloak"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:loaded_dice"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:eject_button"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:red_card"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:assault_vest"
+        }
+      ]
+    }
+  ],
+  "random_sequence": "ultimate-cobblemon-progression:journey_rewards/galar/hop"
+}

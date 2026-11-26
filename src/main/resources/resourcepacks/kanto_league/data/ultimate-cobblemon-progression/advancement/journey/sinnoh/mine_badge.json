@@ -33,5 +33,10 @@
     [
       "defeat"
     ]
-  ]
+  ],
+  "rewards": {
+    "loot": [
+      "ultimate-cobblemon-progression:journey_rewards/sinnoh/mine_badge"
+    ]
+  }
 }

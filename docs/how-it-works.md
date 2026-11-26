@@ -545,8 +545,49 @@ Beaten RCT trainers drop items at their feet. The built-in datapack replaces RCT
 - Luck still pushes drops toward rarer items. RCT raises it for every series a player completes.
 - Filler like vanilla flowers, saplings, paintings, pottery sherds, armor trims and music discs is replaced by Poké Balls, apricorns and Exp. Candies.
 - Radical Red's Team Rocket Boss Giovanni no longer drops a guaranteed Master Ball.
+- The trainers of CJP's leagues drop nothing at their feet. They give their [rewards](#leader-rewards) once instead.
 
 The tables are generated from RCT's own by `scripts/generate-trainer-loot.ps1`, which holds all the numbers above.
+
+#### Leader rewards
+
+Every gym leader, Elite Four member, Champion Cup trainer and Champion of the Kanto, Sinnoh and Galar leagues gives a reward **once**, the first time you beat them. The items go straight into your inventory (or drop at your feet if it's full). Rematches give nothing, so no reward can be farmed.
+
+- **Any first win (Normal or Hard):** the trainer's TM and the bundle of its stage.
+- **First win against the Hard version:** also the trainer's Hard item, a stone of its type (Water Stone from Misty) or, for types without one, a type-boosting item (Hard Stone from Brock). Champions give their held item: Blue and Leon a Life Orb, Cynthia a Choice Scarf. You can still earn it later, by beating the Hard version in a rematch, but only once. A server that sets every leader to Normal gives no Hard items.
+
+The bundle depends on the level of the trainer's strongest Pokémon:
+
+| Stage | Trainers | Bundle |
+|---|---|---|
+| 1 | Ace up to level 22 (Brock, Misty, Roark, Gardenia, Milo) | 5 Great Balls, 3 Exp. Candy S, 1 random uncommon item (vitamin, herb or Focus Sash) |
+| 2 | Up to 32 (Lt. Surge, Erika, Maylene, Wake, Nessa, Kabu, Bea, Allister) | 5 Great Balls, 2 Exp. Candy M, 1 random rare item (Power item, Destiny Knot, a type-boosting or utility held item) |
+| 3 | Up to 43 (Koga, Sabrina, Fantina, Byron, Candice, Opal, Gordie, Melony) | 5 Ultra Balls, 2 Rare Candies, 1 random epic item (Ability Capsule, Lucky Egg, Eviolite, Assault Vest…) |
+| 4 | Up to 53 (Blaine, Giovanni, Volkner, Piers, Raihan, Marnie, Hop, Bede) | 3 Rare Candies, 1 random Nature Mint, 1 random epic item |
+| Elite Four | Every Elite Four member | 2 Exp. Candy L, 1 random Nature Mint, 1 random epic item |
+| Champion | Blue, Cynthia, Leon | Master Ball, Ability Patch, 1 random legendary item (Choice item, Leftovers, Life Orb, Exp. Share, Muscle Band) |
+
+Each trainer's TM is the one it gives in FireRed/LeafGreen, Brilliant Diamond/Shining Pearl or Sword/Shield (Brock's Rock Tomb, Roark's Stealth Rock, Milo's Magical Leaf), or one that fits its team for those who give none in the games. The rewards are vanilla advancement rewards: the trainer's Pokémon Journey advancement gives the TM and bundle, and a hidden advancement per trainer, earned only by beating its Hard version, gives the Hard item. Players who already had an advancement before these rewards existed don't get its reward.
+
+**Giving rewards by hand.** For players who beat leaders before these rewards existed, an operator can hand them out with commands, by the trainer's advancement name (below). The TM and bundle, rolled fresh:
+
+```
+/loot give <player> loot ultimate-cobblemon-progression:journey_rewards/<league>/<name>
+```
+
+The Hard item, for a leader the player beat on Hard. This grants the hidden Hard advancement, so a later Hard rematch doesn't give it a second time:
+
+```
+/advancement grant <player> only ultimate-cobblemon-progression:journey/<league>/hard/<name>
+```
+
+| League | Names, in order |
+|---|---|
+| `kanto` | `boulder_badge` (Brock), `cascade_badge` (Misty), `thunder_badge` (Lt. Surge), `rainbow_badge` (Erika), `soul_badge` (Koga), `marsh_badge` (Sabrina), `volcano_badge` (Blaine), `earth_badge` (Giovanni), `elite_four_lorelei`, `elite_four_bruno`, `elite_four_agatha`, `elite_four_lance`, `champion` (Blue) |
+| `sinnoh` | `coal_badge` (Roark), `forest_badge` (Gardenia), `cobble_badge` (Maylene), `fen_badge` (Wake), `relic_badge` (Fantina), `mine_badge` (Byron), `icicle_badge` (Candice), `beacon_badge` (Volkner), `elite_four_aaron`, `elite_four_bertha`, `elite_four_flint`, `elite_four_lucian`, `champion` (Cynthia) |
+| `galar` | `grass_badge` (Milo), `water_badge` (Nessa), `fire_badge` (Kabu), `fighting_badge` (Bea), `ghost_badge` (Allister), `fairy_badge` (Opal), `rock_badge` (Gordie), `ice_badge` (Melony), `dark_badge` (Piers), `dragon_badge` (Raihan), `marnie`, `hop`, `bede`, `champion` (Leon) |
+
+`scripts/league-rewards.json` holds every trainer's TM and Hard item, the stages and the random item pools. `scripts/generate-league-advancements.py` writes them into the advancements and their loot tables (`loot_table/journey_rewards/`), and `scripts/generate-trainer-loot.ps1` empties the league trainers' RCT loot.
 
 The two leagues' tiers:
 
@@ -620,7 +661,7 @@ Operators can still adjust a player's progress with `/advancement grant` and `/a
 
 Regions without a `series` unlock with **milestones**: hidden advancements (they don't show in the tab) earned by beating your *n*-th gym in **any** league (for a gym with two leaders, like Galar's 4th and 6th, the second of them), `…/journey/milestones/badge_1` to `badge_8`, and by becoming any league's Champion, `…/journey/milestones/champion`. Johto's tier 2 needs `badge_1`, so it grows the same way whether you're collecting Kanto or Sinnoh badges. A new league only has to be added to the milestones, not to every region's tier files.
 
-**Generating them.** `scripts/generate-league-advancements.py` (Python 3) writes every journey advancement and milestone from the region data, using the badge and Champion names in `scripts/league-advancements.json` and the trainers' names and signature items from the pack and RCT. It also sets the tier files' `requirements` and each league's `completedBy` to match. Run it after changing a league's trainers or adding a league:
+**Generating them.** `scripts/generate-league-advancements.py` (Python 3) writes every journey advancement and milestone from the region data, using the badge and Champion names in `scripts/league-advancements.json`, the trainers' names and signature items from the pack and RCT, and the [leader rewards](#leader-rewards) in `scripts/league-rewards.json` (every league trainer needs an entry there). It also sets the tier files' `requirements` and each league's `completedBy` to match. Run it after changing a league's trainers or adding a league:
 
 ```
 python scripts/generate-league-advancements.py
@@ -656,7 +697,7 @@ Each entry is a Radical Cobblemon Trainers trainer id. A nested list means "any 
 - the challenger logs out, leaves the dimension or goes more than 32 blocks away,
 - or 3 minutes pass without a battle.
 
-**Rematches.** Sneak and use a Gym Challenge block with an empty hand to open the rematch menu: every leader, Elite Four member and Champion you've beaten, from every region on your journey, each with a **Normal** button and (when it has one) a **Hard** button, whatever your [gym difficulty](#gym-difficulty). The leader is summoned like any other and leaves the same way. A rematch changes nothing: no badges, tiers or level cap. Radical Cobblemon Trainers' progression rules are skipped for it, so you can rematch an earlier region's leaders after travelling on, and your level cap doesn't stop the battle. The leader drops its loot again, as RCT trainers always do.
+**Rematches.** Sneak and use a Gym Challenge block with an empty hand to open the rematch menu: every leader, Elite Four member and Champion you've beaten, from every region on your journey, each with a **Normal** button and (when it has one) a **Hard** button, whatever your [gym difficulty](#gym-difficulty). The leader is summoned like any other and leaves the same way. A rematch changes nothing: no badges, tiers or level cap. Radical Cobblemon Trainers' progression rules are skipped for it, so you can rematch an earlier region's leaders after travelling on, and your level cap doesn't stop the battle. Rematches drop nothing: league trainers give their [rewards](#leader-rewards) only once. The one exception is a first win against a leader's Hard version, which still gives that leader's Hard item even in a rematch.
 
 **Team limit (optional).** With `gymTeamLimit` on in `ucp-common.json`, you can bring no more Pokémon to a gym battle than the leader has: Brock has 2, so you can bring at most 2. The leader says so when it accepts your challenge. If your party is bigger, the battle doesn't start, and you're told how many to put in the PC. Every Pokémon in your party counts, fainted ones included. It applies to every trainer a Gym Challenge block summons, the Elite Four and Champion included.
 
@@ -683,7 +724,7 @@ Every leader, Elite Four member and Champion in the built-in leagues comes in tw
 
 **Choosing.** After you pick where your journey starts, your Trainer Card asks **Choose your challenge**: Normal or Hard. You can switch at any time on the card's Road tab, or with `/trainerlevel difficulty <normal|hard>`. The change applies from the next leader a gym summons (a leader already waiting keeps its team), and badges you already have stay as they are. The Road tab marks the leaders you beat on Hard. A server can set `gymDifficulty` in `ucp-common.json` to `"normal"` or `"hard"` for everyone; then the card doesn't ask.
 
-**Either version counts.** Beating the Hard leader earns the same badge and opens the same tier. Radical Cobblemon Trainers' level cap and trainer order follow the Normal leaders, so CJP also marks the Normal leader as beaten in RCT when you beat the Hard one. Your level cap rises the same way whichever you fought. The Hard leader looks and talks like the Normal one, so trainer texture packs cover both.
+**Either version counts.** Beating the Hard leader earns the same badge, opens the same tier and gives the same TM and bundle, plus the leader's Hard item (see [Leader rewards](#leader-rewards)). Radical Cobblemon Trainers' level cap and trainer order follow the Normal leaders, so CJP also marks the Normal leader as beaten in RCT when you beat the Hard one. Your level cap rises the same way whichever you fought. The Hard leader looks and talks like the Normal one, so trainer texture packs cover both.
 
 **For datapacks.** A Hard leader is an RCT trainer whose id is the Normal one's plus `_hard` (`leader_brock_019e_hard`), listed after it in the tier file's slot: `["leader_brock_019e", "leader_brock_019e_hard"]`. Its RCT trainer data (`mobs/trainers/single/`) should be a copy of the Normal one's with `"optional": true`, so RCT's series ignores it. Slots without a `_hard` entry summon the same trainer on both difficulties.
 

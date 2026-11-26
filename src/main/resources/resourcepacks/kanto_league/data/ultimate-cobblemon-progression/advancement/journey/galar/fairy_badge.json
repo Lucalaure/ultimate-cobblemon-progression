@@ -33,5 +33,10 @@
     [
       "defeat"
     ]
-  ]
+  ],
+  "rewards": {
+    "loot": [
+      "ultimate-cobblemon-progression:journey_rewards/galar/fairy_badge"
+    ]
+  }
 }

@@ -18,6 +18,8 @@ Every trainer class keeps RCT's item categories (fishers still drop fishing gear
 - Filler (vanilla flowers, saplings, paintings, pottery sherds, armor trims, music discs...) is swapped for Cobblemon
   items (REMOVE and ADD).
 - Team Rocket Boss Giovanni (Radical Red) no longer drops a guaranteed Master Ball.
+- The trainers of CJP's leagues (gym leaders, Elite Four, Champions) drop nothing: their rewards come once, through
+  their advancements (see generate-league-advancements.py).
 
 Brackets line up with the gates, so a category is either offered for a whole bracket or not at all. A category is only
 offered in a bracket if at least one of its items can drop for every level in it, so no roll comes up empty.
@@ -258,5 +260,27 @@ foreach ($key in @($tables.Keys | Where-Object { $_ -like 'trainers/single/*' } 
         Write-Host "Removed the Master Ball from $key"
     }
 }
+
+# ------------------------------------------------------------------ league trainers: no loot of their own
+
+# Gym leaders, Elite Four, Champion Cup and Champions of CJP's leagues (every trainer in the tiers of a region with a
+# "series") drop nothing. They give one-time rewards through their advancements instead (generate-league-advancements.py
+# and scripts/league-rewards.json), so rematches can't be farmed. A Hard version uses its Normal version's table.
+$regions = Join-Path $repo 'src/main/resources/resourcepacks/kanto_league/data/ultimate-cobblemon-progression/regions'
+$league = New-Object System.Collections.Generic.SortedSet[string]
+foreach ($regionFile in Get-ChildItem $regions -Recurse -Filter region.json) {
+    $region = Get-Content -Raw -Encoding UTF8 $regionFile.FullName | ConvertFrom-Json
+    if (-not $region.series) { continue }
+    foreach ($tierFile in Get-ChildItem $regionFile.DirectoryName -Filter 'tier_*.json') {
+        $tier = Get-Content -Raw -Encoding UTF8 $tierFile.FullName | ConvertFrom-Json
+        foreach ($group in @($tier.trainers)) {
+            foreach ($id in @($group)) { if ($id) { [void]$league.Add([string]$id) } }
+        }
+    }
+}
+foreach ($id in $league) {
+    Write-Table "trainers/single/$id.json" ([ordered]@{ pools = @(); random_sequence = "rctmod:trainers/single/$id" })
+}
+Write-Host "Emptied the loot of $($league.Count) league trainers"
 
 Write-Host "Wrote $written trainer loot tables and $editedCategories edited item categories to $out"

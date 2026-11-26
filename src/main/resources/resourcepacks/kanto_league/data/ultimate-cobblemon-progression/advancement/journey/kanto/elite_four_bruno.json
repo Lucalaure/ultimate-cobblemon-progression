@@ -32,5 +32,10 @@
     [
       "defeat"
     ]
-  ]
+  ],
+  "rewards": {
+    "loot": [
+      "ultimate-cobblemon-progression:journey_rewards/kanto/elite_four_bruno"
+    ]
+  }
 }
