@@ -1,3 +1,11 @@
+# CJP 2.9.0
+
+## Changes
+- **Gym leaders give real rewards.** Gym leaders, the Elite Four, the Champion Cup and Champions used to drop the same random loot as any trainer of their level, often just an X Attack. Each now gives a reward once, the first time you beat them, straight into your inventory: the TM it gives in the games (Rock Tomb from Brock, Stealth Rock from Roark, Magical Leaf from Milo) and a bundle that grows through the league, from Great Balls and Exp. Candy at the first gyms to Ultra Balls, Rare Candies, Nature Mints and items like an Ability Capsule or Lucky Egg later on. Champions give a Master Ball, an Ability Patch and a random Choice item, Leftovers, Life Orb, Exp. Share or Muscle Band.
+- **Hard leaders give one more item.** Beating a leader's Hard version also gives a stone of its type (a Water Stone from Misty) or, for types without one, a type-boosting item (a Hard Stone from Brock). Champions give their held item: a Life Orb from Blue and Leon, a Choice Scarf from Cynthia. If you beat a leader on Normal first, a Hard rematch still earns it, once.
+- **Rematches drop nothing**, so no reward can be farmed.
+- Players who beat leaders before this update don't get their rewards automatically. An operator can hand them out with `/loot give` and `/advancement grant`; see "Leader rewards" in the docs for the commands.
+
 # CJP 2.8.0
 
 ## Changes
