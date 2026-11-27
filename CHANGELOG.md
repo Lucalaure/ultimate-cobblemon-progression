@@ -1,3 +1,8 @@
+# CJP 2.10.1
+
+## Fixes
+- **The Wild Pokémon tab matches what you need to catch.** It listed every Pokémon of your unlocked tiers, including ones that never spawn, like legendaries and Galar's Kubfu (only Legendary Monuments gives one). It now lists only the Pokémon Catch Every Pokémon counts: ones Cobblemon spawns and what they evolve into. Its "next tier adds" count follows the same rule.
+
 # CJP 2.10.0
 
 ## Changes

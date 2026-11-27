@@ -120,6 +120,15 @@ public final class TierCatches {
         return (int) region.entries(tier).stream().filter(e -> counts(e, canGet)).count();
     }
 
+    /**
+     * Whether this Pokémon can be obtained (Cobblemon spawns it, or it evolves from one that does), so whether it
+     * belongs on the Wild Pokémon tab. Until the spawn pools load, everything implemented counts.
+     */
+    public static boolean isObtainable(TierEntry entry) {
+        Set<String> canGet = obtainable();
+        return canGet.isEmpty() ? entry.species().getImplemented() : counts(entry, canGet);
+    }
+
     /** "Pidgey, Alolan Rattata and 3 more". */
     public static String names(List<TierEntry> entries, int shown) {
         List<String> names = entries.stream().limit(shown).map(e -> e.displayName().getString()).toList();

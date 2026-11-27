@@ -111,7 +111,8 @@ final class TrainerCardDataBuilder {
             if (state == LOCKED) continue;
             int regionStep = progress.step(r);
             List<WildSpecies> species = regionSpecies(dex, reg, regionStep);
-            int upcoming = regionStep < reg.maxTier() ? reg.realSpecies(regionStep + 1) : 0;
+            int upcoming = regionStep < reg.maxTier()
+                    ? (TierCatches.isReady() ? TierCatches.targets(reg, regionStep + 1) : reg.realSpecies(regionStep + 1)) : 0;
             wild.add(new WildGroup(reg.title, upcoming, species));
         }
 
@@ -269,12 +270,15 @@ final class TrainerCardDataBuilder {
         return list.stream().map(sp -> new WildSpecies(sp.getResourceIdentifier(), knowledge(dex, sp))).toList();
     }
 
-    /** The region's species and regional forms up to this tier, in Pokédex order, each caught or seen on its own. */
+    /**
+     * The region's obtainable species and regional forms up to this tier (what the catch rule counts, so not Pokémon
+     * only another mod gives), in Pokédex order, each caught or seen on its own.
+     */
     private static List<WildSpecies> regionSpecies(AbstractPokedexManager dex, RegionDef region, int step) {
         List<TierEntry> entries = new ArrayList<>();
         for (int t = 1; t <= step; t++) {
             for (TierEntry e : region.entries(t)) {
-                if (e.species().getImplemented()) entries.add(e);
+                if (TierCatches.isObtainable(e)) entries.add(e);
             }
         }
         entries.sort(Comparator.comparingInt((TierEntry e) -> e.species().getNationalPokedexNumber())
