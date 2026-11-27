@@ -81,16 +81,16 @@
       ]
     },
     {
-      "species": "cobblemon:rhydon",
+      "species": "cobblemon:crustle",
       "gender": "MALE",
       "level": 42,
       "nature": "cobblemon:adamant",
-      "ability": "lightningrod",
+      "ability": "sturdy",
       "moveset": [
-        "stoneedge",
-        "earthquake",
-        "megahorn",
-        "rockpolish"
+        "spikes",
+        "rockblast",
+        "xscissor",
+        "knockoff"
       ],
       "ivs": {
         "hp": 31,
@@ -109,7 +109,7 @@
         "spe": 0
       },
       "heldItem": [
-        "eviolite"
+        "rocky_helmet"
       ]
     },
     {

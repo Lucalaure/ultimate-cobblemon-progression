@@ -91,12 +91,12 @@
       "heldItem": ["scope_lens"]
     },
     {
-      "species": "cobblemon:electivire",
-      "gender": "MALE",
+      "species": "cobblemon:rotom",
+      "gender": "GENDERLESS",
       "level": 49,
-      "nature": "cobblemon:adamant",
-      "ability": "motordrive",
-      "moveset": ["thunderpunch", "icepunch", "crosschop", "earthquake"],
+      "nature": "cobblemon:timid",
+      "ability": "levitate",
+      "moveset": ["voltswitch", "willowisp", "shadowball", "thunderwave"],
       "ivs": {
         "hp": 31,
         "atk": 31,
@@ -107,13 +107,13 @@
       },
       "evs": {
         "hp": 4,
-        "atk": 252,
+        "atk": 0,
         "def": 0,
-        "spa": 0,
+        "spa": 252,
         "spd": 0,
         "spe": 252
       },
-      "heldItem": ["expert_belt"]
+      "heldItem": ["leftovers"]
     },
     {
       "species": "cobblemon:luxray",

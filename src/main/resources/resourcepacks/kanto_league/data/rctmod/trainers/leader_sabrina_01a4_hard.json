@@ -42,12 +42,12 @@
       "heldItem": ["light_clay"]
     },
     {
-      "species": "cobblemon:hypno",
-      "gender": "MALE",
+      "species": "cobblemon:venomoth",
+      "gender": "FEMALE",
       "level": 43,
-      "nature": "cobblemon:calm",
-      "ability": "insomnia",
-      "moveset": ["psychic", "hypnosis", "nastyplot", "dazzlinggleam"],
+      "nature": "cobblemon:timid",
+      "ability": "tintedlens",
+      "moveset": ["bugbuzz", "sludgebomb", "toxicspikes", "roost"],
       "ivs": {
         "hp": 31,
         "atk": 31,
@@ -57,14 +57,14 @@
         "spe": 31
       },
       "evs": {
-        "hp": 252,
+        "hp": 4,
         "atk": 0,
-        "def": 4,
-        "spa": 0,
-        "spd": 252,
-        "spe": 0
+        "def": 0,
+        "spa": 252,
+        "spd": 0,
+        "spe": 252
       },
-      "heldItem": ["leftovers"]
+      "heldItem": ["black_sludge"]
     },
     {
       "species": "cobblemon:slowbro",

@@ -166,7 +166,7 @@ EV_SPREADS = {
 HARD = {
     "gym_leader_milo_8a01": ([("super_potion", 2)], [
         ("gossifleur", "regenerator", "bold", "eviolite", "def", ["magicalleaf", "rapidspin", "sweetscent", "hypervoice"]),
-        ("nuzleaf", "chlorophyll", "adamant", "miracle_seed", "atk", ["razorleaf", "fakeout", "payback", "quickattack"]),
+        ("roselia", "naturalcure", "modest", "eviolite", "hpspa", ["magicalleaf", "sludgebomb", "toxicspikes", "synthesis"]),
         ("eldegoss", "regenerator", "modest", "sitrus_berry", "hpspa", ["magicalleaf", "hypervoice", "cottonguard", "synthesis"]),
     ]),
     "gym_leader_nessa_8a02": ([("super_potion", 2)], [
@@ -192,20 +192,20 @@ HARD = {
         ("yamask", "wanderingspirit", "bold", "eviolite", "def", ["willowisp", "hex", "protect", "brutalswing"], "galarian"),
         ("mimikyu", "disguise", "jolly", "life_orb", "atk", ["shadowclaw", "playrough", "swordsdance", "shadowsneak"]),
         ("cursola", "perishbody", "modest", "spell_tag", "hpspa", ["hex", "ancientpower", "willowisp", "strengthsap"]),
-        ("polteageist", "weakarmor", "modest", "white_herb", "spa", ["shellsmash", "shadowball", "gigadrain", "storedpower"]),
+        ("polteageist", "cursedbody", "calm", "leftovers", "spd", ["shadowball", "gigadrain", "willowisp", "strengthsap"]),
         ("gengar", "cursedbody", "timid", "black_sludge", "spa", ["shadowball", "sludgebomb", "hypnosis", "willowisp"]),
     ]),
     "gym_leader_opal_8a05": ([("hyper_potion", 2)], [
         ("weezing", "mistysurge", "bold", "black_sludge", "def", ["strangesteam", "sludgebomb", "willowisp", "defog"], "galarian"),
-        ("klefki", "prankster", "bold", "light_clay", "def", ["thunderwave", "reflect", "lightscreen", "dazzlinggleam"]),
+        ("klefki", "prankster", "bold", "light_clay", "def", ["foulplay", "reflect", "lightscreen", "dazzlinggleam"]),
         ("mawile", "intimidate", "adamant", "sitrus_berry", "hpatk", ["playrough", "ironhead", "suckerpunch", "swordsdance"]),
-        ("togekiss", "serenegrace", "timid", "leftovers", "spa", ["airslash", "dazzlinggleam", "thunderwave", "roost"]),
+        ("togekiss", "serenegrace", "timid", "leftovers", "spa", ["airslash", "dazzlinggleam", "nastyplot", "roost"]),
         ("alcremie", "sweetveil", "calm", "leftovers", "spd", ["dazzlinggleam", "mysticalfire", "calmmind", "recover"]),
     ]),
     "gym_leader_gordie_8a06": ([("hyper_potion", 2)], [
         ("shuckle", "sturdy", "bold", "mental_herb", "def", ["stealthrock", "stickyweb", "encore", "toxic"]),
         ("barbaracle", "toughclaws", "adamant", "white_herb", "atk", ["shellsmash", "stoneedge", "razorshell", "xscissor"]),
-        ("rhydon", "lightningrod", "adamant", "eviolite", "hpatk", ["stoneedge", "earthquake", "megahorn", "rockpolish"]),
+        ("crustle", "sturdy", "adamant", "rocky_helmet", "hpatk", ["spikes", "rockblast", "xscissor", "knockoff"]),
         ("stonjourner", "powerspot", "adamant", "hard_stone", "hpatk", ["stoneedge", "heavyslam", "highhorsepower", "wonderroom"]),
         ("coalossal", "flamebody", "relaxed", "leftovers", "def", ["heatcrash", "stoneedge", "willowisp", "rapidspin"]),
     ]),
@@ -234,7 +234,7 @@ HARD = {
         ("liepard", "prankster", "timid", "focus_sash", "spa", ["fakeout", "thunderwave", "nastyplot", "darkpulse"]),
         ("toxicroak", "dryskin", "adamant", "black_sludge", "atk", ["drainpunch", "suckerpunch", "gunkshot", "swordsdance"]),
         ("scrafty", "intimidate", "careful", "leftovers", "spd", ["fakeout", "drainpunch", "knockoff", "bulkup"]),
-        ("krookodile", "intimidate", "jolly", "choice_scarf", "atk", ["earthquake", "knockoff", "stoneedge", "closecombat"]),
+        ("skuntank", "aftermath", "adamant", "black_sludge", "atk", ["suckerpunch", "crunch", "poisonjab", "toxic"]),
         ("morpeko", "hungerswitch", "jolly", "sitrus_berry", "atk", ["aurawheel", "knockoff", "partingshot", "protect"]),
         ("grimmsnarl", "prankster", "careful", "light_clay", "spd", ["spiritbreak", "darkestlariat", "reflect", "lightscreen"]),
     ]),
@@ -248,8 +248,8 @@ HARD = {
     ]),
     "bede_8a0b": ([("full_restore", 2)], [
         ("mawile", "intimidate", "adamant", "sitrus_berry", "hpatk", ["playrough", "ironhead", "suckerpunch", "swordsdance"]),
-        ("gothitelle", "shadowtag", "calm", "leftovers", "spd", ["psychic", "thunderbolt", "calmmind", "rest"]),
-        ("sylveon", "pixilate", "modest", "choice_scarf", "spa", ["hypervoice", "mysticalfire", "shadowball", "psyshock"]),
+        ("gothitelle", "competitive", "calm", "leftovers", "spd", ["psychic", "thunderbolt", "calmmind", "rest"]),
+        ("klefki", "prankster", "bold", "light_clay", "def", ["reflect", "lightscreen", "dazzlinggleam", "spikes"]),
         ("gardevoir", "trace", "timid", "life_orb", "spa", ["moonblast", "psychic", "calmmind", "mysticalfire"]),
         ("rapidash", "pastelveil", "jolly", "life_orb", "atk", ["playrough", "zenheadbutt", "highhorsepower", "swordsdance"], "galarian"),
         ("hatterene", "magicbounce", "quiet", "leftovers", "hpspa", ["psychic", "dazzlinggleam", "mysticalfire", "trickroom"]),

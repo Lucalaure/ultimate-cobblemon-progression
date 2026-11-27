@@ -1,3 +1,8 @@
+# Unreleased
+
+## Changes
+- **Rebalanced Hard teams.** Every Hard leader's added Pokémon now covers a weakness the rest of the team shares, instead of adding to it, and stays weaker than the leader's ace. Among the changes: Giovanni brings Persian, so a single Water or Ice type no longer sweeps his whole team; Aaron Armaldo instead of Scizor; Byron Skarmory; Volkner Rotom instead of Electivire, which outshone Luxray; Marnie Skuntank; Bede Klefki instead of Sylveon. Sabrina's Hard team has her Venomoth again. Luck-based combos are gone: Drifblim's Minimize, Togekiss's Thunder Wave with Serene Grace Air Slash, Horsea's Smokescreen, a second sleep move on Lorelei's team, and sleep with a setup move on Koga's Venomoth and Lorelei's Jynx. Gothitelle loses Shadow Tag. Normal teams, levels and rewards don't change. Existing worlds get the new teams from the next leader a gym summons.
+
 # CJP 2.9.1
 
 ## Fixes

@@ -66,12 +66,12 @@
       }
     },
     {
-      "species": "cobblemon:sandslash",
+      "species": "cobblemon:persian",
       "gender": "MALE",
       "level": 50,
       "nature": "cobblemon:jolly",
-      "ability": "sandrush",
-      "moveset": ["earthquake", "knockoff", "rapidspin", "swordsdance"],
+      "ability": "technician",
+      "moveset": ["fakeout", "uturn", "knockoff", "bodyslam"],
       "ivs": {
         "hp": 31,
         "atk": 31,
@@ -88,7 +88,7 @@
         "spd": 0,
         "spe": 252
       },
-      "heldItem": ["soft_sand"]
+      "heldItem": ["sitrus_berry"]
     },
     {
       "species": "cobblemon:nidoqueen",

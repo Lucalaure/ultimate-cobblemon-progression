@@ -42,12 +42,12 @@
       "heldItem": ["oran_berry"]
     },
     {
-      "species": "cobblemon:rhyhorn",
+      "species": "cobblemon:kabuto",
       "gender": "MALE",
       "level": 14,
-      "nature": "cobblemon:adamant",
-      "ability": "rockhead",
-      "moveset": ["smackdown", "bulldoze", "tackle", "tailwhip"],
+      "nature": "cobblemon:relaxed",
+      "ability": "battlearmor",
+      "moveset": ["megadrain", "rocktomb", "aquajet", "mudshot"],
       "ivs": {
         "hp": 31,
         "atk": 31,
@@ -58,13 +58,13 @@
       },
       "evs": {
         "hp": 252,
-        "atk": 252,
-        "def": 4,
+        "atk": 0,
+        "def": 252,
         "spa": 0,
-        "spd": 0,
+        "spd": 4,
         "spe": 0
       },
-      "heldItem": ["soft_sand"]
+      "heldItem": ["eviolite"]
     },
     {
       "species": "cobblemon:onix",

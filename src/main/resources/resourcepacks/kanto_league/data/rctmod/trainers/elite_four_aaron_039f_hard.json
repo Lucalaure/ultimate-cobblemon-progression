@@ -117,12 +117,12 @@
       "heldItem": ["flame_orb"]
     },
     {
-      "species": "cobblemon:scizor",
+      "species": "cobblemon:armaldo",
       "gender": "MALE",
       "level": 57,
       "nature": "cobblemon:adamant",
-      "ability": "technician",
-      "moveset": ["bulletpunch", "uturn", "swordsdance", "roost"],
+      "ability": "battlearmor",
+      "moveset": ["stealthrock", "rapidspin", "xscissor", "stoneedge"],
       "ivs": {
         "hp": 31,
         "atk": 31,
@@ -139,7 +139,7 @@
         "spd": 0,
         "spe": 0
       },
-      "heldItem": ["life_orb"]
+      "heldItem": ["leftovers"]
     },
     {
       "species": "cobblemon:drapion",

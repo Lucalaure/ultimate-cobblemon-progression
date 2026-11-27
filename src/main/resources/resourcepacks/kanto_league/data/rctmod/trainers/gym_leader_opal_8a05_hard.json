@@ -58,7 +58,7 @@
       "nature": "cobblemon:bold",
       "ability": "prankster",
       "moveset": [
-        "thunderwave",
+        "foulplay",
         "reflect",
         "lightscreen",
         "dazzlinggleam"
@@ -124,7 +124,7 @@
       "moveset": [
         "airslash",
         "dazzlinggleam",
-        "thunderwave",
+        "nastyplot",
         "roost"
       ],
       "ivs": {

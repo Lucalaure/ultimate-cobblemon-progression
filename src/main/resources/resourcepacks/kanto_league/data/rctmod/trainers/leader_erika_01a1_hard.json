@@ -47,7 +47,7 @@
       "level": 29,
       "nature": "cobblemon:modest",
       "ability": "chlorophyll",
-      "moveset": ["quiverdance", "gigadrain", "moonblast", "sunnyday"],
+      "moveset": ["sunnyday", "gigadrain", "moonblast", "stunspore"],
       "ivs": {
         "hp": 31,
         "atk": 31,
@@ -63,7 +63,8 @@
         "spa": 252,
         "spd": 0,
         "spe": 252
-      }
+      },
+      "heldItem": ["heat_rock"]
     },
     {
       "species": "cobblemon:victreebel",
@@ -71,7 +72,7 @@
       "level": 29,
       "nature": "cobblemon:modest",
       "ability": "chlorophyll",
-      "moveset": ["leafblade", "sludgebomb", "sleeppowder", "sunnyday"],
+      "moveset": ["leafblade", "sludgebomb", "sleeppowder", "weatherball"],
       "ivs": {
         "hp": 31,
         "atk": 31,

@@ -97,7 +97,7 @@
       "level": 63,
       "nature": "cobblemon:adamant",
       "ability": "justified",
-      "moveset": ["closecombat", "psychocut", "leafblade", "swordsdance"],
+      "moveset": ["closecombat", "psychocut", "nightslash", "icepunch"],
       "ivs": {
         "hp": 31,
         "atk": 31,
@@ -113,7 +113,8 @@
         "spa": 0,
         "spd": 0,
         "spe": 252
-      }
+      },
+      "heldItem": ["black_belt"]
     },
     {
       "species": "cobblemon:alakazam",

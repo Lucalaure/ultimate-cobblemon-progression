@@ -53,7 +53,7 @@
       "gender": "MALE",
       "level": 53,
       "nature": "cobblemon:calm",
-      "ability": "shadowtag",
+      "ability": "competitive",
       "moveset": [
         "psychic",
         "thunderbolt",
@@ -81,16 +81,16 @@
       ]
     },
     {
-      "species": "cobblemon:sylveon",
+      "species": "cobblemon:klefki",
       "gender": "MALE",
       "level": 53,
-      "nature": "cobblemon:modest",
-      "ability": "pixilate",
+      "nature": "cobblemon:bold",
+      "ability": "prankster",
       "moveset": [
-        "hypervoice",
-        "mysticalfire",
-        "shadowball",
-        "psyshock"
+        "reflect",
+        "lightscreen",
+        "dazzlinggleam",
+        "spikes"
       ],
       "ivs": {
         "hp": 31,
@@ -101,15 +101,15 @@
         "spe": 31
       },
       "evs": {
-        "hp": 4,
+        "hp": 252,
         "atk": 0,
-        "def": 0,
-        "spa": 252,
-        "spd": 0,
-        "spe": 252
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
       },
       "heldItem": [
-        "choice_scarf"
+        "light_clay"
       ]
     },
     {

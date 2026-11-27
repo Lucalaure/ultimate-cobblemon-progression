@@ -21,7 +21,7 @@
       "gender": "GENDERLESS",
       "level": 39,
       "nature": "cobblemon:relaxed",
-      "ability": "levitate",
+      "ability": "heatproof",
       "moveset": ["stealthrock", "confuseray", "gyroball", "psychic"],
       "ivs": {
         "hp": 31,
@@ -42,12 +42,12 @@
       "heldItem": ["eviolite"]
     },
     {
-      "species": "cobblemon:magneton",
-      "gender": "GENDERLESS",
+      "species": "cobblemon:skarmory",
+      "gender": "MALE",
       "level": 39,
-      "nature": "cobblemon:modest",
+      "nature": "cobblemon:impish",
       "ability": "sturdy",
-      "moveset": ["thunderbolt", "flashcannon", "thunderwave", "voltswitch"],
+      "moveset": ["spikes", "roost", "whirlwind", "bravebird"],
       "ivs": {
         "hp": 31,
         "atk": 31,
@@ -57,13 +57,14 @@
         "spe": 31
       },
       "evs": {
-        "hp": 4,
+        "hp": 252,
         "atk": 0,
-        "def": 0,
-        "spa": 252,
-        "spd": 0,
-        "spe": 252
-      }
+        "def": 252,
+        "spa": 0,
+        "spd": 4,
+        "spe": 0
+      },
+      "heldItem": ["leftovers"]
     },
     {
       "species": "cobblemon:steelix",

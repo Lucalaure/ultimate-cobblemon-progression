@@ -49,16 +49,16 @@
       ]
     },
     {
-      "species": "cobblemon:nuzleaf",
+      "species": "cobblemon:roselia",
       "gender": "MALE",
       "level": 20,
-      "nature": "cobblemon:adamant",
-      "ability": "chlorophyll",
+      "nature": "cobblemon:modest",
+      "ability": "naturalcure",
       "moveset": [
-        "razorleaf",
-        "fakeout",
-        "payback",
-        "quickattack"
+        "magicalleaf",
+        "sludgebomb",
+        "toxicspikes",
+        "synthesis"
       ],
       "ivs": {
         "hp": 31,
@@ -69,15 +69,15 @@
         "spe": 31
       },
       "evs": {
-        "hp": 4,
-        "atk": 252,
+        "hp": 252,
+        "atk": 0,
         "def": 0,
-        "spa": 0,
-        "spd": 0,
-        "spe": 252
+        "spa": 252,
+        "spd": 4,
+        "spe": 0
       },
       "heldItem": [
-        "miracle_seed"
+        "eviolite"
       ]
     },
     {

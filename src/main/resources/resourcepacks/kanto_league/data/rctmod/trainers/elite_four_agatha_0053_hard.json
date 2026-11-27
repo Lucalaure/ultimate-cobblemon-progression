@@ -17,12 +17,12 @@
   ],
   "team": [
     {
-      "species": "cobblemon:dusclops",
+      "species": "cobblemon:misdreavus",
       "gender": "FEMALE",
       "level": 58,
-      "nature": "cobblemon:impish",
-      "ability": "frisk",
-      "moveset": ["willowisp", "nightshade", "painsplit", "shadowsneak"],
+      "nature": "cobblemon:bold",
+      "ability": "levitate",
+      "moveset": ["willowisp", "painsplit", "hex", "shadowball"],
       "ivs": {
         "hp": 31,
         "atk": 31,
@@ -97,7 +97,7 @@
       "level": 58,
       "nature": "cobblemon:timid",
       "ability": "levitate",
-      "moveset": ["shadowball", "dazzlinggleam", "thunderbolt", "nastyplot"],
+      "moveset": ["taunt", "thunderwave", "painsplit", "shadowball"],
       "ivs": {
         "hp": 31,
         "atk": 31,
@@ -113,7 +113,8 @@
         "spa": 252,
         "spd": 0,
         "spe": 252
-      }
+      },
+      "heldItem": ["leftovers"]
     },
     {
       "species": "cobblemon:arbok",

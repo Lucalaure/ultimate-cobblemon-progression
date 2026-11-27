@@ -66,12 +66,12 @@
       }
     },
     {
-      "species": "cobblemon:nosepass",
+      "species": "cobblemon:lileep",
       "gender": "MALE",
       "level": 14,
-      "nature": "cobblemon:impish",
-      "ability": "sturdy",
-      "moveset": ["thunderwave", "rockthrow", "block", "tackle"],
+      "nature": "cobblemon:bold",
+      "ability": "stormdrain",
+      "moveset": ["megadrain", "ancientpower", "recover", "confuseray"],
       "ivs": {
         "hp": 31,
         "atk": 31,
@@ -88,7 +88,7 @@
         "spd": 4,
         "spe": 0
       },
-      "heldItem": ["sitrus_berry"]
+      "heldItem": ["eviolite"]
     },
     {
       "species": "cobblemon:cranidos",

@@ -22,7 +22,7 @@
       "level": 36,
       "nature": "cobblemon:calm",
       "ability": "unburden",
-      "moveset": ["strengthsap", "hex", "willowisp", "minimize"],
+      "moveset": ["strengthsap", "hex", "willowisp", "thunderbolt"],
       "ivs": {
         "hp": 31,
         "atk": 31,
@@ -42,12 +42,12 @@
       "heldItem": ["sitrus_berry"]
     },
     {
-      "species": "cobblemon:dusclops",
+      "species": "cobblemon:sableye",
       "gender": "FEMALE",
       "level": 36,
-      "nature": "cobblemon:impish",
-      "ability": "frisk",
-      "moveset": ["willowisp", "nightshade", "painsplit", "shadowsneak"],
+      "nature": "cobblemon:bold",
+      "ability": "prankster",
+      "moveset": ["willowisp", "knockoff", "recover", "foulplay"],
       "ivs": {
         "hp": 31,
         "atk": 31,
@@ -64,7 +64,7 @@
         "spd": 4,
         "spe": 0
       },
-      "heldItem": ["eviolite"]
+      "heldItem": ["leftovers"]
     },
     {
       "species": "cobblemon:gengar",

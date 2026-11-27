@@ -122,7 +122,7 @@
       "level": 54,
       "nature": "cobblemon:timid",
       "ability": "dryskin",
-      "moveset": ["icebeam", "psychic", "lovelykiss", "nastyplot"],
+      "moveset": ["icebeam", "psychic", "lovelykiss", "focusblast"],
       "ivs": {
         "hp": 31,
         "atk": 31,
@@ -147,7 +147,7 @@
       "level": 54,
       "nature": "cobblemon:modest",
       "ability": "waterabsorb",
-      "moveset": ["surf", "freezedry", "thunderbolt", "sing"],
+      "moveset": ["surf", "freezedry", "thunderbolt", "toxic"],
       "ivs": {
         "hp": 31,
         "atk": 31,

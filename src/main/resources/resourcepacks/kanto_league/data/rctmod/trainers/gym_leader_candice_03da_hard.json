@@ -66,12 +66,12 @@
       }
     },
     {
-      "species": "cobblemon:froslass",
+      "species": "cobblemon:piloswine",
       "gender": "FEMALE",
       "level": 42,
-      "nature": "cobblemon:timid",
-      "ability": "cursedbody",
-      "moveset": ["icebeam", "shadowball", "spikes", "destinybond"],
+      "nature": "cobblemon:adamant",
+      "ability": "thickfat",
+      "moveset": ["iceshard", "iciclecrash", "highhorsepower", "stealthrock"],
       "ivs": {
         "hp": 31,
         "atk": 31,
@@ -81,14 +81,14 @@
         "spe": 31
       },
       "evs": {
-        "hp": 4,
-        "atk": 0,
-        "def": 0,
-        "spa": 252,
+        "hp": 252,
+        "atk": 252,
+        "def": 4,
+        "spa": 0,
         "spd": 0,
-        "spe": 252
+        "spe": 0
       },
-      "heldItem": ["focus_sash"]
+      "heldItem": ["eviolite"]
     },
     {
       "species": "cobblemon:medicham",

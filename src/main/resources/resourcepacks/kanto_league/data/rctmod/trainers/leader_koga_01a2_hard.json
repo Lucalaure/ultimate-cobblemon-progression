@@ -63,8 +63,7 @@
         "spa": 0,
         "spd": 0,
         "spe": 252
-      },
-      "heldItem": ["sitrus_berry"]
+      }
     },
     {
       "species": "cobblemon:venomoth",
@@ -72,7 +71,7 @@
       "level": 36,
       "nature": "cobblemon:timid",
       "ability": "tintedlens",
-      "moveset": ["quiverdance", "bugbuzz", "sludgebomb", "sleeppowder"],
+      "moveset": ["bugbuzz", "sludgebomb", "toxicspikes", "roost"],
       "ivs": {
         "hp": 31,
         "atk": 31,
