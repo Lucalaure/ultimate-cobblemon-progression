@@ -1,4 +1,4 @@
-# Unreleased
+# CJP 2.9.1
 
 ## Fixes
 - **Catch Every Pokémon only asks for Cobblemon's own spawns.** A Pokémon that Cobblemon never spawns could still be needed to advance if another mod or datapack added a spawn for it, so Galar tier 4 could ask for a Kubfu you can only get from Legendary Monuments' Mustard. Only the wild spawns that come with Cobblemon now count, plus what they evolve into.
