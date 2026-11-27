@@ -30,21 +30,26 @@ Cobblemon is a great sandbox, but out of the box there's no journey: from your f
 
 ## Installing
 
-Required: **Cobblemon 1.8**, **Fabric API**, **Fabric Language Kotlin** and **Cardinal Components API**.
+Required:
+
+- **[Cobblemon 1.8](https://modrinth.com/mod/cobblemon)**
+- **[Fabric API](https://modrinth.com/mod/fabric-api)**
+- **[Fabric Language Kotlin](https://modrinth.com/mod/fabric-language-kotlin)**
+- **[Cardinal Components API](https://modrinth.com/mod/cardinal-components-api)**
 
 For the region journey (gyms and the built-in Kanto, Sinnoh and Galar leagues), also install:
 
-- **[Radical Cobblemon Trainers](https://modrinth.com/mod/rctmod)** (RCT): the trainers, their teams and their battles. It needs RCT API, Architectury API and Forge Config API Port.
-- **[CobbleFurnies](https://modrinth.com/mod/cobblefurnies)**: furniture used inside the gym buildings. It needs Athena CTM.
+- **[Radical Cobblemon Trainers](https://modrinth.com/mod/rctmod)** (RCT): the trainers, their teams and their battles. It needs [RCT API](https://modrinth.com/mod/rctapi), [Architectury API](https://modrinth.com/mod/architectury-api) and [Forge Config API Port](https://modrinth.com/mod/forge-config-api-port).
+- **[CobbleFurnies](https://modrinth.com/mod/cobblefurnies)**: furniture used inside the gym buildings. It needs [Athena](https://modrinth.com/mod/athena-ctm).
 
 Optional:
 
 - **[RCT Trainer Textures Plus](https://modrinth.com/resourcepack/rct-trainer-textures-plus)** (resource pack, recommended): gym leaders that look like themselves.
 - **[Cobblemon: Mega Showdown](https://modrinth.com/mod/cobblemon-mega-showdown)**, for Dynamax and Gigantamax. Galar's leaders then Dynamax their ace as in Sword and Shield, and every Gym Challenge block is a Power Spot, so you can Dynamax there too with a Dynamax Band.
-- **PokeBadges**: every badge you earn is also a badge item for your Badge Box.
-- **Mod Menu**: an in-game settings screen.
+- **[PokeBadges](https://modrinth.com/mod/pokebadges)**: every badge you earn is also a badge item for your Badge Box.
+- **[Mod Menu](https://modrinth.com/mod/modmenu)**: an in-game settings screen.
 
-Don't install Radical Gyms & Structures alongside CJP: CJP already ships its gym buildings, and RGS would add more of them outside villages.
+Don't install [Radical Gyms & Structures](https://modrinth.com/datapack/radical-gyms-cobblemon) alongside CJP: CJP already ships its gym buildings, and RGS would add more of them outside villages.
 
 Without RCT, CJP still works, using its original trainer-level ladder (see [Classic mode](#classic-mode-trainer-levels)).
 
