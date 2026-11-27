@@ -18,7 +18,21 @@ import org.ppvon.ultimateCobblemonProgression.UltimateCobblemonProgression;
 import org.ppvon.ultimateCobblemonProgression.common.influence.TrainerLevelInfluence;
 import org.ppvon.ultimateCobblemonProgression.config.ConfigLoader;
 
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import net.fabricmc.loader.api.FabricLoader;
+
+import java.io.IOException;
+import java.io.Reader;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayDeque;
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
+import java.util.Optional;
+import java.util.stream.Stream;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Deque;
@@ -33,9 +47,9 @@ import java.util.Set;
  *
  * <p>A tier's Pokémon are its {@link TierEntry entries}: its species, and the regional forms that belong to it. Each is
  * caught on its own, with Cobblemon's per-form Pokédex records: an Alolan Rattata counts for Alola's Alolan Rattata,
- * not for Kanto's Rattata. "Obtainable" means it can spawn in the wild (Cobblemon's world spawn pool, so datapacks that
- * add spawns count) or evolves from something that can; anything else, like most legendaries, is skipped so no one
- * gets stuck. Catching, evolving and trading all register a Pokémon as caught in the Pokédex.
+ * not for Kanto's Rattata. "Obtainable" means Cobblemon itself spawns it in the wild (one of the spawns bundled in
+ * Cobblemon's jar that's still in the live spawn pool; spawns other mods or datapacks add don't count) or it evolves
+ * from something that does; anything else, like most legendaries, is skipped so no one gets stuck. Catching, evolving and trading all register a Pokémon as caught in the Pokédex.
  */
 public final class TierCatches {
     /** Obtainable species (key "species") and regional forms (key "species/Form"), or null until spawns load. */
@@ -183,11 +197,14 @@ public final class TierCatches {
     private static Set<String> compute() {
         Deque<Obtained> queue = new ArrayDeque<>();
         Set<String> found = new HashSet<>();
+        Map<String, String> own = cobblemonSpawns();
         try {
             for (SpawnDetail detail : CobblemonSpawnPools.WORLD_SPAWN_POOL.getDetails()) {
                 if (detail instanceof PokemonSpawnDetail p) {
+                    if (!isCobblemons(own, detail, p.getPokemon())) continue;
                     add(found, queue, p.getPokemon(), null);
                 } else if (detail instanceof PokemonHerdSpawnDetail herd) {
+                    if (!own.isEmpty() && !own.containsKey(detail.getId())) continue;
                     for (var member : herd.getHerdablePokemon()) add(found, queue, member.getPokemon(), null);
                 }
             }
@@ -206,6 +223,62 @@ public final class TierCatches {
             for (Evolution evolution : evolutions) add(found, queue, evolution.getResult(), o);
         }
         return found;
+    }
+
+    /**
+     * Whether this live spawn is one of Cobblemon's own: its id is in Cobblemon's bundled spawn files, for the same
+     * species. Spawns other mods and datapacks add (like a Kubfu spawn) don't count, so a tier never asks for a
+     * Pokémon that only another mod provides. If Cobblemon's files couldn't be read, every spawn counts.
+     */
+    private static boolean isCobblemons(Map<String, String> own, SpawnDetail detail, PokemonProperties props) {
+        if (own.isEmpty()) return true;
+        String species = own.get(detail.getId());
+        if (species == null) return false;
+        String live = props.getSpecies();
+        if (live == null) return false;
+        return path(live).equals(species);
+    }
+
+    /** "cobblemon:Rattata" → "rattata". */
+    private static String path(String species) {
+        int colon = species.indexOf(':');
+        return (colon >= 0 ? species.substring(colon + 1) : species).toLowerCase(Locale.ROOT);
+    }
+
+    /**
+     * The spawns bundled in Cobblemon's own jar ({@code data/cobblemon/spawn_pool_world}): spawn id to species name.
+     * Empty if they can't be read.
+     */
+    private static Map<String, String> cobblemonSpawns() {
+        Map<String, String> out = new HashMap<>();
+        Optional<Path> root = FabricLoader.getInstance().getModContainer("cobblemon")
+                .flatMap(c -> c.findPath("data/cobblemon/spawn_pool_world"));
+        if (root.isEmpty()) {
+            UltimateCobblemonProgression.LOG.warn("Couldn't find Cobblemon's spawn files; every wild spawn counts as catchable");
+            return out;
+        }
+        try (Stream<Path> files = Files.walk(root.get())) {
+            for (Path file : (Iterable<Path>) files.filter(f -> f.toString().endsWith(".json"))::iterator) {
+                try (Reader reader = Files.newBufferedReader(file)) {
+                    JsonObject json = JsonParser.parseReader(reader).getAsJsonObject();
+                    if (!json.has("spawns")) continue;
+                    for (JsonElement el : json.getAsJsonArray("spawns")) {
+                        JsonObject spawn = el.getAsJsonObject();
+                        if (!spawn.has("id")) continue;
+                        String id = spawn.get("id").getAsString();
+                        String pokemon = spawn.has("pokemon") ? spawn.get("pokemon").getAsString().trim() : "";
+                        int space = pokemon.indexOf(' ');
+                        out.put(id, path(space >= 0 ? pokemon.substring(0, space) : pokemon));
+                    }
+                } catch (RuntimeException | IOException e) {
+                    UltimateCobblemonProgression.LOG.warn("Couldn't read Cobblemon spawn file {}", file, e);
+                }
+            }
+        } catch (IOException e) {
+            UltimateCobblemonProgression.LOG.warn("Couldn't read Cobblemon's spawn files; every wild spawn counts as catchable", e);
+            return new HashMap<>();
+        }
+        return out;
     }
 
     /**
