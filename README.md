@@ -6,6 +6,19 @@ A Fabric side-mod for **Cobblemon** that turns the game into a region-by-region 
 
 **Requires Cobblemon 1.8** (Minecraft 1.21.1, Fabric). Latest release: [2.10.0](https://github.com/Lucalaure/ultimate-cobblemon-progression/releases/latest).
 
+![A gym at the centre of a village](docs/images/village-gym.webp)
+
+## Why play CJP?
+
+Cobblemon is a great sandbox, but out of the box there's no journey: from your first night you can run into anything, and nothing stops a level-60 Pokémon from ending your first gym battle before it starts. CJP brings back the pacing of the main-series games without taking the sandbox away.
+
+- **Every badge means something.** Each leader you beat opens the next part of the region's Pokémon, makes wild Pokémon stronger and raises your level cap. You always know what you're working towards, and the next leader is always a fair fight.
+- **The Pokémon you can catch fit the leader you're about to face.** Pokémon are unlocked by their strength (Base Stat Total), so you never get stuck with nothing that stands a chance, and you never steamroll a gym with something you shouldn't have yet.
+- **It's still Minecraft.** You don't follow routes or a story: explore wherever you like, build, and find gyms in villages. CJP only decides which Pokémon spawn for you and how strong they are.
+- **A full league, then more.** Eight gyms, the Elite Four and the Champion in Kanto, Sinnoh and Galar, with the original games' teams. After becoming Champion you pick where your journey goes next, and every Pokémon from the regions you've finished keeps spawning.
+- **As hard as you want it.** Normal leaders play like the original games. Hard leaders bring bigger, fully trained teams. On top of that, optional challenges ask you to catch every Pokémon before the next gym, or to bring no more Pokémon than the leader.
+- **Made for servers and modpacks too.** Every player has their own journey, region and level cap, and everything is configurable and datapack-driven.
+
 ## Documentation
 
 - **[How CJP Works](docs/how-it-works.md)**: the full guide to regions, gyms, the Trainer Card, tiers, rarity, spawning, wild levels, the level cap, configuration, datapacks and commands.
@@ -21,10 +34,15 @@ Required: **Cobblemon 1.8**, **Fabric API**, **Fabric Language Kotlin** and **Ca
 
 For the region journey (gyms and the built-in Kanto, Sinnoh and Galar leagues), also install:
 
-- **[Radical Cobblemon Trainers](https://modrinth.com/mod/rctmod)** (RCT): the trainers, their teams and their battles.
-- **[CobbleFurnies](https://modrinth.com/mod/cobblefurnies)**: furniture used inside the gym buildings.
-- Optional: **[Cobblemon: Mega Showdown](https://modrinth.com/mod/cobblemon-mega-showdown)**, for Dynamax and Gigantamax. Galar's leaders then Dynamax their ace as in Sword and Shield, and every Gym Challenge block is a Power Spot, so you can Dynamax there too with a Dynamax Band.
-- Recommended, client-side: the **[RCT Trainer Textures Plus](https://modrinth.com/resourcepack/rct-trainer-textures-plus)** resource pack, for gym leaders that look like themselves.
+- **[Radical Cobblemon Trainers](https://modrinth.com/mod/rctmod)** (RCT): the trainers, their teams and their battles. It needs RCT API, Architectury API and Forge Config API Port.
+- **[CobbleFurnies](https://modrinth.com/mod/cobblefurnies)**: furniture used inside the gym buildings. It needs Athena CTM.
+
+Optional:
+
+- **[RCT Trainer Textures Plus](https://modrinth.com/resourcepack/rct-trainer-textures-plus)** (resource pack, recommended): gym leaders that look like themselves.
+- **[Cobblemon: Mega Showdown](https://modrinth.com/mod/cobblemon-mega-showdown)**, for Dynamax and Gigantamax. Galar's leaders then Dynamax their ace as in Sword and Shield, and every Gym Challenge block is a Power Spot, so you can Dynamax there too with a Dynamax Band.
+- **PokeBadges**: every badge you earn is also a badge item for your Badge Box.
+- **Mod Menu**: an in-game settings screen.
 
 Don't install Radical Gyms & Structures alongside CJP: CJP already ships its gym buildings, and RGS would add more of them outside villages.
 
@@ -34,17 +52,63 @@ Without RCT, CJP still works, using its original trainer-level ladder (see [Clas
 
 ## How it plays
 
-1. **Pick where your journey starts.** Every player gets a **Trainer Card** on joining. The first time you open it, it asks which region to start in: Kanto, Sinnoh or Galar. That region opens, you join its trainer series, and you pick your starter from that region's starters, at level 5.
+1. **Pick where your journey starts.** Every player gets a **Trainer Card** on joining. The first time you open it, it asks which region to start in: Kanto, Sinnoh or Galar. That region opens, and you pick your starter from that region's starters, at level 5.
 2. **Find a gym.** New villages can have a **gym** at their centre, one at most per village. Using its **Gym Challenge** block summons your next leader into the arena; sneaking while using it lets you rematch any leader you've already beaten. One leader stands in a gym at a time.
-3. **Beat the leader to unlock the next tier.** Each badge opens more of the region's Pokémon, stronger wild levels and a higher level cap. After the eight gyms come the Elite Four and the Champion, and beating the Champion completes the region.
+3. **Beat the leader to unlock the next tier.** Each badge opens more of the region's Pokémon, stronger wild levels and a higher level cap. The first time you beat a leader, they give you their TM from the games and a reward bundle that grows through the league. After the eight gyms come the Elite Four and the Champion, and beating the Champion completes the region.
 4. **Choose where your journey goes next.** Once you're Champion, your Trainer Card asks which league to travel to next. Your journey continues there from its first gym, with a fresh level cap. The regions you've finished stay open: their Pokémon keep spawning, mostly at levels that fit your new team.
-5. **Track it all on your Trainer Card**: your region, tier, level cap and next challenge, the region's trainer order, every region's progress, and the wild Pokémon you can meet, with Cobblemon's caught/seen markers. Every badge, Elite Four win and Champion title is also an advancement in the **Pokémon Journey** tab.
+5. **Track it all on your Trainer Card and in the Pokémon Journey tab.** Every badge, Elite Four win, Champion title and fully caught tier is an advancement in its own advancement tab.
 
-You can also pick one **extra region** to explore from the start, on the card's Regions tab. Its Pokémon open alongside your main region.
+<p align="center"><img src="docs/images/trainer-card-choose-region.png" width="60%" alt="Choosing where your journey starts on the Trainer Card"></p>
+
+### Village gyms
+
+Gyms replace the centre of some new villages. Inside, the **Gym Challenge** block in the middle of the arena summons your next leader, with the team they use in the games.
+
+| Inside a gym | Battling Brock |
+|--------------|----------------|
+| ![The gym arena with its Gym Challenge block](docs/images/gym-interior.webp) | ![A battle against Leader Brock](docs/images/gym-battle.webp) |
+
+### The Pokémon Journey tab
+
+Every badge, Elite Four win and Champion title is an advancement in its own tab, with each leader's signature item as its icon. Hidden advancements for catching every Pokémon of a tier sit alongside them.
+
+![The Pokémon Journey advancement tab](docs/images/journey-advancements.webp)
+
+### The Trainer Card
+
+Your Trainer Card is where your journey lives:
+
+- **Profile**: your region, tier, level cap, trainers beaten, Pokédex count and your next challenge.
+- **Road**: every leader, Elite Four member and Champion of your league in order, their tier and level, which ones you've beaten (and on which difficulty), and the Normal/Hard switch.
+- **Trainers**: every wild trainer of your open regions, weakest first, with their level and whether you've beaten them.
+- **Regions**: every region's progress, and where you pick your second region.
+- **Wild Pokémon**: every Pokémon you can meet right now, with Cobblemon's caught and seen markers, and how many the next tier adds.
+
+| Profile | Road |
+|---------|------|
+| ![Profile tab](docs/images/trainer-card-profile.png) | ![Road tab](docs/images/trainer-card-road.png) |
+| **Trainers** | **Regions** |
+| ![Trainers tab](docs/images/trainer-card-trainers.png) | ![Regions tab](docs/images/trainer-card-regions.png) |
+
+<p align="center"><img src="docs/images/trainer-card-wild.png" width="49%" alt="Wild Pokémon tab"></p>
+
+### Features
+
+- **Three full leagues.** Kanto (FireRed/LeafGreen teams), Sinnoh (Brilliant Diamond/Shining Pearl) and Galar (Sword and Shield, with both leaders of gyms 4 and 6, the Champion Cup and Leon). Every other region, Johto to Paldea, can be opened as an extra region that grows with your badges.
+- **[Normal or Hard gyms](docs/how-it-works.md#gym-difficulty).** Normal leaders play like the original games. Hard leaders add one or two Pokémon, all at their ace's level, with perfect IVs, EVs, held items and real movesets. Switch any time on the Road tab; either earns the badge.
+- **[Leader rewards](docs/how-it-works.md#leader-rewards).** Each leader gives their TM and a reward bundle the first time you beat them, from Great Balls and Exp. Candy early on to Rare Candies and Ability Capsules later. Champions give a Master Ball. Beating a leader on Hard also gives a stone or type item of their type.
+- **[Two leagues at once](docs/how-it-works.md#two-leagues-at-once).** Make your second region another league and work through both side by side, with a level cap between the two.
+- **[Wild trainers by region](docs/how-it-works.md#wild-trainers).** FireRed's, BDSP's and Sword and Shield's trainers spawn in the wild once their region is open, with their real teams and their level on their name tag.
+- **[Regional forms](docs/how-it-works.md#regional-forms) belong to their own region.** Alolan Rattata needs Alola, Galarian Ponyta needs Galar.
+- **Starters from your region**, at level 5, as in the games.
+- **Optional challenges**, all off by default:
+  - [Catch every Pokémon](docs/how-it-works.md#catch-every-pokémon-optional) of your tier before you can face the next leader.
+  - Bring no more Pokémon to a gym than the leader has.
+  - Only bring Pokémon from regions you've opened to a gym (no traded or bred shortcuts).
 
 ### The built-in leagues
 
-With RCT installed, CJP turns on a built-in datapack, **CJP Kanto, Sinnoh & Galar Leagues**: a 10-tier Kanto with its 8 gym leaders, the Elite Four and the Champion (FireRed/LeafGreen-style teams), a 10-tier Sinnoh with RCT's Brilliant Diamond/Shining Pearl leaders, Elite Four and Champion Cynthia, a 10-tier Galar with its 8 Gym Leaders, the Champion Cup and Champion Leon (Sword and Shield teams, with Hard versions), plus every other region from Johto to Paldea as an optional extra region that grows with any league's badges. It's an ordinary datapack, so you can turn it off, or override it with your own region data. See [Region mode](docs/how-it-works.md#9-region-mode).
+With RCT installed, CJP turns on a built-in datapack, **CJP Kanto, Sinnoh & Galar Leagues**, with each league's 10 tiers, gym leaders, Elite Four (or Champion Cup) and Champion, plus every other region as an optional extra region. It's an ordinary datapack, so you can turn it off, or override it with your own region data. See [Region mode](docs/how-it-works.md#9-region-mode).
 
 ---
 
@@ -52,7 +116,7 @@ With RCT installed, CJP turns on a built-in datapack, **CJP Kanto, Sinnoh & Gala
 
 Whether you follow regions or the classic ladder, your progress controls:
 
-- **Which species can spawn** for you: Pokémon above your tier (or from regions you haven't reached) are blocked.
+- **Which species can spawn** for you: Pokémon above your tier (or from regions you haven't reached) are blocked. Fishing follows the same rules.
 - **How strong wild Pokémon are**: levels are rerolled based on the Pokémon's tier and yours.
 - **Which region's Pokémon you meet most**: in region mode, the region you're working through is favored over the ones you've finished (see [spawn pools](docs/how-it-works.md#wild-pokémon-in-a-new-region-spawn-pools)). Otherwise, unlocking a tier only adds Pokémon.
 
@@ -93,7 +157,7 @@ The default tiers also cover species from Myths and Legends, Complete Cobblemon 
 
 ## Configuration
 
-Settings live in `config/ultimate-cobblemon-progression/`. Highlights from `ucp-common.json`:
+Settings live in `config/ultimate-cobblemon-progression/`, and most are also on the Mod Menu screen. Highlights from `ucp-common.json`:
 
 - `gymVillageChance` (default `0.3`): the share of new villages whose centre is a gym. `0` turns village gyms off.
 - `giveTrainerCard` (default `true`): give every player a Trainer Card on their first join.
@@ -101,6 +165,7 @@ Settings live in `config/ultimate-cobblemon-progression/`. Highlights from `ucp-
 - `gymDifficulty` (default `"player_choice"`): each player picks Normal or Hard gym leaders on their Trainer Card and can switch any time; `"normal"` or `"hard"` sets it for everyone. See [Gym difficulty](docs/how-it-works.md#gym-difficulty).
 - `allowTwoLeagues` (default `true`): players may pick a second league, with its own gym leaders, and work through both at once. Gyms ask which league's leader to battle, and the level cap is the average of the two (or the lower of the two, with `twoLeagueCap` set to `"lowest"`). See [Two leagues at once](docs/how-it-works.md#two-leagues-at-once).
 - `catchWholeTier` (default `false`): difficulty option, catch every Pokémon of your tier before you can face the next gym leader (your extra region also waits until its tier is caught).
+- `gymTeamLimit` (default `false`): difficulty option, bring no more Pokémon to a gym battle than the leader has.
 - `gymLegalityCheck` (default `"off"`): `"warn"` or `"block"` gym battles while your party has Pokémon you couldn't have yet (from eggs, trades or fossils). Your starter is always allowed.
 - `gymLegalityRule` (default `"region"`): what that check allows. `"region"`: any Pokémon of a region you've opened, evolutions included, within your level cap (regional forms need their own region). `"strict"`: only Pokémon of tiers you've unlocked, as they spawn in the wild, within your level cap.
 
@@ -118,6 +183,7 @@ The full list is in [Configuration](docs/how-it-works.md#6-configuration).
 - Based on **[Ultimate Cobblemon Progression](https://github.com/ppVon/ultimate-cobblemon-progression)** by ppVon (MIT), which this project continues independently.
 - Gym buildings adapted from **[Radical Gyms & Structures](https://modrinth.com/datapack/radical-gyms-cobblemon)** by JayOnline (MIT). Its notice is in [`src/main/resources/licenses/`](src/main/resources/licenses/).
 - Trainers and battles by **[Radical Cobblemon Trainers](https://modrinth.com/mod/rctmod)**. The Trainer Card uses Cobblemon's own Pokédex art, loaded from your Cobblemon install.
+- Kanto's wild trainer teams come from **[pret's FireRed decompilation](https://github.com/pret/pokefirered)**.
 
 ## Building
 
