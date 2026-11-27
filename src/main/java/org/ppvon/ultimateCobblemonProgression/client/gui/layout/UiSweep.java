@@ -49,11 +49,18 @@ public final class UiSweep {
     private UiSweep() {}
 
     public static boolean running() {
-        return running;
+        return running || UiShowcase.running();
     }
 
-    /** Called after each screen draws: runs the sweep the first time the title screen has drawn. */
+    /**
+     * Called after each screen draws: runs the sweep the first time the title screen has drawn, or with
+     * {@code -Ducp.uiCheck=showcase}, takes the README's {@link UiShowcase screenshots}.
+     */
     public static void maybeStart(Screen screen) {
+        if (MODE.equals("showcase") && screen instanceof TitleScreen) {
+            UiShowcase.tick();
+            return;
+        }
         if (started || !(screen instanceof TitleScreen) || !(MODE.equals("run") || MODE.equals("exit"))) return;
         started = true;
         run();

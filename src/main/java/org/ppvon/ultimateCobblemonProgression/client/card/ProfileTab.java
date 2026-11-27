@@ -29,6 +29,9 @@ final class ProfileTab extends CardTab {
         Minecraft minecraft = card.minecraft();
         if (minecraft != null && minecraft.player != null) {
             PlayerFaceRenderer.draw(g, minecraft.player.getSkin(), 35, 51, 44);
+        } else if (minecraft != null) {
+            // Outside a world (the layout check and README screenshots): the signed-in account's skin.
+            PlayerFaceRenderer.draw(g, minecraft.getSkinManager().getInsecureSkin(minecraft.getGameProfile()), 35, 51, 44);
         }
         p.fit(g, Component.literal(data.player()).withStyle(ChatFormatting.BOLD), 57, 110, 70, INK, 1, Align.CENTRE);
         p.fit(g, Component.literal(data.regionMode() ? data.regionTitle() : "Trainer"), 57, 121, 70, MUTED, 1, Align.CENTRE);

@@ -60,7 +60,9 @@ final class WildTab extends CardTab {
                     hovered = sp != null ? s : null;
                 }
                 p.dexIcon(g, cx + 2, y + 2, s.knowledge());
-                Component name = sp != null ? sp.getTranslatedName() : Component.literal(s.id().getPath());
+                // Without the species (not loaded, as outside a world), Cobblemon's language file still has its name.
+                Component name = sp != null ? sp.getTranslatedName()
+                        : Component.translatableWithFallback(s.id().getNamespace() + ".species." + s.id().getPath() + ".name", s.id().getPath());
                 if (!s.prefix().isEmpty()) name = Component.literal(s.prefix() + " ").append(name);
                 int colour = s.knowledge() == TrainerCardData.UNKNOWN ? MUTED : INK;
                 p.fit(g, name, cx + 13, y + 2, cellW - 16, colour, 1, Align.LEFT);
