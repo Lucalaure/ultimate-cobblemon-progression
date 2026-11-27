@@ -1,4 +1,4 @@
-# Unreleased
+# CJP 2.10.2
 
 ## Changes
 - **Gym leaders say why they won't battle.** Talking to a leader with a Pokémon the Unlocked Pokémon Only check blocks did nothing, and with one above your level cap the leader gave Radical Cobblemon Trainers' generic line. The leader now names the Pokémon and the reason, like "Gym Leader Bea won't battle you yet: Lucario (level 41) is above your level cap of 38. Put it in the PC first."
