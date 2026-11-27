@@ -196,6 +196,42 @@ public final class GymLegality {
         return Component.literal(text).withStyle(mode == Mode.BLOCK ? ChatFormatting.RED : ChatFormatting.YELLOW);
     }
 
+    /**
+     * Why a gym leader won't battle the player right now, or null if nothing CJP knows of stops it: Pokémon the
+     * legality check blocks, or a party Pokémon above the level cap. Radical Cobblemon Trainers refuses those battles
+     * too, but either silently or with a generic line, so the leader says this instead when the player talks to them.
+     */
+    public static Component refusal(ServerPlayer player, String leaderName) {
+        List<Pokemon> party = new ArrayList<>();
+        for (Pokemon pokemon : PlayerExtensionsKt.party(player)) {
+            if (pokemon != null) party.add(pokemon);
+        }
+        if (mode() == Mode.BLOCK) {
+            Map<Problem, List<Pokemon>> problems = problems(player, party);
+            if (!problems.isEmpty()) {
+                int count = problems.values().stream().mapToInt(List::size).sum();
+                return Component.literal(leaderName + " won't battle you yet: " + describe(problems) + ". Put "
+                        + (count == 1 ? "it" : "them") + " in the PC first.").withStyle(ChatFormatting.RED);
+            }
+        }
+        // RCT's own rule: no Pokémon in the party (the starter included) may be above the level cap.
+        int cap = levelCap(player);
+        if (cap > 0) {
+            List<String> over = new ArrayList<>();
+            for (Pokemon pokemon : party) {
+                if (pokemon.getLevel() > cap) {
+                    over.add(pokemon.getDisplayName(false).getString() + " (level " + pokemon.getLevel() + ")");
+                }
+            }
+            if (!over.isEmpty()) {
+                return Component.literal(leaderName + " won't battle you yet: " + joinNames(over)
+                        + (over.size() == 1 ? " is" : " are") + " above your level cap of " + cap + ". Put "
+                        + (over.size() == 1 ? "it" : "them") + " in the PC first.").withStyle(ChatFormatting.RED);
+            }
+        }
+        return null;
+    }
+
     private static Unit onBattleStart(BattleStartedEvent.Pre event) {
         if (mode() != Mode.BLOCK || event.isCanceled()) return Unit.INSTANCE;
 
@@ -220,6 +256,8 @@ public final class GymLegality {
                         + describe(problems) + ". Put " + (count == 1 ? "it" : "them") + " in the PC first.");
                 event.setReason(reason);
                 event.cancel();
+                // RCT doesn't pass the reason on, so tell the player directly.
+                player.displayClientMessage(reason.copy().withStyle(ChatFormatting.RED), false);
                 return Unit.INSTANCE;
             }
         }

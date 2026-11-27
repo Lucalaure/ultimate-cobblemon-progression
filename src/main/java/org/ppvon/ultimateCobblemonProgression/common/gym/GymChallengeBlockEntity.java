@@ -226,6 +226,8 @@ public class GymChallengeBlockEntity extends BlockEntity {
             LeagueLevelCap.update(player);
             dismiss(trainer, player, Component.literal(leaderName + " heads back to the league. The gym is free again.")
                     .withStyle(ChatFormatting.GREEN));
+            Component next = GymLeaderPicker.afterWin(player, trainerId);
+            if (next != null) tell(player, next.copy().withStyle(ChatFormatting.YELLOW));
         } else if (level.getGameTime() - lastActive > IDLE_TIMEOUT) {
             dismiss(trainer, player, Component.literal(leaderName + " got tired of waiting and left the gym.")
                     .withStyle(ChatFormatting.GRAY));

@@ -106,6 +106,39 @@ public final class GymLeaderPicker {
         return Result.none(Component.literal("No gym leader is waiting for you right now."));
     }
 
+    /**
+     * After the player beats a league trainer, what's still between them and the tier that trainer belongs to, or null
+     * if it's open (or nothing is known to hold it back). Galar's 4th and 6th gyms have two leaders each: beating Bea
+     * says Allister is next, since only his badge opens the tier.
+     */
+    public static Component afterWin(ServerPlayer player, String trainerId) {
+        if (!RegionRegistry.isActive() || !RctBridge.isLoaded()) return null;
+        List<RegionDef> regions = RegionRegistry.ordered();
+        RegionProgress progress = RegionProgressTracker.get(player);
+        for (int r = 0; r < regions.size(); r++) {
+            RegionDef region = regions.get(r);
+            for (TierDef tier : region.tiers.values()) {
+                if (tier.trainers.stream().noneMatch(g -> g.contains(trainerId))) continue;
+                if (progress.isCompleted(r) || progress.step(r) >= tier.index) return null;
+
+                for (List<String> group : tier.trainers) {
+                    if (group.stream().anyMatch(id -> RctBridge.defeats(player, id) > 0)) continue;
+                    Component next = RctBridge.trainerName(group.get(0));
+                    return Component.literal("Next: beat ").append(next).append(" to unlock " + region.title + " tier "
+                            + tier.index + ". Use the Gym Challenge block again to summon ").append(next).append(".");
+                }
+                List<TierEntry> missing = TierCatches.missing(player, region, tier.index - 1);
+                if (!missing.isEmpty()) {
+                    return Component.literal("To unlock " + region.title + " tier " + tier.index + ", catch every tier "
+                            + (tier.index - 1) + " Pokémon too. Still to catch (" + missing.size() + "): "
+                            + TierCatches.names(missing, 5) + ".");
+                }
+                return null;
+            }
+        }
+        return null;
+    }
+
     private static Component join(List<Component> lines) {
         var out = Component.empty();
         for (int i = 0; i < lines.size(); i++) {

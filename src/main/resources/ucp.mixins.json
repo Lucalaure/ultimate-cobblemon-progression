@@ -13,6 +13,7 @@
     "StructureTemplatePoolAccessor",
     "JigsawPlacementMixin",
     "RctDefeatCountTriggerMixin",
+    "RctGymLeaderRefusalMixin",
     "RctHardTrainerResourcesMixin",
     "RctLevelCapMixin",
     "RctRematchBattleMixin",

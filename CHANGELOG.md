@@ -1,3 +1,9 @@
+# Unreleased
+
+## Changes
+- **Gym leaders say why they won't battle.** Talking to a leader with a Pokémon the Unlocked Pokémon Only check blocks did nothing, and with one above your level cap the leader gave Radical Cobblemon Trainers' generic line. The leader now names the Pokémon and the reason, like "Gym Leader Bea won't battle you yet: Lucario (level 41) is above your level cap of 38. Put it in the PC first."
+- **You're told what's next after a leader.** Galar's 4th and 6th gyms have two leaders each, and only the second one's badge opens the next tier, so beating Bea seemed to unlock nothing. Beating a leader now says what's still needed for that tier: the next leader ("Next: beat Gym Leader Allister to unlock Galar tier 5"), or the Pokémon still to catch.
+
 # CJP 2.10.1
 
 ## Fixes
